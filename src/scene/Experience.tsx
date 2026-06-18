@@ -48,7 +48,7 @@ export default function Experience() {
     >
       <color attach="background" args={['#dcebfa']} />
       <Suspense fallback={null}>
-        <ScrollControls pages={PAGES} damping={0.3}>
+        <ScrollControls pages={PAGES} damping={0.18}>
           <ScrollBridge />
           <Backdrop />
           <Backgrounds />

@@ -41,44 +41,41 @@ export const peak = (i: number) => i / (PAGES - 1)
 
 export const COPY = {
   hero: {
-    kicker: 'streetwear católico premium',
-    title: 'Vista o céu',
-    sub: 'Entre o concreto branco e o azul infinito. Peças feitas pra durar — e pra elevar.',
-    cta: 'Ver Coleção',
+    subtitle: 'streetwear católico premium',
+    cta: 'Ver coleção',
   },
   manifesto: {
-    title: 'Nascemos entre o concreto e o céu.',
-    body: 'NIMBUS é fé sem cafonice: design com intenção, acabamento premium e uma estética que sobe. O oposto do óbvio.',
+    title: 'Entre o concreto e o céu.',
+    body: 'Roupa católica bem feita: design de verdade, acabamento premium e nada de cafona.',
   },
   faith: {
     kicker: 'Fé',
-    title: 'O sagrado, em alta definição.',
-    body: 'Inspiração nos ícones que nos formaram — reinterpretados com rigor e beleza, longe do amador.',
+    title: 'Fé que se veste bem.',
+    body: 'Partimos dos ícones que formaram a gente e traduzimos em peças com capricho.',
   },
   design: {
     kicker: 'Design',
     title: 'Cada peça é arquitetura.',
-    body: 'Modernismo brasileiro: curvas, concreto, luz. Linhas limpas do Niemeyer traduzidas em roupa.',
+    body: 'Modernismo brasileiro virou roupa: curva, concreto e luz, no espírito do Niemeyer.',
   },
   drop: {
     kicker: 'Em breve',
-    title: 'Primeira Coleção',
-    body: 'O primeiro drop está chegando. Entre na lista e seja avisado antes de todo mundo.',
+    title: 'Primeira coleção',
+    body: 'O primeiro drop está chegando. Deixe seu e-mail e seja o primeiro a saber.',
     cta: 'Quero ser avisado',
     placeholder: 'seu@email.com',
   },
   collection: {
     kicker: 'Coleção',
     title: 'Boutique nas nuvens',
-    note: 'Pré-lançamento — sem estoque ainda.',
-    cta: 'Notifique-me',
+    note: 'Pré-lançamento. Ainda sem estoque.',
+    cta: 'Avise-me',
   },
   footer: {
-    tagline: 'Vista o céu.',
-    newsletter: 'Receba o lançamento no seu e-mail',
+    newsletter: 'Receba o lançamento em primeira mão',
     placeholder: 'seu@email.com',
     cta: 'Entrar',
-    madein: 'Feito no Brasil ☁',
+    madein: 'Feito no Brasil',
     rights: '© 2026 NIMBUS',
   },
 }
