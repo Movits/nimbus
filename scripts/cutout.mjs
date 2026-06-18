@@ -28,13 +28,14 @@ function cutout(inPath) {
   const at = (x, y) => (y * w + x) * 4
 
   const bgCand = new Uint8Array(N) // claro e pouco saturado (xadrez/branco/AA)
-  const goldMask = new Uint8Array(N) // amarelo/âmbar (anel da auréola)
+  const grayMask = new Uint8Array(N) // cinza neutro (quadrado escuro do xadrez)
   for (let y = 0; y < h; y++) {
     for (let x = 0; x < w; x++) {
       const i = at(x, y)
       const r = d[i], g = d[i + 1], b = d[i + 2]
-      if (lum(r, g, b) >= 175 && sat(r, g, b) <= 40) bgCand[y * w + x] = 1
-      if (r >= 150 && g >= 110 && b <= 175 && r - b >= 45 && g - b >= 25) goldMask[y * w + x] = 1
+      const L = lum(r, g, b), S = sat(r, g, b)
+      if (L >= 175 && S <= 40) bgCand[y * w + x] = 1
+      if (S <= 16 && L >= 150 && L <= 244) grayMask[y * w + x] = 1
     }
   }
 
@@ -61,15 +62,31 @@ function cutout(inPath) {
   for (let y = 0; y < h; y++) { push(0, y); push(w - 1, y) }
   drain()
 
-  // 2) semeia a partir do dourado -> limpa o miolo da auréola (e só ele)
-  for (let y = 0; y < h; y++) {
-    for (let x = 0; x < w; x++) {
-      if (!goldMask[y * w + x]) continue
-      push(x + 1, y); push(x - 1, y); push(x, y + 1); push(x, y - 1)
-      push(x + 1, y + 1); push(x - 1, y - 1); push(x + 1, y - 1); push(x - 1, y + 1)
+  // 2) componentes fechados (não tocados pelas bordas) que contêm xadrez (cinza)
+  //    são limpos por completo: miolo da auréola e buracos das letras. As letras
+  //    (branco + azul-claro, SEM cinza neutro) e o anel dourado (não é bgCand)
+  //    ficam intactos.
+  const seen = new Uint8Array(N)
+  for (let start = 0; start < N; start++) {
+    if (cleared[start] || !bgCand[start] || seen[start]) continue
+    const comp = []
+    let grayCount = 0
+    seen[start] = 1
+    const q = [start]
+    for (let qi = 0; qi < q.length; qi++) {
+      const p = q[qi]
+      comp.push(p)
+      if (grayMask[p]) grayCount++
+      const x = p % w, y = (p - x) / w
+      if (x + 1 < w && !seen[p + 1] && !cleared[p + 1] && bgCand[p + 1]) { seen[p + 1] = 1; q.push(p + 1) }
+      if (x - 1 >= 0 && !seen[p - 1] && !cleared[p - 1] && bgCand[p - 1]) { seen[p - 1] = 1; q.push(p - 1) }
+      if (y + 1 < h && !seen[p + w] && !cleared[p + w] && bgCand[p + w]) { seen[p + w] = 1; q.push(p + w) }
+      if (y - 1 >= 0 && !seen[p - w] && !cleared[p - w] && bgCand[p - w]) { seen[p - w] = 1; q.push(p - w) }
+    }
+    if (grayCount / comp.length > 0.06) {
+      for (const p of comp) cleared[p] = 1
     }
   }
-  drain()
 
   for (let p = 0; p < N; p++) if (cleared[p]) d[p * 4 + 3] = 0
 
