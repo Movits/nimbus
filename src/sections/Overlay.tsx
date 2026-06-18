@@ -1,9 +1,10 @@
-import type { ReactNode } from 'react'
+import { useEffect, useRef, type ReactNode } from 'react'
 import { ASSETS, COPY, PRODUCTS, SECTION } from '../data/content'
 import { scrollToSection } from '../scene/scroll'
+import { registerSection } from '../scene/scrollStore'
 import { useInView } from '../hooks/useInView'
 
-/** Wrapper de seção (100vh) que dispara os reveals quando entra na tela. */
+/** Seção (min 100vh) que registra seu elemento no store e dispara os reveals. */
 function Section({
   index,
   className = '',
@@ -16,10 +17,20 @@ function Section({
   children: ReactNode
 }) {
   const { ref, inView } = useInView<HTMLElement>()
+  const elRef = useRef<HTMLElement | null>(null)
+
+  useEffect(() => {
+    registerSection(index, elRef.current)
+    return () => registerSection(index, null)
+  }, [index])
+
   return (
     <section
       id={`sec-${index}`}
-      ref={ref}
+      ref={(node) => {
+        elRef.current = node
+        ref.current = node
+      }}
       className={`section section--${align} ${className} ${inView ? 'in' : ''}`}
     >
       <div className="section__inner">{children}</div>
@@ -30,7 +41,7 @@ function Section({
 export default function Overlay() {
   return (
     <main className="overlay">
-      {/* §1 HERO — logo grande + subtítulo + CTA */}
+      {/* §1 HERO — logo grande + subtítulo + CTA (alinhado ao topo, catedral à mostra) */}
       <Section index={SECTION.hero} className="hero" align="center">
         <img className="reveal hero__logo" src={ASSETS.wordmark} alt="NIMBUS" />
         <p className="reveal hero__subtitle">{COPY.hero.subtitle}</p>
@@ -45,34 +56,21 @@ export default function Overlay() {
         <p className="reveal lede">{COPY.manifesto.body}</p>
       </Section>
 
-      {/* §3 FÉ — Cristo Redentor (texto à esquerda) */}
+      {/* §3 FÉ — Cristo Redentor */}
       <Section index={SECTION.faith} className="faith" align="left">
         <p className="reveal kicker">{COPY.faith.kicker}</p>
         <h2 className="reveal display display--md">{COPY.faith.title}</h2>
         <p className="reveal lede">{COPY.faith.body}</p>
       </Section>
 
-      {/* §4 DESIGN — Pampulha (texto à esquerda) */}
+      {/* §4 DESIGN — Pampulha */}
       <Section index={SECTION.design} className="design" align="left">
         <p className="reveal kicker">{COPY.design.kicker}</p>
         <h2 className="reveal display display--md">{COPY.design.title}</h2>
         <p className="reveal lede">{COPY.design.body}</p>
       </Section>
 
-      {/* §5 O DROP — Dom Bosco (azul profundo) */}
-      <Section index={SECTION.drop} className="drop dark" align="center">
-        <p className="reveal kicker kicker--gold">{COPY.drop.kicker}</p>
-        <h2 className="reveal display">{COPY.drop.title}</h2>
-        <p className="reveal lede">{COPY.drop.body}</p>
-        <form className="reveal signup" onSubmit={(e) => e.preventDefault()}>
-          <input type="email" required placeholder={COPY.drop.placeholder} aria-label="email" />
-          <button className="btn btn--gold" type="submit">
-            {COPY.drop.cta}
-          </button>
-        </form>
-      </Section>
-
-      {/* §6 COLEÇÃO — loja placeholder */}
+      {/* §5 COLEÇÃO — loja placeholder */}
       <Section index={SECTION.collection} className="collection" align="center">
         <p className="reveal kicker">{COPY.collection.kicker}</p>
         <h2 className="reveal display display--md">{COPY.collection.title}</h2>
@@ -93,16 +91,16 @@ export default function Overlay() {
         </div>
       </Section>
 
-      {/* §7 FOOTER — logo grande */}
+      {/* §6 FOOTER — logo grande, equilibrado */}
       <Section index={SECTION.footer} className="footer" align="center">
         <img className="reveal footer__logo" src={ASSETS.wordmark} alt="NIMBUS" />
+        <p className="reveal footer__newsletter">{COPY.footer.newsletter}</p>
         <form className="reveal signup" onSubmit={(e) => e.preventDefault()}>
           <input type="email" required placeholder={COPY.footer.placeholder} aria-label="email" />
           <button className="btn btn--primary" type="submit">
             {COPY.footer.cta}
           </button>
         </form>
-        <p className="reveal footer__newsletter">{COPY.footer.newsletter}</p>
         <div className="reveal footer__meta">
           <span>{COPY.footer.madein}</span>
           <span>Instagram · TikTok</span>

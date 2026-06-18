@@ -1,16 +1,12 @@
-// Recorta o fundo "xadrez" (gravado nos pixels) dos logos do Higgsfield e gera
-// PNG com transparência real. Também copia a arte do Dom Bosco v2.
+// Pipeline de assets do NIMBUS:
+//  - recorta o fundo "xadrez" (gravado nos pixels) dos logos -> transparência real
+//  - redimensiona e converte tudo pra WebP (qualidade alta, peso baixo)
+//  - saída SÓ otimizada em public/img (os PNGs gigantes ficam fora do repo)
 //
-// Estratégia:
-//  1) flood-fill a partir das bordas removendo pixels claros (xadrez/branco),
-//     parando no contorno azul-marinho das letras → limpa o fundo externo.
-//  2) limpa o xadrez ENCRAVADO (miolo da auréola fechada, furos das letras):
-//     remove cinzas neutros e brancos colados neles. As letras (branco + azul
-//     claro, sem cinza neutro) são preservadas.
-//
-// Uso: npm run assets
+// Fontes: C:/Users/rober/Downloads/Nimbus-Higgsfield  ·  Uso: npm run assets
 import { PNG } from 'pngjs'
-import { readFileSync, writeFileSync, readdirSync, copyFileSync } from 'node:fs'
+import sharp from 'sharp'
+import { readFileSync, readdirSync, rmSync, mkdirSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 
 const SRC = 'C:/Users/rober/Downloads/Nimbus-Higgsfield'
@@ -19,7 +15,8 @@ const OUT = 'public/img'
 const lum = (r, g, b) => 0.299 * r + 0.587 * g + 0.114 * b
 const sat = (r, g, b) => Math.max(r, g, b) - Math.min(r, g, b)
 
-function cutout(inPath, outPath) {
+// Recorta o xadrez e devolve um bitmap RGBA cru.
+function cutout(inPath) {
   const png = PNG.sync.read(readFileSync(inPath))
   const { width: w, height: h, data: d } = png
   const N = w * h
@@ -33,11 +30,10 @@ function cutout(inPath, outPath) {
       const r = d[i], g = d[i + 1], b = d[i + 2]
       const L = lum(r, g, b), S = sat(r, g, b)
       if (L >= 175 && S <= 40) bgCand[y * w + x] = 1
-      if (S <= 14 && L >= 178 && L <= 232) grayMask[y * w + x] = 1
+      if (S <= 16 && L >= 150 && L <= 244) grayMask[y * w + x] = 1
     }
   }
 
-  // 1) flood-fill a partir das bordas
   const cleared = new Uint8Array(N)
   const stack = []
   const push = (x, y) => {
@@ -48,58 +44,84 @@ function cutout(inPath, outPath) {
       stack.push(p)
     }
   }
-  for (let x = 0; x < w; x++) { push(x, 0); push(x, h - 1) }
-  for (let y = 0; y < h; y++) { push(0, y); push(w - 1, y) }
-  while (stack.length) {
-    const p = stack.pop()
-    const x = p % w, y = (p - x) / w
-    push(x + 1, y); push(x - 1, y); push(x, y + 1); push(x, y - 1)
-  }
-
-  // 2a) xadrez encravado: cinza neutro vira transparente
-  for (let p = 0; p < N; p++) if (!cleared[p] && grayMask[p]) cleared[p] = 1
-
-  // 2b) brancos colados a cinza neutro (quadrados claros do xadrez encravado)
-  const R = 5
-  for (let y = 0; y < h; y++) {
-    for (let x = 0; x < w; x++) {
-      const p = y * w + x
-      if (cleared[p]) continue
-      const i = at(x, y)
-      const r = d[i], g = d[i + 1], b = d[i + 2]
-      if (lum(r, g, b) >= 244 && sat(r, g, b) <= 14) {
-        let near = false
-        for (let dy = -R; dy <= R && !near; dy++) {
-          for (let dx = -R; dx <= R; dx++) {
-            const nx = x + dx, ny = y + dy
-            if (nx < 0 || ny < 0 || nx >= w || ny >= h) continue
-            if (grayMask[ny * w + nx]) { near = true; break }
-          }
-        }
-        if (near) cleared[p] = 1
-      }
+  const drain = () => {
+    while (stack.length) {
+      const p = stack.pop()
+      const x = p % w, y = (p - x) / w
+      push(x + 1, y); push(x - 1, y); push(x, y + 1); push(x, y - 1)
     }
   }
 
+  // 1) flood-fill a partir das bordas -> limpa o fundo externo
+  for (let x = 0; x < w; x++) { push(x, 0); push(x, h - 1) }
+  for (let y = 0; y < h; y++) { push(0, y); push(w - 1, y) }
+  drain()
+
+  // 2) semeia a partir do cinza-neutro ENCRAVADO (miolo da auréola, furos das
+  //    letras) e espalha pelos claros -> limpa o xadrez interno. As letras são
+  //    branco/azul (sem cinza neutro) então não são tocadas.
+  for (let p = 0; p < N; p++) {
+    if (!cleared[p] && grayMask[p]) {
+      cleared[p] = 1
+      stack.push(p)
+    }
+  }
+  drain()
+
   for (let p = 0; p < N; p++) if (cleared[p]) d[p * 4 + 3] = 0
 
-  writeFileSync(outPath, PNG.sync.write(png))
   let transp = 0
   for (let p = 0; p < N; p++) if (d[p * 4 + 3] === 0) transp++
-  console.log(`OK ${outPath}  ${w}x${h}  transparente=${(100 * transp / N).toFixed(1)}%`)
+  console.log(`  recorte ${inPath.split(/[\\/]/).pop()}: ${(100 * transp / N).toFixed(1)}% transparente`)
+  return { data: d, width: w, height: h }
 }
 
 const files = readdirSync(SRC)
 const find = (pred) => {
   const f = files.find(pred)
-  if (!f) throw new Error('arquivo não encontrado em ' + SRC)
+  if (!f) throw new Error('arquivo não encontrado em ' + SRC + ' (' + pred + ')')
   return join(SRC, f)
 }
 
-// logo v1 (auréola fechada) + ícone → recorte transparente
-cutout(find((f) => f.startsWith('EMBLEM-A') && f.includes('v1')), join(OUT, 'wordmark-nimbus.png'))
-cutout(find((f) => f.startsWith('EMBLEM-C')), join(OUT, 'icon-cloud.png'))
+// limpa a pasta de saída
+if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true })
+for (const f of readdirSync(OUT)) rmSync(join(OUT, f))
 
-// Dom Bosco v2 (vitral com flores brancas) → só copia
-copyFileSync(find((f) => f.startsWith('BG-04') && f.includes('v2')), join(OUT, 'bg-dombosco.png'))
-console.log('OK bg-dombosco.png <= BG-04 v2')
+// --- Fundos (foto): resize + WebP qualidade alta ---
+const BG = [
+  { pick: (f) => f.startsWith('HERO-01'), out: 'hero-desktop.webp', width: 2000, q: 84 },
+  { pick: (f) => f.startsWith('HERO-02'), out: 'hero-mobile.webp', width: 1080, q: 82 },
+  { pick: (f) => f.startsWith('BG-01') && f.includes('v1'), out: 'bg-ceu.webp', width: 1920, q: 82 },
+  { pick: (f) => f.startsWith('BG-02'), out: 'bg-cristo.webp', width: 1920, q: 82 },
+  { pick: (f) => f.startsWith('BG-03'), out: 'bg-pampulha.webp', width: 1920, q: 82 },
+  { pick: (f) => f.startsWith('STORE-01'), out: 'store-backdrop.webp', width: 1920, q: 82 },
+]
+for (const b of BG) {
+  await sharp(find(b.pick))
+    .resize({ width: b.width, withoutEnlargement: true })
+    .webp({ quality: b.q })
+    .toFile(join(OUT, b.out))
+  console.log(`OK ${b.out}`)
+}
+
+// --- Logo wordmark (com alpha): recorte -> WebP nítido ---
+{
+  const { data, width, height } = cutout(find((f) => f.startsWith('EMBLEM-A') && f.includes('v1')))
+  await sharp(Buffer.from(data), { raw: { width, height, channels: 4 } })
+    .resize({ width: 1000, withoutEnlargement: true })
+    .webp({ quality: 92, alphaQuality: 100 })
+    .toFile(join(OUT, 'wordmark-nimbus.webp'))
+  console.log('OK wordmark-nimbus.webp')
+}
+
+// --- Ícone (favicon): recorte -> PNG pequeno com alpha ---
+{
+  const { data, width, height } = cutout(find((f) => f.startsWith('EMBLEM-C')))
+  await sharp(Buffer.from(data), { raw: { width, height, channels: 4 } })
+    .resize({ width: 128 })
+    .png()
+    .toFile(join(OUT, 'icon-cloud.png'))
+  console.log('OK icon-cloud.png')
+}
+
+console.log('\nAssets gerados em', OUT)

@@ -1,20 +1,15 @@
 import { useEffect, useState } from 'react'
 import { ASSETS, SECTION } from '../data/content'
-import { scrollEl, scrollToSection } from '../scene/scroll'
+import { scrollToSection } from '../scene/scroll'
 
 export default function Topbar() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    // quem rola é o container do drei <ScrollControls> (não a window).
-    // capturamos o evento na fase de capture e lemos o scrollTop do alvo.
-    const onScroll = (e: Event) => {
-      const target = e.target as HTMLElement | null
-      const top = target?.scrollTop ?? scrollEl.current?.scrollTop ?? 0
-      setScrolled(top > 40)
-    }
-    window.addEventListener('scroll', onScroll, true)
-    return () => window.removeEventListener('scroll', onScroll, true)
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   return (

@@ -1,23 +1,23 @@
 import { useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
-import { Clouds, Cloud, useScroll } from '@react-three/drei'
-import { peak } from '../data/content'
-import { fade } from './util'
+import { Clouds, Cloud } from '@react-three/drei'
+import { SECTION } from '../data/content'
+import { pointer, weightAt } from './scrollStore'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
-// Nuvens PROCEDURAIS (transparência real, sem depender de PNG achatado).
-// Aparecem nas seções "céu" (hero, manifesto, coleção, footer) e somem nas
-// seções de cena fechada (Cristo, Pampulha, Dom Bosco) pra não poluir.
+// Nuvens PROCEDURAIS (transparência real). Aparecem nas seções "céu" (hero,
+// manifesto, coleção, footer) e somem nas seções de cena fechada (fé, design).
 export default function ParallaxLayers() {
   const root = useRef<THREE.Group>(null!)
-  const scroll = useScroll()
   const reduced = useReducedMotion()
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!root.current) return
-    const o = scroll.offset
-    const sky = Math.min(1, fade(o, peak(0)) + fade(o, peak(1)) + fade(o, peak(5)) + fade(o, peak(6)))
+    const sky = Math.min(
+      1,
+      weightAt(SECTION.hero) + weightAt(SECTION.manifesto) + weightAt(SECTION.collection) + weightAt(SECTION.footer),
+    )
 
     root.current.visible = sky > 0.02
     root.current.traverse((obj) => {
@@ -32,9 +32,8 @@ export default function ParallaxLayers() {
       }
     })
 
-    // parallax sutil pelo mouse (desktop)
-    const tx = reduced ? 0 : state.pointer.x * 0.4
-    const ty = reduced ? 0 : state.pointer.y * 0.2
+    const tx = reduced ? 0 : pointer.x * 0.4
+    const ty = reduced ? 0 : pointer.y * 0.2
     root.current.position.x = THREE.MathUtils.lerp(root.current.position.x, tx, 0.05)
     root.current.position.y = THREE.MathUtils.lerp(root.current.position.y, ty, 0.05)
   })

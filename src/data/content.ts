@@ -1,43 +1,33 @@
 // ──────────────────────────────────────────────────────────────────────────
 // NIMBUS — ponto único de edição: copy, assets e produtos da landing.
-// Mexa aqui pra trocar textos, preços e imagens. (As imagens vivem em public/img.)
+// Imagens em public/img (WebP otimizado). Mexa aqui pra trocar textos/preços.
 // ──────────────────────────────────────────────────────────────────────────
-
-export const PAGES = 7 // nº de seções = nº de "páginas" de scroll
 
 const base = import.meta.env.BASE_URL
 const img = (file: string) => `${base}img/${file}`
 
 export const ASSETS = {
-  heroDesktop: img('hero-desktop.png'),
-  heroMobile: img('hero-mobile.png'),
-  ceu: img('bg-ceu.png'),
-  cristo: img('bg-cristo.png'),
-  pampulha: img('bg-pampulha.png'),
-  dombosco: img('bg-dombosco.png'),
-  store: img('store-backdrop.png'),
-  cloud01: img('cloud-01.png'),
-  cloud02: img('cloud-02.png'),
-  cloud03: img('cloud-03.png'),
-  godray: img('godray.png'),
-  arco: img('arco.png'),
-  wordmark: img('wordmark-nimbus.png'),
+  heroDesktop: img('hero-desktop.webp'),
+  heroMobile: img('hero-mobile.webp'),
+  ceu: img('bg-ceu.webp'),
+  cristo: img('bg-cristo.webp'),
+  pampulha: img('bg-pampulha.webp'),
+  store: img('store-backdrop.webp'),
+  wordmark: img('wordmark-nimbus.webp'),
   icon: img('icon-cloud.png'),
 }
 
-// índice de cada seção na timeline de scroll (0 = topo)
+// índice de cada seção na ordem do scroll (0 = topo). 6 seções.
 export const SECTION = {
   hero: 0,
   manifesto: 1,
   faith: 2,
   design: 3,
-  drop: 4,
-  collection: 5,
-  footer: 6,
+  collection: 4,
+  footer: 5,
 } as const
 
-// posição (0..1) onde cada seção fica "no centro" do scroll
-export const peak = (i: number) => i / (PAGES - 1)
+export const SECTION_COUNT = 6
 
 export const COPY = {
   hero: {
@@ -57,13 +47,6 @@ export const COPY = {
     kicker: 'Design',
     title: 'Cada peça é arquitetura.',
     body: 'Modernismo brasileiro virou roupa: curva, concreto e luz, no espírito do Niemeyer.',
-  },
-  drop: {
-    kicker: 'Em breve',
-    title: 'Primeira coleção',
-    body: 'O primeiro drop está chegando. Deixe seu e-mail e seja o primeiro a saber.',
-    cta: 'Quero ser avisado',
-    placeholder: 'seu@email.com',
   },
   collection: {
     kicker: 'Coleção',

@@ -1,27 +1,26 @@
 import { useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useScroll, useTexture } from '@react-three/drei'
-import { ASSETS, peak } from '../data/content'
-import { coverSize, fade } from './util'
+import { useTexture } from '@react-three/drei'
+import { ASSETS } from '../data/content'
+import { coverSize } from './util'
+import { weightAt } from './scrollStore'
 import { useIsMobile } from '../hooks/useIsMobile'
 
-/** Um plano de fundo full-viewport cuja opacidade faz crossfade conforme o scroll. */
-function Background({ url, p, order }: { url: string; p: number; order: number }) {
+/** Plano de fundo full-viewport cuja opacidade = peso da seção (crossfade). */
+function Background({ url, index, order }: { url: string; index: number; order: number }) {
   const texture = useTexture(url)
   const { width, height } = useThree((s) => s.viewport)
   const mat = useRef<THREE.MeshBasicMaterial>(null!)
   const mesh = useRef<THREE.Mesh>(null!)
-  const scroll = useScroll()
 
   const aspect = texture.image ? texture.image.width / texture.image.height : 16 / 9
   const [w, h] = coverSize(width, height, aspect)
 
   useFrame(() => {
-    const op = fade(scroll.offset, p)
+    const op = weightAt(index)
     mat.current.opacity = op
-    // leve "ken burns": dá um zoom suave enquanto a cena entra
-    const s = 1.07 - 0.07 * op
+    const s = 1.06 - 0.06 * op // leve "ken burns"
     mesh.current.scale.setScalar(s)
   })
 
@@ -44,12 +43,12 @@ function Background({ url, p, order }: { url: string; p: number; order: number }
 export default function Backgrounds() {
   const mobile = useIsMobile()
   const hero = mobile ? ASSETS.heroMobile : ASSETS.heroDesktop
-  // ordem = timeline do scroll (hero → céu → cristo → pampulha → dom bosco → loja → footer)
-  const scenes = [hero, ASSETS.ceu, ASSETS.cristo, ASSETS.pampulha, ASSETS.dombosco, ASSETS.store, ASSETS.ceu]
+  // cena por seção: hero, manifesto(céu), fé(cristo), design(pampulha), coleção(loja), footer(céu)
+  const scenes = [hero, ASSETS.ceu, ASSETS.cristo, ASSETS.pampulha, ASSETS.store, ASSETS.ceu]
   return (
     <group>
       {scenes.map((url, i) => (
-        <Background key={i} url={url} p={peak(i)} order={i} />
+        <Background key={i} url={url} index={i} order={i} />
       ))}
     </group>
   )
