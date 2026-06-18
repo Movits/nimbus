@@ -91,20 +91,22 @@ export default function Overlay() {
         </div>
       </Section>
 
-      {/* §6 FOOTER — logo grande, equilibrado */}
+      {/* §6 FOOTER — logo grande dominando; e-mail/links no rodapé */}
       <Section index={SECTION.footer} className="footer" align="center">
         <img className="reveal footer__logo" src={ASSETS.wordmark} alt="NIMBUS" />
-        <p className="reveal footer__newsletter">{COPY.footer.newsletter}</p>
-        <form className="reveal signup" onSubmit={(e) => e.preventDefault()}>
-          <input type="email" required placeholder={COPY.footer.placeholder} aria-label="email" />
-          <button className="btn btn--primary" type="submit">
-            {COPY.footer.cta}
-          </button>
-        </form>
-        <div className="reveal footer__meta">
-          <span>{COPY.footer.madein}</span>
-          <span>Instagram · TikTok</span>
-          <span>{COPY.footer.rights}</span>
+        <div className="reveal footer__bottom">
+          <p className="footer__newsletter">{COPY.footer.newsletter}</p>
+          <form className="signup" onSubmit={(e) => e.preventDefault()}>
+            <input type="email" required placeholder={COPY.footer.placeholder} aria-label="email" />
+            <button className="btn btn--primary" type="submit">
+              {COPY.footer.cta}
+            </button>
+          </form>
+          <div className="footer__meta">
+            <span>{COPY.footer.madein}</span>
+            <span>Instagram · TikTok</span>
+            <span>{COPY.footer.rights}</span>
+          </div>
         </div>
       </Section>
     </main>

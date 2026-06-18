@@ -15,7 +15,12 @@ const OUT = 'public/img'
 const lum = (r, g, b) => 0.299 * r + 0.587 * g + 0.114 * b
 const sat = (r, g, b) => Math.max(r, g, b) - Math.min(r, g, b)
 
-// Recorta o xadrez e devolve um bitmap RGBA cru.
+// Recorta o xadrez do fundo e devolve um bitmap RGBA cru.
+// Estratégia que PRESERVA o detalhe das letras:
+//  1) flood-fill a partir das bordas -> limpa o fundo externo.
+//  2) limpa só o MIOLO DA AURÉOLA semeando o flood-fill a partir de pixels
+//     vizinhos ao dourado (a auréola é a única coisa cercada por dourado;
+//     as letras são cercadas por azul-marinho, então não são tocadas).
 function cutout(inPath) {
   const png = PNG.sync.read(readFileSync(inPath))
   const { width: w, height: h, data: d } = png
@@ -23,14 +28,13 @@ function cutout(inPath) {
   const at = (x, y) => (y * w + x) * 4
 
   const bgCand = new Uint8Array(N) // claro e pouco saturado (xadrez/branco/AA)
-  const grayMask = new Uint8Array(N) // cinza neutro (quadrado escuro do xadrez)
+  const goldMask = new Uint8Array(N) // amarelo/âmbar (anel da auréola)
   for (let y = 0; y < h; y++) {
     for (let x = 0; x < w; x++) {
       const i = at(x, y)
       const r = d[i], g = d[i + 1], b = d[i + 2]
-      const L = lum(r, g, b), S = sat(r, g, b)
-      if (L >= 175 && S <= 40) bgCand[y * w + x] = 1
-      if (S <= 16 && L >= 150 && L <= 244) grayMask[y * w + x] = 1
+      if (lum(r, g, b) >= 175 && sat(r, g, b) <= 40) bgCand[y * w + x] = 1
+      if (r >= 150 && g >= 110 && b <= 175 && r - b >= 45 && g - b >= 25) goldMask[y * w + x] = 1
     }
   }
 
@@ -52,18 +56,17 @@ function cutout(inPath) {
     }
   }
 
-  // 1) flood-fill a partir das bordas -> limpa o fundo externo
+  // 1) bordas -> fundo externo
   for (let x = 0; x < w; x++) { push(x, 0); push(x, h - 1) }
   for (let y = 0; y < h; y++) { push(0, y); push(w - 1, y) }
   drain()
 
-  // 2) semeia a partir do cinza-neutro ENCRAVADO (miolo da auréola, furos das
-  //    letras) e espalha pelos claros -> limpa o xadrez interno. As letras são
-  //    branco/azul (sem cinza neutro) então não são tocadas.
-  for (let p = 0; p < N; p++) {
-    if (!cleared[p] && grayMask[p]) {
-      cleared[p] = 1
-      stack.push(p)
+  // 2) semeia a partir do dourado -> limpa o miolo da auréola (e só ele)
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      if (!goldMask[y * w + x]) continue
+      push(x + 1, y); push(x - 1, y); push(x, y + 1); push(x, y - 1)
+      push(x + 1, y + 1); push(x - 1, y - 1); push(x + 1, y - 1); push(x - 1, y + 1)
     }
   }
   drain()
@@ -83,7 +86,6 @@ const find = (pred) => {
   return join(SRC, f)
 }
 
-// limpa a pasta de saída
 if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true })
 for (const f of readdirSync(OUT)) rmSync(join(OUT, f))
 
@@ -104,20 +106,30 @@ for (const b of BG) {
   console.log(`OK ${b.out}`)
 }
 
-// --- Logo wordmark (com alpha): recorte -> WebP nítido ---
+// --- Logo wordmark (com alpha): recorte -> trim -> WebP nítido ---
 {
   const { data, width, height } = cutout(find((f) => f.startsWith('EMBLEM-A') && f.includes('v1')))
-  await sharp(Buffer.from(data), { raw: { width, height, channels: 4 } })
+  const raw = { raw: { width, height, channels: 4 } }
+  await sharp(Buffer.from(data), raw)
+    .trim()
     .resize({ width: 1000, withoutEnlargement: true })
     .webp({ quality: 92, alphaQuality: 100 })
     .toFile(join(OUT, 'wordmark-nimbus.webp'))
   console.log('OK wordmark-nimbus.webp')
+  // prévia de verificação: compõe sobre MAGENTA (transparente vira magenta)
+  await sharp(Buffer.from(data), raw)
+    .flatten({ background: '#ff00ff' })
+    .resize({ width: 1000, withoutEnlargement: true })
+    .png()
+    .toFile('scripts/_debug-wordmark.png')
+  console.log('OK scripts/_debug-wordmark.png (verificação)')
 }
 
-// --- Ícone (favicon): recorte -> PNG pequeno com alpha ---
+// --- Ícone (favicon): recorte -> trim -> PNG pequeno com alpha ---
 {
   const { data, width, height } = cutout(find((f) => f.startsWith('EMBLEM-C')))
   await sharp(Buffer.from(data), { raw: { width, height, channels: 4 } })
+    .trim()
     .resize({ width: 128 })
     .png()
     .toFile(join(OUT, 'icon-cloud.png'))
