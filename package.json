@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "assets": "node scripts/cutout.mjs"
+    "assets": "node scripts/cutout.mjs",
+    "finalize": "node scripts/finalize-prints.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",
