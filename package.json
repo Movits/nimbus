@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "assets": "node scripts/cutout.mjs",
-    "finalize": "node scripts/finalize-prints.mjs"
+    "finalize": "node scripts/finalize-prints.mjs",
+    "cutout:inbox": "node scripts/transparentize.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",

@@ -8,3 +8,11 @@ dist-ssr
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Design assets — não versionar arte (não-lançada) no repo público; fica no Drive.
+# Mantemos só a estrutura de pastas (.gitkeep) e os docs/scripts.
+designs/**/*.png
+designs/**/*.webp
+designs/**/*.jpg
+designs/_inbox/
+designs/_mestres/

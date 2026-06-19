@@ -31,6 +31,7 @@ function* pngs(dir) {
 
 let count = 0
 for (const file of pngs(ROOT)) {
+  if (/[\\/](_inbox|_mestres)[\\/]/.test(file)) continue // triagem/backup: não mexer
   const folder = file.split(/[\\/]/).slice(-2)[0]
   if (SKIP.has(folder)) continue
   const target = TARGET[folder]
