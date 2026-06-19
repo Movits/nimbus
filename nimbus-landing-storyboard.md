@@ -37,13 +37,9 @@ implementação em Next.js + R3F + GSAP depois. **Nenhum código ainda.**
 
 ---
 
-## Tagline — opções (escolher 1) `TBD`
+## Tagline — **"Acima de tudo"** (definida)
 
-1. **"Vista o céu."** ← favorita
-2. "O sagrado, em alta definição."
-3. "Streetwear que sobe."
-4. "Fé que se veste."
-5. "Entre o concreto e o céu."
+Tagline da marca: **"Acima de tudo"**.
 
 ---
 

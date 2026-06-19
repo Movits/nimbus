@@ -1,199 +1,212 @@
 # NIMBUS — Designs de estampas (Higgsfield → HotPrinti)
 
-Prompts pra gerar as **estampas** no Higgsfield e publicar na **HotPrinti**, com fluxo pra
-deixar tudo **transparente e no tamanho certo** sem dor. Cada prompt é copy-paste.
+Prompts pra gerar as **estampas** no Higgsfield e publicar na **HotPrinti**. Cada prompt é
+**copy-paste e 100% autossuficiente** (o Higgsfield não tem memória — então o estilo completo
+vai escrito em TODO prompt, pra padronizar os designs).
 
 ---
 
-## ⚠️ Mudança importante: gere com FUNDO VERDE (não "transparente")
+## ⚠️ Sempre: FUNDO VERDE + qualidade máxima + aspect ratio
 
-O "transparente" do Higgsfield vem **achatado** (xadrez gravado nos pixels) e, em arte de
-contorno fino, o recorte automático **come as nuvens/letras**. Solução robusta: gerar com
-**fundo verde sólido** (chroma key). Verde não existe na nossa arte (branco/azul/dourado/navy),
-então o recorte fica **perfeito em qualquer desenho**.
+O "transparente" do Higgsfield vem achatado (xadrez nos pixels) e quebra arte de contorno fino.
+Por isso geramos com **fundo verde sólido** (chroma key) — verde não existe na nossa arte, então
+o recorte fica perfeito.
 
-**Fluxo (sempre):**
-1. No Higgsfield: **qualidade máxima (2K)** + **aspect ratio** da peça + termine o prompt com
-   *"on a solid flat chroma-green (#00B140) background"*.
-2. Salve os PNGs em **`designs/_inbox/`**.
-3. Rode **`npm run cutout:inbox`** → tira o verde (transparência real) + gera prévia sobre
-   magenta em `designs/_inbox/transparent/_debug/` pra conferir.
-4. Eu organizo nas pastas dos itens e rodo **`npm run finalize`** (upscale + 300 DPI).
+1. Higgsfield: **qualidade máxima (2K)** + **aspect ratio** da peça (tabela) + o prompt já
+   termina pedindo o **fundo verde**.
+2. Salve em **`designs/_inbox/`** → rode **`npm run cutout:inbox`** (tira o verde + prévia magenta).
+3. Eu organizo nas pastas e rodo **`npm run finalize`** (upscale + 300 DPI).
 
-### Aspect ratio por posição
-| Posição | Tamanho impressão | Aspect ratio |
+| Posição | Tamanho | Aspect ratio |
 |---|---|---|
 | Costas (hero) | 33×40 cm | **3:4** |
 | Frente/arte | 30×35 cm | **3:4** |
-| Peito / ícone / crest pequeno | 9×9 cm | **1:1** |
+| Peito / ícone / crest | 9×9 cm | **1:1** |
 | Manga / pocket | 9×9 cm | **1:1** |
+| Regata (vertical) | alto/estreito | **9:16** |
 | Laser (chinelo) | ~15 cm, 1 cor | ícone **1:1** · wordmark **16:9** |
-| Regata (vertical) | alto e estreito | **9:16** |
 
-**Colorway:** contorno **navy** grosso + preenchimento claro fazem a arte ler no **preto** e no
-**off-white**. (Tudo decidido: itens Camiseta Oversized · Moletom Canguru · Chinelo Nuvem;
-DTF padrão + 1 peça DTG de arte + laser no chinelo.)
+**Colorway:** o contorno navy grosso + preenchimento claro fazem a arte ler no **preto** e no
+**off-white**.
 
 ---
 
-## ✅ Status das artes (1ª leva)
+## 📐 Convenção de nomes + revisão
 
-**Prontas (recortadas + 300 DPI, nas pastas):**
-- `camiseta-oversized/peito/` — ícone nuvem+auréola (v1, v2)
-- `camiseta-oversized/frente/` — Sagrado Coração (v1, v2)
-- `moletom-canguru/costas/` — Cristo Redentor crest (v1)
-- `moletom-canguru/peito/` — ícone (v1, v2)
+- Arquivo: **`<item>-<posição>-<conceito>-<colorway>-vN.png`**
+  (ex.: `camiseta-costas-catedral-preto-v1.png`, `moletom-costas-cristo-v1.png`).
+- **Toda review eu confiro o conteúdo de cada geração × o rótulo** e corrijo nomes errados/
+  divergências antes de organizar.
 
-**Regenerar com FUNDO VERDE** (o recorte do xadrez comeu as nuvens):
-- **EST-01 Catedral (hero das costas)** — v1 e v2
-- **EST-04 v2** (Cristo, versão linha)
+## ✅ Status (1ª leva)
+**Prontas (recortadas + 300 DPI, nas pastas):** ícone (`camiseta/peito`, `moletom/peito` v1/v2) ·
+Sagrado Coração (`camiseta/frente` v1/v2) · Cristo (`moletom/costas` v1).
+**Regenerar com FUNDO VERDE:** EST-01 Catedral (hero, v1/v2) e EST-04 v2 (Cristo linha).
+
+> **Tagline da marca: "Acima de tudo".**
 
 ---
 
-## LEVA 1 — prompts (atualizados p/ fundo verde)
+## LEVA 1 — prompts
 
-### EST-01 · Camiseta costas (hero) · GPT Image 2 · 3:4 · 2K
+### EST-01 · Camiseta costas (hero, Catedral) · GPT Image 2 · 3:4 · 2K
 ```
-Large back-print streetwear graphic: the white hyperboloid crown of the Cathedral of Brasília bursting up through fluffy cartoon clouds, a glowing golden halo above, soft light rays, and the puffy cloud wordmark "NIMBUS" in cloud letters below. The letters must read N-I-M-B-U-S exactly. NIMBUS style: bold thick navy-outlined cartoon-cloud illustration, sky-blue + cloud-white + soft gold, premium streetwear, on a SOLID FLAT chroma-green (#00B140) background (not transparent).
-```
-
-### EST-02 · Peito / ícone · GPT Image 2 · 1:1 · 2K  ✅ pronto
-```
-Small logo: a single fluffy cloud with a golden halo above it, bold navy outline, white and light sky-blue fill, iconic and clean, no text. NIMBUS style on a SOLID FLAT chroma-green (#00B140) background (not transparent).
+Large back-print: the white hyperboloid crown of the Cathedral of Brasília bursting up through fluffy clouds, a glowing golden halo above it, soft golden light rays, and the puffy cloud wordmark "NIMBUS" in cloud letters below. The letters must read N-I-M-B-U-S exactly. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
-### EST-03 · Frente / Sagrado Coração · GPT Image 2 · 1:1 · 2K  ✅ pronto
+### EST-02 · Peito / ícone · GPT Image 2 · 1:1 · 2K  ✅
 ```
-Chest crest: a sacred heart wrapped in fluffy clouds with a crown of thorns, a flame and a small cross on top, golden halo and soft light rays. NIMBUS style: bold navy-outlined illustration, sky-blue + white + soft gold, premium streetwear, on a SOLID FLAT chroma-green (#00B140) background (not transparent).
+A single fluffy cloud with a golden halo floating above it, iconic and clean, no text. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
-### EST-04 · Moletom costas / Cristo Redentor · GPT Image 2 · 3:4 · 2K  ✅ v1 pronto
+### EST-03 · Frente / Sagrado Coração · GPT Image 2 · 1:1 · 2K  ✅
 ```
-Devotional back-print crest: Christ the Redeemer with open arms on a cloud, framed by a white Niemeyer-style curved concrete arch and a golden halo with light rays, fluffy clouds at the base, a ribbon banner reading "NIMBUS" in cloud letters (must read N-I-M-B-U-S). NIMBUS style: bold navy-outlined illustration, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background (not transparent).
+A sacred heart wrapped in fluffy clouds, with a crown of thorns, a small flame and a cross on top, a golden halo and soft light rays behind. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+### EST-04 · Moletom costas / Cristo Redentor · GPT Image 2 · 3:4 · 2K  ✅ v1
+```
+Christ the Redeemer with open arms standing on a cloud, framed by a white Niemeyer-style curved concrete arch and a golden halo with light rays, fluffy clouds at the base, a ribbon banner reading "NIMBUS" in cloud letters (must read N-I-M-B-U-S). Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
 ### EST-07 · Chinelo (laser, 1 cor) · GPT Image 2 · ícone 1:1 / wordmark 16:9
 ```
-A clean single-color (solid black) vector-style mark for laser engraving: the NIMBUS cloud-and-halo icon — bold simple silhouette, no gradient, high contrast, on a SOLID FLAT white background. (Gerar também o wordmark "NIMBUS" puffy em preto sólido, mesmo padrão.)
+A clean single-color (solid black) vector-style mark for laser engraving: the NIMBUS cloud-and-halo icon — a fluffy puffy cloud with a small halo — bold simple silhouette, minimal internal detail, no gradient, high contrast, on a SOLID FLAT white background. (Gerar também, no mesmo padrão, o wordmark "NIMBUS" em letras de nuvem puffy, preto sólido.)
 ```
-> Laser é 1 cor; aqui fundo branco serve (a HotPrinti usa o contorno). Não precisa de verde.
+> Laser é 1 cor → fundo branco serve (não usa verde).
 
 ---
 
 ## LEVA 2 — catálogo (vários designs por peça)
 
-Mesmo padrão: termine cada prompt com *"on a SOLID FLAT chroma-green (#00B140) background"*.
-Todos GPT Image 2 · 2K. Aspect ratio indicado.
+Todos GPT Image 2 · 2K · fundo verde. Aspect ratio indicado em cada um.
 
-### Costas (3:4) — back prints fortes
+### Costas (3:4)
+
 **EST-10 · São Miguel Arcanjo**
 ```
-Epic back-print: Saint Michael the Archangel as a warrior angel with large wings, holding a sword, standing victorious over a dragon among fluffy clouds, golden halo and divine light rays. NIMBUS style: bold navy-outlined cartoon-cloud illustration, sky-blue + white + soft gold, premium streetwear, on a SOLID FLAT chroma-green (#00B140) background.
+Saint Michael the Archangel as a warrior angel with large wings, holding a sword, standing victorious over a defeated dragon among fluffy clouds, with a golden halo and divine light rays. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-11 · Nossa Senhora Aparecida**
 ```
-Devotional back crest: Our Lady of Aparecida (dark-robed Madonna) with a golden crown and halo, radiating light, surrounded by fluffy clouds, a ribbon banner reading "NIMBUS" in cloud letters below. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+Our Lady of Aparecida (dark-robed Madonna) with a golden crown and halo, radiating light, surrounded by fluffy clouds, with a ribbon banner reading "NIMBUS" in cloud letters below (must read N-I-M-B-U-S). Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-12 · Igreja da Pampulha**
 ```
-Architectural back-print: Oscar Niemeyer's Pampulha church (row of white curved parabolic concrete vaults with the blue azulejo panel and the tall thin bell tower) floating on fluffy clouds under a halo of light. NIMBUS style: bold navy-outlined illustration, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
-```
-**EST-13 · "VISTA O CÉU" (tipográfico)**
-```
-Bold streetwear typographic back-print: the phrase "VISTA O CÉU" in big puffy cloud letters with a golden halo and small light rays, fluffy clouds around. The text must read exactly "VISTA O CÉU". NIMBUS style: navy-outlined cloud lettering, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+Oscar Niemeyer's Pampulha church (a row of white curved parabolic concrete vaults with the blue azulejo panel and the tall thin bell tower) floating on fluffy clouds under a golden halo of light. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
-### Frente / peito — crests (1:1, alguns 3:4)
+**EST-13 · "ACIMA DE TUDO" (tipográfico)**
+```
+Bold streetwear typographic back-print: the phrase "ACIMA DE TUDO" in big puffy cloud letters, with a golden halo and small light rays, fluffy clouds around. The text must read exactly "ACIMA DE TUDO". Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+### Frente / peito (1:1)
+
 **EST-14 · Pomba do Espírito Santo**
 ```
-Chest crest: the Holy Spirit dove descending with spread wings, radiating golden light rays through fluffy clouds. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
-```
-**EST-15 · Mãos em oração com terço**
-```
-Chest crest: two hands clasped in prayer holding a rosary, emerging from fluffy clouds, soft halo of light behind. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
-```
-**EST-16 · Cordeiro de Deus (Agnus Dei)**
-```
-Chest crest: the Lamb of God (Agnus Dei) lying with a victory banner and a cross, golden halo and light rays, fluffy clouds. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
-```
-**EST-17 · Cálice + hóstia radiante**
-```
-Chest crest: a chalice with a radiant Eucharist host above it, golden rays and a halo, fluffy clouds at the base. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
-```
-**EST-18 · Cruz radiante nas nuvens**
-```
-Chest/front graphic: a glowing cross rising from fluffy clouds with golden light rays and a soft halo. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
-```
-**EST-19 · Chaves de São Pedro**
-```
-Chest crest: two crossed keys of Saint Peter (gold and silver) tied with a ribbon, over a fluffy cloud with a small halo. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+The Holy Spirit dove descending with spread wings, radiating golden light rays, emerging from fluffy clouds. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
-### Pequenos (1:1) — peito / manga / pocket
+**EST-15 · Mãos em oração com terço**
+```
+Two hands clasped in prayer holding a rosary, emerging from fluffy clouds, with a soft golden halo of light behind. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+**EST-16 · Cordeiro de Deus (Agnus Dei)**
+```
+The Lamb of God (Agnus Dei) lying with a victory banner and a cross, a golden halo and light rays, on fluffy clouds. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+**EST-17 · Cálice + hóstia radiante**
+```
+A chalice with a radiant Eucharist host above it, golden light rays and a halo, with fluffy clouds at the base. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+**EST-18 · Cruz radiante nas nuvens**
+```
+A glowing cross rising from fluffy clouds, with golden light rays and a soft halo. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+**EST-19 · Chaves de São Pedro**
+```
+Two crossed keys of Saint Peter (one gold, one silver) tied with a ribbon, over a fluffy cloud with a small golden halo. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
+```
+
+### Pequenos — peito / manga / pocket (1:1)
+
 **EST-20 · Coroa de espinhos circular**
 ```
-Small circular emblem: a crown of thorns ring with a tiny cloud and halo accent in the center. NIMBUS style: bold navy outline, white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+A small circular emblem: a crown of thorns forming a ring, with a tiny fluffy cloud and a small halo accent in the center. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-21 · Terço em círculo**
 ```
-Small circular emblem: a rosary arranged in a perfect circle with a small cross at the bottom and a tiny cloud at the top. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+A rosary arranged in a perfect circle with a small cross at the bottom and a tiny fluffy cloud at the top. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-22 · Cruz-na-nuvem mini**
 ```
-Tiny sleeve/pocket mark: a small cross inside a fluffy cloud with a mini halo. NIMBUS style: bold navy outline, white + sky-blue + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+A tiny mark: a small cross inside a fluffy cloud with a mini golden halo. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-23 · Selo "NIMBUS · BRASIL"**
 ```
-Small circular brand seal: a cloud-and-halo icon in the center, the text "NIMBUS" arched on top and "BRASIL" at the bottom inside a thin ring. Text must read NIMBUS and BRASIL. NIMBUS style: bold navy outline, white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+A small circular brand seal: a fluffy cloud-and-halo icon in the center, the text "NIMBUS" arched on top and "BRASIL" along the bottom inside a thin ring. Text must read exactly NIMBUS and BRASIL. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
 ### Tipografia / latim
-**EST-24 · "SOLI DEO GLORIA" (1:1 ou 3:4)**
+
+**EST-24 · "SOLI DEO GLORIA" · 1:1 ou 3:4**
 ```
-Typographic emblem: the words "SOLI DEO GLORIA" in clean premium lettering inside a sunburst of golden rays with a small cloud and halo. Text must read exactly SOLI DEO GLORIA. NIMBUS style: navy + soft gold on white, on a SOLID FLAT chroma-green (#00B140) background.
+A typographic emblem: the words "SOLI DEO GLORIA" in clean premium lettering inside a sunburst of golden rays, with a small fluffy cloud and a halo. Text must read exactly SOLI DEO GLORIA. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
-**EST-25 · Versículo Salmo 19 (3:4, costas/manga)**
+
+**EST-25 · Versículo Salmo 19 · 3:4 (costas/manga)**
 ```
-Clean typographic back/sleeve print: "OS CÉUS PROCLAMAM A GLÓRIA DE DEUS" with a small "Sl 19" and a delicate cloud + light ray motif. Text exact and legible in Portuguese. NIMBUS style: navy + soft gold, sky-blue accents, on a SOLID FLAT chroma-green (#00B140) background.
+A clean typographic print reading "OS CÉUS PROCLAMAM A GLÓRIA DE DEUS" with a small "Sl 19" and a delicate fluffy cloud + light-ray motif. Text exact and legible in Portuguese. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
 ### Padrões / extras
-**EST-26 · Padrão all-over (nuvens + auréolas)**
+
+**EST-26 · Padrão all-over (nuvens + auréolas) · tile 1:1**
 ```
-Seamless repeating pattern of small fluffy clouds, tiny golden halos and little crosses, evenly scattered. NIMBUS style: navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+A seamless repeating pattern of small fluffy clouds, tiny golden halos and little crosses, evenly scattered and tileable. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
-**EST-27 · Vitral Dom Bosco (geométrico)**
+
+**EST-27 · Vitral Dom Bosco (geométrico) · tile 1:1**
 ```
-Seamless geometric stained-glass pattern inspired by the Dom Bosco Sanctuary: a grid of cobalt and sky-blue glass tiles glowing, premium. NIMBUS style, on a SOLID FLAT chroma-green (#00B140) background.
+A seamless geometric stained-glass pattern inspired by the Dom Bosco Sanctuary: a tileable grid of cobalt and sky-blue glass panes glowing with light. Estilo NIMBUS: bold clean illustration with thick dark-navy outline, cloud-white and sky-blue and cobalt with soft gold accents, flat print-ready colors (no photoreal, no 3D); premium yet playful streetwear; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-28 · Regata (estampa vertical) · 9:16**
 ```
-Tall vertical tank-top graphic: a glowing cross rising through a column of fluffy clouds with a golden halo and light rays, narrow composition. NIMBUS style: bold navy outline, sky-blue + white + soft gold, on a SOLID FLAT chroma-green (#00B140) background.
+A tall, narrow vertical graphic for a tank top: a glowing cross rising through a column of fluffy clouds with a golden halo and light rays. Estilo NIMBUS: bold cartoon sticker illustration where every shape is built from fluffy puffy cumulus clouds (soft rounded plump cloud forms, same look as the NIMBUS logo); thick clean dark-navy outline around everything; cloud-white fills with soft light sky-blue cel-shading; golden halo and soft golden light rays; crisp confident linework, flat print-ready colors (no photoreal, no 3D, no heavy gradients); premium yet playful streetwear; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
+
 **EST-29 · Boné (bordado, ícone) · 1:1**
 ```
-Simple compact emblem for cap embroidery (max ~6 colors): the NIMBUS cloud-and-halo icon, bold clean shapes, no fine gradients. NIMBUS style: navy + white + gold, on a SOLID FLAT chroma-green (#00B140) background.
+A simple compact emblem for cap embroidery (max ~6 flat colors, no fine gradients): the NIMBUS cloud-and-halo icon — a fluffy puffy cloud with a small golden halo — bold clean shapes, thick dark-navy outline, cloud-white + sky-blue + soft gold; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
 ---
 
-## Pastas (1 por item) e workflow
+## Pastas e workflow
 ```
 designs/
-  _inbox/            <- solte aqui as gerações (verde); rode npm run cutout:inbox
+  _inbox/            <- solte as gerações (verde); rode npm run cutout:inbox
   camiseta-oversized/  costas/ frente/ peito/ manga/ mockups/
   moletom-canguru/     costas/ frente/ peito/ mockups/
   chinelo-nuvem/       laser/ mockups/
   _mestres/            backup (Drive)
 ```
-1. Gerar (2K + aspect ratio + **fundo verde**) → `designs/_inbox/`.
-2. `npm run cutout:inbox` (tira o verde + prévia magenta).
-3. Eu organizo nas pastas + `npm run finalize` (upscale + 300 DPI).
-4. Subir na HotPrinti (DTF/DTG/laser) na posição/cor certas.
-5. Mockup na peça (skill higgsfield-product-photoshoot) → `mockups/`.
+Gerar (2K + aspect ratio + **verde**) → `_inbox/` → `npm run cutout:inbox` → eu organizo +
+`npm run finalize` → subir na HotPrinti → mockup na peça → `mockups/`.
 
-> As imagens de design **não vão pro GitHub** (ficam no Drive; o repo é público). O repo guarda
-> só a estrutura de pastas, os docs e os scripts.
+> As imagens de design **não vão pro GitHub** (repo público) — ficam local + Drive. O repo
+> guarda só estrutura, docs e scripts.
 
 ## Pendência
 Me manda as **fotos detalhadas** (cores + área/posição de impressão) de Camiseta Oversized,
