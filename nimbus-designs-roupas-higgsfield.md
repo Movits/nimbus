@@ -52,27 +52,30 @@ Sagrado Coração (`camiseta/frente` v1/v2) · Cristo (`moletom/costas` v1).
 
 ## LEVA 1 — prompts
 
-### EST-01 · Camiseta costas (hero, Catedral) · Nano Banana 2 · 3:4 · 2K
+> **Legenda do cabeçalho:** EST · nome · **tipo** · modelo · **aspect ratio** · **ref** (qual
+> imagem anexar como referência no Higgsfield). Tudo é 🖼️ Imagem (não vídeo), Nano Banana 2, fundo verde.
+
+### EST-01 · Camiseta costas (hero, Catedral) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: logo NIMBUS + 1 crest aprovado
 ```
 Large back-print: the white hyperboloid crown of the Cathedral of Brasília bursting up through fluffy clouds, a glowing golden halo above it, soft golden light rays, and the puffy cloud wordmark "NIMBUS" in cloud letters below. The letters must read N-I-M-B-U-S exactly. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-### EST-02 · Peito / ícone · Nano Banana 2 · 1:1 · 2K  ✅
+### EST-02 · Peito / ícone · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone aprovado (opcional) · ✅
 ```
 A single fluffy cloud with a golden halo floating above it, iconic and clean, no text. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-### EST-03 · Frente / Sagrado Coração · Nano Banana 2 · 1:1 · 2K  ✅
+### EST-03 · Frente / Sagrado Coração · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: serve de referência base · ✅
 ```
 A sacred heart wrapped in fluffy clouds, with a crown of thorns, a small flame and a cross on top, a golden halo and soft light rays behind. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-### EST-04 · Moletom costas / Cristo Redentor · Nano Banana 2 · 3:4 · 2K  ✅ v1
+### EST-04 · Moletom costas / Cristo Redentor · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: logo NIMBUS + Sagrado Coração · ✅ v1
 ```
 Christ the Redeemer with open arms standing on a cloud, framed by a white Niemeyer-style curved concrete arch and a golden halo with light rays, fluffy clouds at the base, a ribbon banner reading "NIMBUS" in cloud letters (must read N-I-M-B-U-S). Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-### EST-07 · Chinelo (laser, 1 cor) · Nano Banana 2 · ícone 1:1 / wordmark 16:9
+### EST-07 · Chinelo (laser, 1 cor) · 🖼️ Imagem · Nano Banana 2 · ícone 1:1 / wordmark 16:9 · ref: logo/ícone NIMBUS
 ```
 A clean single-color (solid black) vector-style mark for laser engraving: the NIMBUS cloud-and-halo icon — a fluffy puffy cloud with a small halo — bold simple silhouette, minimal internal detail, no gradient, high contrast, on a SOLID FLAT white background. (Gerar também, no mesmo padrão, o wordmark "NIMBUS" em letras de nuvem puffy, preto sólido.)
 ```
@@ -82,114 +85,115 @@ A clean single-color (solid black) vector-style mark for laser engraving: the NI
 
 ## LEVA 2 — catálogo (vários designs por peça)
 
-Todos Nano Banana 2 · 2K · fundo verde. Aspect ratio indicado em cada um.
+Todos: 🖼️ Imagem · Nano Banana 2 · 2K · fundo verde · **use reference image** (arte aprovada).
+Tipo/modelo/aspect ratio/ref também ao lado de cada nome.
 
 ### Costas (3:4)
 
-**EST-10 · São Miguel Arcanjo**
+**EST-10 · São Miguel Arcanjo** · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: Cristo (figura aprovada)
 ```
 Saint Michael the Archangel as a warrior angel with large wings, holding a sword, standing victorious over a defeated dragon among fluffy clouds, with a golden halo and divine light rays. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-11 · Nossa Senhora Aparecida**
+**EST-11 · Nossa Senhora Aparecida** · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: logo NIMBUS + Cristo
 ```
 Our Lady of Aparecida (dark-robed Madonna) with a golden crown and halo, radiating light, surrounded by fluffy clouds, with a ribbon banner reading "NIMBUS" in cloud letters below (must read N-I-M-B-U-S). Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-12 · Igreja da Pampulha**
+**EST-12 · Igreja da Pampulha** · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: Sagrado Coração
 ```
 Oscar Niemeyer's Pampulha church (a row of white curved parabolic concrete vaults with the blue azulejo panel and the tall thin bell tower) floating on fluffy clouds under a golden halo of light. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-13 · "ACIMA DE TUDO" (tipográfico)**
+**EST-13 · "ACIMA DE TUDO" (tipográfico)** · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: logo NIMBUS
 ```
 Bold streetwear typographic back-print: the phrase "ACIMA DE TUDO" in big puffy cloud letters, with a golden halo and small light rays, fluffy clouds around. The text must read exactly "ACIMA DE TUDO". Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
 ### Frente / peito (1:1)
 
-**EST-14 · Pomba do Espírito Santo**
+**EST-14 · Pomba do Espírito Santo** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: Sagrado Coração
 ```
 The Holy Spirit dove descending with spread wings, radiating golden light rays, emerging from fluffy clouds. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-15 · Mãos em oração com terço**
+**EST-15 · Mãos em oração com terço** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: Sagrado Coração
 ```
 Two hands clasped in prayer holding a rosary, emerging from fluffy clouds, with a soft golden halo of light behind. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-16 · Cordeiro de Deus (Agnus Dei)**
+**EST-16 · Cordeiro de Deus (Agnus Dei)** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: Sagrado Coração
 ```
 The Lamb of God (Agnus Dei) lying with a victory banner and a cross, a golden halo and light rays, on fluffy clouds. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-17 · Cálice + hóstia radiante**
+**EST-17 · Cálice + hóstia radiante** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: Sagrado Coração
 ```
 A chalice with a radiant Eucharist host above it, golden light rays and a halo, with fluffy clouds at the base. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-18 · Cruz radiante nas nuvens**
+**EST-18 · Cruz radiante nas nuvens** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: Sagrado Coração
 ```
 A glowing cross rising from fluffy clouds, with golden light rays and a soft halo. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-19 · Chaves de São Pedro**
+**EST-19 · Chaves de São Pedro** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: Sagrado Coração
 ```
 Two crossed keys of Saint Peter (one gold, one silver) tied with a ribbon, over a fluffy cloud with a small golden halo. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
 ### Pequenos — peito / manga / pocket (1:1)
 
-**EST-20 · Coroa de espinhos circular**
+**EST-20 · Coroa de espinhos circular** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone / Sagrado Coração
 ```
 A small circular emblem: a crown of thorns forming a ring, with a tiny fluffy cloud and a small halo accent in the center. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-21 · Terço em círculo**
+**EST-21 · Terço em círculo** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone aprovado
 ```
 A rosary arranged in a perfect circle with a small cross at the bottom and a tiny fluffy cloud at the top. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-22 · Cruz-na-nuvem mini**
+**EST-22 · Cruz-na-nuvem mini** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone aprovado
 ```
 A tiny mark: a small cross inside a fluffy cloud with a mini golden halo. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-23 · Selo "NIMBUS · BRASIL"**
+**EST-23 · Selo "NIMBUS · BRASIL"** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: logo NIMBUS + ícone
 ```
 A small circular brand seal: a fluffy cloud-and-halo icon in the center, the text "NIMBUS" arched on top and "BRASIL" along the bottom inside a thin ring. Text must read exactly NIMBUS and BRASIL. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
 ### Tipografia / latim
 
-**EST-24 · "SOLI DEO GLORIA" · 1:1 ou 3:4**
+**EST-24 · "SOLI DEO GLORIA"** · 🖼️ Imagem · Nano Banana 2 · 1:1 ou 3:4 · ref: logo NIMBUS
 ```
 A typographic emblem: the words "SOLI DEO GLORIA" in clean premium lettering inside a sunburst of golden rays, with a small fluffy cloud and a halo. Text must read exactly SOLI DEO GLORIA. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-25 · Versículo Salmo 19 · 3:4 (costas/manga)**
+**EST-25 · Versículo Salmo 19 (costas/manga)** · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: logo NIMBUS
 ```
 A clean typographic print reading "OS CÉUS PROCLAMAM A GLÓRIA DE DEUS" with a small "Sl 19" and a delicate fluffy cloud + light-ray motif. Text exact and legible in Portuguese. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
 ### Padrões / extras
 
-**EST-26 · Padrão all-over (nuvens + auréolas) · tile 1:1**
+**EST-26 · Padrão all-over (nuvens + auréolas)** · 🖼️ Imagem · Nano Banana 2 · tile 1:1 · ref: ícone (opcional)
 ```
 A seamless repeating pattern of small fluffy clouds, tiny golden halos and little crosses, evenly scattered and tileable. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-27 · Vitral Dom Bosco (geométrico) · tile 1:1**
+**EST-27 · Vitral Dom Bosco (geométrico)** · 🖼️ Imagem · Nano Banana 2 · tile 1:1 · ref: opcional
 ```
 A seamless geometric stained-glass pattern inspired by the Dom Bosco Sanctuary: a tileable grid of cobalt and sky-blue glass panes glowing with light. Estilo NIMBUS: bold clean illustration with thick dark-navy outline, cloud-white and sky-blue and cobalt with soft gold accents, flat print-ready colors (no photoreal, no 3D); premium yet playful streetwear; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
 
-**EST-28 · Regata (estampa vertical) · 9:16**
+**EST-28 · Regata (estampa vertical)** · 🖼️ Imagem · Nano Banana 2 · 9:16 · ref: Sagrado Coração
 ```
 A tall, narrow vertical graphic for a tank top: a glowing cross rising through a column of fluffy clouds with a golden halo and light rays. Estilo NIMBUS: bold cartoon/sticker streetwear illustration with thick clean dark-navy outlines and flat print-ready colors (no photoreal, no 3D, no heavy gradients); draw the MAIN SUBJECT clearly and recognizable — do NOT turn the subject into clouds; fluffy puffy cumulus clouds appear only as the surrounding setting and small accents; any brand lettering (e.g. NIMBUS) uses puffy cloud letters; cloud-white fills with soft sky-blue cel-shading, soft golden halo and light rays; palette = cloud-white + sky-blue + navy outline + soft gold only; the whole design on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene photo, no garment, no mockup).
 ```
 
-**EST-29 · Boné (bordado, ícone) · 1:1**
+**EST-29 · Boné (bordado, ícone)** · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone aprovado
 ```
 A simple compact emblem for cap embroidery (max ~6 flat colors, no fine gradients): the NIMBUS cloud-and-halo icon — a fluffy puffy cloud with a small golden halo — bold clean shapes, thick dark-navy outline, cloud-white + sky-blue + soft gold; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no scene, no garment, no mockup).
 ```
