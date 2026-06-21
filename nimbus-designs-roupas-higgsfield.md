@@ -144,7 +144,7 @@ Small chest print: a monogram "NMB" in heavy ornate blackletter / old-english fo
 Big back-print: the Christ the Redeemer statue as a high-contrast HALFTONE / dot-screen screenprint (recognizable, true to the real Rio statue), distressed vintage band-tee texture, with ornate blackletter "CRISTO REDENTOR" arched around it and a small "NIMBUS", off-white/cream + black + a touch of gold (lean green+gold Brasil). Text exact. On a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### ✅ H2 · São Miguel Arcanjo halftone · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: imagem clássica de São Miguel (temos v1-v3)
+### ✅ H2 · São Miguel Arcanjo halftone · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: imagem clássica de São Miguel (temos v1-v2)
 ```
 Big back-print: Saint Michael the Archangel (winged warrior with a sword, victorious over a dragon, true to classical sacred art) as a high-contrast HALFTONE / dot-screen screenprint, distressed vintage band-tee texture, ornate blackletter "SÃO MIGUEL ARCANJO" around it and a small "NIMBUS", off-white/cream + black + a touch of gold. Text exact. On a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
@@ -200,9 +200,8 @@ Big back-print: Saint George on horseback slaying the dragon (true to classical 
 
 ## NUVEM (artes de nuvem cartoon) + _marca
 Estilo cartoon/sticker: branco-nuvem + sombra azul-céu, contorno navy grosso, auréola dourada.
-Já criadas: catedral · cristo · sagrado coração (×2) · pomba · igreja · "acima de tudo" · logo
-ícone (×2) · logo wordmark. **Faltam baixar 2** (deram erro): **Cristo-crest (cristo no arco)** e
-**São Miguel (nuvem)** — ver lista no fim.
+✅ Criadas (8): catedral · cristo · **cristo-crest (arco)** · sagrado coração · pomba · igreja ·
+"acima de tudo" · **são-miguel**. **_marca:** logo ícone (×2) · logo wordmark.
 
 ---
 
@@ -221,7 +220,3 @@ Gerar (Nano Banana 2 + fundo certo + aspect ratio, ref só onde indicado) → `d
 `prontos/<COLECAO>/mockups/` (skill higgsfield-product-photoshoot).
 
 > Imagens de design **não vão pro GitHub** (repo público) — ficam local + Drive.
-
-## Falta baixar (deram erro no Higgsfield)
-1. **Cristo-crest (nuvem)** — Cristo Redentor dentro do arco/crest + nuvens + faixa "NIMBUS" (estilo nuvem cartoon).
-2. **São Miguel (nuvem)** — São Miguel Arcanjo em estilo nuvem cartoon (não o halftone nem o stencil).
