@@ -56,24 +56,27 @@ function checkerKey(d, w, h) {
   for (let x = 0; x < w; x++) { push(x, 0); push(x, h - 1) }
   for (let y = 0; y < h; y++) { push(0, y); push(w - 1, y) }
   while (st.length) { const p = st.pop(); const x = p % w, y = (p - x) / w; push(x + 1, y); push(x - 1, y); push(x, y + 1); push(x, y - 1) }
-  // despeckle: limpa pixels claros isolados cercados pela área já removida (ruído do xadrez),
-  // sem tocar na arte (pixel da arte tem vizinhos de arte, não de fundo). 2 passadas p/ clusters.
-  for (let pass = 0; pass < 2; pass++) {
-    const add = []
-    for (let p = 0; p < N; p++) {
-      if (cleared[p]) continue
-      const i = p * 4
-      if ((d[i] + d[i + 1] + d[i + 2]) / 3 < 200) continue
+  // remove ILHAS pequenas claras de baixa saturação (estrelinhas/ruído do fundo), preservando a
+  // arte grande e os elementos COLORIDOS (sparkles dourados ficam, por terem saturação alta).
+  const comp = new Int32Array(N).fill(-1), area = [], sumL = [], sumS = [], stk = []
+  let nc = 0
+  for (let seed = 0; seed < N; seed++) {
+    if (cleared[seed] || comp[seed] !== -1) continue
+    const id = nc++; area[id] = 0; sumL[id] = 0; sumS[id] = 0; comp[seed] = id; stk.push(seed)
+    while (stk.length) {
+      const p = stk.pop(), i = p * 4, r = d[i], g = d[i + 1], b = d[i + 2]
+      area[id]++; sumL[id] += (r + g + b) / 3; sumS[id] += Math.max(r, g, b) - Math.min(r, g, b)
       const x = p % w, y = (p - x) / w
-      if (x <= 0 || y <= 0 || x >= w - 1 || y >= h - 1) { add.push(p); continue }
-      let c = 0
-      if (cleared[p - 1]) c++; if (cleared[p + 1]) c++; if (cleared[p - w]) c++; if (cleared[p + w]) c++
-      if (cleared[p - w - 1]) c++; if (cleared[p - w + 1]) c++; if (cleared[p + w - 1]) c++; if (cleared[p + w + 1]) c++
-      if (c >= 6) add.push(p)
+      if (x + 1 < w && !cleared[p + 1] && comp[p + 1] === -1) { comp[p + 1] = id; stk.push(p + 1) }
+      if (x - 1 >= 0 && !cleared[p - 1] && comp[p - 1] === -1) { comp[p - 1] = id; stk.push(p - 1) }
+      if (y + 1 < h && !cleared[p + w] && comp[p + w] === -1) { comp[p + w] = id; stk.push(p + w) }
+      if (y - 1 >= 0 && !cleared[p - w] && comp[p - w] === -1) { comp[p - w] = id; stk.push(p - w) }
     }
-    if (!add.length) break
-    for (const p of add) cleared[p] = 1
   }
+  const MINAREA = Math.max(64, Math.round(N * 0.0008))
+  const kill = new Uint8Array(nc)
+  for (let id = 0; id < nc; id++) if (area[id] < MINAREA && sumL[id] / area[id] >= 185 && sumS[id] / area[id] < 60) kill[id] = 1
+  for (let p = 0; p < N; p++) { const c = comp[p]; if (c >= 0 && kill[c]) cleared[p] = 1 }
   for (let p = 0; p < N; p++) if (cleared[p]) d[p * 4 + 3] = 0
 }
 
