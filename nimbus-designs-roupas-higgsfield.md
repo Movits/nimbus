@@ -1,173 +1,93 @@
-# NIMBUS — Designs de estampas (Higgsfield → HotPrinti)
+# NIMBUS — Estampas (teste): 10 designs streetwear
 
-Prompts pra gerar as **estampas** no Higgsfield e publicar na **HotPrinti**. Cada prompt é
-**copy-paste e 100% autossuficiente** (o Higgsfield não tem memória).
+Leva de **teste** pra achar a cara das estampas. Foco: **streetwear/artwork de verdade** —
+**graffiti** e **gótico blackletter**. A nuvem/auréola é **acento e logo** (frente), não o tema.
+Layout: **logo/wordmark na frente + gráfico grande nas costas**.
 
-**Norte de estilo = a EST-01 v2 (Catedral) que o dono amou:** assunto **realista e reconhecível**
-+ grandes **nuvens fofas brancas** (as nuvens puffy do logo) emoldurando + **wordmark NIMBUS** em
-letras de nuvem + **auréola dourada, raios e brilhos**. Paleta **branca + dourada**, com **azul só
-de acento** (nada de "tudo azul" nem nuvens de traço).
+Cada prompt é copy-paste e autossuficiente (o Higgsfield não tem memória). Gere no **Nano Banana 2**
+(ilimitado) · **2K** · **fundo verde** · salve em `designs/_inbox/` → `npm run cutout:inbox` → eu
+organizo + `npm run finalize`. Cores: funciona em **preto** (grafismo claro) e **off-white**
+(grafismo preto), com toque de ouro.
 
----
-
-## ⚠️ Como gerar (sempre)
-
-1. **Nano Banana 2** (ilimitado → poupa créditos pros vídeos) · **2K** · **aspect ratio** da peça ·
-   o prompt já pede **fundo verde**.
-2. **Reference image = EST-01 v2** (estilo: nuvens fofas + wordmark + clima). Arquivo:
-   `designs/_mestres/_originais/EST-01 · Costas (hero) v2.png`. **+ uma foto real do assunto**
-   (Cristo Redentor, Aparecida, São Miguel…) pra semelhança. *Estilo vem da EST-01, semelhança da foto.*
-3. Salve em **`designs/_inbox/`** → **`npm run cutout:inbox`** → eu organizo + **`npm run finalize`**.
-
-**Bloco de estilo (já embutido em cada prompt):**
-> Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable
-> illustration — true to the real thing (real form, real colors, clean shading), NOT flat cartoon
-> and NOT a blue tattoo line-drawing; it emerges from and is framed by big FLUFFY PUFFY WHITE
-> cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and
-> warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm
-> gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly
-> streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard,
-> no garment, no mockup).
-
-| Posição | Tamanho · Aspect ratio |
-|---|---|
-| Costas | 33×40 cm **3:4** · Frente 30×35 cm **3:4** · Peito/manga 9 cm **1:1** · Regata **9:16** · Laser ícone **1:1**/wordmark **16:9** |
+**Blocos de estilo (já embutidos):**
+- 🎨 **Graffiti:** authentic street graffiti / spray-paint art, spray texture, drips/overspray, raw urban energy, high-contrast.
+- 🖤 **Blackletter:** premium gothic — heavy ornate old-english type, distressed washed vintage screenprint texture, off-white/cream + black + touch of gold, Fear-of-God / band-tee vibe.
 
 ---
 
-## Estampas — assunto realista + nuvens fofas
+## 🎨 GRAFFITI
 
-### EST-01 · Catedral de Brasília (costas) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo) + foto da Catedral
+### G1 · "NIMBUS" graffiti tag · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: —
 ```
-A detailed realistic illustration of the Cathedral of Brasília (Niemeyer's white hyperboloid crown of curved white columns with blue glass and the cross on top), recognizable as the real building, bursting up through big fluffy puffy white clouds, with the puffy cloud wordmark "NIMBUS" integrated in the clouds at the base (must read N-I-M-B-U-S). Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing (real form, real colors, clean shading), NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-04 · Cristo Redentor (moletom costas) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo) + foto real do Cristo Redentor
-```
-A detailed realistic illustration of the Christ the Redeemer statue (true to the real Rio statue — correct proportions, open arms, real stone look), standing among big fluffy puffy white clouds, with the puffy cloud wordmark "NIMBUS" integrated in the clouds at the base (must read N-I-M-B-U-S). Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing (real form, real colors, clean shading), NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print streetwear graphic: the word "NIMBUS" as a bold graffiti throw-up / wildstyle piece with thick clean outlines, spray shading, paint drips and overspray, and a small halo arc over one letter. The text must read N-I-M-B-U-S exactly. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint art — bold graffiti lettering with visible spray texture, paint drips and overspray, raw urban energy, high-contrast; premium streetwear graphic for screen/DTF print; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-10 · São Miguel Arcanjo (costas) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo) + imagem clássica de São Miguel
+### G2 · Anjo stencil (Banksy) · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: foto de estátua de anjo
 ```
-A detailed realistic illustration of Saint Michael the Archangel — a winged warrior angel in armor holding a sword, victorious over a defeated dragon, true to classical sacred art (real anatomy and drapery) — standing among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing (real form, real colors, clean shading), NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-11 · Nossa Senhora Aparecida (costas) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo) + imagem de N. Sra. Aparecida
-```
-A detailed realistic illustration of Our Lady of Aparecida (the real dark-robed Madonna with the golden crown and ornate mantle, true to the devotional image), among big fluffy puffy white clouds, with the puffy cloud wordmark "NIMBUS" integrated in the clouds at the base (must read N-I-M-B-U-S). Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing (real form, real colors, clean shading), NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print: a Banksy-style spray-paint STENCIL of a baroque cherub/angel statue with a halo, high-contrast 1–2 color stencil with spray texture, light overspray and a few paint drips, plus a small hand-style "NIMBUS" tag. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint art — stencil art with visible spray texture, drips and overspray, raw urban energy, high-contrast; premium streetwear graphic for screen/DTF print; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-12 · Igreja da Pampulha (costas) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo) + foto da Pampulha
+### G3 · "ACIMA DE TUDO" wildstyle · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: —
 ```
-A detailed realistic illustration of Niemeyer's Pampulha church (the real row of white curved parabolic vaults with the blue azulejo panel and the tall thin bell tower), among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing (real form, real colors, clean shading), NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-14 · Pomba do Espírito Santo · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo)
-```
-A detailed realistic illustration of the Holy Spirit dove descending with spread wings, radiating golden rays, among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print: the phrase "ACIMA DE TUDO" as bold graffiti lettering (wildstyle / bubble style) with thick outlines, spray shading and paint drips. The text must read exactly "ACIMA DE TUDO". Estilo NIMBUS graffiti: authentic street graffiti / spray-paint art — bold graffiti lettering with visible spray texture, paint drips and overspray, raw urban energy, high-contrast; premium streetwear graphic for screen/DTF print; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-15 · Mãos em oração com terço · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo) + foto de mãos em oração
+### G4 · Cristo Redentor stencil · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: foto do Cristo Redentor
 ```
-A detailed realistic illustration of two hands clasped in prayer holding a rosary (true-to-life anatomy), among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-16 · Cordeiro de Deus (Agnus Dei) · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo)
-```
-A detailed realistic illustration of the Lamb of God (Agnus Dei) with a victory banner and a cross, among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print: a high-contrast spray-paint STENCIL of the Christ the Redeemer statue (recognizable silhouette, arms open), 1–2 color stencil with spray texture, paint drips and a sprayed halo behind, plus a small "NIMBUS" tag. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint art — stencil art with visible spray texture, drips and overspray, raw urban energy, high-contrast; premium streetwear graphic for screen/DTF print; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-17 · Cálice + hóstia radiante · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo)
+### G5 · Ícone nuvem+auréola (spray) · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · peito · 1:1 · ref: ícone NIMBUS
 ```
-A detailed realistic illustration of a golden chalice with a radiant Eucharist host above it, among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-18 · Cruz radiante · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo)
-```
-A detailed realistic illustration of a glowing cross, among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-19 · Chaves de São Pedro · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo)
-```
-A detailed realistic illustration of the two crossed keys of Saint Peter (one gold, one silver) tied with a ribbon, among big fluffy puffy white clouds. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-28 · Regata (vertical, cruz radiante) · 🖼️ Imagem · Nano Banana 2 · 9:16 · ref: EST-01 v2 (estilo)
-```
-A tall narrow vertical composition: a detailed realistic glowing cross rising through a column of big fluffy puffy white clouds with a gold halo ring and warm godrays. Estilo NIMBUS (como a EST-01 da Catedral): the MAIN SUBJECT is a detailed REALISTIC, recognizable illustration — true to the real thing, NOT flat cartoon and NOT a blue tattoo line-drawing; framed by big FLUFFY PUFFY WHITE cartoon cumulus clouds (the soft puffy cloud look of the NIMBUS logo), a thin GOLD halo ring and warm golden godrays behind, plus a few small gold sparkles; palette is WHITE-DOMINANT + warm gold, sky-blue only as a soft accent (do NOT make the whole image blue); premium, airy, heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Small left-chest mark: the NIMBUS cloud-and-halo icon done as a quick spray-paint STENCIL with light overspray and a couple of paint drips, 1–2 colors, bold and clean, no extra text. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint art — stencil with visible spray texture, drips and overspray, high-contrast; premium streetwear graphic for screen/DTF print; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
 ---
 
-## Tipográficos (nuvens fofas + wordmark, branco + dourado)
+## 🖤 BLACKLETTER (gótico)
 
-### EST-13 · "ACIMA DE TUDO" · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo) + logo NIMBUS
+### B1 · "NIMBUS" blackletter · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · frente/costas · 3:4 · ref: —
 ```
-The phrase "ACIMA DE TUDO" in big puffy cloud letters (same look as the NIMBUS logo lettering), nestled in big fluffy puffy white clouds, with a thin gold halo ring and warm golden godrays and small gold sparkles. Text must read exactly "ACIMA DE TUDO". Palette WHITE-DOMINANT + warm gold, sky-blue only as a soft accent; premium airy heavenly streetwear; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-23 · Selo "NIMBUS · BRASIL" · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: EST-01 v2 (estilo) + logo NIMBUS
-```
-A circular brand seal: the fluffy cloud-and-halo NIMBUS icon in the center, "NIMBUS" arched on top and "BRASIL" along the bottom inside a thin gold ring (text exact). Fluffy puffy white clouds, gold accents, small sparkles; palette WHITE-DOMINANT + warm gold, sky-blue only as a soft accent; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+A bold print: the word "NIMBUS" in heavy ornate blackletter / old-english type, with a small cross and a thin gold halo accent, distressed washed vintage texture. The text must read N-I-M-B-U-S exactly. Estilo NIMBUS blackletter: premium gothic streetwear graphic — heavy ornate blackletter / old-english typography with subtle distressed washed vintage screenprint texture, bold and legible, off-white/cream + black with a touch of gold, Fear-of-God / vintage band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-24 · "SOLI DEO GLORIA" · 🖼️ Imagem · Nano Banana 2 · 1:1 ou 3:4 · ref: EST-01 v2 (estilo)
+### B2 · Versículo Salmo 19 · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: —
 ```
-A typographic emblem reading exactly "SOLI DEO GLORIA" inside a sunburst of warm gold rays, nestled in fluffy puffy white clouds with a thin gold halo ring. Palette WHITE-DOMINANT + warm gold, sky-blue only as a soft accent; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-25 · Salmo 19 (costas/manga) · 🖼️ Imagem · Nano Banana 2 · 3:4 · ref: EST-01 v2 (estilo)
-```
-A clean typographic print reading "OS CÉUS PROCLAMAM A GLÓRIA DE DEUS" with a small "Sl 19", framed by fluffy puffy white clouds, gold halo ring and warm godrays (text exact, legible in Portuguese). Palette WHITE-DOMINANT + warm gold, sky-blue only as a soft accent; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print: "OS CÉUS PROCLAMAM A GLÓRIA DE DEUS" in ornate blackletter arranged in an arched layout, with a small "Sl 19" and a thin cross, washed vintage band-tee look. Text exact and legible in Portuguese. Estilo NIMBUS blackletter: premium gothic streetwear graphic — heavy ornate blackletter / old-english typography with subtle distressed washed vintage screenprint texture, bold and legible, off-white/cream + black with a touch of gold, Fear-of-God / vintage band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
----
-
-## Marca / utilitários / padrões
-
-### EST-02 · Ícone nuvem (peito) · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone/logo · ✅ pronto
+### B3 · Cruz + crest blackletter · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: —
 ```
-The NIMBUS brand icon: a single fluffy puffy white cloud with a gold halo above it, clean and iconic, no text; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print: an ornate gothic cross centered, with "NIMBUS" in heavy blackletter above it and "ACIMA DE TUDO" in blackletter on a banner below, distressed washed vintage texture and a touch of gold. Text exact. Estilo NIMBUS blackletter: premium gothic streetwear graphic — heavy ornate blackletter / old-english typography with subtle distressed washed vintage screenprint texture, bold and legible, off-white/cream + black with a touch of gold, Fear-of-God / vintage band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-03 · Sagrado Coração (emblema ALT, azul) · 🖼️ Imagem · Nano Banana 2 · 1:1 · ✅ pronto
-> Estilo alternativo (tattoo/engraving azul) — já temos pronto; usar só se quiser variar.
-
-### EST-07 · Chinelo (laser, 1 cor) · 🖼️ Imagem · Nano Banana 2 · ícone 1:1 / wordmark 16:9 · ref: logo/ícone
+### B4 · "ACIMA DE TUDO" blackletter (peito) · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · peito · 1:1 · ref: —
 ```
-A single-color (solid black) vector mark for laser engraving: the NIMBUS cloud-and-halo icon — bold simple silhouette, no gradient, high contrast, on a SOLID FLAT white background. (Gerar também o wordmark "NIMBUS" em letras de nuvem puffy, preto sólido.)
+Small chest print: "ACIMA DE TUDO" in compact heavy blackletter with a tiny cross, washed vintage texture, touch of gold. Text exact. Estilo NIMBUS blackletter: premium gothic streetwear graphic — heavy ornate blackletter / old-english typography with subtle distressed washed vintage screenprint texture, bold and legible, off-white/cream + black with a touch of gold, Fear-of-God / vintage band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
-### EST-29 · Boné (bordado, ícone) · 🖼️ Imagem · Nano Banana 2 · 1:1 · ref: ícone/logo
+### B5 · N. Sra. Aparecida gótica · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: foto de N. Sra. Aparecida
 ```
-A compact emblem for cap embroidery (max ~6 flat colors): the NIMBUS fluffy cloud-and-halo icon, bold clean shapes, white + soft gold with a touch of sky-blue; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-26 · Padrão all-over · 🖼️ Imagem · Nano Banana 2 · tile 1:1 · ref: EST-01 v2 (estilo)
-```
-A seamless tileable pattern of small fluffy puffy white clouds, tiny gold halos and little crosses with small gold sparkles, evenly scattered. Palette WHITE-DOMINANT + warm gold, sky-blue only as a soft accent; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
-```
-
-### EST-27 · Vitral Dom Bosco (padrão) · 🖼️ Imagem · Nano Banana 2 · tile 1:1 · ref: foto do vitral do Dom Bosco
-```
-A seamless geometric stained-glass pattern inspired by the Dom Bosco Sanctuary: a tileable grid of cobalt and sky-blue glass panes with thin dark leading lines and soft gold accents; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+Big back-print: Our Lady of Aparecida rendered as a high-contrast halftone screenprint (vintage band-tee style, recognizable as the real devotional image), with ornate blackletter "NOSSA SENHORA APARECIDA" arched around it and a small "NIMBUS", distressed texture and a touch of gold. Text exact. Estilo NIMBUS blackletter: premium gothic streetwear graphic — halftone screenprint + heavy ornate blackletter, subtle distressed washed vintage texture, off-white/cream + black with a touch of gold, Fear-of-God / vintage band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
 ---
 
-## Pastas e workflow
+## Workflow + pastas
 ```
 designs/
   _inbox/   <- solte as gerações (verde); rode npm run cutout:inbox
   camiseta-oversized/  costas/ frente/ peito/ manga/ mockups/
   moletom-canguru/     costas/ frente/ peito/ mockups/
   chinelo-nuvem/       laser/ mockups/
-  _mestres/            backup (Drive) + _originais/ (refs de estilo)
+  _mestres/            backup (Drive)
 ```
-Gerar (Nano Banana 2 + verde + **EST-01 v2 como ref** + foto real do assunto + aspect ratio) →
-`_inbox/` → `npm run cutout:inbox` → eu organizo + `npm run finalize` → HotPrinti → mockup.
+Gerar (Nano Banana 2 + verde + aspect ratio, ref só onde indicado) → `_inbox/` →
+`npm run cutout:inbox` → eu organizo + `npm run finalize` → HotPrinti → mockup.
 
-> Imagens de design **não vão pro GitHub** (repo público) — ficam local + Drive.
+> Marca pronta (mantida): logo wordmark puffy + ícone nuvem (frente). Imagens de design **não vão
+> pro GitHub** (repo público) — ficam local + Drive. O catálogo antigo de emblemas-nuvem está no
+> histórico do git, se um dia quisermos.
 
 ## Pendência
 Fotos detalhadas (cores + área de impressão) de Camiseta Oversized, Moletom Canguru e Chinelo
