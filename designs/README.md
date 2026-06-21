@@ -1,31 +1,32 @@
 # designs/ — artes das estampas (POD)
 
-Direção atual: **streetwear** (graffiti + blackletter + halftone). Prompts em
-`../nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo público) —
-ficam local + Drive.
+Prompts em `../nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo
+público) — ficam local + Drive.
 
 ## Estrutura
 ```
-_mestres/_originais/   artes geradas no Higgsfield (fundo VERDE) — backup
+originais/       TODAS as fontes, nomeadas (como geradas: fundo verde ou xadrez) — backup
 prontos/
-  costas/   gráficos grandes (33 cm) — recortados (sem verde) + 300 DPI, prontos pro POD
-  peito/    gráficos pequenos (9 cm)
-  _debug/   prévias sobre magenta (conferência do recorte)
+  costas/        recortadas (sem fundo) + 300 DPI — gráficos grandes (back)
+  peito/         recortadas + 300 DPI — gráficos pequenos / frente
 ```
+Recortar/organizar: `node scripts/organize-designs.mjs` (auto-detecta fundo verde ou xadrez,
+recorta, redimensiona pra 300 DPI). Gere sempre no **Nano Banana 2 + fundo verde**.
 
-## Fluxo
-1. Gerar no **Nano Banana 2** com **fundo verde sólido (#00B140)** + aspect ratio (3:4 costas, 1:1 peito).
-2. Salvar os originais em `_mestres/_originais/`.
-3. `node scripts/organize-streetwear.mjs` (ou `npm run cutout:inbox` p/ a pasta `_inbox`):
-   recorta o verde (chroma key) + redimensiona pra 300 DPI → `prontos/`.
-4. Subir as de `prontos/` na HotPrinti/YouDraw.
+## Códigos / estilos
+**G** graffiti · **B** blackletter · **H** halftone · (nomes descritivos = artes antigas "nuvem").
 
-## Nomes
-`<código>-<descrição>.png` — códigos: **G** graffiti, **B** blackletter, **H** halftone.
-Ex.: `G4-cristo-stencil-ouro`, `B1-nimbus-blackletter`, `B5-aparecida-halftone`.
+## Catálogo atual (recortado, pronto pro POD)
+**Costas:** G1-tag (roxo/azul) · G2-anjo-stencil · G2-anjo-livro-stencil · G3-acima-de-tudo
+(tags/azul) · G4-cristo-stencil (branco/ouro) · B1-nimbus-blackletter · B2-salmo19 · B3-cruz-crest
+· B5-aparecida-halftone · catedral-nuvem · cristo-crest-azul.
+**Peito/frente:** G5-icone-nuvem-spray · nimbus-spray-puffy · B4-acima-de-tudo-gotico (branco/preto)
+· logo-icone-nuvem-v1/v2 · sagrado-coracao-azul.
 
-## Prontas (1ª leva, aprovadas)
-G1 tag (roxo/azul) · G2 anjo stencil (querubim/livro) · G3 "ACIMA DE TUDO" wildstyle ·
-G4 Cristo stencil (branco/ouro) · G5 ícone nuvem spray · `nimbus-spray-puffy` ·
-B1 NIMBUS blackletter · B2 Salmo 19 · B3 cruz+crest · B4 "ACIMA DE TUDO" gótico (branco/preto) ·
-B5 Aparecida halftone.
+## ⚠️ Regra de colorway (preto + off-white)
+Cada design deveria ter versão pra **camiseta preta** (arte clara/colorida) **e off-white** (arte
+escura). Faltam gerar (mesmo prompt, trocando a cor da arte, fundo verde; sufixo `-branco`/`-preto`):
+- **Versão BRANCA (p/ camiseta preta):** G2-anjo · G5-icone-spray · nimbus-spray-puffy ·
+  B1-nimbus-blackletter · B5-aparecida.
+- **Versão ESCURA (p/ camiseta off-white):** G4-cristo · B2-salmo19.
+- **Já OK nas duas:** G1, G3 (coloridos) · B4 (tem branco+preto).
