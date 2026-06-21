@@ -12,6 +12,7 @@ organizo + `npm run finalize`. Cores: funciona em **preto** (grafismo claro) e *
 **Blocos de estilo (já embutidos):**
 - 🎨 **Graffiti:** authentic street graffiti / spray-paint art, spray texture, drips/overspray, raw urban energy, high-contrast.
 - 🖤 **Blackletter:** premium gothic — heavy ornate old-english type, distressed washed vintage screenprint texture, off-white/cream + black + touch of gold, Fear-of-God / band-tee vibe.
+- 🟡 **Halftone screenprint:** subject in high-contrast halftone/dot-screen (true to the real holy image), distressed vintage texture, blackletter around it, cream + black + gold; vibe Online Ceramics / band-tee. **Puxa pro verde+dourado (Brasil)** — funcionou demais na Aparecida e no Cristo.
 
 ---
 
@@ -69,6 +70,59 @@ Small chest print: "ACIMA DE TUDO" in compact heavy blackletter with a tiny cros
 ### B5 · N. Sra. Aparecida gótica · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: foto de N. Sra. Aparecida
 ```
 Big back-print: Our Lady of Aparecida rendered as a high-contrast halftone screenprint (vintage band-tee style, recognizable as the real devotional image), with ornate blackletter "NOSSA SENHORA APARECIDA" arched around it and a small "NIMBUS", distressed texture and a touch of gold. Text exact. Estilo NIMBUS blackletter: premium gothic streetwear graphic — halftone screenprint + heavy ornate blackletter, subtle distressed washed vintage texture, off-white/cream + black with a touch of gold, Fear-of-God / vintage band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+---
+
+## LEVA 3 — novos (estilos provados) ⭐
+
+A leva 1 (G1–G5, B1–B5) deu certo. Aqui vão mais 8 nos estilos que funcionaram, com o 3º estilo
+**halftone** e mais santos/frases. Mesmo padrão: Nano Banana 2 · 2K · fundo verde · ref só na figura.
+
+### 🟡 Halftone screenprint
+
+#### H1 · Cristo Redentor halftone · 🟡 Halftone · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: foto do Cristo Redentor
+```
+Big back-print: the Christ the Redeemer statue as a high-contrast HALFTONE / dot-screen screenprint (recognizable, true to the real Rio statue), distressed vintage band-tee texture, with ornate blackletter "CRISTO REDENTOR" arched around it and a small "NIMBUS", off-white/cream + black + a touch of gold (lean green+gold Brasil). Text exact. On a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+#### H2 · São Miguel Arcanjo halftone · 🟡 Halftone · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: imagem clássica de São Miguel
+```
+Big back-print: Saint Michael the Archangel (winged warrior with a sword, victorious over a dragon, true to classical sacred art) as a high-contrast HALFTONE / dot-screen screenprint, distressed vintage band-tee texture, ornate blackletter "SÃO MIGUEL ARCANJO" around it and a small "NIMBUS", off-white/cream + black + a touch of gold. Text exact. On a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+#### H3 · Sagrado Coração halftone · 🟡 Halftone · 🖼️ Imagem · Nano Banana 2 · peito/costas · 1:1 · ref: imagem do Sagrado Coração
+```
+A Sacred Heart of Jesus (crown of thorns, flame, small cross, radiating rays) as a high-contrast HALFTONE / dot-screen screenprint, distressed vintage band-tee texture, a small blackletter "NIMBUS", off-white/cream + black + a touch of gold. On a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+### 🎨 Graffiti stencil
+
+#### G6 · São Miguel stencil · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: imagem de São Miguel
+```
+Big back-print: a high-contrast spray-paint STENCIL of Saint Michael the Archangel (winged warrior with a sword over a defeated dragon), 1–2 color stencil with spray texture, paint drips and a sprayed gold halo, plus a small "NIMBUS" tag. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint stencil art — visible spray texture, drips and overspray, raw urban energy, high-contrast; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+#### G7 · Sagrado Coração stencil · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · peito/costas · 1:1 · ref: —
+```
+A high-contrast spray-paint STENCIL of the Sacred Heart (crown of thorns, flame, small cross), 1–2 color stencil with spray texture, paint drips and a sprayed gold halo, plus a small "NIMBUS" tag. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint stencil art — visible spray texture, drips and overspray, raw urban energy, high-contrast; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+#### G8 · Pomba do Espírito Santo stencil · 🎨 Graffiti · 🖼️ Imagem · Nano Banana 2 · peito/costas · 1:1 · ref: —
+```
+A high-contrast spray-paint STENCIL of the Holy Spirit dove descending with spread wings and rays, 1–2 color stencil with spray texture, paint drips and a sprayed gold halo, plus a small "NIMBUS" tag. Estilo NIMBUS graffiti: authentic street graffiti / spray-paint stencil art — visible spray texture, drips and overspray, raw urban energy, high-contrast; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+### 🖤 Blackletter
+
+#### B6 · "SÃO MIGUEL ARCANJO" blackletter · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · costas · 3:4 · ref: —
+```
+Big back-print: "SÃO MIGUEL ARCANJO" in heavy ornate blackletter / old-english, with an ornate sword and a small cross, distressed washed vintage texture, off-white/cream + black + a touch of gold. Text exact. Estilo NIMBUS blackletter: premium gothic streetwear — heavy ornate blackletter, distressed washed vintage screenprint texture, Fear-of-God / band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
+```
+
+#### B7 · "FÉ ACIMA DE TUDO" blackletter · 🖤 Blackletter · 🖼️ Imagem · Nano Banana 2 · peito/costas · 3:4 · ref: —
+```
+A bold print: "FÉ ACIMA DE TUDO" in heavy ornate blackletter / old-english, with a small cross and a thin gold halo accent, distressed washed vintage texture, off-white/cream + black + a touch of gold. Text exact. Estilo NIMBUS blackletter: premium gothic streetwear — heavy ornate blackletter, distressed washed vintage screenprint texture, Fear-of-God / band-tee vibe; on a SOLID FLAT chroma-green (#00B140) background (not transparent, no checkerboard, no garment, no mockup).
 ```
 
 ---
