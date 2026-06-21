@@ -3,30 +3,29 @@
 Prompts em `../nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo
 público) — ficam local + Drive.
 
-## Estrutura
+## Estrutura (por COLEÇÃO)
 ```
-originais/       TODAS as fontes, nomeadas (como geradas: fundo verde ou xadrez) — backup
+originais/                       TODAS as fontes, nomeadas (verde / magenta / xadrez) — backup
 prontos/
-  costas/        recortadas (sem fundo) + 300 DPI — gráficos grandes (back)
-  peito/         recortadas + 300 DPI — gráficos pequenos / frente
+  STREET/{costas,peito,mockups}     graffiti      (G*)
+  RELIQUIA/{costas,peito,mockups}   gótico+halftone (B*, H*)
+  GLORIA/{costas,peito,mockups}     Y2K/angelcore (Y*)
+  PADROEIRA/{costas,peito,mockups}  Brasil sacro  (S*) — geradas no MAGENTA
+  NUVEM/{costas,peito,mockups}      artes antigas de nuvem
+  _marca/                           logo (peito em qualquer coleção)
 ```
-Recortar/organizar: `node scripts/organize-designs.mjs` (auto-detecta fundo verde ou xadrez,
-recorta, redimensiona pra 300 DPI). Gere sempre no **Nano Banana 2 + fundo verde**.
+Organizar/recortar: `node scripts/organize-designs.mjs` — lê `originais/`, auto-detecta o fundo
+(**verde** `#00B140` / **magenta** `#FF00FF` / xadrez), recorta, 300 DPI e separa por coleção.
 
-## Códigos / estilos
-**G** graffiti · **B** blackletter · **H** halftone · (nomes descritivos = artes antigas "nuvem").
+## Coleções ↔ código
+**G** STREET (graffiti) · **B/H** RELÍQUIA (blackletter + halftone) · **Y** GLÓRIA (Y2K) ·
+**S** PADROEIRA (Brasil sacro). Nomes descritivos (catedral-nuvem etc.) = coleção NUVEM (antigas).
 
-## Catálogo atual (recortado, pronto pro POD)
-**Costas:** G1-tag (roxo/azul) · G2-anjo-stencil · G2-anjo-livro-stencil · G3-acima-de-tudo
-(tags/azul) · G4-cristo-stencil (branco/ouro) · B1-nimbus-blackletter · B2-salmo19 · B3-cruz-crest
-· B5-aparecida-halftone · catedral-nuvem · cristo-crest-azul.
-**Peito/frente:** G5-icone-nuvem-spray · nimbus-spray-puffy · B4-acima-de-tudo-gotico (branco/preto)
-· logo-icone-nuvem-v1/v2 · sagrado-coracao-azul.
+## Fundo de geração
+Tudo no **VERDE** `#00B140`, **exceto PADROEIRA** → **MAGENTA** `#FF00FF` (a arte dela tem verde,
+que brigaria com o chroma verde). Gere sempre no **Nano Banana 2**.
 
-## ⚠️ Regra de colorway (preto + off-white)
-Cada design deveria ter versão pra **camiseta preta** (arte clara/colorida) **e off-white** (arte
-escura). Faltam gerar (mesmo prompt, trocando a cor da arte, fundo verde; sufixo `-branco`/`-preto`):
-- **Versão BRANCA (p/ camiseta preta):** G2-anjo · G5-icone-spray · nimbus-spray-puffy ·
-  B1-nimbus-blackletter · B5-aparecida.
-- **Versão ESCURA (p/ camiseta off-white):** G4-cristo · B2-salmo19.
-- **Já OK nas duas:** G1, G3 (coloridos) · B4 (tem branco+preto).
+## ⚠️ Colorway (preto + off-white) — auditoria depois do teste na YouDraw
+Cada design idealmente tem versão pra **camiseta preta** (arte clara/colorida) **e off-white**
+(arte escura). Gerar a inversa com sufixo `-branco`/`-preto`. Levantamento inicial (revisar quando
+tivermos mais coleções): falta BRANCA p/ G2, G5, nimbus-spray, B1, B5 · falta ESCURA p/ G4, B2.
