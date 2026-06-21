@@ -80,21 +80,16 @@ function checkerKey(d, w, h) {
   for (let p = 0; p < N; p++) if (cleared[p]) d[p * 4 + 3] = 0
 }
 
-// coleção pelo código/nome do arquivo
+// coleção pelo código/nome do arquivo (G=STREET; B/H/S=RELIQUIA; nuvem=NUVEM; logo=_marca)
 function collectionOf(name) {
   if (/^G\d/.test(name)) return 'STREET'
-  if (/^[BH]\d/.test(name)) return 'RELIQUIA'
-  if (/^Y\d/.test(name)) return 'GLORIA'
-  if (/^S\d/.test(name)) return 'PADROEIRA'
-  if (name.startsWith('logo-icone-nuvem')) return '_marca'
-  if (name === 'nimbus-spray-puffy') return 'STREET'
-  if (['catedral-nuvem', 'cristo-crest-azul', 'sagrado-coracao-azul'].includes(name)) return 'NUVEM'
+  if (/^[BHS]\d/.test(name)) return 'RELIQUIA' // blackletter + halftone + barroco Brasil sacro
+  if (name.startsWith('logo-')) return '_marca'
+  if (name.includes('nuvem')) return 'NUVEM'
   return 'OUTROS'
 }
-const PEITO = new Set([
-  'G5-icone-nuvem-spray', 'nimbus-spray-puffy',
-  'B4-acima-de-tudo-gotico-branco', 'B4-acima-de-tudo-gotico-preto', 'sagrado-coracao-azul',
-])
+// peito (gráfico de peito/pequeno) por palavra-chave; resto vai pra costas
+const isPeito = (name) => /icone|terco|monograma|gotico|sagrado-coracao/.test(name)
 
 if (existsSync(OUT)) rmSync(OUT, { recursive: true, force: true })
 
@@ -102,7 +97,7 @@ const files = readdirSync(SRC).filter((f) => /\.(png|jpe?g)$/i.test(f))
 for (const file of files) {
   const name = file.replace(/\.(png|jpe?g)$/i, '')
   const col = collectionOf(name)
-  const placement = col === '_marca' ? '' : (PEITO.has(name) ? 'peito' : 'costas')
+  const placement = col === '_marca' ? '' : (isPeito(name) ? 'peito' : 'costas')
   const destDir = placement ? join(OUT, col, placement) : join(OUT, col)
   mkdirSync(destDir, { recursive: true })
 
@@ -121,5 +116,5 @@ for (const file of files) {
   console.log(`OK ${col}${placement ? '/' + placement : ''}/${name}.png  [${bg}]`)
 }
 // pasta de mockups por coleção (prontas pra preencher depois)
-for (const c of ['STREET', 'RELIQUIA', 'GLORIA', 'PADROEIRA', 'NUVEM']) mkdirSync(join(OUT, c, 'mockups'), { recursive: true })
+for (const c of ['STREET', 'RELIQUIA', 'NUVEM']) mkdirSync(join(OUT, c, 'mockups'), { recursive: true })
 console.log('\nReorganizado por coleção em', OUT)
