@@ -109,10 +109,12 @@ for (const file of files) {
   else checkerKey(data, w, h)
 
   const raw = { raw: { width: w, height: h, channels: 4 } }
-  const scale = LONG / Math.max(w, h)
-  let pipe = sharp(data, raw)
-  if (scale > 1) pipe = pipe.resize({ width: Math.round(w * scale), height: Math.round(h * scale), kernel: 'lanczos3' })
-  await pipe.png().withMetadata({ density: DPI }).toFile(join(destDir, name + '.png'))
+  // .trim() apara a margem transparente em volta (YouDraw pede "remover espaço em branco ao redor");
+  // resize fit:inside põe o lado maior em ~LONG px mantendo a proporção.
+  await sharp(data, raw)
+    .trim()
+    .resize(LONG, LONG, { fit: 'inside', kernel: 'lanczos3' })
+    .png().withMetadata({ density: DPI }).toFile(join(destDir, name + '.png'))
   console.log(`OK ${col}${placement ? '/' + placement : ''}/${name}.png  [${bg}]`)
 }
 // pasta de mockups por coleção (prontas pra preencher depois)

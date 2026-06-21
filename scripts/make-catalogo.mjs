@@ -7,7 +7,7 @@ import { join } from 'node:path'
 const OUT = 'designs/prontos'
 const DST = 'designs/_catalogo'
 mkdirSync(DST, { recursive: true })
-const COLS = 5, T = 300, PAD = 8, LBL = 34, BG = '#0b0d14'
+const COLS = 5, T = 300, PAD = 8, LBL = 34, BG = '#9aa0aa' // cinza médio: artes claras E escuras aparecem
 
 function list(col) {
   const out = []
