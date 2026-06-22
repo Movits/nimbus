@@ -110,3 +110,12 @@ Ex.: `Redentor Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]/`.
 > **Acima de Tudo Gótico** = **1 estampa, 2 cores**: `branco` p/ camisa escura, `preto` p/ camisa
 > clara (mesmo print, adapta à cor da peça). Já os colorways tipo *Redentor Spray (ouro/branco)* são
 > **2 visuais diferentes** pra escolher, não cor-de-camisa.
+
+## Nomes públicos na loja (regra)
+- **Nunca usar "v1/v2/v3" no nome do produto** — parece técnico/amador.
+- **Conceito com várias versões** (Aparecida Spray 1/2/3, Fé 1/2/3, São Miguel Vintage 1/2,
+  Azulejo 1/2, Sagrado Coração Ouro 1/2, São Jorge Ouro 1/2): **escolher a melhor** e cadastrar com
+  o nome limpo (ex.: "Aparecida Spray"). As outras ficam de reserva.
+- **Cores que vai vender as duas:** diferenciar **por cor** ("Redentor Spray Ouro" / "Redentor Spray
+  Branco") ou oferecer como opção de cor do mesmo produto. **Nunca por número.**
+- Os "(1)/(2)/(3)" nas pastas `mockups/` são só **rótulo interno de opção**, não nome de venda.
