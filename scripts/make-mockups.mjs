@@ -16,7 +16,7 @@ const NAME = {
   'G3-acima-de-tudo-tags': 'Acima de Tudo (tags)', 'G3-acima-de-tudo-laranja': 'Acima de Tudo (laranja)',
   'G4-cristo-stencil-ouro': 'Redentor Spray (ouro)', 'G4-cristo-stencil-branco': 'Redentor Spray (branco)',
   'G5-icone-nuvem-spray': 'Selo Nuvem', 'G5-icone-nuvem-spray-branco': 'Selo Nuvem (branco)',
-  'G6-sao-miguel-stencil': 'Arcanjo Spray',
+  'G6-sao-miguel-stencil': 'Arcanjo Spray', 'G6-sao-miguel-stencil-preto': 'Arcanjo Spray (preto)', 'G6-sao-miguel-stencil-branco': 'Arcanjo Spray (branco)',
   'G7-sagrado-coracao-stencil-ouro': 'Sagrado Coração Spray (ouro)', 'G7-sagrado-coracao-stencil-preto': 'Sagrado Coração Spray (preto)',
   'G8-pomba-stencil-branco': 'Espírito Santo (branco)', 'G8-pomba-stencil-preto': 'Espírito Santo (preto)',
   'G9-fe-tag-v1': 'Fé (1)', 'G9-fe-tag-v2': 'Fé (2)', 'G9-fe-tag-v3': 'Fé (3)',
