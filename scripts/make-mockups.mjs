@@ -20,7 +20,7 @@ const NAME = {
   'G7-sagrado-coracao-stencil-ouro': 'Sagrado Coração Spray (ouro)', 'G7-sagrado-coracao-stencil-preto': 'Sagrado Coração Spray (preto)',
   'G8-pomba-stencil-branco': 'Espírito Santo (branco)', 'G8-pomba-stencil-preto': 'Espírito Santo (preto)',
   'G9-fe-tag-v1': 'Fé (1)', 'G9-fe-tag-v2': 'Fé (2)', 'G9-fe-tag-v3': 'Fé (3)',
-  'G10-aparecida-stencil-v1': 'Aparecida Spray (1)', 'G10-aparecida-stencil-v2': 'Aparecida Spray (2)', 'G10-aparecida-stencil-v3': 'Aparecida Spray (3)', 'G10-aparecida-stencil-branco': 'Aparecida Spray (branco)',
+  'G10-aparecida-stencil-v1': 'Aparecida Spray (1)', 'G10-aparecida-stencil-v2': 'Aparecida Spray (2)', 'G10-aparecida-stencil-v3': 'Aparecida Spray (3)', 'G10-aparecida-stencil-branco': 'Aparecida Spray (branco)', 'G10-aparecida-stencil-branco-teste': 'Aparecida Spray (branco teste)',
   'G11-terco-stencil': 'Terço',
   'B1-nimbus-blackletter': 'Relíquia', 'B2-salmo19': 'Salmo 19', 'B3-cruz-crest': 'Brasão',
   'B4-acima-de-tudo-gotico-branco': 'Acima de Tudo Gótico (branco)', 'B4-acima-de-tudo-gotico-preto': 'Acima de Tudo Gótico (preto)',
