@@ -53,7 +53,19 @@ function srcArts(col) {
   return out
 }
 
-// 1) popular mockups/ com os nomes de produto
+// 1) popular mockups/: 1 pasta por produto com os prints da peça (peito + costas)
+// emblema de peito por coleção
+const CHEST = {
+  STREET: { src: join(OUT, 'STREET', 'peito', 'G5-icone-nuvem-spray.png'), label: 'Selo Nuvem' },
+  RELIQUIA: { src: join(OUT, 'RELIQUIA', 'peito', 'B9-monograma-nmb.png'), label: 'Monograma NMB' },
+  NUVEM: { src: join(OUT, '_marca', 'logo-icone-nuvem-v1.png'), label: 'Ícone NIMBUS' },
+}
+// produtos que JÁ são print de peito → entram sozinhos (1 imagem), sem emblema extra
+const PEITO_ONLY = new Set([
+  'G5-icone-nuvem-spray', 'G11-terco-stencil', 'B9-monograma-nmb',
+  'B4-acima-de-tudo-gotico-branco', 'B4-acima-de-tudo-gotico-preto',
+  'logo-icone-nuvem-v1', 'logo-icone-nuvem-v2', 'logo-wordmark-nuvem',
+])
 for (const col of ['STREET', 'RELIQUIA', 'NUVEM', '_marca']) {
   const mk = join(OUT, col, 'mockups')
   if (existsSync(mk)) rmSync(mk, { recursive: true, force: true })
@@ -61,13 +73,18 @@ for (const col of ['STREET', 'RELIQUIA', 'NUVEM', '_marca']) {
   for (const [src, stem] of srcArts(col)) {
     const name = NAME[stem]
     if (!name) { console.log('SEM NOME no mapa:', stem); continue }
-    // pasta por PRODUTO (nome-base) com a(s) versão(ões) de cor dentro
-    const dir = join(mk, base(name))
+    const dir = join(mk, base(name)) // pasta = nome do produto
     mkdirSync(dir, { recursive: true })
-    copyFileSync(src, join(dir, name + '.png'))
+    if (PEITO_ONLY.has(stem)) {
+      copyFileSync(src, join(dir, name + '.png')) // é o próprio print de peito
+    } else {
+      copyFileSync(src, join(dir, `costas - ${name}.png`)) // gráfico das costas (1 por colorway)
+      const chest = CHEST[col]
+      if (chest && existsSync(chest.src)) copyFileSync(chest.src, join(dir, `peito - ${chest.label}.png`))
+    }
   }
 }
-console.log('mockups/ populados: 1 pasta por produto (cores dentro)')
+console.log('mockups/ populados: 1 pasta por produto (peito + costas)')
 
 // 2) folha-catálogo rotulada (nome do produto + peça + ⭐hero)
 mkdirSync(CAT, { recursive: true })
