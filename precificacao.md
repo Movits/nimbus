@@ -14,25 +14,18 @@ por peça pra impressão grande (frente+costas)** e reajuste a coluna Custo/Marg
 ## Tabela — Premium Alto (preço cheio, R$ X9,90)
 | Item | Custo (YouDraw) | **Venda** | Margem R$ | Margem % |
 |---|---|---|---|---|
-| Camiseta Básica Unissex | 56,28 | **R$ 149,90** | 93,62 | 62% |
 | Camiseta Premium Unissex | 59,28 | **R$ 159,90** | 100,62 | 63% |
-| Camiseta Oversized Básica | 61,44 | **R$ 169,90** | 108,46 | 64% |
 | **Camiseta Oversized Premium** ⭐âncora | 83,86 | **R$ 199,90** | 116,04 | 58% |
 | **Moletom Canguru c/ Capuz** ⭐âncora | 121,20 | **R$ 299,90** | 178,70 | 60% |
 | Blusão Moletom (crewneck) | 110,40 | **R$ 269,90** | 159,50 | 59% |
 | Camiseta Regular Poliamida UV | 83,86 | **R$ 189,90** | 106,04 | 56% |
-| Regata Básica | 56,28 | **R$ 139,90** | 83,62 | 60% |
-| Blusa Baby Look | 56,28 | **R$ 139,90** | 83,62 | 60% |
-| Body Baby | 33,60 | **R$ 89,90** | 56,30 | 63% |
-| Camiseta Infantil 0–3 | 56,28 | **R$ 119,90** | 63,62 | 53% |
-| Camiseta Infantil 4–9 | 56,28 | **R$ 119,90** | 63,62 | 53% |
-| Camiseta Juvenil 10–16 | 56,28 | **R$ 129,90** | 73,62 | 57% |
 | Ecobag | 16,93 | **R$ 69,90** | 52,97 | 76% |
 
 ## Estratégia de preço
 - **Âncoras de marca:** Oversized Premium (R$199,90) e Moletom Canguru (R$299,90) definem o "teto"
-  premium e valorizam o resto. Básica/Regata (R$139,90) = porta de entrada.
-- **Piso premium:** não vender camiseta adulta abaixo de **R$129,90** (preserva a percepção).
+  premium. Porta de entrada = **Camiseta Premium (R$159,90)** e **Ecobag (R$69,90)**.
+- **Piso premium:** sem peças de entrada baratas (cortamos básica/regata/baby/infantil) — a
+  camiseta mais barata é a Premium a **R$159,90**, o que reforça o posicionamento.
 - **Promo de estreia sem queimar o premium:** manter o preço de tabela e usar **cupom de abertura
   −15%** (tempo limitado / primeiro drop) — desconto tático, não preço-base baixo.
 - **Frete grátis acima de R$199** → empurra 2ª peça ou o moletom (e o frete cabe na margem gorda).

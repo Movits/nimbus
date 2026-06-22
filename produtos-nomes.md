@@ -13,13 +13,14 @@ uma, e a curadoria do lançamento. (Preços em `precificacao.md`.)
 - Tom das descrições: reverente + premium + atitude. Curtas (1–2 linhas). Ajuste à vontade.
 
 ## Repetir a arte no moletom? SIM, com curadoria
-- **Heroes (12–15)** → **Camiseta Básica + Oversized + Moletom Canguru** (mesmo nome + peça).
-  Hoodie/oversized = ticket alto e a cara do streetwear, vendem bem.
-- **Secundários** → só **Camiseta + Oversized**. Não botar todo design em toda peça (catálogo
-  inchado trava a compra).
-- **Peito** (Selo Nuvem, Terço, Monograma NMB, Ícone) → Camiseta/Oversized.
-- **Infantil/Baby** → só temas family-friendly (Aparecida, Catedral, Anjo da Guarda, Ícone, Capela).
+- **Heroes (12–15)** → **Camiseta Premium + Oversized Premium + Moletom Canguru** (mesmo nome +
+  peça). Hoodie/oversized = ticket alto e a cara do streetwear, vendem bem.
+- **Secundários** → só **Camiseta Premium + Oversized Premium**. Não botar todo design em toda
+  peça (catálogo inchado trava a compra).
+- **Peito** (Selo Nuvem, Terço, Monograma NMB, Ícone) → Camiseta Premium / Oversized Premium.
 - **Ecobag** → logo/ícone + 1–2 grafismos (Catedral, Wildstyle).
+- Catálogo enxuto premium: **só** Camiseta Premium, Oversized Premium, Moletom Canguru, Blusão,
+  Poliamida UV e Ecobag (sem básica/regata/baby/infantil).
 - **Print:** costas transferem bem em qualquer peça; no **moletom canguru o peito muda** (bolso) →
   conferir posição/escala. Oversized tem área maior — bom pros grafismos grandes.
 
@@ -81,7 +82,7 @@ uma, e a curadoria do lançamento. (Preços em `precificacao.md`.)
 ---
 
 ## Curadoria de lançamento (~13 heroes — começar enxuto)
-Cada hero em **Camiseta Básica + Oversized + Moletom**:
+Cada hero em **Camiseta Premium + Oversized Premium + Moletom Canguru**:
 - **STREET:** Wildstyle · Redentor Spray · Fé · Aparecida Spray · Arcanjo Spray
 - **RELÍQUIA:** Relíquia · Padroeira · Cristo Vintage · São Jorge Vintage · Salmo 19
 - **NUVEM:** Catedral · Cristo nos Céus
@@ -89,9 +90,9 @@ Cada hero em **Camiseta Básica + Oversized + Moletom**:
 
 Depois do lançamento, adicionar os secundários (camiseta/oversized) conforme a resposta de vendas.
 
-## Matriz arte × peça (resumo)
-- **Heroes:** Camiseta · Oversized · Moletom.
-- **Secundários:** Camiseta · Oversized.
-- **Peito (Selo Nuvem, Terço, NMB):** Camiseta · Oversized.
-- **Family (Aparecida, Catedral, Anjo da Guarda, Capela, Ícone):** + Infantil/Baby.
+## Matriz arte × peça (resumo) — catálogo enxuto premium
+- **Heroes:** Camiseta Premium · Oversized Premium · Moletom Canguru.
+- **Secundários:** Camiseta Premium · Oversized Premium.
+- **Peito (Selo Nuvem, Terço, NMB):** Camiseta Premium · Oversized Premium.
 - **Ecobag:** Ícone, Wordmark, Catedral, Wildstyle.
+- (Blusão Moletom e Poliamida UV: usar nos heroes mais fortes, conforme demanda.)
