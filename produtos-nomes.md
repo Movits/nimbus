@@ -96,3 +96,14 @@ Depois do lançamento, adicionar os secundários (camiseta/oversized) conforme a
 - **Peito (Selo Nuvem, Terço, NMB):** Camiseta Premium · Oversized Premium.
 - **Ecobag:** Ícone, Wordmark, Catedral, Wildstyle.
 - (Blusão Moletom e Poliamida UV: usar nos heroes mais fortes, conforme demanda.)
+
+## Pastas de mockups (pra cadastrar) — `node scripts/make-mockups.mjs`
+Cada produto é uma pasta em `designs/prontos/<COLECAO>/mockups/`, nomeada:
+**`<Produto> [<peças>] [<posição>]`**. Dentro: `peito - <emblema>.png` + `costas - <gráfico>.png`
+(produtos de peito = 1 imagem). Ex.: `Redentor Spray [Camiseta+Oversized+Moletom] [frente e verso]/`.
+- **peças:** Camiseta+Oversized+Moletom (heroes) · Camiseta+Oversized (secundários) · Ecobag (marca).
+- **posição:** frente e verso · só frente (print de peito).
+
+> **Acima de Tudo Gótico** = **1 estampa, 2 cores**: `branco` p/ camisa escura, `preto` p/ camisa
+> clara (mesmo print, adapta à cor da peça). Já os colorways tipo *Redentor Spray (ouro/branco)* são
+> **2 visuais diferentes** pra escolher, não cor-de-camisa.

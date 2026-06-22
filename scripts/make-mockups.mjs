@@ -66,6 +66,14 @@ const PEITO_ONLY = new Set([
   'B4-acima-de-tudo-gotico-branco', 'B4-acima-de-tudo-gotico-preto',
   'logo-icone-nuvem-v1', 'logo-icone-nuvem-v2', 'logo-wordmark-nuvem',
 ])
+// nome da pasta = "<Produto> [<peças>] [<posição>]"
+const pecasDe = (stem, produto) => /^logo-/.test(stem) ? 'Ecobag'
+  : (HEROES.has(produto) ? 'Camiseta+Oversized+Moletom' : 'Camiseta+Oversized')
+const folderDe = (stem, name) => {
+  const produto = base(name)
+  const posicao = PEITO_ONLY.has(stem) ? 'só frente' : 'frente e verso'
+  return `${produto} [${pecasDe(stem, produto)}] [${posicao}]`
+}
 for (const col of ['STREET', 'RELIQUIA', 'NUVEM', '_marca']) {
   const mk = join(OUT, col, 'mockups')
   if (existsSync(mk)) rmSync(mk, { recursive: true, force: true })
@@ -73,7 +81,7 @@ for (const col of ['STREET', 'RELIQUIA', 'NUVEM', '_marca']) {
   for (const [src, stem] of srcArts(col)) {
     const name = NAME[stem]
     if (!name) { console.log('SEM NOME no mapa:', stem); continue }
-    const dir = join(mk, base(name)) // pasta = nome do produto
+    const dir = join(mk, folderDe(stem, name)) // pasta = "Produto [peças] [posição]"
     mkdirSync(dir, { recursive: true })
     if (PEITO_ONLY.has(stem)) {
       copyFileSync(src, join(dir, name + '.png')) // é o próprio print de peito
