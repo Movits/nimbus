@@ -6,8 +6,11 @@ o **custo de produção** por peça; o preço de venda é definido em cima disso
 
 ## ⚠️ Antes de travar os preços
 O "**a partir de R$X**" é o **piso** (config mais barata). As estampas NIMBUS são **costas grandes
-(~33 cm)**, às vezes + peito → a impressão real pode custar **mais**. **Confirme na YouDraw o custo
+(~33 cm)**, às vezes + peito → a impressão real custa **mais**. **Confirme na YouDraw o custo
 por peça pra impressão grande (frente+costas)** e reajuste a coluna Custo/Margem.
+- **Confirmado (frente+costas):** **Camiseta Premium = R$73,20** (P–GG) / R$86,16 (EG), não R$59,28.
+  → a R$149,90, margem bruta cai pra **~51%** (P–GG). **Falta confirmar** Oversized, Moletom, Blusão
+  (a tabela ainda usa o piso nesses; reajustar quando souber).
 - **Margem bruta** = Venda − Custo. **Margem líquida** ≈ bruta **−10 a 12 pp** (taxas de
   pagamento/plataforma). Os % abaixo são **brutos**.
 
@@ -18,7 +21,6 @@ por peça pra impressão grande (frente+costas)** e reajuste a coluna Custo/Marg
 | **Camiseta Oversized Premium** ⭐âncora | 83,86 | **R$ 179,90** | 96,04 | 53% |
 | **Moletom Canguru c/ Capuz** ⭐âncora | 121,20 | **R$ 299,90** | 178,70 | 60% |
 | Blusão Moletom (crewneck) | 110,40 | **R$ 269,90** | 159,50 | 59% |
-| Camiseta Regular Poliamida UV | 83,86 | **R$ 179,90** | 96,04 | 53% |
 | Ecobag | 16,93 | **R$ 69,90** | 52,97 | 76% |
 
 (Pós-prova social, dá pra subir a camiseta p/ R$159,90 e a oversized p/ R$199,90.)

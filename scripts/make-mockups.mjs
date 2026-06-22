@@ -2,8 +2,9 @@
 // (de produtos-nomes.md) e gera uma folha-catálogo rotulada em designs/_catalogo/.
 // Uso: node scripts/make-mockups.mjs   (substitui o make-catalogo.mjs; idempotente)
 import sharp from 'sharp'
-import { readdirSync, mkdirSync, copyFileSync, rmSync, existsSync } from 'node:fs'
+import { readdirSync, mkdirSync, copyFileSync, rmSync, existsSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import { DESC } from './descricoes.mjs'
 
 const OUT = 'designs/prontos'
 const CAT = 'designs/_catalogo'
@@ -66,9 +67,15 @@ const PEITO_ONLY = new Set([
   'B4-acima-de-tudo-gotico-branco', 'B4-acima-de-tudo-gotico-preto',
   'logo-icone-nuvem-v1', 'logo-icone-nuvem-v2', 'logo-wordmark-nuvem',
 ])
+// designs que também vão na Ecobag (Ícone/Wordmark já são Ecobag por serem logo-*)
+const ECOBAG = new Set(['Catedral', 'Wildstyle'])
 // nome da pasta = "<Produto> [<peças>] [<posição>]"
-const pecasDe = (stem, produto) => /^logo-/.test(stem) ? 'Ecobag'
-  : (HEROES.has(produto) ? 'Camiseta+Oversized+Moletom' : 'Camiseta+Oversized')
+const pecasDe = (stem, produto) => {
+  if (/^logo-/.test(stem)) return 'Ecobag'
+  let p = HEROES.has(produto) ? 'Camiseta+Oversized+Moletom+Blusão' : 'Camiseta+Oversized'
+  if (ECOBAG.has(produto)) p += '+Ecobag'
+  return p
+}
 const folderDe = (stem, name) => {
   const produto = base(name)
   const posicao = PEITO_ONLY.has(stem) ? 'só frente' : 'frente e verso'
@@ -90,6 +97,9 @@ for (const col of ['STREET', 'RELIQUIA', 'NUVEM', '_marca']) {
       const chest = CHEST[col]
       if (chest && existsSync(chest.src)) copyFileSync(chest.src, join(dir, `peito - ${chest.label}.png`))
     }
+    const desc = DESC[base(name)] // descrição de venda na pasta
+    if (desc) writeFileSync(join(dir, 'descrição.txt'), desc + '\n', 'utf8')
+    else console.log('SEM DESC:', base(name))
   }
 }
 console.log('mockups/ populados: 1 pasta por produto (peito + costas)')

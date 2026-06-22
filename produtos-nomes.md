@@ -13,8 +13,8 @@ uma, e a curadoria do lançamento. (Preços em `precificacao.md`.)
 - Tom das descrições: reverente + premium + atitude. Curtas (1–2 linhas). Ajuste à vontade.
 
 ## Repetir a arte no moletom? SIM, com curadoria
-- **Heroes (12–15)** → **Camiseta Premium + Oversized Premium + Moletom Canguru** (mesmo nome +
-  peça). Hoodie/oversized = ticket alto e a cara do streetwear, vendem bem.
+- **Heroes (12–15)** → **Camiseta Premium + Oversized Premium + Moletom Canguru + Blusão** (mesmo
+  nome + peça). Hoodie/oversized = ticket alto e a cara do streetwear, vendem bem.
 - **Secundários** → só **Camiseta Premium + Oversized Premium**. Não botar todo design em toda
   peça (catálogo inchado trava a compra).
 - **Peito** (Selo Nuvem, Terço, Monograma NMB, Ícone) → Camiseta Premium / Oversized Premium.
@@ -91,18 +91,21 @@ Cada hero em **Camiseta Premium + Oversized Premium + Moletom Canguru**:
 Depois do lançamento, adicionar os secundários (camiseta/oversized) conforme a resposta de vendas.
 
 ## Matriz arte × peça (resumo) — catálogo enxuto premium
-- **Heroes:** Camiseta Premium · Oversized Premium · Moletom Canguru.
+- **Heroes:** Camiseta Premium · Oversized Premium · Moletom Canguru · **Blusão**.
 - **Secundários:** Camiseta Premium · Oversized Premium.
 - **Peito (Selo Nuvem, Terço, NMB):** Camiseta Premium · Oversized Premium.
 - **Ecobag:** Ícone, Wordmark, Catedral, Wildstyle.
-- (Blusão Moletom e Poliamida UV: usar nos heroes mais fortes, conforme demanda.)
+- (Poliamida UV **removida** do catálogo; pode voltar como cápsula de verão.)
 
 ## Pastas de mockups (pra cadastrar) — `node scripts/make-mockups.mjs`
 Cada produto é uma pasta em `designs/prontos/<COLECAO>/mockups/`, nomeada:
 **`<Produto> [<peças>] [<posição>]`**. Dentro: `peito - <emblema>.png` + `costas - <gráfico>.png`
-(produtos de peito = 1 imagem). Ex.: `Redentor Spray [Camiseta+Oversized+Moletom] [frente e verso]/`.
-- **peças:** Camiseta+Oversized+Moletom (heroes) · Camiseta+Oversized (secundários) · Ecobag (marca).
+(produtos de peito = 1 imagem) + **`descrição.txt`** (texto de venda pronto pra colar na YouDraw).
+Ex.: `Redentor Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]/`.
+- **peças:** Camiseta+Oversized+Moletom+Blusão (heroes) · Camiseta+Oversized (secundários) ·
+  Ecobag (marca / +Ecobag em Catedral e Wildstyle).
 - **posição:** frente e verso · só frente (print de peito).
+- **descrições:** fonte versionada em `scripts/descricoes.mjs` (tom sóbrio e sincero).
 
 > **Acima de Tudo Gótico** = **1 estampa, 2 cores**: `branco` p/ camisa escura, `preto` p/ camisa
 > clara (mesmo print, adapta à cor da peça). Já os colorways tipo *Redentor Spray (ouro/branco)* são
