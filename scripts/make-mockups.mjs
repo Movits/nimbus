@@ -61,10 +61,13 @@ for (const col of ['STREET', 'RELIQUIA', 'NUVEM', '_marca']) {
   for (const [src, stem] of srcArts(col)) {
     const name = NAME[stem]
     if (!name) { console.log('SEM NOME no mapa:', stem); continue }
-    copyFileSync(src, join(mk, name + '.png'))
+    // pasta por PRODUTO (nome-base) com a(s) versão(ões) de cor dentro
+    const dir = join(mk, base(name))
+    mkdirSync(dir, { recursive: true })
+    copyFileSync(src, join(dir, name + '.png'))
   }
 }
-console.log('mockups/ populados com os nomes de produto')
+console.log('mockups/ populados: 1 pasta por produto (cores dentro)')
 
 // 2) folha-catálogo rotulada (nome do produto + peça + ⭐hero)
 mkdirSync(CAT, { recursive: true })
