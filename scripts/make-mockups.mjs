@@ -15,11 +15,12 @@ const NAME = {
   'G2-anjo-stencil': 'Querubim Spray', 'G2-anjo-livro-stencil': 'Anjo da Guarda',
   'G3-acima-de-tudo-tags': 'Acima de Tudo (tags)', 'G3-acima-de-tudo-laranja': 'Acima de Tudo (laranja)',
   'G4-cristo-stencil-ouro': 'Redentor Spray (ouro)', 'G4-cristo-stencil-branco': 'Redentor Spray (branco)',
-  'G5-icone-nuvem-spray': 'Selo Nuvem', 'G6-sao-miguel-stencil': 'Arcanjo Spray',
+  'G5-icone-nuvem-spray': 'Selo Nuvem', 'G5-icone-nuvem-spray-branco': 'Selo Nuvem (branco)',
+  'G6-sao-miguel-stencil': 'Arcanjo Spray',
   'G7-sagrado-coracao-stencil-ouro': 'Sagrado Coração Spray (ouro)', 'G7-sagrado-coracao-stencil-preto': 'Sagrado Coração Spray (preto)',
   'G8-pomba-stencil-branco': 'Espírito Santo (branco)', 'G8-pomba-stencil-preto': 'Espírito Santo (preto)',
   'G9-fe-tag-v1': 'Fé (1)', 'G9-fe-tag-v2': 'Fé (2)', 'G9-fe-tag-v3': 'Fé (3)',
-  'G10-aparecida-stencil-v1': 'Aparecida Spray (1)', 'G10-aparecida-stencil-v2': 'Aparecida Spray (2)', 'G10-aparecida-stencil-v3': 'Aparecida Spray (3)',
+  'G10-aparecida-stencil-v1': 'Aparecida Spray (1)', 'G10-aparecida-stencil-v2': 'Aparecida Spray (2)', 'G10-aparecida-stencil-v3': 'Aparecida Spray (3)', 'G10-aparecida-stencil-branco': 'Aparecida Spray (branco)',
   'G11-terco-stencil': 'Terço',
   'B1-nimbus-blackletter': 'Relíquia', 'B2-salmo19': 'Salmo 19', 'B3-cruz-crest': 'Brasão',
   'B4-acima-de-tudo-gotico-branco': 'Acima de Tudo Gótico (branco)', 'B4-acima-de-tudo-gotico-preto': 'Acima de Tudo Gótico (preto)',
@@ -63,7 +64,7 @@ const CHEST = {
 }
 // produtos que JÁ são print de peito → entram sozinhos (1 imagem), sem emblema extra
 const PEITO_ONLY = new Set([
-  'G5-icone-nuvem-spray', 'G11-terco-stencil', 'B9-monograma-nmb',
+  'G5-icone-nuvem-spray', 'G5-icone-nuvem-spray-branco', 'G11-terco-stencil', 'B9-monograma-nmb',
   'B4-acima-de-tudo-gotico-branco', 'B4-acima-de-tudo-gotico-preto',
   'logo-icone-nuvem-v1', 'logo-icone-nuvem-v2', 'logo-wordmark-nuvem',
 ])
