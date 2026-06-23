@@ -19,6 +19,7 @@ const NAME = {
   'G6-sao-miguel-stencil': 'Arcanjo Spray', 'G6-sao-miguel-stencil-preto': 'Arcanjo Spray (preto)', 'G6-sao-miguel-stencil-branco': 'Arcanjo Spray (branco)',
   'G7-sagrado-coracao-stencil-ouro': 'Sagrado Coração Spray (ouro)', 'G7-sagrado-coracao-stencil-preto': 'Sagrado Coração Spray (preto)',
   'G8-pomba-stencil-branco': 'Espírito Santo (branco)', 'G8-pomba-stencil-preto': 'Espírito Santo (preto)',
+  'G8-pomba-stencil-branco-teste1': 'Espírito Santo (branco teste 1)', 'G8-pomba-stencil-branco-teste2': 'Espírito Santo (branco teste 2)',
   'G9-fe-tag-v1': 'Fé (1)', 'G9-fe-tag-v2': 'Fé (2)', 'G9-fe-tag-v3': 'Fé (3)',
   'G10-aparecida-stencil-v1': 'Aparecida Spray (1)', 'G10-aparecida-stencil-v2': 'Aparecida Spray (2)', 'G10-aparecida-stencil-v3': 'Aparecida Spray (3)', 'G10-aparecida-stencil-branco': 'Aparecida Spray (branco)', 'G10-aparecida-stencil-branco-teste': 'Aparecida Spray (branco teste)',
   'G11-terco-stencil': 'Terço',
