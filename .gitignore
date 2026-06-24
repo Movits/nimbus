@@ -9,10 +9,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Design assets — não versionar arte (não-lançada) no repo público; fica no Drive.
-# Ignora as pastas de imagens inteiras (qualquer formato); doc/scripts ficam versionados.
+# Design assets — não versionar a ARTE (imagens) no repo público; fica no Drive.
+# Só as imagens são ignoradas; os nomes das pastas de produto e os descrição.txt sobem.
 designs/originais/
-designs/prontos/
 designs/_inbox/
 designs/_mestres/
 designs/**/*.png
