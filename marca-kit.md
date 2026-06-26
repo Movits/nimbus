@@ -34,10 +34,16 @@ Escolha um tema **clean e minimalista** (muito respiro, imagem de produto grande
 elementos) — combina com premium. Boas opções da Nuvemshop: **Trend**, **Simple** ou **Bahia**.
 Critério: o que deixa a **foto do produto** maior e o layout mais limpo.
 
-## CSS pronto (só no plano Impulso+ → "Edição de CSS avançada")
-⚠️ Os **seletores mudam por tema** — este é um starter; ajuste os nomes de classe conforme o tema
-(a Nuvemshop tem artigos de "Códigos CSS" por tema). Cole e teste.
+## CSS pronto (você já tem Impulso)
+Dois níveis: **"Edição de CSS avançada"** (cosmético — cores, tamanhos, esconder/realinhar; **não cria
+estrutura**) e **edição do código-fonte do tema** (Twig `.tpl` — aí dá pra criar **seções/blocos próprios**).
+O starter abaixo é pra colar na **Edição de CSS avançada**.
+⚠️ Os **seletores mudam por tema** — ajuste os nomes de classe conforme o tema (a Nuvemshop tem artigos de
+"Códigos CSS" por tema). Cole e teste.
 ```css
+/* Fallback de fontes (se o tema não expuser Fraunces/Inter no editor visual) */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@300;400;500;600&display=swap');
+
 :root{
   --nb-navy:#0b2360; --nb-gold:#e9c46a; --nb-blue:#8fc1ea;
   --nb-sky:#dcebfa; --nb-cloud:#f7fbff; --nb-ink:#1b2733;
@@ -60,6 +66,27 @@ a:hover{ color:var(--nb-gold); }
 /* Header / rodapé */
 .header, .store-header{ background:var(--nb-cloud); border-bottom:1px solid #e6eef9; }
 .footer, .store-footer{ background:var(--nb-navy); color:#dce7fb; }
+```
+
+## Hero/banner da marca (no código-fonte do tema, se quiser uma seção própria)
+Bloco simples pra um hero "Acima de tudo" — cole numa seção custom do tema (ou adapte ao banner do editor
+visual). Troque a imagem por uma arte de nuvem da marca ou um still do site R3F.
+```html
+<section class="nb-hero">
+  <img class="nb-hero__logo" src="/caminho/wordmark-nimbus.webp" alt="NIMBUS" />
+  <p class="nb-hero__tagline">Acima de tudo</p>
+  <a class="nb-hero__cta" href="#colecao">Ver coleção</a>
+</section>
+```
+```css
+.nb-hero{ display:grid; place-items:center; gap:1rem; min-height:70vh; text-align:center;
+  background:linear-gradient(160deg,#eaf3fd 0%,#cfe3f7 100%); padding:3rem 1.25rem; }
+.nb-hero__logo{ width:min(620px,80vw); }
+.nb-hero__tagline{ font-family:'Fraunces',Georgia,serif; color:var(--nb-navy);
+  text-transform:uppercase; letter-spacing:.28em; font-size:clamp(.8rem,2vw,1rem); }
+.nb-hero__cta{ background:var(--nb-navy); color:#fff; padding:.8rem 1.6rem; border-radius:8px;
+  text-transform:uppercase; letter-spacing:.04em; }
+.nb-hero__cta:hover{ background:var(--nb-gold); color:var(--nb-navy); }
 ```
 
 ## Diretrizes rápidas

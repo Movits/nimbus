@@ -6,14 +6,16 @@ loja e lançar. Ordem abaixo, com **quem faz**.
 
 ## Roadmap
 1. **Loja Nuvemshop + YouDraw** · *você* — destrava tudo.
-   - Assinar **Nuvemshop Essencial** (~R$59–69/mês; domínio próprio + Pix/boleto/cartão + cadastro
-     em massa). Começo (grátis) não serve (sem domínio próprio, só Nuvem Pago).
+   - Você já está no **Impulso** (~R$139–164/mês; confirmar em `nuvemshop.com.br/planos-e-precos`) — dá
+     domínio próprio + Pix/boleto/cartão + cadastro em massa + **edição de código do tema** (HTML/CSS/JS).
    - Assinar **plano pago da YouDraw (~R$99/mês)** — o grátis só faz 3 pedidos manuais, **sem
      integração automática**. Integrar: YouDraw → Integrações → Nuvemshop → autorizar.
-   - Custo fixo pra lançar ≈ **R$158/mês** + custo de produção/taxa por venda. Comece no **mensal**,
+   - Custo fixo pra lançar ≈ **R$240–260/mês** + custo de produção/taxa por venda. Comece no **mensal**,
      migre pro **anual (−15%)** quando validar.
-2. **Config da loja** · *você* (eu oriento) — Pix/boleto/cartão, frete (Correios/transportadora),
-   domínio, páginas (troca/devolução, privacidade, sobre), cores/tema.
+2. **Config da loja** · *você* (eu oriento) — Pix/boleto/cartão; **frete: entrega personalizada por região
+   espelhando a YouDraw** (não Correios em tempo real) + **frete grátis > R$199** em `Descontos > Frete
+   Grátis` (ver `frete-youdraw-nuvemshop.md`); domínio; páginas (troca/devolução, privacidade, sobre);
+   **tema: aplicar `marca-kit.md`** (cores/fontes/CSS no Impulso).
 3. **Fotos de produto** · *decisão* — usar as fotos/mockups da YouDraw **ou** os prompts lifestyle
    (`nimbus-lifestyle-higgsfield.md`) pra fotos com modelo.
 4. **Landing → loja** · *eu* — aponto os CTAs da landing pra Nuvemshop (`src/data/content.ts`,
@@ -48,8 +50,10 @@ registro em **outras** classes (tech, etc.) — o que importa é a **classe 25**
 ## Checklist
 - [ ] Registrar domínio (ex.: `usenimbus.com.br`) + pegar @ no Insta/TikTok.
 - [ ] Busca INPI classe 25 → se livre, depositar a marca.
-- [ ] Assinar Nuvemshop Essencial + plano pago YouDraw; integrar.
-- [ ] Cadastrar produtos (mockups + descrições + preços) e configurar pagamento/frete.
+- [ ] Assinar plano pago YouDraw (Nuvemshop já no Impulso); integrar.
+- [ ] Cadastrar produtos (mockups + descrições + preços) e ativar pagamento.
+- [ ] Configurar **entrega personalizada por região** + **frete grátis > R$199** (ver `frete-youdraw-nuvemshop.md`).
+- [ ] Aplicar a identidade no tema (`marca-kit.md`) — cores/fontes/CSS no Impulso.
 - [ ] Me passar a URL da loja → conecto a landing.
 - [ ] Publicar no marketplace YouDraw.
 - [ ] Subir Instagram/TikTok + cupom de estreia (ver `lancamento-conteudo.md`).

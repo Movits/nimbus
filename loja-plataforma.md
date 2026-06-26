@@ -9,7 +9,7 @@ marca e linka pro "Comprar". Não recriamos o site.
 Landing R3F (home/marca, GitHub Pages)
    → botão "Comprar"
 Loja Nuvemshop  (catálogo, carrinho, checkout, Pix/boleto/frete BR)
-   → app YouDraw integrado  (produção sob demanda, ~48h, sem estoque)
+   → app YouDraw integrado  (produção sob demanda, ~1–3 dias úteis, sem estoque)
 + Marketplace YouDraw  (vitrine extra com tráfego)
 ```
 
@@ -23,6 +23,24 @@ Loja Nuvemshop  (catálogo, carrinho, checkout, Pix/boleto/frete BR)
   (Shopify ficaria melhor só se fôssemos headless com o site R3F — mais caro/trabalhoso, fica pro
   futuro.)
 - **Marketplace YouDraw**: vitrine própria deles com tráfego qualificado — canal extra de graça.
+
+## Impulso (jun/2026): o que muda
+Subimos pro plano **Impulso**, que libera editar **HTML/CSS/JS do tema**. Importante: o tema da Nuvemshop é
+**server-side em Twig (`.tpl`)** — **não** hospeda nosso app React/Three.js. Ou seja: o **site 3D continua
+separado** (home da marca no GitHub Pages → "Comprar"); o Impulso serve pra deixar a **loja com a cara da
+NIMBUS** (cores, fontes, banners e **seções/HTML/CSS próprios**), aplicando o `marca-kit.md`. Checkout,
+pagamento e frete continuam sendo da Nuvemshop + app YouDraw.
+
+## Frete (importante)
+- **Quem envia é a YouDraw** (gráficas parceiras em SP): produz, embala e envia **direto ao cliente**. Você
+  não envia nada. Exige o **plano pago** da YouDraw (grátis = 3 pedidos manuais).
+- **NÃO desabilite todas as formas de envio.** Mantenha **≥1 ativa**, senão o checkout não coleta endereço
+  nem cobra frete — e a YouDraw **precisa do endereço** e **cobra de você** um frete (**fixo + adicional, por
+  região e por categoria**).
+- **Desligue o cálculo dos Correios em tempo real** (não bate com a tabela da YouDraw) e use **"Entrega
+  personalizada" por região** com valores fixos espelhando a YouDraw. Antes, **confira no app YouDraw** se o
+  frete já entra automático no checkout. Passo a passo e tabela: `frete-youdraw-nuvemshop.md`.
+- **Frete grátis > R$199**: configurar em `Descontos > Frete Grátis` (você assume o custo; cabe na margem).
 
 ## Checklist (suas ações na Nuvemshop/YouDraw)
 1. Criar conta + loja na **Nuvemshop** (pode ficar fechada ao público no começo).
@@ -45,9 +63,10 @@ Apontar os CTAs da landing pra Nuvemshop (link externo `STORE_URL`), sem recriar
 - Trocar `scrollToSection`/placeholder por `<a href={STORE_URL}>` (abre a loja).
 
 ## Futuro (opcional)
-**Headless com Shopify Storefront API**: o site R3F vira a vitrine real e o checkout vem da Shopify
-via API (reaproveita 100% do nosso código). Mais robusto/global, porém mais caro e trabalhoso — só
-se a marca crescer e valer a pena.
+**Headless** — o site R3F vira a vitrine real e o checkout vem por API (reaproveita 100% do nosso código).
+Duas rotas: **Shopify Storefront API** (mais robusto/global) ou a **própria Nuvemshop via REST API**
+(`api.tiendanube.com`, exige um backend pra guardar o token OAuth2). Mais caro e trabalhoso — só se a marca
+crescer e valer a pena.
 
 ## Fontes
 - Peito/costas: [Printify](https://printify.com/blog/t-shirt-design-placement-guide/) ·
