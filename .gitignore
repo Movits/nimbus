@@ -18,3 +18,11 @@ designs/**/*.png
 designs/**/*.webp
 designs/**/*.jpg
 designs/**/*.jpeg
+
+# Segundo cérebro (LLM Wiki) — privado, tem seu próprio repo git; nunca vai pro GitHub público.
+brain/
+
+# Lixo do Obsidian aberto na raiz + testes vazios do Web Clipper.
+.obsidian/
+browserify.org.md
+docs/
