@@ -1,6 +1,6 @@
 # designs/ — artes das estampas (POD)
 
-Prompts em `../nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo
+Prompts em `../docs/nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo
 público) — ficam local + Drive.
 
 ## Estrutura (por COLEÇÃO)

@@ -41,21 +41,11 @@ Custo = **piso** da YouDraw (config mais barata). **Markup = lucro ÷ custo** (o
 - **Preço por peça**, não por arte/coleção (simples). Só revisar se o **barroco (costas cheia)**
   custar mais de impressão.
 
-## Comparativo de mercado (jun/2026)
-Pesquisa rápida de preços de varejo no BR:
-- **Streetwear premium BR** (HIGH Company, HOVorg…): camiseta ~**R$150–250**, moletom canguru
-  ~**R$280–500** ([HOVorg moletom R$279,90](https://hovorg.shop/hov-org-verao-2025/moletom/moletom-canguru/),
-  [Blunt](https://www.bluntbrasil.com.br/)).
-- **Nicho católico/cristão BR** (comparável direto): bem mais barato — [Hace](https://usehace.com.br/)
-  oversized **R$99 (promo) / R$139 (cheio)**; [SerSanto](https://sersanto.com.br/product-category/camiseta/)
-  R$62–68; JHS R$45–58.
-- **Genérico/atacado** (R$30–120): blank/low-end — **não é comparável** a marca premium.
-
-**Veredito:** os preços **não são altos pro streetwear premium** (moletom R$299,90 = nível HIGH/HOVorg).
-Ficam **acima do nicho católico** (Hace topa ~R$139) — coerente com o posicionamento *streetwear
-católico premium*, mas exige **design + apresentação premium** (mockups, fotos, marca) pra justificar.
-Por isso a entrada foi **suavizada** (camiseta R$149,90 / oversized R$179,90) pra reduzir atrito no
-lançamento; sobe depois com prova social.
+## Comparativo de mercado
+A análise de concorrentes e preços de varejo BR vive em `pesquisa-mercado.md` (fonte única). Resumo: os
+preços **não são altos pro streetwear premium** e ficam **acima do nicho católico** — coerente com o
+posicionamento, desde que a apresentação (mockups, fotos, marca) esteja à altura. Por isso a entrada é
+**suavizada** (camiseta R$149,90 / oversized R$179,90) e sobe depois com prova social.
 
 ## Checklist
 - [ ] No cadastro, conferir o custo da config de estampa escolhida (markup real fica um pouco menor que o da tabela-piso).

@@ -16,7 +16,7 @@ zoar a tradição. Reverente com a fé + premium. Ajuste à vontade.
 > Acima de tudo.
 > 🛒 [link da loja]
 
-(@ sugerido: `@usenimbus` ou `@nimbusstreetwear` — o mesmo no TikTok.)
+(@ sugerido: `@nimbuswear` — o mesmo no TikTok.)
 
 ## Primeiros posts (ordem de estreia)
 **1. Teaser (1 a 2 dias antes)** — fundo do céu/nuvem ou a logo.

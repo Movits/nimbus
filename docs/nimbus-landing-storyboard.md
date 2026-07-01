@@ -1,8 +1,9 @@
 # NIMBUS — Storyboard da Landing (mock pré-código)
 
 Blueprint visual da landing **scroll-driven 3D**. Define ordem das seções, qual arte entra em
-cada uma, a copy (placeholder, marcada `TBD`) e as interações de scroll — pra guiar a
-implementação em Next.js + R3F + GSAP depois. **Nenhum código ainda.**
+cada uma, a copy (placeholder) e as interações de scroll — pra guiar a implementação em
+Next.js + R3F + GSAP depois. **Nenhum código ainda.** Toda a copy pendente está consolidada na
+seção **"Pendências"** no fim (os `TBD` no wireframe só apontam pra lá).
 
 > Conceito da experiência: o usuário **sobe pelo céu** conforme rola. Começa na Catedral
 > saindo das nuvens (hero), atravessa nuvens, passa por ícones (Cristo, Pampulha), chega num
@@ -30,6 +31,8 @@ implementação em Next.js + R3F + GSAP depois. **Nenhum código ainda.**
 ---
 
 ## Design tokens (provisório)
+
+> Paleta canônica da marca (loja) em `marca-kit.md`; aqui ficam só os tokens específicos da landing (ex.: azul Dom Bosco).
 
 - **Paleta:** céu `#DCEBFA` · branco-nuvem `#F7FBFF` · azul `#8FC1EA` · azul profundo (Dom Bosco) `#0E2A6B` · acento auréola (dourado suave) `#E9C46A` · texto grafite `#1B2733`.
 - **Tipografia (sugestão):** display elegante pra títulos (ex.: *Fraunces* ou *Canela*) + sans limpa pra corpo (ex.: *Inter* / *Geist*). Wordmark = a arte puffy.

@@ -13,8 +13,8 @@ loja e lançar. Ordem abaixo, com **quem faz**.
    - Custo fixo pra lançar ≈ **R$240–260/mês** + custo de produção/taxa por venda. Comece no **mensal**,
      migre pro **anual (−15%)** quando validar.
 2. **Config da loja** · *você* (eu oriento) — Pix/boleto/cartão; **frete: entrega personalizada por região
-   espelhando a YouDraw** (não Correios em tempo real) + **frete grátis > R$199** em `Descontos > Frete
-   Grátis` (ver `frete-youdraw-nuvemshop.md`); domínio; páginas (troca/devolução, privacidade, sobre);
+   espelhando a YouDraw** + **frete grátis > R$199** (entrega personalizada Grátis; ver
+   `frete-youdraw-nuvemshop.md`); domínio; páginas (troca/devolução, privacidade, sobre);
    **tema: aplicar `marca-kit.md`** (cores/fontes/CSS no Impulso).
 3. **Fotos de produto** · *decisão* — usar as fotos/mockups da YouDraw **ou** os prompts lifestyle
    (`nimbus-lifestyle-higgsfield.md`) pra fotos com modelo.
@@ -26,16 +26,10 @@ loja e lançar. Ordem abaixo, com **quem faz**.
 7. **Proteção da marca** · *abaixo* — antes de gastar com mídia.
 
 ## Proteção da marca (pesquisa jun/2026)
-**Domínios** (checado na GoDaddy):
-- ❌ `nimbus.com` e `nimbus.com.br` — **tomados** (palavra comum).
-- ✅ **Livres:** `usenimbus.com.br` (recomendado, padrão BR tipo *usehace.com.br*) · `nimbuswear.com.br`
-  · `nimbusstreetwear.com.br` · `vistanimbus.com.br` · `nimbus.store`.
-- Registrar **.com.br no [registro.br](https://registro.br)** (precisa CPF/CNPJ, ~R$40/ano); `.store`
-  em registrador comum.
-- **Ação:** garantir o domínio **já** (é barato e evita perder o nome).
+**Domínio:** ✅ **`nimbuswear.com.br` comprado (GoDaddy)**. Pra ligar na loja: ver "Domínio (DNS)" em
+`loja-plataforma.md`.
 
-**@ redes:** conferir manualmente `@usenimbus` / `@nimbus.br` / `@nimbusstreetwear` no Instagram e
-TikTok (o `@nimbus` puro provavelmente está tomado). Pegar o mesmo handle nos dois.
+**@ redes:** pegar **`@nimbuswear`** (o mesmo handle no Instagram e no TikTok).
 
 **Marca (INPI):** a busca oficial é interativa (CAPTCHA), então **não dá pra confirmar por aqui** se
 "NIMBUS" já tem registro na **classe 25 (vestuário)**. Como é palavra comum, é provável que exista
@@ -48,7 +42,7 @@ registro em **outras** classes (tech, etc.) — o que importa é a **classe 25**
 - Se a classe 25 estiver ocupada por "NIMBUS", já temos **plano B de nome** (podemos brainstormar).
 
 ## Checklist
-- [ ] Registrar domínio (ex.: `usenimbus.com.br`) + pegar @ no Insta/TikTok.
+- [x] Domínio `nimbuswear.com.br` comprado (GoDaddy) → conectar DNS (ver `loja-plataforma.md`) + pegar `@nimbuswear` no Insta/TikTok.
 - [ ] Busca INPI classe 25 → se livre, depositar a marca.
 - [ ] Assinar plano pago YouDraw (Nuvemshop já no Impulso); integrar.
 - [ ] Cadastrar produtos (mockups + descrições + preços) e ativar pagamento.

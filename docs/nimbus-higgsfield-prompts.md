@@ -1,5 +1,7 @@
 # NIMBUS — Biblioteca de Prompts Higgsfield (Fase 0)
 
+> **Escopo:** **assets 3D do site** (hero, fundos, parallax, emblema). Estampas de produto → `nimbus-designs-roupas-higgsfield.md`. Fotos com modelo → `nimbus-lifestyle-higgsfield.md`.
+
 Artes ilustradas do site, estilo **render 3D cinematográfico etéreo** — "mundo céu":
 azul clarinho, nuvens brancas, concreto branco curvo modernista (Niemeyer) subindo pro
 céu, luz divina suave. Limpo, premium, alto padrão.

@@ -1,5 +1,7 @@
 # NIMBUS — Prompts lifestyle / try-on (Higgsfield)
 
+> **Escopo:** **fotos/vídeos com modelo** vestindo as peças. Estampas de produto → `nimbus-designs-roupas-higgsfield.md`. Assets 3D do site → `nimbus-higgsfield-prompts.md`.
+
 Modelo brasileiro vestindo as peças, pra **foto de produto** e **vídeo de redes**. A ideia destes
 prompts é serem **gerais por coleção**: você anexa **qualquer mockup da YouDraw** (camiseta,
 oversized, moletom careca ou canguru, com qualquer emblema) como referência, e o prompt **padroniza**

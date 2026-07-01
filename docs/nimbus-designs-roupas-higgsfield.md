@@ -1,5 +1,7 @@
 # NIMBUS — Estampas por coleção
 
+> **Escopo:** prompts das **estampas de produto** (as artes que vão nas roupas). Fotos com modelo → `nimbus-lifestyle-higgsfield.md`. Assets 3D do site → `nimbus-higgsfield-prompts.md`.
+
 A loja é organizada em **coleções**. Cada coleção tem sua cara (bloco de estilo) e seus designs.
 Cada prompt é copy-paste e **autossuficiente** (o Higgsfield não tem memória) — já traz o estilo inteiro.
 

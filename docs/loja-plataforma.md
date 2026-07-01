@@ -40,7 +40,25 @@ pagamento e frete continuam sendo da Nuvemshop + app YouDraw.
 - **Desligue o cálculo dos Correios em tempo real** (não bate com a tabela da YouDraw) e use **"Entrega
   personalizada" por região** com valores fixos espelhando a YouDraw. Antes, **confira no app YouDraw** se o
   frete já entra automático no checkout. Passo a passo e tabela: `frete-youdraw-nuvemshop.md`.
-- **Frete grátis > R$199**: configurar em `Descontos > Frete Grátis` (você assume o custo; cabe na margem).
+- **Frete grátis > R$199**: feito na **própria entrega personalizada** (Custo Grátis + mínimo R$199) — passo a
+  passo em `frete-youdraw-nuvemshop.md`. Você assume o custo; cabe na margem.
+
+## Domínio (DNS)
+Domínio **nimbuswear.com.br** (comprado na GoDaddy). Pra ligar na loja:
+- Na Nuvemshop: `Configurações > Domínios > "Conectar um domínio existente"` → digitar `nimbuswear.com.br`.
+- No DNS do GoDaddy: **2 registros A** (`@` → `185.133.35.21` e `@` → `185.133.35.22`) + **1 CNAME**
+  (`www` → `nimbus40.lojavirtualnuvem.com.br`). Apagar registros A/CNAME de estacionamento pra não conflitar;
+  não mexer nos NS.
+- SSL (HTTPS) é **grátis e automático** na Nuvemshop. Propagação: até 48h. Definir `nimbuswear.com.br` como principal.
+
+## Integração YouDraw — venda → envio automático
+Pra a YouDraw receber o pedido e enviar sozinha, tudo isto tem que estar ok:
+1. **Plano pago** da YouDraw ativo (grátis = 3 pedidos manuais, sem automação).
+2. Integração **conectada/autorizada** (YouDraw → Integrações → Nuvemshop → autorizar).
+3. **Produtos vinculados** YouDraw↔Nuvemshop (arte, valores, frete, descrição no painel da YouDraw).
+4. **Pagamento aprovado** dispara a produção → YouDraw produz e envia → status/rastreio voltam pra Nuvemshop.
+
+Faça um **pedido de teste** antes de divulgar. Lembrete: **NF, atendimento e trocas** continuam sendo seus.
 
 ## Checklist (suas ações na Nuvemshop/YouDraw)
 1. Criar conta + loja na **Nuvemshop** (pode ficar fechada ao público no começo).
@@ -61,12 +79,6 @@ Apontar os CTAs da landing pra Nuvemshop (link externo `STORE_URL`), sem recriar
 - `src/sections/Overlay.tsx` — botões da §5 Coleção, hero e footer (hoje usam placeholder/scroll).
 - `src/sections/Topbar.tsx` — botão do topo (hoje `scrollToSection`).
 - Trocar `scrollToSection`/placeholder por `<a href={STORE_URL}>` (abre a loja).
-
-## Futuro (opcional)
-**Headless** — o site R3F vira a vitrine real e o checkout vem por API (reaproveita 100% do nosso código).
-Duas rotas: **Shopify Storefront API** (mais robusto/global) ou a **própria Nuvemshop via REST API**
-(`api.tiendanube.com`, exige um backend pra guardar o token OAuth2). Mais caro e trabalhoso — só se a marca
-crescer e valer a pena.
 
 ## Fontes
 - Peito/costas: [Printify](https://printify.com/blog/t-shirt-design-placement-guide/) ·

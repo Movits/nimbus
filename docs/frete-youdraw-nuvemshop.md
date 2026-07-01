@@ -5,6 +5,16 @@ Quem envia é a **YouDraw** (produz, embala e envia direto ao cliente). A YouDra
 categoria de produto**. O objetivo aqui é o checkout da Nuvemshop cobrar do cliente ~o mesmo que a YouDraw
 te cobra — pra você não absorver o frete.
 
+## Entenda primeiro: "entrega personalizada" ≠ Correios calculado
+Na Nuvemshop existem dois tipos de frete, e a diferença importa:
+- **Correios calculado (tempo real):** conecta no *seu* contrato dos Correios, calcula por CEP e **assume que
+  VOCÊ envia** (você imprime etiqueta / o Correios coleta no seu endereço e **você paga o Correios**). ❌ Não
+  use — quem envia é a YouDraw.
+- **Entrega personalizada:** é só **um valor fixo que você digita**. Não conecta em conta nenhuma dos Correios,
+  **não gera etiqueta, não dispara coleta, não cobra frete de você**. É apenas o número que o cliente paga no
+  checkout. ✅ É esse que usamos. O único frete que você paga é o da **YouDraw** (fixo + adicional); o frete que
+  o cliente paga cobre esse custo. Ninguém dos Correios vai à sua casa nem te cobra "a mais".
+
 ## Passo 0 — conferir no app YouDraw (faça isso primeiro)
 No painel/app da YouDraw, veja se o frete já é **injetado automaticamente** no checkout da Nuvemshop:
 - **Se sim:** você não precisa cadastrar zonas manualmente — só **valide** os valores num pedido de teste.
@@ -41,8 +51,15 @@ por **região × categoria**. Os valores **mudam com o tempo** — sempre use a 
    simples / 4–8 para personalizadas) + envio 2–7 dias úteis (mais rápido no Sudeste).
 
 ## Passo 3 — frete grátis acima de R$199
-`Descontos > Frete Grátis > "+ Configurar frete grátis"` → condição **"Valor total da compra"**, mínimo
-**R$199** → selecionar a(s) forma(s) de **entrega personalizada** que recebem o grátis.
+⚠️ Na sua conta **não existe** a tela "Descontos > Frete Grátis", e "Descontos > Promoções" **não tem** tipo
+"frete grátis". Como você usa entrega personalizada, faça o frete grátis **na própria configuração de envio**:
+1. `Configurações > Meios de envio` → **"+ Adicionar entrega personalizada"**.
+2. **Nome:** `Frete grátis acima de R$199`. **Custo:** **Grátis**.
+3. **Condição "Valor total da compra":** mínimo **R$199** (máximo em branco). Zona: todo o Brasil.
+4. Pra não mostrar duas opções ao mesmo tempo: na entrega personalizada **paga**, coloque **máximo R$198,99**;
+   na **grátis**, mínimo R$199. Abaixo de R$199 aparece só a paga; a partir de R$199, só a grátis.
+
+É **automático, sem cupom/código** — o cliente não digita nada.
 - Você **assume** o custo do frete grátis (a YouDraw te cobra mesmo assim) — por isso R$199 "cabe na margem".
 - ⚠️ Se um cupom (ex.: **ESTREIA15**) derrubar o subtotal **abaixo de R$199**, o frete grátis **deixa de valer**.
 
