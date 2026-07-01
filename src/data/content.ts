@@ -6,6 +6,9 @@
 const base = import.meta.env.BASE_URL
 const img = (file: string) => `${base}img/${file}`
 
+// Loja Nuvemshop (subdomínio do mesmo domínio). O CTA do hero aponta pra cá.
+export const STORE_URL = 'https://loja.nimbuswear.com.br'
+
 export const ASSETS = {
   heroDesktop: img('hero-desktop.webp'),
   heroMobile: img('hero-mobile.webp'),

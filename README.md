@@ -4,13 +4,13 @@ Landing scroll-driven 3D da NIMBUS — streetwear católico premium. Mundo "céu
 branco modernista (Niemeyer) subindo pelas nuvens, luz divina, estética premium.
 
 **Stack:** Vite + React + TypeScript + React Three Fiber + drei + GSAP.
-**Deploy:** GitHub Pages (Actions) → https://movits.github.io/nimbus/
+**Deploy:** GitHub Pages (Actions) + domínio próprio → https://nimbuswear.com.br
 
 ## Rodar local
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173/nimbus/
+npm run dev      # http://localhost:5173/
 npm run build    # gera dist/
 npm run preview  # serve o build
 ```

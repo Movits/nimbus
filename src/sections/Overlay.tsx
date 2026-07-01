@@ -1,6 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react'
-import { ASSETS, COPY, PRODUCTS, SECTION } from '../data/content'
-import { scrollToSection } from '../scene/scroll'
+import { ASSETS, COPY, PRODUCTS, SECTION, STORE_URL } from '../data/content'
 import { registerSection } from '../scene/scrollStore'
 import { useInView } from '../hooks/useInView'
 
@@ -45,9 +44,9 @@ export default function Overlay() {
       <Section index={SECTION.hero} className="hero" align="center">
         <img className="reveal hero__logo" src={ASSETS.wordmark} alt="NIMBUS" />
         <p className="reveal hero__subtitle">{COPY.hero.subtitle}</p>
-        <button className="reveal btn btn--primary" onClick={() => scrollToSection(SECTION.collection)}>
+        <a className="reveal btn btn--primary" href={STORE_URL}>
           {COPY.hero.cta}
-        </button>
+        </a>
       </Section>
 
       {/* §2 MANIFESTO */}
