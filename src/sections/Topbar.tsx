@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { ASSETS, SECTION } from '../data/content'
+import { ASSETS, SECTION, STORE_URL } from '../data/content'
 import { scrollToSection } from '../scene/scroll'
 
 export default function Topbar() {
@@ -18,11 +18,16 @@ export default function Topbar() {
         <img src={ASSETS.wordmark} alt="NIMBUS" />
       </button>
       <nav className="topbar__nav">
-        <button onClick={() => scrollToSection(SECTION.manifesto)}>Manifesto</button>
-        <button onClick={() => scrollToSection(SECTION.design)}>Design</button>
-        <button className="topbar__cta" onClick={() => scrollToSection(SECTION.collection)}>
-          Coleção
+        <button className="topbar__link--sm" onClick={() => scrollToSection(SECTION.manifesto)}>
+          Manifesto
         </button>
+        <button className="topbar__link--sm" onClick={() => scrollToSection(SECTION.design)}>
+          Design
+        </button>
+        <button onClick={() => scrollToSection(SECTION.impact)}>Impacto</button>
+        <a className="topbar__cta" href={STORE_URL}>
+          Loja
+        </a>
       </nav>
     </header>
   )

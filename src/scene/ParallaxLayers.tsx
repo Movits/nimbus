@@ -7,7 +7,7 @@ import { pointer, weightAt } from './scrollStore'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
 // Nuvens PROCEDURAIS (transparência real). Aparecem nas seções "céu" (hero,
-// manifesto, coleção, footer) e somem nas seções de cena fechada (fé, design).
+// manifesto, impacto, footer) e somem nas seções de cena fechada (fé, design).
 export default function ParallaxLayers() {
   const root = useRef<THREE.Group>(null!)
   const reduced = useReducedMotion()
@@ -16,7 +16,7 @@ export default function ParallaxLayers() {
     if (!root.current) return
     const sky = Math.min(
       1,
-      weightAt(SECTION.hero) + weightAt(SECTION.manifesto) + weightAt(SECTION.collection) + weightAt(SECTION.footer),
+      weightAt(SECTION.hero) + weightAt(SECTION.manifesto) + weightAt(SECTION.impact) + weightAt(SECTION.footer),
     )
 
     root.current.visible = sky > 0.02

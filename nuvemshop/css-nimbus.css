@@ -1,0 +1,433 @@
+/* ==========================================================================
+   NIMBUS x NUVEMSHOP (TEMA MORELIA)
+   CSS completo para colar em:
+   Loja online > Layout > Personalizar seu layout atual > Edicao de CSS avancada
+
+   Como o Morelia funciona: o tema inteiro le variaveis CSS (custom properties)
+   definidas no :root, como --main-background, --button-background,
+   --adbar-background, --footer-background, --heading-font etc.
+   Entao a forma mais segura de rebrandear e sobrescrever essas variaveis,
+   e reforcar com seletores diretos onde precisa.
+
+   Importante: o Morelia tambem pre-calcula variantes com transparencia
+   (ex.: --main-foreground-opacity-10) como hex de 8 digitos. Elas NAO
+   acompanham a cor base automaticamente, entao sobrescrevemos todas.
+
+   Selectores confirmados inspecionando a demo oficial do Morelia
+   (morelia-clothing-br.lojavirtualnuvem.com.br e seus arquivos
+   dart-style-critical/colors/async.css).
+   Referencias:
+   https://www.nuvemshop.com.br/loja-layouts-nuvem/morelia
+   https://atendimento.nuvemshop.com.br/pt_BR/layout-morelia/como-personalizar-meu-layout-morelia
+   https://atendimento.nuvemshop.com.br/pt_BR/codigo-css/o-que-da-para-ser-alterado-por-css-nos-layouts-da-nuvemshop
+
+   Paleta NIMBUS:
+   navy #0b2360 | ouro #e9c46a | azul-ceu #8fc1ea | ceu #dcebfa
+   nuvem #f7fbff | ink #1b2733 | gradiente nuvem #eaf3fd -> #cfe3f7
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1) FONTES: Fraunces (titulos, serif) + Inter (corpo)
+   O @import precisa ser a primeira regra do CSS.
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..700&display=swap');
+
+/* --------------------------------------------------------------------------
+   2) TOKENS: sobrescreve as variaveis nativas do Morelia
+   E aqui que a maior parte do rebrand acontece.
+   -------------------------------------------------------------------------- */
+:root {
+  /* Tokens NIMBUS (para usar em regras proprias) */
+  --nimbus-navy: #0b2360;
+  --nimbus-ouro: #e9c46a;
+  --nimbus-azul-ceu: #8fc1ea;
+  --nimbus-ceu: #dcebfa;
+  --nimbus-nuvem: #f7fbff;
+  --nimbus-ink: #1b2733;
+  --nimbus-grad-inicio: #eaf3fd;
+  --nimbus-grad-fim: #cfe3f7;
+  --nimbus-radius: 8px;
+
+  /* Tipografia do tema */
+  --body-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-font: 'Fraunces', Georgia, serif;
+  --title-font-weight: 600;
+
+  /* Fundo geral nuvem + texto ink */
+  --main-background: #f7fbff;
+  --main-foreground: #1b2733;
+
+  /* Variantes de opacidade do texto (ink + alfa em hex) */
+  --main-foreground-opacity-03: #1b273308;
+  --main-foreground-opacity-05: #1b27330d;
+  --main-foreground-opacity-07: #1b273312;
+  --main-foreground-opacity-10: #1b27331a;
+  --main-foreground-opacity-20: #1b273333;
+  --main-foreground-opacity-30: #1b27334d;
+  --main-foreground-opacity-40: #1b273366;
+  --main-foreground-opacity-50: #1b273380;
+  --main-foreground-opacity-80: #1b2733cc;
+
+  /* Variantes de opacidade do fundo (nuvem + alfa em hex) */
+  --main-background-opacity-20: #f7fbff33;
+  --main-background-opacity-30: #f7fbff4d;
+  --main-background-opacity-50: #f7fbff80;
+  --main-background-opacity-80: #f7fbffcc;
+  --main-background-opacity-90: #f7fbffe6;
+  --main-background-opacity-95: #f7fbfff2;
+
+  /* Acento: ouro */
+  --accent-color: #e9c46a;
+
+  /* Botao primario: navy com texto branco (hover ouro tratado abaixo) */
+  --button-background: #0b2360;
+  --button-foreground: #ffffff;
+
+  /* Cabecalho claro e limpo: fundo nuvem, texto e icones navy */
+  --header-background: #f7fbff;
+  --header-foreground: #0b2360;
+  --header-foreground-opacity-20: #0b236033;
+  --header-foreground-opacity-30: #0b23604d;
+  --header-transparent-foreground: #0b2360;
+
+  /* Barra de anuncio (adbar): navy com texto branco */
+  --adbar-background: #0b2360;
+  --adbar-foreground: #ffffff;
+
+  /* Rodape: navy com texto claro */
+  --footer-background: #0b2360;
+  --footer-foreground: #f7fbff;
+  --footer-foreground-opacity-10: #f7fbff1a;
+  --footer-foreground-opacity-20: #f7fbff33;
+  --footer-foreground-opacity-30: #f7fbff4d;
+  --footer-foreground-opacity-60: #f7fbff99;
+  --footer-foreground-opacity-80: #f7fbffcc;
+
+  /* Newsletter da home: ceu claro com texto navy (gradiente aplicado abaixo) */
+  --newsletter-background: #dcebfa;
+  --newsletter-foreground: #0b2360;
+  --news-foreground-opacity-30: #0b23604d;
+  --news-foreground-opacity-50: #0b236080;
+
+  /* Selos e etiquetas de produto (ex.: oferta): ouro com texto navy */
+  --label-background: #e9c46a;
+  --label-foreground: #0b2360;
+
+  /* Banners informativos (servicos), se ativados no layout */
+  --services-background: #dcebfa;
+  --services-foreground: #0b2360;
+
+  /* Raio de borda do tema (poucos usos nativos, reforcado abaixo) */
+  --border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   3) BASE: fundo nuvem e corpo em Inter
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--nimbus-nuvem);
+  color: var(--nimbus-ink);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --------------------------------------------------------------------------
+   4) TITULOS: Fraunces em navy
+   O Morelia usa h1-h6 e as classes .h1-.h6 (e .h1-huge em banners).
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.h1-huge {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  color: var(--nimbus-navy);
+  letter-spacing: 0.01em;
+}
+
+/* Titulos dentro do rodape (navy) precisam ficar claros */
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+footer .h1, footer .h2, footer .h3, footer .h4, footer .h5, footer .h6,
+.footer-colors h1, .footer-colors h2, .footer-colors h3,
+.footer-colors h4, .footer-colors h5, .footer-colors h6 {
+  color: var(--footer-foreground);
+}
+
+/* Titulos sobre imagem de banner (o tema controla o contraste, nao forcar navy) */
+.swiper-text-light .h1-huge,
+.swiper-text-light h1, .swiper-text-light h2,
+.textbanner-text.over-image.over-image-invert h1,
+.textbanner-text.over-image.over-image-invert h2,
+.textbanner-text.over-image.over-image-invert .h2 {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   5) LINKS: navy com hover ouro
+   Header e footer tem regras proprias mais especificas, entao nao quebram.
+   -------------------------------------------------------------------------- */
+a {
+  color: var(--nimbus-navy);
+}
+a:hover,
+a:focus {
+  color: var(--nimbus-ouro);
+}
+
+/* Nome do produto na vitrine continua em ink (sobriedade) */
+.item-link,
+.item-name {
+  color: var(--nimbus-ink);
+}
+.item-link:hover .item-name {
+  color: var(--nimbus-navy);
+}
+
+/* Links do rodape: claros, com hover ouro */
+footer a:hover,
+.footer-colors a:hover,
+footer .footer-menu-link:hover {
+  color: var(--nimbus-ouro) !important;
+}
+
+/* Links de utilidade estilo texto */
+.btn-link-primary {
+  color: var(--nimbus-navy);
+  fill: var(--nimbus-navy);
+}
+.btn-link-primary:hover,
+.btn-link-primary:focus {
+  color: var(--nimbus-ouro);
+  fill: var(--nimbus-ouro);
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   6) BOTOES: navy solido, hover ouro com texto navy
+   .btn-primary e o botao principal do Morelia (comprar, adicionar etc).
+   .btn-default e o botao escuro alternativo do tema.
+   input[type=submit] cobre formularios que nao usem as classes.
+   -------------------------------------------------------------------------- */
+.btn,
+.btn-primary,
+.btn-default,
+.btn-secondary,
+input[type="submit"],
+input[type="button"] {
+  border-radius: var(--nimbus-radius);
+}
+
+.btn-primary,
+.btn-default,
+input[type="submit"] {
+  background-color: var(--nimbus-navy);
+  color: #ffffff;
+  fill: #ffffff;
+  border: 0;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-default:hover,
+.btn-default:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: var(--nimbus-ouro) !important;
+  color: var(--nimbus-navy) !important;
+  fill: var(--nimbus-navy) !important;
+  opacity: 1 !important;
+}
+
+/* Botao secundario: contorno navy sobre fundo claro */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--nimbus-navy);
+  fill: var(--nimbus-navy);
+  border: 1px solid var(--nimbus-navy);
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--nimbus-navy);
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+/* Botao primario dentro do rodape navy: vira ouro para manter contraste */
+.footer-colors .btn-primary {
+  background-color: var(--nimbus-ouro);
+  color: var(--nimbus-navy);
+}
+.footer-colors .btn-primary:hover,
+.footer-colors .btn-primary:focus {
+  background-color: #ffffff !important;
+  color: var(--nimbus-navy) !important;
+}
+
+/* --------------------------------------------------------------------------
+   7) PRECO: navy e em negrito
+   .price-container e .js-price-display na pagina de produto,
+   .item-price e .item-price-container na vitrine,
+   .cart-unit-price e .subtotal-price no carrinho.
+   -------------------------------------------------------------------------- */
+.price-container,
+.js-price-display,
+.item-price,
+.item-price-container,
+.cart-unit-price,
+.subtotal-price,
+.js-subtotal-price {
+  color: var(--nimbus-navy) !important;
+  font-weight: 700;
+}
+
+/* Preco antigo (riscado): mais discreto, sem negrito */
+.price-compare {
+  font-weight: 400;
+  color: var(--nimbus-ink);
+  opacity: 0.5;
+}
+
+/* Parcelamento sem juros: ouro escurece pouco em fundo claro, manter navy */
+.product-installments.installment-no-interest {
+  color: var(--nimbus-navy) !important;
+}
+
+/* --------------------------------------------------------------------------
+   8) CABECALHO (.head-main): claro e limpo
+   As cores ja vem das variaveis; aqui so um acabamento sutil.
+   -------------------------------------------------------------------------- */
+.head-main {
+  border-bottom: 1px solid #0b236014;
+}
+.head-main .form-control {
+  border-radius: var(--nimbus-radius);
+}
+/* Dropdown do menu desktop sobre fundo claro */
+.desktop-dropdown {
+  background-color: var(--nimbus-nuvem);
+  border-bottom: 1px solid #0b23601f;
+}
+
+/* --------------------------------------------------------------------------
+   9) BARRA DE ANUNCIO: navy com texto branco
+   No Morelia e .section-adbar (dentro do header). O texto e links
+   ja herdam --adbar-foreground; reforco defensivo abaixo.
+   -------------------------------------------------------------------------- */
+.section-adbar,
+.head-main .section-adbar {
+  background-color: var(--nimbus-navy) !important;
+  color: #ffffff !important;
+}
+.section-adbar a,
+.section-adbar .svg-icon-text {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   10) RODAPE: navy com texto claro
+   As cores vem das variaveis --footer-*; aqui so garantias.
+   -------------------------------------------------------------------------- */
+footer,
+.footer-colors {
+  background: var(--nimbus-navy);
+  color: var(--nimbus-nuvem);
+}
+footer .form-control {
+  border-radius: var(--nimbus-radius);
+}
+
+/* --------------------------------------------------------------------------
+   11) NEWSLETTER DA HOME: gradiente nuvem com texto navy
+   -------------------------------------------------------------------------- */
+.section-newsletter-home,
+.section-newsletter-home-colors {
+  background: linear-gradient(180deg, var(--nimbus-grad-inicio) 0%, var(--nimbus-grad-fim) 100%);
+  color: var(--nimbus-navy);
+}
+
+/* --------------------------------------------------------------------------
+   12) FORMULARIOS E COMPONENTES: cantos arredondados sutis (8px)
+   -------------------------------------------------------------------------- */
+.form-control,
+.form-select,
+.form-quantity,
+.search-input,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"] {
+  border-radius: var(--nimbus-radius);
+}
+
+.card,
+.box,
+.alert,
+.modal,
+.search-suggestions,
+.tooltip,
+.notification-primary,
+.desktop-dropdown {
+  border-radius: var(--nimbus-radius);
+}
+
+/* Imagens da vitrine e etiquetas com o mesmo raio */
+.item-image,
+.product-item-image-container,
+.textbanner-image,
+.label {
+  border-radius: var(--nimbus-radius);
+  overflow: hidden;
+}
+
+/* Foco de inputs em navy no lugar do cinza padrao */
+.form-control:focus,
+.form-select:focus,
+.form-quantity:focus {
+  border-color: var(--nimbus-navy);
+}
+
+/* --------------------------------------------------------------------------
+   13) DETALHES DE MARCA
+   -------------------------------------------------------------------------- */
+/* Selecao de texto na cor da marca */
+::selection {
+  background: var(--nimbus-navy);
+  color: #ffffff;
+}
+
+/* Bullets do carrossel em navy */
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background-color: var(--nimbus-navy);
+}
+
+/* Notificacao secundaria (ex.: aviso de carrinho) usa o ouro com texto navy */
+.notification-secondary {
+  background: var(--nimbus-ouro);
+  color: var(--nimbus-navy);
+  fill: var(--nimbus-navy);
+}
+
+/* --------------------------------------------------------------------------
+   14) DEFENSIVO: cobre variacoes de versao do tema ou apps instalados
+   Se algum elemento nao pegar o estilo, ajuste primeiro nestes blocos.
+   -------------------------------------------------------------------------- */
+/* Qualquer barra de anuncio criada por app */
+[class*="announcement"] {
+  background-color: var(--nimbus-navy);
+  color: #ffffff;
+}
+
+/* Qualquer botao generico de app de checkout ou pop-up */
+.button:not(.btn-link),
+button[type="submit"]:not(.btn-link):not(.search-btn):not(.modal-close) {
+  border-radius: var(--nimbus-radius);
+}
+
+/* Classe generica de preco usada por alguns apps */
+.price {
+  color: var(--nimbus-navy);
+  font-weight: 700;
+}

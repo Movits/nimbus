@@ -1,5 +1,5 @@
 import { useEffect, useRef, type ReactNode } from 'react'
-import { ASSETS, COPY, PRODUCTS, SECTION, STORE_URL } from '../data/content'
+import { ASSETS, COPY, IMPACT_PROJECTS, SECTION, STORE_URL } from '../data/content'
 import { registerSection } from '../scene/scrollStore'
 import { useInView } from '../hooks/useInView'
 
@@ -69,38 +69,34 @@ export default function Overlay() {
         <p className="reveal lede">{COPY.design.body}</p>
       </Section>
 
-      {/* §5 COLEÇÃO — loja placeholder */}
-      <Section index={SECTION.collection} className="collection" align="center">
-        <p className="reveal kicker">{COPY.collection.kicker}</p>
-        <h2 className="reveal display display--md">{COPY.collection.title}</h2>
-        <p className="reveal note">{COPY.collection.note}</p>
-        <div className="grid">
-          {PRODUCTS.map((p, i) => (
-            <article className="reveal card" key={i} style={{ ['--i' as string]: i }}>
-              <div className="card__media" aria-hidden="true">
-                <span className="card__silhouette" />
-              </div>
-              <div className="card__row">
-                <span className="card__name">{p.name}</span>
-                <span className="card__price">{p.price}</span>
-              </div>
-              <button className="btn btn--ghost card__cta">{COPY.collection.cta}</button>
+      {/* §5 IMPACTO — 10% do lucro pro projeto que o cliente escolher */}
+      <Section index={SECTION.impact} className="impact" align="center">
+        <p className="reveal kicker">{COPY.impact.kicker}</p>
+        <h2 className="reveal display display--md">{COPY.impact.title}</h2>
+        <p className="reveal lede">{COPY.impact.body}</p>
+        <div className="impact__grid">
+          {IMPACT_PROJECTS.map((p, i) => (
+            <article className="reveal impact__card" key={i} style={{ ['--i' as string]: i }}>
+              <h3 className="impact__name">{p.name}</h3>
+              <p className="impact__desc">{p.desc}</p>
             </article>
           ))}
         </div>
+        <p className="reveal note impact__outro">{COPY.impact.outroNote}</p>
+        <a className="reveal btn btn--primary" href={STORE_URL}>
+          {COPY.impact.cta}
+        </a>
       </Section>
 
-      {/* §6 FOOTER — logo grande dominando; e-mail/links no rodapé */}
+      {/* §6 FOOTER — logo grande + linha de confiança + redes */}
       <Section index={SECTION.footer} className="footer" align="center">
         <img className="reveal footer__logo" src={ASSETS.wordmark} alt="NIMBUS" />
         <div className="reveal footer__bottom">
-          <p className="footer__newsletter">{COPY.footer.newsletter}</p>
-          <form className="signup" onSubmit={(e) => e.preventDefault()}>
-            <input type="email" required placeholder={COPY.footer.placeholder} aria-label="email" />
-            <button className="btn btn--primary" type="submit">
-              {COPY.footer.cta}
-            </button>
-          </form>
+          <ul className="footer__trust">
+            {COPY.footer.trust.map((t, i) => (
+              <li key={i}>{t}</li>
+            ))}
+          </ul>
           <div className="footer__meta">
             <span>{COPY.footer.madein}</span>
             <span>Instagram · TikTok</span>

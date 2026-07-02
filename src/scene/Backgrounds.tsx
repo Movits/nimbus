@@ -43,8 +43,10 @@ function Background({ url, index, order }: { url: string; index: number; order: 
 export default function Backgrounds() {
   const mobile = useIsMobile()
   const hero = mobile ? ASSETS.heroMobile : ASSETS.heroDesktop
-  // cena por seção: hero, manifesto(céu), fé(cristo), design(pampulha), coleção(loja), footer(céu)
-  const scenes = [hero, ASSETS.ceu, ASSETS.cristo, ASSETS.pampulha, ASSETS.store, ASSETS.ceu]
+  const cristo = mobile ? ASSETS.cristoMobile : ASSETS.cristo
+  const pampulha = mobile ? ASSETS.pampulhaMobile : ASSETS.pampulha
+  // cena por seção: hero, manifesto(céu), fé(cristo), design(pampulha), impacto(céu), footer(céu)
+  const scenes = [hero, ASSETS.ceu, cristo, pampulha, ASSETS.ceu, ASSETS.ceu]
   return (
     <group>
       {scenes.map((url, i) => (

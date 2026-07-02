@@ -100,7 +100,8 @@ button {
   align-items: center;
   gap: clamp(0.5rem, 2vw, 1.6rem);
 }
-.topbar__nav button {
+.topbar__nav button,
+.topbar__nav a {
   pointer-events: auto;
   font-size: 0.82rem;
   letter-spacing: 0.04em;
@@ -109,8 +110,10 @@ button {
   padding: 0.4rem 0.2rem;
   opacity: 0.8;
   transition: opacity 0.2s ease;
+  text-decoration: none;
 }
-.topbar__nav button:hover {
+.topbar__nav button:hover,
+.topbar__nav a:hover {
   opacity: 1;
 }
 .topbar__cta {
@@ -273,88 +276,47 @@ button {
   font-weight: 400;
 }
 
-/* ───────────────────────── Formulário ───────────────────────── */
-.signup {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-.signup input {
-  font-family: inherit;
-  font-size: 0.95rem;
-  padding: 0.85rem 1.2rem;
-  border-radius: 999px;
-  border: 1.5px solid rgba(27, 39, 51, 0.18);
-  background: rgba(255, 255, 255, 0.75);
-  min-width: 240px;
-  color: var(--ink);
-}
-.section.dark .signup input {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: var(--cloud);
-}
-.section.dark .signup input::placeholder {
-  color: #c4d2ea;
-}
-
-/* ───────────────────────── Grid da loja ───────────────────────── */
-.grid {
-  margin-top: 1rem;
+/* ───────────────────────── Impacto (projetos sociais) ───────────────────────── */
+.impact__grid {
+  margin-top: 1.4rem;
   width: 100%;
+  max-width: 880px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: clamp(0.8rem, 2vw, 1.4rem);
 }
-.card {
+.impact__card {
   background: rgba(247, 251, 255, 0.62);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 18px;
-  padding: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
+  padding: 1.2rem 1.1rem;
+  text-align: center;
   box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.card:hover {
+.impact__card:hover {
   transform: translateY(-6px);
   box-shadow: 0 22px 48px rgba(27, 39, 51, 0.16);
 }
-.card__media {
-  position: relative;
-  aspect-ratio: 4 / 5;
-  border-radius: 12px;
-  background: linear-gradient(160deg, #eaf3fd 0%, #cfe3f7 100%);
-  display: grid;
-  place-items: center;
-  overflow: hidden;
+.impact__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--deep);
+  margin-bottom: 0.45rem;
 }
-.card__silhouette {
-  width: 56%;
-  height: 64%;
-  background: rgba(27, 39, 51, 0.1);
-  clip-path: polygon(28% 0, 72% 0, 100% 16%, 84% 30%, 84% 100%, 16% 100%, 16% 30%, 0 16%);
+.impact__desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  opacity: 0.78;
 }
-.card__row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 0.5rem;
+.impact__outro {
+  margin-top: 1.2rem;
+  max-width: 560px;
 }
-.card__name {
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-.card__price {
-  font-size: 0.82rem;
-  opacity: 0.65;
-}
-.card__cta {
-  align-self: stretch;
+.section.impact .btn--primary {
+  margin-top: 1rem;
 }
 
 /* ───────────────────────── Footer ───────────────────────── */
@@ -376,9 +338,29 @@ button {
   gap: 1.1rem;
   width: 100%;
 }
-.footer__newsletter {
-  font-size: 0.9rem;
-  opacity: 0.7;
+.footer__trust {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem 1.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.footer__trust li {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.footer__trust li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex: none;
 }
 .footer__meta {
   display: flex;
@@ -407,8 +389,8 @@ button {
 .section.in .reveal:nth-child(3) { transition-delay: 0.27s; }
 .section.in .reveal:nth-child(4) { transition-delay: 0.38s; }
 .section.in .reveal:nth-child(5) { transition-delay: 0.49s; }
-/* cards da loja com stagger pelo índice */
-.card.reveal {
+/* cards do impacto com stagger pelo índice */
+.impact__card.reveal {
   transition-delay: calc(var(--i, 0) * 0.07s);
 }
 
@@ -429,6 +411,28 @@ button {
   }
   .lede {
     margin-inline: auto;
+  }
+  /* topbar: respiro e alvo de toque decente (min ~44px) */
+  .topbar__logo img {
+    width: clamp(84px, 24vw, 110px);
+  }
+  .topbar__nav {
+    gap: 0.35rem;
+  }
+  .topbar__nav button,
+  .topbar__nav a {
+    font-size: 0.78rem;
+    padding: 0.7rem 0.55rem;
+  }
+  .topbar__cta {
+    padding: 0.55rem 0.95rem !important;
+  }
+}
+
+/* telas bem estreitas: só o essencial na topbar */
+@media (max-width: 480px) {
+  .topbar__link--sm {
+    display: none;
   }
 }
 
