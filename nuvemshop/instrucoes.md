@@ -1,4 +1,9 @@
-# Loja Nuvemshop — Guia de aplicação v3 (Impulso · tema Morelia)
+# Loja Nuvemshop — Guia de aplicação v3.2 (Impulso · tema Morelia)
+
+> **v3.2:** header em UMA linha (logo + busca + menu + conta/carrinho — CSS + opção do editor);
+> hero e banner Impacto ficam **vazios** (gradiente céu) até as fotos do Higgsfield
+> (`prompts-higgsfield-loja.md`); página Projetos Sociais ganhou **links oficiais** nos nomes e
+> **slots de foto** (ver §5).
 
 Redesign v3 (feedback de 2026-07-02): loja **clara do início ao fim** (céu), **sem newsletter**,
 hero curto que cabe na tela (e não copia a landing), tiles das 3 coleções, rodapé claro, fontes
@@ -58,6 +63,11 @@ Ritmo: hero curto → serviços → coleções → prateleira → banner → pra
 
 ## 5. Páginas + menu (se ainda não fez)
 - Páginas → Criar → **"Projetos Sociais"** (modo HTML `< >`) = `pagina-projetos-sociais.html`.
+  **v3.2:** os nomes dos projetos agora são **links** pros sites oficiais (fazenda.org.br ·
+  caritas.org.br · pequenocotolengo.org.br — **confirme os 3 endereços** antes de publicar) e cada
+  card tem um **slot de foto comentado**: salve uma foto oficial do site do projeto, suba pelo
+  editor de páginas (ícone de imagem) e descomente a linha do `<img>`. Se preferir, me manda as
+  fotos que eu recorto e te devolvo prontas.
 - **"Sobre a NIMBUS"** = `pagina-sobre.html`. Crie a "Projetos Sociais" **antes**: copie a URL dela e
   troque o `href="/pagina/projetos-sociais"` do link interno pela URL real (o padrão já serve se o
   slug ficar `projetos-sociais`).

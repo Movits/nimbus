@@ -1,7 +1,10 @@
 /* ==========================================================================
-   NIMBUS x NUVEMSHOP (TEMA MORELIA) — CSS v3.1
+   NIMBUS x NUVEMSHOP (TEMA MORELIA) — CSS v3.2
    Colar em: Loja online > Layout > Personalizar > Edicao de CSS avancada
 
+   v3.2: header em UMA linha (logo + busca + menu + conta/carrinho) no
+   desktop; hero e banner de impacto ficam vazios (gradiente) ate as
+   fotos do Higgsfield.
    v3.1: header sem linha entre a faixa do logo e a do menu (sombra unica),
    logo a ESQUERDA (defina tambem no editor: Layout > Cabecalho > posicao
    do logo = esquerda), barra de servicos mais elegante (uppercase
@@ -353,6 +356,39 @@ a.btn-secondary:empty {
 .head-main [class*="logo-container"] {
   text-align: left;
   justify-content: flex-start;
+}
+
+/* v3.2: header em UMA linha no desktop — logo + busca + menu + icones.
+   Se o editor do Morelia tiver a opcao "menu ao lado do logo", PREFIRA
+   ela e mantenha estas regras como reforco. A estrutura interna varia
+   por versao do tema; se algo desalinhar, me mande print que eu ajusto. */
+@media (min-width: 992px) {
+  .head-main {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 28px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .head-main > * {
+    flex: 0 0 auto;
+  }
+  .head-main nav,
+  .head-main [class*="desktop-nav"] {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .head-main .nav-list,
+  .head-main nav ul,
+  .head-main [class*="nav-list"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 26px;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
 }
 
 .head-main .logo img,

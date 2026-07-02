@@ -61,6 +61,13 @@ Texto: 10% do lucro do seu pedido vai para o projeto social que você escolher. 
 PASSO 5 — Rodapé
 Se houver campo de tagline/descrição: "Fé, design e propósito. Acima de tudo."
 
+PASSO 6 — Página Projetos Sociais (versão v3.2)
+1. Abra https://raw.githubusercontent.com/Movits/nimbus/main/nuvemshop/pagina-projetos-sociais.html
+   e copie TUDO.
+2. Painel: Páginas → edite a página "Projetos Sociais" existente (ou crie) → modo HTML < > →
+   substitua o conteúdo pelo copiado. Os nomes dos projetos são links pros sites oficiais; os
+   slots de foto ficam comentados até o dono subir as imagens.
+
 RELATÓRIO FINAL
 Liste: o que aplicou, o que não encontrou (nome exato das seções disponíveis no editor), qualquer
 erro do CSS. Depois abra loja.nimbuswear.com.br e tire SCREENSHOTS: home desktop, home mobile
