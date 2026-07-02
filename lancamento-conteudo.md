@@ -8,13 +8,14 @@ zoar a tradição. Reverente com a fé + premium. Ajuste à vontade.
 > NIMBUS
 > Streetwear católico premium.
 > Fé, design e Brasil em cada peça.
-> 🛒 [link da loja]
+> 10% do lucro vai pra um projeto social que você escolhe.
+> 🛒 loja.nimbuswear.com.br
 
 **B (com posicionamento):**
 > NIMBUS · streetwear católico premium
 > Santos, símbolos e o céu, em peças bem feitas.
-> Acima de tudo.
-> 🛒 [link da loja]
+> 10% do lucro pra um projeto social, escolhido por você. Acima de tudo.
+> 🛒 loja.nimbuswear.com.br
 
 (@ sugerido: `@usenimbus` ou `@nimbusstreetwear` — o mesmo no TikTok.)
 
@@ -25,7 +26,8 @@ zoar a tradição. Reverente com a fé + premium. Ajuste à vontade.
 
 **2. Manifesto (post de estreia)** — carrossel com a logo + 3 peças hero.
 > A NIMBUS nasceu de uma ideia simples: fé e bom design podem andar juntos. Cada estampa traz um
-> santo, um símbolo ou o céu, em peça de qualidade. Sem versículo genérico, sem firula. Acima de tudo.
+> santo, um símbolo ou o céu, em peça de qualidade. Sem versículo genérico, sem firula. E de cada
+> pedido, 10% do lucro vai pro projeto social que você escolhe no checkout. Acima de tudo.
 > Loja no link. #nimbus #fé #streetwear #brasil
 
 **3. Produto hero — Redentor Spray** — foto da peça (ou lifestyle).
@@ -40,6 +42,11 @@ zoar a tradição. Reverente com a fé + premium. Ajuste à vontade.
 **5. Estreia + cupom** — foto bonita + selo do cupom.
 > Loja no ar. Use **ESTREIA15** e leve 15% off na primeira coleção. Frete grátis acima de R$199.
 > Corre que é por tempo limitado. 🛒 link na bio. #lançamento #nimbus
+
+**Extra · Impacto (rode nos primeiros dias)** — banner de impacto ou carrossel com os 3 projetos.
+> Vestir também é servir. 10% do lucro de cada pedido vai pra um projeto social, e quem escolhe é
+> você, no checkout: Fazenda da Esperança, Cáritas Brasileira ou Pequeno Cotolengo. Fé que vira ação.
+> #nimbus #projetosocial #fé #caridade
 
 ## Promoção de estreia
 - **Cupom `ESTREIA15` = −15%**, primeiros ~7–10 dias (cria urgência sem queimar o preço-base).

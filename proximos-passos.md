@@ -1,5 +1,9 @@
 # NIMBUS — Próximos passos (do "designs prontos" até "vendendo")
 
+> **Nota (2026-07-02):** este roadmap tem detalhes de domínio/plano **desatualizados** (fala em
+> registro.br e Nuvemshop Essencial; hoje é **GoDaddy** + plano **Impulso**, loja no ar e landing já
+> conectada). Pro estado atual e checklist acionável, use **`runbook-lancamento.md`**.
+
 Estado atual: designs criados e organizados (`designs/prontos/.../mockups/`), preços definidos
 (`precificacao.md`), plataforma decidida (`loja-plataforma.md`: Nuvemshop + YouDraw). Falta montar a
 loja e lançar. Ordem abaixo, com **quem faz**.

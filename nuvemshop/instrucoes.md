@@ -51,7 +51,7 @@ Ritmo: banner grande → 1 linha de produtos → banner grande. Nunca duas prate
 
 ## 5. Páginas + menu (se ainda não fez)
 - Páginas → Criar → **"Projetos Sociais"** (modo HTML `< >`) = `pagina-projetos-sociais.html`.
-- **"Sobre a NIMBUS"** = `pagina-sobre.html` (ajuste o link interno pra URL real da página acima).
+- **"Sobre a NIMBUS"** = `pagina-sobre.html`. Crie a "Projetos Sociais" **antes**: copie a URL dela e troque o `href="/pagina/projetos-sociais"` do link interno pela URL real (o padrão já serve se o slug ficar `projetos-sociais`).
 - Menu principal: Início · Produtos · Projetos Sociais · Sobre.
 - Rodapé: telefone/e-mail/redes quando existirem. Tagline: `Fé, design e propósito. Acima de tudo.`
 
