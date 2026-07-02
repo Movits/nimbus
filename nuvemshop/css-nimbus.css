@@ -1,7 +1,11 @@
 /* ==========================================================================
-   NIMBUS x NUVEMSHOP (TEMA MORELIA) — CSS v3
+   NIMBUS x NUVEMSHOP (TEMA MORELIA) — CSS v3.1
    Colar em: Loja online > Layout > Personalizar > Edicao de CSS avancada
 
+   v3.1: header sem linha entre a faixa do logo e a do menu (sombra unica),
+   logo a ESQUERDA (defina tambem no editor: Layout > Cabecalho > posicao
+   do logo = esquerda), barra de servicos mais elegante (uppercase
+   espacado) e sem "sob demanda" nos textos.
    v3 (feedback do dono, 2026-07-02): site CLARO do inicio ao fim (ceu),
    SEM newsletter (home e rodape), rodape claro, barra de anuncio ceu,
    hero curto com texto navy, fix do hover dos cards (foto nao desliza),
@@ -329,6 +333,28 @@ a.btn-secondary:empty {
   z-index: 300;
 }
 
+/* v3.1: SEM linha entre a faixa do logo e a faixa do menu — a unica sombra
+   e a do .head-main acima. Mata bordas/sombras internas do tema. */
+.head-main > div,
+.head-main > nav,
+.head-main nav,
+.head-main [class*="head-row"],
+.head-main [class*="header-top"],
+.head-main [class*="header-bottom"],
+.head-main [class*="nav-bar"] {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+/* v3.1: logo a esquerda (o editor do Morelia tem a opcao oficial em
+   Layout > Cabecalho; estas regras so garantem o alinhamento do bloco) */
+.head-main .logo,
+.head-main [class*="logo-container"] {
+  text-align: left;
+  justify-content: flex-start;
+}
+
 .head-main .logo img,
 .head-logo img,
 .head-main a[class*="logo"] img,
@@ -550,14 +576,22 @@ a.btn-secondary:empty {
   fill: var(--nimbus-navy);
   max-height: 28px;
 }
+/* v3.1: itens em uppercase espacado, discretos e elegantes */
 .section-services h3,
 .section-services .h3,
-[class*="services-home"] h3 {
+[class*="services-home"] h3,
+.section-services span,
+[class*="services-home"] span {
   font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--nimbus-navy);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #3d5382;
+}
+.section-services p,
+[class*="services-home"] p {
+  display: none; /* sem subtexto nos servicos — so a linha principal */
 }
 
 /* --------------------------------------------------------------------------

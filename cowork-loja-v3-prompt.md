@@ -29,11 +29,15 @@ PASSO 2 — Baixar as imagens novas (todas salvam em Downloads)
 - https://raw.githubusercontent.com/Movits/nimbus/main/nuvemshop/assets/banner-impacto.jpg
 
 PASSO 3 — Reordenar/configurar a home (editor de layout do Morelia, nesta ordem)
-1. SLIDER PRINCIPAL (1 slide só): desktop = banner-hero-desktop.jpg, mobile =
+1. SLIDER PRINCIPAL (1 slide por enquanto): desktop = banner-hero-desktop.jpg, mobile =
    banner-hero-mobile.jpg. Título: "A coleção de estreia" | Subtítulo: "Peças de fé, desenhadas
    no Brasil." | Botão: "Ver coleção" → catálogo/loja toda. Alinhamento do texto: ESQUERDA.
-2. BANNERS DE SERVIÇOS (3 itens só texto): "Feito sob demanda no Brasil" | "Pagamento seguro:
-   Pix, cartão e boleto" | "10% do lucro doado".
+   Se o slider tiver opção de troca automática, ative com velocidade ~3s (preparo pro carrossel
+   lifestyle que entra depois).
+1b. CABEÇALHO: em Loja online → Layout → Cabeçalho, posicione o LOGO À ESQUERDA (se houver a
+   opção). A busca fica ao lado do logo.
+2. BANNERS DE SERVIÇOS (3 itens só texto): "Feito no Brasil" | "Pix, cartão e boleto" |
+   "10% do lucro doado". REGRA: nunca escreva "sob demanda" em nenhum texto da loja.
 3. SEÇÃO DE BANNERS/CATEGORIAS com 3 imagens lado a lado (tiles das coleções):
    tile-street.jpg → categoria/coleção Street | tile-reliquia.jpg → Relíquia | tile-nuvem.jpg →
    Nuvem. NÃO escreva título nem texto na seção (os títulos já estão nas imagens). Se as

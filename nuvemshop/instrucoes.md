@@ -17,17 +17,23 @@ hover dos cards (a foto não desliza mais), esconde toda newsletter, rodapé cla
 produto/categoria/carrinho.
 **Se o validador reclamar de algo, NÃO apague as `@font-face` — me mande o erro que eu ajusto.**
 
-## 2. Logo no header
-Já aplicado no v2 (`assets/logo-nimbus.png`). Se não: Loja online → Layout → seção **Logo**.
+## 2. Logo no header (v3.1: à ESQUERDA)
+Loja online → Layout → **Cabeçalho** → posição do logo = **esquerda** (como na landing; a lupa de
+busca fica ao lado). Arquivo: `assets/logo-nimbus.png` (já subido no v2). O CSS v3.1 também remove
+a linha fina entre a faixa do logo e a do menu.
 
 ## 3. Montar a HOME (editor do Morelia, nesta ordem)
 Ritmo: hero curto → serviços → coleções → prateleira → banner → prateleira → banner → prateleira.
-1. **Slider principal** (1 slide): `assets/banner-hero-desktop.jpg` + `assets/banner-hero-mobile.jpg`.
-   Título: `A coleção de estreia` · Subtítulo: `Peças de fé, desenhadas no Brasil.` ·
-   Botão: `Ver coleção` → catálogo completo. **Texto à esquerda** (o banner tem o lado esquerdo
-   limpo; o CSS deixa o texto navy).
-2. **Banners de serviços** (3 itens só texto): `Feito sob demanda no Brasil` ·
-   `Pagamento seguro: Pix, cartão e boleto` · `10% do lucro doado`.
+1. **Slider principal**: por ora **1 slide** interim: `assets/banner-hero-desktop.jpg` +
+   `assets/banner-hero-mobile.jpg`. Título: `A coleção de estreia` · Subtítulo: `Peças de fé,
+   desenhadas no Brasil.` · Botão: `Ver coleção` → catálogo completo. **Texto à esquerda** (o
+   banner tem o lado esquerdo limpo; o CSS deixa o texto navy).
+   **Destino do hero (v3.1):** carrossel de **3 fotos lifestyle** (modelo vestindo NIMBUS por
+   Brasília — prompts em `prompts-higgsfield-loja.md`, seção HERO LIFESTYLE). Quando as fotos
+   existirem: 3 slides + **autoplay ~3s** (opção "troca automática/velocidade" do slider no editor).
+2. **Banners de serviços** (3 itens só texto): `Feito no Brasil` ·
+   `Pix, cartão e boleto` · `10% do lucro doado`. *(v3.1: NÃO usar "sob demanda" em nenhum
+   texto da loja — decisão de marca; o prazo de produção vai na página de trocas/envio.)*
 3. **Tiles das coleções** — seção de banners/categorias com **3 imagens lado a lado**:
    `assets/tile-street.jpg` → categoria STREET · `assets/tile-reliquia.jpg` → categoria RELÍQUIA ·
    `assets/tile-nuvem.jpg` → categoria NUVEM. (Os títulos já estão nas imagens — não repita texto

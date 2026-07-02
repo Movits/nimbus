@@ -40,7 +40,7 @@ export const COPY = {
   },
   manifesto: {
     title: 'Entre o concreto e o céu.',
-    body: "Fé tratada com reverência, roupa tratada com rigor. Design autoral, acabamento premium e produção sob demanda no Brasil, peça por peça.",
+    body: "Fé tratada com reverência, roupa tratada com rigor. Design autoral, acabamento premium e produção própria no Brasil, peça por peça.",
   },
   faith: {
     kicker: 'Fé',
@@ -60,7 +60,7 @@ export const COPY = {
     cta: 'Comprar e apoiar',
   },
   footer: {
-    trust: ["Feito sob demanda no Brasil", "Pagamento seguro: Pix, cartão e boleto", "10% do lucro doado ao projeto que você escolhe"],
+    trust: ["Feito no Brasil", "Pagamento seguro: Pix, cartão e boleto", "10% do lucro doado ao projeto que você escolhe"],
     social: 'Acompanhe o lançamento',
     madein: 'Feito no Brasil',
     rights: '© 2026 NIMBUS',
