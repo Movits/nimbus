@@ -1,5 +1,8 @@
 # NIMBUS — Prompt pro Claude Cowork: aplicar o REDESIGN v2 na Nuvemshop
 
+> ⚠️ **SUPERADO (2026-07-02):** use o **`cowork-loja-v3-prompt.md`** — o v3 corrige fontes,
+> hero, hover dos cards, remove newsletter e deixa o site claro do início ao fim.
+
 Cole no **Claude Cowork** com o painel da Nuvemshop logado. Ele aplica o redesign completo
 (CSS v2, logo, banners, home, textos). Os arquivos vêm do GitHub público.
 
