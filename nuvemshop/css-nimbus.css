@@ -1,34 +1,29 @@
 /* ==========================================================================
-   NIMBUS x NUVEMSHOP (TEMA MORELIA) — CSS v2
+   NIMBUS x NUVEMSHOP (TEMA MORELIA) — CSS v3
    Colar em: Loja online > Layout > Personalizar > Edicao de CSS avancada
 
-   Evolucao do v1: mantem os tokens/variaveis nativas do Morelia que ja
-   funcionavam e aplica a spec v2 (botoes pill, cards com elevacao,
-   divisorias de nuvem, newsletter navy com botao ouro, header com logo
-   grafico, traco ouro sob titulos de prateleira).
+   v3 = casa com o artifact "Loja v3.1" (mais claro e arejado que o v2):
+   barra de anuncio CLARA, rodape CLARO com colunas + selos de pagamento,
+   barra de servicos em MAIUSCULAS com pontos dourados, cards com gradiente
+   nuvem, hero com texto grande a esquerda, botoes pill. Sem divisorias
+   navy do v2. Mantem a abordagem de sobrescrever as variaveis do Morelia.
 
-   REGRA DE OURO (inventario fechado do #e9c46a):
-   aureola do logo (asset) | sublinhado hover da nav | traco sob titulos
-   de prateleira | botao da newsletter | borda dos cards Projetos Sociais |
-   o "10%" do banner de impacto. NADA alem disso. Nunca em precos,
-   badges, icones ou hover de botao.
+   INVENTARIO FECHADO DO OURO (#e9c46a): aureola do logo (asset) | sublinhado
+   hover da nav | traco sob titulos de prateleira | separador da barra de
+   servicos | borda dos cards de Projetos Sociais | o "10%" do banner de
+   impacto. Nunca em precos, badges de produto, icones ou hover de botao.
 
    Paleta: navy #0b2360 | navy-hover #123078 | ouro #e9c46a
    azul-ceu #8fc1ea | ceu #dcebfa | nuvem #f7fbff | ink #1b2733
-   gradiente #eaf3fd -> #cfe3f7
+   cinza-texto #6b7683 | cinza-caps #3d5382
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1) FONTES: Fraunces (titulos) + Inter (corpo)
-   O @import precisa ser a primeira regra do CSS.
-   -------------------------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400..700&display=swap');
 
 /* --------------------------------------------------------------------------
-   2) TOKENS: sobrescreve as variaveis nativas do Morelia
+   1) TOKENS + variaveis nativas do Morelia
    -------------------------------------------------------------------------- */
 :root {
-  /* Tokens NIMBUS */
   --nimbus-navy: #0b2360;
   --nimbus-navy-hover: #123078;
   --nimbus-ouro: #e9c46a;
@@ -36,30 +31,20 @@
   --nimbus-ceu: #dcebfa;
   --nimbus-nuvem: #f7fbff;
   --nimbus-ink: #1b2733;
+  --nimbus-cinza: #6b7683;
+  --nimbus-caps: #3d5382;
   --nimbus-grad-inicio: #eaf3fd;
-  --nimbus-grad-fim: #cfe3f7;
   --nimbus-radius: 10px;
   --nimbus-radius-card: 14px;
   --nimbus-pill: 999px;
 
-  /* Divisorias de nuvem (SVG inline). Exatamente DUAS no site:
-     clara (fim do hero) e navy (topo do rodape). */
-  --nimbus-nuvem-clara: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%2064'%20preserveAspectRatio='none'%3E%3Cpath%20d='M0,40%20C80,18%20160,12%20240,28%20C300,8%20380,4%20440,22%20C520,2%20600,8%20660,26%20C740,6%20820,4%20900,24%20C980,8%201060,12%201140,30%20C1220,14%201320,18%201440,36%20L1440,64%20L0,64%20Z'%20fill='%23f7fbff'/%3E%3C/svg%3E");
-  --nimbus-nuvem-navy: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%2064'%20preserveAspectRatio='none'%3E%3Cpath%20d='M0,40%20C80,18%20160,12%20240,28%20C300,8%20380,4%20440,22%20C520,2%20600,8%20660,26%20C740,6%20820,4%20900,24%20C980,8%201060,12%201140,30%20C1220,14%201320,18%201440,36%20L1440,64%20L0,64%20Z'%20fill='%230b2360'/%3E%3C/svg%3E");
-
-  /* Nuvens decorativas sutis da newsletter (branco quase invisivel) */
-  --nimbus-nuvem-sutil: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20140'%3E%3Cpath%20d='M60,120%20C40,120%2028,106%2032,92%20C22,90%2016,80%2020,70%20C28,52%2050,48%2064,58%20C72,40%2098,36%20112,50%20C130,42%20152,52%20154,70%20C168,72%20176,86%20170,100%20C164,114%20148,120%20136,116%20L60,120%20Z'%20fill='%23ffffff'%20fill-opacity='0.05'/%3E%3Cpath%20d='M420,110%20C400,112%20386,98%20392,84%20C380,80%20376,66%20384,56%20C396,42%20418,42%20430,52%20C442,36%20468,36%20480,52%20C498,46%20516,58%20516,74%20C528,78%20532,92%20524,102%20C514,114%20496,116%20486,110%20L420,110%20Z'%20fill='%23ffffff'%20fill-opacity='0.04'/%3E%3C/svg%3E");
-
-  /* Tipografia do tema */
   --body-font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --heading-font: 'Fraunces', Georgia, serif;
   --title-font-weight: 600;
 
-  /* Fundo geral nuvem + texto ink */
+  /* Fundo/texto gerais */
   --main-background: #f7fbff;
   --main-foreground: #1b2733;
-
-  /* Variantes de opacidade do texto (ink + alfa em hex) */
   --main-foreground-opacity-03: #1b273308;
   --main-foreground-opacity-05: #1b27330d;
   --main-foreground-opacity-07: #1b273312;
@@ -69,8 +54,6 @@
   --main-foreground-opacity-40: #1b273366;
   --main-foreground-opacity-50: #1b273380;
   --main-foreground-opacity-80: #1b2733cc;
-
-  /* Variantes de opacidade do fundo (nuvem + alfa em hex) */
   --main-background-opacity-20: #f7fbff33;
   --main-background-opacity-30: #f7fbff4d;
   --main-background-opacity-50: #f7fbff80;
@@ -78,52 +61,48 @@
   --main-background-opacity-90: #f7fbffe6;
   --main-background-opacity-95: #f7fbfff2;
 
-  /* Acento do tema: navy (ouro NAO e acento global, e reliquia) */
   --accent-color: #0b2360;
-
-  /* Botao primario: navy com texto branco */
   --button-background: #0b2360;
   --button-foreground: #ffffff;
 
-  /* Cabecalho claro e limpo */
+  /* Cabecalho claro */
   --header-background: #f7fbff;
   --header-foreground: #0b2360;
   --header-foreground-opacity-20: #0b236033;
   --header-foreground-opacity-30: #0b23604d;
   --header-transparent-foreground: #0b2360;
 
-  /* Barra de anuncio: navy com texto branco */
-  --adbar-background: #0b2360;
-  --adbar-foreground: #ffffff;
+  /* Barra de anuncio CLARA (v3): ceu com texto navy */
+  --adbar-background: #dcebfa;
+  --adbar-foreground: #0b2360;
 
-  /* Rodape: navy com texto claro */
-  --footer-background: #0b2360;
-  --footer-foreground: #f7fbff;
-  --footer-foreground-opacity-10: #f7fbff1a;
-  --footer-foreground-opacity-20: #f7fbff33;
-  --footer-foreground-opacity-30: #f7fbff4d;
-  --footer-foreground-opacity-60: #f7fbff99;
-  --footer-foreground-opacity-80: #f7fbffcc;
+  /* Rodape CLARO (v3): fundo claro, texto navy */
+  --footer-background: #dcebfa;
+  --footer-foreground: #0b2360;
+  --footer-foreground-opacity-10: #0b23601a;
+  --footer-foreground-opacity-20: #0b236033;
+  --footer-foreground-opacity-30: #0b23604d;
+  --footer-foreground-opacity-60: #0b236099;
+  --footer-foreground-opacity-80: #0b2360cc;
 
-  /* Newsletter da home: NAVY com titulo branco e sub azul-ceu (spec 12) */
-  --newsletter-background: #0b2360;
-  --newsletter-foreground: #f7fbff;
-  --news-foreground-opacity-30: #f7fbff4d;
-  --news-foreground-opacity-50: #f7fbff80;
+  /* Newsletter (o artifact nao tem; se o tema forcar, fica clara) */
+  --newsletter-background: #dcebfa;
+  --newsletter-foreground: #0b2360;
+  --news-foreground-opacity-30: #0b23604d;
+  --news-foreground-opacity-50: #0b236080;
 
-  /* Etiquetas de produto: navy discreto. PROIBIDO ouro em badges. */
+  /* Etiquetas de produto: navy discreto (nunca ouro) */
   --label-background: #0b2360;
   --label-foreground: #ffffff;
 
-  /* Banners de servicos: brancos e sobrios, sem cor de template */
   --services-background: #ffffff;
-  --services-foreground: #0b2360;
+  --services-foreground: #3d5382;
 
   --border-radius: 10px;
 }
 
 /* --------------------------------------------------------------------------
-   3) BASE: fundo nuvem, corpo em Inter
+   2) BASE
    -------------------------------------------------------------------------- */
 body {
   background-color: var(--nimbus-nuvem);
@@ -132,691 +111,301 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* --------------------------------------------------------------------------
-   4) TITULOS: Fraunces em navy (h1-h6, .h1-.h6 e .h1-huge dos banners)
-   -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
-.h1-huge {
+.h1, .h2, .h3, .h4, .h5, .h6, .h1-huge {
   font-family: 'Fraunces', Georgia, serif;
   font-weight: 600;
   color: var(--nimbus-navy);
   letter-spacing: 0.01em;
 }
 
-/* Titulos dentro do rodape e da newsletter navy: claros */
-footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
-footer .h1, footer .h2, footer .h3, footer .h4, footer .h5, footer .h6,
-.footer-colors h1, .footer-colors h2, .footer-colors h3,
-.footer-colors h4, .footer-colors h5, .footer-colors h6,
-.section-newsletter-home h1, .section-newsletter-home h2,
-.section-newsletter-home .h1, .section-newsletter-home .h2,
-.section-newsletter-home-colors h2 {
-  color: #ffffff;
-}
-
-/* Titulos sobre imagem de banner: o tema controla o contraste, nao forcar */
-.swiper-text-light .h1-huge,
-.swiper-text-light h1, .swiper-text-light h2,
+/* Titulos sobre imagem de banner: o tema controla o contraste */
+.swiper-text-light .h1-huge, .swiper-text-light h1, .swiper-text-light h2,
 .textbanner-text.over-image.over-image-invert h1,
 .textbanner-text.over-image.over-image-invert h2,
-.textbanner-text.over-image.over-image-invert .h2 {
-  color: inherit;
-}
-
-/* Titulos de secao da home maiores, com respiro (Fraunces ja aplicado) */
-.section-products-home h2,
-.section-products-home .h2,
-[class*="products-home"] .section-title,
-.section-newsletter-home h2 {
-  font-size: 2rem;
-  line-height: 1.2;
-}
-
-/* Traco-assinatura: 40x3px em ouro SO nos titulos de prateleira.
-   Se o titulo da sua versao do Morelia for alinhado a esquerda,
-   troque "margin: 14px auto 0" por "margin: 14px 0 0". */
-.section-products-home h2::after,
-.section-products-home .h2::after,
-[class*="products-home"] .section-title::after {
-  content: '';
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: var(--nimbus-ouro);
-  border-radius: 2px;
-  margin: 14px auto 0;
-}
-.section-products-home h2,
-.section-products-home .h2,
-[class*="products-home"] .section-title {
-  margin-bottom: 32px;
-}
+.textbanner-text.over-image.over-image-invert .h2 { color: inherit; }
 
 /* --------------------------------------------------------------------------
-   5) LINKS: navy, hover navy mais claro (ouro NAO e cor de link)
+   3) LINKS
    -------------------------------------------------------------------------- */
-a {
-  color: var(--nimbus-navy);
-}
-a:hover,
-a:focus {
-  color: var(--nimbus-navy-hover);
-}
-
-/* Nome do produto na vitrine em ink (sobriedade) */
-.item-link,
-.item-name {
-  color: var(--nimbus-ink);
-  font-family: 'Inter', sans-serif;
-}
-.item-link:hover .item-name {
-  color: var(--nimbus-navy);
-}
-
-/* Links do rodape: claros, hover azul-ceu */
-footer a:hover,
-.footer-colors a:hover,
-footer .footer-menu-link:hover {
-  color: var(--nimbus-azul-ceu) !important;
-}
-
-/* Links de utilidade estilo texto */
-.btn-link-primary {
-  color: var(--nimbus-navy);
-  fill: var(--nimbus-navy);
-}
-.btn-link-primary:hover,
-.btn-link-primary:focus {
-  color: var(--nimbus-navy-hover);
-  fill: var(--nimbus-navy-hover);
-  opacity: 1;
-}
+a { color: var(--nimbus-navy); }
+a:hover, a:focus { color: var(--nimbus-navy-hover); }
+.item-link, .item-name { color: var(--nimbus-ink); font-family: 'Inter', sans-serif; }
+.item-link:hover .item-name { color: var(--nimbus-navy); }
+.btn-link-primary { color: var(--nimbus-navy); fill: var(--nimbus-navy); }
+.btn-link-primary:hover, .btn-link-primary:focus { color: var(--nimbus-navy-hover); fill: var(--nimbus-navy-hover); opacity: 1; }
 
 /* --------------------------------------------------------------------------
-   6) BOTOES PILL (iguais a landing)
-   Primario navy -> hover #123078 com leve elevacao. PROIBIDO botao ouro,
-   exceto o da newsletter (bloco 12).
+   4) BOTOES PILL
    -------------------------------------------------------------------------- */
-.btn,
-.btn-primary,
-.btn-default,
-.btn-secondary,
-input[type="submit"],
-input[type="button"] {
+.btn, .btn-primary, .btn-default, .btn-secondary,
+input[type="submit"], input[type="button"] {
   border-radius: var(--nimbus-pill);
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   letter-spacing: 0.02em;
   transition: all 200ms ease;
 }
-
-.btn-primary,
-.btn-default,
-input[type="submit"] {
+.btn-primary, .btn-default, input[type="submit"] {
   background-color: var(--nimbus-navy);
-  color: #ffffff;
-  fill: #ffffff;
-  border: 0;
+  color: #ffffff; fill: #ffffff; border: 0;
   padding: 14px 28px;
 }
-
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-default:hover,
-.btn-default:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+.btn-primary:hover, .btn-primary:focus,
+.btn-default:hover, .btn-default:focus,
+input[type="submit"]:hover, input[type="submit"]:focus {
   background-color: var(--nimbus-navy-hover) !important;
-  color: #ffffff !important;
-  fill: #ffffff !important;
+  color: #ffffff !important; fill: #ffffff !important;
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(11, 35, 96, 0.25);
   opacity: 1 !important;
 }
-
-/* Secundario: contorno navy 1.5px, hover ceu */
 .btn-secondary {
-  background-color: transparent;
-  color: var(--nimbus-navy);
-  fill: var(--nimbus-navy);
-  border: 1.5px solid var(--nimbus-navy);
-  padding: 12.5px 26px;
+  background-color: transparent; color: var(--nimbus-navy); fill: var(--nimbus-navy);
+  border: 1.5px solid var(--nimbus-navy); padding: 12.5px 26px;
 }
-.btn-secondary:hover,
-.btn-secondary:focus {
-  background-color: var(--nimbus-ceu);
-  color: var(--nimbus-navy);
-  fill: var(--nimbus-navy);
+.btn-secondary:hover, .btn-secondary:focus {
+  background-color: var(--nimbus-ceu); color: var(--nimbus-navy); fill: var(--nimbus-navy);
   transform: translateY(-1px);
 }
 
-/* Botao primario dentro do rodape navy: contorno claro (ouro so na newsletter) */
-.footer-colors .btn-primary,
-footer .btn-primary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1.5px solid #f7fbff66;
-}
-.footer-colors .btn-primary:hover,
-.footer-colors .btn-primary:focus,
-footer .btn-primary:hover,
-footer .btn-primary:focus {
-  background-color: #f7fbff1a !important;
-  color: #ffffff !important;
-  box-shadow: none;
-}
-
 /* --------------------------------------------------------------------------
-   7) PRECO: navy peso 600. Parcelamento cinza e menor. Ouro nunca em preco.
+   5) BARRA DE ANUNCIO — CLARA (ceu / navy)
    -------------------------------------------------------------------------- */
-.price-container,
-.js-price-display,
-.item-price,
-.item-price-container,
-.cart-unit-price,
-.subtotal-price,
-.js-subtotal-price,
-.price {
+.section-adbar, .head-main .section-adbar {
+  background-color: var(--nimbus-ceu) !important;
   color: var(--nimbus-navy) !important;
-  font-weight: 600;
+  font-weight: 500; letter-spacing: 0.01em;
 }
-
-/* Preco antigo (riscado): discreto */
-.price-compare {
-  font-weight: 400;
-  color: var(--nimbus-ink);
-  opacity: 0.5;
-}
-
-/* Parcelamento: cinza, menor */
-.product-installments,
-.product-installments.installment-no-interest,
-.item-installments,
-[class*="installments"] {
-  color: #6b7683 !important;
-  font-size: 0.85em;
-  font-weight: 400;
+.section-adbar a, .section-adbar .svg-icon-text {
+  color: var(--nimbus-navy) !important; fill: var(--nimbus-navy) !important;
 }
 
 /* --------------------------------------------------------------------------
-   8) CABECALHO: nuvem, sticky limpo, logo grafico grande, nav espacada
+   6) CABECALHO: nuvem, sticky, logo grafico, nav com sublinhado ouro
    -------------------------------------------------------------------------- */
 .head-main {
   background-color: var(--nimbus-nuvem);
   box-shadow: 0 1px 0 rgba(11, 35, 96, 0.08);
-  border-bottom: 0;
-  position: sticky;
-  top: 0;
-  z-index: 300;
+  border-bottom: 0; position: sticky; top: 0; z-index: 300;
 }
-
-/* Logo (imagem logo-nimbus.png subida no editor): ~52px desktop */
-.head-main .logo img,
-.head-logo img,
-.head-main a[class*="logo"] img,
-.head-main img[class*="logo"] {
-  max-height: 52px;
-  width: auto;
+.head-main .logo img, .head-logo img,
+.head-main a[class*="logo"] img, .head-main img[class*="logo"] { max-height: 46px; width: auto; }
+.head-main nav a, .head-main .nav-list a, .head-main .desktop-nav a, .desktop-dropdown a {
+  font-family: 'Inter', sans-serif; font-size: 14px; letter-spacing: 0.04em;
+  color: var(--nimbus-ink); text-decoration: none;
 }
-
-/* Nav: Inter 14px espacada, ink; hover sublinhado 2px OURO (inventario) */
-.head-main nav a,
-.head-main .nav-list a,
-.head-main .desktop-nav a,
-.desktop-dropdown a {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  color: var(--nimbus-ink);
-  text-decoration: none;
-}
-.head-main nav a:hover,
-.head-main nav a:focus,
-.head-main .nav-list a:hover,
-.head-main .desktop-nav a:hover,
-.desktop-dropdown a:hover {
+.head-main nav a:hover, .head-main nav a:focus,
+.head-main .nav-list a:hover, .head-main .desktop-nav a:hover, .desktop-dropdown a:hover {
   color: var(--nimbus-navy);
-  text-decoration: underline;
-  text-decoration-color: var(--nimbus-ouro);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+  text-decoration: underline; text-decoration-color: var(--nimbus-ouro);
+  text-decoration-thickness: 2px; text-underline-offset: 6px;
 }
+.head-main .form-control { border-radius: var(--nimbus-pill); }
+.desktop-dropdown { background-color: var(--nimbus-nuvem); border-bottom: 1px solid #0b23601f; }
 
-.head-main .form-control {
-  border-radius: var(--nimbus-pill);
+/* --------------------------------------------------------------------------
+   7) HERO (slider): texto Fraunces grande a esquerda, sombra leve
+   -------------------------------------------------------------------------- */
+.swiper-text .h1-huge, .swiper-text h1, .swiper-text h2 {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 600; letter-spacing: 0.01em;
 }
+.swiper-text .h1-huge, .swiper-text h1 { font-size: clamp(2rem, 4.2vw, 3.4rem); line-height: 1.08; }
+.swiper-text .h1-huge, .swiper-text h1, .swiper-text h2, .swiper-text p {
+  text-shadow: 0 2px 14px rgba(247, 251, 255, 0.6);
+}
+.swiper-pagination-bullet, .swiper-pagination-bullet-active { background-color: var(--nimbus-navy); }
 
-/* Dropdown do menu desktop */
-.desktop-dropdown {
-  background-color: var(--nimbus-nuvem);
-  border-bottom: 1px solid #0b23601f;
+/* --------------------------------------------------------------------------
+   8) SERVICOS: MAIUSCULAS espacadas, cinza-azulado, separador ponto ouro
+   -------------------------------------------------------------------------- */
+.section-services, [class*="services-home"] {
+  background: #ffffff; color: var(--nimbus-caps);
+  padding-top: 22px; padding-bottom: 22px;
+}
+.section-services span, [class*="services-home"] span,
+.section-services h3, [class*="services-home"] h3 {
+  font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--nimbus-caps);
+}
+.section-services svg, [class*="services-home"] svg { fill: var(--nimbus-navy); max-height: 22px; }
+
+/* --------------------------------------------------------------------------
+   9) TILES DAS COLECOES (modulo de banners lado a lado) + banners
+   -------------------------------------------------------------------------- */
+.section-banners, [class*="banners-home"], [class*="banner-grid"] {
+  padding-top: 72px; padding-bottom: 72px; background: var(--nimbus-nuvem);
+}
+.banner-item, [class*="banner-item"], .textbanner-image, .item-image, .product-item-image-container {
+  border-radius: var(--nimbus-radius-card); overflow: hidden;
+}
+.banner-item, [class*="banner-item"] {
+  box-shadow: 0 1px 4px rgba(11, 35, 96, 0.06); transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.banner-item:hover, [class*="banner-item"]:hover {
+  transform: translateY(-3px); box-shadow: 0 12px 28px rgba(11, 35, 96, 0.16);
 }
 
 /* --------------------------------------------------------------------------
-   9) BARRA DE ANUNCIO: navy com texto branco
+   10) PRATELEIRAS + CARDS
    -------------------------------------------------------------------------- */
-.section-adbar,
-.head-main .section-adbar {
-  background-color: var(--nimbus-navy) !important;
-  color: #ffffff !important;
+.section-products-home { padding-top: 72px; padding-bottom: 72px; background: #ffffff; }
+.section-products-home ~ .section-products-home { background: var(--nimbus-grad-inicio); }
+.section-products-home ~ .section-products-home ~ .section-products-home { background: #ffffff; }
+
+.section-products-home h2, .section-products-home .h2,
+[class*="products-home"] .section-title {
+  font-size: 2rem; line-height: 1.2; margin-bottom: 32px; text-align: center;
 }
-.section-adbar a,
-.section-adbar .svg-icon-text {
-  color: #ffffff !important;
-  fill: #ffffff !important;
+.section-products-home h2::after, .section-products-home .h2::after,
+[class*="products-home"] .section-title::after {
+  content: ''; display: block; width: 40px; height: 3px; background: var(--nimbus-ouro);
+  border-radius: 2px; margin: 14px auto 0;
 }
 
-/* --------------------------------------------------------------------------
-   10) HERO (slider principal): texto Fraunces com sombra leve +
-   DIVISORIA DE NUVEM 1 (clara, ~60px) na base do banner.
-   -------------------------------------------------------------------------- */
-.swiper-text .h1-huge,
-.swiper-text h1,
-.swiper-text h2,
-.swiper-text p {
-  text-shadow: 0 2px 14px rgba(11, 35, 96, 0.35);
-}
-.swiper-text .h1-huge {
-  font-family: 'Fraunces', Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-/* Divisoria de nuvem sobre o fim do hero (silhueta nuvem #f7fbff) */
-.section-slider,
-.section-slider-home,
-[class*="slider-home"] {
-  position: relative;
-}
-.section-slider::after,
-.section-slider-home::after,
-[class*="slider-home"]::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 60px;
-  background: var(--nimbus-nuvem-clara) repeat-x bottom / 1440px 60px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* Bullets/setas do carrossel em navy (1 slide so, mas fica coerente) */
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active {
-  background-color: var(--nimbus-navy);
-}
-
-/* --------------------------------------------------------------------------
-   11) PRATELEIRAS E CARDS DE PRODUTO
-   Card: gradiente nuvem sutil, raio 14px, sem borda, sombra de repouso.
-   Hover: elevacao navy + zoom 1.03 na imagem (SEM ouro, inventario fechado).
-   -------------------------------------------------------------------------- */
-/* Respiro vertical das secoes da home: 72px desktop */
-.section-products-home,
-.section-newsletter-home,
-.section-services,
-[class*="services-home"] {
-  padding-top: 72px;
-  padding-bottom: 72px;
-}
-
-/* Fundos alternados: prateleira 1 branca, prateleira 2 ceu, prateleira 3
-   branca. PROIBIDO pattern de nuvenzinhas repetidas nos fundos. */
-.section-products-home {
-  background: #ffffff;
-}
-.section-products-home ~ .section-products-home {
-  background: var(--nimbus-grad-inicio);
-}
-.section-products-home ~ .section-products-home ~ .section-products-home {
-  background: #ffffff;
-}
-
-/* Card do produto */
 .item {
   background: linear-gradient(180deg, #ffffff 0%, var(--nimbus-nuvem) 100%);
-  border: 0;
-  border-radius: var(--nimbus-radius-card);
-  box-shadow: 0 1px 4px rgba(11, 35, 96, 0.06);
-  overflow: hidden;
+  border: 0; border-radius: var(--nimbus-radius-card);
+  box-shadow: 0 1px 4px rgba(11, 35, 96, 0.06); overflow: hidden;
   transition: box-shadow 220ms ease, transform 220ms ease;
 }
-.item:hover {
-  box-shadow: 0 10px 24px rgba(11, 35, 96, 0.12);
-  transform: translateY(-2px);
-}
+.item:hover { box-shadow: 0 10px 24px rgba(11, 35, 96, 0.12); transform: translateY(-2px); }
+.item-image img, .product-item-image-container img { transition: transform 300ms ease; }
+.item:hover .item-image img, .item:hover .product-item-image-container img { transform: scale(1.03); }
+.item-description, .item-info { padding: 12px 14px 16px; }
 
-/* Imagem do card: arredondada, zoom suave no hover */
-.item-image,
-.product-item-image-container {
-  border-radius: var(--nimbus-radius-card) var(--nimbus-radius-card) 0 0;
-  overflow: hidden;
+/* Preco navy 600; parcelamento cinza menor */
+.price-container, .js-price-display, .item-price, .item-price-container,
+.cart-unit-price, .subtotal-price, .js-subtotal-price, .price {
+  color: var(--nimbus-navy) !important; font-weight: 600;
 }
-.item-image img,
-.product-item-image-container img {
-  transition: transform 300ms ease;
-}
-.item:hover .item-image img,
-.item:hover .product-item-image-container img {
-  transform: scale(1.03);
-}
-
-/* Texto do card com respiro interno */
-.item-description,
-.item-info {
-  padding: 12px 14px 16px;
+.price-compare { font-weight: 400; color: var(--nimbus-ink); opacity: 0.5; }
+.product-installments, .product-installments.installment-no-interest,
+.item-installments, [class*="installments"] {
+  color: var(--nimbus-cinza) !important; font-size: 0.85em; font-weight: 400;
 }
 
 /* --------------------------------------------------------------------------
-   12) NEWSLETTER (unico botao ouro do site)
-   Fundo navy, titulo Fraunces branco, sub azul-ceu, input pill branco,
-   nuvens decorativas quase invisiveis no fundo (sutileza, nao pattern).
+   11) TEXTBANNERS (Fe / Impacto): texto a esquerda, Fraunces
    -------------------------------------------------------------------------- */
-.section-newsletter-home,
-.section-newsletter-home-colors {
-  background-color: var(--nimbus-navy);
-  background-image: var(--nimbus-nuvem-sutil);
-  background-repeat: repeat-x;
-  background-position: bottom center;
-  color: #ffffff;
+.textbanner-text { text-align: left; }
+.textbanner-text h1, .textbanner-text h2, .textbanner-text .h2 {
+  font-family: 'Fraunces', Georgia, serif; font-size: clamp(1.6rem, 3vw, 2.2rem); line-height: 1.15;
 }
-.section-newsletter-home p,
-.section-newsletter-home .subtitle,
-.section-newsletter-home-colors p {
-  color: var(--nimbus-azul-ceu);
+.textbanner-text.over-image h1, .textbanner-text.over-image h2,
+.textbanner-text.over-image .h2, .textbanner-text.over-image p {
+  text-shadow: 0 2px 12px rgba(11, 35, 96, 0.28);
 }
-.section-newsletter-home .form-control,
-.section-newsletter-home input[type="email"],
-.section-newsletter-home input[type="text"] {
-  border-radius: var(--nimbus-pill);
-  background: #ffffff;
-  border: 0;
-  color: var(--nimbus-ink);
-  padding-left: 20px;
+
+/* --------------------------------------------------------------------------
+   12) NEWSLETTER (clara, discreta — o artifact nao usa na home)
+   -------------------------------------------------------------------------- */
+.section-newsletter-home, .section-newsletter-home-colors {
+  background: linear-gradient(180deg, var(--nimbus-grad-inicio) 0%, var(--nimbus-ceu) 100%);
+  color: var(--nimbus-navy);
 }
-.section-newsletter-home .btn-primary,
-.section-newsletter-home .btn-default,
-.section-newsletter-home input[type="submit"],
+.section-newsletter-home p, .section-newsletter-home-colors p { color: var(--nimbus-caps); }
+.section-newsletter-home .form-control, .section-newsletter-home input[type="email"] {
+  border-radius: var(--nimbus-pill); background: #ffffff; border: 1px solid #0b236022;
+  color: var(--nimbus-ink); padding-left: 20px;
+}
+.section-newsletter-home .btn-primary, .section-newsletter-home input[type="submit"],
 .section-newsletter-home button[type="submit"] {
-  background-color: var(--nimbus-ouro) !important;
-  color: var(--nimbus-navy) !important;
-  fill: var(--nimbus-navy) !important;
-  border: 0;
-  border-radius: var(--nimbus-pill);
-}
-.section-newsletter-home .btn-primary:hover,
-.section-newsletter-home .btn-default:hover,
-.section-newsletter-home input[type="submit"]:hover,
-.section-newsletter-home button[type="submit"]:hover {
-  background-color: #f0d182 !important;
-  color: var(--nimbus-navy) !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background-color: var(--nimbus-navy) !important; color: #ffffff !important; border-radius: var(--nimbus-pill);
 }
 
 /* --------------------------------------------------------------------------
-   13) TEXTBANNERS (Fe / Design / Impacto): texto a esquerda, Fraunces,
-   sombra leve quando sobre imagem. Imagem arredondada.
+   13) RODAPE — CLARO (gradiente nuvem->ceu), colunas, selos de pagamento
    -------------------------------------------------------------------------- */
-.textbanner-text {
-  text-align: left;
-}
-.textbanner-text h1,
-.textbanner-text h2,
-.textbanner-text .h2 {
-  font-family: 'Fraunces', Georgia, serif;
-  font-size: 2.2rem;
-  line-height: 1.15;
-}
-.textbanner-text.over-image h1,
-.textbanner-text.over-image h2,
-.textbanner-text.over-image .h2,
-.textbanner-text.over-image p {
-  text-shadow: 0 2px 12px rgba(11, 35, 96, 0.3);
-}
-.textbanner-image {
-  border-radius: var(--nimbus-radius);
-  overflow: hidden;
-}
-
-/* --------------------------------------------------------------------------
-   14) BANNERS DE SERVICOS: sobrios, texto navy, sem icone colorido
-   -------------------------------------------------------------------------- */
-.section-services,
-[class*="services-home"] {
-  background: #ffffff;
+footer, .footer-colors {
+  background: linear-gradient(180deg, var(--nimbus-nuvem) 0%, var(--nimbus-ceu) 100%) !important;
   color: var(--nimbus-navy);
+  border-top: 1px solid rgba(11, 35, 96, 0.08);
 }
-.section-services svg,
-[class*="services-home"] svg {
-  fill: var(--nimbus-navy);
-  max-height: 28px;
+footer h1, footer h2, footer h3, footer h4, footer h5,
+.footer-colors h3, .footer-colors h4 {
+  font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--nimbus-navy);
 }
-.section-services h3,
-.section-services .h3,
-[class*="services-home"] h3 {
-  font-family: 'Inter', sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: var(--nimbus-navy);
+footer a, .footer-colors a, footer .footer-menu-link { color: var(--nimbus-navy); }
+footer a:hover, .footer-colors a:hover, footer .footer-menu-link:hover {
+  color: var(--nimbus-navy-hover) !important; text-decoration: underline;
 }
-
-/* --------------------------------------------------------------------------
-   15) RODAPE: navy + DIVISORIA DE NUVEM 2 (navy, sobre a secao clara acima)
-   -------------------------------------------------------------------------- */
-footer,
-.footer-colors {
-  background: var(--nimbus-navy);
-  color: var(--nimbus-nuvem);
-  position: relative;
+footer .form-control { border-radius: var(--nimbus-pill); background: #ffffff; }
+footer .btn-primary, .footer-colors .btn-primary {
+  background-color: var(--nimbus-navy); color: #ffffff; border: 0;
 }
-footer::before,
-.footer-colors::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -58px;
-  height: 60px;
-  background: var(--nimbus-nuvem-navy) repeat-x bottom / 1440px 60px;
-  pointer-events: none;
-}
-/* Se a newsletter (navy) for a ultima secao antes do rodape, a divisoria
-   fica invisivel (navy sobre navy) e nao causa dano. */
-footer .form-control {
-  border-radius: var(--nimbus-pill);
-}
-
-/* Bandeiras de cartao: SO no rodape, pequenas e apagadas */
-footer [class*="payment"] img,
-.footer-colors [class*="payment"] img,
-footer .payment-methods img {
-  max-height: 22px;
-  filter: grayscale(1) opacity(0.6);
+/* Selos de pagamento: navy translucido no rodape */
+footer [class*="payment"] img, .footer-colors [class*="payment"] img, footer .payment-methods img {
+  max-height: 22px; filter: grayscale(1); opacity: 0.55;
 }
 
 /* --------------------------------------------------------------------------
-   16) ESCONDER
+   14) FORMULARIOS
    -------------------------------------------------------------------------- */
-/* Selo "criado com Nuvemshop".
-   RESSALVA: confira no painel se o plano Impulso permite remover o selo
-   por configuracao oficial; remover via CSS pode contrariar os termos
-   do plano. Se o painel tiver a opcao, prefira ela e apague este bloco. */
-.powered-by,
-[class*="powered-by"],
-[class*="powered_by"],
-footer a[href*="nuvemshop"],
-footer a[href*="tiendanube"],
-footer a[href*="lojavirtualnuvem"] {
-  display: none !important;
+.form-control, .form-select, .form-quantity, .search-input, textarea,
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="password"] {
+  border-radius: var(--nimbus-radius); font-family: 'Inter', sans-serif;
 }
-
-/* Widgets de urgencia (contador de estoque, "X pessoas vendo") */
-[class*="stock-limit"],
-[class*="stock-alert"],
-[class*="countdown"],
-[class*="urgency"],
-[class*="visitors"],
-[class*="people-watching"] {
-  display: none !important;
+.form-control:focus, .form-select:focus, .form-quantity:focus {
+  border-color: var(--nimbus-navy); box-shadow: 0 0 0 3px #0b236014;
 }
-
-/* Bandeiras de cartao no meio da pagina (mantidas so no rodape) */
-.section-payments-home,
-[class*="payments-home"],
-main [class*="payment-methods"] {
-  display: none !important;
-}
-
-/* Breadcrumb na home (o Morelia marca o body/template da home) */
-.template-home .breadcrumb,
-.template-home [class*="breadcrumb"],
-body[class*="home"] main > [class*="breadcrumb"]:first-child {
-  display: none !important;
-}
-
-/* --------------------------------------------------------------------------
-   17) WHATSAPP FLUTUANTE: recolorir de verde para navy
-   Se nao pegar na sua versao, esconda o widget no painel e mantenha o
-   contato no rodape.
-   -------------------------------------------------------------------------- */
-[class*="whatsapp"] a,
-[class*="whatsapp"] button,
-.js-whatsapp-widget,
-a[href*="wa.me"][class*="float"],
-a[href*="api.whatsapp"][class*="float"] {
-  background-color: var(--nimbus-navy) !important;
-  border-color: var(--nimbus-navy) !important;
-}
-
-/* --------------------------------------------------------------------------
-   18) FORMULARIOS E COMPONENTES
-   -------------------------------------------------------------------------- */
-.form-control,
-.form-select,
-.form-quantity,
-.search-input,
-textarea,
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="number"],
-input[type="password"] {
-  border-radius: var(--nimbus-radius);
-  font-family: 'Inter', sans-serif;
-}
-textarea {
+.card, .box, .alert, .modal, .search-suggestions, .tooltip, .notification-primary, .desktop-dropdown {
   border-radius: var(--nimbus-radius);
 }
-.form-control:focus,
-.form-select:focus,
-.form-quantity:focus {
-  border-color: var(--nimbus-navy);
-  box-shadow: 0 0 0 3px #0b236014;
-}
+.label { background: var(--nimbus-navy); color: #ffffff; border-radius: 6px; }
 
-.card,
-.box,
-.alert,
-.modal,
-.search-suggestions,
-.tooltip,
-.notification-primary,
-.desktop-dropdown {
-  border-radius: var(--nimbus-radius);
-}
-
-/* Etiquetas de produto: navy, nunca ouro */
-.label {
-  background: var(--nimbus-navy);
-  color: #ffffff;
-  border-radius: 6px;
+/* Bloco "10% do lucro" em descricao de produto (se colado com esta classe) */
+.ten-note {
+  background: var(--nimbus-nuvem); border: 1px solid var(--nimbus-ceu);
+  border-left: 4px solid var(--nimbus-ouro); border-radius: 8px; padding: 12px 16px;
+  font-size: 14px; margin: 16px 0;
 }
 
 /* --------------------------------------------------------------------------
-   19) DETALHES DE MARCA
+   15) ESCONDER
    -------------------------------------------------------------------------- */
-::selection {
-  background: var(--nimbus-navy);
-  color: #ffffff;
+/* Selo "criado com Nuvemshop". RESSALVA: confira se o plano permite remover
+   por configuracao oficial; se sim, prefira ela e apague este bloco. */
+.powered-by, [class*="powered-by"], [class*="powered_by"],
+footer a[href*="nuvemshop"], footer a[href*="tiendanube"], footer a[href*="lojavirtualnuvem"] {
+  display: none !important;
 }
+[class*="stock-limit"], [class*="stock-alert"], [class*="countdown"],
+[class*="urgency"], [class*="visitors"], [class*="people-watching"] { display: none !important; }
+.section-payments-home, [class*="payments-home"], main [class*="payment-methods"] { display: none !important; }
+.template-home .breadcrumb, .template-home [class*="breadcrumb"],
+body[class*="home"] main > [class*="breadcrumb"]:first-child { display: none !important; }
 
-/* Notificacoes (ex.: item adicionado): ceu com texto navy, sem ouro */
-.notification-secondary {
-  background: var(--nimbus-ceu);
-  color: var(--nimbus-navy);
-  fill: var(--nimbus-navy);
+/* --------------------------------------------------------------------------
+   16) WHATSAPP FLUTUANTE: navy no lugar do verde
+   -------------------------------------------------------------------------- */
+[class*="whatsapp"] a, [class*="whatsapp"] button, .js-whatsapp-widget,
+a[href*="wa.me"][class*="float"], a[href*="api.whatsapp"][class*="float"] {
+  background-color: var(--nimbus-navy) !important; border-color: var(--nimbus-navy) !important;
 }
 
 /* --------------------------------------------------------------------------
-   20) DEFENSIVO: variacoes de versao do tema ou apps instalados
+   17) DETALHES + DEFENSIVO
    -------------------------------------------------------------------------- */
-[class*="announcement"] {
-  background-color: var(--nimbus-navy);
-  color: #ffffff;
-}
+::selection { background: var(--nimbus-navy); color: #ffffff; }
+.notification-secondary { background: var(--nimbus-ceu); color: var(--nimbus-navy); fill: var(--nimbus-navy); }
+[class*="announcement"] { background-color: var(--nimbus-ceu); color: var(--nimbus-navy); }
 .button:not(.btn-link),
-button[type="submit"]:not(.btn-link):not(.search-btn):not(.modal-close) {
-  border-radius: var(--nimbus-pill);
-}
+button[type="submit"]:not(.btn-link):not(.search-btn):not(.modal-close) { border-radius: var(--nimbus-pill); }
 
 /* --------------------------------------------------------------------------
-   21) MOBILE (o Morelia ja e responsivo; aqui so os ajustes da spec)
+   18) MOBILE
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-  /* Logo menor no mobile */
-  .head-main .logo img,
-  .head-logo img,
-  .head-main a[class*="logo"] img,
-  .head-main img[class*="logo"] {
-    max-height: 38px;
+  .head-main .logo img, .head-logo img,
+  .head-main a[class*="logo"] img, .head-main img[class*="logo"] { max-height: 34px; }
+  .section-products-home, .section-newsletter-home, .section-services,
+  .section-banners, [class*="services-home"], [class*="banners-home"] {
+    padding-top: 44px; padding-bottom: 44px;
   }
-
-  /* Respiro vertical das secoes: 44px */
-  .section-products-home,
-  .section-newsletter-home,
-  .section-services,
-  [class*="services-home"] {
-    padding-top: 44px;
-    padding-bottom: 44px;
-  }
-
-  /* Titulos de banner e secao proporcionais */
-  .swiper-text .h1-huge {
-    font-size: 2rem;
-  }
-  .textbanner-text h1,
-  .textbanner-text h2,
-  .textbanner-text .h2 {
-    font-size: 1.6rem;
-  }
-  .section-products-home h2,
-  .section-products-home .h2 {
-    font-size: 1.5rem;
-  }
-
-  /* Divisorias de nuvem mais baixas no mobile */
-  .section-slider::after,
-  .section-slider-home::after,
-  [class*="slider-home"]::after {
-    height: 40px;
-    background-size: 960px 40px;
-  }
-  footer::before,
-  .footer-colors::before {
-    top: -38px;
-    height: 40px;
-    background-size: 960px 40px;
-  }
-
-  /* Botoes um pouco mais compactos */
-  .btn-primary,
-  .btn-default,
-  input[type="submit"] {
-    padding: 12px 22px;
-  }
+  .swiper-text .h1-huge, .swiper-text h1 { font-size: 2rem; }
+  .textbanner-text h1, .textbanner-text h2, .textbanner-text .h2 { font-size: 1.6rem; }
+  .section-products-home h2, .section-products-home .h2 { font-size: 1.5rem; }
+  .btn-primary, .btn-default, input[type="submit"] { padding: 12px 22px; }
 }

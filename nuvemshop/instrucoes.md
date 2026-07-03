@@ -1,81 +1,70 @@
-# Loja Nuvemshop — Guia de aplicação v2 (Impulso · tema Morelia)
+# Loja Nuvemshop — Guia de aplicação v3 (Impulso · tema Morelia)
 
-Redesign completo: a loja vira a "porta comercial" da landing (mesma catedral, mesmas fontes,
-mesmo mundo). Arquivos desta pasta: `css-nimbus.css` (v2), `pagina-projetos-sociais.html`,
-`pagina-sobre.html`, e **`assets/`** (logo + 5 banners). Pra aplicar tudo sozinho via navegador,
-use o prompt em `cowork-loja-v2-prompt.md`.
+Meta: deixar a loja o mais perto possível do artifact "NIMBUS — Loja v3.1" (claro e arejado).
+No Impulso só dá pra usar **CSS + os módulos do Morelia** (não dá pra colar HTML), então casamos o
+visual via CSS e montamos a home com os módulos do tema. Arquivos desta pasta: `css-nimbus.css` (v3),
+`assets/` (logo, banners e tiles), `pagina-projetos-sociais.html`, `pagina-sobre.html`.
+Pra aplicar sozinho via navegador: `cowork-loja-v3-prompt.md`.
 
-⚠️ **Regra da marca:** NUNCA usar "troca fácil" em nenhum texto (POD encarece devolução). Um dos
-agentes sugeriu isso e foi corrigido aqui — os textos abaixo são os corretos.
+⚠️ Nunca usar "troca fácil" em texto nenhum.
 
-## 1. CSS v2 (substitui o v1 inteiro)
-Loja online → Layout → Personalizar seu layout atual → **Edição de CSS avançada** → apague o CSS
-antigo e cole TODO o `css-nimbus.css` → Testar CSS → salvar/publicar.
-O CSS já faz: botões pill, cards com elevação, header sticky com logo, newsletter navy com botão
-ouro, divisórias de nuvem (hero e rodapé), esconde o selo "criado com Nuvemshop"*, esconde
-breadcrumb da home, recolore o WhatsApp flutuante.
-*\*ressalva: sem opção oficial pra tirar o selo; se a Nuvemshop reclamar, apague o bloco 16.*
+## 1. CSS v3 (substitui o anterior inteiro)
+Loja online → Layout → Personalizar → **Edição de CSS avançada** → apague o CSS antigo e cole TODO o
+`css-nimbus.css` → Testar CSS → salvar. (Ele já faz: barra de anúncio clara, rodapé claro com selos,
+serviços em maiúsculas, cards com elevação, botões pill, esconde o selo "criado com Nuvemshop".)
 
-## 2. Logo no header
-Loja online → Layout → seção **Logo** → suba `assets/logo-nimbus.png`. (O texto "Nimbus" some e
-entra o wordmark em nuvens com auréola.)
+## 2. Logo
+Loja online → Layout → **Logo** → subir `assets/logo-nimbus.png`.
 
-## 3. Montar a HOME (editor do Morelia, nesta ordem)
-Ritmo: banner grande → 1 linha de produtos → banner grande. Nunca duas prateleiras coladas.
-1. **Slider principal** (1 slide só): `assets/banner-hero-desktop.jpg` + `assets/banner-hero-mobile.jpg`.
-   Título: `Acima de tudo` · Subtítulo: `Streetwear católico premium, desenhado no Brasil.` ·
-   Botão: `Ver coleção` → link pro catálogo completo.
-2. **Banners de serviços** (3 itens de texto, sem ícone colorido):
-   `Feito sob demanda no Brasil` · `Pagamento seguro: Pix, cartão e boleto` · `10% do lucro doado`.
-3. **Prateleira 1** — título `Os essenciais` (curadoria manual: os 4 produtos com melhor foto,
-   misturando coleções).
-4. **Banner com texto**: `assets/banner-fe.jpg` (Cristo à direita; texto à ESQUERDA).
-   Título `Feito de fé` · Sub `Cada estampa nasce de um símbolo da fé católica brasileira.` ·
-   Botão `Ver as peças` → coleção RELÍQUIA.
-5. **Prateleira 2** — título `Coleção Relíquia` (4 produtos da RELÍQUIA).
-6. **Banner com texto**: `assets/banner-design.jpg` (Pampulha).
-   Título `Traço brasileiro` · Sub `Linhas inspiradas na arquitetura de Niemeyer, do concreto às
-   nuvens.` · Botão `Ver a coleção Street` → coleção STREET.
-7. **Prateleira 3** — título `Coleção Street` (4 produtos; se não encher, corte a prateleira — o
-   botão do banner acima já resolve).
-8. **Banner com texto**: `assets/banner-impacto.jpg` (nuvem+auréola à direita; texto à ESQUERDA).
-   Título `Vestir também é servir` · Sub `10% do lucro vai para um projeto social. Quem escolhe
-   qual é você, no checkout.` · Botão `Conhecer os projetos` → página Projetos Sociais.
-9. **Newsletter** — Título `Estamos só começando` · Sub `Deixe seu e-mail e saiba dos lançamentos
-   em primeira mão. Só o essencial, sem spam.` · Botão `Quero receber`.
-10. Desative/remova qualquer seção vazia de template que sobrar.
+## 3. Montar a HOME (ordem do artifact)
+1. **Slider principal** (1 slide): `assets/banner-hero-desktop.jpg` + `assets/banner-hero-mobile.jpg`.
+   Título `A coleção de estreia` · Sub `Peças de fé, desenhadas no Brasil.` · Botão `Ver coleção` (→ catálogo).
+2. **Serviços** (3 itens de texto, sem ícone): `Feito no Brasil` · `Pix, cartão e boleto` · `10% do lucro doado`.
+3. **Tiles das coleções** (módulo de banners lado a lado, 3 imagens):
+   - `assets/tile-street.jpg` → título `Street` → link coleção Street
+   - `assets/tile-reliquia.jpg` → título `Relíquia` → link coleção Relíquia
+   - `assets/tile-nuvem.jpg` → título `Nuvem` → link coleção Nuvem
+4. **Prateleira** — título `Os essenciais` (4 produtos, curadoria mista).
+5. **Banner com texto** `assets/banner-fe.jpg` (texto à esquerda): `Feito de fé` ·
+   `Cada estampa nasce de um símbolo da fé católica brasileira.` · botão `Ver as peças` → Relíquia.
+6. **Prateleira** — título `Coleção Relíquia`.
+7. **Banner com texto** `assets/banner-impacto.jpg` (esquerda): `Vestir também é servir` ·
+   `10% do lucro vai para um projeto social. Quem escolhe qual é você, no checkout.` ·
+   botão `Conhecer os projetos` → página Projetos Sociais.
+8. **Prateleira** — título `Coleção Street`.
+9. Desative newsletter e seções de template vazias que sobrarem (o artifact não tem newsletter na home;
+   se quiser manter captura de e-mail, o CSS já deixa ela clara e discreta).
 
 ## 4. Barra de anúncio
 > **10% do lucro do seu pedido vai para o projeto social que você escolher. Frete grátis acima de R$199.**
-(Alternativa pra alternar de vez em quando: `Acima de tudo. Streetwear católico feito no Brasil.`)
 
-## 5. Páginas + menu (se ainda não fez)
-- Páginas → Criar → **"Projetos Sociais"** (modo HTML `< >`) = `pagina-projetos-sociais.html`.
-- **"Sobre a NIMBUS"** = `pagina-sobre.html` (ajuste o link interno pra URL real da página acima).
-- Menu principal: Início · Produtos · Projetos Sociais · Sobre.
-- Rodapé: telefone/e-mail/redes quando existirem. Tagline: `Fé, design e propósito. Acima de tudo.`
+## 5. Rodapé (claro, 3 colunas)
+- **Loja:** Produtos · Coleção Street · Coleção Relíquia · Coleção Nuvem
+- **A marca:** Sobre a NIMBUS · Projetos Sociais · Contato
+- **Ajuda:** Trocas e devoluções · Política de privacidade · Prazo de produção e envio
+- Tagline: `Fé, design e propósito. Acima de tudo.`
 
-## 6. Campo do projeto social no checkout (se ainda não fez)
-Configurações → Opções de checkout → habilitar **"Mensagem do cliente"** com o rótulo:
+## 6. Páginas + menu (se ainda não fez)
+Páginas → Criar → "Projetos Sociais" (modo HTML) = `pagina-projetos-sociais.html`;
+"Sobre a NIMBUS" = `pagina-sobre.html` (ajustar o link interno). Menu: Início · Produtos ·
+Projetos Sociais · Sobre.
+
+## 7. Campo do projeto social no checkout (se ainda não fez)
+Configurações → Opções de checkout → habilitar **"Mensagem do cliente"**, rótulo:
 > **Qual projeto recebe 10% do lucro? Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo ou escreva outro**
-(opcional, não obrigatório)
 
-## 7. Favicon (se ainda não fez)
+## 8. Favicon (se ainda não fez)
 Loja online → Layout → Favicon → `public/img/favicon-nuvemshop-130.png`.
 
-## 8. Produtos (padrão pra TODA descrição)
-- Última linha de toda descrição: `Esta peça destina 10% do lucro ao projeto social da sua
-  escolha, no checkout.`
-- Tabela de medidas em cm por tamanho em todo produto (reduz erro de tamanho = menos troca).
+## 9. Produtos
+- Última linha de toda descrição: `Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.`
+- Tabela de medidas (cm) por tamanho em cada produto.
 
-## 9. Política de trocas (obrigação legal, sem promover)
-Página discreta no rodapé: CDC art. 49 (7 dias de arrependimento em compra online) + troca por
-defeito de fabricação. Nada além do mínimo legal. **Não usar "troca fácil" em texto nenhum.**
+## 10. Categorias (coleções)
+Crie 3 categorias — **Street**, **Relíquia**, **Nuvem** — e classifique os produtos. É o que faz os
+tiles e as prateleiras por coleção funcionarem.
 
-## 10. Depois de aplicar
-Tire prints (home desktop + mobile, página de produto) e mande pro Claude revisar contra a spec —
-ajustes de seletor CSS são esperados na primeira passada.
-
-## Inventário do OURO (#e9c46a) — usar SÓ nisso
-Auréola do logo · sublinhado hover do menu · traço sob títulos de prateleira · botão da newsletter ·
-borda dos cards de Projetos Sociais · o "10%" no banner de impacto. Nunca em preço, badge ou ícone.
+## Até onde dá no Impulso
+Esse guia entrega ~85% do artifact (cores, cards, hero, rodapé, ritmo). Fidelidade 100% (o DOM exato
+do artifact) só no plano **Escala** (acesso ao código-fonte do tema) ou headless — não vale a pena agora.
+Depois de aplicar, me manda prints que eu comparo com o artifact e ajusto os seletores que não pegarem.
