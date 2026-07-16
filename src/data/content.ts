@@ -67,17 +67,50 @@ export const COPY = {
   },
 }
 
-export const IMPACT_PROJECTS = [
+export type ImpactProject = {
+  id: string
+  name: string
+  image: string
+  imageAlt: string
+  desc: string
+  area: string
+  scope: string
+  method: string
+  website?: string
+}
+
+export const IMPACT_PROJECTS: ImpactProject[] = [
   {
+    id: 'fazenda-esperanca',
     name: 'Fazenda da Esperança',
-    desc: 'Comunidade católica de recuperação de dependentes químicos, presente no Brasil inteiro.',
+    image: img('projects/fazenda-esperanca.webp'),
+    imageAlt: 'Participantes recebem certificados em uma cerimônia na Fazenda da Esperança',
+    desc: 'Comunidade terapêutica católica que acolhe pessoas em processo de recuperação da dependência química.',
+    area: 'Acolhimento e recuperação de dependentes químicos.',
+    scope: 'Comunidades no Brasil e em outros países.',
+    method: 'Vida comunitária, trabalho, convivência e espiritualidade em um percurso voluntário de acolhimento.',
+    website: 'https://portalfazenda.org.br/acolhimento/',
   },
   {
+    id: 'caritas-brasileira',
     name: 'Cáritas Brasileira',
-    desc: 'Rede da CNBB de solidariedade e assistência a quem mais precisa.',
+    image: img('projects/caritas-brasileira.webp'),
+    imageAlt: 'Mulheres reunidas em uma ação comunitária da Cáritas Brasileira',
+    desc: 'Organismo da CNBB que articula uma rede de solidariedade para defender direitos e apoiar populações vulneráveis.',
+    area: 'Assistência social, emergências, direitos humanos e desenvolvimento solidário.',
+    scope: 'Rede nacional com ações regionais e locais em todo o Brasil.',
+    method: 'Mobilização comunitária, resposta a emergências, formação e apoio a iniciativas de economia solidária.',
+    website: 'https://caritas.org.br/area-de-atuacao',
   },
   {
+    id: 'pequeno-cotolengo',
     name: 'Pequeno Cotolengo',
-    desc: 'Obra de Dom Orione que acolhe pessoas com deficiência em vulnerabilidade.',
+    image: img('projects/pequeno-cotolengo.webp'),
+    imageAlt: 'Morador sentado diante de uma casa do Pequeno Cotolengo',
+    desc: 'Obra de Dom Orione que oferece acolhimento, cuidado e qualidade de vida a pessoas com múltiplas deficiências.',
+    area: 'Acolhimento e cuidado de pessoas com deficiência em situação de vulnerabilidade.',
+    scope: 'Sede em Curitiba, com assistidos encaminhados de diferentes regiões do Paraná.',
+    method: 'Acolhimento institucional, saúde, reabilitação, educação e assistência social.',
+    website: 'https://www.pequenocotolengo.org.br/',
   },
 ]
