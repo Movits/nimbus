@@ -11,8 +11,8 @@ export default function Experience() {
   return (
     <Canvas
       className="canvas"
-      dpr={[1, mobile ? 1.5 : 2]}
-      gl={{ antialias: true, powerPreference: 'high-performance' }}
+      dpr={[1, mobile ? 1.35 : 2]}
+      gl={{ antialias: !mobile, powerPreference: 'high-performance' }}
       camera={{ position: [0, 0, 5], fov: 50 }}
     >
       <color attach="background" args={['#dcebfa']} />

@@ -396,6 +396,9 @@ button {
 
 /* ───────────────────────── Mobile ───────────────────────── */
 @media (max-width: 768px) {
+  .canvas {
+    height: 100dvh !important;
+  }
   .section {
     padding: 5rem 1.25rem 3.5rem;
   }
@@ -416,11 +419,19 @@ button {
   .topbar__logo img {
     width: clamp(84px, 24vw, 110px);
   }
+  .topbar__logo {
+    min-width: 44px;
+    min-height: 44px;
+  }
   .topbar__nav {
     gap: 0.35rem;
   }
   .topbar__nav button,
   .topbar__nav a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
     font-size: 0.78rem;
     padding: 0.7rem 0.55rem;
   }
@@ -431,7 +442,7 @@ button {
 
 /* telas bem estreitas: só o essencial na topbar */
 @media (max-width: 480px) {
-  .topbar__link--sm {
+  .topbar__nav .topbar__link--sm {
     display: none;
   }
 }
