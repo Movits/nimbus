@@ -20,9 +20,45 @@ designs/**/*.jpg
 designs/**/*.jpeg
 
 # Segundo cérebro (LLM Wiki) — privado, tem seu próprio repo git; nunca vai pro GitHub público.
+# A regra `brain/` sozinha NÃO pega a pasta real, que se chama "Nimbus brain" (prefixo + espaço).
 brain/
+/Nimbus brain/
 
 # Lixo do Obsidian aberto na raiz + testes vazios do Web Clipper.
 .obsidian/
 browserify.org.md
 docs/
+
+# QA e temporários: perfil de navegador guarda Login Data, Web Data e Cookies. Nunca no repo público.
+.tmp-chrome-mobile-qa/
+.tmp-*/
+.codex-*
+
+# Rede de segurança: artefato de credencial em qualquer lugar da árvore.
+**/Login Data*
+**/Web Data*
+**/Account Web Data*
+**/Cookies*
+**/Local State
+**/Secure Preferences
+
+# Workspace local do VS Code (coerente com .vscode/*).
+Nimbus.code-workspace
+
+# Fotos da loja — mesma doutrina de designs/: a ARTE não sobe, fica no Drive.
+# A loja é a fonte de verdade: uploads/upload-manifest.json mapeia arquivo -> produto -> URL pública,
+# e uploads/live-verification.json registra a conferência. Os manifests e READMEs sobem; as imagens não.
+nuvemshop/assets/product-lifestyle/**/*.png
+nuvemshop/assets/product-lifestyle/**/*.jpg
+nuvemshop/assets/product-lifestyle/**/*.jpeg
+nuvemshop/assets/product-lifestyle/**/*.webp
+nuvemshop/assets/collections/**/*.png
+nuvemshop/assets/collections/**/*.jpg
+nuvemshop/assets/collections/**/*.jpeg
+nuvemshop/assets/collections/**/*.webp
+nuvemshop/assets/product-variant-fixes/**/*.png
+nuvemshop/assets/product-variant-fixes/**/*.jpg
+nuvemshop/assets/product-variant-fixes/**/*.webp
+
+# Screenshots de QA da loja. Os HTML de preview e a auditoria sobem; os PNG não.
+nuvemshop/previews/**/*.png
