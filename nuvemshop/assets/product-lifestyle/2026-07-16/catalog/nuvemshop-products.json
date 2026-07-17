@@ -1,0 +1,1188 @@
+{
+  "generatedAt": "2026-07-16T20:06:03.769Z",
+  "store": "https://loja.nimbuswear.com.br",
+  "count": 49,
+  "collections": {
+    "NUVEM": 3,
+    "RELIQUIA": 28,
+    "STREET": 18
+  },
+  "products": [
+    {
+      "productId": 352722510,
+      "slug": "sao-miguel-celeste",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste/",
+      "title": "São Miguel Celeste | Blusão Moletom",
+      "collection": "NUVEM",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-051dbf63f235c3761817824995175083-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-051dbf63f235c3761817824995175083-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67b6d19e6a61128e2517824995202406-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-051dbf63f235c3761817824995175083-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352722510-sao-miguel-celeste"
+    },
+    {
+      "productId": 352723243,
+      "slug": "sao-miguel-celeste3",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste3/",
+      "title": "São Miguel Celeste | Camiseta Premium",
+      "collection": "NUVEM",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca346e209d61c0b06b17824996722709-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352723243-sao-miguel-celeste3"
+    },
+    {
+      "productId": 352722685,
+      "slug": "sao-miguel-celeste1",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste1/",
+      "title": "São Miguel Celeste | Moletom Canguru",
+      "collection": "NUVEM",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-20dcbee71a7a33c44f17824995559342-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352722685-sao-miguel-celeste1"
+    },
+    {
+      "productId": 352720257,
+      "slug": "acima-de-tudo-gotico",
+      "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo-gotico/",
+      "title": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c398a6d5790ec7709517824989990487-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea1f36c62775229d6217824990001386-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c398a6d5790ec7709517824989990487-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea1f36c62775229d6217824990001386-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c398a6d5790ec7709517824989990487-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea1f36c62775229d6217824990001386-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352720257-acima-de-tudo-gotico"
+    },
+    {
+      "productId": 352719728,
+      "slug": "aparecida-barroca",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca/",
+      "title": "Aparecida Barroca | Blusão Moletom",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-46365b1124de89cf0a17824988941568-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-46365b1124de89cf0a17824988941568-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-bb7955c67a261abf5c17824988965387-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-46365b1124de89cf0a17824988941568-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352719728-aparecida-barroca"
+    },
+    {
+      "productId": 352890896,
+      "slug": "aparecida-barroca2",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+      "title": "Aparecida Barroca | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1a60f71a303a4621f917826042210405-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-dd38789f520846213917826042202015-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1a60f71a303a4621f917826042210405-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ef39a072351a5841017826042229355-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-dd38789f520846213917826042202015-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb2275f099a8cfed1c17826042219692-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1a60f71a303a4621f917826042210405-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-dd38789f520846213917826042202015-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2"
+    },
+    {
+      "productId": 352720127,
+      "slug": "aparecida-barroca3",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca3/",
+      "title": "Aparecida Barroca | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb888e369e4bf0fa217824989776213-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb888e369e4bf0fa217824989776213-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a7d69c22c9030ebc317824989811410-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb888e369e4bf0fa217824989776213-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352720127-aparecida-barroca3"
+    },
+    {
+      "productId": 352719816,
+      "slug": "aparecida-barroca1",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca1/",
+      "title": "Aparecida Barroca | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a88e8e720c99729ad017824989164962-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a88e8e720c99729ad017824989164962-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c8add9467f32f53ce717824989216744-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a88e8e720c99729ad017824989164962-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352719816-aparecida-barroca1"
+    },
+    {
+      "productId": 352717960,
+      "slug": "azulejo",
+      "url": "https://loja.nimbuswear.com.br/produtos/azulejo/",
+      "title": "Azulejo Sagrado | Blusão Moletom",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8e0c66144f5f0d25c417824984953127-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8e0c66144f5f0d25c417824984953127-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5375213b2e99e042a317824984978762-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8e0c66144f5f0d25c417824984953127-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352717960-azulejo"
+    },
+    {
+      "productId": 352718275,
+      "slug": "azulejo3",
+      "url": "https://loja.nimbuswear.com.br/produtos/azulejo3/",
+      "title": "Azulejo Sagrado | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-33a775d03498056be017824985675544-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-33a775d03498056be017824985675544-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eabc39985162c4524f17824985708707-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-33a775d03498056be017824985675544-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718275-azulejo3"
+    },
+    {
+      "productId": 352718083,
+      "slug": "azulejo1",
+      "url": "https://loja.nimbuswear.com.br/produtos/azulejo1/",
+      "title": "Azulejo Sagrado | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea4ccb75c91469ba3d17824985167048-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea4ccb75c91469ba3d17824985167048-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-66661d28da2ca3f8dd17824985220563-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea4ccb75c91469ba3d17824985167048-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718083-azulejo1"
+    },
+    {
+      "productId": 352717723,
+      "slug": "brasao",
+      "url": "https://loja.nimbuswear.com.br/produtos/brasao/",
+      "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b668502a5aba94b24b17824984594790-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-79b1e3f444cbc1fc0917824984585967-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b668502a5aba94b24b17824984594790-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-86f597de18b1422dc317824984616807-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-79b1e3f444cbc1fc0917824984585967-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0eb7a27c978cd5f3a117824984605304-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b668502a5aba94b24b17824984594790-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-79b1e3f444cbc1fc0917824984585967-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352717723-brasao"
+    },
+    {
+      "productId": 352717837,
+      "slug": "brasao1",
+      "url": "https://loja.nimbuswear.com.br/produtos/brasao1/",
+      "title": "Brasão NIMBUS | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cd59c5903ff49575fc17824984766098-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e767f69285784699c217824984754554-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cd59c5903ff49575fc17824984766098-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6fa2ef7509c94ca1b817824984799792-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e767f69285784699c217824984754554-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5d0594d97f30cbcb3217824984787716-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cd59c5903ff49575fc17824984766098-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e767f69285784699c217824984754554-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352717837-brasao1"
+    },
+    {
+      "productId": 352703276,
+      "slug": "deus-e-fiel",
+      "url": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel/",
+      "title": "Deus é Fiel | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c1acfe04248379a44d17824954106781-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c1acfe04248379a44d17824954106781-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8be047b6fa8f2fe76317824954128358-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c1acfe04248379a44d17824954106781-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352703276-deus-e-fiel"
+    },
+    {
+      "productId": 352703343,
+      "slug": "deus-e-fiel1",
+      "url": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel1/",
+      "title": "Deus é Fiel | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67e7511f1690bc9e9b17824954285251-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67e7511f1690bc9e9b17824954285251-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0fafb1183bc565e78f17824954320104-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67e7511f1690bc9e9b17824954285251-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352703343-deus-e-fiel1"
+    },
+    {
+      "productId": 352702858,
+      "slug": "fe-acima-de-tudo",
+      "url": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo/",
+      "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3827e8e8fb4c7accc417824952591022-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3161aa35dda888210717824952601772-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3827e8e8fb4c7accc417824952591022-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4c9b8026131aeb74f617824952612478-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3161aa35dda888210717824952601772-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3f8fe4b68885cf52dd17824952622946-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3827e8e8fb4c7accc417824952591022-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3161aa35dda888210717824952601772-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352702858-fe-acima-de-tudo"
+    },
+    {
+      "productId": 352703153,
+      "slug": "fe-acima-de-tudo1",
+      "url": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo1/",
+      "title": "Fé Acima de Tudo | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ec9a024367e2c5dd117824953781712-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8dccd8d884af53c65817824953793641-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ec9a024367e2c5dd117824953781712-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8624c155bdfa2928b517824953813918-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8dccd8d884af53c65817824953793641-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5f32cd0cb683ac87b517824953825590-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ec9a024367e2c5dd117824953781712-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8dccd8d884af53c65817824953793641-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352703153-fe-acima-de-tudo1"
+    },
+    {
+      "productId": 352702753,
+      "slug": "monograma-nmb",
+      "url": "https://loja.nimbuswear.com.br/produtos/monograma-nmb/",
+      "title": "Monograma NIMBUS | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-fab87cd6b1e4c7611d17824952275705-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9f8ffa397abff17acd17824952285765-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-fab87cd6b1e4c7611d17824952275705-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9f8ffa397abff17acd17824952285765-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-fab87cd6b1e4c7611d17824952275705-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9f8ffa397abff17acd17824952285765-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352702753-monograma-nmb"
+    },
+    {
+      "productId": 352702796,
+      "slug": "monograma-nmb1",
+      "url": "https://loja.nimbuswear.com.br/produtos/monograma-nmb1/",
+      "title": "Monograma NIMBUS | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca6c7828abb616678617824952433816-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-05ca95ef04211f49b317824952446274-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca6c7828abb616678617824952433816-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-05ca95ef04211f49b317824952446274-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca6c7828abb616678617824952433816-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-05ca95ef04211f49b317824952446274-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352702796-monograma-nmb1"
+    },
+    {
+      "productId": 352702020,
+      "slug": "salmo-193",
+      "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+      "title": "Salmo 19 | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8781964905950ec0c017824950176121-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d42e9bd0215b858e817824950164498-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8781964905950ec0c017824950176121-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ef0ad9d3821fb0569e17824950210031-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d42e9bd0215b858e817824950164498-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-163dd1797a5b15f09d17824950197340-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8781964905950ec0c017824950176121-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d42e9bd0215b858e817824950164498-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352702020-salmo-193"
+    },
+    {
+      "productId": 352619175,
+      "slug": "salmo-191",
+      "url": "https://loja.nimbuswear.com.br/produtos/salmo-191/",
+      "title": "Salmo 19 | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-31de72d70034b12f9a17824357440058-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6263b0d7a3be8d6e7817824357428188-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-31de72d70034b12f9a17824357440058-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2cf7d153fe86ba39db17824357495455-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6263b0d7a3be8d6e7817824357428188-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3e1df4a00f3c4ce0bf17824357482238-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-31de72d70034b12f9a17824357440058-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6263b0d7a3be8d6e7817824357428188-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352619175-salmo-191"
+    },
+    {
+      "productId": 352718943,
+      "slug": "sao-jorge-neobarroco2",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+      "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a0ec9c5fe21b46e8f17824987149010-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b2826ba6af2429696e17824987184670-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a0ec9c5fe21b46e8f17824987149010-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-239d054b7233e3d8e417824987171640-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a0ec9c5fe21b46e8f17824987149010-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2"
+    },
+    {
+      "productId": 352718999,
+      "slug": "sao-jorge-neobarroco3",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
+      "title": "São Jorge Neobarroco | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca",
+        "Azul Marinho"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-1024-1024.webp",
+        "Azul Marinho": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718999-sao-jorge-neobarroco3"
+    },
+    {
+      "productId": 352718787,
+      "slug": "sao-jorge-neobarroco1",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+      "title": "São Jorge Neobarroco | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Rosa Bebê",
+        "Branca",
+        "Azul Marinho"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-1024-1024.webp",
+        "Rosa Bebê": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-1024-1024.webp",
+        "Azul Marinho": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f747c2f6612d48a37e17824986803780-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a40593cce4dbf63fe717824986855991-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-d5009e252f7901ff2f17824986840412-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718787-sao-jorge-neobarroco1"
+    },
+    {
+      "productId": 352618837,
+      "slug": "sao-jorge-vintage",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage/",
+      "title": "São Jorge Vintage | Blusão Moletom",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-624f3d05c5786d4f0a17824354893022-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1538b23dd77d7cfa1d17824354917258-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-624f3d05c5786d4f0a17824354893022-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e596ad830238c0250e17824354905460-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1538b23dd77d7cfa1d17824354917258-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7725d9126f4a5e12c217824354928917-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-624f3d05c5786d4f0a17824354893022-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1538b23dd77d7cfa1d17824354917258-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618837-sao-jorge-vintage"
+    },
+    {
+      "productId": 352618903,
+      "slug": "sao-jorge-vintage2",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage2/",
+      "title": "São Jorge Vintage | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cfa0683b43b6fa806017824355321724-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ff209b091194b101a217824355331591-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cfa0683b43b6fa806017824355321724-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7b7115345fc83120b717824355342348-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ff209b091194b101a217824355331591-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-d86e9c960dd7fdd21117824355351363-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cfa0683b43b6fa806017824355321724-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ff209b091194b101a217824355331591-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618903-sao-jorge-vintage2"
+    },
+    {
+      "productId": 352618935,
+      "slug": "sao-jorge-vintage3",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+      "title": "São Jorge Vintage | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Branca",
+        "Preta"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2de92608da13c8803e17824355544782-1024-1024.webp",
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-52c47c67481765119917824355566287-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2de92608da13c8803e17824355544782-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8c7774ad2e64b100c17824355576288-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-52c47c67481765119917824355566287-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-da5814dc0dbbfdedf817824355599414-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2de92608da13c8803e17824355544782-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-52c47c67481765119917824355566287-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618935-sao-jorge-vintage3"
+    },
+    {
+      "productId": 352618878,
+      "slug": "sao-jorge-vintage1",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage1/",
+      "title": "São Jorge Vintage | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca",
+        "Azul Marinho",
+        "Rosa Bebê"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-1024-1024.webp",
+        "Azul Marinho": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-1024-1024.webp",
+        "Rosa Bebê": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-465da492d2783af53a17824355163791-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8b93c01730e3bfcecd17824355127499-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7fefc94136d0b163d817824355175239-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618878-sao-jorge-vintage1"
+    },
+    {
+      "productId": 352407182,
+      "slug": "sao-miguel-vintage2",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+      "title": "São Miguel Vintage | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2117536615c75023d117823890585923-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f7f2ebadcbe20df99817823890598114-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-661c5cc203393fabbd17823890562040-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2117536615c75023d117823890585923-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-de05b9b7ef19d55fac17823890573633-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f7f2ebadcbe20df99817823890598114-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2117536615c75023d117823890585923-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f7f2ebadcbe20df99817823890598114-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407182-sao-miguel-vintage2"
+    },
+    {
+      "productId": 352407196,
+      "slug": "sao-miguel-vintage3",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage3/",
+      "title": "São Miguel Vintage | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-604579dbe074fef10317823890759831-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8763124d9c78da3b2017823890772120-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-604579dbe074fef10317823890759831-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-95b2948e3965a07de217823890796491-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8763124d9c78da3b2017823890772120-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5e5eaffeb5605c776417823890807835-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-604579dbe074fef10317823890759831-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8763124d9c78da3b2017823890772120-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407196-sao-miguel-vintage3"
+    },
+    {
+      "productId": 352407156,
+      "slug": "sao-miguel-vintage1",
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
+      "title": "São Miguel Vintage | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10f45e5a44ca51675817823890339206-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-43b3b3cc279e5bccb017823890365652-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10f45e5a44ca51675817823890339206-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-da50f0e8333a28fae817823890391946-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-43b3b3cc279e5bccb017823890365652-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-90eede9c5f27dc72f517823890416958-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10f45e5a44ca51675817823890339206-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-43b3b3cc279e5bccb017823890365652-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407156-sao-miguel-vintage1"
+    },
+    {
+      "productId": 352728451,
+      "slug": "acima-de-tudo",
+      "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo/",
+      "title": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Off-White"
+      ],
+      "colorImages": {
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1958020e36925fa93d17825007566196-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1958020e36925fa93d17825007566196-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e6582e093e1382cfe117825007586927-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1958020e36925fa93d17825007566196-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352728451-acima-de-tudo"
+    },
+    {
+      "productId": 352728524,
+      "slug": "acima-de-tudo1",
+      "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo1/",
+      "title": "Acima de Tudo Grafite | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d3db3afbf1db2b60217825007765099-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d3db3afbf1db2b60217825007765099-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3d3c39c1cdd59307db17825007796036-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d3db3afbf1db2b60217825007765099-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352728524-acima-de-tudo1"
+    },
+    {
+      "productId": 352728277,
+      "slug": "anjo-da-guarda",
+      "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda/",
+      "title": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-636c506d20304e3b3e17825007193890-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-636c506d20304e3b3e17825007193890-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ad0e949a0c3e8137c917825007216525-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-636c506d20304e3b3e17825007193890-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352728277-anjo-da-guarda"
+    },
+    {
+      "productId": 352728357,
+      "slug": "anjo-da-guarda1",
+      "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda1/",
+      "title": "Anjo da Guarda Stencil | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-50a98f27b16f6ff64b17825007379335-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-50a98f27b16f6ff64b17825007379335-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-401aefe940fd53a68c17825007415972-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-50a98f27b16f6ff64b17825007379335-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352728357-anjo-da-guarda1"
+    },
+    {
+      "productId": 352727892,
+      "slug": "aparecida-spray1",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray1/",
+      "title": "Aparecida Spray | Blusão Moletom",
+      "collection": "STREET",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7ab5e734271026511b17825006425749-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7ab5e734271026511b17825006425749-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cedaa25790d27d249417825006477857-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7ab5e734271026511b17825006425749-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352727892-aparecida-spray1"
+    },
+    {
+      "productId": 352728019,
+      "slug": "aparecida-spray2",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray2/",
+      "title": "Aparecida Spray | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-53bc84d217ce0634e417825006673491-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-53bc84d217ce0634e417825006673491-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ada82c552e5492bc117825006697228-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-53bc84d217ce0634e417825006673491-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352728019-aparecida-spray2"
+    },
+    {
+      "productId": 352889132,
+      "slug": "aparecida-spray3",
+      "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray3/",
+      "title": "Aparecida Spray | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9d85b9493a39283c5e17826029987625-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352889132-aparecida-spray3"
+    },
+    {
+      "productId": 352721477,
+      "slug": "espirito-santo1",
+      "url": "https://loja.nimbuswear.com.br/produtos/espirito-santo1/",
+      "title": "Espírito Santo Spray | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f6e73005f573cd273f17824992760353-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7692776ec970d61b0517824992737564-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f6e73005f573cd273f17824992760353-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-68296b6506f28e085517824992793499-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7692776ec970d61b0517824992737564-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8b4f7558660ca8a5ed17824992771729-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f6e73005f573cd273f17824992760353-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7692776ec970d61b0517824992737564-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352721477-espirito-santo1"
+    },
+    {
+      "productId": 352721118,
+      "slug": "fe2",
+      "url": "https://loja.nimbuswear.com.br/produtos/fe2/",
+      "title": "Fé Wildstyle | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8dc7b41ca17ab15bc17824992144873-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-625a5b7ce118614a7c17824992156320-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8dc7b41ca17ab15bc17824992144873-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-74d5d487ebdd2cff9f17824992167523-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-625a5b7ce118614a7c17824992156320-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a35d5e1d0ffa19129117824992178029-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8dc7b41ca17ab15bc17824992144873-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-625a5b7ce118614a7c17824992156320-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352721118-fe2"
+    },
+    {
+      "productId": 352721197,
+      "slug": "fe3",
+      "url": "https://loja.nimbuswear.com.br/produtos/fe3/",
+      "title": "Fé Wildstyle | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c2a647fe6aa4b785f317824992338999-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10fe687942e4c1aefc17824992351081-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c2a647fe6aa4b785f317824992338999-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4c27b72dd30108f31917824992373666-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10fe687942e4c1aefc17824992351081-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5f6a4ca9bd9b91606e17824992385293-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c2a647fe6aa4b785f317824992338999-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10fe687942e4c1aefc17824992351081-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352721197-fe3"
+    },
+    {
+      "productId": 352721633,
+      "slug": "wildstyle3",
+      "url": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
+      "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b4c3edb4149d44ba517824992976043-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0a5281ab588af684f117824993010175-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b4c3edb4149d44ba517824992976043-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-884f6f650392668c0c17824992998960-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b4c3edb4149d44ba517824992976043-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352721633-wildstyle3"
+    },
+    {
+      "productId": 355581274,
+      "slug": "wildstyle",
+      "url": "https://loja.nimbuswear.com.br/produtos/wildstyle/",
+      "title": "NIMBUS Wildstyle | Ecobag",
+      "collection": "STREET",
+      "colors": [],
+      "colorImages": {},
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8c6586eaa6a700371617840585774123-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8c6586eaa6a700371617840585774123-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\355581274-wildstyle"
+    },
+    {
+      "productId": 352725749,
+      "slug": "querubim-spray",
+      "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray/",
+      "title": "Querubim Spray | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb3a5ea12ab948cc1917825002515909-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb4016c17d2e80860417825002526267-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb3a5ea12ab948cc1917825002515909-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b67a4542d8d57dfdae17825002536849-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb4016c17d2e80860417825002526267-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32fee351834ac995f617825002546078-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb3a5ea12ab948cc1917825002515909-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb4016c17d2e80860417825002526267-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352725749-querubim-spray"
+    },
+    {
+      "productId": 352725852,
+      "slug": "querubim-spray1",
+      "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray1/",
+      "title": "Querubim Spray | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3fe39855adc68532f517825002713919-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-861da41196738a678217825002723821-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3fe39855adc68532f517825002713919-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1b1efeed1e633640a717825002742341-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-861da41196738a678217825002723821-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb7a124c3117ab5a917825002753652-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3fe39855adc68532f517825002713919-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-861da41196738a678217825002723821-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352725852-querubim-spray1"
+    },
+    {
+      "productId": 352722232,
+      "slug": "sagrado-coracao-spray1",
+      "url": "https://loja.nimbuswear.com.br/produtos/sagrado-coracao-spray1/",
+      "title": "Sagrado Coração Spray | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Branca"
+      ],
+      "colorImages": {
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eaa8e5eb3b6d4a0ea517824994460990-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eaa8e5eb3b6d4a0ea517824994460990-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5437908ebe4102ca3417824994495112-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eaa8e5eb3b6d4a0ea517824994460990-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352722232-sagrado-coracao-spray1"
+    },
+    {
+      "productId": 352727545,
+      "slug": "arcanjo-spray2",
+      "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray2/",
+      "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Off-White"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b6379866c287698b5d17825005740948-1024-1024.webp",
+        "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5ae7e49554f518dd3417825005753418-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b6379866c287698b5d17825005740948-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b93311b0b3954ca9517825005764840-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5ae7e49554f518dd3417825005753418-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-13b4e5d9b2cf3e03a817825005775257-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b6379866c287698b5d17825005740948-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5ae7e49554f518dd3417825005753418-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352727545-arcanjo-spray2"
+    },
+    {
+      "productId": 352898175,
+      "slug": "arcanjo-spray3",
+      "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray3/",
+      "title": "São Miguel Vitorioso | Camiseta Premium",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9047f059d949574b4617826075055942-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b56c0b8c5d2e66951217826075068366-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9047f059d949574b4617826075055942-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-66d42ada8e63049b7617826075088716-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b56c0b8c5d2e66951217826075068366-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-113da775b4d9c0e19517826075098194-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9047f059d949574b4617826075055942-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b56c0b8c5d2e66951217826075068366-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352898175-arcanjo-spray3"
+    },
+    {
+      "productId": 352726673,
+      "slug": "arcanjo-spray1",
+      "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray1/",
+      "title": "São Miguel Vitorioso | Moletom Canguru",
+      "collection": "STREET",
+      "colors": [
+        "Preta",
+        "Azul Marinho",
+        "Branca"
+      ],
+      "colorImages": {
+        "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-59c13b3f80df99441317825004166519-1024-1024.webp",
+        "Azul Marinho": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8a5714c7ef4028ffd17825004192279-1024-1024.webp",
+        "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32741010943d53b1ee17825004178343-1024-1024.webp"
+      },
+      "gallery": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-59c13b3f80df99441317825004166519-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-24ef91e1fd1f4937cf17825004217028-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8a5714c7ef4028ffd17825004192279-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-76f19fc6a2da934d7117825004242625-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32741010943d53b1ee17825004178343-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ba7e322de33e02afa617825004229550-1024-1024.webp"
+      ],
+      "variantImages": [
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-59c13b3f80df99441317825004166519-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8a5714c7ef4028ffd17825004192279-1024-1024.webp",
+        "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32741010943d53b1ee17825004178343-1024-1024.webp"
+      ],
+      "referenceDirectory": "nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352726673-arcanjo-spray1"
+    }
+  ]
+}

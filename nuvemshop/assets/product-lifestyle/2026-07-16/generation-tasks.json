@@ -1,0 +1,21 @@
+[
+  {
+    "productId": 352618878,
+    "title": "São Jorge Vintage | Moletom Canguru",
+    "collection": "RELIQUIA",
+    "family": "São Jorge Vintage",
+    "piece": "Moletom Canguru",
+    "color": "Preta",
+    "model": "Caio",
+    "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\caio-reference-board-v1.png",
+    "garment": "Preta pullover kangaroo hoodie with hood, kangaroo pocket and ribbed cuffs",
+    "front": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618878-sao-jorge-vintage1\\gallery-01.webp",
+    "hero": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618878-sao-jorge-vintage1\\gallery-02.webp",
+    "artwork": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Vintage [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Vintage.png",
+    "view": "back",
+    "isEcobag": false,
+    "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-vintage\\352618878-moletom-canguru-preta.png",
+    "productUrl": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage1/",
+    "prompt": "Create one square photorealistic NIMBUS RELIQUIA ecommerce lifestyle image for \"São Jorge Vintage | Moletom Canguru\". REFERENCE 1 is Caio's approved identity board: preserve the exact face, skin tone, hair, age and natural body proportions. short tight natural curls, subtle beard and slim body exactly as shown; never straight hair, never a clean-shaven replacement and never a different facial structure. REFERENCE 2 defines the exact Preta pullover kangaroo hoodie with hood, kangaroo pocket and ribbed cuffs, including garment color, fit, sleeves, hood or handles, and construction. REFERENCE 3 is the exact live YouDraw/Nuvemshop product mockup and is the authority for print side, print position and real print scale. REFERENCE 4 is the original transparent artwork and is the authority for every line, color, word and signature. Reproduce the sold product exactly. Apply the artwork unchanged and keep the same relative graphic bounding box and placement shown in REFERENCE 3. The print must never be larger than it appears in REFERENCE 3; if there is any uncertainty, make it slightly smaller rather than larger. REFERENCE 4, when present, defines artwork content only and must never override the print scale from REFERENCE 3. Do not enlarge, redraw, crop, simplify, replace lettering, invent symbols, alter signatures or add elements. Full or three-quarter rear view, with enough body visible to understand the exact garment silhouette. the same coherent NIMBUS RELÍQUIA campaign world: real Brazilian historic architecture, worn stone and azulejo details, warm natural window light, reverent but contemporary premium fashion editorial, realistic fabric folds, realistic skin, hands and anatomy, 50 mm editorial photography. The garment and print must be fully legible and commercially useful as the first image in an ecommerce gallery. No other logos, no added text, no watermark, no duplicate person, no mannequin and no AI-looking skin."
+  }
+]

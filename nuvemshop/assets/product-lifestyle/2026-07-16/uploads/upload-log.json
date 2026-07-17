@@ -1,0 +1,524 @@
+﻿{
+    "updatedAt":  "2026-07-16T20:21:28.4619582-03:00",
+    "completed":  49,
+    "failed":  2,
+    "entries":  [
+                    {
+                        "productId":  352725852,
+                        "title":  "Querubim Spray | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "failed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:50:41.1076864-03:00",
+                        "failedAt":  "2026-07-16T19:50:58.1954467-03:00",
+                        "elapsedSeconds":  17.1,
+                        "error":  "A seÃ§Ã£o Fotos e vÃ­deos nÃ£o ficou disponÃ­vel.",
+                        "evidence":  "C:\\Users\\rober\\Nimbus\\nuvemshop\\previews\\lifestyle-upload-batch\\352725852-failed.png"
+                    },
+                    {
+                        "productId":  352725852,
+                        "title":  "Querubim Spray | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:51:51.0458348-03:00",
+                        "completedAt":  "2026-07-16T19:52:23.4966380-03:00",
+                        "elapsedSeconds":  32.5
+                    },
+                    {
+                        "productId":  352407156,
+                        "title":  "SÃ£o Miguel Vintage | Moletom Canguru",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:53:09.5454534-03:00",
+                        "completedAt":  "2026-07-16T19:53:41.2096364-03:00",
+                        "elapsedSeconds":  31.7
+                    },
+                    {
+                        "productId":  352407182,
+                        "title":  "SÃ£o Miguel Vintage | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:53:41.2457478-03:00",
+                        "completedAt":  "2026-07-16T19:54:13.9010437-03:00",
+                        "elapsedSeconds":  32.7
+                    },
+                    {
+                        "productId":  352407196,
+                        "title":  "SÃ£o Miguel Vintage | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:54:13.9050264-03:00",
+                        "completedAt":  "2026-07-16T19:54:45.3465021-03:00",
+                        "elapsedSeconds":  31.4
+                    },
+                    {
+                        "productId":  352618837,
+                        "title":  "SÃ£o Jorge Vintage | BlusÃ£o Moletom",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:54:45.3565388-03:00",
+                        "completedAt":  "2026-07-16T19:55:17.3565480-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352618878,
+                        "title":  "SÃ£o Jorge Vintage | Moletom Canguru",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:55:17.3600623-03:00",
+                        "completedAt":  "2026-07-16T19:55:48.9554909-03:00",
+                        "elapsedSeconds":  31.6
+                    },
+                    {
+                        "productId":  352618903,
+                        "title":  "SÃ£o Jorge Vintage | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:55:48.9630355-03:00",
+                        "completedAt":  "2026-07-16T19:56:21.0147372-03:00",
+                        "elapsedSeconds":  32.1
+                    },
+                    {
+                        "productId":  352618935,
+                        "title":  "SÃ£o Jorge Vintage | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:56:21.0197143-03:00",
+                        "completedAt":  "2026-07-16T19:56:52.5252198-03:00",
+                        "elapsedSeconds":  31.5
+                    },
+                    {
+                        "productId":  352619175,
+                        "title":  "Salmo 19 | Moletom Canguru",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:56:52.5313780-03:00",
+                        "completedAt":  "2026-07-16T19:57:24.5910494-03:00",
+                        "elapsedSeconds":  32.1
+                    },
+                    {
+                        "productId":  352702020,
+                        "title":  "Salmo 19 | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:57:24.5940523-03:00",
+                        "completedAt":  "2026-07-16T19:57:56.0609236-03:00",
+                        "elapsedSeconds":  31.5
+                    },
+                    {
+                        "productId":  352702753,
+                        "title":  "Monograma NIMBUS | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T19:57:56.1934021-03:00",
+                        "completedAt":  "2026-07-16T19:58:27.7310642-03:00",
+                        "elapsedSeconds":  31.5
+                    },
+                    {
+                        "productId":  352702796,
+                        "title":  "Monograma NIMBUS | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T19:58:27.7410749-03:00",
+                        "completedAt":  "2026-07-16T19:59:00.2914570-03:00",
+                        "elapsedSeconds":  32.6
+                    },
+                    {
+                        "productId":  352702858,
+                        "title":  "FÃ© Acima de Tudo | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:59:00.2989766-03:00",
+                        "completedAt":  "2026-07-16T19:59:31.7350924-03:00",
+                        "elapsedSeconds":  31.4
+                    },
+                    {
+                        "productId":  352703153,
+                        "title":  "FÃ© Acima de Tudo | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:59:31.7444526-03:00",
+                        "completedAt":  "2026-07-16T20:00:03.7663488-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352703276,
+                        "title":  "Deus Ã© Fiel | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:00:03.7711544-03:00",
+                        "completedAt":  "2026-07-16T20:00:35.6979627-03:00",
+                        "elapsedSeconds":  31.9
+                    },
+                    {
+                        "productId":  352703343,
+                        "title":  "Deus Ã© Fiel | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:00:35.7030436-03:00",
+                        "completedAt":  "2026-07-16T20:01:07.6990988-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352717723,
+                        "title":  "BrasÃ£o NIMBUS | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:01:07.7046714-03:00",
+                        "completedAt":  "2026-07-16T20:01:39.7827608-03:00",
+                        "elapsedSeconds":  32.1
+                    },
+                    {
+                        "productId":  352717837,
+                        "title":  "BrasÃ£o NIMBUS | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:01:39.7864859-03:00",
+                        "completedAt":  "2026-07-16T20:02:11.4184357-03:00",
+                        "elapsedSeconds":  31.6
+                    },
+                    {
+                        "productId":  352717960,
+                        "title":  "Azulejo Sagrado | BlusÃ£o Moletom",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:02:11.4252358-03:00",
+                        "completedAt":  "2026-07-16T20:02:43.3842336-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352718083,
+                        "title":  "Azulejo Sagrado | Moletom Canguru",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:02:43.3895547-03:00",
+                        "completedAt":  "2026-07-16T20:03:15.2652266-03:00",
+                        "elapsedSeconds":  31.9
+                    },
+                    {
+                        "productId":  352718275,
+                        "title":  "Azulejo Sagrado | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:03:15.3438222-03:00",
+                        "completedAt":  "2026-07-16T20:03:48.0853875-03:00",
+                        "elapsedSeconds":  32.7
+                    },
+                    {
+                        "productId":  352718787,
+                        "title":  "SÃ£o Jorge Neobarroco | Moletom Canguru",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:03:48.0936506-03:00",
+                        "completedAt":  "2026-07-16T20:04:20.9113490-03:00",
+                        "elapsedSeconds":  32.8
+                    },
+                    {
+                        "productId":  352718943,
+                        "title":  "SÃ£o Jorge Neobarroco | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:04:20.9195022-03:00",
+                        "completedAt":  "2026-07-16T20:04:52.3628517-03:00",
+                        "elapsedSeconds":  31.4
+                    },
+                    {
+                        "productId":  352718999,
+                        "title":  "SÃ£o Jorge Neobarroco | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:04:52.3688729-03:00",
+                        "completedAt":  "2026-07-16T20:05:24.3746511-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352719728,
+                        "title":  "Aparecida Barroca | BlusÃ£o Moletom",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:05:24.3801094-03:00",
+                        "completedAt":  "2026-07-16T20:05:56.4066730-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352719816,
+                        "title":  "Aparecida Barroca | Moletom Canguru",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:05:56.4177955-03:00",
+                        "completedAt":  "2026-07-16T20:06:28.4297342-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352720127,
+                        "title":  "Aparecida Barroca | Camiseta Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:06:28.4342592-03:00",
+                        "completedAt":  "2026-07-16T20:07:00.3744779-03:00",
+                        "elapsedSeconds":  31.9
+                    },
+                    {
+                        "productId":  352720257,
+                        "title":  "Acima de Tudo GÃ³tico | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:07:00.3830159-03:00",
+                        "completedAt":  "2026-07-16T20:07:32.4142931-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352721118,
+                        "title":  "FÃ© Wildstyle | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:07:32.4196976-03:00",
+                        "completedAt":  "2026-07-16T20:08:03.8616678-03:00",
+                        "elapsedSeconds":  31.4
+                    },
+                    {
+                        "productId":  352721197,
+                        "title":  "FÃ© Wildstyle | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:08:03.8672896-03:00",
+                        "completedAt":  "2026-07-16T20:08:35.8651091-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352721477,
+                        "title":  "EspÃ­rito Santo Spray | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:08:35.9645062-03:00",
+                        "completedAt":  "2026-07-16T20:09:07.4200525-03:00",
+                        "elapsedSeconds":  31.5
+                    },
+                    {
+                        "productId":  352721633,
+                        "title":  "NIMBUS Wildstyle | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:09:07.4250300-03:00",
+                        "completedAt":  "2026-07-16T20:09:38.9768529-03:00",
+                        "elapsedSeconds":  31.6
+                    },
+                    {
+                        "productId":  352722232,
+                        "title":  "Sagrado CoraÃ§Ã£o Spray | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:09:38.9897896-03:00",
+                        "completedAt":  "2026-07-16T20:10:11.0327298-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352722685,
+                        "title":  "SÃ£o Miguel Celeste | Moletom Canguru",
+                        "collection":  "NUVEM",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:10:11.0367301-03:00",
+                        "completedAt":  "2026-07-16T20:10:43.0799904-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352723243,
+                        "title":  "SÃ£o Miguel Celeste | Camiseta Premium",
+                        "collection":  "NUVEM",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:10:43.0879918-03:00",
+                        "completedAt":  "2026-07-16T20:11:15.0110631-03:00",
+                        "elapsedSeconds":  31.9
+                    },
+                    {
+                        "productId":  352726673,
+                        "title":  "SÃ£o Miguel Vitorioso | Moletom Canguru",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  6,
+                        "startedAt":  "2026-07-16T20:11:15.0222003-03:00",
+                        "completedAt":  "2026-07-16T20:11:46.0331406-03:00",
+                        "elapsedSeconds":  31
+                    },
+                    {
+                        "productId":  352727545,
+                        "title":  "SÃ£o Miguel Vitorioso | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:11:46.0397780-03:00",
+                        "completedAt":  "2026-07-16T20:12:17.5738118-03:00",
+                        "elapsedSeconds":  31.5
+                    },
+                    {
+                        "productId":  352727892,
+                        "title":  "Aparecida Spray | BlusÃ£o Moletom",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:12:17.5788204-03:00",
+                        "completedAt":  "2026-07-16T20:12:49.0711139-03:00",
+                        "elapsedSeconds":  31.5
+                    },
+                    {
+                        "productId":  352728019,
+                        "title":  "Aparecida Spray | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:12:49.0802541-03:00",
+                        "completedAt":  "2026-07-16T20:13:21.0687174-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352728277,
+                        "title":  "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:13:21.0791655-03:00",
+                        "completedAt":  "2026-07-16T20:13:53.6126683-03:00",
+                        "elapsedSeconds":  32.5
+                    },
+                    {
+                        "productId":  352728357,
+                        "title":  "Anjo da Guarda Stencil | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:13:53.7018253-03:00",
+                        "completedAt":  "2026-07-16T20:14:25.6459110-03:00",
+                        "elapsedSeconds":  31.9
+                    },
+                    {
+                        "productId":  352728451,
+                        "title":  "Acima de Tudo Grafite | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:14:25.6527650-03:00",
+                        "completedAt":  "2026-07-16T20:14:58.1385909-03:00",
+                        "elapsedSeconds":  32.5
+                    },
+                    {
+                        "productId":  352728524,
+                        "title":  "Acima de Tudo Grafite | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:14:58.1433631-03:00",
+                        "completedAt":  "2026-07-16T20:15:29.5369263-03:00",
+                        "elapsedSeconds":  31.4
+                    },
+                    {
+                        "productId":  352889132,
+                        "title":  "Aparecida Spray | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T20:15:29.5428123-03:00",
+                        "completedAt":  "2026-07-16T20:16:01.5226574-03:00",
+                        "elapsedSeconds":  32
+                    },
+                    {
+                        "productId":  352890896,
+                        "title":  "Aparecida Barroca | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "failed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:16:01.5310876-03:00",
+                        "failedAt":  "2026-07-16T20:16:41.1088660-03:00",
+                        "elapsedSeconds":  39.6,
+                        "error":  "O editor da primeira foto nÃ£o abriu.",
+                        "evidence":  "C:\\Users\\rober\\Nimbus\\nuvemshop\\previews\\lifestyle-upload-batch\\352890896-failed.png"
+                    },
+                    {
+                        "productId":  352890896,
+                        "title":  "Aparecida Barroca | Camiseta Oversized Premium",
+                        "collection":  "RELIQUIA",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:19:37.7012128-03:00",
+                        "completedAt":  "2026-07-16T20:19:37.7048576-03:00",
+                        "elapsedSeconds":  0,
+                        "note":  "Retomado manualmente após perda de foco da janela; upload existente foi ordenado e salvo sem duplicar."
+                    },
+                    {
+                        "productId":  352898175,
+                        "title":  "SÃ£o Miguel Vitorioso | Camiseta Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T20:19:56.3506772-03:00",
+                        "completedAt":  "2026-07-16T20:20:29.2715518-03:00",
+                        "elapsedSeconds":  32.9
+                    },
+                    {
+                        "productId":  355581274,
+                        "title":  "NIMBUS Wildstyle | Ecobag",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  1,
+                        "startedAt":  "2026-07-16T20:20:29.3259602-03:00",
+                        "completedAt":  "2026-07-16T20:21:02.7707647-03:00",
+                        "elapsedSeconds":  33.4
+                    },
+                    {
+                        "productId":  352725749,
+                        "title":  "Querubim Spray | Camiseta Oversized Premium",
+                        "collection":  "STREET",
+                        "status":  "completed",
+                        "existingGalleryCount":  4,
+                        "startedAt":  "2026-07-16T19:20:00-03:00",
+                        "completedAt":  "2026-07-16T19:35:00-03:00",
+                        "elapsedSeconds":  0,
+                        "note":  "Piloto manual confirmado como Principal e salvo."
+                    },
+                    {
+                        "productId":  352722510,
+                        "title":  "São Miguel Celeste | Blusão Moletom",
+                        "collection":  "NUVEM",
+                        "status":  "completed",
+                        "existingGalleryCount":  2,
+                        "startedAt":  "2026-07-16T19:40:00-03:00",
+                        "completedAt":  "2026-07-16T19:47:00-03:00",
+                        "elapsedSeconds":  0,
+                        "note":  "Segundo piloto manual confirmado como Principal e salvo."
+                    }
+                ]
+}
