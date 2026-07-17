@@ -71,6 +71,24 @@ function buildPrompt(task) {
     n += 1;
   };
 
+  // Modo correcao: preserva a pessoa/cena/peca da foto ja gerada e conserta SO a estampa.
+  // Mesmo principio do correct-nuvemshop-lifestyle-batch do lote de 16/07.
+  if (task.mode === "corrigir") {
+    push(task.sourcePhoto, `REFERENCE {N} is the approved campaign photo. Keep every pixel of the person, face, pose, scene, lighting and garment construction UNCHANGED. Change ONLY the printed artwork on the garment.`);
+    push(task.mockupRef, `REFERENCE {N} is the exact live product mockup and is the authority for print side, print position and REAL PRINT SCALE relative to the garment.`);
+    push(task.artworkRef, `REFERENCE {N} is the original artwork and is the authority for every line, shape, ink color, word, letterform and signature. Reproduce it EXACTLY, including its exact typeface, letter style, arch or curve layout and ornament details. Never redesign, simplify or substitute the art.`);
+    const partes = [
+      `Correct the printed artwork in this NIMBUS ecommerce photo of "${task.title}" (${task.color}).`,
+      ...refs,
+      `SPECIFIC CORRECTION REQUIRED: ${task.fix}`,
+      `The print must match the mockup scale: never larger than it appears in the mockup relative to the garment; when uncertain, smaller.`,
+      `TEXT IS SACRED: every word and letter copied exactly, letter by letter, including small text and the NIMBUS signature. Never invent, substitute or scramble glyphs.`,
+      `The corrected print must remain ink on fabric: follow folds, fabric texture through the ink, no glow brighter than the scene light, no cut-out background.`,
+      `Everything else in the image stays identical. No added text, no watermark, no new elements.`,
+    ];
+    return { prompt: partes.join(" "), images: imgs };
+  }
+
   push(task.modelBoard, `REFERENCE {N} is ${task.model}'s approved identity board: preserve the exact face, skin tone, hair, age and natural body proportions. ${modelIdentity[task.model]}.`);
   push(task.garmentRef, `REFERENCE {N} defines the exact ${task.garment}, including garment color, fit, sleeves, hood or handles, and construction.`);
   push(task.mockupRef, `REFERENCE {N} is the exact live YouDraw/Nuvemshop product mockup FOR THIS COLOR and is the authority for print side, print position and real print scale.`);
