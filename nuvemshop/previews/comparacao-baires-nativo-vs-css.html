@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIMBUS — Baires nativo × CSS opcional</title>
+  <meta name="description" content="Comparação visual entre a loja NIMBUS publicada com o editor nativo do Baires e refinamentos opcionais em CSS.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b2360;
+      --gold: #e9c46a;
+      --sky: #dcebfa;
+      --cloud: #f7fbff;
+      --surface: #ffffff;
+      --ink: #1b2733;
+      --muted: #667085;
+      --line: rgba(11, 35, 96, .16);
+      --shadow-sm: 0 8px 24px rgba(11, 35, 96, .08);
+      --shadow-lg: 0 24px 70px rgba(11, 35, 96, .14);
+      --radius-sm: 12px;
+      --radius-lg: 28px;
+    }
+
+    * { box-sizing: border-box; }
+    html { color-scheme: light; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cloud);
+      font: 400 16px/1.55 Inter, system-ui, sans-serif;
+    }
+    button, a { font: inherit; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+    .notice {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 20px;
+      color: white;
+      background: var(--navy);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .notice span { color: var(--gold); }
+
+    .shell { width: min(1480px, calc(100% - 32px)); margin: 0 auto; }
+    .intro { padding: clamp(56px, 8vw, 108px) 0 48px; }
+    .kicker {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { margin: 0; color: var(--navy); font-family: Fraunces, Georgia, serif; line-height: 1.02; }
+    h1 { max-width: 980px; font-size: clamp(44px, 7vw, 94px); font-weight: 500; }
+    .intro-copy { max-width: 720px; margin: 24px 0 0; color: var(--muted); font-size: 17px; }
+    .intro-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 22px;
+      border: 1px solid var(--navy);
+      border-radius: 999px;
+      color: white;
+      background: var(--navy);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 180ms ease, background 180ms ease, border-color 180ms ease;
+    }
+    .action:hover { color: var(--navy); border-color: var(--gold); background: var(--gold); }
+    .action.secondary { color: var(--navy); background: transparent; }
+
+    .legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 22px; }
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy);
+      background: rgba(255,255,255,.72);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .legend .live::before, .legend .concept::before {
+      width: 8px;
+      height: 8px;
+      margin-right: 8px;
+      border-radius: 50%;
+      content: "";
+    }
+    .legend .live::before { background: #2f9e64; }
+    .legend .concept::before { background: var(--gold); }
+
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: start; }
+    .option {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+    .option-head { display: flex; align-items: start; justify-content: space-between; gap: 16px; padding: 24px; }
+    .option-head h2 { font-size: clamp(30px, 4vw, 48px); }
+    .option-head p { max-width: 520px; margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+    .status {
+      flex: 0 0 auto;
+      padding: 7px 11px;
+      border-radius: 999px;
+      color: #17633d;
+      background: #e9f8ef;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .status.optional { color: #6b5116; background: #fff8df; }
+
+    .store {
+      margin: 0 16px 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--cloud);
+    }
+    .storebar { padding: 8px; color: white; background: var(--navy); font-size: 9px; font-weight: 600; text-align: center; text-transform: uppercase; }
+    .storehead { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; min-height: 80px; padding: 12px 18px; background: var(--cloud); }
+    .search { justify-self: start; color: var(--navy); font-size: 10px; font-weight: 600; text-transform: uppercase; }
+    .brand { color: var(--navy); font-family: Fraunces, serif; font-size: 23px; font-weight: 600; letter-spacing: .04em; }
+    .tools { justify-self: end; color: var(--navy); font-size: 10px; font-weight: 600; text-transform: uppercase; }
+    .storenav { display: flex; justify-content: center; gap: 19px; padding: 0 12px 14px; color: var(--navy); background: var(--cloud); font-size: 9px; font-weight: 600; text-transform: uppercase; }
+    .hero { display: grid; grid-template-columns: 1.5fr .5fr; min-height: 205px; padding: 28px 20px; background: var(--sky); }
+    .hero h3 { max-width: 470px; font-size: clamp(32px, 4vw, 54px); font-weight: 500; }
+    .hero-copy { align-self: center; }
+    .hero-copy p { margin: 0 0 12px; color: #334b72; font-size: 11px; }
+    .hero-copy a { color: var(--navy); font-size: 10px; font-weight: 600; }
+    .products { display: grid; grid-template-columns: .8fr 2.2fr; gap: 16px; padding: 25px 20px 30px; }
+    .products > h3 { font-size: clamp(26px, 3vw, 40px); }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .product-art {
+      display: grid;
+      min-height: 100px;
+      place-items: center;
+      border: 1px solid rgba(11,35,96,.08);
+      background: #fdfdfd;
+    }
+    .product-art svg { width: 62%; color: var(--navy); opacity: .88; }
+    .product-meta { padding-top: 7px; color: var(--navy); font-size: 8px; font-weight: 600; line-height: 1.35; }
+    .price { display: block; margin-top: 4px; font-weight: 500; }
+    .benefits { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); background: white; }
+    .benefit { padding: 16px; text-align: center; }
+    .benefit + .benefit { border-left: 1px solid var(--line); }
+    .benefit strong { display: block; color: var(--navy); font-size: 9px; text-transform: uppercase; }
+    .benefit span { display: block; margin-top: 3px; color: var(--muted); font-size: 8px; }
+    .storefoot { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 22px; color: white; background: var(--navy); font-size: 8px; }
+    .storefoot strong { display: block; margin-bottom: 8px; color: var(--gold); text-transform: uppercase; }
+    .storefoot p { margin: 0 0 4px; }
+    .powered { grid-column: 1 / -1; padding-top: 8px; border-top: 1px solid rgba(255,255,255,.22); opacity: .72; }
+
+    .enhanced .store { border-radius: 22px; box-shadow: var(--shadow-lg); }
+    .enhanced .storehead { min-height: 72px; padding-inline: 24px; }
+    .enhanced .storenav span { position: relative; padding-bottom: 5px; }
+    .enhanced .storenav span:nth-child(3)::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--gold);
+      content: "";
+    }
+    .enhanced .hero { margin: 0 14px; overflow: hidden; border-radius: 22px; }
+    .enhanced .hero-copy a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 14px;
+      border-radius: 999px;
+      color: white;
+      background: var(--navy);
+      text-decoration: none;
+    }
+    .enhanced .products { grid-template-columns: 1fr; padding: 32px 24px; }
+    .enhanced .products > h3 { font-size: 34px; }
+    .enhanced .product-art { min-height: 112px; border: 0; border-radius: 18px; background: linear-gradient(145deg, white, var(--sky)); }
+    .enhanced .benefits { margin: 0 14px 14px; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; }
+    .enhanced .storefoot { margin-top: 14px; padding: 28px 24px; }
+    .enhanced .powered { display: none; }
+
+    .delta { padding: clamp(64px, 8vw, 100px) 0; }
+    .delta h2 { max-width: 850px; font-size: clamp(38px, 6vw, 72px); }
+    .delta-copy { max-width: 700px; margin: 18px 0 30px; color: var(--muted); }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: var(--shadow-sm); }
+    table { width: 100%; min-width: 760px; border-collapse: collapse; }
+    th, td { padding: 18px 20px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--navy); background: #eef6fd; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    td:first-child { color: var(--navy); font-weight: 700; }
+    tr:last-child td { border-bottom: 0; }
+    .yes, .no { font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .yes { color: #217346; }
+    .no { color: #8a6518; }
+
+    .decision {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 22px;
+      margin-bottom: 100px;
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: var(--radius-lg);
+      color: white;
+      background: var(--navy);
+      box-shadow: var(--shadow-lg);
+    }
+    .decision h2 { color: white; font-size: clamp(34px, 5vw, 62px); }
+    .decision p { max-width: 720px; margin: 18px 0 0; color: rgba(255,255,255,.78); }
+    .decision-box { align-self: center; padding: 24px; border: 1px solid rgba(255,255,255,.2); border-radius: 20px; background: rgba(255,255,255,.07); }
+    .decision-box strong { display: block; color: var(--gold); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+    .decision-box code { display: block; margin-top: 10px; color: white; font: 600 14px/1.5 Inter, sans-serif; }
+    .decision-box span { display: block; margin-top: 8px; color: rgba(255,255,255,.68); font-size: 12px; }
+
+    .footer { padding: 24px 0 40px; color: var(--muted); font-size: 12px; text-align: center; }
+
+    @media (max-width: 980px) {
+      .compare, .decision { grid-template-columns: 1fr; }
+      .hero { grid-template-columns: 1fr; gap: 16px; }
+      .products { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 20px, 1480px); }
+      .option-head { flex-direction: column; }
+      .storehead { min-height: 64px; padding-inline: 12px; }
+      .storenav { gap: 9px; overflow: hidden; }
+      .storenav span:nth-child(1), .storenav span:nth-child(2) { display: none; }
+      .hero { min-height: 260px; padding: 24px 16px; }
+      .hero h3 { font-size: 38px; }
+      .products, .enhanced .products { padding-inline: 15px; }
+      .benefits { grid-template-columns: 1fr; }
+      .benefit + .benefit { border-top: 1px solid var(--line); border-left: 0; }
+      .storefoot { grid-template-columns: 1fr; }
+      .powered { grid-column: 1; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="notice">Simulação local para decisão <span>&nbsp;· nenhum CSS foi aplicado na Nuvemshop</span></div>
+
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <p class="kicker">NIMBUS · tema Baires · 15/07/2026</p>
+      <h1 id="page-title">Baires nativo × refinamento CSS</h1>
+      <p class="intro-copy">A coluna da esquerda representa a direção publicada usando somente os controles do editor. A coluna da direita mostra o que um pacote pequeno de CSS poderia refinar sem mudar conteúdo, produtos ou imagens.</p>
+      <div class="intro-actions">
+        <a class="action" href="https://loja.nimbuswear.com.br/" target="_blank" rel="noreferrer">Abrir loja publicada</a>
+        <a class="action secondary" href="#diferencas">Ver diferenças</a>
+      </div>
+    </section>
+
+    <div class="legend" aria-label="Legenda da comparação">
+      <span class="live">Publicado agora</span>
+      <span class="concept">Simulação opcional</span>
+      <span>Imagens novas continuam pendentes do Higgsfield</span>
+    </div>
+
+    <section class="compare" aria-label="Comparação visual">
+      <article class="option">
+        <div class="option-head">
+          <div>
+            <p class="kicker">Opção A</p>
+            <h2>Baires nativo</h2>
+            <p>Mais fácil de manter pelo editor. Paleta, fontes, módulos, menus e rodapé continuam sob controle da Nuvemshop.</p>
+          </div>
+          <span class="status">Publicado</span>
+        </div>
+        <div class="store" aria-label="Simulação do Baires nativo">
+          <div class="storebar">10% do lucro é destinado a projetos sociais</div>
+          <div class="storehead"><span class="search">Buscar</span><span class="brand">NIMBUS</span><span class="tools">Login · Carrinho</span></div>
+          <div class="storenav"><span>Início</span><span>Produtos</span><span>Street</span><span>Relíquia</span><span>Nuvem</span></div>
+          <div class="hero">
+            <h3>Fé com propósito. Design com presença.</h3>
+            <div class="hero-copy"><p>Streetwear católico premium, feito no Brasil.</p><a href="#">Conheça a NIMBUS</a></div>
+          </div>
+          <div class="products">
+            <h3>Essenciais NIMBUS</h3>
+            <div class="grid">
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">São Miguel Vintage<span class="price">R$179,90</span></div></div>
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">São Jorge Vintage<span class="price">R$179,90</span></div></div>
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">Acima de Tudo<span class="price">R$179,90</span></div></div>
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">Aparecida Barroca<span class="price">R$179,90</span></div></div>
+            </div>
+          </div>
+          <div class="benefits"><div class="benefit"><strong>Feito no Brasil</strong><span>Produção sob demanda</span></div><div class="benefit"><strong>Compra segura</strong><span>Pix, cartão e boleto</span></div><div class="benefit"><strong>Propósito real</strong><span>10% do lucro destinado</span></div></div>
+          <div class="storefoot"><div><strong>Loja</strong><p>Produtos</p><p>Street · Relíquia · Nuvem</p></div><div><strong>Institucional</strong><p>Sobre · Projetos Sociais · Contato</p></div><div class="powered">criado com Nuvemshop</div></div>
+        </div>
+      </article>
+
+      <article class="option enhanced">
+        <div class="option-head">
+          <div>
+            <p class="kicker">Opção B</p>
+            <h2>CSS leve</h2>
+            <p>Mesma base nativa, com acabamento editorial em raios, espaçamento, estados de interação e cards.</p>
+          </div>
+          <span class="status optional">Não aplicado</span>
+        </div>
+        <div class="store" aria-label="Simulação do Baires com CSS opcional">
+          <div class="storebar">10% do lucro é destinado a projetos sociais</div>
+          <div class="storehead"><span class="search">Buscar</span><span class="brand">NIMBUS</span><span class="tools">Login · Carrinho</span></div>
+          <div class="storenav"><span>Início</span><span>Produtos</span><span>Street</span><span>Relíquia</span><span>Nuvem</span></div>
+          <div class="hero">
+            <h3>Fé com propósito. Design com presença.</h3>
+            <div class="hero-copy"><p>Streetwear católico premium, feito no Brasil.</p><a href="#">Conheça a NIMBUS</a></div>
+          </div>
+          <div class="products">
+            <h3>Essenciais NIMBUS</h3>
+            <div class="grid">
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">São Miguel Vintage<span class="price">R$179,90</span></div></div>
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">São Jorge Vintage<span class="price">R$179,90</span></div></div>
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">Acima de Tudo<span class="price">R$179,90</span></div></div>
+              <div><div class="product-art"><svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M23 8 11 14 4 27l9 5 5-7v31h28V25l5 7 9-5-7-13-12-6c-2 4-5 6-9 6s-7-2-9-6Z"/></svg></div><div class="product-meta">Aparecida Barroca<span class="price">R$179,90</span></div></div>
+            </div>
+          </div>
+          <div class="benefits"><div class="benefit"><strong>Feito no Brasil</strong><span>Produção sob demanda</span></div><div class="benefit"><strong>Compra segura</strong><span>Pix, cartão e boleto</span></div><div class="benefit"><strong>Propósito real</strong><span>10% do lucro destinado</span></div></div>
+          <div class="storefoot"><div><strong>Loja</strong><p>Produtos</p><p>Street · Relíquia · Nuvem</p></div><div><strong>Institucional</strong><p>Sobre · Projetos Sociais · Contato</p></div><div class="powered">criado com Nuvemshop</div></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="delta" id="diferencas" aria-labelledby="delta-title">
+      <p class="kicker">O que realmente muda</p>
+      <h2 id="delta-title">CSS seria acabamento, não reconstrução.</h2>
+      <p class="delta-copy">A direção, a hierarquia e o conteúdo já estão resolvidos no editor. O pacote opcional serviria apenas para cinco refinamentos visuais que o Baires não controla com precisão.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Área</th><th>Baires nativo publicado</th><th>CSS leve opcional</th><th>Impacto</th></tr></thead>
+          <tbody>
+            <tr><td>“criado com Nuvemshop”</td><td>Permanece visível</td><td>Pode ser ocultado</td><td><span class="yes">Visual alto</span></td></tr>
+            <tr><td>Botões e links</td><td>Estilo padrão do tema</td><td>Pílulas, dourado no hover e foco consistente</td><td><span class="yes">Visual médio</span></td></tr>
+            <tr><td>Cards de produto</td><td>Retos e planos</td><td>Raio, superfície e sombra muito sutil</td><td><span class="yes">Visual médio</span></td></tr>
+            <tr><td>Espaçamento</td><td>Ritmo definido pelo Baires</td><td>Limites de largura e respiros editoriais</td><td><span class="yes">Visual médio</span></td></tr>
+            <tr><td>Escala tipográfica</td><td>Opções pequeno, médio e grande</td><td>Escala fluida com <code>clamp()</code></td><td><span class="no">Visual baixo</span></td></tr>
+            <tr><td>Imagens e variantes</td><td>Dependem do cadastro correto</td><td>CSS não corrige foto de cor nem cria imagens</td><td><span class="no">Sem benefício</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="decision" aria-labelledby="decision-title">
+      <div>
+        <p class="kicker" style="color:var(--gold)">Minha recomendação</p>
+        <h2 id="decision-title">Ficar no nativo por enquanto.</h2>
+        <p>A versão publicada já está limpa, responsiva e coerente com a landing page. Eu só aplicaria CSS depois das novas imagens do Higgsfield, em um pacote único, pequeno e fácil de remover. Assim comparamos acabamento sobre a loja definitiva, não sobre uma etapa intermediária.</p>
+      </div>
+      <div class="decision-box">
+        <strong>Se decidir aprovar depois</strong>
+        <code>APROVO CSS LEVE</code>
+        <span>Isso autoriza apenas os cinco refinamentos descritos acima. Nenhum código foi aplicado agora.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">NIMBUS · comparação local para decisão de layout · CSS da loja permanece vazio</footer>
+</body>
+</html>

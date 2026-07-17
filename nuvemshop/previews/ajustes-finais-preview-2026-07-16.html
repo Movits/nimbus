@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIMBUS | Prévia final da loja</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b2360;
+      --navy-deep: #071a49;
+      --gold: #e9c46a;
+      --sky: #dcebfa;
+      --sky-soft: #edf6ff;
+      --cloud: #f7fbff;
+      --white: #ffffff;
+      --ink: #1b2733;
+      --muted: #60708a;
+      --line: rgba(11, 35, 96, 0.14);
+      --shadow: 0 18px 55px rgba(11, 35, 96, 0.12);
+      --serif: "Fraunces", Georgia, serif;
+      --sans: "Inter", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scrollbar-gutter: stable both-edges;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cloud);
+      font: 400 15px/1.6 var(--sans);
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a,
+    button {
+      color: inherit;
+      font: inherit;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    button {
+      border: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .announcement {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 36px;
+      padding: 7px 24px;
+      border-bottom: 1px solid rgba(11, 35, 96, 0.08);
+      color: var(--navy);
+      background: var(--sky);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .site-header {
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 185px minmax(0, 1fr) 265px;
+      align-items: center;
+      min-height: 92px;
+      padding: 0 clamp(28px, 3vw, 56px);
+      border-bottom: 1px solid var(--line);
+      background: rgba(247, 251, 255, 0.98);
+    }
+
+    .brand {
+      justify-self: start;
+      width: 154px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px, 1.35vw, 25px);
+      min-width: 0;
+    }
+
+    .main-nav a,
+    .header-tools a {
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.055em;
+      white-space: nowrap;
+      text-transform: uppercase;
+    }
+
+    .main-nav a {
+      position: relative;
+      padding: 34px 0 31px;
+    }
+
+    .main-nav a::after {
+      position: absolute;
+      right: 50%;
+      bottom: 24px;
+      left: 50%;
+      height: 2px;
+      background: var(--gold);
+      content: "";
+      transition: right 180ms ease, left 180ms ease;
+    }
+
+    .main-nav a:hover::after,
+    .main-nav a:focus-visible::after {
+      right: 0;
+      left: 0;
+    }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+    }
+
+    .header-tool {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .header-tool svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      fill: none;
+    }
+
+    .cart-count {
+      display: inline-grid;
+      width: 19px;
+      height: 19px;
+      margin-left: -3px;
+      place-items: center;
+      border-radius: 999px;
+      color: var(--navy);
+      background: var(--gold);
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .mobile-menu {
+      display: none;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      color: var(--navy);
+      background: transparent;
+    }
+
+    .mobile-menu svg {
+      width: 22px;
+      stroke: currentColor;
+      stroke-width: 1.7;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .collections {
+      padding: 46px clamp(20px, 3.2vw, 58px) 52px;
+      background: var(--cloud);
+    }
+
+    .section-title {
+      margin: 0 0 32px;
+      color: var(--navy);
+      font: 600 clamp(28px, 2.5vw, 40px)/1 var(--serif);
+      letter-spacing: -0.025em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-title::after {
+      display: block;
+      width: 43px;
+      height: 3px;
+      margin: 17px auto 0;
+      background: var(--gold);
+      content: "";
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(14px, 1.4vw, 24px);
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .collection-card {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      border-radius: 3px;
+      background: var(--sky);
+      box-shadow: 0 1px 0 rgba(11, 35, 96, 0.06);
+    }
+
+    .collection-image {
+      position: relative;
+      height: clamp(215px, 16.2vw, 292px);
+      overflow: hidden;
+    }
+
+    .collection-image::after {
+      position: absolute;
+      inset: 58% 0 0;
+      background: linear-gradient(180deg, transparent, rgba(7, 26, 73, 0.48));
+      content: "";
+    }
+
+    .collection-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 500ms ease;
+    }
+
+    .collection-card:hover .collection-image img {
+      transform: scale(1.025);
+    }
+
+    .collection-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      padding: 16px 19px 17px;
+      border: 1px solid var(--line);
+      border-top: 0;
+      background: var(--white);
+    }
+
+    .collection-name {
+      color: var(--navy);
+      font: 600 clamp(25px, 2vw, 34px)/1 var(--serif);
+      letter-spacing: -0.025em;
+    }
+
+    .collection-index {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .mobile-dots {
+      display: none;
+    }
+
+    .manifesto {
+      background: var(--sky);
+    }
+
+    .manifesto-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(290px, 0.8fr);
+      gap: clamp(38px, 5.6vw, 92px);
+      align-items: center;
+      width: min(1420px, calc(100% - 96px));
+      min-height: 465px;
+      margin: 0 auto;
+      padding: 66px 0;
+    }
+
+    .manifesto h1 {
+      max-width: 10.8ch;
+      margin: 0;
+      color: var(--navy);
+      font: 600 clamp(57px, 5.4vw, 91px)/0.94 var(--serif);
+      letter-spacing: -0.052em;
+      text-wrap: balance;
+    }
+
+    .manifesto-copy {
+      align-self: center;
+      max-width: 355px;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .manifesto-copy p:not(.eyebrow) {
+      margin: 0 0 24px;
+      color: #294776;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 48px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 27px;
+      border: 1px solid var(--navy);
+      border-radius: 999px;
+      color: var(--white);
+      background: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.035em;
+      transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      color: var(--navy);
+      background: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      width: min(1380px, calc(100% - 80px));
+      margin: 0 auto;
+      padding: 48px 0;
+      background: var(--white);
+    }
+
+    .benefit {
+      padding: 5px 34px;
+      text-align: center;
+    }
+
+    .benefit + .benefit {
+      border-left: 1px solid var(--line);
+    }
+
+    .benefit h3 {
+      margin: 0 0 8px;
+      color: var(--navy);
+      font: 600 19px/1.15 var(--serif);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .benefit p {
+      margin: 0;
+      color: #294776;
+      font-size: 13px;
+    }
+
+    .projects {
+      padding: 76px clamp(22px, 4vw, 64px) 84px;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .projects-intro {
+      display: grid;
+      grid-template-columns: 1fr minmax(320px, 470px);
+      gap: 42px;
+      align-items: end;
+      max-width: 1320px;
+      margin: 0 auto 34px;
+    }
+
+    .projects h2 {
+      margin: 0;
+      color: var(--navy);
+      font: 600 clamp(38px, 4vw, 62px)/0.98 var(--serif);
+      letter-spacing: -0.04em;
+    }
+
+    .projects-intro > p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      display: flex;
+      min-height: 80px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 19px 22px;
+      border: 1px solid var(--line);
+      border-radius: 2px;
+      color: var(--navy);
+      background: var(--cloud);
+      text-align: left;
+      cursor: pointer;
+      transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+    }
+
+    .project-card:hover,
+    .project-card:focus-visible {
+      color: var(--white);
+      background: var(--navy);
+      transform: translateY(-2px);
+    }
+
+    .project-card strong {
+      font: 600 20px/1.2 var(--serif);
+    }
+
+    .project-card span {
+      font-size: 20px;
+    }
+
+    .site-footer {
+      position: relative;
+      padding: 58px clamp(24px, 4vw, 64px) 24px;
+      border-top: 3px solid var(--gold);
+      color: var(--navy);
+      background: linear-gradient(180deg, var(--cloud) 0%, var(--sky) 100%);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, 1.35fr) repeat(3, minmax(145px, 0.7fr));
+      gap: 50px;
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    .footer-brand img {
+      width: 150px;
+    }
+
+    .footer-brand p {
+      max-width: 365px;
+      margin: 18px 0 0;
+      color: #294776;
+      font-size: 13px;
+    }
+
+    .site-footer h3 {
+      margin: 4px 0 16px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .site-footer ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .site-footer li + li {
+      margin-top: 9px;
+    }
+
+    .site-footer a {
+      color: #294776;
+      font-size: 13px;
+    }
+
+    .site-footer a:hover {
+      color: var(--ink);
+    }
+
+    .copyright {
+      max-width: 1320px;
+      margin: 46px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(11, 35, 96, 0.16);
+      color: #5b6b85;
+      font-size: 10px;
+      text-align: center;
+    }
+
+    .modal {
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .modal.is-open {
+      display: flex;
+    }
+
+    .modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 26, 73, 0.72);
+      backdrop-filter: blur(7px);
+      cursor: pointer;
+    }
+
+    .modal-dialog {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 0.98fr) minmax(420px, 1.02fr);
+      width: min(1040px, calc(100vw - 64px));
+      max-height: calc(100vh - 64px);
+      overflow: auto;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 20px;
+      background: var(--cloud);
+      box-shadow: 0 32px 100px rgba(7, 26, 73, 0.38);
+      animation: modal-in 260ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .modal-media {
+      min-height: 580px;
+      background: var(--sky);
+    }
+
+    .modal-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-content {
+      padding: 60px 58px 50px;
+    }
+
+    .modal-close {
+      position: absolute;
+      z-index: 2;
+      top: 17px;
+      right: 17px;
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--navy);
+      background: rgba(247, 251, 255, 0.96);
+      box-shadow: 0 8px 24px rgba(11, 35, 96, 0.14);
+      cursor: pointer;
+      transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .modal-close::before,
+    .modal-close::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: currentColor;
+      pointer-events: none;
+      content: "";
+    }
+
+    .modal-close::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .modal-close::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .modal-close:hover,
+    .modal-close:focus-visible {
+      color: var(--white);
+      background: var(--ink);
+      box-shadow: 0 11px 28px rgba(11, 35, 96, 0.22);
+    }
+
+    .modal-kicker {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .modal-content h2 {
+      margin: 0 0 17px;
+      color: var(--navy);
+      font: 600 clamp(37px, 3.3vw, 52px)/0.98 var(--serif);
+      letter-spacing: -0.04em;
+    }
+
+    .modal-intro {
+      margin: 0 0 24px;
+      color: #294776;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .modal-fact {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .modal-fact h3 {
+      margin: 0 0 4px;
+      color: var(--navy);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .modal-fact p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .modal-content .button {
+      margin-top: 20px;
+    }
+
+    @keyframes modal-in {
+      from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.985);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .site-header {
+        grid-template-columns: 165px 1fr 230px;
+      }
+
+      .main-nav {
+        gap: 13px;
+      }
+
+      .main-nav a {
+        font-size: 10px;
+      }
+
+      .header-tools {
+        gap: 15px;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .site-header {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        padding: 0 18px;
+      }
+
+      .mobile-menu {
+        display: flex;
+        grid-column: 1;
+        justify-self: start;
+      }
+
+      .brand {
+        grid-column: 2;
+        justify-self: center;
+        width: 132px;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .header-tools {
+        grid-column: 3;
+        justify-self: end;
+        gap: 14px;
+      }
+
+      .header-tool span:not(.cart-count),
+      .header-tool:first-child {
+        display: none;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .announcement {
+        min-height: 31px;
+        padding: 6px 14px;
+        font-size: 8px;
+        letter-spacing: 0.08em;
+      }
+
+      .site-header {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        min-height: 68px;
+        padding: 0 13px;
+      }
+
+      .mobile-menu {
+        display: flex;
+        grid-column: 1;
+        justify-self: start;
+      }
+
+      .brand {
+        grid-column: 2;
+        justify-self: center;
+        width: 122px;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .header-tools {
+        grid-column: 3;
+        justify-self: end;
+        gap: 13px;
+      }
+
+      .header-tool span:not(.cart-count),
+      .header-tool:first-child {
+        display: none;
+      }
+
+      .header-tool svg {
+        width: 19px;
+        height: 19px;
+      }
+
+      .collections {
+        padding: 34px 18px 39px;
+      }
+
+      .section-title {
+        margin-bottom: 24px;
+        font-size: 29px;
+      }
+
+      .collection-grid {
+        display: flex;
+        gap: 12px;
+        overflow: hidden;
+      }
+
+      .collection-card {
+        min-width: calc(100% - 28px);
+      }
+
+      .collection-card:not(:first-child) {
+        display: none;
+      }
+
+      .collection-image {
+        height: 230px;
+      }
+
+      .collection-meta {
+        min-height: 70px;
+      }
+
+      .collection-name {
+        font-size: 27px;
+      }
+
+      .mobile-dots {
+        display: flex;
+        justify-content: center;
+        gap: 7px;
+        margin-top: 17px;
+      }
+
+      .mobile-dots span {
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: rgba(11, 35, 96, 0.22);
+      }
+
+      .mobile-dots span:first-child {
+        width: 20px;
+        background: var(--navy);
+      }
+
+      .manifesto-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 52px 22px 58px;
+      }
+
+      .manifesto h1 {
+        max-width: 9.3ch;
+        font-size: clamp(48px, 15.2vw, 64px);
+        line-height: 0.95;
+      }
+
+      .manifesto-copy {
+        max-width: 320px;
+      }
+
+      .manifesto-copy p:not(.eyebrow) {
+        font-size: 14px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+        width: 100%;
+        padding: 18px 22px;
+      }
+
+      .benefit {
+        padding: 24px 8px;
+      }
+
+      .benefit + .benefit {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .projects {
+        padding: 56px 20px 62px;
+      }
+
+      .projects-intro {
+        grid-template-columns: 1fr;
+        gap: 17px;
+        margin-bottom: 28px;
+      }
+
+      .projects h2 {
+        font-size: 42px;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 38px 22px;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+
+      .site-footer {
+        padding-top: 46px;
+      }
+
+      .copyright {
+        margin-top: 36px;
+      }
+
+      .modal {
+        padding: 14px;
+      }
+
+      .modal-dialog {
+        grid-template-columns: 1fr;
+        width: calc(100vw - 28px);
+        max-height: calc(100vh - 28px);
+      }
+
+      .modal-media {
+        min-height: 230px;
+        max-height: 245px;
+      }
+
+      .modal-content {
+        padding: 34px 24px 30px;
+      }
+
+      .modal-close {
+        top: 10px;
+        right: 10px;
+      }
+    }
+
+    @media (max-width: 340px) {
+      .site-header {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .brand {
+        width: 110px;
+      }
+
+      .header-tools {
+        gap: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="announcement">10% do lucro é destinado ao projeto social que você escolher</div>
+
+  <header class="site-header">
+    <button class="mobile-menu" type="button" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <a class="brand" href="#" aria-label="NIMBUS, início">
+      <img src="../assets/logo-nimbus.png" alt="NIMBUS">
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#">Início</a>
+      <a href="#">Produtos</a>
+      <a href="#colecoes">Street</a>
+      <a href="#colecoes">Relíquia</a>
+      <a href="#colecoes">Nuvem</a>
+      <a href="#">Sobre</a>
+      <a href="#projetos">Projetos sociais</a>
+      <a href="#">Contato</a>
+    </nav>
+    <div class="header-tools">
+      <a class="header-tool" href="#" aria-label="Buscar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.7"/><path d="m16 16 4 4"/></svg>
+        <span>Buscar</span>
+      </a>
+      <a class="header-tool" href="#" aria-label="Login">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c.7-4.1 3-6.1 6.5-6.1s5.8 2 6.5 6.1"/></svg>
+        <span>Login</span>
+      </a>
+      <a class="header-tool" href="#" aria-label="Carrinho, 1 item">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 10.2h9.8L20 7H6"/><circle cx="9" cy="19" r="1.3"/><circle cx="17" cy="19" r="1.3"/></svg>
+        <span>Carrinho</span><span class="cart-count">1</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="collections" id="colecoes">
+      <h2 class="section-title">Coleções NIMBUS</h2>
+      <div class="collection-grid">
+        <a class="collection-card" href="#">
+          <div class="collection-image">
+            <img src="../assets/collections/2026-07-16/hero-carousel-v2/street-upload.webp" alt="Pessoa usando camiseta da coleção Street">
+          </div>
+          <div class="collection-meta">
+            <span class="collection-name">STREET</span>
+            <span class="collection-index">01 / 03</span>
+          </div>
+        </a>
+        <a class="collection-card" href="#">
+          <div class="collection-image">
+            <img src="../assets/collections/2026-07-16/hero-carousel-v2/reliquia-upload.webp" alt="Pessoa usando camiseta da coleção Relíquia">
+          </div>
+          <div class="collection-meta">
+            <span class="collection-name">RELÍQUIA</span>
+            <span class="collection-index">02 / 03</span>
+          </div>
+        </a>
+        <a class="collection-card" href="#">
+          <div class="collection-image">
+            <img src="../assets/collections/2026-07-16/hero-carousel-v2/nuvem-upload.webp" alt="Pessoa usando moletom da coleção Nuvem">
+          </div>
+          <div class="collection-meta">
+            <span class="collection-name">NUVEM</span>
+            <span class="collection-index">03 / 03</span>
+          </div>
+        </a>
+      </div>
+      <div class="mobile-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-inner">
+        <h1>FÉ COM PROPÓSITO. DESIGN COM PRESENÇA.</h1>
+        <div class="manifesto-copy">
+          <p class="eyebrow">Entre o concreto e o céu</p>
+          <p>Streetwear católico premium, feito no Brasil com arte, reverência e rigor em cada detalhe.</p>
+          <a class="button" href="#">Conheça a NIMBUS</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Diferenciais da NIMBUS">
+      <article class="benefit">
+        <h3>Feito no Brasil</h3>
+        <p>Produção sob demanda, com controle de qualidade.</p>
+      </article>
+      <article class="benefit">
+        <h3>Compra segura</h3>
+        <p>Pix, cartão e boleto em ambiente protegido.</p>
+      </article>
+      <article class="benefit">
+        <h3>Propósito real</h3>
+        <p>10% do lucro destinado a projetos sociais.</p>
+      </article>
+    </section>
+
+    <section class="projects" id="projetos">
+      <div class="projects-intro">
+        <div>
+          <p class="eyebrow">Acima de tudo, o próximo</p>
+          <h2>Conheça os projetos.</h2>
+        </div>
+        <p>Em cada pedido, você escolhe qual iniciativa recebe 10% do lucro. Clique para entender a atuação e o impacto de cada projeto.</p>
+      </div>
+      <div class="project-grid">
+        <button class="project-card" type="button" data-open-project>
+          <strong>Fazenda da Esperança</strong><span>↗</span>
+        </button>
+        <button class="project-card" type="button" data-open-project>
+          <strong>Cáritas Brasileira</strong><span>↗</span>
+        </button>
+        <button class="project-card" type="button" data-open-project>
+          <strong>Pequeno Cotolengo</strong><span>↗</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo-nimbus.png" alt="NIMBUS">
+        <p>Fé com propósito. Design com presença. Streetwear católico premium, feito no Brasil.</p>
+      </div>
+      <div>
+        <h3>Loja</h3>
+        <ul>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Street</a></li>
+          <li><a href="#">Relíquia</a></li>
+          <li><a href="#">Nuvem</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>NIMBUS</h3>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Projetos sociais</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Ajuda</h3>
+        <ul>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Envios e prazos</a></li>
+          <li><a href="#">Atendimento no WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">Copyright NIMBUS © 2026. Todos os direitos reservados.</div>
+  </footer>
+
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-backdrop" type="button" aria-label="Fechar"></button>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button" aria-label="Fechar"></button>
+      <div class="modal-media">
+        <img src="../../public/img/projects/fazenda-esperanca.webp" alt="Cerimônia na Fazenda da Esperança">
+      </div>
+      <div class="modal-content">
+        <p class="modal-kicker">Projeto social</p>
+        <h2 id="modal-title">Fazenda da Esperança</h2>
+        <p class="modal-intro">Comunidade terapêutica católica que acolhe pessoas em processo de recuperação da dependência química.</p>
+        <div class="modal-fact">
+          <h3>Área de atuação</h3>
+          <p>Acolhimento e recuperação de dependentes químicos.</p>
+        </div>
+        <div class="modal-fact">
+          <h3>Alcance</h3>
+          <p>Comunidades no Brasil e em outros países.</p>
+        </div>
+        <div class="modal-fact">
+          <h3>Como atua</h3>
+          <p>Vida comunitária, trabalho, convivência e espiritualidade em um percurso voluntário de acolhimento.</p>
+        </div>
+        <a class="button" href="https://portalfazenda.org.br/acolhimento/" target="_blank" rel="noopener">Visitar site oficial ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.querySelector("#project-modal");
+    const openers = document.querySelectorAll("[data-open-project]");
+    const closer = modal.querySelector(".modal-close");
+    const backdrop = modal.querySelector(".modal-backdrop");
+    let previousFocus = null;
+
+    function openModal() {
+      previousFocus = document.activeElement;
+      document.body.classList.add("modal-open");
+      modal.classList.add("is-open");
+      closer.focus({ preventScroll: true });
+    }
+
+    function closeModal() {
+      modal.classList.remove("is-open");
+      document.body.classList.remove("modal-open");
+      previousFocus?.focus({ preventScroll: true });
+    }
+
+    openers.forEach((opener) => opener.addEventListener("click", openModal));
+    closer.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+    });
+
+    if (new URLSearchParams(window.location.search).has("modal")) {
+      document.querySelector("#projetos").scrollIntoView();
+      requestAnimationFrame(openModal);
+    }
+  </script>
+</body>
+</html>
