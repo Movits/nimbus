@@ -62,3 +62,7 @@ nuvemshop/assets/product-variant-fixes/**/*.webp
 
 # Screenshots de QA da loja. Os HTML de preview e a auditoria sobem; os PNG não.
 nuvemshop/previews/**/*.png
+
+# CSS de eras anteriores (Morelia, rascunhos do Baires). Guardados localmente como referência;
+# fora do repo pra ninguém colar o errado na loja. Ver nuvemshop/_superados/LEIA-ME.md.
+nuvemshop/_superados/

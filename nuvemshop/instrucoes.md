@@ -1,70 +1,97 @@
-# Loja Nuvemshop — Guia de aplicação v3 (Impulso · tema Morelia)
+# Loja Nuvemshop — estado e guia de aplicação
 
-Meta: deixar a loja o mais perto possível do artifact "NIMBUS — Loja v3.1" (claro e arejado).
-No Impulso só dá pra usar **CSS + os módulos do Morelia** (não dá pra colar HTML), então casamos o
-visual via CSS e montamos a home com os módulos do tema. Arquivos desta pasta: `css-nimbus.css` (v3),
-`assets/` (logo, banners e tiles), `pagina-projetos-sociais.html`, `pagina-sobre.html`.
-Pra aplicar sozinho via navegador: `cowork-loja-v3-prompt.md`.
+**Plano Impulso · tema Baires · publicado em 16/07/2026.**
 
-⚠️ Nunca usar "troca fácil" em texto nenhum.
+A Nuvemshop não tem deploy por git. Esta pasta é um kit: o CSS e as páginas são **colados à mão** no
+painel. Por isso o repo não é a fonte de verdade da loja, a loja é. Este arquivo diz o que está no ar.
 
-## 1. CSS v3 (substitui o anterior inteiro)
-Loja online → Layout → Personalizar → **Edição de CSS avançada** → apague o CSS antigo e cole TODO o
-`css-nimbus.css` → Testar CSS → salvar. (Ele já faz: barra de anúncio clara, rodapé claro com selos,
-serviços em maiúsculas, cards com elevação, botões pill, esconde o selo "criado com Nuvemshop".)
+## Leia isto antes de colar qualquer CSS
 
-## 2. Logo
-Loja online → Layout → **Logo** → subir `assets/logo-nimbus.png`.
+⚠️ **A "Edição de CSS avançada" da Nuvemshop remove silenciosamente todas as CSS custom properties**,
+tanto as definições em `:root` quanto qualquer uso de `var(--...)`. Um CSS baseado em variáveis fica
+**inerte** na loja: cola, salva, e não acontece nada. Todo CSS daqui tem que ser literal (hex resolvido).
 
-## 3. Montar a HOME (ordem do artifact)
-1. **Slider principal** (1 slide): `assets/banner-hero-desktop.jpg` + `assets/banner-hero-mobile.jpg`.
-   Título `A coleção de estreia` · Sub `Peças de fé, desenhadas no Brasil.` · Botão `Ver coleção` (→ catálogo).
-2. **Serviços** (3 itens de texto, sem ícone): `Feito no Brasil` · `Pix, cartão e boleto` · `10% do lucro doado`.
-3. **Tiles das coleções** (módulo de banners lado a lado, 3 imagens):
-   - `assets/tile-street.jpg` → título `Street` → link coleção Street
-   - `assets/tile-reliquia.jpg` → título `Relíquia` → link coleção Relíquia
-   - `assets/tile-nuvem.jpg` → título `Nuvem` → link coleção Nuvem
-4. **Prateleira** — título `Os essenciais` (4 produtos, curadoria mista).
-5. **Banner com texto** `assets/banner-fe.jpg` (texto à esquerda): `Feito de fé` ·
-   `Cada estampa nasce de um símbolo da fé católica brasileira.` · botão `Ver as peças` → Relíquia.
-6. **Prateleira** — título `Coleção Relíquia`.
-7. **Banner com texto** `assets/banner-impacto.jpg` (esquerda): `Vestir também é servir` ·
-   `10% do lucro vai para um projeto social. Quem escolhe qual é você, no checkout.` ·
-   botão `Conhecer os projetos` → página Projetos Sociais.
-8. **Prateleira** — título `Coleção Street`.
-9. Desative newsletter e seções de template vazias que sobrarem (o artifact não tem newsletter na home;
-   se quiser manter captura de e-mail, o CSS já deixa ela clara e discreta).
+Exceção segura: `var()` **com fallback**, tipo `var(--body-font, "Inter", Arial, sans-serif)`. Se a
+plataforma remover, o fallback assume e nada quebra. O CSS de produção usa isso em 6 lugares.
 
-## 4. Barra de anúncio
-> **10% do lucro do seu pedido vai para o projeto social que você escolher. Frete grátis acima de R$199.**
+## O que está no ar (16/07/2026)
 
-## 5. Rodapé (claro, 3 colunas)
-- **Loja:** Produtos · Coleção Street · Coleção Relíquia · Coleção Nuvem
-- **A marca:** Sobre a NIMBUS · Projetos Sociais · Contato
-- **Ajuda:** Trocas e devoluções · Política de privacidade · Prazo de produção e envio
-- Tagline: `Fé, design e propósito. Acima de tudo.`
+| O quê | Onde |
+|---|---|
+| **CSS de produção** | `css-nimbus-correcoes-2026-07-16.css` |
+| Página Projetos Sociais | `pagina-projetos-sociais.html` |
+| Página Sobre | `pagina-sobre.html` |
+| Tiles das coleções | `assets/tile-nuvem.jpg`, `tile-reliquia.jpg`, `tile-street.jpg` |
 
-## 6. Páginas + menu (se ainda não fez)
-Páginas → Criar → "Projetos Sociais" (modo HTML) = `pagina-projetos-sociais.html`;
-"Sobre a NIMBUS" = `pagina-sobre.html` (ajustar o link interno). Menu: Início · Produtos ·
-Projetos Sociais · Sobre.
+Se houver mais de um CSS nesta pasta no futuro, **o mais recente por data no nome é o de produção**. É a
+convenção. Hoje só existe um, de propósito.
 
-## 7. Campo do projeto social no checkout (se ainda não fez)
-Configurações → Opções de checkout → habilitar **"Mensagem do cliente"**, rótulo:
-> **Qual projeto recebe 10% do lucro? Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo ou escreva outro**
+O CSS **não é um tema completo**: é uma camada de correção. O Baires é configurado nativamente no editor
+(as fontes Fraunces e Inter são nativas dele), e o CSS só corrige o que o editor não alcança: header em
+linha única no desktop, logo no centro geométrico no mobile, três coleções simultâneas, modais dos
+projetos, footer editorial. Por isso ele começa direto em "Cabecalho:" e não estiliza `body`.
 
-## 8. Favicon (se ainda não fez)
-Loja online → Layout → Favicon → `public/img/favicon-nuvemshop-130.png`.
+`pagina-projetos-sociais.html` **depende deste CSS**. Os modais são feitos por âncora `:target` (a
+Nuvemshop não permite JS na página), então sem o CSS eles aparecem todos abertos e empilhados. Os dois
+andam juntos: publicar um sem o outro quebra a página.
 
-## 9. Produtos
-- Última linha de toda descrição: `Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.`
+## Também publicado em 16/07
+
+- Menu de categorias (Street, Relíquia, Nuvem) e ordenação dos produtos.
+- Footer v2 (faixa editorial, marca clara, fechamento navy).
+- **Foto lifestyle em 49 produtos**: modelo real usando a peça, como imagem de capa.
+  Manifest: `assets/product-lifestyle/2026-07-16/uploads/upload-manifest.json` (arquivo → produto → URL
+  pública). Conferência: `uploads/live-verification.json`.
+  As imagens **não estão no repo** (ficam no Drive, mesma doutrina de `designs/`). Estão servidas pela
+  Nuvemshop, que é a fonte de verdade.
+
+⚠️ **Ressalva aberta**: o `live-verification.json` diz 49/49, mas ele valida só metadados (se a foto virou
+capa, olhando `og:image` e `preload`). **Nunca olha o pixel.** O produto 352719728 (Aparecida Barroca)
+está no ar com a tarja escrita "PADROEIRA (BRAHL SAEBD)" quando a arte original diz "PADROEIRA (BRASIL
+SACRO)". O prompt de geração trava escala (REF 3) e conteúdo (REF 4), mas nada trava **texto**. Auditoria
+visual das 49 pendente. Não confie no 49/49 como prova de que a estampa está certa.
+
+## Regras de conteúdo (valem sempre)
+
+⚠️ **Nunca usar "troca fácil" em texto nenhum.** POD encarece devolução. Política de trocas = mínimo legal
+(CDC art. 49).
+
+- Última linha de toda descrição de produto:
+  `Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.`
 - Tabela de medidas (cm) por tamanho em cada produto.
+- Régua de nomes: `Arte | Peça`. Rótulos aprovados: Camiseta Premium, Camiseta Oversized Premium,
+  Moletom Canguru, Blusão Moletom, Ecobag. Sem `v1`/`v2` em nome público.
 
-## 10. Categorias (coleções)
-Crie 3 categorias — **Street**, **Relíquia**, **Nuvem** — e classifique os produtos. É o que faz os
-tiles e as prateleiras por coleção funcionarem.
+## Configurações que já estão feitas
+
+- **Campo do projeto social no checkout**: Configurações → Opções de checkout → "Mensagem do cliente",
+  rótulo: *"Qual projeto recebe 10% do lucro? Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo
+  ou escreva outro"*.
+- **Favicon**: Loja online → Layout → Favicon → `public/img/favicon-nuvemshop-130.png`.
+- **Categorias**: Street, Relíquia, Nuvem (é o que faz os tiles e as prateleiras por coleção funcionarem).
+
+## Como reaplicar o CSS (se precisar)
+
+Loja online → Layout → Personalizar → **Edição de CSS avançada** → apagar o antigo → colar TODO o
+`css-nimbus-correcoes-2026-07-16.css` → Testar CSS → salvar.
+
+Depois, conferir na loja pública: home no desktop, os três modais da página Projetos Sociais, e mobile em
+390 e 320 px. Checar centro do logo, ausência de rolagem horizontal, hero sem corte, coleções com largura
+certa, modais fechando sem salto, e que nada comercial mudou.
+
+Se o editor impedir equivalência exata com a prévia, **não improvisar mudança estrutural**: relatar a
+diferença concreta.
 
 ## Até onde dá no Impulso
-Esse guia entrega ~85% do artifact (cores, cards, hero, rodapé, ritmo). Fidelidade 100% (o DOM exato
-do artifact) só no plano **Escala** (acesso ao código-fonte do tema) ou headless — não vale a pena agora.
-Depois de aplicar, me manda prints que eu comparo com o artifact e ajusto os seletores que não pegarem.
+
+O Impulso dá CSS + módulos do tema, não dá pra colar HTML custom nem editar o DOM. Fidelidade 100% a um
+mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a pena agora.
+
+## Histórico
+
+- **Baires (15–16/07/2026)**: tema atual. Direção em `previews/auditoria-e-direcao-baires-2026-07-15.md`,
+  prévia aprovada em `previews/ajustes-finais-preview-2026-07-16.html`, registro da publicação em
+  `publicacao-2026-07-16.md`.
+- **Morelia (02–04/07/2026)**: era anterior, morta. O `css-nimbus.css` e os `cowork-loja-v*-prompt.md`
+  foram **removidos do repo** porque mandavam colar um CSS inerte via URL raw do GitHub, o que apagaria o
+  estilo da loja publicada. Estão no histórico do git se precisar (`git log --all -- nuvemshop/css-nimbus.css`).

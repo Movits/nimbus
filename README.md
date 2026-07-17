@@ -1,9 +1,22 @@
 # NIMBUS
 
-Landing scroll-driven 3D da NIMBUS — streetwear católico premium. Mundo "céu": concreto
-branco modernista (Niemeyer) subindo pelas nuvens, luz divina, estética premium.
+Streetwear católico premium. Este repo tem **duas coisas**:
 
-**Stack:** Vite + React + TypeScript + React Three Fiber + drei + GSAP.
+| | O quê | Onde |
+|---|---|---|
+| **Landing** | app React + 3D neste repo, deploy automático por Actions | https://nimbuswear.com.br |
+| **Loja** | Nuvemshop (plataforma externa). O repo guarda o *kit* de CSS e páginas, colado à mão no painel | https://loja.nimbuswear.com.br |
+
+**Mexendo na loja? Leia [`nuvemshop/instrucoes.md`](nuvemshop/instrucoes.md) primeiro.** Ele diz qual CSS
+está em produção. A Nuvemshop remove custom properties silenciosamente, então CSS com `var()` fica inerte
+lá: colar o arquivo errado apaga o estilo da loja que está no ar.
+
+## Landing
+
+Scroll-driven 3D. Mundo "céu": concreto branco modernista (Niemeyer) subindo pelas nuvens, luz divina,
+estética premium.
+
+**Stack:** Vite + React + TypeScript + React Three Fiber + drei.
 **Deploy:** GitHub Pages (Actions) + domínio próprio → https://nimbuswear.com.br
 
 ## Rodar local
