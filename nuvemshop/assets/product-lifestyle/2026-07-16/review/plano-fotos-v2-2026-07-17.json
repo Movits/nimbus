@@ -1,0 +1,1220 @@
+{
+ "criadoEm": "2026-07-17",
+ "base": "fotos-a-refazer-2026-07-17.json + feedback do Roberto (17/07)",
+ "regraDaDistancia": "texto pequeno corrompido so justifica refazer se for visivel no tamanho de catalogo; o cliente ve a foto pequena",
+ "hover": "produto com 2+ cores: foto lifestyle por cor, hover mostra a segunda; produto de cor unica: zoom leve via CSS",
+ "resumo": {
+  "correcoes": 10,
+  "coresNovasTodas": 34,
+  "coresNovasPragmatico": 28,
+  "adiadas": 1
+ },
+ "decisoes": [
+  {
+   "id": 352407156,
+   "produto": "São Miguel Vintage | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "São Miguel Vintage",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352407182,
+   "produto": "São Miguel Vintage | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "São Miguel Vintage",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "assinatura pequena; invisivel no catalogo",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352407196,
+   "produto": "São Miguel Vintage | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "São Miguel Vintage",
+   "acao": "adiar",
+   "origem": "Roberto",
+   "motivo": "conferir com calma por que o mockup YouDraw difere da arte original; nao mexer agora",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352618837,
+   "produto": "São Jorge Vintage | Blusão Moletom",
+   "peca": "Blusão Moletom",
+   "familia": "São Jorge Vintage",
+   "acao": "manter",
+   "origem": "Roberto",
+   "motivo": "texto corrompido pequeno demais pra aparecer no tamanho de catalogo",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352618878,
+   "produto": "São Jorge Vintage | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "São Jorge Vintage",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "assinatura pequena; invisivel no catalogo",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca",
+    "Azul Marinho",
+    "Rosa Bebê"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Azul Marinho",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Rosa Bebê",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352618903,
+   "produto": "São Jorge Vintage | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "São Jorge Vintage",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352618935,
+   "produto": "São Jorge Vintage | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "São Jorge Vintage",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "a arte virou um retangulo preto solido de cantos retos na peca; visivel de longe",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca",
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352619175,
+   "produto": "Salmo 19 | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "Salmo 19",
+   "acao": "reatribuir",
+   "origem": "recomendacao",
+   "motivo": "foto creme com arte OK; conferir se passa como Branca; gerar a preta (capa)",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": "352619175-moletom-canguru-branca.png"
+  },
+  {
+   "id": 352702020,
+   "produto": "Salmo 19 | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Salmo 19",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "arte redesenhada (blackletter virou serifado): o cliente ve uma arte e recebe outra",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352702753,
+   "produto": "Monograma NIMBUS | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Monograma NIMBUS",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352702796,
+   "produto": "Monograma NIMBUS | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Monograma NIMBUS",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352702858,
+   "produto": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Fé Acima de Tudo",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352703153,
+   "produto": "Fé Acima de Tudo | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Fé Acima de Tudo",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352703276,
+   "produto": "Deus é Fiel | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Deus é Fiel",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "descentralizacao leve; margem de medicao",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352703343,
+   "produto": "Deus é Fiel | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Deus é Fiel",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352717723,
+   "produto": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Brasão NIMBUS",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "o texto corrompido e o proprio brasao: nessa arte, o texto E o desenho",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352717837,
+   "produto": "Brasão NIMBUS | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Brasão NIMBUS",
+   "acao": "reatribuir",
+   "origem": "recomendacao",
+   "motivo": "foto branca com arte OK; associar a variante Branca e gerar a preta (capa)",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": "352717837-camiseta-premium-branca.png"
+  },
+  {
+   "id": 352717960,
+   "produto": "Azulejo Sagrado | Blusão Moletom",
+   "peca": "Blusão Moletom",
+   "familia": "Azulejo Sagrado",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352718083,
+   "produto": "Azulejo Sagrado | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "Azulejo Sagrado",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "mao: 1 cetico confirmou e 1 refutou; borda do aceitavel",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352718275,
+   "produto": "Azulejo Sagrado | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Azulejo Sagrado",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352718787,
+   "produto": "São Jorge Neobarroco | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "São Jorge Neobarroco",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "a IA pintou outro santo (estilo cusquenho); arte errada e visivel de longe",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Rosa Bebê",
+    "Branca",
+    "Azul Marinho"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Rosa Bebê",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Azul Marinho",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352718943,
+   "produto": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "São Jorge Neobarroco",
+   "acao": "reatribuir",
+   "origem": "recomendacao",
+   "motivo": "foto off-white com arte OK; associar a Off-White e gerar a preta (capa)",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Off-White",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Off-White"
+   ],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": "352718943-camiseta-oversized-premium-off-white.png"
+  },
+  {
+   "id": 352718999,
+   "produto": "São Jorge Neobarroco | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "São Jorge Neobarroco",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "floreio da cartela + posicao: dentro da margem de medicao plano vs vestido",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca",
+    "Azul Marinho"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Azul Marinho",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352719728,
+   "produto": "Aparecida Barroca | Blusão Moletom",
+   "peca": "Blusão Moletom",
+   "familia": "Aparecida Barroca",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "texto pequeno invisivel no catalogo (mesma regra do item 3); anatomia foi refutada por 1 dos 2 ceticos",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352719816,
+   "produto": "Aparecida Barroca | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "Aparecida Barroca",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "texto pequeno invisivel no catalogo",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352720127,
+   "produto": "Aparecida Barroca | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Aparecida Barroca",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352720257,
+   "produto": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Acima de Tudo Gótico",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352721118,
+   "produto": "Fé Wildstyle | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Fé Wildstyle",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "estampa colada (tinta mais clara que o sol da cena); voce mesmo notou esse efeito",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352721197,
+   "produto": "Fé Wildstyle | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Fé Wildstyle",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352721477,
+   "produto": "Espírito Santo Spray | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Espírito Santo Spray",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352721633,
+   "produto": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "NIMBUS Wildstyle",
+   "acao": "reatribuir",
+   "origem": "Roberto",
+   "motivo": "foto preta esta boa (arte/posicao/texto ok); associar a variante Preta e gerar a off-white",
+   "corPretendida": "Off-White",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": "352721633-camiseta-oversized-premium-preta.png"
+  },
+  {
+   "id": 352722232,
+   "produto": "Sagrado Coração Spray | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Sagrado Coração Spray",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352722510,
+   "produto": "São Miguel Celeste | Blusão Moletom",
+   "peca": "Blusão Moletom",
+   "familia": "São Miguel Celeste",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352722685,
+   "produto": "São Miguel Celeste | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "São Miguel Celeste",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352723243,
+   "produto": "São Miguel Celeste | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "São Miguel Celeste",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352725749,
+   "produto": "Querubim Spray | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Querubim Spray",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "estampa colada (branco estourado, textura da malha morre na borda)",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352725852,
+   "produto": "Querubim Spray | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Querubim Spray",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352726673,
+   "produto": "São Miguel Vitorioso | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "familia": "São Miguel Vitorioso",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "mao em duas massas fundidas; cliente repara em mao estranha",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Azul Marinho",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Azul Marinho",
+     "tipo": "cor-nova"
+    },
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352727545,
+   "produto": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "São Miguel Vitorioso",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352727892,
+   "produto": "Aparecida Spray | Blusão Moletom",
+   "peca": "Blusão Moletom",
+   "familia": "Aparecida Spray",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "arte redesenhada + texto inventado + assinatura sumiu + escala 30%->47%: visivel de longe",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352728019,
+   "produto": "Aparecida Spray | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Aparecida Spray",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "selo extra na manga (confirmado); pequeno, mas se te incomodar entra no lote",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352728277,
+   "produto": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Anjo da Guarda Stencil",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352728357,
+   "produto": "Anjo da Guarda Stencil | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Anjo da Guarda Stencil",
+   "acao": "refazer",
+   "origem": "recomendacao",
+   "motivo": "estampa colada (fundo preto proprio recortado sobre a camiseta; 2/2 ceticos)",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352728451,
+   "produto": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Acima de Tudo Grafite",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Off-White",
+   "corRealDaFoto": "Off-White",
+   "cores": [
+    "Off-White"
+   ],
+   "capa": "Off-White",
+   "coresCobertas": [
+    "Off-White"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352728524,
+   "produto": "Acima de Tudo Grafite | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Acima de Tudo Grafite",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Branca",
+   "corRealDaFoto": "Branca",
+   "cores": [
+    "Branca"
+   ],
+   "capa": "Branca",
+   "coresCobertas": [
+    "Branca"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352889132,
+   "produto": "Aparecida Spray | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "Aparecida Spray",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "pingo do i da assinatura; invisivel no catalogo",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  },
+  {
+   "id": 352890896,
+   "produto": "Aparecida Barroca | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "familia": "Aparecida Barroca",
+   "acao": "refazer",
+   "origem": "Roberto",
+   "motivo": "escala inflada (31,5%->39,7%); refazer a preta e criar tambem a off-white",
+   "corPretendida": "Off-White",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [],
+   "geracoes": [
+    {
+     "cor": "Preta",
+     "tipo": "correcao"
+    },
+    {
+     "cor": "Off-White",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 352898175,
+   "produto": "São Miguel Vitorioso | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "familia": "São Miguel Vitorioso",
+   "acao": "manter",
+   "origem": "recomendacao",
+   "motivo": "texto pequeno no escudo, invisivel no catalogo",
+   "corPretendida": "Preta",
+   "corRealDaFoto": "Preta",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "coresCobertas": [
+    "Preta"
+   ],
+   "geracoes": [
+    {
+     "cor": "Branca",
+     "tipo": "cor-nova"
+    }
+   ],
+   "renomearPara": null
+  },
+  {
+   "id": 355581274,
+   "produto": "NIMBUS Wildstyle | Ecobag",
+   "peca": "Ecobag",
+   "familia": "NIMBUS Wildstyle",
+   "acao": "ok",
+   "origem": "auditoria",
+   "motivo": "sem problema confirmado",
+   "corPretendida": "Natural",
+   "corRealDaFoto": "Natural",
+   "cores": [
+    "Natural"
+   ],
+   "capa": "Natural",
+   "coresCobertas": [
+    "Natural"
+   ],
+   "geracoes": [],
+   "renomearPara": null
+  }
+ ]
+}
