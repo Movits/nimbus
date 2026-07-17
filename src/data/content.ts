@@ -18,7 +18,6 @@ export const ASSETS = {
   pampulha: img('bg-pampulha.webp'),
   pampulhaMobile: img('bg-pampulha-mobile.webp'),
   wordmark: img('wordmark-nimbus.webp'),
-  icon: img('favicon-512.png'),
 }
 
 // índice de cada seção na ordem do scroll (0 = topo). 6 seções.

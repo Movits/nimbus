@@ -286,6 +286,7 @@ button {
   gap: clamp(0.8rem, 2vw, 1.4rem);
 }
 .impact__card {
+  position: relative;
   width: 100%;
   min-height: 190px;
   display: flex;
@@ -311,10 +312,14 @@ button {
 .impact__card:active {
   transform: translateY(-2px);
 }
-.impact__card:focus-visible,
+/* O foco visível vive no card, mas quem recebe foco é o botão esticado dentro dele. */
+.impact__card:has(.impact__cardCta:focus-visible),
 .project-modal :focus-visible {
   outline: 3px solid var(--deep);
   outline-offset: 3px;
+}
+.impact__cardCta:focus-visible {
+  outline: none;
 }
 .impact__name {
   display: block;
@@ -340,13 +345,22 @@ button {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  cursor: pointer;
+}
+/* Estica a área de clique sobre o card inteiro, preservando o card-todo-clicável
+   sem precisar embrulhar o heading num <button>. */
+.impact__cardCta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
 }
 .impact__cardCta svg {
   flex: none;
   transition: transform 0.2s ease;
 }
 .impact__card:hover .impact__cardCta svg,
-.impact__card:focus-visible .impact__cardCta svg {
+.impact__cardCta:focus-visible svg {
   transform: translateX(3px);
 }
 .impact__outro {
@@ -685,7 +699,7 @@ button {
   .impact__card:hover,
   .impact__card:active,
   .impact__card:hover .impact__cardCta svg,
-  .impact__card:focus-visible .impact__cardCta svg {
+  .impact__cardCta:focus-visible svg {
     transform: none;
   }
 }
