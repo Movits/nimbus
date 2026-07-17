@@ -66,3 +66,7 @@ nuvemshop/previews/**/*.png
 # CSS de eras anteriores (Morelia, rascunhos do Baires). Guardados localmente como referência;
 # fora do repo pra ninguém colar o errado na loja. Ver nuvemshop/_superados/LEIA-ME.md.
 nuvemshop/_superados/
+
+# Pagina de revisao das fotos: derivada do JSON de auditoria (rode scripts/build-review-page.mjs).
+# 3,7 MB de thumbnails; a fonte commitada e review/fotos-a-refazer-*.json.
+nuvemshop/assets/product-lifestyle/**/review/revisao-*/
