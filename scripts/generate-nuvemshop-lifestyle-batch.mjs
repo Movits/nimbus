@@ -343,11 +343,42 @@ function selectReferences(product, family, color) {
   }
 
   const colorUrl = product.colorImages?.[color];
-  let frontIndex = colorUrl ? product.gallery.indexOf(colorUrl) : 0;
-  if (frontIndex < 0) frontIndex = 0;
+  const frontIndex = colorUrl ? product.gallery.indexOf(colorUrl) : -1;
+  if (frontIndex < 0) {
+    // Antes isto caia em 0 silenciosamente: a IA recebia a peca de outra cor como referencia
+    // e gerava fielmente a cor errada. Falhar alto e melhor que gerar errado com cara de certo.
+    throw new Error(
+      `Sem imagem de variante para a cor "${color}" no produto ${product.productId} (${product.title}). ` +
+        `Cores conhecidas: ${Object.keys(product.colorImages || {}).join(", ") || "nenhuma"}. ` +
+        `Corrija a associacao de foto por variante na Nuvemshop e rode o manifest de novo.`,
+    );
+  }
+
   const view = frontOnlyFamilies.has(family) ? "front" : "back";
-  const heroIndex =
-    view === "front" ? frontIndex : Math.min(frontIndex + 1, product.gallery.length - 1);
+  if (view === "front") {
+    return {
+      front: galleryPath(product, frontIndex),
+      hero: galleryPath(product, frontIndex),
+      artwork: originalArtworkByFamily[family],
+      view,
+      heroConfiavel: true,
+    };
+  }
+
+  // A vista de costas precisa ser a MESMA COR da frente. A galeria da Nuvemshop e ordenada a mao
+  // pelo lojista e nao segue par frente/costas: assumir "costas = frente + 1" ja produziu 7 fotos
+  // na cor errada em 16/07 (ex.: Salmo 19 352702020, cadastrado Preta, foto branca no ar).
+  // As imagens de variante (variantImages) sao as frentes de cada cor; qualquer outra e uma vista
+  // extra, mas a galeria nao diz de QUAL cor. Sem essa informacao nao da pra escolher com seguranca.
+  const heroIndex = pickHeroIndex(product, frontIndex);
+  if (heroIndex === null) {
+    throw new Error(
+      `Nao da pra identificar com seguranca a foto de COSTAS da cor "${color}" no produto ` +
+        `${product.productId} (${product.title}). A galeria tem ${product.gallery.length} imagens e ` +
+        `${(product.variantImages || []).length} sao fotos de variante. Preencha heroIndexOverrides ` +
+        `com o indice correto (confira a imagem a olho antes), ou corrija a galeria na Nuvemshop.`,
+    );
+  }
 
   return {
     front: galleryPath(product, frontIndex),
@@ -356,6 +387,35 @@ function selectReferences(product, family, color) {
     view,
   };
 }
+
+/**
+ * Escolhe a foto de costas da mesma cor da frente.
+ *
+ * So devolve indice quando da pra ter certeza: o caso seguro e a galeria ter exatamente duas
+ * imagens (frente + costas da unica cor) ou um override explicito. Nos demais casos devolve null,
+ * e quem chama decide (falhar ou pedir --hero-index). Nao chuta.
+ */
+function pickHeroIndex(product, frontIndex) {
+  const override = heroIndexOverrides[String(product.productId)];
+  if (Number.isInteger(override)) {
+    return override >= 0 && override < product.gallery.length ? override : null;
+  }
+
+  // Produto de cor unica com galeria frente+costas: a outra imagem so pode ser a de costas.
+  const cores = Object.keys(product.colorImages || {});
+  if (cores.length <= 1 && product.gallery.length === 2) {
+    return frontIndex === 0 ? 1 : 0;
+  }
+
+  return null;
+}
+
+/**
+ * Indice da foto de COSTAS por produto, conferido a olho.
+ * Preencher aqui e a unica forma segura enquanto a Nuvemshop nao tiver a galeria organizada por cor.
+ * Formato: "<productId>": <indice na galeria, base 0>
+ */
+const heroIndexOverrides = {};
 
 function garmentDescription(piece, color) {
   if (/Ecobag/i.test(piece)) {

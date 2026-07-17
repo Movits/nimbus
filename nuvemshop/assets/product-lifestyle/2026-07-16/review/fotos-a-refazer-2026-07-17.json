@@ -1,0 +1,571 @@
+{
+ "auditadoEm": "2026-07-17",
+ "totalNoAr": 49,
+ "comProblema": 26,
+ "semProblema": 23,
+ "porGravidade": {
+  "alta": 15,
+  "media": 11
+ },
+ "porTipo": {
+  "arte-errada": 3,
+  "texto-corrompido": 10,
+  "assinatura-deformada": 6,
+  "escala-inflada": 2,
+  "cor-errada": 7,
+  "artefato-ia": 2,
+  "outro": 1,
+  "anatomia-ia": 3,
+  "posicao-errada": 3,
+  "estampa-colada": 3
+ },
+ "metodo": "Tres auditorias independentes, um agente por foto, cada reprovacao verificada por ceticos que tentaram refutar. Fontes de verdade: mockup da YouDraw (escala, posicao, lado, qual arte) e arte original (conteudo, texto). Falsos positivos descartados na verificacao: 3 na auditoria de arte, 3 na de realismo.",
+ "lista": [
+  {
+   "id": 352727892,
+   "produto": "Aparecida Spray | Blusão Moletom",
+   "colecao": "STREET",
+   "peca": "Blusão Moletom",
+   "cor": "Preta",
+   "familia": "Aparecida Spray",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray1/",
+   "arquivo": "final\\street\\aparecida-spray\\352727892-blusao-moletom-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "arte-errada",
+     "detalhe": "Gravura dourada de linha fina, sem nenhum disco dourado atras da coroa; coroa preenchida em dourado; figura toda em traco dourado sobre preto (tonalidade invertida); nenhum escorri"
+    },
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "Bloco de texto inventado de duas linhas na base, ilegivel e sem correspondencia com palavras em portugues (leitura aproximada 'PAYRESCOLA BIPRAJ' sobre uma segunda linha ainda meno"
+    },
+    {
+     "tipo": "assinatura-deformada",
+     "detalhe": "Assinatura ausente, nao ha nenhuma tag NIMBUS na estampa"
+    },
+    {
+     "tipo": "escala-inflada",
+     "detalhe": "Estampa ocupando ~47% da largura da peca (+57% relativo) e descendo quase ate a barra"
+    }
+   ],
+   "escala": "mockup 30% -> foto 47%"
+  },
+  {
+   "id": 352718787,
+   "produto": "São Jorge Neobarroco | Moletom Canguru",
+   "colecao": "RELIQUIA",
+   "peca": "Moletom Canguru",
+   "cor": "Preta",
+   "familia": "São Jorge Neobarroco",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+   "arquivo": "final\\reliquia\\sao-jorge-neobarroco\\352718787-moletom-canguru-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "arte-errada",
+     "detalhe": "Uma pintura completamente diferente, estilo escola cusquenha/colonial: santo montado em cavalo branco voltado para a DIREITA, andando (não empinado), com elmo de penachos e pompons"
+    },
+    {
+     "tipo": "assinatura-deformada",
+     "detalhe": "A cartela e a assinatura sumiram por completo. O topo da moldura na foto é só volutas douradas com um vulto amarelado atrás; não há nenhum texto legível na peça inteira. A peça no "
+    },
+    {
+     "tipo": "escala-inflada",
+     "detalhe": "Estampa ocupando cerca de 51% da largura da peça na foto (aprox. 437 px de estampa para 863 px de largura do moletom no ponto médio), cerca de 19% relativos acima do mockup. O topo"
+    }
+   ],
+   "escala": "mockup 43% -> foto 51%"
+  },
+  {
+   "id": 352890896,
+   "produto": "Aparecida Barroca | Camiseta Oversized Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "familia": "Aparecida Barroca",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+   "arquivo": "final\\reliquia\\aparecida-barroca\\352890896-camiseta-oversized-premium-off-white.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "A primeira linha saiu certa (\"PADROEIRA\"), mas a segunda virou rabisco sem sentido, algo como \"ÆßAAX Y&O6Ð\". Nao e palavra em portugues, nao ha parenteses, e as letras nao correspo"
+    },
+    {
+     "tipo": "cor-errada",
+     "detalhe": "A camiseta na foto e PRETA. Amostras do tecido dao RGB medio de (37,32,30) na lateral direita e (20,15,14) na barra. Nao ha nada de off-white na peca. A calca do modelo e que esta "
+    },
+    {
+     "tipo": "artefato-ia",
+     "detalhe": "A cruz sumiu. A IA substituiu o orbe e a cruz por uma massa dourada que le como um pequeno rosto/mascara com dois buracos escuros no lugar dos olhos. So a palmeta em leque atras so"
+    }
+   ],
+   "escala": "mockup 31.5% -> foto 39.7%"
+  },
+  {
+   "id": 352407196,
+   "produto": "São Miguel Vintage | Camiseta Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "São Miguel Vintage",
+   "modelo": "Clara",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage3/",
+   "arquivo": "final\\reliquia\\sao-miguel-vintage\\352407196-camiseta-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "O arco lê SAO BAUGUEL ARCANJO. A palavra MIGUEL virou BAUGUEL: sete letras no lugar de seis, o M virou B, o I virou A, e o til do SÃO sumiu. BAUGUEL não existe em português. SAO e "
+    },
+    {
+     "tipo": "assinatura-deformada",
+     "detalhe": "NIMBUS aparece com as letras certas, mas redesenhado em fonte serifada romana de caixa alta. A tipografia não bate nem com a arte nem com o mockup, a IA reconstruiu a assinatura em"
+    }
+   ],
+   "escala": "mockup 63% -> foto 55%"
+  },
+  {
+   "id": 352618837,
+   "produto": "São Jorge Vintage | Blusão Moletom",
+   "colecao": "RELIQUIA",
+   "peca": "Blusão Moletom",
+   "cor": "Preta",
+   "familia": "São Jorge Vintage",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage/",
+   "arquivo": "final\\reliquia\\sao-jorge-vintage\\352618837-blusao-moletom-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "Uma sequência de 7 glifos que não formam palavra nenhuma, algo como \"STOJNOS\" / \"SIƆJꓥꓴS\". Não existe N, I, M nem B na string. Ampliado a 15x o texto está nítido e legível o bastan"
+    },
+    {
+     "tipo": "outro",
+     "detalhe": "O gallery-02.webp é a vista FRENTE de um moletom BRANCO com o selo pequeno do monograma NIMBUS (letras NB entrelaçadas com auréola). Não é a referência de costas, então não dá para"
+    }
+   ]
+  },
+  {
+   "id": 352618935,
+   "produto": "São Jorge Vintage | Camiseta Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "São Jorge Vintage",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "arquivo": "final\\reliquia\\sao-jorge-vintage\\352618935-camiseta-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "Glifos embaralhados que leem algo como NIfIRLIS / NIHRUS. Varias letras estao quebradas e com aparencia espelhada. Nao forma nenhuma palavra existente e nao e NIMBUS. Confirmado co"
+    },
+    {
+     "tipo": "cor-errada",
+     "detalhe": "A camiseta na foto e branca/off-white. Observacao importante: o MOCKUP da YouDraw fornecido como referencia desta variante tambem mostra a peca BRANCA, entao pode haver troca de re"
+    }
+   ],
+   "escala": "mockup 62% -> foto 53%"
+  },
+  {
+   "id": 352702020,
+   "produto": "Salmo 19 | Camiseta Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "Salmo 19",
+   "modelo": "Gabriel",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "arquivo": "final\\reliquia\\salmo-19\\352702020-camiseta-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "arte-errada",
+     "detalhe": "Tipografia totalmente diferente: sans/slab bold reto, em QUATRO linhas horizontais empilhadas e sem arco ('OS CEUS' / 'PROCLAMAM' / 'A GLORIA' / 'DE DEUS'), em marrom escuro chapad"
+    },
+    {
+     "tipo": "cor-errada",
+     "detalhe": "A camiseta na foto e BRANCA, com a arte em marrom escuro. O cliente ve uma peca branca na pagina da variante preta e recebe uma peca preta. A propria referencia de galeria (gallery"
+    }
+   ],
+   "escala": "mockup 53% -> foto 56%"
+  },
+  {
+   "id": 352719728,
+   "produto": "Aparecida Barroca | Blusão Moletom",
+   "colecao": "RELIQUIA",
+   "peca": "Blusão Moletom",
+   "cor": "Branca",
+   "familia": "Aparecida Barroca",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca/",
+   "arquivo": "final\\reliquia\\aparecida-barroca\\352719728-blusao-moletom-branca.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "A primeira linha saiu certa (PADROEIRA), mas a segunda linha virou (BAABL SAEBD). As duas palavras foram destruidas: BRASIL virou BAABL/BAASL e SACRO virou SAEBD. Nenhuma das duas "
+    },
+    {
+     "tipo": "anatomia-ia",
+     "detalhe": "Os dedos aparecem fundidos num bloco unico, sem separacao entre indicador, medio, anelar e minimo. So da pra distinguir o polegar e mais dois ou tres vultos de ponta de dedo, e o d"
+    }
+   ],
+   "escala": "mockup 57% -> foto 67%"
+  },
+  {
+   "id": 352619175,
+   "produto": "Salmo 19 | Moletom Canguru",
+   "colecao": "RELIQUIA",
+   "peca": "Moletom Canguru",
+   "cor": "Preta",
+   "familia": "Salmo 19",
+   "modelo": "Gabriel",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-191/",
+   "arquivo": "final\\reliquia\\salmo-19\\352619175-moletom-canguru-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "detalhe": "A peca e branca / off-white (creme). Nao ha nenhuma area preta na peca: corpo, capuz, punhos e barra sao todos brancos. A calca do modelo e escura, o que confirma que nao se trata "
+    }
+   ],
+   "escala": "mockup 50% -> foto 56%"
+  },
+  {
+   "id": 352717723,
+   "produto": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "Brasão NIMBUS",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao/",
+   "arquivo": "final\\reliquia\\brasao-nimbus\\352717723-camiseta-oversized-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "O arco superior nao forma a palavra NIMBUS. Contei de 8 a 9 glifos em vez de 6. Depois do N aparece uma haste fina, dois glifos arredondados tipo C/G, um glifo angular tipo A/Z e s"
+    }
+   ],
+   "escala": "mockup 56% -> foto 48%"
+  },
+  {
+   "id": 352717837,
+   "produto": "Brasão NIMBUS | Camiseta Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "Brasão NIMBUS",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao1/",
+   "arquivo": "final\\reliquia\\brasao-nimbus\\352717837-camiseta-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "detalhe": "A peca na foto e BRANCA. Amostrei os pixels do tecido em varias regioes iluminadas e o valor e RGB ~(232,228,227), branco/off-white. Em nenhum ponto da camiseta ha tecido escuro. A"
+    }
+   ],
+   "escala": "mockup 58% -> foto 54%"
+  },
+  {
+   "id": 352718943,
+   "produto": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "São Jorge Neobarroco",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+   "arquivo": "final\\reliquia\\sao-jorge-neobarroco\\352718943-camiseta-oversized-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "detalhe": "A peca na foto e creme / off-white (bone), nao preta. Medicao no arquivo: mediana RGB (154,122,96) no lado em sombra e (235,222,209) no lado iluminado, luma entre 129 e 224. Preto "
+    }
+   ],
+   "escala": "mockup 59% -> foto 63%"
+  },
+  {
+   "id": 352719816,
+   "produto": "Aparecida Barroca | Moletom Canguru",
+   "colecao": "RELIQUIA",
+   "peca": "Moletom Canguru",
+   "cor": "Branca",
+   "familia": "Aparecida Barroca",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca1/",
+   "arquivo": "final\\reliquia\\aparecida-barroca\\352719816-moletom-canguru-branca.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "PADÑOEIRA / PADMOEIRA — o R virou um glifo tipo Ñ/M, com uma perna extra descendo entre o D e o O. Palavra inexistente em português."
+    }
+   ],
+   "escala": "mockup 58% -> foto 59%"
+  },
+  {
+   "id": 352721633,
+   "produto": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "familia": "NIMBUS Wildstyle",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
+   "arquivo": "final\\street\\nimbus-wildstyle\\352721633-camiseta-oversized-premium-off-white.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "detalhe": "Camiseta preta em toda a peca (corpo, mangas, gola e barra). Nao ha nenhum trecho off-white; o tecido e preto solido sob luz de sol direta, o que descarta a hipotese de sombra ou c"
+    }
+   ],
+   "escala": "mockup 53% -> foto 60%"
+  },
+  {
+   "id": 352898175,
+   "produto": "São Miguel Vitorioso | Camiseta Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "São Miguel Vitorioso",
+   "modelo": "Gabriel",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray3/",
+   "arquivo": "final\\street\\sao-miguel-vitorioso\\352898175-camiseta-premium-preta.png",
+   "gravidade": "alta",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "A primeira linha saiu ESTUO. (E-S-T-U-O seguido de um ponto final). As letras I e L foram fundidas em um U e apareceu um ponto que nao existe na arte. ESTUO nao e palavra em portug"
+    }
+   ],
+   "escala": "mockup 58% -> foto 62%"
+  },
+  {
+   "id": 352718999,
+   "produto": "São Jorge Neobarroco | Camiseta Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "São Jorge Neobarroco",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
+   "arquivo": "final\\reliquia\\sao-jorge-neobarroco\\352718999-camiseta-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "texto-corrompido",
+     "detalhe": "A foto manteve NIMBUS legivel e correto, mas substituiu o floreio de baixo por uma linha de glifos que imitam letras, lendo algo como HGEEOW / MO3EOW (letras aparentemente espelhad"
+    },
+    {
+     "tipo": "posicao-errada",
+     "detalhe": "Na foto a estampa subiu: vao de ~161 px acima e ~360 px abaixo, num comprimento de ~1188 px (topo da moldura a apenas 14% do comprimento). Como a proporcao comprimento/largura da p"
+    }
+   ],
+   "escala": "mockup 59% -> foto 66%"
+  },
+  {
+   "id": 352728019,
+   "produto": "Aparecida Spray | Camiseta Oversized Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "Aparecida Spray",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray2/",
+   "arquivo": "final\\street\\aparecida-spray\\352728019-camiseta-oversized-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "posicao-errada",
+     "detalhe": "O selo nuvem+auréola aparece no OMBRO/MANGA do lado DIREITO dela. Conferindo a orientação: ela está de costas com o rosto virado para a esquerda do quadro (perfil esquerdo visível)"
+    },
+    {
+     "tipo": "artefato-ia",
+     "detalhe": "O selo está desenhado chapado e sem distorção nenhuma: auréola em elipse perfeita, nuvem inteira com os dois escorridos, tudo em branco puro e dourado saturado, sem sombra, enquant"
+    }
+   ],
+   "escala": "mockup 38% -> foto 42%"
+  },
+  {
+   "id": 352407182,
+   "produto": "São Miguel Vintage | Camiseta Oversized Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "São Miguel Vintage",
+   "modelo": "Clara",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+   "arquivo": "final\\reliquia\\sao-miguel-vintage\\352407182-camiseta-oversized-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "assinatura-deformada",
+     "detalhe": "Sequencia de cerca de 10 glifos alfanumericos sem sentido, algo como 9834550100 / SB2455B103. Nao forma palavra alguma e nem tem a contagem de letras de NIMBUS. E a marca da casa v"
+    }
+   ],
+   "escala": "mockup 60% -> foto 58%"
+  },
+  {
+   "id": 352618878,
+   "produto": "São Jorge Vintage | Moletom Canguru",
+   "colecao": "RELIQUIA",
+   "peca": "Moletom Canguru",
+   "cor": "Preta",
+   "familia": "São Jorge Vintage",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage1/",
+   "arquivo": "final\\reliquia\\sao-jorge-vintage\\352618878-moletom-canguru-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "assinatura-deformada",
+     "detalhe": "A palavra sumiu. No lugar dela sobrou um punhado de pontinhos claros espalhados, escuros e sem forma, que nao compoem nenhuma letra. Com autocontraste os fragmentos continuam sem f"
+    }
+   ],
+   "escala": "mockup 70% -> foto 70%"
+  },
+  {
+   "id": 352703276,
+   "produto": "Deus é Fiel | Camiseta Oversized Premium",
+   "colecao": "RELIQUIA",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "Deus é Fiel",
+   "modelo": "Gabriel",
+   "url": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel/",
+   "arquivo": "final\\reliquia\\deus-e-fiel\\352703276-camiseta-oversized-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "posicao-errada",
+     "detalhe": "Na foto o centro da arte cai em x~1170, enquanto o centro da gola fica em x~1055 e a base do pescoco em x~930: a estampa esta deslocada de 115 a 170 px para a direita (cerca de 10 "
+    }
+   ],
+   "escala": "mockup 40% -> foto 44%"
+  },
+  {
+   "id": 352718083,
+   "produto": "Azulejo Sagrado | Moletom Canguru",
+   "colecao": "RELIQUIA",
+   "peca": "Moletom Canguru",
+   "cor": "Branca",
+   "familia": "Azulejo Sagrado",
+   "modelo": "Clara",
+   "url": "https://loja.nimbuswear.com.br/produtos/azulejo1/",
+   "arquivo": "final\\reliquia\\azulejo-sagrado\\352718083-moletom-canguru-branca.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "anatomia-ia",
+     "detalhe": "Os dedos se fundem numa massa unica em forma de remo/pa, com ponta cega e achatada, sem articulacoes nem unhas definidas. O polegar aparece com contorno recortado e duro, com um ha"
+    }
+   ],
+   "escala": "mockup 50% -> foto 52%"
+  },
+  {
+   "id": 352721118,
+   "produto": "Fé Wildstyle | Camiseta Oversized Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "Fé Wildstyle",
+   "modelo": "Gabriel",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe2/",
+   "arquivo": "final\\street\\fe-wildstyle\\352721118-camiseta-oversized-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "estampa-colada",
+     "detalhe": "nota 2/5 (1/2): brilho-proprio-inconsistente, sombra-do-tecido-nao-atravessa, nao-acompanha-dobras, sem-textura-de-tecido"
+    }
+   ]
+  },
+  {
+   "id": 352725749,
+   "produto": "Querubim Spray | Camiseta Oversized Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "Querubim Spray",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray/",
+   "arquivo": "final\\street\\querubim-spray\\352725749-camiseta-oversized-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "estampa-colada",
+     "detalhe": "nota 2/5 (1/2): sem-textura-de-tecido, brilho-proprio-inconsistente"
+    }
+   ]
+  },
+  {
+   "id": 352726673,
+   "produto": "São Miguel Vitorioso | Moletom Canguru",
+   "colecao": "STREET",
+   "peca": "Moletom Canguru",
+   "cor": "Preta",
+   "familia": "São Miguel Vitorioso",
+   "modelo": "Gabriel",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray1/",
+   "arquivo": "final\\street\\sao-miguel-vitorioso\\352726673-moletom-canguru-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "anatomia-ia",
+     "detalhe": "Mao deformada: aparecem so 2 massas de dedos fundidas, sem separacao entre indicador/medio/anelar/minimo e sem nenhuma unha. O digito central e curto e grosso demais para ser dedo "
+    }
+   ],
+   "escala": "mockup 60% -> foto 63%"
+  },
+  {
+   "id": 352728357,
+   "produto": "Anjo da Guarda Stencil | Camiseta Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "Anjo da Guarda Stencil",
+   "modelo": "Caio",
+   "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda1/",
+   "arquivo": "final\\street\\anjo-da-guarda-stencil\\352728357-camiseta-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "estampa-colada",
+     "detalhe": "nota 2/5 (2/2): sem-textura-de-tecido, brilho-proprio-inconsistente, bordas-duras-recortadas, nitidez-alta-demais-vs-foto"
+    }
+   ]
+  },
+  {
+   "id": 352889132,
+   "produto": "Aparecida Spray | Camiseta Premium",
+   "colecao": "STREET",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "Aparecida Spray",
+   "modelo": "Helena",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray3/",
+   "arquivo": "final\\street\\aparecida-spray\\352889132-camiseta-premium-preta.png",
+   "gravidade": "media",
+   "problemas": [
+    {
+     "tipo": "assinatura-deformada",
+     "detalhe": "No mesmo ponto a foto tem um rabisco ilegivel com o tom INVERTIDO (tracos claros/acinzentados em vez de pretos). Mesmo ampliado 12x (a assinatura na foto tem ~93 px, quase 3x o tam"
+    }
+   ],
+   "escala": "mockup 40% -> foto 39%"
+  }
+ ]
+}
