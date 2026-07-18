@@ -75,3 +75,6 @@ nuvemshop/assets/product-lifestyle/**/review/revisao-*/
 # SOBEM no repo. Sao as fotos publicadas na loja publica (nao sao arte), e o raw do GitHub
 # e o transporte pro navegador no fluxo de publicacao. Total ~11MB.
 !nuvemshop/assets/product-lifestyle/**/uploads-v2-small/*.jpg
+
+# Pasta temporaria de trabalho: refs pro app do Gemini (tem copia de arte). Nunca no repo publico.
+/_Refazer no Gemini/
