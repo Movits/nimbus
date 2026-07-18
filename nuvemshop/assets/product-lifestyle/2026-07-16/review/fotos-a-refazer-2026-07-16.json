@@ -1,0 +1,122 @@
+{
+ "geradoEm": "2026-07-16",
+ "totalNoAr": 49,
+ "comProblema": 7,
+ "porTipo": {
+  "cor-errada": 7
+ },
+ "lista": [
+  {
+   "id": 352702020,
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "Salmo 19",
+   "colecao": "RELIQUIA",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e branca"
+    }
+   ],
+   "gravidade": "alta"
+  },
+  {
+   "id": 352619175,
+   "titulo": "Salmo 19 | Moletom Canguru",
+   "peca": "Moletom Canguru",
+   "cor": "Preta",
+   "familia": "Salmo 19",
+   "colecao": "RELIQUIA",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-191/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e off-white/creme"
+    }
+   ],
+   "gravidade": "alta"
+  },
+  {
+   "id": 352618935,
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "São Jorge Vintage",
+   "colecao": "RELIQUIA",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e branca"
+    }
+   ],
+   "gravidade": "alta"
+  },
+  {
+   "id": 352717837,
+   "titulo": "Brasão NIMBUS | Camiseta Premium",
+   "peca": "Camiseta Premium",
+   "cor": "Preta",
+   "familia": "Brasão NIMBUS",
+   "colecao": "RELIQUIA",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao1/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e branca"
+    }
+   ],
+   "gravidade": "alta"
+  },
+  {
+   "id": 352721633,
+   "titulo": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "familia": "NIMBUS Wildstyle",
+   "colecao": "STREET",
+   "url": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e preta"
+    }
+   ],
+   "gravidade": "alta"
+  },
+  {
+   "id": 352718943,
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Preta",
+   "familia": "São Jorge Neobarroco",
+   "colecao": "RELIQUIA",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e off-white/creme"
+    }
+   ],
+   "gravidade": "alta"
+  },
+  {
+   "id": 352890896,
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "peca": "Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "familia": "Aparecida Barroca",
+   "colecao": "RELIQUIA",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+   "problemas": [
+    {
+     "tipo": "cor-errada",
+     "o_que": "cadastrado \"undefined\", na foto e preta"
+    }
+   ],
+   "gravidade": "alta"
+  }
+ ]
+}
