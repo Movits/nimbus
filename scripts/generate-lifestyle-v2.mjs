@@ -93,6 +93,10 @@ function buildPrompt(task) {
   push(task.garmentRef, `REFERENCE {N} defines the exact ${task.garment}, including garment color, fit, sleeves, hood or handles, and construction.`);
   push(task.mockupRef, `REFERENCE {N} is the exact live YouDraw/Nuvemshop product mockup FOR THIS COLOR and is the authority for print side, print position and real print scale.`);
   push(task.artworkRef, `REFERENCE {N} is the original artwork and is the authority for every line, color, word and signature.`);
+  // Ancora de arte: foto ja APROVADA de outro produto com a MESMA estampa. O modelo copia
+  // arte de foto melhor do que de PNG chapado em algumas familias (constatado na rodada 4:
+  // a mesma arte falhou 4x num produto e saiu perfeita no irmao).
+  push(task.artHelperRef, `REFERENCE {N} is an APPROVED photo of a different garment carrying THIS EXACT SAME artwork, correctly printed: copy the artwork content precisely as it appears there (composition, colors, framing elements), adapted to this garment at the mockup's scale.`);
   push(task.sceneRef, `REFERENCE {N} is the approved campaign photo of this exact product in another color: match the SAME model, SAME scene, SAME framing and SAME natural light, changing ONLY the garment color to ${task.color}.`);
 
   const pose =
@@ -158,7 +162,7 @@ async function generate(task, state) {
     console.log(`[skip] ${key} ${task.title}`);
     return;
   }
-  for (const f of ["modelBoard", "garmentRef", "mockupRef", "artworkRef", "sceneRef"]) {
+  for (const f of ["modelBoard", "garmentRef", "mockupRef", "artworkRef", "artHelperRef", "sceneRef"]) {
     if (task[f] && !fs.existsSync(task[f])) throw new Error(`${key}: referencia inexistente ${f}: ${task[f]}`);
   }
 

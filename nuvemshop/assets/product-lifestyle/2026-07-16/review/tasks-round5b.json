@@ -1,0 +1,53 @@
+{
+ "fase": "round5b",
+ "tasks": [
+  {
+   "productId": 352890896,
+   "title": "Aparecida Barroca | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "Aparecida Barroca",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Off-White",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Off-White heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-01.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "SCALE LOCK BY EMPTY SPACE: the print is SMALL and sits HIGH on the back. The bottom edge of the print (the NIMBUS signature) ends at 56 percent of the shirt length; the ENTIRE LOWER 40 PERCENT of the shirt is EMPTY off-white fabric with nothing printed on it. The print never reaches near the hem. When uncertain, make the print even smaller",
+    "TEXT LOCK: the cartouche has exactly two lines, \"PADROEIRA\" and \"(BRASIL SACRO)\" with parentheses, copied letter by letter from the artwork; above the NIMBUS signature only a thin halo line, no oval seal"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\aparecida-barroca\\352890896-camiseta-oversized-premium-off-white-r5b.png"
+  },
+  {
+   "productId": 352718943,
+   "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Neobarroco",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-03.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "ART LOCK: the artwork is EXACTLY the one shown in the approved-photo reference and in the artwork file: Sao Jorge RIDING a rearing white horse in dark armor with a red-plumed helmet, a HUGE RED dragon filling the lower third and breaking OUT of the frame, gold rococo frame as the OUTER layer with blue azulejo border INSIDE it, golden monochrome cherubs holding the NIMBUS cartouche, passionflowers in the corners, dark green background with a chapel. Never replace the rider with a winged angel, never shrink or recolor the dragon",
+    "NO BACKGROUND BOX: printed straight on the black fabric, no light-blue field, no rectangle; the dragon and flowers bleed onto the shirt",
+    "SCALE LOCK BY EMPTY SPACE: the print occupies about 41 percent of the garment width, centered, with generous EMPTY BLACK fabric on all four sides; the lower third of the shirt is empty black fabric"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-neobarroco\\352718943-camiseta-oversized-premium-preta-r5b.png",
+   "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/sao-jorge-neobarroco/352718787-moletom-canguru-branca-r4b.png"
+  }
+ ]
+}

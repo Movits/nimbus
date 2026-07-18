@@ -1,0 +1,123 @@
+{
+ "fase": "round4a",
+ "tasks": [
+  {
+   "productId": 352618935,
+   "title": "São Jorge Vintage | Camiseta Premium",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Vintage",
+   "piece": "Camiseta Premium",
+   "color": "Branca",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Caio",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\caio-reference-board-v1.png",
+   "garment": "Branca premium regular-fit T-shirt, standard silhouette and shorter sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618935-sao-jorge-vintage3\\gallery-03.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618935-sao-jorge-vintage3\\gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Vintage [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Vintage.png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "SIGNATURE LOCK: the small signature above the arch reads exactly N-I-M-B-U-S (\"NIMBUS\"); a previous attempt corrupted it to \"KIMBUS\" — never substitute the first letter",
+    "SCALE LOCK: the print occupies about HALF of the shirt length between collar and hem, with a clear gap of about one fifth of the shirt below the collar; previous attempts inflated it by a third — when uncertain, make the print SMALLER"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-vintage\\352618935-camiseta-premium-branca-r4a.png"
+  },
+  {
+   "productId": 352718787,
+   "title": "São Jorge Neobarroco | Moletom Canguru",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Neobarroco",
+   "piece": "Moletom Canguru",
+   "color": "Branca",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Branca pullover kangaroo hoodie with hood, kangaroo pocket and ribbed cuffs",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718787-sao-jorge-neobarroco1\\gallery-01.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718787-sao-jorge-neobarroco1\\gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "NO BACKGROUND BOX: the artwork is printed directly on the white fabric with NO black rectangle and NO solid background behind it; the gold frame sits on the fabric and the red dragon and flowers bleed past the frame onto the sweatshirt; a previous attempt pasted the art as a black poster — forbidden",
+    "The word NIMBUS appears ONLY inside the cartouche held by the cherubs at the top; do NOT add any other NIMBUS wordmark, caption or cursive signature below the frame",
+    "SCALE LOCK: same scale as the mockup, about 59 percent of the back length; never larger"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-neobarroco\\352718787-moletom-canguru-branca-r4a.png"
+  },
+  {
+   "productId": 352718943,
+   "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Neobarroco",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-03.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "SCALE LOCK: the print occupies about 41 percent of the garment width, centered on the back with generous black fabric margins on every side; previous attempts inflated it — when uncertain, make the print SMALLER",
+    "Reproduce the exact Sao Jorge Neobarroco art from the artwork reference: gold rococo frame, blue-and-white azulejo inner border with sacred hearts and anchors, cherubs holding the NIMBUS cartouche, red dragon at the bottom; do not redesign or simplify"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-neobarroco\\352718943-camiseta-oversized-premium-preta-r4a.png"
+  },
+  {
+   "productId": 352727892,
+   "title": "Aparecida Spray | Blusão Moletom",
+   "collection": "STREET",
+   "family": "Aparecida Spray",
+   "piece": "Blusão Moletom",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Preta premium crewneck sweatshirt with ribbed collar, cuffs and hem",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352727892-aparecida-spray1\\gallery-01.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352727892-aparecida-spray1\\gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (3).png",
+   "sceneRef": null,
+   "tipo": "correcao",
+   "notes": [
+    "GARMENT LOCK: the garment is a BLACK HOODED sweatshirt — the HOOD must be clearly visible draped on the back, exactly as in the garment reference; two previous attempts removed the hood — forbidden",
+    "ART LOCK: solid GOLD disc behind the crown, figure in gold-and-black stencil with spray drips, graffiti tag NIMBUS at lower right; do NOT add full-color Brazil flags, do NOT add any text block at the base, do NOT add a golden fringe",
+    "SCALE LOCK: about 55 percent of the back height as in the mockup, never larger"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\aparecida-spray\\352727892-blusao-moletom-preta-r4a.png"
+  },
+  {
+   "productId": 352890896,
+   "title": "Aparecida Barroca | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "Aparecida Barroca",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Off-White",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Off-White heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-01.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "TEXT LOCK: the cartouche below the saint has exactly two lines: \"PADROEIRA\" and \"(BRASIL SACRO)\" with parentheses, spelled letter by letter; previous attempts corrupted the second line — copy it exactly from the artwork reference",
+    "Above the NIMBUS signature there is only a THIN HALO line; do NOT replace it with an oval seal, badge or any pseudo-text",
+    "SCALE LOCK: about 46 percent of the shirt length, starting well below the collar with a wide band of empty fabric before the hem; when uncertain, smaller"
+   ],
+   "output": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\aparecida-barroca\\352890896-camiseta-oversized-premium-off-white-r4a.png"
+  }
+ ]
+}
