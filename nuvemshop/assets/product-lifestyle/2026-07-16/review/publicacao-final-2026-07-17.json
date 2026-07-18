@@ -664,36 +664,13 @@
    "removerVariantes": []
   }
  ],
- "segurar": [
-  {
-   "id": 352618935,
-   "produto": "São Jorge Vintage | Camiseta Premium",
-   "cor": "Branca",
-   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
-  },
-  {
-   "id": 352718787,
-   "produto": "São Jorge Neobarroco | Moletom Canguru",
-   "cor": "Branca",
-   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
-  },
-  {
-   "id": 352718943,
-   "produto": "São Jorge Neobarroco | Camiseta Oversized Premium",
-   "cor": "Preta",
-   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
-  },
-  {
-   "id": 352727892,
-   "produto": "Aparecida Spray | Blusão Moletom",
-   "cor": "Preta",
-   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
-  },
-  {
-   "id": 352890896,
-   "produto": "Aparecida Barroca | Camiseta Oversized Premium",
-   "cor": "Off-White",
-   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
-  }
- ]
+ "segurar": [],
+ "atualizadoEm": "2026-07-18",
+ "resolucaoDasSeguradas": {
+  "352618935 Branca": "publicada (rodada 4B): escala 54% vs 50%, assinatura correta; par do hover na posicao 2",
+  "352718787 Branca": "publicada (rodada 4B): sem retangulo colado, escala 0,56 vs 0,54; par do hover na posicao 2",
+  "352727892 Preta": "publicada (rodada 4A): COM capuz, arte e escala conferidas; capa na posicao 1",
+  "352718943 Preta": "publicada (rodada 6A) com ressalva: arte perfeita, escala +20% (menor que capas ja aceitas); capa na posicao 1, antiga off-white virou par",
+  "352890896 Off-White": "publicada (rodada 6B) com ressalva: tudo certo, um par de letras errado na tarja minuscula (regra da distancia); par do hover na posicao 2"
+ }
 }
