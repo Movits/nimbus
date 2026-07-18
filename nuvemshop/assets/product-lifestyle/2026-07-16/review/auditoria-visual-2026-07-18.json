@@ -1,0 +1,1454 @@
+{
+ "auditados": 49,
+ "faltaram": [],
+ "resultados": [
+  {
+   "productId": 352722510,
+   "titulo": "São Miguel Celeste | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste/",
+   "capaBase": "352722510-vitrine-nimbus-f732773cc78c5027a717842416849228",
+   "parBase": null,
+   "resultado": {
+    "productId": 352722510,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 49,
+     "escalaMockupPct": 47
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle aprovada sem ressalvas. Escala da estampa 49% na foto vs 47% no mockup YouDraw branco (desvio ~4-5%, dentro da tolerância). Estampa bem integrada ao tecido (sombreamento acompanha dobras, sem efeito adesivo). Arte fiel ao mockup gallery-02: mesmo São Miguel, auréola dourada, demônio sob os pés, moldura de nuvens; texto NIMBUS íntegro letra por letra no zoom. Peça correta (blusão moletom gola careca branco). Modelo sem deformações de IA. Posição 2 inexistente por ser produto de cor única."
+   }
+  },
+  {
+   "productId": 352723243,
+   "titulo": "São Miguel Celeste | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste3/",
+   "capaBase": "352723243-vitrine-nimbus-dbdf1fd67a6630ad8e17842434577978",
+   "parBase": null,
+   "resultado": {
+    "productId": 352723243,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 44,
+     "escalaMockupPct": 47
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle aprovada sem ressalvas. Escala da estampa 44% na foto vs 47% no mockup YouDraw (desvio relativo ~6%, dentro do limite de 15%). Estampa bem integrada ao tecido: acompanha dobras, textura da malha visível, sem halo ou efeito adesivo. Arte idêntica ao mockup (São Miguel com auréola e raios, moldura circular de nuvens, demônio sob os pés, texto NIMBUS em letras-nuvem íntegro, verificado em zoom). Peça correta (camiseta branca premium). Modelo sem deformações de IA. Posição 2 não se aplica: produto de cor única, sem segunda foto no ar."
+   }
+  },
+  {
+   "productId": 352722685,
+   "titulo": "São Miguel Celeste | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste1/",
+   "capaBase": "352722685-vitrine-nimbus-4ee70153b46ce60d8b17842434254660",
+   "parBase": null,
+   "resultado": {
+    "productId": 352722685,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 57,
+     "escalaMockupPct": 48,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa das costas maior que a autoridade YouDraw: na foto no ar a arte ocupa ~57% do comprimento gola-barra (377px de arte / ~663px de peca, medido no eixo vertical) contra ~48% no mockup branco (187px / ~393px), desvio relativo de ~19%. A arte esta completa, centralizada e bem integrada ao tecido; sem o mockup ao lado o tamanho nao le como defeito em miniatura de catalogo.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa e lifestyle valido (modelo de costas, capuz do moletom canguru visivel franzido na nuca). Arte confere com o mockup gallery-02: Sao Miguel com espada erguida, aureola amarela, asas abertas, demonio prostrado com asa de morcego, anel de nuvens e raios; texto NIMBUS em letras-bolha correto letra por letra nas duas imagens. Integracao boa: grao da malha aparece na tinta, estampa acompanha curvatura do torso e sombra, sem halo/adesivo. Cor ok: tecido amostrado em RGB (221,221,224) = branco neutro, tom creme e so da luz quente da cena. Rosto do modelo em perfil sem deformacao de IA; maos fora do quadro. Unico problema e o desvio de escala ~19% (media, faixa 15-25%), medido com incerteza de +-5 pontos por causa da gola escondida sob o capuz franzido; nao visivel em tamanho catalogo, logo ressalva e nao reprovacao. Produto de cor unica: sem segunda foto, par nao-se-aplica."
+   }
+  },
+  {
+   "productId": 352720257,
+   "titulo": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo-gotico/",
+   "capaBase": "352720257-vitrine-nimbus-0f391a1c6ed223d29e17842432351675",
+   "parBase": "352720257-off-white-2046fe87e6fe76510217843490888758",
+   "resultado": {
+    "productId": 352720257,
+    "capa": {
+     "veredito": "aprovada",
+     "escalaFotoPct": 35.8,
+     "escalaMockupPct": 40.4,
+     "problemas": []
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posição 2 (off-white) são a mesma base fotográfica recolorida — par de hover consistente. Escala medida no eixo vertical: capa 35,8% (print 223px ÷ peça 623px, gola y347 a barra y970) vs mockup preto 40,4% (172px ÷ 426px); desvio relativo ~11%, dentro da tolerância de 15% (print levemente menor na foto, imperceptível). Texto conferido letra por letra contra a arte original: ACIMA / DE / TUDO + cruz, sem corrupção nas duas fotos; letterforms góticas e textura craquelada idênticas. Integração boa: estampa acompanha curvatura do peito e sombreamento do tecido, sem halo ou efeito adesivo. Peça correta (oversized drop-shoulder) nas duas cores. Mãos e rosto sem deformação de IA. Único detalhe: fragmento de azulejo/desenho cortado no canto superior esquerdo do fundo em ambas as fotos — é cenário, irrelevante pela regra do dono e invisível em miniatura."
+   }
+  },
+  {
+   "productId": 352719728,
+   "titulo": "Aparecida Barroca | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca/",
+   "capaBase": "352719728-vitrine-nimbus-ec09a21079051d64d617842431390259",
+   "parBase": null,
+   "resultado": {
+    "productId": 352719728,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 60.5,
+     "escalaMockupPct": 50.9,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa na foto ocupa ~60,5% do comprimento gola-barra vs ~50,9% no mockup YouDraw (desvio relativo ~19%, faixa 15-25%). Medido no eixo vertical: capa 331px de estampa / 547px de peça; mockup 198px / 389px. Parte do desvio é atribuível à peça vestida (caimento encurta o comprimento visível) vs mockup plano, colocando o desvio real no limite inferior da faixa media; a foto vende a estampa ~1/5 maior do que a peça real terá.",
+       "visivelEmTamanhoCatalogo": true
+      },
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Segunda linha do cartucho abaixo da imagem de Aparecida lê algo como '(RAXIL SAKISE)' — palavra inexistente em português ou latim (esperado 'DO BRASIL' ou similar). A primeira linha 'PADROEIRA' está correta e legível. A linha corrompida tem ~10px de altura na imagem de 1024px: totalmente ilegível em miniatura de catálogo (~400px), regra da distância aplica.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa é lifestyle (modelo de costas, blusão branco gola careca, corresponde ao tipo de peça e cor do mockup). Integração da estampa boa: acompanha a perspectiva do ombro e curvatura do torso, textura de malha visível, sem halo/retângulo/brilho de papel. Arte fiel ao mockup: coroa com cruz, manto azul com rosetas, bandeiras do Brasil, estandartes, querubim, acanto verde/creme, borda de azulejo e NIMBUS íntegro. Anatomia e qualidade profissionais (rosto em perfil e mão direita naturais). Medições feitas com grade de pixels e crops ampliados (arquivos em scratchpad/audit/). Gola da capa parcialmente coberta pelo cabelo (incerteza ±10-15px na medição); mesmo no cenário mais favorável o desvio de escala fica em ~16-21%, dentro da faixa media. Veredito ressalva: nenhum problema alta; escala media não chega a comprometer a venda (estampa maior favorece a foto, mas cliente compara com o mockup na mesma galeria) e o texto corrompido é invisível em tamanho catálogo."
+   }
+  },
+  {
+   "productId": 352890896,
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+   "capaBase": "352890896-preta-b25ff5b2b140dbfb7817843495077781",
+   "parBase": "352890896-off-white-3215fd5ef347203acc17843858615835",
+   "resultado": {
+    "productId": 352890896,
+    "capa": {
+     "veredito": "reprovada",
+     "escalaFotoPct": 67.4,
+     "escalaMockupPct": 43,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "alta",
+       "descricao": "Estampa muito maior que o especificado: ocupa 67,4% do comprimento visivel das costas (428px de 635px, gola y320 a barra y955, estampa y372 a y800) contra 43,0% no mockup YouDraw preto (197px de 458px). Desvio relativo de +57%, muito acima do limite de 25%. A moldura de azulejos quase encosta nas laterais e o NIMBUS desce ate a altura do quadril; em miniatura de catalogo a proporcao destoa claramente do mockup.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "peca-errada",
+       "gravidade": "alta",
+       "descricao": "A peca vestida nao e a camiseta oversized de manga curta do produto: as mangas sao longas e amplas, cobrindo o braco inteiro ate o punho (so as maos ficam expostas, mangas terminam em y830-860), estilo kimono/manga longa. Nos dois mockups YouDraw a manga termina logo apos o cotovelo. Visivel de imediato em tamanho catalogo e induz o cliente a comprar outra peca.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa levemente maior que o mockup: 49,0% do comprimento das costas (308px de 628px, gola y330 a barra y958, estampa y392 a y700) contra 42,6% no mockup off-white. Desvio relativo de +15%, exatamente na fronteira ok/media; a incerteza da medicao (gola parcialmente coberta pelo cabelo) coloca o valor real entre +13% e +17%. Em miniatura de 400px a diferenca nao e perceptivel sem o mockup ao lado.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Capa reprovada por dois problemas de gravidade alta independentes: escala da estampa +57% acima do mockup preto e tipo de peca errado (manga longa ate o punho em vez de camiseta oversized manga curta). Fora isso a capa esta correta: cor preta bate com o mockup gallery-04, arte fiel (coroa com cruz, rosto e maos postas da santa, manto azul com perolas, bandeiras do Brasil e do Vaticano, rostinho de crianca sob o manto, franja dourada, volutas verde/ouro, moldura de azulejos), textos PADROEIRA / (BRASIL SACRO) / NIMBUS perfeitos letra a letra vs a arte original, sem halo ou recorte de adesivo, anatomia das maos ok. Par (posicao 2) e lifestyle com a cor off-white (bate com gallery-02): manga curta correta, arte e textos integros (subtitulo BRASIL SACRO um pouco soft por resolucao, nao corrompido), boa integracao com o tecido (estampa acompanha a torcao do corpo e o sombreamento), rosto e maos do modelo sem deformacao relevante; unica ressalva e a escala no limite de +15%. Medicoes feitas por deteccao de pixels (perfis de linha da moldura azul e do texto dourado NIMBUS) + grades de referencia, eixo vertical. Aviso operacional ao orquestrador: outro subagente esta gravando arquivos z_*.png com os mesmos nomes no mesmo scratchpad audit/ (as 13:28 meus z_capa_texto.png/z_par_texto.png foram sobrescritos com crops do produto 352720257 acima-de-tudo-gotico); regenerei tudo com prefixo ap896_ e as conclusoes usam apenas crops verificados deste produto, mas vale isolar os diretorios de trabalho por produto."
+   }
+  },
+  {
+   "productId": 352720127,
+   "titulo": "Aparecida Barroca | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca3/",
+   "capaBase": "352720127-vitrine-nimbus-6e3562cb356135542b17842432036125",
+   "parBase": null,
+   "resultado": {
+    "productId": 352720127,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 57,
+     "escalaMockupPct": 52,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Cartucho minúsculo logo acima do logo NIMBUS contém pseudo-texto ilegível (rabiscos imitando letras); no mockup é apenas um ornamento. Ilegível mesmo na foto em tamanho cheio.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "qualidade",
+       "gravidade": "baixa",
+       "descricao": "Na coluna interna esquerda da moldura de azulejos (terço médio da estampa, parcialmente coberta pela folhagem), o motivo geométrico degenera em rabiscos azuis aleatórios em vez do padrão estrela/cruz regular do resto da borda.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "anatomia",
+       "gravidade": "baixa",
+       "descricao": "Leve estranheza de IA nas mãos penduradas do modelo, visível só em zoom extremo: reentrância atípica entre polegar e palma na mão direita da imagem e dedos levemente pastosos/sem definição de unha na mão esquerda. Rosto e corpo naturais.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Escala medida por perfil de pixels (eixo vertical): foto 350px de estampa / 612px gola-a-barra = 57%; mockup 209/399 = 52%; desvio relativo ~9%, dentro da tolerância de 15%. Integração boa: estampa acompanha o gradiente de sombra do tecido e o contorno do corpo, sem halo ou efeito adesivo. Arte fiel ao mockup gallery-02 (mesma composição: Aparecida coroada, duas bandeiras do Brasil com flâmulas, querubim na base, acantos, moldura de azulejos). Texto principal íntegro: PADROEIRA, (BRASIL SACRO) e NIMBUS legíveis e coerentes em português. Produto de cor única: posição 2 é o mockup de referência, não auditável como lifestyle."
+   }
+  },
+  {
+   "productId": 352719816,
+   "titulo": "Aparecida Barroca | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca1/",
+   "capaBase": "352719816-vitrine-nimbus-c4478269cac4524a1017842431710979",
+   "parBase": null,
+   "resultado": {
+    "productId": 352719816,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 54,
+     "escalaMockupPct": 61,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Cartucho oval na base da moldura barroca (logo acima do wordmark NIMBUS): no mockup lê 'PADROEIRA / BRASIL SACRO', mas na foto no ar a primeira linha virou algo como 'PADISOCIRA' e a segunda linha é pseudo-letras ilegíveis. O cartucho tem ~44px numa imagem de 1024px; em miniatura de catálogo (~400px) as linhas têm ~5px e são completamente ilegíveis.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Medição vertical: capa — estampa (topo da borda de azulejos y≈435 até base do NIMBUS y≈780 = 347px) sobre comprimento ombro→barra (y≈330 a y≈970 = 640px) = ~54%. Mockup (render a 1000px) — estampa 318→740 = 422px sobre 180→875 = 695px = ~61%. Desvio relativo ~11%, dentro da tolerância de 15%. Integração aprovada: sem halo/retângulo/brilho de papel, textura da malha visível nas áreas claras da estampa, costas lisas sem dobras cruzando a arte. Arte bate elemento a elemento com o mockup, incluindo o querubim na base do manto (presente nos dois) e bandeiras do Brasil + pontifícias. Wordmark NIMBUS correto. Peça correta (moletom canguru branco, capuz visível). Modelo sem deformações (rosto e mão direita checados em zoom). Único defeito: micro-texto do cartucho corrompido, invisível em tamanho de catálogo — por isso ressalva e não reprovação. Obs.: o texto do próprio mockup ('BRASIL SACRO') já é uma escolha estilística; a comparação foi por coerência interna, sem arte original disponível."
+   }
+  },
+  {
+   "productId": 352717960,
+   "titulo": "Azulejo Sagrado | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/azulejo/",
+   "capaBase": "352717960-vitrine-nimbus-716fbb71088e3368f517842429456998",
+   "parBase": null,
+   "resultado": {
+    "productId": 352717960,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 47,
+     "escalaMockupPct": 45
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle (costas, blusão branco) aprovada. Escala da estampa medida no eixo vertical: 47% na foto vs 45% no mockup YouDraw (desvio relativo ~4-5%, dentro da tolerância). Integração boa: estampa acompanha a curvatura das costas, luz modula sobre a tinta, sem halo/retângulo/brilho de adesivo; bordas retas pertencem à própria arte (painel de azulejo). Arte bate com o mockup: borda de azulejos azuis, cartela barroca dourada, cruz central azul/ouro com auréola e resplendor, flores laterais; sem texto na arte, logo sem risco de corrupção tipográfica. Peça correta: moletom gola careca branco, igual ao mockup. Modelo sem deformações (perfil limpo, mãos ok), foto com qualidade profissional. Posição 2 é o mockup YouDraw oficial, não lifestyle, portanto nao-se-aplica."
+   }
+  },
+  {
+   "productId": 352718275,
+   "titulo": "Azulejo Sagrado | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/azulejo3/",
+   "capaBase": "352718275-vitrine-nimbus-108eaf2ba24045e4cb17842430096419",
+   "parBase": null,
+   "resultado": {
+    "productId": 352718275,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 47,
+     "escalaMockupPct": 46
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle (costas) aprovada: escala da estampa ~47% na foto vs ~46% no mockup YouDraw (desvio ~2%, dentro da tolerância de 15%); estampa bem integrada ao tecido, acompanhando a curvatura das costas sem efeito de adesivo; arte bate com o mockup em todos os elementos (painel de azulejo, moldura dourada, cruz com auréola, florais nos cantos); sem texto na arte, logo sem risco de corrupção; peça e cor corretas; modelo sem deformações de IA e fotografia com qualidade profissional. Produto de cor única, sem segunda foto no ar; posição 2 marcada como não se aplica conforme instrução."
+   }
+  },
+  {
+   "productId": 352718083,
+   "titulo": "Azulejo Sagrado | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/azulejo1/",
+   "capaBase": "352718083-vitrine-nimbus-3830bb01db5e26e2a817842429777866",
+   "parBase": null,
+   "resultado": {
+    "productId": 352718083,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 43,
+     "escalaMockupPct": 48
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle (modelo de costas, moletom branco com capuz visível) aprovada: escala da estampa 43% na foto vs 48% no mockup YouDraw branco (desvio relativo ~10%, dentro dos 15%); arte idêntica ao mockup (painel de azulejo com cruz dourada central, auréola, moldura barroca e borda azul), sem texto na arte; integração boa (grade do azulejo sutil, sem halo/borda flutuante); anatomia e iluminação sem defeitos. Produto de cor única: não existe segunda foto lifestyle, apenas o mockup de referência, portanto par = nao-se-aplica."
+   }
+  },
+  {
+   "productId": 352717723,
+   "titulo": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao/",
+   "capaBase": "352717723-preta-591e882a61994efaea17843488778717",
+   "parBase": "352717723-off-white-83450650035025d50317843488776665",
+   "resultado": {
+    "productId": 352717723,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 45.5,
+     "escalaMockupPct": 48.8
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posicao 2 (off-white) sao fotos lifestyle do mesmo modelo em corredor de azulejos. Escala verificada no eixo vertical contra os mockups YouDraw da mesma cor: capa 45,5% vs 48,8% (desvio ~7%), par ~46% vs ~48,9% (desvio ~6%), ambos dentro da tolerancia de 15%. Texto conferido letra por letra em zoom 3x contra a arte original (costas - Brasao.png): NIMBUS e ACIMA DE TUDO corretos nas duas fotos. Estampa bem integrada ao tecido (acompanha dobras, textura da malha visivel, sem halo/adesivo). Peca correta (oversized, cores preta e off-white). Anatomia do modelo (rosto em perfil, mao direita em zoom) sem deformacao de IA. Unico ponto observado: microdetalhe do rendilhado da cruz e do miolo das letras amacia em zoom digital acima da resolucao nativa de 1024px, o que nao constitui defeito visivel em catalogo nem em lightbox. Nenhum problema listado; ambas aprovadas."
+   }
+  },
+  {
+   "productId": 352717837,
+   "titulo": "Brasão NIMBUS | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao1/",
+   "capaBase": "352717837-preta-b9a1a73d4e28d520b917843489388824",
+   "parBase": "352717837-vitrine-nimbus-969a91bf011ed5acc117842429141862",
+   "resultado": {
+    "productId": 352717837,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 50,
+     "escalaMockupPct": 49
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa = camiseta preta lifestyle (costas), posicao 2 = mesma cena com a camiseta branca (par de hover correto por cor). Escala verificada no eixo vertical contra o mockup da mesma cor: capa ~50% vs mockup preto ~49% (desvio ~3%); par ~50% vs mockup branco ~49% (desvio ~2%) — ambos dentro da tolerancia. Integracao boa nas duas: estampa acompanha dobras, textura da malha visivel na tinta, sem halo/adesivo. Arte fiel a original nas duas fotos: NIMBUS blackletter (a ligadura central quase ilegivel ja existe na arte original, incluindo o detalhe de barra horizontal entre N e B — nao e corrupcao), cruz ornamentada e faixa ACIMA DE TUDO com texto correto letra por letra. Cores corretas (preta na capa, branca no par), peca correta (camiseta regular premium). Modelo sem deformacoes de IA, luz profissional. Nenhum defeito encontrado."
+   }
+  },
+  {
+   "productId": 352703276,
+   "titulo": "Deus é Fiel | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel/",
+   "capaBase": "352703276-vitrine-nimbus-769900592dcfa6e1fd17842428187455",
+   "parBase": null,
+   "resultado": {
+    "productId": 352703276,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 36,
+     "escalaMockupPct": 34
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle aprovada sem ressalvas. Medição vertical: estampa 258px / peça visível 710px = ~36% na foto; mockup 166px / 490px = ~34%; desvio relativo ~7% (dentro dos 15%). Texto conferido letra a letra em zoom: DEUS e É FIEL idênticos ao mockup gallery-02, acento do É presente, arco dourado com cruz no ápice igual. Integração convincente: tinta com textura de malha e efeito distressed, letras acompanham a curvatura do ombro, sem halo ou borda de adesivo. Anatomia do modelo (perfil, orelha, mão direita) sem defeitos de IA. Única diferença notada: espaçamento entre É e FIEL levemente mais fechado que no mockup, explicável pela perspectiva de costas em ângulo e curvatura do tecido, não caracteriza defeito. Posição 2 é o próprio mockup YouDraw de referência (produto de cor única, sem segunda foto lifestyle), fora do escopo de checagem conforme instrução."
+   }
+  },
+  {
+   "productId": 352703343,
+   "titulo": "Deus é Fiel | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel1/",
+   "capaBase": "352703343-vitrine-nimbus-0be1a8637dae92594e17842428501962",
+   "parBase": null,
+   "resultado": {
+    "productId": 352703343,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 41,
+     "escalaMockupPct": 40
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle aprovada sem ressalvas. Escala da estampa praticamente idêntica ao mockup YouDraw (~41% na foto vs ~40% no mockup, desvio relativo ~2-3%). Estampa bem integrada ao tecido (acompanha curvatura das costas, textura distressed deixa a malha aparecer, sem halo ou brilho de adesivo). Arte fiel ao mockup: lettering gótico \"DEUS É FIEL\" em duas linhas com arco dourado e cruz no topo, texto legível e coerente. Peça correta (camiseta preta manga curta). Modelo sem deformações de IA, iluminação e nitidez profissionais. Produto de cor única: posição 2 não se aplica (mockup de referência usado apenas como autoridade de escala/arte)."
+   }
+  },
+  {
+   "productId": 352702858,
+   "titulo": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo/",
+   "capaBase": "352702858-vitrine-nimbus-3d97f93a48e09ac33317842427544837",
+   "parBase": "352702858-off-white-9a991ddfd0f306ad5e17843487804748",
+   "resultado": {
+    "productId": 352702858,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 31.4,
+     "escalaMockupPct": 25.3,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa nas costas da camiseta preta mede 31,4% do comprimento gola-barra (226px/720px) contra 25,3% no mockup YouDraw preto gallery-02 (122px/483px): desvio relativo de +24%, dentro da faixa 15-25%. Parte do desvio e vies metodologico (peca vestida drapeja sobre os ombros e encurta o comprimento visivel vs mockup plano); no catalogo a estampa parece proporcional e nao destoa do par.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa nas costas da camiseta off-white mede 30,5% do comprimento gola-barra (219px/718px) contra 25,3% no mockup YouDraw off-white gallery-04: desvio relativo de +21%, faixa 15-25%. Mesmo vies de peca vestida vs mockup plano; escala consistente com a capa (31,4%), entao o hover nao mostra salto de tamanho.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "qualidade",
+       "gravidade": "baixa",
+       "descricao": "Aureola (elipse ocre atras da cruz) esta bem desbotada na foto off-white: tan palido de baixo contraste contra o ocre saturado do mockup gallery-04. Elemento presente e na posicao correta, apenas lavado pela iluminacao quente; em miniatura ~400px fica quase impercepivel sem parecer defeito.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Texto conferido letra a letra contra a arte original (costas - Fé Acima de Tudo.png): 'FÉ ACIMA / DE TUDO' integro nas duas fotos, com as mesmas ligaduras blackletter, cruz, aureola e cauda com degraus sob o O final. Integracao boa nas duas: tinta com textura craquelada, estampa acompanha dobras do tecido, sem borda/halo de adesivo. Peca correta (oversized, ombro caido, manga ampla) e cores corretas (capa preta = gallery-02; par off-white = gallery-04). Anatomia ok: maos inspecionadas em zoom 3x nas duas modelos, sem dedos extras/faltando, apenas leve textura cerosa de IA invisivel em tamanho de catalogo; rosto de perfil no par normal. Medicao de escala feita por analise de pixels (topo da cruz ate a ponta mais baixa da tinta; gola ao barra no eixo vertical). Os desvios de escala (+24% capa, +21% par) caem na faixa media, mas ambos carregam vies sistematico de peca vestida (drape encurta o comprimento visivel vs mockup plano); corrigido esse vies, ficariam perto do limite de 15%. Nada compromete a venda: veredito ressalva nas duas."
+   }
+  },
+  {
+   "productId": 352703153,
+   "titulo": "Fé Acima de Tudo | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo1/",
+   "capaBase": "352703153-vitrine-nimbus-5d256d58ccd3efa32217842427863307",
+   "parBase": "352703153-branca-d8be15262f588c063a17843488284169",
+   "resultado": {
+    "productId": 352703153,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 28.6,
+     "escalaMockupPct": 31.6
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posicao 2 (branca, lifestyle) aprovadas. Texto conferido letra a letra em zoom 4x contra a arte original (costas - Fé Acima de Tudo.png): \"FÉ ACIMA / DE TUDO\" integro nas duas fotos, com acento no É, O final com traco e arco da aureola passando atras do texto exatamente como na arte. Escala: mockup 31,6% (126/399px); capa ~28,6% (estampa 206px; barra fora do quadro, comprimento da peca estimado em ~720px por proporcao corporal). Desvio relativo ~9%, dentro da tolerancia de 15%; mesmo no pior caso (barra na borda do quadro) a escala da foto seria 31,5%, igual ao mockup, entao nao ha como haver desvio alto. Integracao boa nas duas fotos: textura da malha visivel na tinta, distress preservado, sem borda reta nem efeito adesivo. Anatomia e iluminacao profissionais, sem deformacao de IA. Par do hover cumpre a regra foto-por-cor (mostra a segunda cor do produto)."
+   }
+  },
+  {
+   "productId": 352702753,
+   "titulo": "Monograma NIMBUS | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/monograma-nmb/",
+   "capaBase": "352702753-vitrine-nimbus-4e094109605c1579ab17842426907553",
+   "parBase": "352702753-off-white-2f6d243b6fa1f689cb17843486751691",
+   "resultado": {
+    "productId": 352702753,
+    "capa": {
+     "veredito": "aprovada",
+     "escalaFotoPct": 31.7,
+     "escalaMockupPct": 34.7,
+     "problemas": []
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Medições por grade de 50px (fotos 1024px) e 25px (mockups 500px), eixo vertical. Capa (preta): estampa com auréola 195px sobre peça gola-barra 615px = 31.7%; mockup gallery-01 = 150/432 = 34.7%; desvio relativo ~9% (ok). Par (off-white): 200/595 = 33.6% vs gallery-02 155/435 = 35.6%; desvio ~6% (ok). Arte conferida em zoom contra o original: os 3 elementos do monograma (N gótico, M central em forma de Y com cruz na haste, B), auréola dourada e cruz ornamentada presentes e fiéis nas duas fotos; sem elementos inventados/removidos; monograma sem palavras corrompíveis. Integração boa nas duas: tinta matte com craquelado do próprio design, sem retângulo/halo/brilho de adesivo. Anatomia verificada em zoom (2 mãos por foto + rosto): natural, mesmo modelo do elenco fixo. Cor e tipo de peça batem com os mockups (oversized preta e off-white). Observação de metadado: as descrições dos mockups no pedido dizem \"costas\", mas as imagens gallery-01/02 mostram a frente e a pasta da arte é \"[só frente]\" — as fotos no ar mostram estampa frontal, correto; vale corrigir o texto descritivo dos mockups no catálogo. Suspeita de marca fantasma perto da barra do par descartada (era a costura do hem, vista com contraste aumentado)."
+   }
+  },
+  {
+   "productId": 352702796,
+   "titulo": "Monograma NIMBUS | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/monograma-nmb1/",
+   "capaBase": "352702796-vitrine-nimbus-85adadc2c7f2a07a4917842427223104",
+   "parBase": "352702796-branca-233f1e0226bad7565117843487212064",
+   "resultado": {
+    "productId": 352702796,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 36.9,
+     "escalaMockupPct": 39.4,
+     "problemas": [
+      {
+       "tipo": "peca-errada",
+       "gravidade": "media",
+       "descricao": "O caimento da camiseta preta na foto le como oversized (ombros bem caidos abaixo da linha do ombro, corpo boxy volumoso, manga larga ate perto do cotovelo), enquanto o mockup YouDraw gallery-01 da Camiseta Premium mostra modelagem regular. Como a pasta da arte distingue [Camiseta+Oversized] como dois produtos separados, a foto pode estar comunicando a modelagem do produto Oversized na pagina da Camiseta Premium. Nao reprova sozinho porque cor, arte e tipo de peca (camiseta) estao corretos e ha chance real de a Camiseta Premium ser intencionalmente boxy.",
+       "visivelEmTamanhoCatalogo": true
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "peca-errada",
+       "gravidade": "media",
+       "descricao": "Mesmo problema da capa: a camiseta branca na foto tem silhueta oversized (ombro caido, corpo boxy), enquanto o mockup YouDraw gallery-02 mostra modelagem regular. Escala da estampa medida em 38.4% vs 40.3% no mockup branco (desvio ~5%, dentro da tolerancia).",
+       "visivelEmTamanhoCatalogo": true
+      }
+     ]
+    },
+    "notas": "Metodo: medicao no eixo vertical com grades de pixel (gola = costura inferior da gola ao centro; barra = borda inferior da peca). Capa: estampa y400-612 (212px), peca y318-890 (574px) = 36.9%; mockup preto: estampa y137-280 (143px), peca y88-450 (363px) = 39.4%; desvio relativo ~6.3%, ok. Par: estampa y408-618 (210px), peca y348-895 (547px) = 38.4%; mockup branco 143/355 = 40.3%; desvio ~4.7%, ok. A barra da capa (preto sobre shorts pretos) tem incerteza de +-15px, mas mesmo nos extremos o desvio fica abaixo de 15%. Integracao aprovada nas duas fotos: sombreamento suave, textura craquelada da arte preservada, sem borda de adesivo nem brilho de papel. Arte fiel: monograma NMB, cruz central e aureola presentes, nada inventado/removido, sem texto corrompido; a aureola da capa esta com traco um pouco mais fino que na arte original (variacao de redesenho, invisivel em catalogo, nao listada como problema). Par de hover por cor correto: capa preta, posicao 2 branca, mesmo modelo do elenco fixo, mesmo cenario. Anatomia verificada em zoom (rosto e as quatro maos): natural, sem deformacao de IA. Unica pendencia real: confirmar com o dono se a modelagem da Camiseta Premium e regular ou boxy; se for regular, trocar as fotos pelas da modelagem correta (as atuais parecem ser da versao Oversized). Se a Camiseta Premium for intencionalmente boxy, ambas as fotos podem ser consideradas aprovadas."
+   }
+  },
+  {
+   "productId": 352702020,
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "capaBase": "352702020-preta-57b2e7de23134cc19e17843486271476",
+   "parBase": "352702020-branca-d48ceea7042d5c514317843486264095",
+   "resultado": {
+    "productId": 352702020,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 38.8,
+     "escalaMockupPct": 36.2
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posição 2 (branca) são fotos lifestyle do mesmo cenário, formando par de hover por cor. Escala medida no eixo vertical: capa 38,8% vs mockup preto 36,2% (desvio ~7%, ok); par 36,2% vs mockup branco ~35,9% (desvio ~1%). Texto conferido letra por letra contra a arte original 'costas - Salmo 19.png': OS CÉUS PROCLAMAM / A GLÓRIA DE DEUS / cruz / Sl 19 — íntegro nas duas fotos, acentos presentes. Integração da estampa convincente (acompanha dobras e sombreamento, sem halo/adesivo). Observação menor, não contabilizada como defeito: a mão direita pendente dos dois modelos tem o indicador dobrado com contorno levemente arredondado em zoom 2x, mas lê como pose natural e é invisível em tamanho de catálogo."
+   }
+  },
+  {
+   "productId": 352619175,
+   "titulo": "Salmo 19 | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-191/",
+   "capaBase": "352619175-preta-0ccaaeca4fc5ec2c1517843485692037",
+   "parBase": "352619175-vitrine-nimbus-a20646cebf775ba45717842426275414",
+   "resultado": {
+    "productId": 352619175,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 41,
+     "escalaMockupPct": 46.5
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa = moletom preto, par = moletom branco, mesmo modelo e cenario (patio de azulejos), cumprindo a regra foto-por-cor + hover. Texto conferido letra a letra contra a arte original: 'OS CEUS PROCLAMAM A GLORIA DE DEUS', cruz ornamentada e 'Sl 19' integros nas duas fotos, acentos presentes. Escala levemente menor que o mockup YouDraw nas duas cores (desvio relativo ~12-13%), mas dentro da tolerancia de 15%. Integracao boa: estampa acompanha a curvatura das costas, sem halo ou efeito adesivo. Anatomia do modelo (rosto de perfil, orelha, maos) sem deformacao de IA; iluminacao e nitidez profissionais."
+   }
+  },
+  {
+   "productId": 352718943,
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+   "capaBase": "352718943-preta-8126a28dc4cda7cb3c17843857989747",
+   "parBase": "352718943-vitrine-nimbus-e54299c092a32a252617842430756612",
+   "resultado": {
+    "productId": 352718943,
+    "capa": {
+     "veredito": "reprovada",
+     "escalaFotoPct": 47.6,
+     "escalaMockupPct": 43.1,
+     "problemas": [
+      {
+       "tipo": "peca-errada",
+       "gravidade": "alta",
+       "descricao": "A modelo veste uma peca preta de manga COMPRIDA e larga, estilo kimono/blusao, com mangas ate o punho e barra longa (visivel nos dois bracos, mangas cobrindo ate o pulso). O produto vendido e a Camiseta Oversized Premium de manga curta, como mostram os mockups gallery-02/gallery-04 e a propria foto da posicao 2. A capa retrata uma peca que nao e a que o cliente recebe.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa maior que a referencia YouDraw: na foto ocupa ~50,7% do comprimento gola-barra (estampa y375-715 = 340px; peca y~310-980 = 670px) contra ~43% no mockup off-white gallery-02 (195px de estampa em ~453px de peca). Desvio relativo de ~18%, na faixa 15-25%. Sutil: nao salta aos olhos em miniatura ~400px, so em comparacao lado a lado com o mockup.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Medicao pelo eixo vertical com analise de pixels + grade de coordenadas. CAPA (preta): estampa y372-672 (300px), gola ~y305 (parcialmente coberta pelo cabelo), barra da peca ~y935 (costura visivel apos clareamento) = 630px, razao 47,6%; mockup preto gallery-04: estampa y86-282 (196px), gola ~y35, barra ~y490 (455px), razao 43,1%; desvio ~10%, dentro da tolerancia, mas secundario porque a peca da capa nem e a camiseta vendida. PAR (off-white): mockup gallery-02 razao 43,0%. Nas duas fotos ao vivo: texto NIMBUS integro e correto letra por letra contra a arte original; composicao fiel (querubins, cartucho, Sao Jorge no cavalo branco empinado, capa vermelha, lanca, dragao vermelho, borda de azulejos com coracoes/ancoras/flor-de-lis, passifloras nos cantos, capela ao fundo); integracao boa (sem halo, sem retangulo, tinta acompanha o tecido); rosto e maos da modelo sem deformacao evidente; iluminacao profissional. Correcao recomendada: substituir a capa por foto lifestyle da camiseta oversized manga curta preta (ou promover a atual posicao 2 a capa) porque a capa atual mostra peca de manga comprida que o cliente nao recebe."
+   }
+  },
+  {
+   "productId": 352718999,
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
+   "capaBase": "352718999-vitrine-nimbus-99b4e5b1966768ec0817842431075146",
+   "parBase": "352718999-branca-4ceebbb8865b65d7ef17843490346538",
+   "resultado": {
+    "productId": 352718999,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 59.6,
+     "escalaMockupPct": 49.7,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa das costas ocupa ~60% do comprimento gola-barra na foto contra ~50% no mockup preto (gallery-04): desvio relativo de ~20%, acima da tolerancia de 15%. A capa mostra a estampa maior do que ela sera no produto real. Nao chega a 25% (alta) e nao e detectavel sem comparar com o mockup, por isso ressalva e nao reprovacao.",
+       "visivelEmTamanhoCatalogo": true
+      },
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "No cartucho dourado, 'NIMBUS' esta correto, mas logo abaixo ha pseudo-letras minusculas (algo como 'MIZDE') no lugar do floreio decorativo da arte original. Com ~8px de altura na imagem de 1024, e ilegivel na miniatura de catalogo (~400px).",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "arte-errada",
+       "gravidade": "baixa",
+       "descricao": "As passifloras (flores de maracuja com franja azul) da moldura na arte original viraram flores brancas genericas de miolo dourado nas laterais esquerda e direita da estampa. Simplificacao decorativa imperceptivel em tamanho catalogo; resto da composicao (cavaleiro, cavalo, dragao, querubins, azulejos com coracoes/ancoras, capela ao fundo) fiel.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Metodo: grades de coordenadas e crops ampliados via Pillow sobre as 4 imagens; medicao no eixo vertical. Capa (preta): estampa y471-803 (332px), peca y~425-982 (557px) = 59,6%; mockup preto: estampa 149-347 (198px), peca ~52-450 (398px) = 49,7%; desvio ~20% (faixa de incerteza 17-24% por causa da gola coberta pelo cabelo) = media, nao alta. Par (branca): estampa y477-796 (319px), peca ~430-985 (555px) = 57,5%; mockup branco = ~50,0%; desvio ~14-15%, no limite mas dentro da tolerancia, por isso sem problema lancado; se o dono quiser corrigir a escala da capa, vale re-gerar as duas com estampa ~15% menor para casar com o mockup. Integracao boa nas duas fotos: a borda de azulejos curva com o tronco, asa e cauda do dragao vazam da moldura naturalmente, sem halo/retangulo/brilho de papel. Par e mais fiel a arte que a capa (passifloras e capela presentes; cartucho sem pseudo-texto). Modelo sem defeitos de anatomia nas duas; cores das pecas corretas (preta na capa, branca no par), camiseta regular compativel com o produto. Arquivos de medicao em C:\\Users\\rober\\AppData\\Local\\Temp\\claude\\C--Users-rober\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\scratchpad\\audit (grid_*.png, crop_*.png, z_*.png)."
+   }
+  },
+  {
+   "productId": 352718787,
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+   "capaBase": "352718787-preta-eff5de1a3c63d9216617843489827912",
+   "parBase": "352718787-branca-9aaaef2382a6f192d217843822934008",
+   "resultado": {
+    "productId": 352718787,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 64.5,
+     "escalaMockupPct": 58.3,
+     "problemas": [
+      {
+       "tipo": "arte-errada",
+       "gravidade": "baixa",
+       "descricao": "No fundo da estampa, a direita do cavalo (entre a capa vermelha e a faixa de azulejos), a capela com torre e a pequena figura de Maria da arte original foram substituidas por um edificio branco em arcada, sem torre e sem a figura; na foto da posicao 2 esses elementos aparecem corretos. So perceptivel com zoom forte.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "anatomia",
+       "gravidade": "baixa",
+       "descricao": "Mao esquerda da modelo (borda direita da foto, pendida ao lado do corpo): o dedo minimo aparece levemente separado do bloco da mao, com brilho translucido de contraluz um pouco artificial. So visivel em zoom alto (12x); em tamanho real e em miniatura le como mao normal.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Medicoes pelo eixo vertical. CAPA (preta): estampa 361px (y392-753) / peca visivel ~560px (gola ~y300, barra ~y860) = ~64,5%; mockup preto gallery-04: 208px (y157-365) / 357px (y105-462) = ~58,3%; desvio relativo ~11%, dentro da tolerancia de 15% (fica no limite superior mesmo variando a leitura da barra em +-20px). PAR (branca): 363px/600px = ~60,5% vs mockup branco 58,0%, desvio ~4%. Texto: no par o cartucho le NIMBUS integro, letra por letra; na capa o capuz cobre parte do cartucho e as letras visiveis (...BUS) batem com NIMBUS, sem corrupcao — ocultacao natural do caimento, nao defeito, mas vale saber que na foto de capa a marca nao fica legivel. Integracao boa nas duas fotos: bordas sem halo/retangulo, iluminacao da estampa coerente com a cena, dragao rompendo a moldura e cauda abaixo da barra inferior como na arte. Peca correta nas duas: moletom com capuz visivel, cores preta e branca correspondem aos mockups gallery-04 e gallery-02. Variacao leve nao pontuada: no par o querubim esquerdo saiu menor que o direito (no original sao simetricos), impercebivel em catalogo. Qualidade fotografica profissional nas duas; rosto e maos da modelo sem deformacao relevante."
+   }
+  },
+  {
+   "productId": 352618837,
+   "titulo": "São Jorge Vintage | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage/",
+   "capaBase": "352618837-vitrine-nimbus-71a833ad83b3b063d617842425000989",
+   "parBase": "352618837-branca-925d53b6793f9b586a17843482500848",
+   "resultado": {
+    "productId": 352618837,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 63,
+     "escalaMockupPct": 51,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa das costas ~24% maior que o mockup YouDraw (proporcao altura-estampa/comprimento-peca ~63% na foto vs ~51% no gallery-03; intervalo 21-28% conforme a ancora da gola, encostando no limiar de alta). Na foto a estampa comeca ~30px abaixo da costura da gola e ocupa quase toda a largura das costas; no mockup ha margem de ~18% do comprimento entre gola e estampa. O produto entregue tera estampa proporcionalmente menor do que a capa mostra.",
+       "visivelEmTamanhoCatalogo": true
+      },
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "O texto pequeno 'NIMBUS' no topo do arco (entre os dois tracos do swoosh, y~332-345) esta corrompido: le-se algo como 'SIVIJAWS'. O titulo principal 'SAO JORGE' esta correto letra por letra (incluindo til no A e O cortado). Texto com ~15px de altura em imagem de 1024px, ilegivel na miniatura de catalogo de ~400px.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Mesma tendencia da capa: estampa ~20% maior que o mockup branco gallery-04 (proporcao vertical ~59-61% na foto vs ~50% no mockup; intervalo 18-22%). As duas fotos lifestyle sao coerentes entre si, mas ambas excedem a autoridade YouDraw.",
+       "visivelEmTamanhoCatalogo": true
+      }
+     ]
+    },
+    "notas": "Medicao feita com crops gradeados via ffmpeg (o caminho GDI/System.Drawing tinha bug de DPI no DrawImage e foi descartado apos validacao cruzada). Pontos aprovados nas duas fotos: integracao excelente (estampa acompanha dobras e curvatura do ombro, textura da malha visivel atraves da tinta, bordas distressed sem halo/retangulo/brilho de papel); arte fiel ao mockup (cavalo branco empinado com cabeca baixa e bridao, cavaleiro de elmo com capa e lanca cravada, dragao com garras e cauda enrolada, igreja a direita, moldura distressed); peca correta (blusao moletom gola careca sem capuz, punhos e barra canelados; capa preta = gallery-03, par branco = gallery-04); modelo sem deformacoes de IA (rosto de perfil, maos e orelha normais), luz e nitidez profissionais. O 'NIMBUS' fantasma quase invisivel no par NAO e defeito: no proprio mockup branco gallery-04 esse elemento creme fica igualmente apagado sobre tecido branco (verificado em zoom). O tom mais amarronzado da armadura do cavaleiro no par e explicavel pela luz quente da cena, presente na foto inteira. Recomendacao: se o lote for re-gerado, reduzir a estampa das duas fotos para a escala do mockup (~51% do comprimento gola-barra) e corrigir o 'NIMBUS' da capa; como esta, o desvio de escala e o unico problema visivel em tamanho de catalogo e fica na faixa media (capa no topo da faixa)."
+   }
+  },
+  {
+   "productId": 352618903,
+   "titulo": "São Jorge Vintage | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage2/",
+   "capaBase": "352618903-vitrine-nimbus-c85c8f648c2e1b9a8117842425641229",
+   "parBase": "352618903-off-white-9f9cb1ad89da1a338317843484453714",
+   "resultado": {
+    "productId": 352618903,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 49,
+     "escalaMockupPct": 42,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa das costas levemente maior que o mockup preto (autoridade): altura da estampa = ~49% do comprimento gola-barra na foto (320px/648px) vs ~42% no mockup (203px/480px), desvio relativo ~15-17%, exatamente no limite entre ok e media (a incerteza vem do ponto de referência da gola no mockup flat-lay). Isoladamente a estampa parece natural; o desvio só se percebe em comparação direta com o mockup.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "arte-errada",
+       "gravidade": "baixa",
+       "descricao": "O texto pequeno 'NIMBUS' e o arco fino acima de 'SÃO JORGE' não aparecem na foto off-white (zoom 4x não mostra vestígio). No próprio mockup off-white esses elementos já aparecem apenas como traços creme quase invisíveis (texto creme sem fundo escuro sobre tecido claro), então em miniatura de catálogo ~400px o resultado visual é idêntico. 'SÃO JORGE' está íntegro letra por letra, com til.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Ambas as fotos são lifestyle (mesmo modelo do elenco fixo, mesma pose, rua de pedra portuguesa). Checagens aprovadas nas duas: integração da estampa excelente (textura da malha visível na tinta, bordas distressed da própria arte, sem efeito adesivo/halo); conteúdo da arte fiel ao original (cavalo empinado à esquerda, cavaleiro de elmo escuro com rosto pálido em perfil — que EXISTE na arte original, verificado em zoom —, lança, dragão com cauda anelada, igreja à direita); texto do arco 'SÃO JORGE' correto letra por letra nas duas fotos; na capa o 'NIMBUS' é legível e fiel (o N com aparência de X reproduz-se identicamente ao rebaixar a arte original para a mesma resolução — não é corrupção de IA); peça correta (camiseta oversized, drop shoulder, cores preta e off-white corretas); mãos, rosto e corpo do modelo sem deformação, luz e nitidez profissionais. Medições por análise de pixels (perfis de linhas claras/escuras): capa estampa y331-651 e gola-barra y272-920; mockup preto estampa y82-285 e peça y8-488; par estampa y343-651 (topo = SÃO, pois NIMBUS invisível) e gola-barra y258-932; mockup off-white estampa y89-285 (mesmo referencial SÃO) e peça y9-491, dando par ~46% vs ~41% (desvio ~12%, dentro da tolerância). Nenhum problema de gravidade alta; nada visível em tamanho de catálogo. As duas fotos podem permanecer no ar."
+   }
+  },
+  {
+   "productId": 352618935,
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "capaBase": "352618935-preta-047973eaac1d0a393b17843485079821",
+   "parBase": "352618935-branca-e7a631a591c71ab9d817843821665956",
+   "resultado": {
+    "productId": 352618935,
+    "capa": {
+     "veredito": "reprovada",
+     "escalaFotoPct": 71,
+     "escalaMockupPct": 52,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "alta",
+       "descricao": "Estampa ocupa ~71% do comprimento visivel da peca (gola a barra, eixo vertical: estampa 449px sobre peca 633px) contra ~52% no mockup YouDraw preto gallery-02 (estampa 208px sobre peca 399px): desvio relativo de +36%. A estampa esta ampliada e deslocada para cima: o 'NIMBUS' comeca a ~4% abaixo da gola na foto, contra ~20% de folga no mockup. Cliente recebera estampa visivelmente menor que a da capa.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "peca-errada",
+       "gravidade": "media",
+       "descricao": "Corte da camiseta aparenta oversized (ombro bem caido, manga larga chegando ao cotovelo, silhueta boxy), divergente do fit regular do mockup gallery-02 e da foto da posicao 2 do mesmo produto (Camiseta Premium regular). Possivel foto gerada para a variante Oversized da mesma arte.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "arte-errada",
+       "gravidade": "baixa",
+       "descricao": "Detalhes redesenhados versus a arte original: cabeca do cavalo mais erguida (na arte original o focinho aponta para baixo) e igreja da borda direita renderizada de forma mais blocada. Composicao geral fiel (Sao Jorge no cavalo branco empinado, dragao abaixo, igreja a direita, texto em arco); textos 'NIMBUS' e 'SAO JORGE' corretos letra a letra.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Fragmento de letra fantasma (pequeno glifo gotico tipo 'A/Z') entre o 'R' e o 'G' de JORGE, junto da lanca, inexistente na arte original 'costas - Sao Jorge Vintage.png'. O mesmo artefato ja existe no mockup branco aprovado gallery-04, entao a foto e consistente com a galeria. Minusculo e ilegivel em miniatura de catalogo ~400px, le-se como ornamento.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Auditoria com medicao pixel a pixel (eixo vertical, gola a barra). CAPA reprovada por escala: foto 71% vs mockup 52% = +36% de desvio (limite alta >25%); estampa colada na gola; corte aparenta oversized num produto Camiseta Premium. Integracao da estampa boa nas duas fotos (meia-tinta visivel, bordas desgastadas da propria arte, acompanha o tecido, sem halo/adesivo). Textos 'NIMBUS' e 'SAO JORGE' integros na capa (o 'N' gotico que parece 'X' e fiel a arte original). PAR (branca) em ressalva: escala ok (54-57% vs 56% do mockup gallery-04, desvio <6%), anatomia e maos ok; unico defeito e um glifo fantasma entre R e G de JORGE, herdado do proprio mockup gallery-04 e invisivel em tamanho de catalogo (regra da distancia). Observacao de linha: no tecido branco o 'NIMBUS' creme fica quase invisivel, mas isso vem da propria adaptacao da arte no mockup, nao e defeito da foto. Arquivos analisados: capa e par em C:\\\\Users\\\\rober\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-rober\\\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\\\scratchpad\\\\audit\\\\live\\\\; mockups gallery-02/gallery-04 em C:\\\\Users\\\\rober\\\\Nimbus\\\\nuvemshop\\\\assets\\\\product-lifestyle\\\\2026-07-16\\\\catalog\\\\references\\\\352618935-sao-jorge-vintage3\\\\; arte original em C:\\\\Users\\\\rober\\\\Nimbus\\\\designs\\\\prontos\\\\RELIQUIA\\\\mockups\\\\Sao Jorge Vintage [...]\\\\costas - Sao Jorge Vintage.png."
+   }
+  },
+  {
+   "productId": 352618878,
+   "titulo": "São Jorge Vintage | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage1/",
+   "capaBase": "352618878-vitrine-nimbus-9b09fe8fe067aeb75917842425324115",
+   "parBase": "352618878-branca-5e2119b7a88e96133317843483669554",
+   "resultado": {
+    "productId": 352618878,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 56,
+     "escalaMockupPct": 52,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "O microtexto 'NIMBUS' no topo do arco (acima de 'SÃO JORGE') está corrompido: no zoom vira rabiscos ilegíveis em vez das letras. Todo o resto do texto ('SÃO JORGE') está íntegro letra por letra. O microtexto tem ~35px de largura na imagem de 1024px; em miniatura de catálogo (~400px) fica com ~14px e é totalmente ilegível/invisível.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "No moletom branco, o microtexto 'NIMBUS' no topo do arco está ausente/reduzido a um borrão bege quase invisível (confirmado em zoom com contraste realçado); a linha do arco existe mas as letras não se formam. 'SÃO JORGE' está íntegro, incluindo o detalhe da ponta da lança sobre o R igual ao mockup. Invisível em tamanho de catálogo.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Capa (moletom preto, costas): lifestyle real com capuz visível, cor correta. Escala medida no eixo vertical: estampa ~325px / gola-à-barra ~580px = ~56% na foto vs ~215px/415px = ~52% no mockup preto (gallery-02), desvio relativo ~8%, dentro da tolerância de 15%. Integração boa: estampa acompanha dobras do tecido, meio-tom (retícula) da arte visível, sem halo/retângulo/brilho de adesivo. Composição bate com a arte original: São Jorge de elmo escuro com espada vertical dourada, cavalo branco empinado com cabeça baixa e rédeas, dragão abatido embaixo com cauda enrolada e mandíbula aberta à esquerda, igreja à direita, arco e lettering blackletter. Par (moletom branco, posição 2): mesma cena, bate com o mockup branco (gallery-04); escala ~52,5% na foto vs ~50,5% no mockup, desvio ~4%. Anatomia do modelo (rosto de perfil, orelha, duas mãos) sem defeitos de IA nas duas fotos; iluminação e nitidez profissionais. Único defeito nas duas: o microtexto 'NIMBUS' corrompido/ausente, ilegível em tamanho de catálogo, logo ressalva e não reprovação pela regra da distância. Crops de verificação em C:\\Users\\rober\\AppData\\Local\\Temp\\claude\\C--Users-rober\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\scratchpad\\audit\\crops."
+   }
+  },
+  {
+   "productId": 352407182,
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+   "capaBase": "352407182-vitrine-nimbus-58ddbde7870a202fb917842424360168",
+   "parBase": "352407182-off-white-105a5e630fbbf7b0ad17843480933122",
+   "resultado": {
+    "productId": 352407182,
+    "capa": {
+     "veredito": "reprovada",
+     "escalaFotoPct": 55,
+     "escalaMockupPct": 42,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "alta",
+       "descricao": "Estampa ~30% maior que a autoridade (mockup preto gallery-02). Na foto, a estampa mede 351px (y481-832) contra um comprimento gola-barra estimado de ~637px (gola y408; barra cortada pelo enquadramento, estimada ~y1045 pela proporcao corporal da modelo) = ~55%. No mockup, 207px de estampa em 489px de peca = ~42%. Mesmo na hipotese mais conservadora de barra (100px abaixo do frame) o desvio fica ~+20-23%; a melhor estimativa e ~+30%. A estampa domina a peca visivelmente mais que no mockup, criando expectativa errada do produto impresso.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Texto pequeno do rodape, logo abaixo do quadro do demonio: na arte original le-se NIMBUS; na foto esta corrompido em ~8 glifos sem sentido (algo como SBMHBIDO). Com ~90px de largura numa imagem de 1024px, e ilegivel na miniatura de catalogo (~400px) — regra da distancia do dono.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "reprovada",
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Mesmo superdimensionamento sistematico da capa, na cor off-white: estampa de 351px (y466-817) contra comprimento gola-barra estimado de ~660px (gola y415; barra cortada pelo frame, estimada ~y1075) = ~53%, contra ~42% no mockup off-white gallery-04 (205px/484px). Desvio relativo ~+25%, na fronteira media/alta, visivel em tamanho de catalogo. Rodape NIMBUS correto e arco SAO MIGUEL ARCANJO integro nesta foto.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      }
+     ]
+    },
+    "notas": "Posicao 2 e lifestyle (mesma modelo, versao off-white), entao foi auditada. Pontos aprovados nas duas fotos: integracao excelente (estampa acompanha dobras e curvatura do ombro, halftone deixa a trama da malha aparecer, letras do SAO envelopam a lateral do corpo, sem halo/adesivo), arte fiel a original (Sao Miguel com aureola, espada, manto ocre, balanca, demonio no quadro inferior), peca correta (oversized drop shoulder, preta na capa e off-white no par, iguais aos mockups), anatomia e iluminacao profissionais (rosto em perfil natural, mao do par com 5 dedos corretos). LIMITACAO DE MEDICAO: a barra esta cortada pelo enquadramento nas duas fotos (a camiseta continua abaixo de y1024), entao o comprimento gola-barra da foto foi extrapolado pela anatomia da modelo (joelho estimado ~y1040); a incerteza coloca o desvio de escala entre +20% e +35% na capa e +20% e +30% no par — em toda a faixa plausivel ainda e problema relevante e visivel. Corroboracao independente: normalizando pela distancia gola-barra-da-manga, a foto tambem da estampa maior que o mockup. Medicoes feitas por deteccao de pixels + grades de coordenadas; crops de verificacao em C:\\Users\\rober\\AppData\\Local\\Temp\\claude\\C--Users-rober\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\scratchpad\\audit\\crops. Recomendacao: regenerar as duas fotos com a estampa ~25% menor (ou aceitar formalmente o mockup como nao-autoridade); o texto corrompido do rodape da capa sozinho seria apenas ressalva."
+   }
+  },
+  {
+   "productId": 352407196,
+   "titulo": "São Miguel Vintage | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage3/",
+   "capaBase": "352407196-vitrine-nimbus-e0e349ca7c7431b44017842424681749",
+   "parBase": null,
+   "resultado": {
+    "productId": 352407196,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 52,
+     "escalaMockupPct": 53
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa aprovada sem ressalvas. Escala praticamente idêntica ao mockup YouDraw preto (52% vs 53%, desvio ~2%). Integração exemplar: o arco de texto acompanha a curvatura do ombro e as dobras da malha, textura do tecido visível na tinta, sem efeito adesivo. Texto conferido letra a letra em zoom 4-8x: SÃO MIGUEL ARCANJO e NIMBUS corretos e íntegros; única incerteza é o til do Ã, que não se resolve nem no zoom máximo da foto (possivelmente fundido ao glifo blackletter) — invisível em tamanho catálogo, não reportado como defeito. Anatomia da modelo (rosto e mão direita) checada em zoom, sem deformação de IA. Peça e cor corretas (camiseta preta, costas). Posição 2 não existe por ser produto de cor única, conforme instrução."
+   }
+  },
+  {
+   "productId": 352407156,
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
+   "capaBase": "352407156-vitrine-nimbus-2f13ea62a4ca61f2a117842424043463",
+   "parBase": "352407156-branca-12d23181254474dd2317843472856990",
+   "resultado": {
+    "productId": 352407156,
+    "capa": {
+     "veredito": "aprovada",
+     "escalaFotoPct": 50,
+     "escalaMockupPct": 52,
+     "problemas": []
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Auditoria com zoom em todas as areas criticas. CAPA (preto): escala 50% vs 52% do mockup preto (desvio ~4-5%, ok); estampa bem integrada ao tecido (textura da malha visivel, sem halo/adesivo); arte fiel ao original e ao mockup; texto \"SAO MIGUEL ARCANJO\" conferido letra a letra, correto; capuz visivel e cor correta; anatomia da modelo (perfil, orelha, ambas as maos) natural, foto com qualidade profissional. POSICAO 2 (branco): lifestyle, par de cor legitimo da capa; escala 50% vs 52% do mockup branco; integracao boa (estampa acompanha dobra vertical a esquerda); texto do arco e \"NIMBUS\" abaixo da caixa corretos letra a letra; capuz visivel, cor correta, anatomia sem defeitos. Nenhum problema encontrado em nenhuma das duas fotos; ambas aprovadas sem ressalvas."
+   }
+  },
+  {
+   "productId": 352728451,
+   "titulo": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo/",
+   "capaBase": "352728451-vitrine-nimbus-6ae9ec7d4324b3ed7617842436805941",
+   "parBase": null,
+   "resultado": {
+    "productId": 352728451,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 26.9,
+     "escalaMockupPct": 27.3
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle (modelo de costas) fiel ao mockup gallery-02: escala da estampa 26,9% na foto vs 27,3% no mockup (desvio ~1,5%, ok). Arte idêntica em composição, cores e tags; texto verificado em zoom 6x: ACIMA DE TUDO, NIMBUS, GRAFFITI ART, ESTILO RUA, tudo coerente e sem corrupção (o handstyle do \"ART\" é ambíguo mas idêntico no mockup, logo é da arte). Integração boa (drips e caimento naturais, sem halo/adesivo). Peça correta (oversized off-white). Anatomia e qualidade fotográfica sem defeitos. Produto de cor única: não existe segunda foto no ar."
+   }
+  },
+  {
+   "productId": 352728524,
+   "titulo": "Acima de Tudo Grafite | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo1/",
+   "capaBase": "352728524-vitrine-nimbus-f387f79a8a4940655617842437140509",
+   "parBase": null,
+   "resultado": {
+    "productId": 352728524,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 24,
+     "escalaMockupPct": 23,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "As três tags pequenas abaixo do bloco principal estão corrompidas em relação ao mockup: 'NIMBUS' virou um rabisco tipo 'NAMBiUS', 'GRAFFITI ART' e 'ESTILO RUA' estão parcialmente ilegíveis. Têm ~15px de altura na foto de 1024px; em miniatura de catálogo viram rabiscos indistinguíveis de tags estilizadas de graffiti.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "qualidade",
+       "gravidade": "baixa",
+       "descricao": "O título principal perdeu definição na re-renderização: em zoom, o 'MA' final de 'ACIMA' fica embolado comparado ao mockup. Em tamanho normal e de catálogo continua lendo 'ACIMA DE TUDO' sem esforço.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle de costas contra muro grafitado. Escala da estampa: foto ~24% (103px de estampa / 425px gola-barra) vs mockup ~23% (92px / 395px), desvio relativo ~4%, dentro da tolerância. Integração excelente: estampa acompanha a torção do torso e as dobras da malha, drips seguem o caimento, sem halo nem efeito adesivo. Composição da arte bate com o mockup (ACIMA DE TUDO em graffiti azul/laranja, exclamação dupla, três tags com seta). Peça correta (camiseta premium branca, sem capuz). Anatomia e iluminação profissionais, sem defeitos de IA no modelo. Único defeito: microtexto das tags corrompido, invisível em tamanho de catálogo — ressalva pela regra da distância. Posição 2 não existe (produto de cor única); o gallery-02 usado como autoridade de escala é o mockup YouDraw."
+   }
+  },
+  {
+   "productId": 352728277,
+   "titulo": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda/",
+   "capaBase": "352728277-vitrine-nimbus-817ea7d26241a38fd317842436153321",
+   "parBase": null,
+   "resultado": {
+    "productId": 352728277,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 57,
+     "escalaMockupPct": 51
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle aprovada sem ressalvas. Escala da estampa na foto ~57% do comprimento gola-barra vs ~51% no mockup YouDraw (desvio relativo ~12%, dentro da tolerância de 15%). Arte idêntica ao mockup gallery-02: anjo estátua em stencil, asas, drapeado, livro na mão estendida e auréola laranja; sem texto na arte, logo sem risco de corrupção tipográfica. Estampa bem integrada ao tecido (acompanha dobras, sem borda/halo de adesivo). Peça correta (oversized preta) e modelo sem artefatos de IA em mãos/rosto. Produto de cor única: posição 2 é o próprio mockup de referência, não há segunda foto lifestyle a auditar."
+   }
+  },
+  {
+   "productId": 352728357,
+   "titulo": "Anjo da Guarda Stencil | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda1/",
+   "capaBase": "352728357-preta-6ef5b9c39b77a27a0a17843494615140",
+   "parBase": "352728357-vitrine-nimbus-8442e64355df609c1c17842436479069",
+   "resultado": {
+    "productId": 352728357,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 60,
+     "escalaMockupPct": 54
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "reprovada",
+     "problemas": [
+      {
+       "tipo": "peca-errada",
+       "gravidade": "alta",
+       "descricao": "A foto da posição 2 mostra uma camiseta OVERSIZED, não a Camiseta Premium de corte regular vendida neste produto: a costura do ombro cai até o meio do braço (drop shoulder), as mangas são largas e chegam perto do cotovelo, e a silhueta é quadrada e comprida, cobrindo o quadril. A capa e o mockup gallery-02 (autoridade) mostram corte regular com manga colada no bíceps. A foto quase certamente pertence ao produto Anjo da Guarda Oversized e foi colocada na galeria errada; o hover passa um caimento diferente do produto real.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "arte-errada",
+       "gravidade": "baixa",
+       "descricao": "Na foto da posição 2 a estampa foi re-renderizada mais 'limpa' que a arte original: faltam os respingos de spray ao redor da figura e os escorridos do halo laranja (presentes na arte original e na capa), e o traço das penas/drapeado ficou mais fino, tipo gravura. Composição e elementos principais batem; a diferença é de textura e é imperceptível em miniatura de catálogo.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "CAPA: lifestyle, camiseta preta de corte regular correto, arte fiel ao original (asas, drapeado, livro com rabiscos ilegíveis iguais aos do original, halo laranja com escorridos, respingos de spray presentes), estampa acompanha o tecido com textura de malha visível, sem efeito adesivo, anatomia do modelo e iluminação profissionais. Escala medida no eixo vertical: ~60% (foto) vs ~54% (mockup gallery-02), desvio relativo ~11%, dentro da tolerância de 15%. Nada a corrigir na capa. PAR (posição 2/hover): reprovada por peça errada — é a versão OVERSIZED (ombro caído, manga larga, silhueta quadrada) na galeria da Camiseta Premium regular. Ação recomendada: mover esta foto para a galeria do produto Anjo da Guarda Oversized (se existir) e gerar/usar um par de hover com o corte regular, consistente com a capa e o mockup. Nota menor: o render da estampa no par perdeu respingos e escorridos do original (invisível em miniatura). Zooms de verificação salvos em C:\\Users\\rober\\AppData\\Local\\Temp\\claude\\C--Users-rober\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\scratchpad\\audit\\live (capa-print-zoom.png, par-print-zoom.png, capa-shoulders-zoom.png, par-shoulders-zoom.png)."
+   }
+  },
+  {
+   "productId": 352727892,
+   "titulo": "Aparecida Spray | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray1/",
+   "capaBase": "352727892-preta-d4600da5c599e83fb817843823553435",
+   "parBase": "352727892-vitrine-nimbus-f0aed575075809bd6317842435522941",
+   "resultado": {
+    "productId": 352727892,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 59,
+     "escalaMockupPct": 53,
+     "problemas": [
+      {
+       "tipo": "arte-errada",
+       "gravidade": "baixa",
+       "descricao": "No topo da coroa, o orbe com a cruz latina da arte original foi substituído por um ornamento pontiagudo em V sem cruz, e o topo do círculo dourado (lua) ficou recortado atrás da coroa em vez de fechar o círculo completo como na arte e no mockup gallery-02. Todo o resto bate com a arte original: lua com textura spray, estilo stencil, escorridos, bandeiras monocromáticas douradas, flores, cruz central e assinatura grafite NIMBUS no canto inferior direito. Integração ótima (trama do tecido visível na tinta, sem halo ou brilho de adesivo) e anatomia da modelo sem defeitos.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "reprovada",
+     "problemas": [
+      {
+       "tipo": "arte-errada",
+       "gravidade": "alta",
+       "descricao": "A estampa das costas é outra rendição da arte, não a que será impressa: falta a lua dourada gigante atrás da coroa (elemento central da composição, substituída por um brilho difuso), o estilo virou gravura/reticulado dourado em vez de stencil spray, o rosto da Virgem ficou claro e sorridente em vez da imagem escura, as bandeiras do Brasil aparecem coloridas em verde/azul quando a arte original é monocromática preto e dourado, foram inventadas duas bandeiras extras branco-douradas e uma barra de franjas na base do manto, e sumiram os escorridos de tinta e a assinatura grafite NIMBUS. A diferença é evidente mesmo em miniatura de 400px: o hover mostra um produto diferente do vendido.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Abaixo da estampa há duas linhas de texto dourado que não existem na arte original; ampliadas são ilegíveis (parece uma tentativa corrompida de 'Aparecida Spray'). Minúsculo, invisível em tamanho de catálogo, mas é elemento inventado pela IA.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Capa aprovável com ressalva mínima: escala dentro da tolerância (59% na foto vs 53% no mockup, desvio ~11% no eixo vertical), integração e anatomia excelentes; único desvio é a cruz do topo da coroa deformada e o topo da lua recortado, invisível em miniatura. A posição 2 reprova: é uma rendição completamente diferente da arte (sem lua, estilo gravura, bandeiras coloridas, franjas e texto inventados), o que quebra o par de hover — o cliente veria dois produtos diferentes. Recomendação: substituir a posição 2 pelo mockup YouDraw correto (gallery-02.webp, que é fiel à arte) ou gerar nova foto lifestyle fiel à estampa original. Arquivos auditados: scratchpad\\audit\\live\\352727892-capa.webp, scratchpad\\audit\\live\\352727892-par.webp, mockup C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352727892-aparecida-spray1\\gallery-02.webp, arte C:\\Users\\rober\\Nimbus\\designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (3).png."
+   }
+  },
+  {
+   "productId": 352728019,
+   "titulo": "Aparecida Spray | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray2/",
+   "capaBase": "352728019-vitrine-nimbus-3d91938648f7914f9917842435831858",
+   "parBase": null,
+   "resultado": {
+    "productId": 352728019,
+    "capa": {
+     "veredito": "reprovada",
+     "escalaFotoPct": 57.5,
+     "escalaMockupPct": 39.6,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "alta",
+       "descricao": "Estampa das costas muito maior que o mockup YouDraw: medida programaticamente (extensao vertical dos pixels dourados), a arte ocupa ~57.5% do comprimento gola-barra na foto (348px de ~605px) contra ~39.6% no mockup (193px de 487px), desvio relativo de ~+45%. Mesmo com as estimativas mais generosas para gola (escondida pelo cabelo) e barra, o desvio fica acima de +27%. Na foto a arte comeca logo abaixo da gola e desce ate abaixo da linha da cintura; no mockup ela fica contida no terco superior-medio das costas.",
+       "visivelEmTamanhoCatalogo": true,
+       "verificacao": "confirmada (2/2 mantêm)"
+      },
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Assinatura grafite 'NIMBUS' a direita da barra do manto: no mockup e nitida e legivel; na foto esta escura, borrada e mal legivel, possivelmente degradada pela IA. Minuscula e ilegivel em miniatura de catalogo.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa: lifestyle (modelo de costas, camiseta oversized preta correta). Integracao da estampa boa (textura spray, malha aparente na tinta, acompanha dobras, sem halo de adesivo). Arte confere com o mockup em composicao e elementos (coroa, lua dourada, Nossa Senhora, bandeiras do Brasil, flores, contas de rosario, escorridos, tag). Anatomia e iluminacao profissionais, sem defeitos de IA no modelo. Reprovacao exclusivamente pela escala: medicao por bounding box dos pixels dourados (Python/PIL) deu desvio relativo de ~+45% vs mockup, robusto a erro de estimativa da gola (coberta pelo cabelo) e da barra (preto sobre preto): pior caso ainda excede 25%. Posicao 2 fixada pela tarefa como foto-produto / nao-se-aplica (produto de cor unica, sem segunda foto)."
+   }
+  },
+  {
+   "productId": 352889132,
+   "titulo": "Aparecida Spray | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray3/",
+   "capaBase": "352889132-vitrine-nimbus-04251194c461d1010817842437440755",
+   "parBase": null,
+   "resultado": {
+    "productId": 352889132,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 54,
+     "escalaMockupPct": 53,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "O tag de grafite 'NIMBUS' no canto inferior direito da estampa (assinatura que no mockup le-se claramente 'NiMBUS' com sublinhado) virou um rabisco escuro ilegivel na foto ao ar: as letras estao mangled e nao soletram NIMBUS. E minusculo (~50x25px em 1024px) e impresso em preto sobre preto, entao some completamente na miniatura de catalogo.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa e lifestyle valida: modelo de costas em beco com grafite, camiseta preta regular correta. Escala conferida no eixo vertical com grade de medicao: foto 300/557 = 54% vs mockup 212/402 = 53%, desvio relativo ~2% (ok). Integracao boa: textura da malha visivel atraves da tinta dourada, bordas spray sem halo nem retangulo, sem brilho de papel. Arte bate com o mockup (coroa com cruz, lua cheia dourada, rosto e maos em oracao, bandeiras do Brasil no manto, flores, escorridos, trim pontilhado). Unico defeito: o tag NIMBUS corrompido, tom-sobre-tom e ilegivel em tamanho catalogo, logo ressalva e nao reprovacao (regra da distancia). Anatomia da modelo ok (mao, rosto de perfil, cabelo), luz e nitidez profissionais. Par nao se aplica: produto de cor unica, sem segunda foto no ar."
+   }
+  },
+  {
+   "productId": 352721477,
+   "titulo": "Espírito Santo Spray | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/espirito-santo1/",
+   "capaBase": "352721477-vitrine-nimbus-a498ef1584540b0a1f17842449058520",
+   "parBase": "352721477-branca-d2b97816cfcf2cce4a17843492256601",
+   "resultado": {
+    "productId": 352721477,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 41.8,
+     "escalaMockupPct": 44.9
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posição 2 (branca) são a mesma base fotográfica recolorida (mesma modelo, pose e fundo de grafite), o que funciona bem como par de hover por cor. Escala medida no eixo vertical com grade de pixels: capa 278px de estampa / 665px de peça (41.8%) vs mockup preto ~44.9% (desvio ~7%); par ~43.3% vs mockup branco ~45.8% (desvio ~5.5%) — ambos dentro da tolerância de 15%. Arte confere em ambas: pomba com auréola dourada escorrida, raios, motivo de caveira no ventre e assinatura NiMBUS letra por letra igual à arte original (verificada em zoom nas duas fotos). Integração boa: tinta com textura de malha e leve acompanhamento das dobras, sem borda de adesivo. Anatomia da modelo (rosto de perfil, orelha, mãos relaxadas) sem deformação de IA nas duas fotos. Cores das peças batem com os mockups das respectivas cores."
+   }
+  },
+  {
+   "productId": 352721118,
+   "titulo": "Fé Wildstyle | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe2/",
+   "capaBase": "352721118-preta-91834f9d6193054a3817843491364419",
+   "parBase": "352721118-off-white-475b29e680851fbcbb17843491360542",
+   "resultado": {
+    "productId": 352721118,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 47,
+     "escalaMockupPct": 43
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posição 2 (off-white) são a mesma cena base com troca de cor — par correto para foto-por-cor + hover. Escala medida no eixo vertical com detecção de pixels saturados + grades de coordenadas: capa ~47% (estampa 300px / gola-a-barra 635px) vs mockup preto ~43% (204/479), desvio +11%; par ~48% vs ~43%, desvio +12% — ambos dentro da tolerância de 15% (estampa levemente maior no lifestyle, aceitável). Integração boa nas duas: estampa acompanha a curvatura das costas, sombreamento coerente com a luz, sem borda/halo de adesivo. Arte conferida elemento a elemento contra costas - Fé (3).png: auréola laranja, acento diagonal azul/roxo do É, F com braço em cruz, E em Ɛ, estrelas e gotejamento preto/azul/branco presentes; texto FÉ legível e não corrompido. Mãos e rosto verificados a 3x de zoom nas duas fotos: sem deformação de IA. Nenhum problema encontrado."
+   }
+  },
+  {
+   "productId": 352721197,
+   "titulo": "Fé Wildstyle | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe3/",
+   "capaBase": "352721197-vitrine-nimbus-98f12a52f7e4b0a7c017842432980930",
+   "parBase": "352721197-branca-61420f4f91dc3f779817843491818041",
+   "resultado": {
+    "productId": 352721197,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 54,
+     "escalaMockupPct": 57
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta): escala 54% vs 57% do mockup preto (desvio ~5%, ok); integração boa (estampa acompanha o tecido, sem borda/halo de adesivo); arte fiel à original (auréola, acento azul, F+É wildstyle, estrelas, drips); peça e cor corretas; anatomia e qualidade profissionais. Par (branca, lifestyle): escala ~61% vs ~55% do mockup branco (desvio ~10%, dentro da tolerância de 15%); splatter preto dos drips bate com o mockup branco e a arte original; peça e cor corretas; mão direita do modelo levemente macia só em zoom extremo, invisível em tamanho catálogo. Conjunto cobre as duas cores do produto (preta na capa, branca no hover). Nenhum problema relevante nas duas fotos."
+   }
+  },
+  {
+   "productId": 352721633,
+   "titulo": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
+   "capaBase": "352721633-vitrine-nimbus-b1ac783d68388aa0ed17842433618868",
+   "parBase": "352721633-off-white-b00d5ed8b5d1b9d5ea17843709672642",
+   "resultado": {
+    "productId": 352721633,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 41,
+     "escalaMockupPct": 39
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "qualidade",
+       "gravidade": "baixa",
+       "descricao": "Mancha acinzentada difusa na parte de cima das costas, logo abaixo da costura da gola (regiao x 420-470, y 295-310 na imagem 1024px). Em zoom pode ser lida como sujeira/encardido na malha creme em vez de sombra; nao afeta a estampa nem a silhueta.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Capa = camiseta preta, par = off-white; ambas lifestyle com o mesmo modelo do elenco fixo, mesma locacao (beco com grafite), coerentes com a regra foto-por-cor + hover. Escala medida no eixo vertical com deteccao de pixels saturados (halo ao fim dos drips) sobre comprimento gola-barra: capa 270/660 = 41% vs mockup preto gallery-04 191/489 = 39% (desvio ~5%); par 254/659 = 38,5% vs mockup off-white gallery-02 178/484 = 36,8% (desvio ~5%). Integracao boa nas duas: textura da malha visivel na tinta, sombreamento acompanha o tecido, sem borda reta, halo de recorte ou brilho de papel. Arte fiel ao original costas - Wildstyle (azul): halo laranja inclinado, NIM- e BUS com aspas, barra sublinhada com drips, splatter laranja de fundo; letra por letra sem corrupcao (grafite wildstyle e estilizado por natureza, mas as letroformas batem com o mockup e a arte). Peca correta (oversized premium, gola e manga certas) nas duas cores. Anatomia limpa: rosto em perfil, orelha, maos relaxadas sem dedos extras. Unico apontamento: mancha suave abaixo da gola no off-white, invisivel em miniatura de catalogo (~400px), por isso ressalva e nao reprovacao."
+   }
+  },
+  {
+   "productId": 355581274,
+   "titulo": "NIMBUS Wildstyle | Ecobag",
+   "url": "https://loja.nimbuswear.com.br/produtos/wildstyle/",
+   "capaBase": "355581274-vitrine-nimbus-60394a9039b3697c1117842440439756",
+   "parBase": null,
+   "resultado": {
+    "productId": 355581274,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 64,
+     "escalaMockupPct": 62
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle da NIMBUS Wildstyle Ecobag aprovada. Escala da estampa na foto (~64% da altura do corpo da bolsa) praticamente idêntica ao mockup de referência (~62%), desvio relativo ~4%. Estampa bem integrada ao algodão cru: escorridos de tinta naturais, sem borda reta, halo ou brilho de adesivo. Arte confere com o mockup (grafite NIM/BUS azul e laranja com auréola laranja e drips), texto NIMBUS íntegro e legível. Peça e cor corretas (ecobag natural/cru). Modelo sem defeitos de anatomia; mão na alça com dedos corretos; foto com aparência profissional. Posição 2 não existe (produto de cor única), conforme instruído."
+   }
+  },
+  {
+   "productId": 352725749,
+   "titulo": "Querubim Spray | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray/",
+   "capaBase": "352725749-preta-764073b19b77d59d8917843492711670",
+   "parBase": "352725749-off-white-467cb957b03177ba9917843492715789",
+   "resultado": {
+    "productId": 352725749,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 42,
+     "escalaMockupPct": 45
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e posição 2 (lifestyle, off-white) são a mesma cena/modelo em cores diferentes, padrão foto-por-cor correto. Escala medida no eixo vertical com grade de 50px: capa ~42% (estampa 286px / peça 678px) vs mockup preto ~45% (396/875), desvio ~7%; par ~44% (300/678) vs mockup off-white ~45% (428/960), desvio ~1% — ambos dentro da tolerância de 15%. Estampa bem integrada nas duas: acompanha dobras, textura da malha visível na tinta, sem halo/borda de adesivo. Arte bate com os mockups (querubim stencil, auréola com gotejo, asas, pano, gotejos, assinatura); a auréola preta quase some na camiseta preta, mas o mockup autoridade (gallery-02) é assim mesmo — design, não defeito. Assinatura »NiMBUS« íntegra letra por letra nas duas fotos. Anatomia do modelo ok (rosto em perfil limpo; mãos com cinco dedos plausíveis, leve suavidade de IA só perceptível em zoom extremo, irrelevante em tamanho de catálogo e de página). Nada a corrigir."
+   }
+  },
+  {
+   "productId": 352725852,
+   "titulo": "Querubim Spray | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray1/",
+   "capaBase": "352725852-vitrine-nimbus-3549d2616cd682dcce17842423261734",
+   "parBase": "352725852-branca-7a7036375a9671647317843493227798",
+   "resultado": {
+    "productId": 352725852,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 51.4,
+     "escalaMockupPct": 49.1
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Capa (preta) e par (branca) sao lifestyle do mesmo modelo, de costas. Escala medida no eixo vertical: capa 51,4% vs mockup preto 49,1% (desvio ~+4,7%); par 49,5% vs mockup branco 49,8% (desvio ~-0,6%) — ambos dentro da tolerancia de 15%. Integracao boa nas duas: borda de spray, speckle, textura da malha visivel na tinta, drips acompanham o tecido, sem efeito adesivo. Arte identica aos mockups (querubim, aureola com drips, asas, drapeado, assinatura NIMBUS legivel letra por letra, com aspas e aureola sobre o M). Observacao que NAO e defeito: na cor preta a aureola e a assinatura sao impressas em preto sobre tecido preto (tom sobre tom), igual ao mockup preto — fiel ao design aprovado. Peca correta (camiseta oversized manga curta) e cores corretas. Anatomia do modelo (rosto de perfil, maos, punhos) sem deformacao de IA nas duas fotos."
+   }
+  },
+  {
+   "productId": 352722232,
+   "titulo": "Sagrado Coração Spray | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sagrado-coracao-spray1/",
+   "capaBase": "352722232-vitrine-nimbus-53e31740e3864b072e17842433932952",
+   "parBase": null,
+   "resultado": {
+    "productId": 352722232,
+    "capa": {
+     "veredito": "aprovada",
+     "problemas": [],
+     "escalaFotoPct": 54,
+     "escalaMockupPct": 50
+    },
+    "par": {
+     "tipo": "foto-produto",
+     "veredito": "nao-se-aplica",
+     "problemas": []
+    },
+    "notas": "Capa lifestyle (costas, camiseta branca) aprovada: escala da estampa ~54% na foto vs ~50% no mockup YouDraw (desvio ~8%, dentro da tolerância); estampa bem integrada ao tecido (spray fosco, auréola dourada com brilho de tinta metálica, sem efeito adesivo); arte idêntica ao mockup (auréola, cruz, chamas, coração com coroa de espinhos, pingos, assinatura ·NiMBUS· legível e correta); anatomia da modelo e qualidade fotográfica sem defeitos. Produto de cor única, sem segunda foto no ar — par não se aplica."
+   }
+  },
+  {
+   "productId": 352727545,
+   "titulo": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray2/",
+   "capaBase": "352727545-vitrine-nimbus-bd51e34cf4dc5c377b17842435204135",
+   "parBase": "352727545-off-white-667b902175476396a917843494173499",
+   "resultado": {
+    "productId": 352727545,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 49.5,
+     "escalaMockupPct": 41.1,
+     "problemas": [
+      {
+       "tipo": "escala",
+       "gravidade": "media",
+       "descricao": "Estampa maior que a especificada no mockup preto (gallery-02): 49,5% do comprimento gola-barra na foto contra 41,1% no mockup, desvio relativo de 20,4% (medido no eixo vertical, do topo das asas ate a assinatura NIMBUS, por contagem de linhas de pixels). A estampa em si esta bonita e proporcional ao estilo oversized; o desvio so se percebe comparando lado a lado com o mockup, e a posicao 2 do hover (par off-white, 46,0%) esta proxima, entao a troca de imagem no hover nao denuncia.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "anatomia",
+       "gravidade": "media",
+       "descricao": "Mao direita do modelo (canto inferior esquerdo da foto): a membrana entre polegar e indicador tem um entalhe irregular no contorno e o polegar termina em ponta romba sem unha visivel, artefato tipico de IA. So perceptivel com zoom forte; na miniatura de catalogo (~400px, simulada) a mao vira um detalhe minusculo e o defeito e invisivel.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "aprovada",
+     "problemas": []
+    },
+    "notas": "Metodo: medicao por threshold de brilho linha a linha (Pillow) nos limites da estampa, e grades de coordenadas sobrepostas para gola e barra. Capa: estampa px 312-647 (335), gola~253, barra~930 (677) = 49,5%; mockup preto gallery-02: estampa 89-287 (198), peca 8-490 (482) = 41,1%; desvio 20,4% = media. Par off-white: estampa 347-654 (307), gola~278, barra~945 (667) = 46,0%; mockup gallery-04: 196/480 = 40,8%; desvio 12,7%, dentro da tolerancia de 15%. Texto conferido letra a letra contra a arte original (costas - Arcanjo Spray preto.png): escudo ESTILO/NiMBUS, lettering NIMBUS com aureola no i, assinatura ,NiMBUS' - corretos e legiveis nas duas fotos, nenhuma corrupcao. Integracao excelente nas duas: tinta acompanha dobras, textura da malha visivel atraves da estampa, sem halo/adesivo. Composicao completa e fiel (lanca erguida, aureola dourada com escorridos, manto dourado, demonio sob os pes); inversao de cores por colorway bate com os proprios mockups YouDraw. Peca correta (oversized, costas) e cores corretas (preta na capa, off-white no par). Rostos limpos nos dois modelos; unico artefato de anatomia e a mao direita do modelo da capa, invisivel em tamanho catalogo. Veredito capa = ressalva pelos dois problemas media nao visiveis em catalogo; par = aprovada."
+   }
+  },
+  {
+   "productId": 352898175,
+   "titulo": "São Miguel Vitorioso | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray3/",
+   "capaBase": "352898175-vitrine-nimbus-0a04ba4a35d3d8d9e617842440119279",
+   "parBase": "352898175-branca-43d936c3b828bc689317843495549546",
+   "resultado": {
+    "productId": 352898175,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 53,
+     "escalaMockupPct": 56,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "No escudo dourado a primeira palavra esta corrompida: le-se 'ESTUO/ESTIJO' em vez de 'ESTILO' (o L e o O colapsaram; confirmado em zoom 7x). A segunda linha 'NIMBUS' esta correta. A palavra tem ~55px de largura na foto de 1024px; em miniatura de catalogo (~400px) fica ilegivel.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Na assinatura pequena inferior direita, o 'U' de 'NiMBUS' esta deformado e le-se algo como 'NiMBaS'. O escudo 'ESTILO NIMBUS' e o lettering principal 'NIMBUS' estao perfeitos. A assinatura e minuscula (~60px em 1024px) e ilegivel em tamanho de catalogo.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Capa (preta): escala 53% vs 56% do mockup preto (desvio ~5%, ok); integracao excelente (estampa acompanha dobras, textura da malha visivel na tinta); composicao da arte fiel a original (halo, espada, drapeado com B, demonio, letterings); modelo sem deformacoes. Par (branca): escala ~58% vs ~54% do mockup branco (desvio ~7%, ok); integracao muito boa com dobras grandes atravessando a estampa naturalmente; anatomia do modelo normal. Observacao: a camiseta do par le-se cru/off-white em vez de branco puro, mas a cena esta sob luz dourada quente que explica o tom; nao foi tratado como defeito. O lettering NIMBUS principal do par e escuro (nao dourado como no PNG original), porem coincide com o mockup branco gallery-04, entao e o colorway correto da variante branca. Ambas as fotos sao vendaveis; o unico defeito real (escudo 'ESTUO' na capa) so aparece com zoom forte na pagina do produto."
+   }
+  },
+  {
+   "productId": 352726673,
+   "titulo": "São Miguel Vitorioso | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray1/",
+   "capaBase": "352726673-preta-a7425bffc2b6d575fc17843493714431",
+   "parBase": "352726673-branca-93062a0262cfa3396917843493714580",
+   "resultado": {
+    "productId": 352726673,
+    "capa": {
+     "veredito": "ressalva",
+     "escalaFotoPct": 60,
+     "escalaMockupPct": 55,
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "Assinatura pequena 'NiMBUS' no canto inferior direito da estampa: o 'i' perdeu a haste e virou um ponto redondo (lê-se quase 'NoMBUS' em zoom 4x). Palavra ainda reconhecível pelo contexto; em miniatura de catálogo a assinatura tem ~35px de largura e é totalmente ilegível.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "par": {
+     "tipo": "lifestyle",
+     "veredito": "ressalva",
+     "problemas": [
+      {
+       "tipo": "texto-corrompido",
+       "gravidade": "baixa",
+       "descricao": "No escudo, o primeiro 'E' de 'ESTILO' está degradado: os braços do E se fundiram e a letra lê-se como 'P' em zoom 8x. O conjunto 'ESTILO NIMBUS' ainda é inferível em zoom; em tamanho de catálogo o texto do escudo tem ~20px de largura e é ilegível de qualquer forma.",
+       "visivelEmTamanhoCatalogo": false
+      },
+      {
+       "tipo": "outro",
+       "gravidade": "baixa",
+       "descricao": "A perna direita do halo dourado curva em gancho e funde com o topo do escudo, formando uma fita dourada contínua (leve distorção vs arte original, onde halo e escudo são separados por escorridos finos). O próprio mockup branco da galeria (gallery-04) já traz gancho semelhante, então a galeria fica consistente; em miniatura lê-se como halo com escorridos normal.",
+       "visivelEmTamanhoCatalogo": false
+      }
+     ]
+    },
+    "notas": "Ambas as fotos são lifestyle: mesmo modelo, mesma pose de costas e mesmo cenário de grafite, mudando apenas o colorway (capa = moletom preto, posição 2 = branco). Par do hover correto (cores diferentes do mesmo produto). ESCALA medida no eixo vertical: capa 356px de estampa / 595px de peça (gola-barra) = 60%; mockup preto gallery-02 = 208/378 = 55%; desvio relativo ~9%, dentro da tolerância de 15%. Par branca: ~60% vs mockup branco ~55%, desvio ~8%. INTEGRAÇÃO muito boa nas duas: fundo da arte funde com a cor do tecido sem retângulo/halo, textura da malha visível na tinta dourada, tag NIMBUS ondula com as dobras da barra. ARTE completa e fiel nas duas (espada erguida, halo com escorridos, duas asas, drapeado dourado, escudo ESTILO NIMBUS, demônio com asa de morcego, tag NiMBUS com auréola no i, assinatura pequena); tag principal com texto perfeito nas duas. Na versão branca a arte usa o linework escuro do mockup gallery-04, consistente. PEÇA correta: capuz visível, cor preta e branca corretas. ANATOMIA: mãos e rosto plausíveis; observação menor: o polegar da mão esquerda do modelo parece um pouco atarracado/rombudo em zoom 2x (mesmo render nas duas fotos), mas o ângulo torna plausível e é invisível em tamanho de catálogo, então não foi listado como defeito. Nenhum problema de gravidade alta ou média visível; os dois vereditos são ressalva apenas por microdefeitos de texto ilegíveis em miniatura (regra da distância)."
+   }
+  }
+ ]
+}
