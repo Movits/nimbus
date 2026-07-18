@@ -1,0 +1,403 @@
+{
+ "verificadoEm": "2026-07-18T20:14:11.341Z",
+ "semMudanca": 29,
+ "mudancas": [
+  {
+   "id": 352890896,
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+   "capaAntes": "352890896-preta-b25ff5b2b140dbfb7817843495077781",
+   "capaAgora": "352890896-off-white-3215fd5ef347203acc17843858615835",
+   "capaMudou": true,
+   "removidas": [
+    "352890896-preta-b25ff5b2b140dbfb7817843495077781"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352890896-preta-b25ff5b2b140dbfb7817843495077781",
+    "352890896-off-white-3215fd5ef347203acc17843858615835",
+    "352890896-vitrine-nimbus-379624414e6c009da117842437759629"
+   ],
+   "atual": [
+    "352890896-off-white-3215fd5ef347203acc17843858615835",
+    "352890896-vitrine-nimbus-379624414e6c009da117842437759629"
+   ]
+  },
+  {
+   "id": 352717723,
+   "titulo": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao/",
+   "capaAntes": "352717723-preta-591e882a61994efaea17843488778717",
+   "capaAgora": "352717723-off-white-83450650035025d50317843488776665",
+   "capaMudou": true,
+   "removidas": [
+    "352717723-vitrine-nimbus-d56ca2824e8739c5a717842428822784"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352717723-preta-591e882a61994efaea17843488778717",
+    "352717723-off-white-83450650035025d50317843488776665",
+    "352717723-vitrine-nimbus-d56ca2824e8739c5a717842428822784"
+   ],
+   "atual": [
+    "352717723-off-white-83450650035025d50317843488776665",
+    "352717723-preta-591e882a61994efaea17843488778717"
+   ]
+  },
+  {
+   "id": 352717837,
+   "titulo": "Brasão NIMBUS | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/brasao1/",
+   "capaAntes": "352717837-preta-b9a1a73d4e28d520b917843489388824",
+   "capaAgora": "352717837-vitrine-nimbus-969a91bf011ed5acc117842429141862",
+   "capaMudou": true,
+   "removidas": [],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352717837-preta-b9a1a73d4e28d520b917843489388824",
+    "352717837-vitrine-nimbus-969a91bf011ed5acc117842429141862"
+   ],
+   "atual": [
+    "352717837-vitrine-nimbus-969a91bf011ed5acc117842429141862",
+    "352717837-preta-b9a1a73d4e28d520b917843489388824"
+   ]
+  },
+  {
+   "id": 352702020,
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "capaAntes": "352702020-preta-57b2e7de23134cc19e17843486271476",
+   "capaMudou": true,
+   "removidas": [
+    "352702020-preta-57b2e7de23134cc19e17843486271476",
+    "352702020-branca-d48ceea7042d5c514317843486264095",
+    "352702020-vitrine-nimbus-1f40fc3087b6ca198e17842426588960"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352702020-preta-57b2e7de23134cc19e17843486271476",
+    "352702020-branca-d48ceea7042d5c514317843486264095",
+    "352702020-vitrine-nimbus-1f40fc3087b6ca198e17842426588960"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352718943,
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+   "capaAntes": "352718943-preta-8126a28dc4cda7cb3c17843857989747",
+   "capaMudou": true,
+   "removidas": [
+    "352718943-preta-8126a28dc4cda7cb3c17843857989747",
+    "352718943-vitrine-nimbus-e54299c092a32a252617842430756612"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352718943-preta-8126a28dc4cda7cb3c17843857989747",
+    "352718943-vitrine-nimbus-e54299c092a32a252617842430756612"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352718999,
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
+   "capaAntes": "352718999-vitrine-nimbus-99b4e5b1966768ec0817842431075146",
+   "capaMudou": true,
+   "removidas": [
+    "352718999-vitrine-nimbus-99b4e5b1966768ec0817842431075146",
+    "352718999-branca-4ceebbb8865b65d7ef17843490346538"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352718999-vitrine-nimbus-99b4e5b1966768ec0817842431075146",
+    "352718999-branca-4ceebbb8865b65d7ef17843490346538"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352718787,
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+   "capaAntes": "352718787-preta-eff5de1a3c63d9216617843489827912",
+   "capaMudou": true,
+   "removidas": [
+    "352718787-preta-eff5de1a3c63d9216617843489827912",
+    "352718787-branca-9aaaef2382a6f192d217843822934008",
+    "352718787-vitrine-nimbus-5befe5ac62d45836a717842430431895"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352718787-preta-eff5de1a3c63d9216617843489827912",
+    "352718787-branca-9aaaef2382a6f192d217843822934008",
+    "352718787-vitrine-nimbus-5befe5ac62d45836a717842430431895"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352618903,
+   "titulo": "São Jorge Vintage | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage2/",
+   "capaAntes": "352618903-vitrine-nimbus-c85c8f648c2e1b9a8117842425641229",
+   "capaAgora": "352618903-off-white-9f9cb1ad89da1a338317843484453714",
+   "capaMudou": true,
+   "removidas": [],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352618903-vitrine-nimbus-c85c8f648c2e1b9a8117842425641229",
+    "352618903-off-white-9f9cb1ad89da1a338317843484453714"
+   ],
+   "atual": [
+    "352618903-off-white-9f9cb1ad89da1a338317843484453714",
+    "352618903-vitrine-nimbus-c85c8f648c2e1b9a8117842425641229"
+   ]
+  },
+  {
+   "id": 352618935,
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "capaAntes": "352618935-preta-047973eaac1d0a393b17843485079821",
+   "capaMudou": true,
+   "removidas": [
+    "352618935-preta-047973eaac1d0a393b17843485079821",
+    "352618935-branca-e7a631a591c71ab9d817843821665956",
+    "352618935-vitrine-nimbus-297d7970a866cd1f6f17842425956792"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352618935-preta-047973eaac1d0a393b17843485079821",
+    "352618935-branca-e7a631a591c71ab9d817843821665956",
+    "352618935-vitrine-nimbus-297d7970a866cd1f6f17842425956792"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352407182,
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+   "capaAntes": "352407182-vitrine-nimbus-58ddbde7870a202fb917842424360168",
+   "capaMudou": true,
+   "removidas": [
+    "352407182-vitrine-nimbus-58ddbde7870a202fb917842424360168",
+    "352407182-off-white-105a5e630fbbf7b0ad17843480933122"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352407182-vitrine-nimbus-58ddbde7870a202fb917842424360168",
+    "352407182-off-white-105a5e630fbbf7b0ad17843480933122"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352407156,
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
+   "capaAntes": "352407156-vitrine-nimbus-2f13ea62a4ca61f2a117842424043463",
+   "capaMudou": true,
+   "removidas": [
+    "352407156-vitrine-nimbus-2f13ea62a4ca61f2a117842424043463",
+    "352407156-branca-12d23181254474dd2317843472856990"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352407156-vitrine-nimbus-2f13ea62a4ca61f2a117842424043463",
+    "352407156-branca-12d23181254474dd2317843472856990"
+   ],
+   "atual": []
+  },
+  {
+   "id": 352728357,
+   "titulo": "Anjo da Guarda Stencil | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda1/",
+   "capaAntes": "352728357-preta-6ef5b9c39b77a27a0a17843494615140",
+   "capaAgora": "352728357-vitrine-nimbus-8442e64355df609c1c17842436479069",
+   "capaMudou": true,
+   "removidas": [
+    "352728357-preta-6ef5b9c39b77a27a0a17843494615140"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352728357-preta-6ef5b9c39b77a27a0a17843494615140",
+    "352728357-vitrine-nimbus-8442e64355df609c1c17842436479069"
+   ],
+   "atual": [
+    "352728357-vitrine-nimbus-8442e64355df609c1c17842436479069"
+   ]
+  },
+  {
+   "id": 352727892,
+   "titulo": "Aparecida Spray | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray1/",
+   "capaAntes": "352727892-preta-d4600da5c599e83fb817843823553435",
+   "capaAgora": "352727892-preta-d4600da5c599e83fb817843823553435",
+   "capaMudou": false,
+   "removidas": [
+    "352727892-vitrine-nimbus-f0aed575075809bd6317842435522941"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352727892-preta-d4600da5c599e83fb817843823553435",
+    "352727892-vitrine-nimbus-f0aed575075809bd6317842435522941"
+   ],
+   "atual": [
+    "352727892-preta-d4600da5c599e83fb817843823553435"
+   ]
+  },
+  {
+   "id": 352721118,
+   "titulo": "Fé Wildstyle | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe2/",
+   "capaAntes": "352721118-preta-91834f9d6193054a3817843491364419",
+   "capaAgora": "352721118-preta-91834f9d6193054a3817843491364419",
+   "capaMudou": false,
+   "removidas": [
+    "352721118-vitrine-nimbus-cf296667fd002db0af17842432670687"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352721118-preta-91834f9d6193054a3817843491364419",
+    "352721118-off-white-475b29e680851fbcbb17843491360542",
+    "352721118-vitrine-nimbus-cf296667fd002db0af17842432670687"
+   ],
+   "atual": [
+    "352721118-preta-91834f9d6193054a3817843491364419",
+    "352721118-off-white-475b29e680851fbcbb17843491360542"
+   ]
+  },
+  {
+   "id": 352721197,
+   "titulo": "Fé Wildstyle | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe3/",
+   "capaAntes": "352721197-vitrine-nimbus-98f12a52f7e4b0a7c017842432980930",
+   "capaAgora": "352721197-vitrine-nimbus-98f12a52f7e4b0a7c017842432980930",
+   "capaMudou": false,
+   "removidas": [
+    "352721197-branca-61420f4f91dc3f779817843491818041"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352721197-vitrine-nimbus-98f12a52f7e4b0a7c017842432980930",
+    "352721197-branca-61420f4f91dc3f779817843491818041"
+   ],
+   "atual": [
+    "352721197-vitrine-nimbus-98f12a52f7e4b0a7c017842432980930"
+   ]
+  },
+  {
+   "id": 352721633,
+   "titulo": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
+   "capaAntes": "352721633-vitrine-nimbus-b1ac783d68388aa0ed17842433618868",
+   "capaAgora": "352721633-off-white-b00d5ed8b5d1b9d5ea17843709672642",
+   "capaMudou": true,
+   "removidas": [],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352721633-vitrine-nimbus-b1ac783d68388aa0ed17842433618868",
+    "352721633-off-white-b00d5ed8b5d1b9d5ea17843709672642"
+   ],
+   "atual": [
+    "352721633-off-white-b00d5ed8b5d1b9d5ea17843709672642",
+    "352721633-vitrine-nimbus-b1ac783d68388aa0ed17842433618868"
+   ]
+  },
+  {
+   "id": 352725749,
+   "titulo": "Querubim Spray | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray/",
+   "capaAntes": "352725749-preta-764073b19b77d59d8917843492711670",
+   "capaAgora": "352725749-preta-764073b19b77d59d8917843492711670",
+   "capaMudou": false,
+   "removidas": [
+    "352725749-vitrine-nimbus-9ea494770ad1a1e88517842403839804"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352725749-preta-764073b19b77d59d8917843492711670",
+    "352725749-off-white-467cb957b03177ba9917843492715789",
+    "352725749-vitrine-nimbus-9ea494770ad1a1e88517842403839804"
+   ],
+   "atual": [
+    "352725749-preta-764073b19b77d59d8917843492711670",
+    "352725749-off-white-467cb957b03177ba9917843492715789"
+   ]
+  },
+  {
+   "id": 352727545,
+   "titulo": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray2/",
+   "capaAntes": "352727545-vitrine-nimbus-bd51e34cf4dc5c377b17842435204135",
+   "capaAgora": "352727545-off-white-667b902175476396a917843494173499",
+   "capaMudou": true,
+   "removidas": [],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352727545-vitrine-nimbus-bd51e34cf4dc5c377b17842435204135",
+    "352727545-off-white-667b902175476396a917843494173499"
+   ],
+   "atual": [
+    "352727545-off-white-667b902175476396a917843494173499",
+    "352727545-vitrine-nimbus-bd51e34cf4dc5c377b17842435204135"
+   ]
+  },
+  {
+   "id": 352898175,
+   "titulo": "São Miguel Vitorioso | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray3/",
+   "capaAntes": "352898175-vitrine-nimbus-0a04ba4a35d3d8d9e617842440119279",
+   "capaAgora": "352898175-branca-43d936c3b828bc689317843495549546",
+   "capaMudou": true,
+   "removidas": [],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352898175-vitrine-nimbus-0a04ba4a35d3d8d9e617842440119279",
+    "352898175-branca-43d936c3b828bc689317843495549546"
+   ],
+   "atual": [
+    "352898175-branca-43d936c3b828bc689317843495549546",
+    "352898175-vitrine-nimbus-0a04ba4a35d3d8d9e617842440119279"
+   ]
+  },
+  {
+   "id": 352726673,
+   "titulo": "São Miguel Vitorioso | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray1/",
+   "capaAntes": "352726673-preta-a7425bffc2b6d575fc17843493714431",
+   "capaAgora": "352726673-branca-93062a0262cfa3396917843493714580",
+   "capaMudou": true,
+   "removidas": [
+    "352726673-vitrine-nimbus-67cad958d8e05038b417842434894196"
+   ],
+   "adicionadas": [],
+   "reordenou": false,
+   "antes": [
+    "352726673-preta-a7425bffc2b6d575fc17843493714431",
+    "352726673-branca-93062a0262cfa3396917843493714580",
+    "352726673-vitrine-nimbus-67cad958d8e05038b417842434894196"
+   ],
+   "atual": [
+    "352726673-branca-93062a0262cfa3396917843493714580",
+    "352726673-preta-a7425bffc2b6d575fc17843493714431"
+   ]
+  }
+ ]
+}

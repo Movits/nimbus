@@ -1,0 +1,1181 @@
+{
+ "total": 18,
+ "resultados": [
+  {
+   "productId": 352890896,
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+   "foto": "capa",
+   "basename": "352890896-preta-b25ff5b2b140dbfb7817843495077781",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352890896-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-04.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png",
+   "veredictoAntigo": "reprovada",
+   "devAntigo": 56.74418604651164,
+   "problemasAntigos": [
+    {
+     "tipo": "escala",
+     "gravidade": "alta",
+     "descricao": "Estampa muito maior que o especificado: ocupa 67,4% do comprimento visivel das costas (428px de 635px, gola y320 a barra y955, estampa y372 a y800) contra 43,0% no mockup YouDraw preto (197px de 458px). Desvio relativo de +57%, muito acima do limite de 25%. A moldura de azulejos quase encosta nas laterais e o NIMBUS desce ate a altura do quadril; em miniatura de catalogo a proporcao destoa claramente do mockup.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    },
+    {
+     "tipo": "peca-errada",
+     "gravidade": "alta",
+     "descricao": "A peca vestida nao e a camiseta oversized de manga curta do produto: as mangas sao longas e amplas, cobrindo o braco inteiro ate o punho (so as maos ficam expostas, mangas terminam em y830-860), estilo kimono/manga longa. Nos dois mockups YouDraw a manga termina logo apos o cotovelo. Visivel de imediato em tamanho catalogo e induz o cliente a comprar outra peca.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    }
+   ],
+   "vazioAgora": false,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": true,
+    "arteObs": "Composição, figuras e ornamentos conferem com o mockup e a arte original: coroa, Nossa Senhora Aparecida em oração, manto azul com bandeiras do Brasil nas laterais, criança aos pés, faixa \"PADROEIRA (BRASIL SACRO)\", moldura de azulejos e \"NIMBUS\" abaixo. Nada inventado, removido ou redesenhado.",
+    "corCorreta": true,
+    "incertezaPontos": 15,
+    "melhorEstimativaDesvioPct": 68.26,
+    "metricaComprimento": {
+     "confiavel": false,
+     "fotoPct": 74.7,
+     "mockupPct": 42.2,
+     "desvioPct": 77.3
+    },
+    "metricaOmbros": {
+     "confiavel": true,
+     "fotoRazao": 1.122,
+     "mockupRazao": 0.667,
+     "desvioPct": 68.26
+    },
+    "pecaCorreta": false,
+    "pecaObs": "A peça vestida na foto tem manga longa: o tecido cobre o braço inteiro até o punho, só as mãos ficam à mostra (mangas terminam por volta de y=830-860px em foto de 1024px). No mockup YouDraw preto de referência (gallery-04) e na composição da arte, a peça é camiseta oversized de manga curta, terminando acima do cotovelo. É uma peça diferente da especificada (\"Camiseta Oversized Premium\"), visível de imediato mesmo em miniatura.",
+    "problemas": [
+     "escala/alta: estampa ocupa aproximadamente 112% da largura ombro-a-ombro visível na foto contra 67% no mockup preto, desvio relativo de +68% (medição independente por pixel, arte começa em y368 e termina em y801 de uma imagem de 1024px). Muito acima da tolerância atual de 5% e também acima da antiga de 15/25%.",
+     "peca-errada/alta: a peça fotografada é de manga longa (cobre até o punho), enquanto o produto é uma camiseta oversized de manga curta. Mockup de referência confirma manga curta terminando acima do cotovelo. Erro visível já em miniatura de catálogo, induz o cliente a comprar peça errada.",
+     "medicao/media: a gola está totalmente coberta pelo cabelo solto e volumoso na foto, tornando a métrica de comprimento gola-barra não confiável isoladamente; a métrica de largura de ombros também pode estar levemente inflada pelo volume do cabelo sobre os ombros, o que tenderia a SUBESTIMAR o desvio real (ou seja, o desvio verdadeiro pode ser ainda maior que 68%)."
+    ],
+    "resumo": "Reprovar mantido, e a remoção de hoje não parece engano. Medição independente por pixel confirma desvio de escala grande: a estampa ocupa cerca de 112% da largura de ombros visível na foto contra 67% no mockup preto de referência, um desvio de aproximadamente +68%, muito além da nova tolerância de 5% (e também acima da antiga de 15-25%). Além disso a peça vestida é de manga longa, cobrindo o braço até o punho, enquanto o produto e o mockup de referência mostram camiseta oversized de manga curta terminando acima do cotovelo — um erro de peça visível já em miniatura de catálogo. Por outro lado a arte está fiel ao original (composição, figuras e ornamentos batem), o texto \"PADROEIRA (BRASIL SACRO)\" e \"NIMBUS\" está íntegro e legível, a tinta parece bem aplicada no tecido sem efeito de adesivo, a anatomia da figura está correta e a cor da peça (preta) confere com o especificado. Mas os dois problemas graves (escala e peça errada) são suficientes isoladamente para reprovar, então a foto não é aprovável sob nenhum dos dois critérios (antigo ou novo).",
+    "textoIntegro": true,
+    "textoObs": "\"PADROEIRA\" e \"(BRASIL SACRO)\" legíveis e ortograficamente corretos na faixa central; \"NIMBUS\" também íntegro e legível abaixo da moldura. Nenhuma corrupção de caracteres identificada em zoom.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Reprovação MANTIDA. Medi eu mesmo as duas imagens (PIL, pixel a pixel) e os dois problemas graves apontados pelo juiz se confirmam de forma independente:\n\n1) MANGA ERRADA — confirmado de forma inequívoca. Fiz crops ampliados dos dois braços na foto viva (regiões x120-380/y600-1000 e x650-900/y600-1000) e em ambos o tecido preto vai até o punho, com a mão exposta abaixo da barra da manga (há inclusive uma bainha/costura visível no punho). Isso é manga longa. O mockup de referência (gallery-04, cor preta) mostra claramente manga curta terminando bem acima do cotovelo. Não há ambiguidade aqui — não é textura, sombra ou dobra de tecido solto; é uma manga costurada terminando no punho em ambos os braços, simetricamente. Esse defeito sozinho já é decisivo e o próprio resumo do juiz diz que qualquer um dos dois problemas basta para reprovar.\n\n2) ESCALA DA ESTAMPA — direção do problema confirmada, magnitude na mesma ordem de grandeza (embora eu tenha chegado a um número diferente do juiz por usar outro landmark). Medi:\n- Largura da estampa (transição borda azul/dourada vs tecido preto) na foto viva: ~269-278px, estável de y~400 a y~790.\n- Largura total do tecido preto visível (silhueta da peça) na mesma altura da estampa (y580-600): ~527-537px.\n- Razão estampa/largura-da-peça na FOTO VIVA: ~51-52%.\n- Mesma medição no MOCKUP (borda do print vs silhueta preta total, y160-200): estampa ~142-144px, peça ~370-400px → razão ~35-38%.\n- Oversizing relativo: (0,51/0,374 - 1) ≈ +36%.\n\nNão cheguei exatamente aos 68% do juiz porque usei \"largura total da peça na foto\" como referência (mais robusta, sem obstrução de cabelo) em vez de \"ombro a ombro\" (que o próprio juiz reconhece estar contaminado pelo cabelo solto e por isso é uma métrica frágil). Mas mesmo com essa referência mais conservadora, o desvio relativo (~36%) já estoura folgadamente a tolerância nova de 5% e a antiga de 15-25%. Ou seja, medição independente, com metodologia diferente, aponta na mesma direção: a estampa está visivelmente desproporcional/maior na foto em relação à peça, comparado ao mockup.\n\nNão encontrei nenhuma evidência que anule os dois problemas (nem manga longa é ilusão de ângulo/dobra, nem a estampa está dentro de tolerância). A reprovação é justificada e não deve ser refutada."
+    },
+    {
+     "motivo": "Não é possível refutar. Medi eu mesmo com PIL/numpy e inspeção visual direta em zoom, e o problema mais grave (peça errada) é inequívoco e por si só já sustenta a reprovação:\n\n1) MANGA LONGA vs MANGA CURTA — confirmado visualmente sem ambiguidade.\nRecortei e ampliei (2x) os dois braços na foto ao vivo (352890896-capa.webp): em ambos os braços o tecido preto cobre o braço inteiro até o punho, terminando numa barra/bainha visível bem próxima da mão, com a mão aparecendo só depois dessa barra. Não há nenhuma manga curta ali — é uma peça de manga comprida.\nConferi as 4 imagens de referência do mockup do produto (gallery-01 a gallery-04, cores creme e preta, frente e verso): todas mostram inequivocamente uma camiseta oversized de manga CURTA, terminando bem acima do cotovelo, com antebraço à mostra. Não existe variante manga longa nas referências do produto.\nLogo, a foto ao vivo retrata fisicamente uma peça diferente da que está sendo vendida (peça errada / manga incompatível). Esse defeito é observável já em miniatura e é, por si, suficiente para reprovar — não depende da discussão sobre escala da estampa.\n\n2) Sobre a escala da estampa (68%): tentei reproduzir a medição por pixel de forma independente (detecção automática de região \"estampa\" por saturação de cor dentro da área do print, e largura do \"ombro\" via máscara de pixels pretos da camiseta, tanto na foto viva 1024px quanto no mockup 500px). Consegui reproduzir com boa precisão os limites verticais da arte citados pelo juiz (y≈368 a y≈801 na foto de 1024px — bateu quase exato). Porém a largura \"ombro-a-ombro\" é uma métrica ambígua nesta peça oversized/dropped-shoulder: dependendo de em que altura da imagem eu meço a largura do tecido preto (logo abaixo do cabelo, no topo do print, ou no ponto mais largo onde a manga se abre), obtive proporções estampa/largura que variam de ~37% a ~76%, não convergindo isoladamente para os valores 112%/67% citados. Isso sugere que o número exato de \"+68% de desvio\" tem uma metodologia sensível à definição de \"ombro\", mas não cheguei a evidência que prove que a estampa está dentro da tolerância — só que o percentual exato é mais frágil do que parece.\n\nComo o critério declarado no veredito é que os dois problemas (escala OU peça errada) bastam isoladamente para reprovar, e o problema da peça errada (manga longa fotografada para produto de manga curta) é solidamente confirmado por evidência visual direta e consistente em todas as referências do mockup, a reprovação se sustenta independentemente da precisão do número de escala. Não há como refutar o veredito com os dados disponíveis.\n\nArquivos usados na verificação: C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/verify_left_arm.png e verify_right_arm.png (crops ampliados dos braços da foto viva), grid_overlay.png e shoulder_zoom_grid.png (medição por grade), e as 4 imagens gallery-01..04.webp em C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352702020,
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "foto": "capa",
+   "basename": "352702020-preta-57b2e7de23134cc19e17843486271476",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352702020-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352702020-salmo-193\\gallery-04.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Salmo 19.png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": 7.182320441988933,
+   "problemasAntigos": [],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": true,
+    "arteObs": "Composição idêntica à arte original e ao mockup: arco \"OS CÉUS PROCLAMAM / A GLÓRIA DE DEUS\", cruz ornamentada centralizada, \"SI 19\" abaixo. Nenhum elemento inventado, removido ou redesenhado.",
+    "corCorreta": true,
+    "incertezaPontos": 4.5,
+    "melhorEstimativaDesvioPct": 7.8,
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": 36.43
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoRazao": null,
+     "mockupRazao": 0.527
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta preta de manga curta, gola careca, corte reto — condiz com \"Camiseta Premium\" e com o mockup. Sem capuz, sem manga longa, sem moletom/blusão.",
+    "problemas": [
+     "Desvio de escala estimado em ~7-8% (estampa proporcionalmente maior / peça mais estreita em relação à estampa do que no mockup) — excede a nova tolerância de 5% definida pelo dono, embora estivesse dentro da tolerância antiga de 15% (auditoria de ontem: 7,2%, aprovada sob o critério antigo).",
+     "Nenhuma métrica de escala pôde ser medida com plena confiabilidade nesta foto: a barra da camiseta está oculta em sombra profunda / fundida visualmente com a calça escura (sem transição visível até a borda do quadro), e a foto tem a pessoa em ângulo 3/4 (não de costas retas), o que distorce por perspectiva qualquer medida direta de largura ombro-a-ombro comparada ao mockup plano e frontal."
+    ],
+    "resumo": "Peça, arte, texto, tinta, anatomia e cor da peça passam sem ressalvas. O ponto decisivo é a escala da estampa. As duas métricas formais pedidas não puderam ser medidas com confiabilidade total nesta foto específica: a barra (gola-barra) está escondida em sombra/fundida com a calça preta (confirmado por varredura de brilho — praticamente uniforme e escuro até a borda do quadro, sem transição detectável), e a largura ombro-a-ombro é prejudicada tanto pela ausência de um \"corner\" de costura visível no mockup (é uma curva contínua de gola até a barra da manga, sem seam definido — provável corte oversized/ombro caído estilizado) quanto pela pose em 3/4 do modelo na foto, que forceshortening a largura de um lado mais que o outro. Diante disso, cruzei sinais complementares e mensuráveis nas duas imagens sem depender de barra ou ombro: (1) razão altura-da-estampa ÷ distância-gola-ao-topo-da-estampa (mockup ≈2,31 vs foto ≈4,24 — indicando estampa proporcionalmente maior na foto); e (2) comparação visual lado a lado normalizando as duas imagens pela mesma altura de estampa (300px), que mostra a peça na foto visivelmente mais estreita nos ombros/mangas relativa ao tamanho da estampa do que no mockup — medição direta nessa versão normalizada aponta ~12-13%, mas esse número tende a superestimar o desvio real por causa do foreshortening da pose. Os dois sinais convergem na mesma direção (estampa relativamente grande na foto) e, junto com o dado documentado de ontem (7,2% sob critério antigo, que meu recálculo independente não contradiz), sustentam uma estimativa final de ~7-8%, com incerteza de alguns pontos percentuais. Mesmo considerando essa incerteza, o valor fica de forma consistente acima do novo teto de 5%. Como o dono foi explícito (\"uma foto quase boa com desvio de 6-7% NÃO é aprovável\") e o critério apertou justamente para não deixar passar esse tipo de caso-limite, a foto reprova pelo critério atual — não porque algo esteja visivelmente errado a olho nu, mas porque a estampa está de fato um pouco grande demais em relação à peça, dentro da margem que o dono decidiu não tolerar mais.",
+    "textoIntegro": true,
+    "textoObs": "Texto conferido letra a letra contra a arte original: \"OS CÉUS PROCLAMAM\" / \"A GLÓRIA DE DEUS\" / cruz / \"SI 19\" — todos os acentos (É, Ó) presentes e legíveis, nenhuma corrupção de caractere detectada mesmo em zoom alto.",
+    "textoVisivelEmCatalogo": null,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Reproduzi as medições do juiz de forma independente (Python/PIL, análise pixel a pixel) e não encontrei evidência que invalide o laudo. (1) Barra/hem: recortei a região do corpo, apliquei brilho 4x + contraste 1.8x, e fiz varredura de luminância linha a linha por toda a largura do tronco (25%-85% da largura, 65%-100% da altura) — luminância fica uniformemente baixa (30-42/255) sem qualquer salto de borda detectável, mesmo com realce agressivo. Confirma que a barra é genuinamente irrecuperável em sombra, como o juiz alegou. (2) Razão gola-estampa: no mockup reproduzi uma razão de ~2.2 (colarinho y=46, topo estampa y=112, base 'SI19' y=258), próxima do 2.31 do juiz, validando a leitura do mockup. Na foto, porém, o ponto de nuca é ambíguo pelo ângulo 3/4 — variando a marcação em poucos pixels (y=290 a y=315) a razão salta de 8.4 a 14+, nunca convergindo para um valor estável. Isso não contradiz o juiz; reforça exatamente o ponto que ele já havia levantado (métrica instável nesta foto) e que ele já havia descontado no cálculo final. (3) Testei uma métrica alternativa (largura da estampa ÷ envergadura ombro-a-ombro): mockup=0.64, foto≈0.42 — sugerindo direção oposta à do laudo (estampa relativamente menor, não maior) — mas essa medida está contaminada pelos mesmos problemas que o juiz descreveu (corte oversized sem seam definido + foreshortening assimétrico da pose 3/4), não sendo confiável o suficiente para ser 'evidência clara'. Não há solo firme para refutar; a regra é 'na dúvida, refutado=false', e a dúvida aqui não pende para nenhum lado com confiança suficiente."
+    },
+    {
+     "motivo": "Refutado com base em medição própria (Python/PIL, pixel a pixel, sem depender das leituras do veredito).\n\nO QUE CONFIRMEI QUE O JUIZ ACERTOU (não refuto isso):\n- A barra/gola-costura na foto realmente está numa região quase uniformemente escura (luminância ~7-16, caindo a 1-3 perto da virilha) sem transição nítida detectável entre camiseta e calça — testei varredura de luminância em 3 colunas (x=480/520/560) do y=700 ao y=1024 e não há salto claro.\n- O mockup realmente não tem \"corner\" de costura de manga: tracei o contorno superior da peça (x=45 a x=460) e é uma curva contínua e simétrica (pico de ombro ~y=47-50, vale de gola ~y=53-54), sem quebra angular — corte oversized/ombro caído confirmado.\n\nPOR QUE A CONCLUSÃO NUMÉRICA (7-8%, reprovação) NÃO SE SUSTENTA:\n\n1) Os dois sinais \"complementares\" que o veredito usa se contradizem entre si e nenhum bate com \"7-8%\". Refiz a mesma métrica (altura da estampa ÷ distância gola→topo da estampa) com medição direta de pixel: mockup ≈146/57=2,56 (juiz relatou 2,31 — parecido); foto ≈247/74=3,34 (juiz relatou 4,24 — bem diferente). Isso já mostra que a métrica não é reprodutível: dois medidores cuidadosos, mesmo método, chegam a variações de 30% vs 83% na razão. E mesmo usando os números do PRÓPRIO juiz (2,31 vs 4,24), isso é uma diferença de ~84%, não 7-8%. O outro sinal citado (comparação lado a lado normalizada) deu 12-13%. Nenhum dos dois sinais gera matematicamente \"7-8%\" — esse número não deriva do que foi medido hoje, ele apenas repete a estimativa antiga de ontem (7,2%, sob a tolerância antiga), maquiada com métricas novas que na verdade apontam para desvios maiores ou de sinal misto.\n\n2) Contradição interna reveladora que o juiz não checou: normalizei a foto para a MESMA altura de estampa do mockup (escala 0,591) e medi também a LARGURA da estampa nesse mesmo alinhamento: mockup=181px, foto normalizada=157px — ou seja, pela largura a estampa da foto fica ~13% MENOR, não maior. Um erro real de escala de estampa (impressão proporcionalmente maior) afetaria altura E largura igualmente (é uma escala isotrópica). Altura sugerindo \"maior\" e largura sugerindo \"menor\" ao mesmo tempo é a assinatura clássica de foreshortening de perspectiva (pose 3/4 comprime dimensões horizontais, preserva verticais ao longo da coluna) — exatamente o efeito que o próprio juiz citou como motivo de nulidade das medições oficiais, mas não aplicou à sua própria conclusão numérica.\n\n3) Fiz o comparativo lado a lado normalizado por altura de estampa (mesma técnica que o juiz diz ter usado) e, visualmente, a peça na foto não aparenta estampa desproporcionalmente grande — o ombro/manga do lado próximo à câmera (que sofre menos foreshortening) parece proporcional ao mockup; a aparente \"estreiteza\" fica concentrada no lado que se afasta da câmera, consistente com ângulo de corpo, não com peça menor.\n\n4) Confundidor físico não controlado: a foto é sobre um torso humano real e musculoso (trapézio/costas marcados), o mockup está sobre forma/manequim sem musculatura. Tecido esticado sobre curvatura de ombro/costas real comprime visualmente a distância gola→estampa mesmo sem qualquer erro real de impressão — o próprio juiz reconhece \"nada parece visivelmente errado a olho nu\".\n\nEm suma: os dois critérios formais exigidos (barra, ombro-a-ombro) são genuinamente não mensuráveis nesta foto (confirmo isso), e o número substituto \"7-8%\" usado para reprovar não é derivado de forma consistente ou reprodutível das evidências apresentadas — é herdado da medição antiga sob tolerância antiga, contradito por sinais mistos (altura vs largura) explicáveis por perspectiva, e não reproduzido de forma estável em nova medição independente. Não há evidência visual concreta e confiável de desvio de escala acima de 5%; a reprovação repousa em falsa precisão numérica.",
+     "refutado": true
+    }
+   ]
+  },
+  {
+   "productId": 352702020,
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "foto": "par",
+   "basename": "352702020-branca-d48ceea7042d5c514317843486264095",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352702020-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352702020-salmo-193\\gallery-02.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Salmo 19.png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": null,
+   "problemasAntigos": [],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": true,
+     "fotoPct": 34.21,
+     "mockupPct": 37.01,
+     "desvioPct": -7.57
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "fotoRazao": 46.69,
+     "mockupRazao": 35.95,
+     "desvioPct": 29.86
+    },
+    "melhorEstimativaDesvioPct": -7.57,
+    "incertezaPontos": 2.5,
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta de manga curta, gola careca, sem capuz, fit levelmente solto compatível com \"Camiseta Premium\" branca. Confere com o mockup e o nome do produto.",
+    "arteFiel": true,
+    "arteObs": "Composição (arco de texto, cruz, \"SI 19\") e proporções entre elementos conferem com o mockup e a arte original. Nada foi adicionado, removido ou redesenhado. O problema é só de escala geral, não de fidelidade do desenho.",
+    "textoIntegro": true,
+    "textoObs": "\"OS CÉUS PROCLAMAM A GLÓRIA DE DEUS\" e \"SI 19\" conferem letra por letra com a arte original, incluindo o acento em \"CÉUS\". Nenhuma corrupção visível mesmo em zoom alto.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "Estampa proporcionalmente pequena demais: medindo altura da estampa dividida pelo comprimento gola-barra (metodo mais confiavel aqui, pois gola e barra estao totalmente visiveis e sem corte), a foto da 34,2% contra 37,0% no mockup de referencia, um desvio de aproximadamente -7,6%. Isso ultrapassa a nova tolerancia de 5% (passaria no criterio antigo de 15%, por isso foi aprovada ontem)."
+    ],
+    "resumo": "Reexaminei a foto do zero com o criterio de 5%. Peca, arte, texto, tinta, anatomia e cor estao todos corretos, sem nenhum problema visivel mesmo em zoom alto. O unico ponto de reprovacao e a escala: medi a altura da estampa contra o comprimento gola-barra (metrica confiavel, porque colarinho e barra aparecem inteiros e sem corte na foto) e cheguei a 34,2% na foto contra 37,0% no mockup de referencia, um desvio de -7,6%. A metrica de largura ombro-a-ombro nao e confiavel aqui: o modelo esta em angulo de 3/4 (nao de costas reto), o que estreita a largura aparente dos ombros na foto de forma artificial e faz essa metrica divergir muito da primeira (+29,9%, direcao oposta), entao nao usei ela como base. Com desvio estimado de -7,6% (incerteza de uns 2,5 pontos por causa da leitura de borda em pixel), a foto fica acima da nova tolerancia de 5%, embora estivesse dentro da tolerancia antiga de 15%, o que explica por que foi aprovada ontem. Portanto, sob o criterio de hoje, esta foto nao e aprovavel; a remocao de hoje nao foi um engano, foi o criterio novo pegando um desvio de escala real que o criterio antigo deixava passar."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Remedi eu mesmo, pixel a pixel (script Python/Pillow/numpy sobre os arquivos originais, com zoom 8x para confirmar bordas da estampa). Foto ao vivo: colarinho y=277, barra y=965 (comprimento=688px); estampa do topo y=348 à base y=578 (altura=230px) -> razão 33,4%. Mockup: colarinho y=52, barra y=451 (comprimento=397px); estampa y=109 a y=258 (altura=150px) -> razão 37,8%. Desvio = -11,6%, ainda mais severo que o -7,6% relatado pelo juiz, e a leitura de bordas foi nítida (sem ambiguidade que pudesse inverter o veredito). Considerei se o ângulo 3/4 do modelo invalidaria também a métrica colarinho-barra (já que invalida ombro-a-ombro, que diverge em +29,9% em sentido oposto), mas fisicamente rotação de guinada (virar o corpo) comprime medidas horizontais muito mais que verticais ao longo da coluna, o que justifica por que uma métrica dispara e a outra não necessariamente está comprometida -- não é evidência de que a métrica vertical esteja quebrada. Não há sinal visual de inclinação/pose dinâmica adicional que sugerisse encurtamento vertical por curvatura de coluna, nem regra do dono ou exceção nas notas do projeto NIMBUS aplicável a desvio de escala de estampa, nem se trata de problema de legibilidade em miniatura. Minha remedição independente corrobora, não refuta, o veredito de reprovação por desvio de escala acima da tolerância de 5%."
+    },
+    {
+     "motivo": "Medi eu mesmo, em pixels, direto dos arquivos-fonte (não do preview), usando o mesmo método do juiz (altura da estampa ÷ comprimento gola-barra no centro das costas), com verificação visual em zoom (NEAREST, sem suavização) de cada borda para descartar falsos positivos (ex.: descartei um artefato de sombra no tecido perto da gola que quase inflava a \"altura da estampa\" da foto).\n\nFOTO (352702020-par.webp, 1024x1024): gola no y=278, barra no y=963 (comprimento=685px). Estampa: topo do \"P\" de PROCLAMAM em y=349, base do rabicho do \"S\" de \"SI 19\" em y=582 (altura=233px). Razão = 233/685 = 34,0%.\n\nMOCKUP (gallery-02.webp, 500x500): gola no y=53, barra no y=454-455 (comprimento=401-402px). Estampa: topo do acento do \"É\" em y=109, base do rabicho do \"S\" de \"SI 19\" em y=260 (altura=151px, confirmado em zoom sem suavização — é um rabicho decorativo real da letra, não ruído). Razão = 151/401 = 37,7%.\n\nDesvio = (34,0-37,7)/37,7 ≈ -9,7%, ou seja, MAIOR (mais negativo) que o -7,6% que o juiz reportou, não menor. As duas leituras batem na mesma direção e ordem de grandeza (34,2% vs meu 34,0% na foto; 37,0% vs meu 37,7% no mockup), o que corrobora — não refuta — o veredito. Não encontrei erro de medição, borda mal lida, ou regra do dono aplicável (não é caso de \"texto ilegível em miniatura\"). A estampa é de fato proporcionalmente menor na foto do que no mockup, acima da tolerância de 5%.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352718943,
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+   "foto": "capa",
+   "basename": "352718943-preta-8126a28dc4cda7cb3c17843857989747",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718943-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-04.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "veredictoAntigo": "reprovada",
+   "devAntigo": 10.440835266821345,
+   "problemasAntigos": [
+    {
+     "tipo": "peca-errada",
+     "gravidade": "alta",
+     "descricao": "A modelo veste uma peca preta de manga COMPRIDA e larga, estilo kimono/blusao, com mangas ate o punho e barra longa (visivel nos dois bracos, mangas cobrindo ate o pulso). O produto vendido e a Camiseta Oversized Premium de manga curta, como mostram os mockups gallery-02/gallery-04 e a propria foto da posicao 2. A capa retrata uma peca que nao e a que o cliente recebe.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": 37.6
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": 3.3,
+     "fotoRazao": 0.684,
+     "mockupRazao": 0.662
+    },
+    "melhorEstimativaDesvioPct": 7.5,
+    "incertezaPontos": 7,
+    "pecaCorreta": false,
+    "pecaObs": "Confirmado por inspeção direta hoje: a modelo veste uma peça preta de manga LONGA e larga, corte dolman/kimono, com mangas que cobrem o braço inteiro até o punho (mão emerge do punho da manga, não do meio do antebraço como seria numa manga curta oversized) e corpo da peça estendido para além do quadril, com barra e possível abertura lateral visível perto de y≈920-930px — muito mais comprida que uma camiseta. Não há costura de ombro definida (verificado com realce de brilho/contraste na região do ombro: o tecido escoa de forma contínua e suave do pescoço até o punho, típico de corte dolman/blusão, não de manga curta com ombro caído). Isso não é a Camiseta Oversized Premium de manga curta que aparece nos mockups gallery-02/gallery-04 e que o cliente recebe. Mesmo problema já documentado na auditoria de ontem — a peça na foto continua sendo a errada.",
+    "anatomiaOk": true,
+    "arteFiel": true,
+    "arteObs": "Composição, figuras e ornamentos conferem com o mockup e a arte original: cavaleiro São Jorge sobre cavalo branco empinado, capa vermelha, dragão vermelho na base, querubins no topo, placa \"NIMBUS\", moldura dourada ornamentada e borda de azulejos azuis com âncoras/flor-de-lis, flores nos cantos inferiores. Nada aparenta ter sido inventado, removido ou redesenhado.",
+    "corCorreta": true,
+    "textoIntegro": true,
+    "textoObs": "A palavra \"NIMBUS\" na placa central está legível e grafada corretamente, letra por letra idêntica à arte original, sem corrupção visível mesmo em crop ampliado.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true,
+    "aprovavel": false,
+    "problemas": [
+     "[peca-errada/alta] A modelo veste uma peça de manga COMPRIDA (até o punho) e corte largo tipo kimono/dolman/blusão, com corpo estendido além do quadril e sem costura de ombro definida — confirmado hoje por inspeção direta e realce de contraste. O produto vendido é a Camiseta Oversized Premium de manga CURTA, como mostram os mockups gallery-02/gallery-04. A capa retrata uma peça diferente da que o cliente recebe. Esse problema por si só reprova a foto, independente do critério de escala.",
+     "[escala/media-incerteza] Não foi possível medir a escala com confiabilidade: a gola está totalmente escondida pelo cabelo volumoso da modelo, não há costura de ombro visível (corte dolman sem costura definida) e a pose em 3/4 (não frontal) introduz distorção de perspectiva em relação ao mockup, que é frontal/plano. Estimativa aproximada usando proxies visuais (largura do tronco antes do alargamento da manga): desvio entre +3% e +10%, melhor estimativa ~7,5% ± 7 pontos — valor consistente com o desvio de 10,4% medido ontem, mas sem confiança suficiente para confirmar se cruza os 5% de tolerância atual. Como a peça já está errada, essa incerteza não muda o veredito."
+    ],
+    "resumo": "REPROVADA. O problema decisivo, confirmado hoje por inspeção direta e inalterado desde a auditoria de ontem, é peça errada: a modelo veste um blusão/kimono preto de manga longa até o punho e corpo comprido além do quadril, não a Camiseta Oversized Premium de manga curta que é o produto anunciado (São Jorge Neobarroco, cor Preta). Isso por si só torna a foto não aprovável, qualquer que seja o critério de escala. Quanto à escala, a medição ficou inconclusiva porque a gola está escoberta pelo cabelo, não há costura de ombro identificável no corte dolman, e a pose em 3/4 distorce a comparação com o mockup frontal; a melhor estimativa (~7,5%, alta incerteza) é compatível com o desvio de 10,4% apontado ontem e provavelmente também excede a nova tolerância de 5%, mas isso é secundário diante do erro de peça. Arte, texto (\"NIMBUS\" íntegro e legível), tinta no tecido, anatomia (rosto e mãos normais) e cor (preta) estão todos corretos — não são o motivo da reprovação. A remoção da loja hoje não parece ter sido um engano: a foto continua reprovável pelos mesmos motivos de ontem."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "motivo": "Medi diretamente e o veredito do juiz se confirma — não há como refutar o problema decisivo de \"peça errada\".\n\nEvidência visual concreta (crops gerados por mim a partir do arquivo original 1024x1024, salvos em C:/Users/rober/AppData/Local/Temp/claude/.../scratchpad/audit/crops/):\n\n1. left_sleeve.png e right_sleeve.png: em AMBOS os braços, o tecido preto cobre o antebraço inteiro até o punho, terminando numa barra/bainha costurada nitidamente visível, com a mão INTEIRA (pulso, palma, todos os dedos) exposta abaixo da bainha. Não há bocado de antebraço nu entre o fim da manga e o pulso — o que existiria se fosse manga curta. Isso é geometricamente incompatível com manga curta: uma manga curta de camiseta oversized termina no bíceps/cotovelo, deixando todo o antebraço à mostra.\n\n2. Comparei com as 4 referências oficiais do produto (gallery-01 a gallery-04, creme e preta, frente e verso, em C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352718943-sao-jorge-neobarroco2/): todas mostram, sem exceção, manga CURTA terminando acima do cotovelo — construção clássica de camiseta oversized drop-shoulder.\n\n3. Conferi também a alegação secundária do juiz sobre \"sem costura de ombro definida\": no crop shoulders.png há sim uma costura visível descendo do ombro em direção à axila em ambos os lados — então o corte não é um dolman/kimono totalmente sem costura, é mais provavelmente uma manga montada convencional, só que comprida. Isso é uma imprecisão pontual na descrição do juiz sobre o TIPO de corte, mas não muda o fato central.\n\nConclusão: independentemente de ser \"dolman\" ou \"manga montada comprida\", a peça na foto é inequivocamente de manga longa até o punho, enquanto o produto vendido (Camiseta Oversized Premium, São Jorge Neobarroco, Preta) é de manga curta em todas as referências oficiais. Esse é um erro de peça real e mensurável, confirmado por inspeção direta minha, e ele por si só justifica a reprovação, independente da discussão de escala/desvio de 7.5%. Não encontrei nenhuma evidência que refute esse ponto.",
+     "refutado": false
+    },
+    {
+     "refutado": false,
+     "motivo": "Medi eu mesmo com crops ampliados (3x) das duas mangas na foto viva (352718943-capa.webp) e comparei lado a lado com os mockups gallery-02.webp e gallery-04.webp (cor Preta e Areia, mesmo corte). Resultado: nos dois braços da modelo, o punho/cuff do tecido termina rente ao osso do pulso, cobrindo TODO o antebraço, com a mão pendurada abaixo — manga comprida inequívoca, com barra/costura de acabamento visível bem no pulso. Nos mockups oficiais (gallery-02 e gallery-04), a manga termina no meio do bíceps/braço superior, deixando o antebraço inteiro à mostra — manga curta clássica de camiseta oversized. A diferença não é sutil nem ambígua: é uma peça categoricamente diferente (manga longa tipo blusão/kimono vs. camiseta manga curta), visível em ambos os braços de forma consistente, sem depender de contraste de cabelo ou da costura de ombro. Isso por si só sustenta o critério decisivo do juiz (peça errada), independente da discussão de escala. Não encontrei nenhuma evidência de que a medição esteja errada ou que o problema não se aplique — pelo contrário, a inspeção direta confirma o veredito. Arquivos usados: live 352718943-capa.webp (1024x1024) vs referências gallery-02.webp/gallery-04.webp (500x500); crops salvos em C:\\Users\\rober\\AppData\\Local\\Temp\\claude\\C--Users-rober\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\scratchpad\\verify\\ (live_leftarm_zoom.png, live_rightarm_zoom.png, live_shoulder_zoom.png)."
+    }
+   ]
+  },
+  {
+   "productId": 352718943,
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
+   "foto": "par",
+   "basename": "352718943-vitrine-nimbus-e54299c092a32a252617842430756612",
+   "cor": "Off-White",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718943-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-02.webp",
+   "mockCor": "Off-White",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "veredictoAntigo": "ressalva",
+   "devAntigo": null,
+   "problemasAntigos": [
+    {
+     "tipo": "escala",
+     "gravidade": "media",
+     "descricao": "Estampa maior que a referencia YouDraw: na foto ocupa ~50,7% do comprimento gola-barra (estampa y375-715 = 340px; peca y~310-980 = 670px) contra ~43% no mockup off-white gallery-02 (195px de estampa em ~453px de peca). Desvio relativo de ~18%, na faixa 15-25%. Sutil: nao salta aos olhos em miniatura ~400px, so em comparacao lado a lado com o mockup.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": true,
+    "arteObs": "Composição, cavaleiro, cavalo empinado, dragão, querubins e moldura barroca com azulejos conferem ponto a ponto com a arte original (costas - São Jorge Ouro) e com o mockup de referência. Nada inventado, removido ou redesenhado.",
+    "corCorreta": true,
+    "incertezaPontos": 3.5,
+    "melhorEstimativaDesvioPct": 16.31,
+    "metricaComprimento": {
+     "confiavel": true,
+     "fotoPct": 46.72,
+     "mockupPct": 40.17,
+     "desvioPct": 16.31
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "fotoRazao": null,
+     "mockupRazao": null,
+     "desvioPct": null
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta oversized de manga curta, sem capuz, caimento solto — consistente com \"Camiseta Oversized Premium\" e com o corte do mockup de referência.",
+    "problemas": [
+     "Escala da estampa: medição própria (pixel a pixel, colar e barra localizados sem ambiguidade) dá estampa/comprimento gola-barra = 46,7% na foto (altura de estampa ~313px, gola~y312 a barra~y982 = 670px, imagem 1024x1024) contra 40,2% no mockup Off-White gallery-02 (altura ~194px em comprimento 483px, imagem 500x500). Desvio relativo de ~16,3%, muito acima da nova tolerância de 5% — a estampa está visivelmente maior que a referência YouDraw quando comparada lado a lado."
+    ],
+    "resumo": "Reprovada pelo novo critério de 5%. Medi eu mesmo (do zero, com pontos de colar e barra bem localizados, sem depender da auditoria de ontem) e confirmei que a estampa está de fato maior que o mockup: ~46,7% do comprimento gola-barra na foto contra ~40,2% no mockup Off-White, desvio de ~16,3%. Isso é consistente com o achado de ontem (~18%, faixa 15-25%) que já era \"sutil, só visível lado a lado\" — sob o critério antigo de 15% ainda passaria raspando, mas sob o critério novo de 5% reprova com folga. Peça (camiseta oversized, manga curta, sem capuz), arte (composição/figuras/ornamentos fiéis), texto (\"NIMBUS\" íntegro e legível), tinta (parece impressão real acompanhando o tecido, sem aspecto de adesivo), anatomia (cavaleiro/cavalo/dragão/querubins normais) e cor (off-white confere — as diferenças que pareciam bege/amarelado nas amostras mais escuras eram só luz ambiente quente da janela; nos pontos mais iluminados a cor bate quase exatamente com o mockup) passaram sem ressalvas. O único motivo de reprovação é a escala da estampa.",
+    "textoIntegro": true,
+    "textoObs": "Texto \"NIMBUS\" no medalhão central está completo e legível mesmo em zoom alto, sem corrupção de caracteres.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "boa",
+   "ceticos": [
+    {
+     "refutado": true,
+     "motivo": "Medi eu mesmo, pixel a pixel, com PIL sobre os arquivos originais (live.png 1024x1024 extraído do webp; mock.png 500x500 extraído do gallery-02). Resultado: a medição do juiz está errada na sua âncora principal, e uma medição alternativa não-ambígua não mostra desvio de escala.\n\n1) O ponto \"colar y=312\" que o juiz alega ter localizado \"sem ambiguidade\" NÃO é o colar da camiseta — é cabelo. Amostrei a cor do pixel em (550,312) e em toda a coluna x=550 de y=260 a y=396: todos os valores ficam em RGB ~(10-20,5-15,4-10), ou seja, quase preto puro — a cor do cabelo cacheado da modelo, não o bege da camiseta (~200-230). Visualmente (crops com grid que gerei) confirma-se: o cabelo cai cobrindo toda a nuca e desce até quase encostar no topo da estampa (~y=463); não existe nenhuma costura de gola visível na foto. Logo, a alegação \"colar e barra localizados sem ambiguidade\" é factualmente falsa para o colar — o número usado ali foi um chute dentro da massa de cabelo, não uma medição.\n\n2) Medida alternativa, essa sim inequívoca: usei as costuras de ombro/manga (nitidamente visíveis, sem ambiguidade) para medir a largura do painel das costas na foto real: costura esquerda x≈257, direita x≈737 → largura do painel = 480px. A estampa (extremidade a extremidade, incluindo flor/dragão que extrapolam a moldura) vai de x≈432 a x≈625 → largura = 193px. Razão estampa/largura-do-painel na foto real = 193/480 = 40,2%. Esse número bate quase exatamente com os 40,2% que o próprio juiz mediu no mockup (razão altura-estampa/comprimento). Uma métrica geometricamente robusta (largura, que não sofre com caimento de tecido oversized nem com a modelo virada de perfil) não mostra desvio nenhum entre a foto real e o mockup.\n\n3) Ponto estrutural adicional: a foto ao vivo é de uma pessoa real, usando a camiseta oversized, fotografada em 3/4 de costas (corpo/cabeça virados), contra um mockup plano/frontal sem corpo dentro. Roupa oversized \"amassa\" e o corpo curvo encurta (foreshortening) a distância vertical colar-barra quando vestida, comparado a uma peça estendida chapada — isso infla artificialmente qualquer razão baseada em comprimento vertical, independente do tamanho real da estampa. Aplicar tolerância rígida de 5% numa métrica de comprimento comparando um tipo de foto (vestida, ângulo) com outro (chapada, frontal) não é metodologicamente sólido.\n\nConclusão: a medição específica que embasou a reprovação (46,7% vs 40,2%, desvio de 16,3%) depende de um ponto de \"colar\" que está comprovadamente dentro do cabelo, não da gola. A métrica alternativa, com pontos realmente inequívocos (costuras de ombro/manga), dá exatamente os mesmos ~40% em ambas as imagens — sem desvio de escala aparente. Isso é evidência concreta e verificável de que a medição está errada, não apenas incerta."
+    },
+    {
+     "refutado": true,
+     "motivo": "Medi eu mesmo, do zero, nas duas imagens (live.webp 1024x1024 e gallery-02 500x500 via PIL/Python, pixel a pixel), e o ponto de \"colar\" usado pelo veredito é comprovadamente falso — o que derruba o cálculo de 46,7%/16,3%.\n\nEVIDÊNCIA 1 — o \"colar em y=312, localizado sem ambiguidade\" está dentro do cabelo, não no tecido. Amostrei RGB em y=312 ao longo de toda a largura onde a estampa fica (x=420 a x=640): todos os pixels são marrom-escuro/preto (ex.: x=460→RGB(24,13,12), x=530→RGB(18,14,15), x=560→RGB(10,6,3)), compatível com cabelo de referência (x=500,y=200→RGB(46,35,34)) e completamente diferente do tecido bege-claro da camiseta (referências de tecido: RGB(245,241,240) e RGB(255,232,208)). Visualmente também confirmei com overlay: a linha em y=312 atravessa cacho de cabelo cacheado em toda a largura, não toca em nenhuma costura ou gola visível. O cabelo cacheado da modelo cobre toda a nuca e cai sobre os ombros até aproximadamente y=390-420 no centro — não há gola/nuca visível em lugar nenhum próximo a essa altura. Ou seja, o ponto \"colar\" não foi medido; foi estimado às cegas através de uma região 100% oculta.\n\nEVIDÊNCIA 2 — sensibilidade: como a gola real pode estar em qualquer y entre ~280 (onde tecido aparece de raspão sob o cabelo, lateral) e >400 (onde o cabelo ainda cobre o centro), o denominador colar-barra varia de ~562 a ~702px. Usando a altura de estampa que medi (top≈479, bottom≈775, altura≈296px na foto), a razão estampa/colar-barra varia de ~42% a ~53% dependendo de onde a gola realmente está — faixa que já inclui o valor do mockup (~40-43%, que recalculei e bate com o do juiz). Ou seja, o \"desvio de 16,3%\" é artefato da escolha arbitrária de um pixel dentro do cabelo, não um achado robusto.\n\nEVIDÊNCIA 3 — contraprova por eixo alternativo, sem oclusão: medi também a LARGURA da estampa vs. largura da peça na mesma altura (bordas 100% visíveis nas duas imagens, sem cabelo no caminho). Mockup: estampa≈150px / peça≈320px = 46,9%. Foto real: estampa≈179px / peça≈524px = 34,2%. Esse eixo diz que a estampa está proporcionalmente MENOR na foto real, não maior — o oposto da conclusão por altura. Essa contradição interna (um eixo diz +16%, o outro diz -27%) mostra que comparar razões de pixel 2D entre um mockup chapado/manequim-fantasma e uma foto de peça vestida (com caimento sobre corpo curvo, corte oversized/dropped-shoulder, leve giro de tronco e perspectiva de câmera) não é um método confiável dentro de tolerância de 5% — a distorção geométrica inerente a essas diferenças de captura facilmente produz variações dessa ordem sem que a estampa em si tenha mudado de tamanho.\n\nO ponto da barra (y≈982) é razoável — confirmei transição real de tom/sombra entre y≈975-996, condizente com a barra da peça — então essa parte da medição não está em disputa.\n\nConclusão: a reprovação se apoia inteiramente numa localização de \"colar\" que é factualmente cabelo, não tecido (comprovado por RGB e por overlay visual), e um eixo de medição alternativo e sem ambiguidade contradiz a direção do erro reportado. Isso invalida a medição específica de 46,7%/desvio de 16,3% citada como motivo da reprovação."
+    }
+   ]
+  },
+  {
+   "productId": 352718999,
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
+   "foto": "capa",
+   "basename": "352718999-vitrine-nimbus-99b4e5b1966768ec0817842431075146",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718999-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718999-sao-jorge-neobarroco3\\gallery-02.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "veredictoAntigo": "ressalva",
+   "devAntigo": 19.919517102615693,
+   "problemasAntigos": [
+    {
+     "tipo": "escala",
+     "gravidade": "media",
+     "descricao": "Estampa das costas ocupa ~60% do comprimento gola-barra na foto contra ~50% no mockup preto (gallery-04): desvio relativo de ~20%, acima da tolerancia de 15%. A capa mostra a estampa maior do que ela sera no produto real. Nao chega a 25% (alta) e nao e detectavel sem comparar com o mockup, por isso ressalva e nao reprovacao.",
+     "visivelEmTamanhoCatalogo": true
+    },
+    {
+     "tipo": "texto-corrompido",
+     "gravidade": "baixa",
+     "descricao": "No cartucho dourado, 'NIMBUS' esta correto, mas logo abaixo ha pseudo-letras minusculas (algo como 'MIZDE') no lugar do floreio decorativo da arte original. Com ~8px de altura na imagem de 1024, e ilegivel na miniatura de catalogo (~400px).",
+     "visivelEmTamanhoCatalogo": false
+    },
+    {
+     "tipo": "arte-errada",
+     "gravidade": "baixa",
+     "descricao": "As passifloras (flores de maracuja com franja azul) da moldura na arte original viraram flores brancas genericas de miolo dourado nas laterais esquerda e direita da estampa. Simplificacao decorativa imperceptivel em tamanho catalogo; resto da composicao (cavaleiro, cavalo, dragao, querubins, azulejos com coracoes/ancoras, capela ao fundo) fiel.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": null
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": 1.4,
+     "fotoRazao": 0.786,
+     "mockupRazao": 0.775
+    },
+    "melhorEstimativaDesvioPct": 1.4,
+    "incertezaPontos": 20,
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta de manga curta, gola careca, corte reto (não oversized, não moletom, não blusão) — consistente com \"Camiseta Premium\" e com o mockup de referência.",
+    "arteFiel": true,
+    "arteObs": "Composição geral fiel: cavaleiro, cavalo empinado, dragão, querubins segurando o cartucho NIMBUS, azulejos com corações/âncoras e capela ao fundo, tudo presente e no lugar certo. Repete o achado já documentado (baixa severidade): as passifloras da moldura viraram flores brancas genéricas nas laterais — simplificação decorativa imperceptível em tamanho catálogo, não chega a comprometer a fidelidade geral.",
+    "textoIntegro": false,
+    "textoVisivelEmCatalogo": false,
+    "textoObs": "\"NIMBUS\" está correto e nítido. Confirmei o achado anterior: logo abaixo, no lugar do floreio decorativo, há um subtítulo com pseudo-letras corrompidas. Na foto de 1024px isso mede poucos pixels de altura; em miniatura de catálogo (~400px) fica ilegível — pela regra da distância, não reprova sozinho.",
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": false,
+    "aprovavel": false,
+    "problemas": [
+     "[cor/alta] A peça na foto é PRETA (amostrei pixels da camiseta: valores RGB na faixa de 0-20, ex. (9,9,9), (11,6,5), (17,10,10)), não branca. O mockup de referência designado (gallery-02.webp) e o rótulo da tarefa ('cor da peça na foto: Branca') indicam branco. Essa incompatibilidade de cor é o problema decisivo desta foto — reprova por si só, independente da escala.",
+     "[escala/incerteza] Não consegui medir gola-barra com confiança: a gola nas costas está coberta pelo cabelo solto do modelo em toda a foto. Para ombro-a-ombro, o mockup é uma ilustração estilizada sem costura de ombro nítida (a silhueta cresce suavemente da gola até a manga, sem quina definida) e a foto tem leve perspectiva de corpo; dois métodos-proxy que testei divergiram muito (largura estável do torso: +1,4% de desvio; largura máxima da cava/manga: +47%). Reporto a estimativa mais robusta (~+1,4%, dentro da tolerância de 5%) mas com baixa confiabilidade — não dá para cravar a escala com a precisão que o critério de 5% exige nesta foto específica.",
+     "[texto-corrompido/baixa] Já documentado: pseudo-letras no lugar do floreio decorativo abaixo de 'NIMBUS', ilegível em miniatura de catálogo.",
+     "[arte-errada/baixa] Já documentado: passifloras da moldura simplificadas em flores brancas genéricas, imperceptível em tamanho catálogo."
+    ],
+    "resumo": "Reprovo esta foto, mas não pelo motivo do laudo de ontem. Medindo do zero: a escala, pela melhor proxy que consegui construir (proporção altura da estampa / largura estável do torso, já que a gola está escondida pelo cabelo e a linha de ombro é ambígua no mockup estilizado), ficou perto de +1,4% de desvio — dentro da nova tolerância de 5%, não seria motivo de reprovação sozinho, embora a confiabilidade dessa medida seja baixa. O problema real e decisivo é outro: a peça na foto é PRETA, e a tarefa/mockup de referência (gallery-02, cor Branca) tratam esta foto como se fosse a variante branca. Não é. Isso configura corCorreta=false, que reprova a foto pelo critério (aprovavel exige corCorreta=true). Arte, anatomia, tinta no tecido e tipo de peça conferem bem com a arte original; o texto 'NIMBUS' está correto e o subtítulo corrompido abaixo dele é ilegível em miniatura, não pesando contra. Recomendação prática: ou essa foto pertence ao card da cor preta (e foi removida do lugar errado / está no card errado), ou foi gerada na cor errada e precisa ser refeita em branco — de qualquer forma, não deve voltar ao ar como foto da variante Branca."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Medi eu mesmo, pixel a pixel, usando Pillow (Python) sobre os arquivos reais: converti live/352718999-capa.webp e o mockup gallery-02.webp para PNG com ffmpeg e amostrei a área da camiseta em ambos.\n\nFoto ao vivo (1024x1024) — amostras na região do tecido (fora de pele/cabelo): (3,3,3), (12,7,6), (13,8,7), (16,11,10), (18,16,12), (19,14,13), (20,8,10), (37,27,28) — todas na faixa 0-20 de luminância, consistente com preto.\n\nMockup gallery-02.webp (rotulado 'Branca', 500x500) — amostras na mesma região de tecido: (243,243,243), (246,246,246), (235,235,235), (246,246,246), (246,246,246), (246,246,246) — todas ~235-246, branco puro.\n\nIsso confirma numericamente e sem ambiguidade a medição original do laudo: a peça na foto ao vivo é preta e o mockup de referência designado para esta foto é branco. Não há erro de medição a apontar nem ambiguidade — a diferença é de ~220-240 pontos de RGB, muito além de qualquer tolerância de iluminação ou compressão webp.\n\nComo o próprio critério do laudo estabelece (aprovavel exige corCorreta=true) e essa é a causa decisiva de reprovação independente da escala, a reprovação está correta. Não encontrei base para refutar: o problema de cor é real, mensurável e decisivo. Os demais pontos do laudo (incerteza na escala, texto/arte de baixa severidade) já eram tratados pelo próprio juiz como não decisivos, e não precisei revisá-los pois a reprovação já se sustenta somente pela cor."
+    },
+    {
+     "motivo": "Medi eu mesmo os pixels, sem depender do laudo. Converti ambos os arquivos (foto real e mockup gallery-02.webp) para PPM via ffmpeg e li os valores RGB brutos com um script Node.\n\nFOTO (352718999-capa.webp, 1024x1024) — amostras em áreas de tecido liso (ombro, manga, barra, fora da estampa):\n(0.40,0.50) -> RGB(10,28,13)\n(0.60,0.50) -> RGB(12,7,6)\n(0.50,0.90) -> RGB(16,9,9)\n(0.35,0.65) -> RGB(20,15,12)\n(0.50,0.45) -> RGB(15,10,7)\nTodos os pontos de tecido puro caem na faixa 6-28, ou seja, preto/quase-preto. Confere com o que o laudo reportou (ex. 9,9,9 / 11,6,5 / 17,10,10) — a peça na foto é inequivocamente PRETA.\n\nMOCKUP (gallery-02.webp, cor Branca, 500x500) — amostras na área do tecido:\n(0.20,0.30) -> RGB(243,243,243)\n(0.15,0.40) -> RGB(244,244,244)\n(0.10,0.60) -> RGB(246,246,246)\n(0.50,0.20) -> RGB(238,238,238)\nFaixa 235-246, ou seja, branco. Também inspecionei visualmente as duas imagens lado a lado: a foto mostra uma modelo de costas com camiseta visivelmente preta/escura; o mockup de referência mostra claramente uma camiseta branca sobre fundo neutro.\n\nNão há ambiguidade de iluminação, sombra dramática ou fundo escuro que explique a leitura — os pontos amostrados são todos tecido plano da própria peça, com valores consistentemente abaixo de 30 em todos os canais. A cor da peça na foto (preta) diverge da cor rotulada/exigida pela tarefa (Branca), o que é suficiente para reprovar por corCorreta=false, independentemente da discussão de escala (que o próprio laudo já tratava como dentro da tolerância, com baixa confiabilidade, mas não decisiva).\n\nNão encontrei nenhuma evidência de que a medição de cor do laudo esteja errada — pelo contrário, minha medição independente a confirma integralmente. Portanto não há base para refutar o veredito de reprovação.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352718999,
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
+   "foto": "par",
+   "basename": "352718999-branca-4ceebbb8865b65d7ef17843490346538",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718999-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718999-sao-jorge-neobarroco3\\gallery-02.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": null,
+   "problemasAntigos": [],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": true,
+    "arteObs": "Composição, figuras e ornamentos conferem com o mockup e a arte original: cavaleiro de armadura escura com capa vermelha sobre cavalo branco empinado, dragão vermelho aos pés, moldura neobarroca dourada com querubins no topo, faixas de azulejo azul e branco (âncoras, corações, flores-de-lis) nas laterais, flores brancas nos cantos e óvalo \"NIMBUS\". Nenhum elemento visivelmente inventado, removido ou redesenhado nos trechos inspecionados em zoom (querubim, moldura, azulejos, patas do cavalo, corpo do dragão).",
+    "corCorreta": true,
+    "incertezaPontos": 9,
+    "melhorEstimativaDesvioPct": 6.54,
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": 17.07,
+     "fotoPct": 59.96,
+     "mockupPct": 51.22
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": 5.4,
+     "fotoPct": 83.21,
+     "mockupPct": 78.95
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta de manga curta, gola careca, caimento reto, sem capuz - condiz com \"Camiseta Premium\" e com o mockup de referência.",
+    "problemas": [
+     "Escala não pôde ser medida com confiança: o cabelo volumoso e cacheado da modelo cobre totalmente a gola nas costas, então o comprimento gola-barra na foto é uma estimativa (usei o ponto onde o cabelo termina como proxy, sabendo que a gola real provavelmente está um pouco mais alta/escondida).",
+     "Duas rotas de medição independentes (comprimento gola-barra corrigido e largura ombro-a-ombro) convergem para uma estimativa central de desvio de aproximadamente +6,5%, ambas acima da nova tolerância de 5%, embora com incerteza real (faixa plausível de perto de 0% a +17%).",
+     "Sinal conflitante: pela largura do tronco a estampa parece proporcionalmente mais estreita na foto que no mockup (efeito esperado de tecido drapeado sobre corpo 3D fotografado em ângulo, não necessariamente um erro de escala), o que reforça usar o comprimento vertical (menos afetado por curvatura do corpo) como referência mais confiável."
+    ],
+    "resumo": "Peça, arte, texto, tinta e anatomia conferem com o mockup e a arte original, e a cor da peça está correta (branca). O ponto crítico é a escala: o cabelo cacheado e volumoso da modelo cobre completamente a gola do lado das costas, o que impede uma medição direta e confiável do comprimento gola-barra (metricaComprimento.confiavel=false) e também compromete a identificação do ponto exato do ombro (metricaOmbros.confiavel=false). Usando a melhor aproximação disponível — o ponto onde o cabelo termina como proxy de gola, com uma correção conservadora para a gola real provavelmente escondida um pouco acima, cruzado com a largura de ombro visível — a estimativa central de desvio de escala fica em torno de +6,5%, já acima da nova tolerância de 5%. Isso é consistente com a orientação do dono de que uma foto \"quase boa\" com desvio de 6-7% não deve ser aprovada. Diferente da auditoria de ontem (tolerância de 15%, sem problemas documentados), sob o critério de hoje esta foto reprova especificamente pela escala, apesar de todos os outros aspectos estarem corretos. A remoção da loja hoje não parece ter sido um engano: a foto está no limite exato do tipo de caso que o critério mais rígido foi feito para pegar.",
+    "textoIntegro": true,
+    "textoObs": "\"NIMBUS\" está legível e grafado corretamente no óvalo dourado, sem corrupção de caracteres.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "boa",
+   "ceticos": [
+    {
+     "refutado": true,
+     "motivo": "Medi eu mesmo as duas imagens em pixels (Python/PIL, com grades de coordenadas sobrepostas para leitura visual precisa) e o veredito de reprovação não se sustenta.\n\nCANTOS DA ESTAMPA (moldura ornamentada, ponto mais confiável em ambas as fotos porque nunca é coberto por cabelo):\n- Mockup (500x500): esquerda=181, topo(ápice da coroa)=141, direita=310, base=344 → 129 x 203 px\n- Foto real (1024x1024): esquerda=373, topo=468, direita=606, base=798 → 233 x 330 px\n\n1) TESTE INDEPENDENTE DE COLA (sem usar o cabelo como proxy): em vez de medir gola→barra, medi ESTAMPA-TOPO→BARRA, que não depende da gola (invisível) nem do ombro (também dito não-confiável pelo próprio juiz). A barra é claramente visível em ambas as fotos.\n   - Mockup: barra em y=454 (constante e nítida). Vão topo-estampa→barra = 454-141 = 313px. Razão altura-da-estampa/vão = 203/313 = 0,649.\n   - Foto real: barra em y≈980 na coluna sob a estampa (verifiquei em zoom, faixa plausível 970-1000). Vão = 980-468 = 512px. Razão = 330/512 = 0,645.\n   - Desvio: (0,645-0,649)/0,649 = -0,6%. Mesmo no pior caso da faixa de incerteza da barra (970 a 1000), o desvio fica entre -4,5% e +1,2% — nunca perto de +6,5%, e a maior parte da faixa fica DENTRO da tolerância de 5%. Isso contradiz diretamente o \"convergência para +6,5%\" do laudo.\n\n2) TESTE DE RAZÃO DE ASPECTO DA ESTAMPA (invariante a qualquer diferença de zoom/corte entre as duas fotos, não precisa de gola nem de tronco):\n   - Mockup: largura/altura = 129/203 = 0,635\n   - Foto real: largura/altura = 233/330 = 0,706\n   - Isso é um desvio de forma de +11,2%, maior que os 6,5% relatados. Um erro real de escala de impressão (arquivo impresso X% maior) é isotrópico — preserva a razão largura/altura. O que meço é anisotrópico: a estampa ficou proporcionalmente mais \"achatada\" (mais larga que alta) na foto real. Fiz o teste visual direto: escalei o recorte do mockup para a MESMA largura da foto real (mantendo a proporção do mockup) e sobrepus lado a lado — o mockup escalado fica visivelmente mais alto/comprido que a estampa da foto real (sobra moldura/cauda do dragão embaixo). Fazendo o inverso (igualando a altura), o recorte da foto real fica visivelmente mais largo. Essa assinatura (compressão vertical / alargamento horizontal) é exatamente o que se espera de foreshortening — corpo 3D curvo, pose 3/4 de costas, câmera não perpendicular — não de um arquivo de estampa impresso maior.\n\n3) O PRÓPRIO MOCKUP NÃO TEM GOLA MEDÍVEL: escaneei pixel a pixel a coluna central do flat-lay (x=250, y=40 a 160) e não há nenhum salto de contraste/costura — a luminosidade fica lisa em 236-239 do ombro até a moldura começar. Ou seja, mesmo o valor de referência \"gola-barra do mockup\" usado pelo juiz para calcular o desvio já era uma aproximação sobre um render sem costura visível, não uma medida real conhecida — o problema de precisão não é exclusivo da foto ao vivo como o laudo dá a entender.\n\nConclusão: os dois indicadores que o laudo usou para chegar em +6,5% (comprimento gola-barra via proxy do cabelo, e largura de ombros) foram os dois já autoclassificados como confiavel=false pelo próprio laudo, e ambos dependem da região exatamente onde a medição é mais frágil (gola/ombro perto do cabelo). Quando uso pontos de referência totalmente visíveis nas duas imagens (cantos da estampa, barra da camiseta), o desvio medido cai para perto de zero (-0,6%, dentro da tolerância de 5%) e o que existe de distorção real (11% de razão de aspecto) aponta para perspectiva/pose do corpo, não para uma estampa impressa maior. Arquivos de trabalho: C:\\Users\\rober\\AppData\\Local\\Temp\\claude\\C--Users-rober\\1bd36e20-fe63-40b0-a4b3-b1d176d13f31\\scratchpad\\refute\\ (compare_scaled.png e compare_scaled_h.png mostram a comparação visual lado a lado)."
+    },
+    {
+     "motivo": "Medi eu mesmo, em pixel, usando as imagens originais (live 1024x1024, mockup 500x500), e o veredito de reprovação não se sustenta.\n\n1) Confirmei visualmente que o cabelo cacheado cobre 100% da gola nas costas (zoom em live_collar_zoom.png) — nisso o juiz está certo, colar-barra não dá para medir direto.\n\n2) Mas existe uma rota de medição alternativa que NÃO depende da gola: altura da estampa vs. distância estampa-barra (ambos os pontos são nítidos e não têm cabelo em cima, nem no live nem no mockup). Medi por análise de saturação de cor (bordas do quadro dourado) e por transição de cor (barra da camiseta):\n\nLIVE (1024px): estampa topo y=482, base y=801 (altura=319px). Barra: linha de costura y≈977, borda real do tecido y≈997.\n- gap até borda real = 997-801 = 196px → razão altura/gap = 319/196 = 1,63\n- gap até costura = 977-801 = 176px → razão = 319/176 = 1,81\n\nMOCKUP (500px, cor branca): estampa topo y=152, base y=348 (altura=196px). Barra: sombra/dobra y≈450, borda real do silhueta y≈455 (confirmado por RGB: fundo é 247,247,247 constante, tecido cai para ~219-233 na dobra e retorna a 247 em y=456).\n- gap até borda real = 455-348 = 107px → razão = 196/107 = 1,83\n- gap até costura = 450-348 = 102px → razão = 196/102 = 1,92\n\nNas duas convenções de \"barra\" (linha de costura ou borda real do tecido), a razão do LIVE é MENOR que a do MOCKUP (1,63 vs 1,83 = -11%; 1,81 vs 1,92 = -6%), ou seja, a estampa está proporcionalmente igual ou um pouco MENOR em relação à parte de baixo da camiseta na foto real, não maior. Isso é o oposto da direção que o veredito reprovado alega (+6,5% de estampa grande demais).\n\n3) Adicionalmente, o proxy que o juiz usou (fim do cabelo = gola) é necessariamente um limite inferior: a gola real está no cabelo ou mais acima dele, nunca mais abaixo. Logo a distância gola-barra real é ≥ a estimada por ele, o que significa que o desvio real é ≤ 6,5% (o próprio juiz já reconhecia isso ao citar faixa 0%-17%, com confiavel=false nas duas métricas).\n\nJuntando as duas linhas de evidência independentes — uma métrica limpa sem oclusão de cabelo apontando desvio na direção contrária, e o proxy do próprio juiz sendo estruturalmente enviesado para superestimar o desvio — não há evidência confiável de que a estampa exceda a tolerância de 5%. O restante do laudo (peça, arte, texto, cor, anatomia) já estava aprovado. Refuto a reprovação.\n\nObservação: ambas as fotos (352718999-par.webp) e mockup (gallery-02.webp, cor Branca) foram confirmadas como sendo os arquivos corretos do produto/cor em questão antes da medição.",
+     "refutado": true
+    }
+   ]
+  },
+  {
+   "productId": 352718787,
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+   "foto": "capa",
+   "basename": "352718787-preta-eff5de1a3c63d9216617843489827912",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718787-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718787-sao-jorge-neobarroco1\\gallery-04.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "veredictoAntigo": "ressalva",
+   "devAntigo": 10.634648370497432,
+   "problemasAntigos": [
+    {
+     "tipo": "arte-errada",
+     "gravidade": "baixa",
+     "descricao": "No fundo da estampa, a direita do cavalo (entre a capa vermelha e a faixa de azulejos), a capela com torre e a pequena figura de Maria da arte original foram substituidas por um edificio branco em arcada, sem torre e sem a figura; na foto da posicao 2 esses elementos aparecem corretos. So perceptivel com zoom forte.",
+     "visivelEmTamanhoCatalogo": false
+    },
+    {
+     "tipo": "anatomia",
+     "gravidade": "baixa",
+     "descricao": "Mao esquerda da modelo (borda direita da foto, pendida ao lado do corpo): o dedo minimo aparece levemente separado do bloco da mao, com brilho translucido de contraluz um pouco artificial. So visivel em zoom alto (12x); em tamanho real e em miniatura le como mao normal.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": true,
+    "arteObs": "Composição principal (cavalo empinado, cavaleiro de armadura com capa vermelha, dragão vermelho, moldura dourada, faixa de azulejos com âncoras, florais nos cantos, capela ao fundo) confere com o mockup e a arte original. O problema já documentado ontem (capela com torre e a pequena figura de Maria substituídas por um edifício branco em arcada, sem torre e sem a figura) não pôde ser confirmado nem descartado com segurança nesta resolução de 1024px: a região fica pequena e desfocada tanto na foto quanto no mockup (500px). Trato como já registrado, baixa severidade, sem novo achado.",
+    "corCorreta": true,
+    "incertezaPontos": 7,
+    "melhorEstimativaDesvioPct": 18.75,
+    "metricaComprimento": {
+     "confiavel": true,
+     "desvioPct": 18.75,
+     "fotoPct": 54.31,
+     "mockupPct": 45.73
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoRazao": null,
+     "mockupRazao": null
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Moletom com capuz preto, manga longa até o punho, comprimento e caimento condizem com o mockup e com \"Moletom Canguru\". O bolso frontal (canguru) não aparece nesta foto de costas, mas nada no que é visível contradiz o modelo.",
+    "problemas": [
+     "Desvio de escala estimado em +18.75% (estampa ocupa 54.3% do trecho capuz/colarinho-até-barra na foto, contra 45.7% no mockup), acima da nova tolerância de 5%. Medido em pixels: na foto, topo visível do colarinho em y≈265 e barra em y≈915 (altura total 650px), estampa de y≈400 a y≈753 (altura 353px); no mockup, topo do capuz em y≈21 e barra em y≈478 (altura total 457px), estampa de y≈156 a y≈365 (altura 209px).",
+     "Incerteza real de metodologia: o capuz aparece bem mais estendido/inflado no mockup (renderizado 'em pé') do que na foto (encolhido ao redor do pescoço da modelo), o que pode inflar artificialmente o desvio calculado. Testando uma leitura alternativa que exclui o capuz e usa só a linha do ombro, o desvio cai para a faixa de 3 a 11%, mas essa leitura depende de um ponto de inflexão pouco nítido na silhueta do mockup e tem confiança baixa. Mesmo nessa leitura mais otimista, o valor central ainda fica acima ou perto dos 5%.",
+     "Métrica ombro-a-ombro não confiável: o mockup não tem uma costura de ombro identificável (a silhueta é lisa, sem quebra visível entre capuz e manga) e a foto mostra a modelo em três quartos de costas, o que encurta a largura real dos ombros por perspectiva.",
+     "[já documentado, baixa severidade] Capela com torre e figura de Maria ao fundo da estampa podem ter sido substituídas por um prédio branco simples; não dá para confirmar com segurança nesta resolução de 1024px.",
+     "Banner 'NIMBUS' no topo do brasão fica majoritariamente coberto pela dobra do capuz nesta pose específica; o fragmento visível não mostra sinal de corrupção, e de qualquer forma é ilegível em miniatura de catálogo (não desqualifica pela regra da distância).",
+     "[já documentado, baixa severidade] Leve artefato de contorno na mão esquerda da modelo, só perceptível em zoom forte (12x); normal em tamanho real e em miniatura."
+    ],
+    "resumo": "Medi os pixels diretamente nas duas imagens. A proporção estampa/comprimento-da-peça é 54.3% na foto contra 45.7% no mockup, um desvio de +18.75%, bem acima da nova tolerância de 5%. Essa medida tem uma fonte real de incerteza (o capuz está muito mais estendido no mockup do que na foto, onde aparece encolhido ao redor do pescoço), e uma leitura alternativa que tenta excluir o capuz chega a valores entre 3% e 11%, mas essa leitura alternativa depende de um ponto de referência pouco nítido no mockup e tem confiança baixa. A métrica de ombro a ombro não deu para usar com confiança: o mockup não tem costura de ombro visível na silhueta e a foto está em três quartos de costas, o que encurta a largura real. Mesmo considerando essa incerteza inteira, a estimativa central fica acima de 5% na maioria das leituras razoáveis, incluindo a mais literal e reproduzível (+18.75%) e a auditoria de ontem (+10.6%, sob o critério antigo de 15%). Fora a escala, a peça está correta (moletom canguru capuz preto, manga longa, caimento batendo com o mockup), a arte está fiel na composição principal, a cor da peça confere, a tinta acompanha a textura do tecido normalmente sem cara de adesivo, e a anatomia está ok para visualização normal. O texto 'NIMBUS' fica majoritariamente coberto pela dobra do capuz nesta pose, mas isso é ilegível em miniatura de qualquer jeito e não é motivo de reprovação por si só. A reprovação aqui é pela escala: mesmo dando o benefício da dúvida pela incerteza de metodologia, não dá para confirmar com segurança que o desvio fica dentro dos 5% que o dono está exigindo agora.",
+    "textoIntegro": true,
+    "textoObs": "Banner \"NIMBUS\" no topo do brasão majoritariamente coberto pela dobra do capuz na pose desta foto; o fragmento visível (poucas letras no canto) não mostra sinal de corrupção/redesenho.",
+    "textoVisivelEmCatalogo": false,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": true,
+     "motivo": "Medi eu mesmo os pixels nas duas imagens (live 1024x1024, mockup 500x500) com grade sobreposta e cortes ampliados/com brilho realçado. Os pontos de estampa (topo/base) e a barra da foto batem aproximadamente com o que o juiz reportou. O problema está no numerador que ele usou para \"altura total da peça\": ele mede do topo do capuz totalmente estendido no mockup (y≈20, capuz reto e \"em pé\" por ser still flat/render) até a barra, mas na foto mede do topo do capuz caído e enrolado no pescoço (y≈265) até a barra. Isso não é o mesmo ponto anatômico: no mockup o capuz está esticado para cima (adicionando ~80-100px artificiais ao \"comprimento da peça\"), enquanto na foto, por estar sendo usado sobre o corpo, o capuz necessariamente colapsa e enrola atrás do pescoço, isto é inevitável em qualquer foto de still-life vestido e não indica erro de escala na arte.\n\nO próprio juiz already tinha cogitado uma leitura alternativa excluindo o capuz, mas descartou por achar o ponto de referência \"pouco nítido, baixa confiança\" no mockup. Eu localizei e medi esse ponto: apliquei realce de brilho/contraste no topo das costas do mockup (crop 150-380 x, 60-160 y) e a costura de fixação do capuz ao corpo aparece nítida, em formato de V, das laterais em y≈90-105 até o centro das costas em y≈140-145. Usando essa costura como referência (em vez da ponta do capuz esticado):\n- Altura de referência do mockup (costura até barra y≈470): 330 a 375px, dependendo do ponto exato da costura usado.\n- Estampa no mockup: y≈163 a 357 = 194px.\n- Proporção resultante: 194/370 ≈ 52% (lateral) até 194/330 ≈ 59% (centro), ou seja, a faixa 52-59%.\n\nIsso é essencialmente igual à proporção da foto (~52-54%, usando os mesmos y≈400 a y≈735-738 de estampa sobre y≈265 a y≈915 de referência), fazendo o desvio cair para perto de 0% a +8%, e não os +18,75% reportados. Ou seja, o desvio \"confirmado\" depende inteiramente de comparar dois estados físicos diferentes do mesmo capuz (esticado vs. vestido/colapsado), não de a arte estar impressa maior.\n\nAdicionalmente, a barra/base da peça na foto está numa região de sombra bem escura (testei realçar brilho 1.4x-3x na área y≈800-950): não há um limite nítido visível de barra, cuffs de manga aparecem em alturas diferentes nos dois braços (y≈850 e y≈855-905) por causa do ângulo do corpo, então mesmo o y≈915 usado como \"barra\" tem incerteza real, não só o numerador.\n\nPor fim, conferi também a proporção por largura (estampa/largura do tronco) como checagem independente: deu ~53% na foto vs ~45% no mockup, desvio parecido (~19%) ao de altura. Isso a princípio pareceria confirmar o desvio, mas é exatamente o artefato que o próprio juiz já sinalizara como não confiável para a métrica ombro-a-ombro: a modelo está em três quartos de costas, então a largura total do tronco (que inclui o ombro que recua/foge da câmera) encolhe por perspectiva mais do que a estampa central (que fica de frente pra câmera), inflando artificialmente a razão estampa/largura pelo mesmo motivo geométrico, não por escala real da arte.\n\nEm suma: encontrei e medi o ponto de referência que o juiz descartou por \"baixa confiança\" e ele está identificável; usando-o, a proporção da peça bate com a da foto dentro da tolerância de 5%. O desvio de +18,75% reportado é um artefato de comparar capuz esticado (mockup) com capuz vestido/colapsado (foto), reforçado por foreshortening de perspectiva na largura. Não há evidência sólida de que a arte esteja impressa fora de escala nesta peça."
+    },
+    {
+     "refutado": false,
+     "motivo": "Medi eu mesmo os pixels nas duas imagens (grades de referência a cada 10-25px, sobrepostas e com zoom, mais detecção de bordas na região do quadril da foto onde o tecido preto satura) e os números do juiz se confirmam, não se refutam.\n\nMockup (500x500) — todos os pontos são nítidos e verificáveis a olho: topo do capuz em y≈20-25 (juiz: 21, confere); barra/cós inferior em y≈478-480 (juiz: 478, confere); topo da moldura dourada da estampa em y≈155-160 (juiz: 156, confere); base da moldura em y≈363-368 (juiz: 365, confere). Proporção estampa/comprimento = 209/457 ≈ 45,7%, exatamente como no laudo.\n\nFoto (1024x1024) — a estampa é fácil de medir (moldura visível de y≈400 a y≈755, batendo com os 400-753 do juiz). O trecho difícil é colarinho→barra, porque a peça é toda preta e a cintura aparece com o tecido praticamente saturado em preto (valores RGB de 5-20 em toda a região, sem variação visível a olho nu — tentei realce de brilho, autocontraste e equalização, e só apareceu ruído de compressão). Rodei detecção de bordas (Sobel/FIND_EDGES) com o brilho multiplicado por 8x nessa faixa e aí sim aparece uma textura de nervuras horizontais concentrada entre y≈865 e y≈915, terminando por volta de y≈910-915 — o que bate com o y≈915 usado pelo juiz. O topo do colarinho, medido por grade, fica entre y≈270 e 280 (juiz usou 265, diferença pequena). Refazendo a conta com esses valores (270 a 915 = 645px de comprimento total; estampa 355px) dá uma proporção de ≈55%, praticamente igual aos 54,3% do laudo.\n\nOu seja: refazendo a medição de forma independente, com evidência de borda e não só estimativa visual, cheguei a um desvio de ~18-19%, na mesma faixa do que foi reprovado.\n\nTestei também a hipótese mais forte de refutação, que é a mesma que o próprio juiz já havia levantado: o capuz do mockup está \"em pé\" (o ponto y=21 é o pico do capuz inflado, não a costura real do decote), enquanto na foto o capuz está caído e o ponto usado (colarinho ≈270) fica muito mais perto do decote real — isso infla artificialmente o denominador do mockup e desinfla o da foto, criando desvio artificial. Essa hipótese é plausível e eu tentei localizar uma costura de decote real no mockup para recalcular com uma referência equivalente, mas a silhueta do mockup é lisa (é uma imagem gerada por IA, sem costura visível), então não dá para cravar esse ponto com confiança — é exatamente a mesma limitação que o juiz já reportou (leitura alternativa de 3-11% com confiança baixa). Não encontrei um jeito de fixar essa correção com evidência sólida o suficiente para trazer o desvio para dentro dos 5%.\n\nNão encontrei, portanto, evidência concreta de que a medição do juiz está errada, nem de que o problema não se aplica. As duas fontes de incerteza que ele já havia documentado (capuz inflado vs. caído, e ausência de costura de ombro no mockup) continuam sendo as únicas aberturas reais, e mesmo dando esse benefício da dúvida o próprio juiz já havia calculado que a estimativa central permanece perto ou acima de 5%. Minha remedição independente reproduziu os números do laudo (18,75% e 54,3%/45,7%) com boa precisão, o que reforça a reprovação em vez de enfraquecê-la. Mantenho refutado=false."
+    }
+   ]
+  },
+  {
+   "productId": 352718787,
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+   "foto": "par",
+   "basename": "352718787-branca-9aaaef2382a6f192d217843822934008",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718787-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718787-sao-jorge-neobarroco1\\gallery-02.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": null,
+   "problemasAntigos": [],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": true,
+    "arteFiel": true,
+    "arteObs": "Composição, cavaleiro, cavalo empinado, dragão, capa vermelha, moldura dourada com querubins, cartucho \"NIMBUS\" e borda de azulejo azul e branco (com âncoras e flor de lis) conferem com o mockup e com a arte original. Trechinho de cenário (capela/paisagem) atrás do cavalo também está presente. Nada inventado, removido ou redesenhado.",
+    "corCorreta": true,
+    "incertezaPontos": 4,
+    "melhorEstimativaDesvioPct": -2.3,
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": null
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": -3.43,
+     "fotoRazao": 0.924,
+     "mockupRazao": 0.957
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Capuz, punhos e barra canelados, mangas longas e caimento oversized batem com moletom canguru e com o mockup. Bolso canguru fica na frente e não aparece nesta foto de costas, o que é esperado.",
+    "problemas": [],
+    "resumo": "Aprovável. A pose (as duas mãos da modelo seguram o capuz atrás do pescoço) escondeu a gola por completo e fez as mangas soltas do moletom oversized descerem ao lado do tronco, o que inviabilizou medir com confiança as duas métricas pedidas (gola-barra e ombro a ombro) tanto na foto quanto, em parte, no próprio mockup. Para não travar a decisão num \"não sei\", usei a largura da barra (nitidamente visível e livre de interferência dos braços nas duas imagens) como referência de escala e cruzei duas contas independentes: altura da estampa sobre largura da barra (desvio de -3,4%) e largura da estampa sobre largura da barra (desvio de -0,5%). As duas bateram no mesmo sentido, estampa igual ou levemente menor na foto do que no mockup, nunca perto de 5%. Peça, arte, texto e cor conferem, tinta parece acompanhar o tecido e não há anatomia quebrada. Dado que ontem essa foto já tinha passado sem problemas até no critério mais frouxo de 15%, e a melhor estimativa de hoje fica bem abaixo de 5%, o veredito é aprovar, mas registro a incerteza de método porque nenhuma das duas métricas oficiais pôde ser lida diretamente nesta pose.",
+    "textoIntegro": true,
+    "textoObs": "Cartucho \"NIMBUS\" perfeitamente legível e com grafia correta em resolução nativa; nenhuma corrupção de texto pequeno encontrada.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "boa"
+  },
+  {
+   "productId": 352618935,
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "foto": "capa",
+   "basename": "352618935-preta-047973eaac1d0a393b17843485079821",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352618935-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618935-sao-jorge-vintage3\\gallery-02.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Vintage [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Vintage.png",
+   "veredictoAntigo": "reprovada",
+   "devAntigo": 36.53846153846153,
+   "problemasAntigos": [
+    {
+     "tipo": "escala",
+     "gravidade": "alta",
+     "descricao": "Estampa ocupa ~71% do comprimento visivel da peca (gola a barra, eixo vertical: estampa 449px sobre peca 633px) contra ~52% no mockup YouDraw preto gallery-02 (estampa 208px sobre peca 399px): desvio relativo de +36%. A estampa esta ampliada e deslocada para cima: o 'NIMBUS' comeca a ~4% abaixo da gola na foto, contra ~20% de folga no mockup. Cliente recebera estampa visivelmente menor que a da capa.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    },
+    {
+     "tipo": "peca-errada",
+     "gravidade": "media",
+     "descricao": "Corte da camiseta aparenta oversized (ombro bem caido, manga larga chegando ao cotovelo, silhueta boxy), divergente do fit regular do mockup gallery-02 e da foto da posicao 2 do mesmo produto (Camiseta Premium regular). Possivel foto gerada para a variante Oversized da mesma arte.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    },
+    {
+     "tipo": "arte-errada",
+     "gravidade": "baixa",
+     "descricao": "Detalhes redesenhados versus a arte original: cabeca do cavalo mais erguida (na arte original o focinho aponta para baixo) e igreja da borda direita renderizada de forma mais blocada. Composicao geral fiel (Sao Jorge no cavalo branco empinado, dragao abaixo, igreja a direita, texto em arco); textos 'NIMBUS' e 'SAO JORGE' corretos letra a letra.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": 51.4
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoRazao": null,
+     "mockupRazao": 0.51
+    },
+    "melhorEstimativaDesvioPct": 34,
+    "incertezaPontos": 14,
+    "pecaCorreta": false,
+    "pecaObs": "Corte da camiseta na foto aparenta oversized: ombro caido bem abaixo do ombro real (dropped shoulder visivel em capa_collar.png), manga chegando perto do cotovelo, silhueta larga/reta (boxy). O mockup gallery-02 (Camiseta Premium regular) tem manga curta subindo bem acima do cotovelo e corte mais justo ao corpo. Produto e \"Camiseta Premium\", nao \"Oversized\" (que e outra peca do mesmo catalogo de artes). Indicio forte de foto gerada para a variante errada da peca.",
+    "arteFiel": true,
+    "arteObs": "Composicao geral fiel ao mockup: Sao Jorge no cavalo branco empinado, lanca cravada no dragao, igreja a direita dentro do arco, moldura com \"NIMBUS\" pequeno e \"SAO JORGE\" em gotico grande. Existe uma diferenca real frente a arte original (cabeca do cavalo mais erguida na foto/mockup, focinho apontado para baixo na arte original; igreja renderizada mais \"blocada\"), mas essa diferenca ja esta presente no proprio mockup de referencia gallery-02, ou seja, nao foi introduzida por esta foto especifica: e um desvio herdado do mockup aprovado, nao um erro novo desta geracao.",
+    "textoIntegro": true,
+    "textoObs": "\"SAO JORGE\" e \"NIMBUS\" legiveis e corretos letra a letra, identicos ao mockup e a arte original. Fonte gotica com serifas deixa o \"N\" de NIMBUS com aparencia de \"X\" em miniatura, mas isso e estilo da fonte (mesmo efeito ocorre no mockup), nao corrupcao.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "[escala/alta] Estampa ocupa proporcionalmente muito mais espaco nas costas do que no mockup e comeca quase colada na gola: gap gola-topo-da-estampa e de so ~9% da propria altura da estampa na foto (38px de folga sobre 437px de estampa), contra ~41% no mockup (85px de folga sobre 209px de estampa, preto gallery-02). Essa razao de posicionamento e robusta a angulo de camera e a barra escondida, e por si so ja indica estampa ampliada e deslocada para cima.",
+     "[escala/media-incerteza] Nao foi possivel medir com confianca gola-barra nem ombro-a-ombro na foto: a barra do produto se confunde visualmente com a calca preta e sai do enquadramento (blend fold visivel em capa_hem.png, sem transicao visivel ate a borda inferior da imagem em y=1024), e a largura ombro-a-ombro fica distorcida pela pose 3/4 de costas e pelo corte solto. Estimativa central de desvio ~34% (faixa plausivel ~20% a ~48%), com base na razao de posicionamento e no limite geometrico de comprimento minimo da peca (pelo menos 729px de gola ate a borda do quadro, ainda sem alcancar a barra). Em todo cenario razoavel o desvio fica bem acima da tolerancia de 5%.",
+     "[peca-errada/media] Corte aparenta oversized (ombro caido, manga proxima do cotovelo, silhueta boxy) divergente do fit regular do mockup gallery-02 e do nome do produto Camiseta Premium. Possivel foto gerada para a variante Oversized da mesma arte."
+    ],
+    "resumo": "Foto reprovada com o criterio novo (tolerancia 5%). Medi de novo do zero: no mockup preto gallery-02 a estampa tem 209px de altura sobre um comprimento gola-barra de 407px (51.4%) e sobre uma largura de ombro de ~410px (razao 0.51). Na foto a estampa tem 437px de altura (quase o dobro em pixels de tela), mas nao deu pra fechar a conta oficial: a barra da camiseta se perde dentro da calca preta (mesma cor, sem transicao visivel ate a borda do quadro) e a largura ombro-a-ombro fica pouco confiavel por causa do angulo 3/4 de costas e do caimento solto. Ainda assim, uma metrica robusta a esses dois problemas (a folga entre a gola e o topo da estampa, medida como fracao da propria altura da estampa) mostra a estampa comecando quase colada na gola na foto (~9% de folga) contra bastante espaco no mockup (~41% de folga), confirmando estampa ampliada e puxada para cima. Minha melhor estimativa de desvio de escala fica em torno de 34%, com incerteza de +-14 pontos, ou seja, em qualquer leitura razoavel estoura bem a tolerancia de 5%. Alem da escala, o corte da peca na foto parece oversized (ombro caido, manga mais longa, silhueta boxy) e nao regular como manda o mockup e o nome do produto Camiseta Premium, o que e um segundo motivo independente de reprovacao. Arte, texto, tinta no tecido, anatomia das maos e cor da peca (preta) estao ok. Recomendacao: manter a foto fora do ar e regerar com a peca certa (regular, nao oversized) e a estampa no tamanho e posicao do mockup gallery-02."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Remedi eu mesmo pixel a pixel (Python/PIL, brilho RGB) as duas imagens nativas. Mockup gallery-02: colarinho y=53, topo da estampa y=131, base y=337 → gap=78px, altura=206px, razão gap/altura=38,3% (bate com o mockup do juiz, 209px/~41%). Foto reprovada: colarinho y≈273-280 (na coluna central da estampa), topo da estampa y≈330-333, base y≈763-766 → gap≈55-58px, altura≈434px, razão≈13% (o juiz reportou 8,7% com gap de 38px; meu gap medido é maior, ~58px, mas na mesma ordem de grandeza). Overlay visual (linhas cíano=colarinho, magenta=topo/base da estampa) sobre as duas imagens mostra de forma óbvia a olho nu que no mockup há um espaço preto nítido entre gola e estampa, enquanto na foto a estampa começa quase colada na gola. Mesmo com meu número de gap sendo ~50% maior que o do juiz (58 vs 38px), a razão gap/altura ainda cai de ~38% (mockup) para ~13% (foto) — uma compressão de quase 3x, muito acima da tolerância de 5%. Não encontrei erro de medição que derrube o veredito; a evidência independente confirma o achado central (estampa ampliada/deslocada para cima). O ponto de 34% de desvio de escala tem incerteza ampla reconhecida pelo próprio juiz (±14pp) e minha remedição cai dentro dessa faixa plausível, não fora dela. Não teria como refutar sem evidência clara de erro, e não encontrei nenhuma — na verdade a checagem visual direta reforça a reprovação."
+    },
+    {
+     "motivo": "Remedi tudo do zero com grade de pixels sobreposta nas duas imagens (live 1024x1024, mockup 500x500) e cheguei a números na mesma faixa do juiz, não a uma contradição:\n\nMOCKUP (preto, gallery-02): colar (fundo do vão do decote) em y≈54, topo da estampa (\"SIMBUS\") em y≈131, base da estampa (cauda do dragão) em y≈339. Altura da estampa ≈208px (juiz: 209px, bate). Gap colar→estampa ≈77px. Razão gap/altura ≈37% (juiz: 40,7%, mesma ordem de grandeza).\n\nFOTO AO VIVO: topo da estampa em y≈327, base em y≈760 → altura ≈433px (juiz: 437px, bate). Colar é genuinamente ambíguo (baixo contraste preto-sobre-preto), mas encontrei uma linha clara (borda interna da gola aparecendo por um decote caído/largo) em y≈275-285; usando y≈280 (ponto médio), gap ≈47px, razão gap/altura ≈10,8% (juiz: 8,7%, mesma ordem de grandeza).\n\nOu seja, minha remedição independente reproduz a mesma direção e magnitude do juiz: a razão gap/estampa é ~3,4x menor na foto do que no mockup (juiz encontrou ~4,7x menor). Não encontrei erro de medição que derrube o veredito.\n\nTambém confirmei visualmente, com grade fina, que a barra da camiseta realmente se perde dentro da calça preta sem nenhuma transição visível até y=1024 (bordas da foto) — o próprio juiz já havia sinalizado essa incerteza corretamente, e minha inspeção pixel a pixel não achou nenhuma costura ou linha de barra escondida que o juiz tenha ignorado.\n\nComo checagem adicional (eixo horizontal, menos sujeito à ambiguidade da gola): a largura da estampa em relação à largura do torso da camiseta na mesma altura também aparece proporcionalmente maior na foto (~80%) do que no mockup (~50%), na mesma direção do achado do juiz.\n\nNão há, portanto, evidência visual concreta que refute a medição ou o veredito. O juiz já foi apropriadamente cauteloso (faixa de incerteza ±14 pontos, reconheceu barra e ombro-a-ombro como não confiáveis), e minha remedição independente cai dentro dessa faixa de incerteza, não fora dela. Mantenho a reprovação.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352618935,
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "foto": "par",
+   "basename": "352618935-branca-e7a631a591c71ab9d817843821665956",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352618935-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618935-sao-jorge-vintage3\\gallery-04.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Vintage [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Vintage.png",
+   "veredictoAntigo": "ressalva",
+   "devAntigo": null,
+   "problemasAntigos": [
+    {
+     "tipo": "texto-corrompido",
+     "gravidade": "baixa",
+     "descricao": "Fragmento de letra fantasma (pequeno glifo gotico tipo 'A/Z') entre o 'R' e o 'G' de JORGE, junto da lanca, inexistente na arte original 'costas - Sao Jorge Vintage.png'. O mesmo artefato ja existe no mockup branco aprovado gallery-04, entao a foto e consistente com a galeria. Minusculo e ilegivel em miniatura de catalogo ~400px, le-se como ornamento.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": true,
+     "desvioPct": 6.81,
+     "fotoPct": 53.01,
+     "mockupPct": 49.63
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoRazao": null,
+     "mockupRazao": 0.483
+    },
+    "melhorEstimativaDesvioPct": 6.81,
+    "incertezaPontos": 3,
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta manga curta, gola careca, sem capuz — compatível com \"Camiseta Premium\" e com o corte visto no mockup gallery-04 (caimento levemente solto em ambas).",
+    "arteFiel": true,
+    "arteObs": "Composição, cavaleiro, cavalo empinado, dragão, castelo ao fundo e arco \"NIMBUS\" conferem entre foto, mockup gallery-04 e arte original \"costas - São Jorge Vintage.png\". Nada foi inventado, removido ou redesenhado.",
+    "textoIntegro": false,
+    "textoVisivelEmCatalogo": false,
+    "textoObs": "\"NIMBUS\" e \"SÃO JORGE\" estão íntegros letra a letra. O único ponto fora da arte original é um fragmento tipo glifo entre \"R\" e \"G\" de JORGE: é a lança do cavaleiro cruzando o texto sobre a nuvem de fumaça em halftone, criando uma ilusão de letra fantasma. Esse mesmo padrão já existe no mockup branco aprovado (gallery-04), ou seja, é um artefato do arquivo de estampa em produção, não algo introduzido por esta foto. Ilegível em miniatura de catálogo (~400px) — pela regra da distância, isso sozinho não reprova.",
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "Escala: desvio estimado de +6.8% na estampa em relação ao mockup gallery-04 (estampa÷comprimento gola-barra = 53.0% na foto vs 49.6% no mockup), acima do novo limite de 5% do dono. Mesmo considerando a margem de incerteza da medição (~±3 pontos), a estimativa central fica acima do limite.",
+     "A métrica de ombro-a-ombro não pôde ser medida com confiança na foto (manga caída/solta sem quina definida de costura, e fundo desfocado com tom próximo ao branco atrapalhou a detecção de borda), então a decisão de escala se apoiou só na métrica de comprimento gola-barra, que é medível com confiança nas duas imagens.",
+     "(Não bloqueante, já documentado ontem) fragmento tipo glifo entre R e G de JORGE — mesmo defeito do mockup aprovado, ilegível em miniatura, não pesa na reprovação de hoje."
+    ],
+    "resumo": "Reavaliando do zero com o critério atual (tolerância de 5%): a peça, a arte, o texto, a tinta, a anatomia e a cor passam sem ressalvas relevantes — inclusive o \"glifo fantasma\" perto de JORGE, que é apenas a lança cruzando a nuvem de fumaça em halftone, já presente no mockup branco aprovado e ilegível em miniatura de catálogo, então não pesa contra a foto. O problema real é só escala: usando a métrica confiável (altura da estampa ÷ comprimento gola-barra, medida em ambas as imagens com landmarks visíveis e nítidos), a estampa da foto ocupa ~53.0% do comprimento da peça contra ~49.6% no mockup de referência — um desvio de aproximadamente +6.8%, acima do novo limite de 5% (o critério antigo de 15% teria aprovado essa mesma diferença sem problema, o que explica o veredito \"ressalva\" de ontem). A métrica de ombro-a-ombro não deu resultado confiável na foto (manga solta sem costura visível + fundo desfocado de tom parecido com o branco da camisa), então não foi usada para decidir. Conclusão: NÃO aprovável hoje — não por peça errada, arte infiel, texto corrompido, tinta de má qualidade, anatomia ou cor, mas puramente porque a estampa está maior que a tolerância de escala apertada pelo dono. A remoção de hoje não parece ter sido um engano: pelo critério novo, essa foto reprova mesmo."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Remedi eu mesmo, pixel a pixel (PIL/Python), as duas imagens. No mockup (500x500): topo do print y≈139, base y≈340 (altura≈201px); único ponto de referência de \"gola\" possível é a borda externa do tecido (y≈53, o mockup renderiza a golerira achatada, sem volume), barra em y≈455 → comprimento≈402px → razão≈49.75-50.0% (bate com o 49.6% do laudo). Na foto (1024x1024): topo do print y≈239, base y≈679 (altura≈438-441px); barra em y≈962. O ponto crítico é a \"gola\": na foto a golerira tem volume 3D real (ribana ereta), criando ~10px de diferença entre onde o tecido toca a pele (y≈122) e a costura de fixação ao corpo (y≈133, visível como textura de pesponto). Usar a borda externa (y≈122, comprimento 840) dá razão 52.4% e desvio de só +4.8% (abaixo do limite) — mas essa leitura não é comparável ao mockup, porque infla artificialmente o comprimento com a altura 3D da golerira que não existe na renderização achatada. Usar a costura (y≈133, comprimento≈824-834, o ponto realmente equivalente ao único ponto visível no mockup) dá razão≈52.5-53.2% e desvio≈+5.0% a +6.4% — reproduzindo de forma consistente o 53.0% vs 49.6% (desvio 6.81%) do laudo, dentro da própria margem de incerteza que o juiz já declarou (~±3 pontos). Não encontrei erro de medição nem base para considerar a métrica inaplicável; a remedição independente com metodologia comparável confirma o achado do laudo, não o contradiz."
+    },
+    {
+     "refutado": true,
+     "motivo": "Remedi eu mesmo as duas imagens em pixels (Python/PIL, mesma metodologia do juiz: altura da estampa ÷ comprimento gola-barra), usando a mesma coluna vertical (centro horizontal da estampa) para os quatro marcos em cada imagem, e validei cada transição visualmente com crops ampliados com grade de coordenadas.\n\nFOTO (352618935-par.webp, 1024x1024), coluna x=571 (centro da estampa, x 433-709):\n- Gola (transição pele→tecido): y≈122-124 (estável em x=540 a x=590: 123-124)\n- Barra/hem (transição tecido→bermuda escura): y≈961-965 (estável nas mesmas colunas)\n- Comprimento gola-barra ≈ 840 px\n- Estampa: topo y≈240 (inclui o logo \"NIMBUS\"), base y≈680 → altura ≈ 440 px\n- Razão estampa/comprimento = 440/840 = 52,4%\n\nMOCKUP (gallery-04.webp, 500x500), coluna x=255 (centro da estampa, x 175-335):\n- Gola: y≈52-53 (estável em x=235 a x=275)\n- Barra: y≈455 (estável nas mesmas colunas)\n- Comprimento gola-barra ≈ 402-403 px\n- Estampa: topo y≈139, base y≈341 → altura ≈ 202 px\n- Razão estampa/comprimento = 202/403 = 50,1%\n\nDesvio relativo = (52,4-50,1)/50,1 ≈ 4,5% (variando 3,4%-4,8% conforme o limiar de detecção de tinta usado, com os limiares mais confiáveis/conservadores — que evitam contaminação por sombra e pele, muito presente na foto real mas ausente no mockup de estúdio — convergindo em 4,5-4,8%). Em nenhuma das minhas medições independentes o desvio chegou aos 6,8% citados no veredito, e todas ficaram abaixo do limite de 5% do dono.\n\nTambém constatei uma causa provável do erro do juiz: limiares de detecção mais permissivos inflam artificialmente a altura medida da estampa na foto (de 440px para até 549px) por capturarem sombra de cabelo/braço/fundo — ruído que não existe no mockup de estúdio (que fica establestável em ~202px em qualquer limiar). Isso sugere que a medição original superestimou a altura da estampa na foto real, inflando o desvio de ~4-5% real para os 6,8% relatados.\n\nConclusão: refutado=true. A evidência visual e a remedição em pixel não sustentam um desvio de escala acima do limite de 5%; a estimativa central real, com marcos comparáveis, fica em torno de 4-4,5%, dentro da tolerância do dono. O restante do veredito (peça, arte, texto, tinta, anatomia, cor aprovados, e o \"glifo\" não-bloqueante) permanece correto e não é contestado — apenas a conclusão de reprovação por escala não se sustenta.\n\nArquivos analisados: C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352618935-par.webp e C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352618935-sao-jorge-vintage3\\gallery-04.webp. Crops de verificação com grade salvos em C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/ (live_grid_full.png, mock_grid.png, live_collar_precise.png, live_hem_precise.png, mock_collar_precise.png, mock_hem_precise.png)."
+    }
+   ]
+  },
+  {
+   "productId": 352407182,
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+   "foto": "capa",
+   "basename": "352407182-vitrine-nimbus-58ddbde7870a202fb917842424360168",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352407182-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407182-sao-miguel-vintage2\\gallery-02.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "veredictoAntigo": "reprovada",
+   "devAntigo": 30.952380952380953,
+   "problemasAntigos": [
+    {
+     "tipo": "escala",
+     "gravidade": "alta",
+     "descricao": "Estampa ~30% maior que a autoridade (mockup preto gallery-02). Na foto, a estampa mede 351px (y481-832) contra um comprimento gola-barra estimado de ~637px (gola y408; barra cortada pelo enquadramento, estimada ~y1045 pela proporcao corporal da modelo) = ~55%. No mockup, 207px de estampa em 489px de peca = ~42%. Mesmo na hipotese mais conservadora de barra (100px abaixo do frame) o desvio fica ~+20-23%; a melhor estimativa e ~+30%. A estampa domina a peca visivelmente mais que no mockup, criando expectativa errada do produto impresso.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    },
+    {
+     "tipo": "texto-corrompido",
+     "gravidade": "baixa",
+     "descricao": "Texto pequeno do rodape, logo abaixo do quadro do demonio: na arte original le-se NIMBUS; na foto esta corrompido em ~8 glifos sem sentido (algo como SBMHBIDO). Com ~90px de largura numa imagem de 1024px, e ilegivel na miniatura de catalogo (~400px) — regra da distancia do dono.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": 27.4,
+     "fotoPct": 55.3,
+     "mockupPct": 43.4
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoRazao": null,
+     "mockupRazao": null
+    },
+    "melhorEstimativaDesvioPct": 22.5,
+    "incertezaPontos": 10,
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta oversized de manga curta, ombro caído (drop shoulder), gola careca, corte largo/boxy — bate com o mockup e com \"Camiseta Oversized Premium\". Nenhuma discrepância de modelagem encontrada.",
+    "arteFiel": true,
+    "arteObs": "Composição da estampa (São Miguel com asas, auréola, manto, saiote romano, balança na mão, demônio alado sob os pés, faixa de texto em arco) confere ponto a ponto com o mockup gallery-02 e com a arte original. Nada foi inventado, removido ou redesenhado.",
+    "textoIntegro": false,
+    "textoVisivelEmCatalogo": false,
+    "textoObs": "O arco grande \"SÃO MIGUEL ARCANJO\" está integro e perfeitamente legível na foto, letra por letra igual à arte original. Já o texto pequeno de rodapé (que na arte original é \"NIMBUS\", confirmado em zoom com realce de brilho) está corrompido em glifos ilegíveis na foto — mesmo problema já documentado ontem. Medido: a faixa desse texto ocupa ~90-140px de largura dentro de uma imagem de 1024px; numa miniatura de catálogo (~400px ou menos) isso equivale a ~35-55px, ilegível de qualquer forma. Pela regra da distância do dono, isso sozinho não reprova a foto.",
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "[escala/alta] Estampa visivelmente maior que a autoridade de escala (mockup preto gallery-02), e o critério de hoje (tolerância 5%) é bem mais rígido que o de ontem (15%). Medi eu mesmo, independentemente: no mockup, estampa=200px (y78-278) sobre comprimento gola-barra=461px (gola y29, barra y490) = 43.4%. Na foto, estampa=347px (y479-826, gola y396) — mas a barra está fora do enquadramento (foto corta em y1024, corpo ainda descendo), então só dá pra calcular um limite: usando o comprimento mínimo possível (628px, hipótese mais conservadora = barra bem na borda do quadro), a razão foto sobe a 55.3%, ou seja desvio maximo de +27.4%. Como a bainha certamente fica abaixo da borda (o comprimento real é maior que 628px), o desvio verdadeiro é menor que esse teto — minha melhor estimativa central, considerando proporção típica de camiseta oversized e a posição do braço/cotovelo visível no quadro, fica em torno de +22-23%. Mesmo no cenário mais favorável meu cálculo não chega perto de 5%; a foto reprova neste critério com folga.",
+     "[metodologia] A métrica alternativa (largura ombro-a-ombro) não pôde ser usada como checagem cruzada: a foto é um ângulo 3/4 (modelo virada, câmera pega as costas em diagonal), e medi diretamente que a metade direita do tronco (ombro mais próximo da câmera) tem ~620px do centro até a manga, contra ~280px do lado esquerdo (ombro mais distante) — mais que o dobro de assimetria, prova de que a perspectiva distorce a largura. Comparar isso com o mockup frontal (foto reta) seria uma métrica inválida, por isso mantive confiavel=false e não啊 inventei um número.",
+     "[texto-corrompido/baixa] Texto pequeno do rodapé (NIMBUS na arte original) corrompido em glifos sem sentido na foto — confirmado visualmente com realce de brilho/contraste. Ilegível em miniatura de catálogo pela regra da distância do dono, então não é motivo de reprovação isolado, mas registro para o dono decidir se quer regenerar de qualquer forma."
+    ],
+    "resumo": "Reanalisei do zero, com critério atual (tolerância 5%). Peça, arte, texto grande, tinta no tecido, anatomia e cor da peça: todos OK. O problema é exclusivamente de escala. Medindo eu mesmo (não confiei no laudo de ontem): no mockup a estampa ocupa 43.4% do comprimento gola-barra (200px/461px); na foto a barra está cortada pelo enquadramento, então só dá para calcular um teto de 55.3% (desvio máximo +27.4%) usando a hipótese mais conservadora possível, com uma estimativa central mais realista em torno de +22-23%. Tentei uma segunda métrica (ombro-a-ombro) como checagem cruzada, mas a foto é um ângulo 3/4 que distorce essa medida por perspectiva (comprovei: metade do tronco mais de 2x maior que a outra em pixels), então não é uma comparação válida com o mockup frontal. De qualquer forma, mesmo pelo cenário mais conservador o desvio fica muito acima dos 5% de tolerância do critério de hoje — não é um caso limítrofe. Reprovação mantida sob o critério novo, agora por motivo puramente de escala (o texto corrompido do rodapé é ilegível em miniatura e não pesa contra pela regra da distância)."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "motivo": "Refiz as medições eu mesmo, de forma independente (Python/Pillow, pixel a pixel, com crops ampliados para conferência visual), e as alegações centrais do juiz se confirmam — não encontrei erro que derrube o veredicto.\n\n1) Estampa na foto (347px, y479-826): confirmado por inspeção visual ampliada. A linha y=479 cai quase exatamente na ponta da asa superior do desenho, e y=826 cai bem no rodapé/texto pequeno da arte. Bate com a medição do juiz.\n\n2) Gola na foto (y=396): confirmado. Crop ampliado do ombro/nuca mostra o topo do tecido visível bem nessa altura.\n\n3) Barra fora de quadro: confirmado. Crop da base da foto (y850-1024) mostra a camiseta preta seguindo até a borda do frame sem nenhuma curva/dobra de barra visível — não há como medir a barra real na foto, exatamente como o juiz reportou.\n\n4) Conferi a análise de pixels do MOCKUP (gallery-02) e encontrei uma imprecisão — mas ela juga CONTRA a aprovação, não a favor: o topo real da gola no mockup (varredura de pixels pretos linha a linha) fica em y≈5-8, não y=29 como o juiz usou. Isso alonga o \"comprimento gola-barra\" real do mockup para ~487-490px (não 461px), o que reduz a proporção real da estampa no mockup para ~40.5-40.9% (não 43.4%). Como a proporção de referência do mockup é MENOR do que o juiz assumiu, o desvio real da foto em relação a essa referência correta é MAIOR, não menor — essa correção reforça a reprovação, não a enfraquece.\n\n5) Reconferi a aritmética do juiz: 200/461=43.4% (mockup) e 347/628=55.3% (teto da foto) batem. O \"+27.4%\" é desvio relativo ((55.3-43.4)/43.4), não pontos percentuais — mas mesmo como diferença absoluta em pontos percentuais (55.3-43.4=11.9pp, ou ~9.8pp no cenário central) o desvio ainda estoura os 5% de tolerância por larga margem, em qualquer leitura da métrica (relativa ou absoluta).\n\n6) O ponto sobre a métrica ombro-a-ombro ser descartada (confiavel=false) enquanto a métrica vertical foi usada não é uma inconsistência: rotação 3/4 distorce fortemente largura horizontal por escorço, mas preserva razoavelmente o comprimento vertical (gola-barra), então são situações diferentes — a vertical continua válida mesmo com a barra fora de quadro, porque o próprio juiz calculou um teto usando a hipótese mais favorável possível à foto (barra exatamente na borda do frame) e mesmo esse teto (55.3%/+27.4%) já reprova com folga. Não há hipótese razoável de posição da barra (abaixo da borda, como de fato deve estar) que traga o desvio para perto de 5%.\n\nNão encontrei texto corrompido sendo usado indevidamente como motivo de reprovação isolado (o juiz já excluiu isso corretamente pela regra da distância), nem erro de medição que favoreça a aprovação. O único erro que encontrei (gola do mockup em y=29 em vez de y≈6) piora o caso para a foto, não melhora. Reprovação mantida.",
+     "refutado": false
+    },
+    {
+     "refutado": true,
+     "motivo": "Medi eu mesmo, com PIL, pixel a pixel, nas duas imagens originais (foto 1024x1024, mockup 500x500), e sobrepus linhas-guia nos pontos medidos para conferência visual. Resultado: a reprovação não se sustenta, por dois motivos concretos.\n\n1) Erro comprovado no baseline do mockup (o próprio \"medi eu mesmo\" do laudo está errado). O laudo usa gola=y29 no mockup. Escaneei a coluna central (x=220/250/280) pixel a pixel entre y=0 e y=77: a transição fundo→tecido acontece em y=5-7 e depois o tom fica praticamente constante (28-42) até y=77, sem nenhuma quebra/costura em y=29 — não existe feature nenhuma ali. Sobrepondo uma linha em y=6 ela cai exatamente no pico da silhueta da camiseta (a gola real); uma linha em y=29 cairia no meio do tecido liso, sem correspondência física. Corrigindo: gola-barra real do mockup = 496-6 = 490px (não 461px), estampa = 275-78 = 197px → razão real do mockup = 40,2% (não 43,4%). Ou seja, o próprio número de referência do laudo já nasce incorreto.\n\n2) O problema central do critério (barra fora do quadro na foto) é real — confirmei com zoom nas linhas y950-1023 da foto: é só tecido, sem bainha, sem dobra, sem costura, cortado pela borda do frame. Isso o laudo acertou. Mas daí ele comete o erro metodológico decisivo: calcula corretamente um TETO (56,1% na minha medição, batendo com o 55,3% do laudo) e admite que é o cenário \"mais conservador\", e então troca esse teto por uma \"estimativa central\" de +22-23% que ele mesmo descreve como baseada em \"proporção típica\" e \"posição do braço visível\" — ou seja, um palpite, não uma medição de pixel, já que os pixels da bainha simplesmente não existem na foto. Usar esse palpite para concluir \"reprovação... não é caso limítrofe\" é apresentar uma suposição como se fosse dado.\n\nFiz o cálculo inverso: para a proporção da foto (estampa=351px, colar y=397) IGUALAR a proporção real do mockup (40,2%), a barra precisaria estar em y≈1270 — ou seja, apenas 247px abaixo da borda do frame (1023), o equivalente a 28% do comprimento total da peça ainda fora de quadro. Para uma foto lifestyle em ângulo 3/4, enquadrada da cabeça até a coxa/quadril (como se vê claramente na imagem, com a peça ainda descendo sem sinal de barra até o corte), esse é um enquadramento perfeitamente comum, não uma anomalia. Não há nenhum indício visual (esticamento, distorção, bainha \"quase aparecendo\") que contradiga esse cenário.\n\nConclusão: o dado que sustentaria a reprovação (proporção real da estampa na foto) é fisicamente inexistente na imagem — a bainha não está no quadro — e o número usado para \"confirmar\" a reprovação com folga é uma estimativa subjetiva, não uma medição, apoiada ainda por cima num baseline de mockup que eu comprovei estar errado (gola mal posicionada em 21-23px). Isso é evidência clara de que a medição está errada / o problema não está demonstrado, não que a peça necessariamente esteja correta — mas não há base para reprovar \"sem ser caso limítrofe\". Vereditos verificáveis (posição do colar na foto ~y397, altura da estampa ~351px, corte da barra fora de quadro) batem com o laudo; o que não bate, e derruba a conclusão, é o baseline do mockup e a forma como o teto virou \"estimativa central\" definitiva."
+    }
+   ]
+  },
+  {
+   "productId": 352407182,
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+   "foto": "par",
+   "basename": "352407182-off-white-105a5e630fbbf7b0ad17843480933122",
+   "cor": "Off-White",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352407182-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407182-sao-miguel-vintage2\\gallery-04.webp",
+   "mockCor": "Off-White",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "veredictoAntigo": "reprovada",
+   "devAntigo": null,
+   "problemasAntigos": [
+    {
+     "tipo": "escala",
+     "gravidade": "media",
+     "descricao": "Mesmo superdimensionamento sistematico da capa, na cor off-white: estampa de 351px (y466-817) contra comprimento gola-barra estimado de ~660px (gola y415; barra cortada pelo frame, estimada ~y1075) = ~53%, contra ~42% no mockup off-white gallery-04 (205px/484px). Desvio relativo ~+25%, na fronteira media/alta, visivel em tamanho de catalogo. Rodape NIMBUS correto e arco SAO MIGUEL ARCANJO integro nesta foto.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    }
+   ],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": true,
+    "arteObs": "Composição, figuras e ornamentos conferem com o mockup e a arte original: São Miguel com balança e espada/estandarte, halo, asas, manto, sandálias amarradas, demônio com garras sob os pés, arco tipográfico \"SÃO MIGUEL ARCANJO\" e \"NIMBUS\" no rodapé. Nada识 inventado, removido ou redesenhado nas comparações lado a lado feitas.",
+    "corCorreta": true,
+    "incertezaPontos": 12,
+    "melhorEstimativaDesvioPct": 27,
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": 42.27
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": 77,
+     "fotoRazao": 0.82,
+     "mockupRazao": 0.46
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta oversized off-white, gola careca, manga até o cotovelo com corte solto/dropped — silhueta consistente com o mockup gallery-04 e com o nome do produto (Camiseta Oversized Premium).",
+    "problemas": [
+     "Estampa aparenta superdimensionamento sistemático: a barra da camiseta não aparece no enquadramento (cortada pelo quadro em y=1024), então a métrica primária colarinho-barra não fecha com precisão (confiavel=false). Mas usando o cenário mais favorável possível à foto (barra exatamente na borda do quadro, o mínimo fisicamente possível de comprimento), a estampa já ocupa ~55.6% do comprimento colarinho-barra contra ~42.3% no mockup off-white (gallery-04) — um piso de desvio de +31%, muito acima da nova tolerância de 5%. Como a barra real necessariamente se estende além do quadro, o valor verdadeiro é algo menor que esse piso, mas a posição da mão/dedos da modelo (visíveis perto da borda inferior, ~y=990) sugere que a bainha não está muito além do quadro, o que mantém a estimativa central em torno de +27%, folgadamente acima do limite de 5%.",
+     "Métrica auxiliar ombro-a-ombro (mais resistente a corte de enquadramento, em tese) não se mostrou comparável de forma confiável aqui: o mockup é uma peça 'chapada' (manga espalhada horizontalmente) enquanto a foto mostra a peça vestida em pose 3/4 (manga caindo ao longo do braço) — são geometrias diferentes, então essa métrica foi tratada apenas como referência cruzada (confiavel=false), não como base da decisão."
+    ],
+    "resumo": "Peça, arte, texto, tinta, anatomia e cor conferem sem ressalvas. O problema é a escala da estampa: a barra da camiseta foi cortada pelo enquadramento da foto, então a métrica gola-barra não pode ser fechada com precisão — mas mesmo no cenário mais favorável possível (bainha exatamente na borda do quadro), a estampa já ocupa ~56% do comprimento da peça contra ~42% no mockup de referência, um piso de desvio de +31%. A estimativa central fica perto de +27%, e mesmo com incerteza de +-12 pontos, nenhum cenário plausível cai dentro da nova tolerância de 5%. Reprovável pela escala, com o critério mais rígido de hoje — mesmo problema sistemático de superdimensionamento já apontado na auditoria de ontem para a capa off-white.",
+    "textoIntegro": true,
+    "textoObs": "\"SÃO MIGUEL ARCANJO\" e \"NIMBUS\" legíveis e corretos letra por letra, incluindo a ausência do til gráfico em \"SÃO\" — que também não aparece desenhado na arte original (mesma estilização gótica), então não é corrupção.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "motivo": "Medi eu mesmo, com grade de pixels sobreposta (Python/PIL), os pontos-chave nas duas imagens. Confirmei visualmente que a bainha realmente não aparece em nenhum pixel do quadro (o tecido liso vai até a borda absoluta y=1024 sem dobra de barra visível). Recalculando a proporção estampa/peça do zero: mockup = (284-78)/(491-7) = 42,6% (veredito citou 42,3%, quase idêntico); cenário mais favorável da foto (bainha exatamente na borda) = (819-458)/(1024-388) = 56,8% (veredito citou 55,6%). Isso dá um desvio-piso de +33,4%, na verdade um pouco MAIOR que o +31% do veredito original — minha medição independente corrobora e reforça a reprovação, não a contradiz. Também testei a pista auxiliar da mão/dedos que o juiz usou para reduzir a estimativa central de 31% para 27%: o braço está balançando solto e afastado do tronco, não encostado na bainha, então essa pista é mais fraca do que o veredito assume, o que se algo puxaria a estimativa de volta para cima (mais perto de 31-33%), não para baixo. Não há evidência visual que refute o veredito; pelo contrário, a remedição independente confirma tanto o problema de enquadramento (bainha cortada) quanto a magnitude do desvio de escala, muito acima da tolerância de 5%.",
+     "refutado": false
+    },
+    {
+     "motivo": "Fiz medição independente própria (não reutilizei os números do juiz cegamente): converti os dois .webp para PNG com ffmpeg (live 1024x1024, mockup 500x500), sobrepus grades de pixel e also amostrei cor de pixel diretamente para achar a barra do mockup.\n\nMeus pontos medidos:\nLIVE: colarinho (costura da gola) y≈402 | topo da estampa (arco do texto) y≈455 | base da estampa (\"NIMBUS\") y≈819 | borda do quadro y=1024. Confirmei visualmente (zoom 3x) que em y=1024 ainda há tecido branco liso contínuo, sem costura de barra visível — a barra realmente está cortada, exatamente como o juiz apontou.\nMOCKUP (Off-White, gallery-04): colarinho y≈46 | topo da estampa y≈85 | base da estampa y≈286 | barra y≈492 (achei por amostragem de pixel: transição nítida de cor tecido (~208,199,193) para fundo (246,246,246) entre y=490 e y=494 em x=250).\n\nCom esses números independentes, cenário mais favorável à foto (barra hipoteticamente exata na borda do quadro): estampa/comprimento = 364/622 = 58,5% na foto vs 201/446 = 45,1% no mockup → piso de desvio de +29,9%. Isso bate de forma muito próxima com os números do próprio juiz (55,6% vs 42,3%, +31%) — ou seja, minha remedição corrobora a análise dele, não a contradiz.\n\nFui além: calculei quanto a barra real precisaria se estender além do quadro (y>1024) para a foto empatar com a proporção do mockup. Resultado: a barra precisaria estar em y≈1177, ou seja, ~153px (≈15% da altura do quadro) além do que já é visível — quase a peça inteira de novo em comprimento adicional. Testei essa hipótese contra uma âncora anatômica: a mão da modelo, pendurada relaxada ao lado do corpo, já tem as pontas dos dedos em y≈1015-1020 — a apenas 4 a 9px da borda do quadro. Uma mão relaxada não costuma ficar tão acima da barra de uma camiseta oversized nesse comprimento; se a barra estivesse ~150px mais abaixo, seria incomum a mão parar tão perto da borda do quadro. Esse indício anatômico reforça a estimativa central do juiz (+27%), não a enfraquece.\n\nNão encontrei erro de medição, de aritmética ou de metodologia no laudo original. O argumento do \"cenário mais favorável\" é matematicamente correto (mais tecido abaixo só reduziria a razão, nunca aumentaria) e mesmo assim o piso já excede muito a tolerância de 5%. Não há regra de exceção aplicável (não é caso de texto ilegível em miniatura, não há indicação de regra do dono liberando este caso). Veredito se sustenta.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352407156,
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
+   "foto": "capa",
+   "basename": "352407156-vitrine-nimbus-2f13ea62a4ca61f2a117842424043463",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352407156-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407156-sao-miguel-vintage1\\gallery-02.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": -3.8461538461538463,
+   "problemasAntigos": [],
+   "vazioAgora": true,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": -20.5,
+     "fotoPct": 48.5,
+     "mockupPct": 61
+    },
+    "metricaOmbros": {
+     "confiavel": true,
+     "desvioPct": 23.4,
+     "fotoRazao": 0.635,
+     "mockupRazao": 0.515
+    },
+    "melhorEstimativaDesvioPct": 23.4,
+    "incertezaPontos": 8,
+    "pecaCorreta": true,
+    "pecaObs": "Moletom canguru com capuz, mangas longas com punho canelado e barra canelada, fit oversized — bate com o mockup e com o nome do produto. Vista de costas em ambas as imagens, então o bolso canguru frontal não aparece em nenhuma das duas (não é discrepância).",
+    "arteFiel": true,
+    "arteObs": "Composição, figura do arcanjo, balança, demônio vencido, asas e caixa com borda conferem com o mockup e com a arte original. Nada inventado, removido ou redesenhado, checado em zoom nas mãos, rosto e detalhes do capuz/manto.",
+    "textoIntegro": true,
+    "textoObs": "\"SÃO MIGUEL ARCANJO\" lê-se corretamente letra por letra em zoom, sem corrupção de caracteres.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "Desvio de escala da estampa em relação à peça estimado em +23,4% (estampa proporcionalmente maior na foto do que no mockup de referência), muito acima da nova tolerância de 5%. Medido pela razão altura da estampa / largura estável do tronco-braço (ponto onde a manga pendura reta, mais resistente a corte de enquadramento): 0,635 na foto contra 0,515 no mockup. Conferido com overlay de linhas pixel a pixel nas duas imagens e com comparação lado a lado normalizada pela mesma largura de referência — a estampa fica visivelmente maior e mais próxima das bordas da peça na foto.",
+     "A métrica de comprimento gola-barra não pôde ser usada com confiança: no mockup o capuz está vestido/estendido cobrindo a gola, na foto o capuz está abaixado e enrolado em formato de gola funil — os dois 'topo visível da peça' não correspondem ao mesmo ponto físico da costura, o que inflaciona artificialmente o comprimento aparente na foto. Por isso essa métrica foi descartada em favor da métrica de largura, que é confiável nas duas imagens."
+    ],
+    "resumo": "Peça, arte, texto, tinta e anatomia conferem bem com o mockup e a arte original. O problema é escala: medindo a razão altura da estampa / largura do tronco na altura em que a manga pendura reta (ponto claramente identificável e verificado com overlay em ambas as imagens), a estampa da foto está cerca de 23% maior proporcionalmente do que no mockup de referência, bem acima da tolerância de 5% do critério de hoje. A métrica de comprimento gola-barra não é utilizável aqui porque o mockup mostra capuz vestido e a foto mostra capuz abaixado em gola funil, então não medem o mesmo ponto da peça. Pelo critério atual (5%), a foto reprova por escala, mesmo tendo sido aprovada ontem sob a tolerância antiga de 15%."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "motivo": "Medi de forma independente e automatizada (Python/PIL/scipy, segmentação por componente conectado da região escura = peça, preenchimento de buracos para achar a bounding box da estampa, e varredura de largura por linha para achar o platô mais estável = ponto onde a manga pendura reta) e cheguei a números praticamente idênticos aos do juiz:\n\nFOTO (1024x1024): estampa do topo da asa/arco de texto até a base do quadro da arte = y433 a y738 → altura 305px. Largura estável tronco-braço (platô perfeitamente plano entre y741-780, span de ponta a ponta das mangas) = 487px. Razão = 305/487 = 0,626 (juiz: 0,635).\n\nMOCKUP referência preto (500x500): estampa y157 a y359 → altura 202px. Largura estável tronco-braço (platô perfeitamente plano y372-392) = 393px. Razão = 202/393 = 0,514 (juiz: 0,515).\n\nDesvio calculado por mim: (0,626/0,514 - 1) ≈ 21,9%. Desvio do juiz: 23,4%. Ambos concordam dentro de margem de medição manual vs automatizada, e ambos estouram muito a tolerância de 5% — e inclusive estourariam a tolerância antiga de 15%.\n\nVerifiquei visualmente as duas máscaras/bounding boxes sobrepostas nas imagens originais (anotei retângulo ciano na estampa e faixa magenta na largura estável) e ambos os pontos de medição correspondem exatamente ao que o juiz descreveu: base do quadro da arte (aresta reta, fácil de detectar em ambas as fotos) até o topo da asa/coroa de texto; e o span total manga-a-manga no ponto em que o contorno da peça fica verticalmente estável (mangas penduradas retas), tanto na foto quanto no mockup.\n\nNão encontrei nenhuma falha na métrica, nenhum erro de medição, nenhuma questão de legibilidade em miniatura, nem qualquer regra do dono aplicável que anule o critério. A estampa da foto está de fato proporcionalmente maior que no mockup de referência, por uma margem grande e consistente entre duas metodologias de medição independentes (manual do juiz e pixel-a-pixel automatizada minha). Não há evidência para refutar — o veredito de reprovação por escala se sustenta.",
+     "refutado": false
+    },
+    {
+     "motivo": "Refutado com evidência visual concreta. Medi eu mesmo as duas imagens pixel a pixel (Python/PIL, sem depender do relato do juiz) e cheguei a números quase idênticos aos dele: mockup, altura da estampa ~203px (y=157→359 de 500) sobre largura estável do tronco-braço ~393px (y=355→415, plateau real com variação <2px) = razão 0,516. Foto ao vivo, altura da estampa ~310px (y=429→738 de 1024) sobre largura ~485px na faixa mais estável que encontrei (y≈700→780) = razão ~0,638. Isso reproduz a razão do juiz (0,515 e 0,635) e confirma que a aritmética dele está certa — o erro não está na conta, está na comparabilidade das duas fotos.\n\nProva concreta de que a comparação é inválida: recortei e ampliei a borda inferior do quadro da ilustração (moldura retangular com o santo pisando o demônio) nas duas imagens. No mockup essa borda é uma linha HORIZONTAL perfeita (y≈353-355 em toda a largura, produto plano, ghost mannequin, sem rotação — o centro horizontal da estampa fica em x=250,5 num canvas de 500px, ou seja, a menos de 1px do centro exato, confirmando zero rotação). Na foto ao vivo, a MESMA borda do MESMO quadro está visivelmente INCLINADA: começa em y≈728 no lado esquerdo (x≈345) e sobe até y≈703 no lado direito (x≈565), uma inclinação de uns 6-7 graus. Isso só acontece se a estampa (e o corpo por trás dela) estiver fotografada em ângulo, não de frente. Reforça isso: a modelo está de perfil quase total (rosto virado, olhando para o lado), e a linha dos ombros é visivelmente assimétrica entre os dois lados na foto — sinais claros de torso rotacionado em relação à câmera, algo que não existe no mockup.\n\nIsso importa porque a métrica escolhida pelo próprio juiz (largura do tronco-braço) assume que dá pra comparar a largura projetada da peça nas duas fotos como se fossem a mesma projeção. Mas rotação de corpo encurta (foreshortening) a largura projetada em relação à largura real de frente — exatamente na direção e ordem de grandeza do \"desvio\" relatado (uma rotação de ~25-35°, plausível dado o perfil quase total do rosto, já produz sozinha 9-18%+ de compressão de largura, cos(25°)=0,906, cos(35°)=0,819). Ou seja, o denominador (largura) fica artificialmente menor na foto por causa do ângulo do corpo, não porque a estampa é fisicamente maior — isso infla a razão altura/largura mecanicamente.\n\nÉ o mesmo tipo de problema que o próprio juiz identificou e descartou na métrica gola-barra (capuz vestido vs. abaixado = pontos não comparáveis): aqui a foto e o mockup também não são projeções comparáveis (uma é plana e frontal, a outra é em ângulo com corpo girado), só que de um jeito menos óbvio. A borda torta do quadro da estampa é prova visual direta e inequívoca disso.\n\nConclusão: os 23,4% de \"desvio de escala\" relatados são consistentes com artefato geométrico de comparar um mockup plano/frontal com uma foto de lifestyle em ângulo, via razão linear 2D não corrigida — não há evidência clara de que a arte foi impressa fisicamente maior na peça. Como a foto já tinha sido aprovada ontem no critério de 15%, e a única mudança foi o critério (não a foto), e a fonte do \"desvio\" medido hoje é explicável por um viés metodológico concreto e demonstrável (rotação do corpo/perspectiva), a reprovação por escala não deveria se sustentar nesta medição.",
+     "refutado": true
+    }
+   ]
+  },
+  {
+   "productId": 352407156,
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
+   "foto": "par",
+   "basename": "352407156-branca-12d23181254474dd2317843472856990",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352407156-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352407156-sao-miguel-vintage1\\gallery-04.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": null,
+   "problemasAntigos": [],
+   "vazioAgora": true,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": true,
+    "arteFiel": true,
+    "arteObs": "Composição, figuras e ornamentos conferem plenamente com o mockup e a arte original: arcanjo com asas, halo, manto, túnica, balança, figura do diabo com asas de morcego sob o pé, nuvens/fumaça na base, arco de texto e selo NIMBUS. Nada foi inventado, removido ou redesenhado.",
+    "corCorreta": true,
+    "incertezaPontos": 4,
+    "melhorEstimativaDesvioPct": -4.59,
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": null
+    },
+    "metricaOmbros": {
+     "confiavel": true,
+     "desvioPct": -4.59,
+     "fotoRazao": 0.9083,
+     "mockupRazao": 0.952
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Moletom com capuz, mangas longas, punho e barra canelados, corte oversized — bate com \"Moletom Canguru\" e com o mockup. O bolso canguru (frontal) não é verificável nesta foto de costas, o que é inerente ao ângulo e não é um defeito.",
+    "problemas": [
+     "As duas métricas oficiais de escala (gola-barra e ombro-a-ombro) não puderam ser lidas com confiança direta nesta foto: a gola/nuca está escondida pelo capuz amontoado no pescoço e pela cabeça virada (o que parecia a costura da gola era, na inspeção com detecção de bordas, a linha do maxilar/cabelo, não tecido); os pontos de ombro têm contraste muito baixo contra o fundo claro do arco atrás do modelo.",
+     "Para não descartar a checagem de escala, usei a largura da barra (bainha) como referência de largura substituta — ela é nitidamente visível e de alto contraste tanto na foto quanto no mockup (referência em preto do mesmo template, gallery-02, usada só para geometria por ter mais contraste). O desvio estimado por essa via é -4.59%, dentro da tolerância de 5%, mas com incerteza de alguns pontos percentuais por não ser a métrica literal pedida (ombro-a-ombro) e pela foto ser em 3/4 (não reto de costas). Recomendo revisão humana rápida deste ponto específico antes de recolocar a foto no ar, já que o critério apertado (5%) deixa pouca margem."
+    ],
+    "resumo": "Foto reaprovável pelo critério atual (5%), mas por margem estreita e com ressalva metodológica. Peça, arte, texto, tinta, anatomia e cor conferem sem problemas: capuz/mangas/punhos/barra batem com \"Moletom Canguru\" oversized, a ilustração de São Miguel Arcanjo é fiel ao mockup e à arte original em todos os elementos, o texto \"SÃO MIGUEL ARCANJO\" e \"NIMBUS\" está íntegro letra a letra (sem corrupção), a tinta acompanha dobras do tecido (não parece adesivo) e a cor branca da peça está correta. O ponto de atenção é a escala: não consegui medir com confiança a gola (escondida pelo capuz amontoado/cabeça virada) nem o ombro-a-ombro clássico (baixo contraste contra o fundo claro), então usei a largura da barra como proxy de largura — resultado: estampa ligeiramente menor em proporção à peça na foto que no mockup, desvio estimado de -4.6%, dentro do novo limite de 5% mas perto o bastante do limite para justificar um segundo olhar humano.",
+    "textoIntegro": true,
+    "textoObs": "Comparado letra a letra com a arte original: \"SÃO MIGUEL ARCANJO\" e \"NIMBUS\" reproduzidos corretamente, sem distorção ou corrupção de caractere, nítidos mesmo em zoom alto.",
+    "textoVisivelEmCatalogo": true,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "boa"
+  },
+  {
+   "productId": 352728357,
+   "titulo": "Anjo da Guarda Stencil | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda1/",
+   "foto": "capa",
+   "basename": "352728357-preta-6ef5b9c39b77a27a0a17843494615140",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352728357-capa.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352728357-anjo-da-guarda1\\gallery-02.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": 11.11111111111111,
+   "problemasAntigos": [],
+   "vazioAgora": false,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": true,
+     "mockupPct": 51.6,
+     "fotoPct": 58.08,
+     "desvioPct": 12.55
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "mockupRazao": null,
+     "fotoRazao": null,
+     "desvioPct": null
+    },
+    "melhorEstimativaDesvioPct": 12.55,
+    "incertezaPontos": 4,
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta preta, gola careca, manga curta, fit compatível com a peça do mockup (short-sleeve crew-neck). Nenhuma discrepância de tipo de peça, manga ou capuz encontrada.",
+    "arteFiel": true,
+    "arteObs": "Composição, anjo com asas, auréola, túnica drapeada, livro na mão e pés descalços conferem com o mockup e a arte original. Nada inventado, removido ou redesenhado nos crops ampliados (mão/livro e rosto/cabelo).",
+    "textoIntegro": true,
+    "textoObs": "Não há texto/tipografia real no design — apenas as linhas decorativas ilegíveis do livro, que já são estilizadas/ilegíveis na arte original. Nenhuma corrupção identificada.",
+    "textoVisivelEmCatalogo": false,
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "Desvio de escala: medi altura da estampa (topo da auréola → base dos pés) ÷ comprimento gola-barra em pixels, com grades de referência sobrepostas nas duas imagens (métrica de ombro-a-ombro descartada por não ser confiável — ver abaixo). Mockup: auréola y=111, pés y≈319-321 (altura estampa ≈209px), HPS y≈46.5, barra y≈451.5 (comprimento ≈405px) → razão ≈51.6%. Foto: auréola y≈350, pés y≈705-707 (altura estampa ≈356px), colarinho y≈290, barra y≈903 (comprimento ≈613px, barra localizada por um realce horizontal de luz consistente em várias colunas x) → razão ≈58.1%. Desvio ≈ +12.5%, mais que o dobro da nova tolerância de 5%. Mesmo no limite inferior de incerteza (~±4 pontos) o desvio continua acima de 5%. Isso é consistente com (e refina) o desvio de 11.1% já apontado na auditoria de ontem — sob a tolerância antiga de 15% passava, sob a nova de 5% não passa.",
+     "Métrica ombro-a-ombro marcada como não confiável e não usada na decisão: no mockup o desenho é de ombro caído/boxy e a silhueta não tem um canto de costura nítido (a borda sobe suavemente do colarinho até a bainha da manga, sem inflexão clara); na foto o modelo está em pose de 3/4 com o corpo girado, o que causa escorço de perspectiva e tornaria a largura ombro-a-ombro artificialmente distorcida mesmo com ambos os ombros visíveis."
+    ],
+    "resumo": "Reprovada pela escala. Peça (camiseta preta gola careca manga curta), arte (anjo, asas, auréola, túnica, livro, pés — nada inventado/removido/redesenhado em close-up de mão/livro e rosto), tinta impregnada no tecido, anatomia e cor da peça estão todos corretos, e não há texto real para corromper. Porém a estampa está proporcionalmente maior na foto do que no mockup de referência: medindo altura da estampa (auréola→pés) sobre comprimento da peça (colarinho→barra) em pixels com grade sobreposta, a razão no mockup é ≈51.6% e na foto ≈58.1%, um desvio de aproximadamente +12.5% — mais que o dobro da nova tolerância de 5% (e ainda acima de 5% mesmo descontando a incerteza de medição estimada em ~4 pontos). Esse resultado é consistente com o desvio de 11.1% já registrado ontem; o que mudou foi só o critério, que ficou mais rígido (15%→5%), então a foto que passava ontem não passa hoje. A métrica de largura ombro-a-ombro não pôde ser usada com confiança (mockup tem silhueta de ombro caído sem canto de costura definido; foto tem o corpo girado em 3/4, gerando escorço), então a decisão se apoiou na métrica de comprimento, que é a mais confiável disponível. Não é um caso limítrofe de 6-7%: o desvio medido é claramente maior que o dobro do limite novo."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "motivo": "Medi eu mesmo com Python/PIL (detecção de cor programática + grades sobrepostas), e confirmo a maior parte dos números do juiz — mas encontrei uma falha concreta no ponto que sustenta a reprovação: a localização da \"barra\" (bainha) na foto ao vivo.\n\nO QUE CONFIRMEI (bate com o juiz):\n- Halo mockup: y=111 (detecção de cor laranja, 98px, x=241-270) — bate exato.\n- Halo foto: y=352 topo (detecção de cor, 891px) — bate com o y≈350 do juiz.\n- Pés mockup: y≈318-320 (grade visual 6x) — bate com y≈319-321 do juiz.\n- Pés foto: toque dos dedos termina em y≈700-703 (grade visual 4x); abaixo disso (até y≈730) é um pingo de tinta spray, não o pé anatômico — próximo do y≈705-707 do juiz.\n- HPS mockup (pico do ombro no flat-lay): y≈45-46 — bate com y≈46.5 do juiz.\n- Barra mockup: fibra termina y≈448-450 — bate com y≈451.5 do juiz.\n\nONDE A MEDIÇÃO DESMORONA: a \"barra\" da foto (y≈903), que o próprio juiz admite ter localizado \"por um realce horizontal de luz\" (não uma borda visível). Testei isso pixel a pixel:\n1. Amostrei luminância em 5 colunas (x=420,460,500,550,600) de y=870 a y=1020. Existe sim uma leve elevação de brilho por volta de y=898-914 (ex.: x=550 sobe de ~25 para 41.9 em y=906) — mas ela é seguida IMEDIATAMENTE por um vale escuro (y=918-940 cai para luminância 7-15, mais escuro que a \"camiseta\" acima). Esse padrão cume-claro + vale-escuro-logo-abaixo é a assinatura clássica de uma DOBRA/VINCO de tecido (a luz pega a crista da dobra e a sombra cai imediatamente depois), não de uma transição costurada entre duas peças.\n2. Comparei matiz/saturação acima e abaixo de y=903: ambos os lados têm o mesmo tom azulado-preto (B ligeiramente > R,G por margem semelhante nas duas regiões) — não há NENHUMA mudança de cor/material detectável, o que se explica porque a camiseta é preta E a calça do modelo também é preta. Não existe borda de cor confiável nessa região da foto.\n3. A pose é 3/4 girada e caminhando — exatamente o tipo de postura que gera vinco horizontal na altura do quadril/cintura por torção do tronco, então a explicação \"dobra de tecido\" é mecanicamente mais provável que \"bainha real\" nesse ponto específico.\n\nSENSIBILIDADE: o veredito inteiro depende desse único ponto incerto. Usando os próprios números do juiz (colarinho=290, altura estampa=356) mas testando localizações alternativas plausíveis para a barra dentro da mesma região ambígua:\n- barra=903 (escolha do juiz): razão=58.1% → desvio +12.5% → REPROVADA\n- barra=950 (dentro da mesma zona escura ambígua): razão=53.9% → desvio +4.5% → APROVADA\n- barra=970: razão=52.4% → desvio +1.6% → essencialmente sem desvio\n\nUm deslocamento de 50-70px (dentro da faixa de incerteza que demonstrei existir pixel a pixel, já que não há aresta de cor real ali) inverte completamente o veredito de reprovado para aprovado. O juiz estimou incerteza de apenas ±4 pontos percentuais na razão, mas a medição de onde fica a barra é, na prática, indeterminável nessa foto porque camiseta e calça são ambas pretas e não há transição de cor/material visível — a incerteza real é muito maior que ±4 pontos.\n\nConclusão: o desvio de 12.55% não é uma medição confiável, é uma escolha específica dentro de uma região onde a bainha real não pode ser localizada com confiança. Isso não prova que a peça está corretamente escalada, mas também não sustenta \"reprovada\" com a confiança que o veredito reivindica — a mesma foto, medida com uma âncora de barra igualmente defensável (e mais provável dado o padrão crista-clara/vale-escuro de dobra), cai dentro da tolerância de 5%.",
+     "refutado": true
+    },
+    {
+     "motivo": "Tentei refutar remedindo pixel a pixel de forma independente (script Python/PIL com grades sobrepostas + detecção automática de cor/brilho) em vez de confiar nos números do juiz, e cheguei a valores muito próximos aos dele — o veredito se sustenta.\n\nMockup (500x500, medição automática por threshold de cor, alta confiança por fundo branco liso):\n- Pico do ombro/gola (equivalente ao HPS): y=46-47 nos dois \"cantos\" da gola (x=205-210 e x=295-298) → 46.5, idêntico ao do juiz.\n- Barra: linha nítida em y=452 (praticamente igual ao y=451.5 do juiz).\n- Auréola topo: y=111 (detecção por cor laranja). Pés: y=319-321 (fim das pontas dos pés, verificado por contagem de pixels brancos por linha). Ambos idênticos aos do juiz.\n- Comprimento referência = 405.5px; altura estampa = 209px; razão = 51.5% (juiz: 51.6%).\n\nFoto (1024x1024, mais difícil por fundo poluído e roupa preta sobre calça preta, mas verifiquei landmark por landmark com crops ampliados e grade):\n- Auréola: detecção de cor laranja confirma topo em y≈352-354 (juiz: 350) — bate.\n- Pés: verifiquei visualmente na figura completa do anjo que a mancha clara na base do robe (por volta de y=700-710) é mesmo os pés (toe-shapes), não a mão com o livro (que fica mais acima, y≈460-500) — juiz usou y≈705-707, compatível.\n- Gola: chequei especificamente se haveria um \"pico de ombro\" mais alto (equivalente ao HPS do mockup) escondido sob o cabelo ou no ombro direito — não há; em ambos os ombros (crops separados) o tecido desce a partir da gola em y≈290-300, ou seja, a gola É de fato o ponto mais alto visível, igual ao que o juiz usou (y=290).\n- Barra: este é o ponto mais frágil — não há um seam nitidamente visível (preto sobre preto). O juiz usou um \"realce horizontal de luz\" em y≈903-908. Extraí o perfil de brilho em 5 colunas (x=420 a 600) de y=860 a 996: há de fato uma crista de brilho consistente entre y≈896-912 em todas as colunas (compatível com o friso/costura dobrada da barra pegando luz — explicação fisicamente plausível), seguida de queda de brilho a partir de y≈920 (provavelmente já a calça, com menos reflexo). Isso é evidência A FAVOR da localização da barra pelo juiz, não contra.\n\nRecalculando com meus próprios números independentes (gola=292, barra=906, auréola=353, pés=705): razão foto = 352/614 = 57.3%, desvio = +11.3% — muito próximo do +12.5% do juiz, e mesmo testando o cenário mais generoso (empurrando a barra até y=920-924, limite onde o brilho realmente cai), o desvio ainda fica em ~+9%, sempre acima da tolerância de 5%.\n\nNão encontrei erro de medição: todos os 4 pares de landmarks (auréola, pés, gola, barra) que remedi de forma independente bateram com os números do juiz dentro de poucos pixels. A preocupação legítima que eu tinha — pose 3/4 em movimento causando foreshortening vertical que infla artificialmente a razão — é fisicamente real e explica parte do desvio, mas não há evidência concreta de que ela explique os +11-13% inteiros a ponto de cair abaixo dos 5%. Não é uma refutação com evidência clara; na dúvida, mantenho o veredito.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352727892,
+   "titulo": "Aparecida Spray | Blusão Moletom",
+   "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray1/",
+   "foto": "par",
+   "basename": "352727892-vitrine-nimbus-f0aed575075809bd6317842435522941",
+   "cor": "Preta",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352727892-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352727892-aparecida-spray1\\gallery-02.webp",
+   "mockCor": "Preta",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (3).png",
+   "veredictoAntigo": "reprovada",
+   "devAntigo": null,
+   "problemasAntigos": [
+    {
+     "tipo": "arte-errada",
+     "gravidade": "alta",
+     "descricao": "A estampa das costas é outra rendição da arte, não a que será impressa: falta a lua dourada gigante atrás da coroa (elemento central da composição, substituída por um brilho difuso), o estilo virou gravura/reticulado dourado em vez de stencil spray, o rosto da Virgem ficou claro e sorridente em vez da imagem escura, as bandeiras do Brasil aparecem coloridas em verde/azul quando a arte original é monocromática preto e dourado, foram inventadas duas bandeiras extras branco-douradas e uma barra de franjas na base do manto, e sumiram os escorridos de tinta e a assinatura grafite NIMBUS. A diferença é evidente mesmo em miniatura de 400px: o hover mostra um produto diferente do vendido.",
+     "visivelEmTamanhoCatalogo": true,
+     "verificacao": "confirmada (2/2 mantêm)"
+    },
+    {
+     "tipo": "texto-corrompido",
+     "gravidade": "baixa",
+     "descricao": "Abaixo da estampa há duas linhas de texto dourado que não existem na arte original; ampliadas são ilegíveis (parece uma tentativa corrompida de 'Aparecida Spray'). Minúsculo, invisível em tamanho de catálogo, mas é elemento inventado pela IA.",
+     "visivelEmTamanhoCatalogo": false
+    }
+   ],
+   "vazioAgora": false,
+   "julgamento": {
+    "anatomiaOk": true,
+    "aprovavel": false,
+    "arteFiel": false,
+    "arteObs": "Reexaminei a foto do zero (ampliações da estampa nas costas) e confirmo, com observação própria e independente do laudo de ontem, que a arte impressa é uma rendição diferente da arte original em pelo menos 6 pontos: (1) falta a lua dourada gigante atrás da coroa — na foto virou um brilho/vinheta difuso sem contorno de disco; (2) o estilo mudou de stencil spray (bordas duras, respingos) para uma gravura/meio-tom fino, quase serigrafia clássica; (3) o rosto de Nossa Senhora está claro, definido e com leve sorriso, quando a arte original tem o rosto escuro e sério, quase em silhueta; (4) as duas bandeirinhas passam a ter cores reais (verde/azul) em vez do dourado/preto monocromático da arte; (5) aparecem DUAS bandeirolas extras branco-douradas que não existem na arte original, ao lado das bandeiras verde/azul; (6) a base do manto ganhou uma barra de franjas/borlas douradas contínua que substitui o padrão de pontilhado + flores da arte original, e os escorridos de tinta com a assinatura grafite 'NIMBUS' sumiram, dando lugar a uma linha de texto pequena. São mudanças de composição e não apenas de estilo de renderização — o produto na foto não é a arte que será impressa.",
+    "corCorreta": true,
+    "incertezaPontos": 20,
+    "melhorEstimativaDesvioPct": 30,
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": 47.4,
+     "mockupPct": 47.4
+    },
+    "metricaOmbros": {
+     "confiavel": false,
+     "desvioPct": 51.2,
+     "fotoRazao": 0.721,
+     "mockupRazao": 0.477
+    },
+    "pecaCorreta": true,
+    "pecaObs": "Blusão moletom com capuz, corte oversized, mangas longas — silhueta bate com o mockup de referência (mesmo tipo de peça, mesmo caimento solto, capuz proporcional). Nenhum indício de peça trocada.",
+    "problemas": [
+     "[arte-errada/alta] Estampa das costas é outra rendição da arte, não a que vai para produção: falta a lua dourada gigante atrás da coroa (virou brilho difuso sem disco definido); estilo mudou de stencil spray para gravura/meio-tom fino; rosto da Virgem ficou claro e levemente sorridente em vez de escuro/sério; as duas bandeiras aparecem coloridas (verde/azul) em vez de monocromáticas; foram inventadas duas bandeirolas extras branco-douradas; a base do manto ganhou uma barra de franjas contínua no lugar do padrão pontilhado+flores original; sumiram os escorridos de tinta e a assinatura grafite NIMBUS. Confirmado por inspeção própria em zoom, não apenas repetindo o laudo anterior.",
+     "[escala/media-incerta] As duas métricas de escala pedidas (altura da estampa / comprimento gola-barra; altura da estampa / largura ombro-a-ombro) não puderam ser medidas com confiança alta nesta foto: a gola fica escondida sob o capuz caído (pose real, não flat-lay) e a largura ombro-a-ombro é ambígua num moletom oversized de ombro caído fotografado em ângulo. Ainda assim, três abordagens independentes (razão estampa/ombro visível, razão estampa/largura de silhueta do torso na altura da estampa, e checagem cruzada de linhas sobre pontos de referência) convergem para a estampa aparecendo visivelmente MAIOR proporcionalmente na foto do que no mockup — estimativas variaram entre +28% e +64%, estimativa central ~+30%. Mesmo na leitura mais conservadora, isso ultrapassa claramente a nova tolerância de 5% (e já ultrapassaria a antiga de 15%).",
+     "[texto-corrompido/baixa] Abaixo da estampa há uma linha de texto dourado corrompida (tentativa ilegível de 'Aparecida Spray') mais uma segunda linha ainda menor e ininteligível — não existem na arte original. Medindo a região na imagem de 1024px, o texto ocupa ~110px de largura; numa miniatura de catálogo (~400px) isso equivale a ~43px, ilegível. Pela regra da distância do dono, isso sozinho não reprovaria a foto."
+    ],
+    "resumo": "Julgamento refeito do zero com o critério atual (tolerância de 5%). A foto continua REPROVADA — na verdade de forma ainda mais inequívoca que ontem. O motivo decisivo não é a escala, é a arte: inspecionei a estampa em zoom por conta própria e confirmei que é uma rendição diferente da arte original em pelo menos seis pontos (lua ausente, estilo virou gravura/meio-tom em vez de stencil spray, rosto da Virgem claro e sorridente, bandeiras coloridas, duas bandeirolas inventadas, barra de franjas substituindo o padrão original, drips e assinatura NIMBUS sumidos). Isso já reprova a foto independente de qualquer medição de escala. Além disso, as métricas de escala — mesmo com baixa confiança de medição devido ao capuz caído escondendo a gola e ao corte oversized de ombro caído tornando a largura ombro-a-ombro ambígua numa foto de pose real — convergem para a estampa aparecendo entre ~28% e ~64% maior proporcionalmente do que no mockup, estimativa central ~30%, muito acima dos 5% de tolerância atuais. Peça, cor e anatomia estão corretas; a tinta acompanha a textura do tecido (não parece adesivo); o texto corrompido é ilegível em miniatura de catálogo e por si só não reprovaria. Mas com arte infiel confirmada de forma independente e escala fora de tolerância na melhor estimativa, a foto não é aprovável. Recomendo manter fora do ar e regerar a foto lifestyle a partir do mockup correto (ou trocar a rendição de arte usada na geração) antes de tentar republicar.",
+    "textoIntegro": false,
+    "textoObs": "Duas linhas de texto dourado abaixo da estampa não existem na arte original — parecem uma tentativa corrompida de escrever 'Aparecida Spray' (linha 1) mais um subtítulo ilegível (linha 2). Em miniatura de catálogo (~400px) esse texto ocupa menos de ~45px de largura e é ilegível — pela regra da distância, isso não reprova sozinho.",
+    "textoVisivelEmCatalogo": false,
+    "tintaNoTecido": true
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "motivo": "Reproduzi a inspeção visual em zoom nos dois arquivos (crops salvos em scratchpad/audit_work/) e confirmei, um a um, os seis desvios de arte apontados: (1) lua vira brilho difuso sem disco definido; (2) estilo passou de stencil/spray grosso para linha fina tipo gravura; (3) rosto da Virgem é claro/dourado com leve sorriso em vez de silhueta escura/séria; (4) as \"bandeiras\" são de fato coloridas (verde/azul/dourado, visível claramente no zoom) contra o losango dourado monocromático do mockup; (5) há um pendão branco/dourado extra abaixo de cada bandeira que não existe no mockup (lá só há losango + gota de tinta); (6) a base tem barra de franja contínua em vez do padrão pontilhado+flor do mockup. A assinatura \"NIMBUS\" também sumiu, substituída por texto dourado ilegível/corrompido, como o laudo já registrou (e corretamente não usou isso sozinho para reprovar). Não achei nenhum erro de leitura ou medição do avaliador - a infidelidade de arte é real e, por si só, já sustenta a reprovação independente da disputa de escala. Portanto não há base para refutar.",
+     "refutado": false
+    },
+    {
+     "motivo": "Não consegui refutar o veredito. Fiz minha própria inspeção em zoom (via ffmpeg, crops de 3-6x com grade de referência) comparando a estampa da foto viva (352727892-par.webp, 1024x1024) com o mockup gallery-02.webp (500x500, cor Preta) e confirmei de forma independente a maioria dos pontos de \"arte errada\" apontados pelo juiz, alguns de forma ainda mais contundente:\n\n1) Lua dourada: no mockup há um disco lunar nítido, circular, com bordas definidas e textura de crateras atrás da coroa. Na foto viva há apenas um brilho radial difuso, sem nenhuma borda de disco visível. Diferença real e clara.\n\n2) Estilo: mockup usa silhueta sólida tipo stencil/spray com textura de respingo nas bordas; a foto viva mostra linework fino tipo gravura/hachura no rosto e manto. São claramente duas renderizações de estilo diferente.\n\n3) Rosto: no mockup é um blocão escuro quase sem detalhe (silhueta com leve contorno dourado); na foto viva o rosto é bem detalhado, em tom claro/dourado, com feições visíveis. Mudança real na renderização (a leitura \"sorridente\" é subjetiva, mas \"claro e detalhado vs. escuro e silhueta\" é fato verificável).\n\n4) Emblemas laterais: aqui encontrei uma diferença ainda maior do que o juiz descreveu. Ampliando o mockup (crop mockup_flags.png), os elementos laterais NÃO são bandeiras — são símbolos de \"olho dentro de losango\" monocromáticos dourado/preto. Na foto viva esses mesmos elementos viraram bandeiras coloridas (verde com círculo azul, tipo roundel). Ou seja, não é só recolorização, a própria iconografia mudou de olho-em-losango para bandeira. Isso reforça, não enfraquece, o achado do juiz.\n\n5) Bandeirolas extras branco-douradas: confirmei visualmente (live_flags.png) duas bandeirolas triangulares brancas/douradas nos cantos superiores da estampa que não têm equivalente no mockup (no mockup ali há apenas as pontas do desenho, sem pendões extras).\n\n6) Barra de franjas: mockup tem borda pontilhada (miçangas) + apliques florais/estrela na base do manto; a foto viva mostra uma barra contínua de franja/pingente dourada substituindo esse padrão. Diferença nítida mesmo sem zoom extremo.\n\n7) Escorridos de tinta e assinatura NIMBUS: no crop ampliado do mockup (mockup_flags.png) vejo claramente os respingos/escorridos de tinta e a assinatura \"NIMBUS\" em grafite no canto inferior direito, mais uma segunda tag ilegível à esquerda. Nenhum desses elementos aparece na foto viva; em seu lugar há uma linha de texto pequena e corrompida, diferente em posição, estilo e conteúdo.\n\nSobre a escala: tentei medir eu mesmo (ombro visível, altura da coroa ao final da franja) usando grades de referência em pixel sobre a imagem original 1024x1024. A altura da estampa (topo da coroa ~y=320 até fim da franja ~y=522) ficou em ~202px de forma consistente. Mas a largura ombro-a-ombro variou fortemente conforme o ponto de corte escolhido (entre ~240px na altura do colarinho e ~400px+ na altura do braço/manga, por causa da pose 3/4, capuz caído e corte oversized de ombro caído) — a razão resultante oscilou entre ~0,5 e ~0,84, uma faixa larga demais para eu afirmar com segurança se a estampa está ou não fora de tolerância. Isso corrobora exatamente a \"confiança média-incerta\" que o próprio juiz já declarou nesse ponto — não encontrei evidência que contradiga a medição dele, então não há base para refutar também aí.\n\nComo o motivo decisivo da reprovação (arte errada, confiança alta) se confirma de forma independente e robusta em pelo menos 6-7 pontos distintos — e nenhum dos pontos citados pelo juiz se mostrou falso, inexistente ou baseado em regra inaplicável — o veredito REPROVADA permanece de pé.",
+     "refutado": false
+    }
+   ]
+  },
+  {
+   "productId": 352721197,
+   "titulo": "Fé Wildstyle | Camiseta Premium",
+   "url": "https://loja.nimbuswear.com.br/produtos/fe3/",
+   "foto": "par",
+   "basename": "352721197-branca-61420f4f91dc3f779817843491818041",
+   "cor": "Branca",
+   "arquivo": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352721197-par.webp",
+   "mockup": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352721197-fe3\\gallery-04.webp",
+   "mockCor": "Branca",
+   "arte": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\STREET\\mockups\\Fé [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Fé (3).png",
+   "veredictoAntigo": "aprovada",
+   "devAntigo": null,
+   "problemasAntigos": [],
+   "vazioAgora": false,
+   "julgamento": {
+    "metricaComprimento": {
+     "confiavel": false,
+     "desvioPct": null,
+     "fotoPct": null,
+     "mockupPct": 50.5
+    },
+    "metricaOmbros": {
+     "confiavel": true,
+     "desvioPct": 54.8,
+     "fotoRazao": 0.748,
+     "mockupRazao": 0.483
+    },
+    "melhorEstimativaDesvioPct": 54.8,
+    "incertezaPontos": 18,
+    "pecaCorreta": true,
+    "pecaObs": "Camiseta branca de manga curta e gola careca, sem capuz, condizente com \"Fé Wildstyle | Camiseta Premium\" e com o corte mostrado no mockup.",
+    "arteFiel": true,
+    "arteObs": "Composição bate com a arte original e o mockup: auréola, letras wildstyle, as duas estrelas, o swirl e os pingos de tinta estão todos presentes e nas mesmas posições relativas. Conferi em close até o pequeno rabisco tipo assinatura (canto inferior direito da letra) e ele bate traço a traço com a arte original.",
+    "textoIntegro": true,
+    "textoObs": "O único elemento textual é esse rabisco decorativo dentro da letra, que está íntegro e idêntico à arte original.",
+    "textoVisivelEmCatalogo": null,
+    "tintaNoTecido": true,
+    "anatomiaOk": true,
+    "corCorreta": true,
+    "aprovavel": false,
+    "problemas": [
+     "Escala do print visivelmente maior na foto do que no mockup de referência. Medindo altura do print sobre largura ombro a ombro (a única métrica confiável nesta foto, já que a gola está escondida atrás da cabeça virada do modelo), a foto dá 74.8% contra 48.3% do mockup, um desvio estimado de aproximadamente 55%, muito acima da tolerância de 5% do critério atual.",
+     "Conferi visualmente escalando o mockup para a mesma largura de ombro da foto e sobrepondo os dois: o print realmente ocupa uma fatia maior das costas na foto, não é só ruído de medição.",
+     "A métrica de comprimento gola-barra não pôde ser calculada na foto porque a gola está oculta pela cabeça virada do modelo (marcada como não confiável), mas a métrica de ombros por si só já é suficiente para reprovar."
+    ],
+    "resumo": "Reabri o caso do zero com o critério de hoje (tolerância de 5%). Peça, arte, texto, tinta, anatomia e cor da peça estão todos corretos, sem problema nenhum aí. O problema é a escala do print: medi altura da estampa contra largura ombro a ombro (a gola não dá para medir porque o modelo está com a cabeça virada, escondendo o ponto de referência) e a foto ficou com o print proporcionalmente bem maior que no mockup, desvio estimado em torno de 55%, várias vezes acima do limite de 5%. Fiz uma checagem visual escalando as duas imagens para a mesma largura de ombro e colocando lado a lado, e dá para ver a olho nu que o print da foto é maior em relação à camiseta do que no mockup. Esse tipo de desvio provavelmente já estourava até a tolerância antiga de 15%, então a aprovação de ontem parece ter sido um erro de fato, não um caso limítrofe que só virou problema por causa do critério mais rígido de hoje. Recomendo manter a foto fora do ar e gerar uma versão nova com o print no tamanho correto."
+   },
+   "veredictoFresco": "reprovada",
+   "ceticos": [
+    {
+     "refutado": false,
+     "motivo": "Medi eu mesmo os pixels das duas imagens (PIL/numpy, sem confiar na leitura do juiz) e cheguei a números muito próximos dos dele, o que corrobora o veredito.\n\nFoto (352721197-par.webp, 1024x1024): localizei a borda externa da manga esquerda em x≈278 (y≈565, ponto mais largo, barra da manga) e da manga direita em x≈793 (y≈560-570) → largura ombro-a-ombro/manga-a-manga ≈ 515px. Topo do print (auréola) em y≈349, ponta do respingo mais baixo (drip azul) em y≈732 → altura do print ≈ 383px. Razão altura-print/largura = 383/515 = 74,4% (o juiz reportou 74,8% — praticamente idêntico).\n\nMockup (gallery-04.webp, 500x500, cor Branca): segmentei a camiseta por threshold de cinza (fundo=247, tecido=228-244) e obtive o perfil de largura por linha; o ponto mais largo (barra das mangas) fica em y≈180-185, x de 41 a 461 → largura ≈ 420px. Isolei o print por saturação/escuridão e confirmei visualmente com overlay (sem falsos positivos fora da estampa): topo da auréola y≈110, ponta do drip mais baixo y≈322 → altura do print ≈ 212px. Razão = 212/420 = 50,5% (o juiz reportou 48,3% — também muito próximo).\n\nDesvio pela minha própria medição: (74,4-50,5)/50,5 ≈ 47%, mesma ordem de grandeza do ~55% do juiz — bem acima de qualquer tolerância razoável (5% ou mesmo 15%).\n\nPara confirmar visualmente (não só em números), escalei o mockup para a mesma largura de ombro/manga da foto e recortei as duas estampas lado a lado no mesmo enquadramento (arquivo compare_side_by_side.png gerado nesta sessão). A diferença é nítida a olho nu: com a largura da camiseta igualada, a estampa da foto encosta muito mais perto das duas mangas e os respingos descem bem mais, enquanto no mockup sobra bastante área branca ao redor do desenho. Isso bate exatamente com a conclusão do juiz.\n\nA ressalva do juiz sobre a gola oculta pela cabeça virada está correta e ele não usou essa métrica — usou só ombro-a-ombro, que é mensurável e eu consegui reproduzir de forma independente.\n\nConsiderei a hipótese de que a curvatura 3D do corpo/ombro na foto (vs. mockup chapado) pudesse inflar artificialmente essa razão por foreshortening, mas isso não configura 'medição errada': é exatamente a imagem que o cliente vê, e a memória do projeto já registra que 'a IA corrompe texto pequeno' nas fotos lifestyle geradas por IA desse catálogo — ou seja, distorção de escala do print pela IA é um modo de falha conhecido e documentado deste pipeline, não uma explicação alternativa que anule o problema.\n\nNão encontrei evidência de que a medição do juiz esteja errada, nem regra do dono que isente esse desvio de escala. Veredito de reprovação se sustenta."
+    },
+    {
+     "motivo": "Refutado com base em medição própria (Python/PIL, pixel a pixel, sem depender das figuras do laudo original).\n\nO QUE MEDI:\n- Foto (1024x1024): segmentei a camiseta branca por cor (máscara estrita R≈G≈B>170, excluindo pele e fundo) e isolei o maior componente conectado. A largura máxima do silhueta da camiseta é 532px (y=561, de x=269 a x=801). A altura do print (topo do halo ≈y=350 até a gota mais longa ≈y=713, conferido visualmente em crops com grade a cada 10px) é ≈363px. Ratio print/largura-máxima = 363/532 = 68,2% (não 74,8% como no laudo, mas na mesma direção).\n- Mockup (500x500): mesma técnica. Largura máxima = 421px (y=187, x=41 a x=462). Altura do print (topo halo y=113, gota mais longa y=320) = 207px. Ratio = 207/421 = 49,2% (bate com o 48,3% do laudo — meu método reproduz a métrica deles no mockup).\n\nO PROBLEMA QUE ENCONTREI (evidência de que a MEDIÇÃO/método está errado, não necessariamente o print):\nFiz o mesmo teste que o juiz descreveu (\"escalar o mockup pra mesma largura de ombro e sobrepor\") e sobrepus de fato as duas imagens (escala 1,264x para igualar as larguras máximas, alinhadas pela linha de largura máxima). Resultado: a linha de colarinho do mockup escalado ficou MUITO abaixo da linha de colarinho real da foto — sobra camiseta visível acima do overlay nos dois ombros.\n\nMedindo essa distância: no mockup, do topo do colarinho (y≈55) até o ponto de largura máxima (y=187) são 132px, contra 421px de largura — proporção de 31,4%. Na foto, do colarinho (y≈285) até a largura máxima (y=561) são 276px, contra 532px de largura — proporção de 51,9%. São camisetas com geometria de silhueta 65% diferente entre si (independente do print) — a foto é uma peça oversized/streetwear com manga caindo bem mais baixo antes de atingir a largura máxima, enquanto o mockup tem corte mais \"reto\"/justo. Esse tipo de diferença de caimento (tecido real numa pessoa em pose vs. render 2D chapado) é esperado e normal, e por si só já produz esse tipo de desvio de proporção sem qualquer erro de escala do print.\n\nCONCLUSÃO: a métrica \"altura do print / largura ombro a ombro\" pressupõe que a razão entre esses dois pontos é estável entre mockup (plano, frontal) e foto (peça real, com caimento solto, sobre corpo em pose com cabeça virada, sob perspectiva de câmera). Minha própria sobreposição mostra que essa premissa é falsa aqui: a geometria da silhueta já diverge ~65% antes mesmo de entrar o print na conta. Isso é suficiente para invalidar o uso de uma tolerância de 5% nessa métrica particular — o desvio encontrado (55% no laudo, 39% na minha remedição) é plausivelmente explicado por diferença de caimento/pose/perspectiva, não por erro de escala de estampa. Adicionalmente, não existe corte de costura visível nem na foto nem no mockup para cravar um ponto \"ombro a ombro\" objetivo — ambas as medições de largura de ombro são, na prática, estimativas visuais sobre um contorno de tecido suave, o que já contradiz a precisão de \"74,8%\" a três dígitos significativos reportada no laudo. Verificação visual direta lado a lado (sem escalonamento) também não mostra a olho nu uma estampa desproporcional — em ambas as imagens o desenho ocupa uma faixa central grande e semelhante das costas, compatível com o estilo gráfico bold do produto.\n\nNão estou provando que o print está pixel-perfeito; estou mostrando que o método usado para reprovar (ratio altura/largura-de-ombro comparando render plano com foto de peça real vestida) não é confiável dentro de 5% de tolerância, dado que a própria geometria da peça (sem qualquer print envolvido) já diverge 65% entre as duas imagens por motivo de caimento/pose, não de defeito de arte.",
+     "refutado": true
+    }
+   ]
+  }
+ ]
+}
