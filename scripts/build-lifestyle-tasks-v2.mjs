@@ -41,7 +41,10 @@ for (const e of audit.lista || []) {
 
 function garmentDescription(piece, color) {
   if (/Ecobag/i.test(piece)) return "natural cotton canvas ecobag with realistic handles and structure";
-  if (/Oversized/i.test(piece)) return `${color} heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves`;
+  // "long wide sleeves" aqui gerou duas capas de MANGA COMPRIDA em produto de manga
+  // curta (352890896 e 352718943), pegas so na auditoria visual de 18/07: a descricao
+  // contradizia o mockup e o modelo obedeceu ao texto. Oversized e largo, nao comprido.
+  if (/Oversized/i.test(piece)) return `${color} heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and wide SHORT sleeves ending above the elbow, forearms bare`;
   if (/Camiseta Premium/i.test(piece)) return `${color} premium regular-fit T-shirt, standard silhouette and shorter sleeves`;
   if (/Canguru/i.test(piece)) return `${color} pullover kangaroo hoodie with hood, kangaroo pocket and ribbed cuffs`;
   if (/Blusão/i.test(piece)) return `${color} premium crewneck sweatshirt with ribbed collar, cuffs and hem`;

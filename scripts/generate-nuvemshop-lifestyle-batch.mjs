@@ -422,7 +422,9 @@ function garmentDescription(piece, color) {
     return "natural cotton canvas ecobag with realistic handles and structure";
   }
   if (/Oversized/i.test(piece)) {
-    return `${color} heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves`;
+    // Ver build-lifestyle-tasks-v2.mjs: "long wide sleeves" produziu manga comprida
+    // em camiseta de manga curta. Oversized = largo e caido, nunca comprido.
+    return `${color} heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and wide SHORT sleeves ending above the elbow, forearms bare`;
   }
   if (/Camiseta Premium/i.test(piece)) {
     return `${color} premium regular-fit T-shirt, standard silhouette and shorter sleeves`;
