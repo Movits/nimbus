@@ -70,3 +70,8 @@ nuvemshop/_superados/
 # Pagina de revisao das fotos: derivada do JSON de auditoria (rode scripts/build-review-page.mjs).
 # 3,7 MB de thumbnails; a fonte commitada e review/fotos-a-refazer-*.json.
 nuvemshop/assets/product-lifestyle/**/review/revisao-*/
+
+# Excecao deliberada a doutrina: as copias de UPLOAD em tamanho web (1600px, ~300KB cada)
+# SOBEM no repo. Sao as fotos publicadas na loja publica (nao sao arte), e o raw do GitHub
+# e o transporte pro navegador no fluxo de publicacao. Total ~11MB.
+!nuvemshop/assets/product-lifestyle/**/uploads-v2-small/*.jpg
