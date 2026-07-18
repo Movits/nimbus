@@ -1,0 +1,699 @@
+{
+ "criadoEm": "2026-07-17",
+ "publicar": [
+  {
+   "id": 352407156,
+   "produto": "São Miguel Vintage | Moletom Canguru",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352407156",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-miguel-vintage\\352407156-moletom-canguru-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352407156-branca.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Branca"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352407182,
+   "produto": "São Miguel Vintage | Camiseta Oversized Premium",
+   "acaoOriginal": "manter",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352407182",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-miguel-vintage\\352407182-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352407182-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352618837,
+   "produto": "São Jorge Vintage | Blusão Moletom",
+   "acaoOriginal": "manter",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352618837",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-vintage\\352618837-blusao-moletom-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352618837-branca.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Branca"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352618878,
+   "produto": "São Jorge Vintage | Moletom Canguru",
+   "acaoOriginal": "manter",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352618878",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-vintage\\352618878-moletom-canguru-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352618878-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": [
+    "Azul Marinho",
+    "Rosa Bebê"
+   ]
+  },
+  {
+   "id": 352618903,
+   "produto": "São Jorge Vintage | Camiseta Oversized Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352618903",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-vintage\\352618903-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352618903-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352618935,
+   "produto": "São Jorge Vintage | Camiseta Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352618935",
+   "cores": [
+    "Branca",
+    "Preta"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-vintage\\352618935-camiseta-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352618935-preta.jpg",
+     "ressalva": "imperfeita mas estritamente melhor que a foto no ar; refinar na sessao conjunta"
+    }
+   ],
+   "pendenteQA": [
+    "Preta",
+    "Branca"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352619175,
+   "produto": "Salmo 19 | Moletom Canguru",
+   "acaoOriginal": "reatribuir",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352619175",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-capa-nova",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\salmo-19\\352619175-moletom-canguru-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352619175-preta.jpg"
+    },
+    {
+     "tipo": "mover-foto-atual-para-2",
+     "nota": "foto atual do ar e a cor Branca; vira o hover"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352702020,
+   "produto": "Salmo 19 | Camiseta Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352702020",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\salmo-19\\352702020-camiseta-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352702020-preta.jpg"
+    },
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\salmo-19\\352702020-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352702020-branca.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Preta"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352702753,
+   "produto": "Monograma NIMBUS | Camiseta Oversized Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352702753",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\monograma-nimbus\\352702753-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352702753-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352702796,
+   "produto": "Monograma NIMBUS | Camiseta Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352702796",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\monograma-nimbus\\352702796-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352702796-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352702858,
+   "produto": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352702858",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\fe-acima-de-tudo\\352702858-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352702858-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352703153,
+   "produto": "Fé Acima de Tudo | Camiseta Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352703153",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\fe-acima-de-tudo\\352703153-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352703153-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352717723,
+   "produto": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352717723",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\brasao-nimbus\\352717723-camiseta-oversized-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352717723-preta.jpg"
+    },
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\brasao-nimbus\\352717723-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352717723-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352717837,
+   "produto": "Brasão NIMBUS | Camiseta Premium",
+   "acaoOriginal": "reatribuir",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352717837",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-capa-nova",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\brasao-nimbus\\352717837-camiseta-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352717837-preta.jpg"
+    },
+    {
+     "tipo": "mover-foto-atual-para-2",
+     "nota": "foto atual do ar e a cor Branca; vira o hover"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352718787,
+   "produto": "São Jorge Neobarroco | Moletom Canguru",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352718787",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-neobarroco\\352718787-moletom-canguru-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352718787-preta.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Preta",
+    "Branca"
+   ],
+   "removerVariantes": [
+    "Rosa Bebê",
+    "Azul Marinho"
+   ]
+  },
+  {
+   "id": 352718999,
+   "produto": "São Jorge Neobarroco | Camiseta Premium",
+   "acaoOriginal": "manter",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352718999",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\sao-jorge-neobarroco\\352718999-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352718999-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": [
+    "Azul Marinho"
+   ]
+  },
+  {
+   "id": 352720257,
+   "produto": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352720257",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\acima-de-tudo-gotico\\352720257-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352720257-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352721118,
+   "produto": "Fé Wildstyle | Camiseta Oversized Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352721118",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\fe-wildstyle\\352721118-camiseta-oversized-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352721118-preta.jpg"
+    },
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\fe-wildstyle\\352721118-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352721118-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352721197,
+   "produto": "Fé Wildstyle | Camiseta Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352721197",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\fe-wildstyle\\352721197-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352721197-branca.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Branca"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352721477,
+   "produto": "Espírito Santo Spray | Camiseta Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352721477",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\espirito-santo-spray\\352721477-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352721477-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352725749,
+   "produto": "Querubim Spray | Camiseta Oversized Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352725749",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\querubim-spray\\352725749-camiseta-oversized-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352725749-preta.jpg",
+     "ressalva": "imperfeita mas estritamente melhor que a foto no ar; refinar na sessao conjunta"
+    },
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\querubim-spray\\352725749-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352725749-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Preta"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352725852,
+   "produto": "Querubim Spray | Camiseta Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352725852",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\querubim-spray\\352725852-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352725852-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352726673,
+   "produto": "São Miguel Vitorioso | Moletom Canguru",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352726673",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\sao-miguel-vitorioso\\352726673-moletom-canguru-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352726673-preta.jpg"
+    },
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\sao-miguel-vitorioso\\352726673-moletom-canguru-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352726673-branca.jpg"
+    }
+   ],
+   "pendenteQA": [
+    "Branca"
+   ],
+   "removerVariantes": [
+    "Azul Marinho"
+   ]
+  },
+  {
+   "id": 352727545,
+   "produto": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "acaoOriginal": "ok",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352727545",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\sao-miguel-vitorioso\\352727545-camiseta-oversized-premium-off-white.png",
+     "cor": "Off-White",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352727545-off-white.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  },
+  {
+   "id": 352728357,
+   "produto": "Anjo da Guarda Stencil | Camiseta Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352728357",
+   "cores": [
+    "Preta"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\anjo-da-guarda-stencil\\352728357-camiseta-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352728357-preta.jpg",
+     "ressalva": "imperfeita mas estritamente melhor que a foto no ar; refinar na sessao conjunta"
+    }
+   ],
+   "pendenteQA": [
+    "Preta"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352890896,
+   "produto": "Aparecida Barroca | Camiseta Oversized Premium",
+   "acaoOriginal": "refazer",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352890896",
+   "cores": [
+    "Preta",
+    "Off-White"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "substituir-capa",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\reliquia\\aparecida-barroca\\352890896-camiseta-oversized-premium-preta.png",
+     "cor": "Preta",
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352890896-preta.jpg",
+     "ressalva": "imperfeita mas estritamente melhor que a foto no ar; refinar na sessao conjunta"
+    }
+   ],
+   "pendenteQA": [
+    "Preta",
+    "Off-White"
+   ],
+   "removerVariantes": []
+  },
+  {
+   "id": 352898175,
+   "produto": "São Miguel Vitorioso | Camiseta Premium",
+   "acaoOriginal": "manter",
+   "adminUrl": "https://nimbus40.lojavirtualnuvem.com.br/admin/products/352898175",
+   "cores": [
+    "Preta",
+    "Branca"
+   ],
+   "capa": "Preta",
+   "passos": [
+    {
+     "tipo": "subir-par-hover",
+     "arquivo": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\final\\street\\sao-miguel-vitorioso\\352898175-camiseta-premium-branca.png",
+     "cor": "Branca",
+     "posicao": 2,
+     "upload": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/uploads-v2/352898175-branca.jpg"
+    }
+   ],
+   "pendenteQA": [],
+   "removerVariantes": []
+  }
+ ],
+ "segurar": [
+  {
+   "id": 352618935,
+   "produto": "São Jorge Vintage | Camiseta Premium",
+   "cor": "Branca",
+   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
+  },
+  {
+   "id": 352718787,
+   "produto": "São Jorge Neobarroco | Moletom Canguru",
+   "cor": "Branca",
+   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
+  },
+  {
+   "id": 352718943,
+   "produto": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
+  },
+  {
+   "id": 352727892,
+   "produto": "Aparecida Spray | Blusão Moletom",
+   "cor": "Preta",
+   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
+  },
+  {
+   "id": 352890896,
+   "produto": "Aparecida Barroca | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "motivo": "reprovada no QA; melhorar juntos no Higgsfield"
+  }
+ ]
+}
