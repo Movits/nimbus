@@ -1,0 +1,30 @@
+{
+ "fase": "v4i",
+ "criadoEm": "2026-07-19",
+ "tasks": [
+  {
+   "productId": 352702020,
+   "title": "Salmo 19 | Camiseta Premium",
+   "collection": "RELIQUIA",
+   "family": "Salmo 19",
+   "piece": "Camiseta Premium",
+   "color": "Branca",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Gabriel",
+   "garment": "Branca premium regular-fit T-shirt, standard silhouette, shoulder seam on the shoulder point and SHORT sleeves ending at mid-bicep, both forearms completely bare",
+   "modelBoard": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/casting/gabriel-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352702020-salmo-193/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352702020-salmo-193/gallery-04.webp",
+   "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/RELIQUIA/mockups/Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]/costas - Salmo 19.png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/salmo-19/352702020-camiseta-premium-preta.png",
+   "composicao": null,
+   "notes": [
+    "REFERENCE 6 is the approved Preta photo of this exact same product, already live on the site. This is the SAME MAN, not a similar-looking one: match his exact facial structure, jaw, short dark hairstyle, and skin tone precisely — a previous attempt at this Branca photo rendered a visibly different person. Same pose, same scene, same print size, change ONLY the garment color to Branca (bright clean white)."
+   ],
+   "tag": "v4i",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352702020-branca-v4i.png"
+  }
+ ]
+}

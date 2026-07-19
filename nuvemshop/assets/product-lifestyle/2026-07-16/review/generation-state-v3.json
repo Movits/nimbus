@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T16:16:12.082Z",
+  "updatedAt": "2026-07-19T16:35:03.169Z",
   "tasks": {
     "352407156:Preta:v4b": {
       "status": "completed",
@@ -105,6 +105,13 @@
       "jobId": "48ba815a-ac4d-4e32-9413-a107512fd087",
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_161526_48ba815a-ac4d-4e32-9413-a107512fd087_min.webp",
       "at": "2026-07-19T16:16:12.080Z"
+    },
+    "352702020:Branca:v4i": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352702020-branca-v4i.png",
+      "jobId": "804ac0df-4030-44b9-9d2e-a721584ffdb2",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_163426_804ac0df-4030-44b9-9d2e-a721584ffdb2_min.webp",
+      "at": "2026-07-19T16:35:03.167Z"
     }
   }
 }
