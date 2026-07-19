@@ -111,7 +111,8 @@
    352618935,
    352407156,
    352718943,
-   352718999
+   352718999,
+   352890896
   ],
   "fotosCompanheirasRestauradas": [
    {
@@ -177,5 +178,20 @@
     "problema": "piorou em vez de melhorar so com ajuste numerico"
    }
   ]
+ },
+ "rodadaV4dResultado": {
+  "aprovada": {
+   "productId": 352890896,
+   "cor": "Preta",
+   "desvio": 7,
+   "obs": "quase identica a parceira (0-0.3% diff); legenda SACRO virou SRCRO mas ilegivel em miniatura (regra da distancia) - publicada com essa ressalva documentada"
+  },
+  "reprovada": {
+   "productId": 352407182,
+   "ultimaRodada": "v4d",
+   "desvio": 25,
+   "tentativa": "artHelperRef com foto da mesma familia em outra peca - nao ajudou, e surgiu defeito novo (NIMBUS corrompido)",
+   "historico": "v4a=25%, v4b=12%, v4c=25%, v4d=25% - oscila sem convergir"
+  }
  }
 }
