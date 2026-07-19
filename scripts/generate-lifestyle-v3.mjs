@@ -92,6 +92,9 @@ function garmentLock(task) {
 function compositionLock(task) {
   const g = task.composicao;
   if (!g) {
+    if (task.sceneRef) {
+      return "SCALE LOCK — the print must be EXACTLY the same size, in the exact same position on the garment, as it appears in the campaign-photo reference of the other color. This is the single most important requirement: the two photos will be shown side by side to the customer on hover, and any difference in print size between them is an immediate, visible defect. Do not resize, do not reinterpret the scale from the mockup — copy the size and placement pixel-for-pixel from the reference photo, changing only the garment color.";
+    }
     return "SCALE LOCK — reproduce the print at exactly the size it has in the mockup reference relative to the garment. It must never be larger; when uncertain, render it clearly SMALLER. Leave a wide band of empty fabric below the print and bare fabric on both sides.";
   }
   const sup = Math.round(g.sup), alt = Math.round(g.alt), inf = Math.round(g.inf), larg = Math.round(g.larg);
@@ -121,7 +124,7 @@ function buildPrompt(task) {
   push(task.mockupRef, `REFERENCE {N} is the live YouDraw/Nuvemshop product mockup FOR THIS COLOR and is the authority for which side is printed, where the print sits and HOW BIG the print is relative to the garment.`);
   push(task.artworkRef, `REFERENCE {N} is the original artwork and is the authority for every line, color, word and signature.`);
   push(task.artHelperRef, `REFERENCE {N} is an APPROVED photo of a different garment carrying THIS EXACT SAME artwork, correctly printed: copy the artwork content precisely as it appears there (composition, colors, framing elements), adapted to this garment at the size specified below.`);
-  push(task.sceneRef, `REFERENCE {N} is the approved campaign photo of this exact product in another color: match the SAME model, SAME scene, SAME framing and SAME natural light, changing ONLY the garment color to ${task.color}.`);
+  push(task.sceneRef, `REFERENCE {N} is the approved campaign photo of this exact product in another color: match the SAME model, SAME scene, SAME framing, SAME pose, SAME natural light and — critically — the EXACT SAME print size and position, changing ONLY the garment color to ${task.color}.`);
 
   const pose =
     task.view === "back"
@@ -152,7 +155,7 @@ function buildPrompt(task) {
   const checklist = [
     `BEFORE YOU FINISH, verify each of these and fix the image if any answer is no:`,
     `(1) Are the sleeves exactly as specified in the GARMENT LOCK${/SHORT/.test(garmentLock(task)) ? ", with both forearms bare" : ", long and cuffed at the wrist"}?`,
-    task.composicao ? `(2) Is there a wide band of EMPTY fabric below the print, covering the lower ${Math.round(task.composicao.inf)} percent of the garment down to the hem?` : `(2) Is there a wide band of EMPTY fabric below the print?`,
+    task.composicao ? `(2) Is there a wide band of EMPTY fabric below the print, covering the lower ${Math.round(task.composicao.inf)} percent of the garment down to the hem?` : task.sceneRef ? `(2) Is the print EXACTLY the same size as in the other-color reference photo — not larger, not smaller?` : `(2) Is there a wide band of EMPTY fabric below the print?`,
     `(3) Does the print stop a hand's width short of both side seams?`,
     `(4) Is every letter in the artwork spelled exactly as in the artwork reference?`,
     `(5) Does the ink follow the fabric folds instead of sitting flat like a sticker?`,
@@ -222,7 +225,8 @@ async function generate(task, state) {
   const job = Array.isArray(payload) ? payload[0] : payload;
   const url =
     job?.results?.raw?.url || job?.results?.min?.url ||
-    job?.results?.[0]?.url || job?.result?.url || job?.url || null;
+    job?.results?.[0]?.url || job?.result?.url ||
+    job?.raw_result_url || job?.min_result_url || job?.url || null;
   if (!url) throw new Error(`${key}: job sem URL de resultado: ${JSON.stringify(job).slice(0, 400)}`);
 
   await download(url, task.output);

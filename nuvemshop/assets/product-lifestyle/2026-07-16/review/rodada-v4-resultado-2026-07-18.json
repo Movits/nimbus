@@ -1,0 +1,103 @@
+{
+ "rodada": "v4 - regra combinada 10% individual + 8% entre par de cor",
+ "criadoEm": "2026-07-18",
+ "interrompidaAPedidoDoDono": true,
+ "criterioNovo": "escala ate 10% de desvio do mockup por foto, e ate ~8 pontos de diferenca entre a capa e a foto da segunda cor do mesmo produto (evita salto de tamanho no hover)",
+ "causaRaizCorrigida": "descricao da peca para Camiseta Oversized dizia \"long wide sleeves\" nos dois geradores (v1 e v2) - gerava manga comprida em produto de manga curta. Corrigido na fonte (build-lifestyle-tasks-v2.mjs e generate-nuvemshop-lifestyle-batch.mjs) e o gerador v3 nao herda mais essa string.",
+ "geradorNovo": "scripts/generate-lifestyle-v3.mjs: trava de peca por extenso (manga curta vs comprida, capuz vs sem capuz), trava de escala por espaco-vazio com numeros medidos do mockup OU da foto parceira aprovada (sceneRef), checklist final de autoverificacao.",
+ "aprovadas": [
+  {
+   "productId": 352721197,
+   "cor": "Branca",
+   "titulo": "Fé Wildstyle | Camiseta Premium",
+   "rodada": "v4a",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352721197-branca-v4a.png",
+   "desvio": -2.2,
+   "obs": "todos os criterios ok"
+  },
+  {
+   "productId": 352728357,
+   "cor": "Preta",
+   "titulo": "Anjo da Guarda Stencil | Camiseta Premium",
+   "rodada": "v4a",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352728357-preta-v4a.png",
+   "desvio": 9,
+   "obs": "aprovada, margem estreita (~9%, teto e 10%)"
+  },
+  {
+   "productId": 352702020,
+   "cor": "Branca",
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "rodada": "v4a",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352702020-branca-v4a.png",
+   "desvio": -3,
+   "obs": "consistente com a parceira preta"
+  },
+  {
+   "productId": 352718787,
+   "cor": "Preta",
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "rodada": "v4a",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718787-preta-v4a.png",
+   "desvio": -6.2,
+   "obs": "mesma foto-base da parceira em outra cor, consistencia garantida"
+  },
+  {
+   "productId": 352618935,
+   "cor": "Preta",
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "rodada": "v4a",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352618935-preta-v4a.png",
+   "desvio": 7.2,
+   "obs": "fit corrigido pra regular, consistente com a parceira"
+  },
+  {
+   "productId": 352407156,
+   "cor": "Preta",
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "rodada": "v4b",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407156-preta-v4b.png",
+   "desvio": -5,
+   "obs": "logo NIMBUS que faltava na v4a voltou; escala otima"
+  }
+ ],
+ "pendentes": [
+  {
+   "productId": 352890896,
+   "cor": "Preta",
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "ultimaRodada": "v4b",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352890896-preta-v4b.png",
+   "status": "reprovada, mas grande melhora",
+   "problema": "legenda \"BRARIL SACRO\" (devia ser BRASIL SACRO, 1 letra trocada) + escala ainda ~13% (teto e 10%). v4a tinha vindo com moldura/texto/logo AUSENTES e escala +160%; v4b corrigiu tudo isso, sobrou so a letra e o ajuste fino de escala."
+  },
+  {
+   "productId": 352718943,
+   "cor": "Preta",
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "ultimaRodada": "v4b",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718943-preta-v4b.png",
+   "status": "reprovada",
+   "problema": "v4a: manga corrigida mas escala ~24% acima do mockup. v4b: usou a arte ERRADA (Sao Miguel Arcanjo em vez de Sao Jorge) apesar das referencias no prompt estarem corretas - falha do modelo, nao de dado. Precisa nova tentativa."
+  },
+  {
+   "productId": 352718999,
+   "cor": "Preta",
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "ultimaRodada": "v4b",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718999-preta-v4b.png",
+   "status": "reprovada",
+   "problema": "v4a: cor errada confirmada (preta rotulada como branca) e escala +30%. v4b corrigiu a escala vs mockup (-6.6%) mas ficou MENOR que a foto parceira (diff ~22-35pp) - overcorrigiu por causa da instrucao \"renderize menor\" no prompt de correcao. Proxima tentativa deve mirar exatamente nos numeros medidos da parceira, sem vies de \"menor\"."
+  },
+  {
+   "productId": 352407182,
+   "cor": "Preta",
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "ultimaRodada": "v4b",
+   "arquivo": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4b.png",
+   "status": "reprovada, melhorou bastante",
+   "problema": "v4a: escala +25%. v4b com geometria mais apertada (sup17/alt33/inf50/larg48): melhorou para ~12% (teto e 10%). Peca/arte/texto/tinta/anatomia/cor todos ok - so falta um ultimo ajuste fino, pequeno, de escala."
+  }
+ ],
+ "observacao": "Nenhuma das aprovadas foi publicada na loja ainda - sao candidatas locais em final/v4/*.png (fora do git, doutrina de nao versionar imagem-arte), aguardando revisao/upload manual numa proxima sessao. As 4 pendentes precisam de mais uma rodada de geracao cada, com ajustes pontuais ja identificados (ver campo \"problema\" de cada uma)."
+}

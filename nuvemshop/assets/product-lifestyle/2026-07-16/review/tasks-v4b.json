@@ -1,0 +1,150 @@
+{
+ "fase": "v4b",
+ "criadoEm": "2026-07-18",
+ "tasks": [
+  {
+   "productId": 352890896,
+   "title": "Aparecida Barroca | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "Aparecida Barroca",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352890896-aparecida-barroca2/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352890896-aparecida-barroca2/gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352890896-par.webp",
+   "composicao": {
+    "sup": 12,
+    "alt": 47,
+    "inf": 41,
+    "larg": 54
+   },
+   "notes": [
+    "a previous attempt catastrophically failed: it OMITTED the blue-and-gold azulejo frame around the illustration, OMITTED the PADROEIRA (BRASIL SACRO) caption, and OMITTED the NIMBUS signature entirely, while also inflating the print to roughly 160 percent of the correct size — this is unacceptable and must not repeat",
+    "copy the artwork EXACTLY as it appears in REFERENCE 5 (the other-color approved photo): full ornamented tile frame around the illustration, the caption band below it, and the NIMBUS wordmark at the very bottom — all three must be visibly present",
+    "the print in REFERENCE 5 is the correct size — do not enlarge it, do not let it grow to fill the back"
+   ],
+   "tag": "v4b",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352890896-preta-v4b.png"
+  },
+  {
+   "productId": 352718999,
+   "title": "São Jorge Neobarroco | Camiseta Premium",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Neobarroco",
+   "piece": "Camiseta Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "garment": "Preta premium regular-fit T-shirt, standard silhouette, shoulder seam on the shoulder point and SHORT sleeves ending at mid-bicep, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352718999-sao-jorge-neobarroco3/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352718999-sao-jorge-neobarroco3/gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718999-par.webp",
+   "composicao": {
+    "sup": 11,
+    "alt": 57,
+    "inf": 32,
+    "larg": 63
+   },
+   "notes": [
+    "a previous attempt printed the artwork about 30 percent larger than the mockup and than the approved other-color reference photo — the print must be visibly smaller this time, matching REFERENCE 5 exactly"
+   ],
+   "tag": "v4b",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718999-preta-v4b.png"
+  },
+  {
+   "productId": 352718943,
+   "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Neobarroco",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352718943-sao-jorge-neobarroco2/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352718943-sao-jorge-neobarroco2/gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352718943-par.webp",
+   "composicao": {
+    "sup": 12.5,
+    "alt": 45.9,
+    "inf": 41.6,
+    "larg": 64.3
+   },
+   "notes": [
+    "the short sleeve is now correct, keep it exactly as is",
+    "a previous attempt printed the artwork about 24 percent larger than the mockup, even though it matched the other-color reference in relative proportion — both must hold at once: match REFERENCE 5 exactly AND stay within the mockup scale; when in doubt, go smaller"
+   ],
+   "tag": "v4b",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718943-preta-v4b.png"
+  },
+  {
+   "productId": 352407182,
+   "title": "São Miguel Vintage | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Miguel Vintage",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Clara",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\clara-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-01.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "artHelperRef": null,
+   "sceneRef": null,
+   "composicao": {
+    "sup": 17,
+    "alt": 33,
+    "inf": 50,
+    "larg": 48
+   },
+   "notes": [
+    "a previous attempt printed the artwork about 25 percent larger than instructed despite explicit measurements — this time render the print NOTICEABLY smaller than what feels natural; err heavily on the side of too small"
+   ],
+   "tag": "v4b",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4b.png"
+  },
+  {
+   "productId": 352407156,
+   "title": "São Miguel Vintage | Moletom Canguru",
+   "collection": "RELIQUIA",
+   "family": "São Miguel Vintage",
+   "piece": "Moletom Canguru",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Clara",
+   "garment": "Preta pullover kangaroo hoodie with a visible hood gathered at the nape, kangaroo pocket and LONG sleeves with ribbed cuffs",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\clara-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407156-sao-miguel-vintage1/gallery-01.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407156-sao-miguel-vintage1/gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352407156-par.webp",
+   "composicao": null,
+   "notes": [
+    "the scale of the previous attempt was excellent, keep composing it exactly the same way",
+    "a previous attempt OMITTED the NIMBUS wordmark that sits below the illustrated panel — REFERENCE 5 (the other-color approved photo) and the artwork reference both show it clearly: it MUST be present, correctly spelled, in this image too"
+   ],
+   "tag": "v4b",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407156-preta-v4b.png"
+  }
+ ]
+}

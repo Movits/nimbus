@@ -1,0 +1,53 @@
+{
+ "fase": "round6b",
+ "tasks": [
+  {
+   "productId": 352718943,
+   "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Jorge Neobarroco",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-03.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352718943-sao-jorge-neobarroco2\\gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "ART LOCK: copy the artwork EXACTLY as printed in the approved-photo reference: Sao Jorge in BLACK plate armor with red-plumed helmet RIDING a white rearing horse facing LEFT, huge RED dragon at lower LEFT breaking out of the frame, gold rococo frame OUTSIDE with blue azulejo border INSIDE (medallions: sacred heart, anchor), GOLDEN sculptural cherubs holding the NIMBUS cartouche at the TOP, green background with chapel. Never mirror, never recolor, never move the NIMBUS out of the cartouche",
+    "SCALE LOCK BY EMPTY SPACE: the print is SMALL and sits HIGH between the shoulder blades. The bottom edge of the frame ends at 55 percent of the shirt length; the ENTIRE LOWER 40 PERCENT of the shirt is EMPTY BLACK fabric with nothing printed. The print never goes near the hem. When uncertain, make it even smaller"
+   ],
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/sao-jorge-neobarroco/352718943-camiseta-oversized-premium-preta-r6b.png",
+   "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/sao-jorge-neobarroco/352718787-moletom-canguru-branca-r4b.png"
+  },
+  {
+   "productId": 352890896,
+   "title": "Aparecida Barroca | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "Aparecida Barroca",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Off-White",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garment": "Off-White heavyweight premium oversized T-shirt, boxy silhouette, dropped shoulders and long wide sleeves",
+   "garmentRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-01.webp",
+   "mockupRef": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\references\\352890896-aparecida-barroca2\\gallery-02.webp",
+   "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/RELIQUIA/mockups/Aparecida Ouro [Camiseta+Oversized] [frente e verso]/costas - Aparecida Ouro.png",
+   "sceneRef": null,
+   "tipo": "cor-nova",
+   "notes": [
+    "TEXT LOCK: copy the cartouche text EXACTLY as in the approved-photo reference and the artwork: two lines, \"PADROEIRA\" and \"(BRASIL SACRO)\" with parentheses, letter by letter. The Child face at the bottom opening of the mantle is an INFANT face over white drapery, never veiled or bandaged. Above the NIMBUS signature only a thin halo line",
+    "SCALE LOCK BY EMPTY SPACE: the print is SMALL and sits HIGH on the back. The bottom edge of the print (the NIMBUS signature) ends at 56 percent of the shirt length; the ENTIRE LOWER 40 PERCENT of the shirt is EMPTY off-white fabric. When uncertain, make the print even smaller"
+   ],
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/aparecida-barroca/352890896-camiseta-oversized-premium-off-white-r6b.png",
+   "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/aparecida-barroca/352890896-camiseta-oversized-premium-preta.png"
+  }
+ ]
+}
