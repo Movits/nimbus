@@ -1957,3 +1957,16 @@ html body footer.js-footer > .text-left.text-md-center {
     transform: none;
   }
 }
+
+/* ============================================================
+   Anjo da Guarda Stencil (352728357) e mono-cor: so tem Preta,
+   nunca teve Branca/Off-White. O tema Baires decide swap-no-hover
+   pela CONTAGEM de fotos (2+), nao pela cor -- e este produto tem
+   2 fotos de modelo (angulos diferentes), entao o tema troca entre
+   elas achando que sao cores diferentes. Forca o mesmo zoom leve dos
+   produtos de cor unica aqui, travando a foto secundaria.
+   ============================================================ */
+.item[data-product-id="352728357"]:hover .item-image-secondary,
+.js-item-product[data-product-id="352728357"]:hover .item-image-secondary {
+  opacity: 0 !important;
+}

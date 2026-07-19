@@ -237,5 +237,25 @@
    "352890896: legenda (BRASIL SACRO) com letra malformada, ilegivel em miniatura",
    "352407182: escala ~12% (teto e 10%), unico defeito - 5 rodadas tentadas, nao convergiu melhor que isso"
   ]
+ },
+ "correcoesPosPublicacao": {
+  "data": "2026-07-19",
+  "motivador": "Roberto notou 2 problemas apos o fechamento 10/10: 352407182 sem Off-White, e outro produto com 2 fotos de modelo na mesma cor",
+  "itens": [
+   {
+    "produto": 352407182,
+    "problema": "faltava a foto Off-White (so tinha Preta) -- Off-White ja era variante real (SKUs P-EG cadastrados, mockup flat gallery-03/04 ja publicado), nao um produto mono-cor",
+    "correcao": "gerada via v4f: sceneRef=352407182-preta-v4b.png (foto Preta ja aprovada), mockupRef=gallery-04.webp real do Off-White. Resultado bateu 0.1% de diferenca de escala vs a Preta (regra e <=8pp) -- aprovada de primeira, sem retrabalho. Publicada como par (posicao 2), Preta mantida como capa.",
+    "arquivo": "final/v4/352407182-off-white-v4f.png",
+    "publicadoEm": "2026-07-19"
+   },
+   {
+    "produto": 352728357,
+    "titulo": "Anjo da Guarda Stencil | Camiseta Premium",
+    "problema": "2 fotos de modelo na mesma cor (Preta) -- Roberto reportou como 'mesma cor', investigado e NAO e o mesmo bug do Sao Miguel: este produto so tem variante Preta cadastrada (nunca teve Branca/Off-White, mockup proprio tem um unico arquivo sem par de cor, diferente do Arcanjo Spray que tem preto+branco separados). E mono-cor por decisao de design original, nao uma foto faltando.",
+    "decisaoRoberto": "quando um produto so tem uma cor, o hover no site NAO deve trocar de foto -- deve so fazer o zoom padrao que os outros cards fazem. Pendente: localizar a regra CSS/JS de hover-swap no tema Baires e restringir a produtos com 2+ cores, ou os produtos mono-cor continuarao trocando para uma foto quase identica no hover.",
+    "status": "pendente -- ajuste de tema, nao de foto"
+   }
+  ]
  }
 }
