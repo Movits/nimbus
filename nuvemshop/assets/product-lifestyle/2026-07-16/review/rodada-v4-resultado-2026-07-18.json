@@ -193,5 +193,40 @@
    "tentativa": "artHelperRef com foto da mesma familia em outra peca - nao ajudou, e surgiu defeito novo (NIMBUS corrompido)",
    "historico": "v4a=25%, v4b=12%, v4c=25%, v4d=25% - oscila sem convergir"
   }
+ },
+ "pendenciaFinal": {
+  "productId": 352407182,
+  "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+  "cor": "Preta",
+  "status": "PARADO apos 5 rodadas sem convergencia confiavel - decisao do dono necessaria",
+  "historico": [
+   {
+    "rodada": "v4a",
+    "desvio": 25,
+    "obs": "so numeros"
+   },
+   {
+    "rodada": "v4b",
+    "desvio": 12,
+    "obs": "MELHOR resultado: peca/arte/texto/tinta/anatomia/cor todos ok, so a escala ~2pp acima do teto"
+   },
+   {
+    "rodada": "v4c",
+    "desvio": 25,
+    "obs": "piorou so com aperto numerico"
+   },
+   {
+    "rodada": "v4d",
+    "desvio": 25,
+    "obs": "artHelperRef (outra peca) nao ajudou, texto NIMBUS corrompido"
+   },
+   {
+    "rodada": "v4e",
+    "desvio": 35,
+    "obs": "sceneRef proprio (v4b como referencia): PIOROU MAIS - trocou a arte inteira (colorida, moldura diferente), NIMBUS virou NIMBOS"
+   }
+  ],
+  "recomendacao": "usar a v4b (final/v4/352407182-preta-v4b.png, ~12% de desvio) como publicacao com ressalva, seguindo o mesmo criterio ja usado antes neste projeto pra defeitos residuais pequenos - ou tentar mais rodadas numa sessao futura (Higgsfield CLI ja autenticado, script pronto em scripts/generate-lifestyle-v3.mjs)",
+  "creditosGastosNesteItem": 10
  }
 }
