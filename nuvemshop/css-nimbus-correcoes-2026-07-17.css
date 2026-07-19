@@ -1958,3 +1958,20 @@ html body footer.js-footer > .text-left.text-md-center {
   }
 }
 
+/* ============================================================
+   Produtos mono-cor (19/07/2026): o tema Baires decide o swap-no-hover
+   pela CONTAGEM de fotos no grid (2+), nao pela cor. Estes 20 produtos
+   so tem UMA cor cadastrada mas 2+ fotos na galeria (foto de modelo +
+   mockups da YouDraw), entao o tema troca entre elas como se fossem
+   cores diferentes. Trava por data-product-id (sem exigir a classe
+   .item no mesmo elemento -- o atributo pode estar num ancestral
+   diferente dependendo do template do card) para nao trocar de foto,
+   so o zoom padrao. As fotos da YouDraw continuam na galeria, intactas.
+   ============================================================ */
+[data-product-id="352728451"] .item-image-secondary, [data-product-id="352728524"] .item-image-secondary, [data-product-id="352728277"] .item-image-secondary, [data-product-id="352728357"] .item-image-secondary, [data-product-id="352719728"] .item-image-secondary, [data-product-id="352720127"] .item-image-secondary, [data-product-id="352719816"] .item-image-secondary, [data-product-id="352727892"] .item-image-secondary, [data-product-id="352728019"] .item-image-secondary, [data-product-id="352889132"] .item-image-secondary, [data-product-id="352717960"] .item-image-secondary, [data-product-id="352718275"] .item-image-secondary, [data-product-id="352718083"] .item-image-secondary, [data-product-id="352703276"] .item-image-secondary, [data-product-id="352703343"] .item-image-secondary, [data-product-id="355581274"] .item-image-secondary, [data-product-id="352722232"] .item-image-secondary, [data-product-id="352722510"] .item-image-secondary, [data-product-id="352723243"] .item-image-secondary, [data-product-id="352722685"] .item-image-secondary {
+  opacity: 0 !important;
+}
+
+[data-product-id="352728451"] .item-image-featured, [data-product-id="352728524"] .item-image-featured, [data-product-id="352728277"] .item-image-featured, [data-product-id="352728357"] .item-image-featured, [data-product-id="352719728"] .item-image-featured, [data-product-id="352720127"] .item-image-featured, [data-product-id="352719816"] .item-image-featured, [data-product-id="352727892"] .item-image-featured, [data-product-id="352728019"] .item-image-featured, [data-product-id="352889132"] .item-image-featured, [data-product-id="352717960"] .item-image-featured, [data-product-id="352718275"] .item-image-featured, [data-product-id="352718083"] .item-image-featured, [data-product-id="352703276"] .item-image-featured, [data-product-id="352703343"] .item-image-featured, [data-product-id="355581274"] .item-image-featured, [data-product-id="352722232"] .item-image-featured, [data-product-id="352722510"] .item-image-featured, [data-product-id="352723243"] .item-image-featured, [data-product-id="352722685"] .item-image-featured {
+  opacity: 1 !important;
+}

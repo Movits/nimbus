@@ -1,0 +1,31 @@
+{
+ "fase": "v4h",
+ "criadoEm": "2026-07-19",
+ "tasks": [
+  {
+   "productId": 352407196,
+   "title": "São Miguel Vintage | Camiseta Premium",
+   "collection": "RELIQUIA",
+   "family": "São Miguel Vintage",
+   "piece": "Camiseta Premium",
+   "color": "Branca",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Clara",
+   "garment": "Branca premium regular-fit T-shirt, standard silhouette, shoulder seam on the shoulder point and SHORT sleeves ending at mid-bicep, both forearms completely bare",
+   "modelBoard": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/casting/clara-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407196-sao-miguel-vintage3/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407196-sao-miguel-vintage3/gallery-04.webp",
+   "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/RELIQUIA/mockups/São Miguel Vintage [Camiseta+Oversized] [frente e verso]/costas - São Miguel Vintage (2).png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/reliquia/sao-miguel-vintage/352407196-camiseta-premium-preta.png",
+   "composicao": null,
+   "notes": [
+    "REFERENCE 6 is the approved Preta photo of this exact same product, already live on the site — same model, same pose, same scene, same print size. Change ONLY the garment color to Branca (bright clean white, not off-white/cream), keeping everything else identical, especially the print scale and the regular (not oversized) fit.",
+    "LETTER-BY-LETTER SPELLING LOCK for the small signature line below the illustration, the single most error-prone element: it reads exactly N-I-M-B-U-S, six characters, all capital serif letters. The second letter is a plain vertical-stroke I (capital I, like in \"Rome\"), not an E, not a reversed E, not any other glyph. A previous attempt corrupted it into an unreadable glyph — copy each letter shape exactly."
+   ],
+   "tag": "v4h",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407196-branca-v4h.png"
+  }
+ ]
+}

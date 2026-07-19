@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T13:52:08.879Z",
+  "updatedAt": "2026-07-19T16:16:12.082Z",
   "tasks": {
     "352407156:Preta:v4b": {
       "status": "completed",
@@ -91,6 +91,20 @@
       "jobId": "f9431d51-5138-469f-bcf7-e0031800619c",
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_135131_f9431d51-5138-469f-bcf7-e0031800619c_min.webp",
       "at": "2026-07-19T13:52:08.878Z"
+    },
+    "352407196:Branca:v4g": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407196-branca-v4g.png",
+      "jobId": "0acda135-d845-4f81-92e5-c9c81f613274",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_161039_0acda135-d845-4f81-92e5-c9c81f613274_min.webp",
+      "at": "2026-07-19T16:11:25.388Z"
+    },
+    "352407196:Branca:v4h": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407196-branca-v4h.png",
+      "jobId": "48ba815a-ac4d-4e32-9413-a107512fd087",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_161526_48ba815a-ac4d-4e32-9413-a107512fd087_min.webp",
+      "at": "2026-07-19T16:16:12.080Z"
     }
   }
 }
