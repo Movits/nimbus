@@ -255,7 +255,54 @@
     "problema": "2 fotos de modelo na mesma cor (Preta) -- Roberto reportou como 'mesma cor', investigado e NAO e o mesmo bug do Sao Miguel: este produto so tem variante Preta cadastrada (nunca teve Branca/Off-White, mockup proprio tem um unico arquivo sem par de cor, diferente do Arcanjo Spray que tem preto+branco separados). E mono-cor por decisao de design original, nao uma foto faltando.",
     "decisaoRoberto": "quando um produto so tem uma cor, o hover no site NAO deve trocar de foto -- deve so fazer o zoom padrao que os outros cards fazem. Pendente: localizar a regra CSS/JS de hover-swap no tema Baires e restringir a produtos com 2+ cores, ou os produtos mono-cor continuarao trocando para uma foto quase identica no hover.",
     "status": "pendente -- ajuste de tema, nao de foto"
+   },
+   {
+    "produto": 352407196,
+    "titulo": "São Miguel Vintage | Camiseta Premium",
+    "problema": "mesmo padrao dos outros: so tinha a foto Preta (a 'vitrine-nimbus'), Branca era variante real (mockup gallery-03/04 ja publicado) mas nunca teve foto gerada",
+    "correcao": "gerada via v4g: sceneRef=foto Preta ja aprovada e publicada. v4h tentou so corrigir o texto 'NIMBUS' corrompido na v4g mas trocou a arte inteira por engano -- descartada. v4g publicada como final, defeito residual (NIMBUS levemente corrompido) aceito pela regra da distancia (ilegivel em miniatura), mesmo padrao ja aceito em 352890896.",
+    "arquivo": "final/v4/352407196-branca-v4g.png",
+    "publicadoEm": "2026-07-19"
    }
   ]
+ },
+ "auditoriaCompleta20260719": {
+  "motivador": "Roberto reportou lista extensa de produtos com hover quebrado apos o fechamento -- muito maior que os 2 casos iniciais",
+  "causaRaizGeral": "o tema Baires decide o swap-no-hover pela CONTAGEM de fotos no card do grid (2+), nao pela cor. Produtos mono-cor com 2+ fotos (modelo + mockups YouDraw) trocam entre elas como se fossem cores diferentes.",
+  "produtosMonoColorCorrigidosPorCSS": [
+   352728451,
+   352728524,
+   352728277,
+   352728357,
+   352719728,
+   352720127,
+   352719816,
+   352727892,
+   352728019,
+   352889132,
+   352717960,
+   352718275,
+   352718083,
+   352703276,
+   352703343,
+   355581274,
+   352722232,
+   352722510,
+   352723243,
+   352722685
+  ],
+  "statusCSS": "publicado no painel (Edicao de CSS avancada), confirmado salvo no servidor via reload -- propagacao para o site publico demorou mais que o esperado (varios minutos), causa exata nao identificada, nao e conflito de edicao concorrente (verificado)",
+  "produtosMultiCorComFotoFaltando": [
+   {
+    "produto": 352407196,
+    "titulo": "São Miguel Vintage | Camiseta Premium",
+    "status": "corrigido, foto Branca gerada e publicada"
+   }
+  ],
+  "reclamacoesReverificadas": {
+   "salmo19Premium_352702020": "CONFIRMADO -- Preta e Branca usam modelos (pessoas) visivelmente diferentes. Pendente: regenerar Branca usando Preta como sceneRef com enfase forte em 'mesmo modelo'.",
+   "saoJorgeNeobarroco_todasAs3": "NAO CONFIRMADO -- as 3 pecas (352718787, 352718943, 352718999) tem foto de modelo normal na capa (Preta) e par de cor correto. Pedido para o Roberto reconferir, pode ter sido cache no navegador dele na hora que viu."
+  },
+  "pendente": "Salmo 19 Premium precisa de regeneracao para consistencia de modelo entre Preta e Branca"
  }
 }
