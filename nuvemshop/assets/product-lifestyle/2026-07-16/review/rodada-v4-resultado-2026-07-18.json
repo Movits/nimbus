@@ -99,5 +99,41 @@
    "problema": "v4a: escala +25%. v4b com geometria mais apertada (sup17/alt33/inf50/larg48): melhorou para ~12% (teto e 10%). Peca/arte/texto/tinta/anatomia/cor todos ok - so falta um ultimo ajuste fino, pequeno, de escala."
   }
  ],
- "observacao": "Nenhuma das aprovadas foi publicada na loja ainda - sao candidatas locais em final/v4/*.png (fora do git, doutrina de nao versionar imagem-arte), aguardando revisao/upload manual numa proxima sessao. As 4 pendentes precisam de mais uma rodada de geracao cada, com ajustes pontuais ja identificados (ver campo \"problema\" de cada uma)."
+ "observacao": "Nenhuma das aprovadas foi publicada na loja ainda - sao candidatas locais em final/v4/*.png (fora do git, doutrina de nao versionar imagem-arte), aguardando revisao/upload manual numa proxima sessao. As 4 pendentes precisam de mais uma rodada de geracao cada, com ajustes pontuais ja identificados (ver campo \"problema\" de cada uma).",
+ "publicadoEm": "2026-07-19",
+ "publicacao": {
+  "metodo": "DragEvent no admin novo (Fotos e vidoo painel) + reordenacao via mouse real do Windows (control-nuvemshop-window.ps1) + save",
+  "produtosPublicados": [
+   352721197,
+   352728357,
+   352702020,
+   352718787,
+   352618935,
+   352407156
+  ],
+  "fotosCompanheirasRestauradas": [
+   {
+    "productId": 352702020,
+    "cor": "Preta",
+    "motivo": "produto tinha ficado vazio; a Preta ja era boa (+7.8%), so faltava recolocar"
+   },
+   {
+    "productId": 352718787,
+    "cor": "Branca",
+    "motivo": "produto tinha ficado vazio; a Branca ja era boa, so faltava recolocar"
+   },
+   {
+    "productId": 352618935,
+    "cor": "Branca",
+    "motivo": "produto tinha ficado vazio; a Branca passou a ser boa com a regra de 10%, so faltava recolocar"
+   },
+   {
+    "productId": 352407156,
+    "cor": "Branca",
+    "motivo": "produto tinha ficado vazio; a Branca ja era boa, so faltava recolocar"
+   }
+  ],
+  "confirmadoAoVivo": true,
+  "verificadoEm": "2026-07-19T00:15:00-03:00"
+ }
 }
