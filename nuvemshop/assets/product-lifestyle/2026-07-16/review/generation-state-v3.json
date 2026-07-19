@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T02:08:11.767Z",
+  "updatedAt": "2026-07-19T13:52:08.879Z",
   "tasks": {
     "352407156:Preta:v4b": {
       "status": "completed",
@@ -35,6 +35,62 @@
       "jobId": "08884e00-9650-40fe-9963-af5c8e32b7bd",
       "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_020731_08884e00-9650-40fe-9963-af5c8e32b7bd_min.webp",
       "at": "2026-07-19T02:08:11.767Z"
+    },
+    "352407182:Preta:v4c": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4c.png",
+      "jobId": "12efa9b4-1a5b-4132-962b-c2b42152e5e6",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_031640_12efa9b4-1a5b-4132-962b-c2b42152e5e6_min.webp",
+      "at": "2026-07-19T03:17:18.077Z"
+    },
+    "352718999:Preta:v4c": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718999-preta-v4c.png",
+      "jobId": "039fd159-3a70-4939-9079-dca24477b7f7",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_031644_039fd159-3a70-4939-9079-dca24477b7f7_min.webp",
+      "at": "2026-07-19T03:17:19.243Z"
+    },
+    "352890896:Preta:v4c": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352890896-preta-v4c.png",
+      "jobId": "e5313f0c-b457-41b6-8783-996d64fcba95",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_031645_e5313f0c-b457-41b6-8783-996d64fcba95_min.webp",
+      "at": "2026-07-19T03:17:22.589Z"
+    },
+    "352718943:Preta:v4c": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352718943-preta-v4c.png",
+      "jobId": "3956ce8a-78f8-41ac-b497-612105d00794",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_031652_3956ce8a-78f8-41ac-b497-612105d00794_min.webp",
+      "at": "2026-07-19T03:17:33.635Z"
+    },
+    "352407182:Preta:v4d": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4d.png",
+      "jobId": "860d6fc0-ea39-41c1-863e-a9f11fcd28ba",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_033732_860d6fc0-ea39-41c1-863e-a9f11fcd28ba_min.webp",
+      "at": "2026-07-19T03:38:04.473Z"
+    },
+    "352890896:Preta:v4d": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352890896-preta-v4d.png",
+      "jobId": "e2fb861c-557b-4824-a7d0-4fda8d84313d",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_033734_e2fb861c-557b-4824-a7d0-4fda8d84313d_min.webp",
+      "at": "2026-07-19T03:38:12.216Z"
+    },
+    "352407182:Preta:v4e": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4e.png",
+      "jobId": "ac37db9b-cd7f-493c-9372-e0407008e46e",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_040552_ac37db9b-cd7f-493c-9372-e0407008e46e_min.webp",
+      "at": "2026-07-19T04:06:30.483Z"
+    },
+    "352407182:Off-White:v4f": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-off-white-v4f.png",
+      "jobId": "f9431d51-5138-469f-bcf7-e0031800619c",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260719_135131_f9431d51-5138-469f-bcf7-e0031800619c_min.webp",
+      "at": "2026-07-19T13:52:08.878Z"
     }
   }
 }

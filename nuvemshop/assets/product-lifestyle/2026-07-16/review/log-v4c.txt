@@ -1,0 +1,11 @@
+4 tarefas, concorrencia 4
+[gen] 352890896:Preta:v4c Aparecida Barroca | Camiseta Oversized Premium
+[gen] 352718943:Preta:v4c São Jorge Neobarroco | Camiseta Oversized Premium
+[gen] 352718999:Preta:v4c São Jorge Neobarroco | Camiseta Premium
+[gen] 352407182:Preta:v4c São Miguel Vintage | Camiseta Oversized Premium
+[ok]   352407182:Preta:v4c -> 352407182-preta-v4c.png
+[ok]   352718999:Preta:v4c -> 352718999-preta-v4c.png
+[ok]   352890896:Preta:v4c -> 352890896-preta-v4c.png
+[ok]   352718943:Preta:v4c -> 352718943-preta-v4c.png
+
+todas as tarefas concluidas

@@ -1,0 +1,35 @@
+{
+ "fase": "v4f",
+ "criadoEm": "2026-07-19",
+ "tasks": [
+  {
+   "productId": 352407182,
+   "title": "São Miguel Vintage | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Miguel Vintage",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Off-White",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Clara",
+   "garment": "Off-White heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\clara-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4b.png",
+   "composicao": {
+    "sup": 17,
+    "alt": 33,
+    "inf": 50,
+    "larg": 48
+   },
+   "notes": [
+    "REFERENCE 6 is the approved Preta photo of this exact same product — same model, same pose, same scene, same print size. Change ONLY the garment color to Off-White (a warm, light cream-beige, not pure white), keeping everything else identical, especially the print scale."
+   ],
+   "tag": "v4f",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-off-white-v4f.png"
+  }
+ ]
+}

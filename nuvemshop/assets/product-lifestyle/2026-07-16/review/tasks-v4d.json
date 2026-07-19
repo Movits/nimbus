@@ -1,0 +1,66 @@
+{
+ "fase": "v4d",
+ "criadoEm": "2026-07-19",
+ "tasks": [
+  {
+   "productId": 352890896,
+   "title": "Aparecida Barroca | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "Aparecida Barroca",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Helena",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\helena-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352890896-aparecida-barroca2/gallery-03.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352890896-aparecida-barroca2/gallery-04.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/AppData/Local/Temp/claude/C--Users-rober/1bd36e20-fe63-40b0-a4b3-b1d176d13f31/scratchpad/audit/live/352890896-par.webp",
+   "composicao": {
+    "sup": 15,
+    "alt": 39,
+    "inf": 46,
+    "larg": 46
+   },
+   "notes": [
+    "the print is still about 15 percent larger than target — reduce it further, following the measurements below",
+    "LETTER-BY-LETTER SPELLING LOCK for the small caption line, the single most error-prone element: the eleven characters are exactly ( B R A S I L   S A C R O ). Render each letter with its correct closed/open counter shape: B has two closed bumps, R has a straight leg kicking out at the bottom-right, A is a triangle with a crossbar, S is an S-curve, I is a single vertical stroke, L is an L-shape. Take extra care on the R immediately after B — it must have a diagonal leg, not a closed loop."
+   ],
+   "tag": "v4d",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352890896-preta-v4d.png"
+  },
+  {
+   "productId": 352407182,
+   "title": "São Miguel Vintage | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Miguel Vintage",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Clara",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\clara-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-01.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407156-preta-v4b.png",
+   "sceneRef": null,
+   "composicao": {
+    "sup": 17,
+    "alt": 33,
+    "inf": 50,
+    "larg": 48
+   },
+   "notes": [
+    "REFERENCE 6 shows the exact same Saint Michael artwork already printed at the correct size on a different garment (a hoodie) — use it as the scale anchor: the artwork should occupy a similarly small, contained portion of the back, with generous empty fabric margins all around, just like in that reference.",
+    "previous attempts oscillated between too large (25 percent over) and closer (12 percent over) — this time, prioritize matching REFERENCE 6's proportions over the numeric guidance if they conflict."
+   ],
+   "tag": "v4d",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4d.png"
+  }
+ ]
+}

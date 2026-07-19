@@ -1,0 +1,7 @@
+2 tarefas, concorrencia 2
+[gen] 352890896:Preta:v4d Aparecida Barroca | Camiseta Oversized Premium
+[gen] 352407182:Preta:v4d São Miguel Vintage | Camiseta Oversized Premium
+[ok]   352407182:Preta:v4d -> 352407182-preta-v4d.png
+[ok]   352890896:Preta:v4d -> 352890896-preta-v4d.png
+
+todas as tarefas concluidas

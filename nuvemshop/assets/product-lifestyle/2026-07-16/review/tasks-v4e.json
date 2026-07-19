@@ -1,0 +1,31 @@
+{
+ "fase": "v4e",
+ "criadoEm": "2026-07-19",
+ "tasks": [
+  {
+   "productId": 352407182,
+   "title": "São Miguel Vintage | Camiseta Oversized Premium",
+   "collection": "RELIQUIA",
+   "family": "São Miguel Vintage",
+   "piece": "Camiseta Oversized Premium",
+   "color": "Preta",
+   "view": "back",
+   "isEcobag": false,
+   "model": "Clara",
+   "garment": "Preta heavyweight premium oversized T-shirt, boxy squared silhouette, dropped shoulder seams and wide SHORT sleeves ending above the elbow, both forearms completely bare",
+   "modelBoard": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\casting\\clara-reference-board-v1.png",
+   "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-01.webp",
+   "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352407182-sao-miguel-vintage2/gallery-02.webp",
+   "artworkRef": "C:\\Users\\rober\\Nimbus\\designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png",
+   "artHelperRef": null,
+   "sceneRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4b.png",
+   "composicao": null,
+   "notes": [
+    "REFERENCE 6 is your own best previous attempt at this exact product: same model, same pose, same artwork, print already close to the correct size (only slightly too large). Copy its print size almost exactly, shrinking it just slightly further.",
+    "the NIMBUS signature below the illustrated panel must be legible and correctly spelled — a recent attempt corrupted it into unreadable glyphs"
+   ],
+   "tag": "v4e",
+   "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/final/v4/352407182-preta-v4e.png"
+  }
+ ]
+}

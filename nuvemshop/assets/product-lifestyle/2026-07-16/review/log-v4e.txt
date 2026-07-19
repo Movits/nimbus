@@ -1,0 +1,5 @@
+1 tarefas, concorrencia 3
+[gen] 352407182:Preta:v4e São Miguel Vintage | Camiseta Oversized Premium
+[ok]   352407182:Preta:v4e -> 352407182-preta-v4e.png
+
+todas as tarefas concluidas
