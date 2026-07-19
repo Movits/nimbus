@@ -112,7 +112,8 @@
    352407156,
    352718943,
    352718999,
-   352890896
+   352890896,
+   352407182
   ],
   "fotosCompanheirasRestauradas": [
    {
@@ -198,7 +199,7 @@
   "productId": 352407182,
   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
   "cor": "Preta",
-  "status": "PARADO apos 5 rodadas sem convergencia confiavel - decisao do dono necessaria",
+  "status": "RESOLVIDO em 19/07 - publicada a melhor versao disponivel (v4b, ~12% de desvio) a pedido do dono",
   "historico": [
    {
     "rodada": "v4a",
@@ -228,5 +229,13 @@
   ],
   "recomendacao": "usar a v4b (final/v4/352407182-preta-v4b.png, ~12% de desvio) como publicacao com ressalva, seguindo o mesmo criterio ja usado antes neste projeto pra defeitos residuais pequenos - ou tentar mais rodadas numa sessao futura (Higgsfield CLI ja autenticado, script pronto em scripts/generate-lifestyle-v3.mjs)",
   "creditosGastosNesteItem": 10
+ },
+ "fechamento": {
+  "data": "2026-07-19",
+  "resultado": "10 de 10 produtos da rodada v4 publicados e confirmados ao vivo",
+  "residuaisConhecidos": [
+   "352890896: legenda (BRASIL SACRO) com letra malformada, ilegivel em miniatura",
+   "352407182: escala ~12% (teto e 10%), unico defeito - 5 rodadas tentadas, nao convergiu melhor que isso"
+  ]
  }
 }
