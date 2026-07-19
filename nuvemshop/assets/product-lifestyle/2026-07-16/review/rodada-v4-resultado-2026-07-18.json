@@ -109,7 +109,9 @@
    352702020,
    352718787,
    352618935,
-   352407156
+   352407156,
+   352718943,
+   352718999
   ],
   "fotosCompanheirasRestauradas": [
    {
@@ -131,9 +133,49 @@
     "productId": 352407156,
     "cor": "Branca",
     "motivo": "produto tinha ficado vazio; a Branca ja era boa, so faltava recolocar"
+   },
+   {
+    "productId": 352718943,
+    "cor": "Off-White",
+    "motivo": "produto tinha ficado vazio; a Off-White ja era boa, so faltava recolocar"
+   },
+   {
+    "productId": 352718999,
+    "cor": "Branca",
+    "motivo": "produto tinha ficado vazio; a Branca ja era boa, so faltava recolocar"
    }
   ],
   "confirmadoAoVivo": true,
   "verificadoEm": "2026-07-19T00:15:00-03:00"
+ },
+ "rodadaV4cResultado": {
+  "aprovadas": [
+   {
+    "productId": 352718943,
+    "cor": "Preta",
+    "desvio": 7,
+    "obs": "arte corrigida (era Sao Miguel por engano, agora Sao Jorge correto) usando artHelperRef da foto ja aprovada do moletom da mesma familia"
+   },
+   {
+    "productId": 352718999,
+    "cor": "Preta",
+    "desvio": 4,
+    "obs": "corrigiu a overcorrecao da v4b, agora quase identica a parceira"
+   }
+  ],
+  "aindaPendentes": [
+   {
+    "productId": 352890896,
+    "ultimaRodada": "v4c",
+    "desvio": 15,
+    "problema": "legenda BRASIL SACRO com letra R malformada (defeito diferente a cada rodada)"
+   },
+   {
+    "productId": 352407182,
+    "ultimaRodada": "v4c",
+    "desvio": 25,
+    "problema": "piorou em vez de melhorar so com ajuste numerico"
+   }
+  ]
  }
 }
