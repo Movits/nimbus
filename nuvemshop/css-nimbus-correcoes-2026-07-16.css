@@ -1929,3 +1929,25 @@ html body footer.js-footer > .text-left.text-md-center {
     font-size: 10px !important;
   }
 }
+
+/* ============================================================
+   Produtos mono-cor (hotfix automático): travar swap de hover para produtos sem 2 cores reais.
+   ============================================================ */
+.item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item-image-secondary.js-product-item-secondary-image-private[srcset*="/file_name-"] {
+  opacity: 0 !important;
+}
+
+.item:hover .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item:hover .item-image-secondary.js-product-item-secondary-image-private[srcset*="/file_name-"],
+.item:hover .js-item-product .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item:hover .js-item-product .item-image-secondary.js-product-item-secondary-image-private[srcset*="/file_name-"] {
+  opacity: 0 !important;
+}
+
+/* Fallback por IDs (mantido para compatibilidade de cards que não trazem file_name no markup ainda)
+   Se precisar ativar em mais produtos, replique o padrão [data-product-id="ID"] abaixo.
+*/
+[data-product-id="352728451"] .item-image-secondary, [data-product-id="352728524"] .item-image-secondary, [data-product-id="352728277"] .item-image-secondary, [data-product-id="352728357"] .item-image-secondary, [data-product-id="352719728"] .item-image-secondary, [data-product-id="352720127"] .item-image-secondary, [data-product-id="352719816"] .item-image-secondary, [data-product-id="352727892"] .item-image-secondary, [data-product-id="352728019"] .item-image-secondary, [data-product-id="352889132"] .item-image-secondary, [data-product-id="352717960"] .item-image-secondary, [data-product-id="352718275"] .item-image-secondary, [data-product-id="352718083"] .item-image-secondary, [data-product-id="352703276"] .item-image-secondary, [data-product-id="352703343"] .item-image-secondary, [data-product-id="355581274"] .item-image-secondary, [data-product-id="352722232"] .item-image-secondary, [data-product-id="352722510"] .item-image-secondary, [data-product-id="352723243"] .item-image-secondary, [data-product-id="352722685"] .item-image-secondary {
+  opacity: 0 !important;
+}
