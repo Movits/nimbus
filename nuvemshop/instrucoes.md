@@ -1,6 +1,6 @@
 # Loja Nuvemshop — estado e guia de aplicação
 
-**Plano Impulso · tema Baires · publicado em 16/07/2026.**
+**Plano Impulso · tema Baires · baseline revisado em 23/07/2026.**
 
 A Nuvemshop não tem deploy por git. Esta pasta é um kit: o CSS e as páginas são **colados à mão** no
 painel. Por isso o repo não é a fonte de verdade da loja, a loja é. Este arquivo diz o que está no ar.
@@ -14,24 +14,28 @@ tanto as definições em `:root` quanto qualquer uso de `var(--...)`. Um CSS bas
 Exceção segura: `var()` **com fallback**, tipo `var(--body-font, "Inter", Arial, sans-serif)`. Se a
 plataforma remover, o fallback assume e nada quebra. O CSS de produção usa isso em 6 lugares.
 
-## O que está no ar (16/07/2026)
+## Fonte local mais recente e estado da loja
 
 | O quê | Onde |
 |---|---|
-| **CSS de produção** | `css-nimbus-correcoes-2026-07-16.css` |
+| **CSS local consolidado mais recente** | `css-nimbus-publicacao-compacta-2026-07-20.css` |
+| Fonte legível de header/footer responsivo | `css-nimbus-responsive-header-footer-2026-07-20.css` |
+| Gerador da saída consolidada | `../scripts/build_nimbus_publication_css.mjs` |
 | Página Projetos Sociais | `pagina-projetos-sociais.html` |
 | Página Sobre | `pagina-sobre.html` |
 | Tiles das coleções | `assets/tile-nuvem.jpg`, `tile-reliquia.jpg`, `tile-street.jpg` |
 
-Se houver mais de um CSS nesta pasta no futuro, **o mais recente por data no nome é o de produção**. É a
-convenção. Hoje só existe um, de propósito.
+Os arquivos de 16/07 e 17/07 são históricos e não devem ser colados
+isoladamente. A Nuvemshop sanitiza o CSS ao salvar, portanto a loja pública e o
+editor são a fonte de verdade. Antes de publicar, gere ou confira a composição
+de 20/07 e valide o resultado real.
 
 O CSS **não é um tema completo**: é uma camada de correção. O Baires é configurado nativamente no editor
 (as fontes Fraunces e Inter são nativas dele), e o CSS só corrige o que o editor não alcança: header em
 linha única no desktop, logo no centro geométrico no mobile, três coleções simultâneas, modais dos
 projetos, footer editorial. Por isso ele começa direto em "Cabecalho:" e não estiliza `body`.
 
-`pagina-projetos-sociais.html` **depende deste CSS**. Os modais são feitos por âncora `:target` (a
+`pagina-projetos-sociais.html` **depende do CSS consolidado**. Os modais são feitos por âncora `:target` (a
 Nuvemshop não permite JS na página), então sem o CSS eles aparecem todos abertos e empilhados. Os dois
 andam juntos: publicar um sem o outro quebra a página.
 
@@ -72,8 +76,9 @@ visual das 49 pendente. Não confie no 49/49 como prova de que a estampa está c
 
 ## Como reaplicar o CSS (se precisar)
 
-Loja online → Layout → Personalizar → **Edição de CSS avançada** → apagar o antigo → colar TODO o
-`css-nimbus-correcoes-2026-07-16.css` → Testar CSS → salvar.
+Loja online → Layout → Personalizar → **Edição de CSS avançada** → confirmar que
+o editor está atualizado → substituir pelo conteúdo completo de
+`css-nimbus-publicacao-compacta-2026-07-20.css` → Testar CSS → salvar.
 
 Depois, conferir na loja pública: home no desktop, os três modais da página Projetos Sociais, e mobile em
 390 e 320 px. Checar centro do logo, ausência de rolagem horizontal, hero sem corte, coleções com largura
@@ -88,6 +93,16 @@ O Impulso dá CSS + módulos do tema, não dá pra colar HTML custom nem editar 
 mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a pena agora.
 
 ## Histórico
+
+- **Auditoria de escala (22–23/07/2026)**: 49 produtos comparados com as
+  dimensões da YouDraw. Fonte em
+  `auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`; documento
+  visual em `auditoria-dimensoes-arte-nimbus.docx` e
+  `auditoria-dimensoes-arte-nimbus-qa.pdf`. Resultado: 25 APROVAR, 13 REVISAR e
+  11 REFAZER. Não gerar ou publicar substituições antes do feedback do dono.
+- **Baires (20–21/07/2026)**: consolidação atual de header, footer, manifesto,
+  modais, responsividade e hover em
+  `css-nimbus-publicacao-compacta-2026-07-20.css`.
 
 - **Baires (15–16/07/2026)**: tema atual. Direção em `previews/auditoria-e-direcao-baires-2026-07-15.md`,
   prévia aprovada em `previews/ajustes-finais-preview-2026-07-16.html`, registro da publicação em

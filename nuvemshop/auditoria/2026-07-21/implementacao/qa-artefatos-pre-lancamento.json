@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-07-23T03:41:21.383Z",
+  "counts": {
+    "products": 49,
+    "variants": 386,
+    "uniqueSkus": 386,
+    "descriptions": 49,
+    "imageAuditRows": 49,
+    "rightsRows": 24,
+    "readyDescriptions": 27,
+    "blockedDescriptions": 22,
+    "hoverLockedProductIds": 20,
+    "expectedHoverLockedProductIds": 20
+  },
+  "errors": [],
+  "warnings": [],
+  "result": "PASS"
+}

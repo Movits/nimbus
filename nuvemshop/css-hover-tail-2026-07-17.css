@@ -1,0 +1,152 @@
+/* ============================================================
+   Hover dos cards de produto (19/07/2026)
+   - Produtos com 2+ variações continuam com swap no hover
+   - Produtos mono-cor bloqueiam troca no hover e mantêm featured
+   ============================================================ */
+
+/* Zoom leve para cards marcados como secondary-images-disabled (1 cor). */
+.js-product-item-image-container-private.secondary-images-disabled {
+  overflow: hidden;
+}
+
+.js-product-item-image-container-private.secondary-images-disabled img {
+  transition: transform 0.45s ease;
+}
+
+.js-item-product:hover .js-product-item-image-container-private.secondary-images-disabled img,
+.item:hover .js-product-item-image-container-private.secondary-images-disabled img {
+  transform: scale(1.045);
+}
+
+/* Bloqueio direto de secundária placeholder (quando existe). */
+.js-item-product .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.js-item-product .item-image-secondary.js-product-item-secondary-image-private[srcset*="/file_name-"] {
+  opacity: 0 !important;
+  display: block !important;
+}
+
+.js-item-product:hover .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.js-item-product:hover .item-image-secondary.js-product-item-secondary-image-private[srcset*="/file_name-"],
+.item:hover .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item:hover .js-item-product .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"] {
+  opacity: 0 !important;
+}
+
+/* Mantém swap apenas entre featured + secondary com imagem de arte válida. */
+.js-item-product:hover .item-image-featured ~ .item-image-secondary.js-product-item-secondary-image-private:not([data-srcset*="/file_name-"]):not([srcset*="/file_name-"]) {
+  opacity: 1 !important;
+  display: block !important;
+}
+
+/* Produtos de uma cor: featured sempre visível no hover e secondary escondida. */
+[data-product-id="352618878"] .item-image-secondary,
+[data-product-id="352703276"] .item-image-secondary,
+[data-product-id="352703343"] .item-image-secondary,
+[data-product-id="352717960"] .item-image-secondary,
+[data-product-id="352718083"] .item-image-secondary,
+[data-product-id="352718275"] .item-image-secondary,
+[data-product-id="352718787"] .item-image-secondary,
+[data-product-id="352719728"] .item-image-secondary,
+[data-product-id="352719816"] .item-image-secondary,
+[data-product-id="352720127"] .item-image-secondary,
+[data-product-id="352722232"] .item-image-secondary,
+[data-product-id="352722510"] .item-image-secondary,
+[data-product-id="352722685"] .item-image-secondary,
+[data-product-id="352723243"] .item-image-secondary,
+[data-product-id="352727892"] .item-image-secondary,
+[data-product-id="352728019"] .item-image-secondary,
+[data-product-id="352728277"] .item-image-secondary,
+[data-product-id="352728357"] .item-image-secondary,
+[data-product-id="352728451"] .item-image-secondary,
+[data-product-id="352728524"] .item-image-secondary,
+[data-product-id="352889132"] .item-image-secondary,
+[data-product-id="355581274"] .item-image-secondary {
+  opacity: 0 !important;
+  display: block !important;
+}
+
+[data-product-id="352618878"] .item-image-featured,
+[data-product-id="352703276"] .item-image-featured,
+[data-product-id="352703343"] .item-image-featured,
+[data-product-id="352717960"] .item-image-featured,
+[data-product-id="352718083"] .item-image-featured,
+[data-product-id="352718275"] .item-image-featured,
+[data-product-id="352718787"] .item-image-featured,
+[data-product-id="352719728"] .item-image-featured,
+[data-product-id="352719816"] .item-image-featured,
+[data-product-id="352720127"] .item-image-featured,
+[data-product-id="352722232"] .item-image-featured,
+[data-product-id="352722510"] .item-image-featured,
+[data-product-id="352722685"] .item-image-featured,
+[data-product-id="352723243"] .item-image-featured,
+[data-product-id="352727892"] .item-image-featured,
+[data-product-id="352728019"] .item-image-featured,
+[data-product-id="352728277"] .item-image-featured,
+[data-product-id="352728357"] .item-image-featured,
+[data-product-id="352728451"] .item-image-featured,
+[data-product-id="352728524"] .item-image-featured,
+[data-product-id="352889132"] .item-image-featured,
+[data-product-id="355581274"] .item-image-featured {
+  opacity: 1 !important;
+  display: block !important;
+}
+
+[data-product-id="352618878"]:hover .item-image-featured,
+[data-product-id="352703276"]:hover .item-image-featured,
+[data-product-id="352703343"]:hover .item-image-featured,
+[data-product-id="352717960"]:hover .item-image-featured,
+[data-product-id="352718083"]:hover .item-image-featured,
+[data-product-id="352718275"]:hover .item-image-featured,
+[data-product-id="352718787"]:hover .item-image-featured,
+[data-product-id="352719728"]:hover .item-image-featured,
+[data-product-id="352719816"]:hover .item-image-featured,
+[data-product-id="352720127"]:hover .item-image-featured,
+[data-product-id="352722232"]:hover .item-image-featured,
+[data-product-id="352722510"]:hover .item-image-featured,
+[data-product-id="352722685"]:hover .item-image-featured,
+[data-product-id="352723243"]:hover .item-image-featured,
+[data-product-id="352727892"]:hover .item-image-featured,
+[data-product-id="352728019"]:hover .item-image-featured,
+[data-product-id="352728277"]:hover .item-image-featured,
+[data-product-id="352728357"]:hover .item-image-featured,
+[data-product-id="352728451"]:hover .item-image-featured,
+[data-product-id="352728524"]:hover .item-image-featured,
+[data-product-id="352889132"]:hover .item-image-featured,
+[data-product-id="355581274"]:hover .item-image-featured {
+  opacity: 1 !important;
+}
+
+[data-product-id="352618878"]:hover .item-image-secondary,
+[data-product-id="352703276"]:hover .item-image-secondary,
+[data-product-id="352703343"]:hover .item-image-secondary,
+[data-product-id="352717960"]:hover .item-image-secondary,
+[data-product-id="352718083"]:hover .item-image-secondary,
+[data-product-id="352718275"]:hover .item-image-secondary,
+[data-product-id="352718787"]:hover .item-image-secondary,
+[data-product-id="352719728"]:hover .item-image-secondary,
+[data-product-id="352719816"]:hover .item-image-secondary,
+[data-product-id="352720127"]:hover .item-image-secondary,
+[data-product-id="352722232"]:hover .item-image-secondary,
+[data-product-id="352722510"]:hover .item-image-secondary,
+[data-product-id="352722685"]:hover .item-image-secondary,
+[data-product-id="352723243"]:hover .item-image-secondary,
+[data-product-id="352727892"]:hover .item-image-secondary,
+[data-product-id="352728019"]:hover .item-image-secondary,
+[data-product-id="352728277"]:hover .item-image-secondary,
+[data-product-id="352728357"]:hover .item-image-secondary,
+[data-product-id="352728451"]:hover .item-image-secondary,
+[data-product-id="352728524"]:hover .item-image-secondary,
+[data-product-id="352889132"]:hover .item-image-secondary,
+[data-product-id="355581274"]:hover .item-image-secondary {
+  opacity: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-product-item-image-container-private.secondary-images-disabled img {
+    transition: none;
+  }
+  .js-item-product:hover .js-product-item-image-container-private.secondary-images-disabled img,
+  .item:hover .js-product-item-image-container-private.secondary-images-disabled img {
+    transform: none;
+  }
+}

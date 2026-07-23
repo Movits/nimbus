@@ -1,0 +1,40 @@
+{
+  "updatedAt": "2026-07-22T04:49:56.266Z",
+  "tasks": {
+    "352728357:Preta:audit-20260722-a": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728357-anjo-premium-nano-a.png",
+      "jobId": "2a6d5fb9-b8ef-4187-9a6f-8ec3adb903ba",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260722_044617_2a6d5fb9-b8ef-4187-9a6f-8ec3adb903ba_min.webp",
+      "at": "2026-07-22T04:46:48.443Z"
+    },
+    "352728019:Preta:audit-20260722-a": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728019-aparecida-spray-oversized-nano-a.png",
+      "jobId": "b6607686-1bff-4f78-bb4e-cb2adb2ced5a",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260722_044618_b6607686-1bff-4f78-bb4e-cb2adb2ced5a_min.webp",
+      "at": "2026-07-22T04:47:03.533Z"
+    },
+    "352727892:Preta:audit-20260722-a": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352727892-aparecida-spray-blusao-nano-a.png",
+      "jobId": "1f31e7c7-6e86-4b76-96f1-392cad27c9fa",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260722_044617_1f31e7c7-6e86-4b76-96f1-392cad27c9fa_min.webp",
+      "at": "2026-07-22T04:47:45.086Z"
+    },
+    "352728019:Preta:audit-20260722-b": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728019-aparecida-spray-oversized-nano-b.png",
+      "jobId": "11944b6b-0968-4255-9bab-3e735f8d9821",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260722_044916_11944b6b-0968-4255-9bab-3e735f8d9821_min.webp",
+      "at": "2026-07-22T04:49:53.011Z"
+    },
+    "352728357:Preta:audit-20260722-b": {
+      "status": "completed",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728357-anjo-premium-nano-b.png",
+      "jobId": "af8b2fb4-4c02-4931-8b58-f5a12bd69ae1",
+      "url": "https://d8j0ntlcm91z4.cloudfront.net/user_3F8kX9pa0lU3v443qUCapiwpC9W/hf_20260722_044917_af8b2fb4-4c02-4931-8b58-f5a12bd69ae1_min.webp",
+      "at": "2026-07-22T04:49:56.266Z"
+    }
+  }
+}

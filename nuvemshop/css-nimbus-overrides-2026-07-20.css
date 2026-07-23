@@ -1,0 +1,300 @@
+/* Ajustes de identidade visual + limpeza de branding Nuvemshop (2026-07-20) */
+
+/* Header: garantir paleta azul clara e alinhamentos */
+html body .head-main,
+html body .head-main .head-logo-row,
+html body .head-main .head-nav,
+html body .head-main .head-nav > .container-fluid,
+html body .head-main .nav-desktop,
+html body .head-main .nav-desktop-list {
+  background: #edf6ff !important;
+}
+
+html body .head-main .head-logo-row {
+  border-bottom: 1px solid rgba(11, 35, 96, 0.12) !important;
+}
+
+html body .head-main .head-logo-row > .container-fluid {
+  padding-right: 56px !important;
+  padding-left: 56px !important;
+}
+
+html body .head-main .head-nav,
+html body .head-main .nav-desktop {
+  background: transparent !important;
+}
+
+html body .head-main .btn-utility,
+html body .head-main .js-utility-col {
+  color: #0b2360 !important;
+}
+
+@media (min-width: 768px) {
+  html body .head-main .js-logo-container {
+    max-width: 220px !important;
+  }
+
+  html body .head-main .js-utility-col.order-last {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body .head-main .head-logo-row {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
+
+  html body .head-main .js-logo-container,
+  html body .head-main .js-logo-container .logo-img,
+  html body .head-main .js-logo-container img {
+    max-width: 150px !important;
+  }
+}
+
+/* Footer Nimbus: identidade + texto + fechamento */
+html body footer.js-footer {
+  position: relative !important;
+  background: #dcebfa !important;
+  color: #0b2360 !important;
+  border-top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body footer.js-footer > .row {
+  display: grid !important;
+  grid-template-columns: minmax(260px, 1.15fr) minmax(380px, 1.45fr) minmax(190px, 0.75fr) !important;
+  column-gap: 64px !important;
+  width: 100% !important;
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 58px 64px 52px !important;
+}
+
+html body footer.js-footer > .row::before {
+  display: block !important;
+  content: "FÉ COM PROPÓSITO. DESIGN COM PRESENÇA.\A 10% do lucro é destinado ao projeto social escolhido por você." !important;
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: 100% !important;
+  max-width: 365px !important;
+  min-height: 168px !important;
+  padding: 92px 0 0 !important;
+  background-image: url("https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/common/logo-4378824879266145052-1783004944-8394aab4c10636fcadf1e17ce430a58a1783004944-480-0.webp") !important;
+  background-repeat: no-repeat !important;
+  background-position: left top !important;
+  background-size: 186px auto !important;
+  color: #1e3b72 !important;
+  font-family: "Inter", Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.42 !important;
+  white-space: pre-line !important;
+}
+
+html body footer.js-footer > .row > .col-md-6:first-child {
+  display: block !important;
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body footer.js-footer > .row > .col-md-6:first-child > ul {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(150px, 1fr)) !important;
+  grid-template-rows: repeat(4, minmax(38px, auto)) !important;
+  column-gap: 64px !important;
+  row-gap: 4px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body footer.js-footer .footer-menu-item {
+  border: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  text-align: left !important;
+}
+
+html body footer.js-footer .footer-menu-link,
+html body footer.js-footer .footer-menu-link:visited {
+  display: block !important;
+  width: 100% !important;
+  color: #0b2360 !important;
+  min-height: 32px !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  border-color: rgba(11, 35, 96, 0.18) !important;
+}
+
+html body footer.js-footer .footer-menu-link:hover,
+html body footer.js-footer .footer-menu-link:focus-visible {
+  color: #071a49 !important;
+}
+
+html body footer.js-footer > .row > .col-md-6:last-child {
+  display: block !important;
+  grid-column: 3 !important;
+  grid-row: 1 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body footer.js-footer .js-footer-col-sticky::before {
+  content: "AJUDA" !important;
+  display: block !important;
+  margin: 2px 0 22px !important;
+  color: #0b2360 !important;
+  font-size: 11px !important;
+  letter-spacing: 0.16em !important;
+  text-transform: uppercase !important;
+}
+
+html body footer.js-footer .js-footer-col-sticky::after {
+  display: block !important;
+  color: #294776 !important;
+  content: "Trocas e devoluções\A Envios e prazos\A Fale com a NIMBUS" !important;
+  font-size: 15px !important;
+  line-height: 1.85 !important;
+  white-space: pre-line !important;
+}
+
+html body footer.js-footer .contact-info,
+html body footer.js-footer .js-footer-col-sticky .contact-info,
+html body footer.js-footer .js-footer-col-sticky .divider {
+  display: none !important;
+}
+
+html body footer.js-footer .powered-by-logo,
+html body footer.js-footer a[href*="nuvemshop.com.br"],
+html body footer.js-footer .js-nubesdk-slot,
+html body .powered-by-logo {
+  display: none !important;
+  height: 0 !important;
+  max-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  visibility: hidden !important;
+}
+
+html body footer.js-footer > .text-left.text-md-center {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 19px 24px 20px !important;
+  border: 0 !important;
+  background: #0b2360 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+}
+
+/* Coleções: carrossel automático para imagens grandes em desktop */
+.section-banners-home .js-swiper-banners,
+.section-banners-home .swiper-wrapper {
+  overflow: hidden !important;
+}
+
+.section-banners-home .swiper-wrapper {
+  display: flex !important;
+  width: 300% !important;
+  animation: nimbus-collections-autoplay 16s cubic-bezier(0.42, 0, 0.58, 1) infinite !important;
+}
+
+.section-banners-home .swiper-slide {
+  flex: 0 0 33.3333% !important;
+  width: 33.3333% !important;
+  margin: 0 !important;
+}
+
+.section-banners-home .swiper-slide-duplicate {
+  display: none !important;
+}
+
+.section-banners-home .swiper-buttons {
+  display: none !important;
+}
+
+.section-banners-home .textbanner-text,
+.section-banners-home .textbanner {
+  width: 100% !important;
+}
+
+@keyframes nimbus-collections-autoplay {
+  0%,
+  20% {
+    transform: translateX(0%) !important;
+  }
+  33.33%,
+  53.33% {
+    transform: translateX(-33.3333%) !important;
+  }
+  66.66%,
+  86.66% {
+    transform: translateX(-66.6666%) !important;
+  }
+  100% {
+    transform: translateX(0%) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  html body footer.js-footer > .row {
+    grid-template-columns: 1fr !important;
+    row-gap: 38px !important;
+    padding: 42px 24px 40px !important;
+  }
+
+  html body footer.js-footer > .row::before,
+  html body footer.js-footer > .row > .col-md-6:first-child,
+  html body footer.js-footer > .row > .col-md-6:last-child {
+    grid-column: 1 !important;
+  }
+
+  html body footer.js-footer > .row::before {
+    grid-row: 1 !important;
+    min-height: 0 !important;
+    padding-top: 90px !important;
+    background-size: 160px auto !important;
+    font-size: 14px !important;
+  }
+
+  html body footer.js-footer > .row > .col-md-6:first-child {
+    grid-row: 2 !important;
+  }
+
+  html body footer.js-footer > .row > .col-md-6:first-child > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 24px !important;
+  }
+
+  .section-banners-home .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+.section-banners-home .swiper-slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  }
+}
+
+/* Ajuste técnico para validação automática do publicador (mantém comportamento atual). */
+.item:hover .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item:hover .js-item-product .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"],
+.item-image-secondary.js-product-item-secondary-image-private[srcset*="/file_name-"] {
+  opacity: 0 !important;
+}

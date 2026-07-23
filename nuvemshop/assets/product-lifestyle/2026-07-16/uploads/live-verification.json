@@ -1,8 +1,8 @@
 {
-  "verifiedAt": "2026-07-16T23:40:47.347Z",
+  "verifiedAt": "2026-07-19T18:56:00.287Z",
   "total": 49,
-  "passed": 49,
-  "failed": 0,
+  "passed": 19,
+  "failed": 30,
   "results": [
     {
       "productId": 352722510,
@@ -52,13 +52,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo-gotico/",
       "expectedImageCount": 3,
-      "actualImageCount": 3,
+      "actualImageCount": 4,
       "distinctVitrineAssets": [
         "products/352720257-vitrine-nimbus-0f391a1c6ed223d29e17842432351675"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352719728,
@@ -80,13 +80,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352890896-vitrine-nimbus-379624414e6c009da117842437759629"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352720127,
@@ -164,13 +162,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/brasao/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352717723-vitrine-nimbus-d56ca2824e8739c5a717842428822784"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352717837,
@@ -178,13 +174,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/brasao1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352717837-vitrine-nimbus-969a91bf011ed5acc117842429141862"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352703276,
@@ -220,13 +216,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352702858-vitrine-nimbus-3d97f93a48e09ac33317842427544837"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352703153,
@@ -234,13 +230,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352703153-vitrine-nimbus-5d256d58ccd3efa32217842427863307"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352702753,
@@ -248,13 +244,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/monograma-nmb/",
       "expectedImageCount": 3,
-      "actualImageCount": 3,
+      "actualImageCount": 4,
       "distinctVitrineAssets": [
         "products/352702753-vitrine-nimbus-4e094109605c1579ab17842426907553"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352702796,
@@ -262,13 +258,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/monograma-nmb1/",
       "expectedImageCount": 3,
-      "actualImageCount": 3,
+      "actualImageCount": 4,
       "distinctVitrineAssets": [
         "products/352702796-vitrine-nimbus-85adadc2c7f2a07a4917842427223104"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352702020,
@@ -276,13 +272,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352702020-vitrine-nimbus-1f40fc3087b6ca198e17842426588960"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352619175,
@@ -290,13 +284,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/salmo-191/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352619175-vitrine-nimbus-a20646cebf775ba45717842426275414"
       ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352718943,
@@ -304,13 +298,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352718943-vitrine-nimbus-e54299c092a32a252617842430756612"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352718999,
@@ -318,13 +310,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352718999-vitrine-nimbus-99b4e5b1966768ec0817842431075146"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352718787,
@@ -332,13 +322,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352718787-vitrine-nimbus-5befe5ac62d45836a717842430431895"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352618837,
@@ -346,13 +334,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352618837-vitrine-nimbus-71a833ad83b3b063d617842425000989"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352618903,
@@ -360,13 +348,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage2/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352618903-vitrine-nimbus-c85c8f648c2e1b9a8117842425641229"
       ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352618935,
@@ -374,13 +362,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352618935-vitrine-nimbus-297d7970a866cd1f6f17842425956792"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352618878,
@@ -388,13 +374,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352618878-vitrine-nimbus-9b09fe8fe067aeb75917842425324115"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352407182,
@@ -402,13 +388,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352407182-vitrine-nimbus-58ddbde7870a202fb917842424360168"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352407196,
@@ -416,13 +400,13 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage3/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352407196-vitrine-nimbus-e0e349ca7c7431b44017842424681749"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352407156,
@@ -430,13 +414,11 @@
       "collection": "RELIQUIA",
       "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352407156-vitrine-nimbus-2f13ea62a4ca61f2a117842424043463"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352728451,
@@ -501,12 +483,10 @@
       "url": "https://loja.nimbuswear.com.br/produtos/aparecida-spray1/",
       "expectedImageCount": 3,
       "actualImageCount": 3,
-      "distinctVitrineAssets": [
-        "products/352727892-vitrine-nimbus-f0aed575075809bd6317842435522941"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352728019,
@@ -542,13 +522,13 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/espirito-santo1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352721477-vitrine-nimbus-a498ef1584540b0a1f17842449058520"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352721118,
@@ -556,13 +536,11 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/fe2/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352721118-vitrine-nimbus-cf296667fd002db0af17842432670687"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352721197,
@@ -570,13 +548,13 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/fe3/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352721197-vitrine-nimbus-98f12a52f7e4b0a7c017842432980930"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352721633,
@@ -584,13 +562,13 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352721633-vitrine-nimbus-b1ac783d68388aa0ed17842433618868"
       ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 355581274,
@@ -612,13 +590,11 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
-      "distinctVitrineAssets": [
-        "products/352725749-vitrine-nimbus-9ea494770ad1a1e88517842403839804"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352725852,
@@ -626,13 +602,13 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/querubim-spray1/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352725852-vitrine-nimbus-3549d2616cd682dcce17842423261734"
       ],
       "vitrineIsPreloadedCover": true,
       "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "ok": false
     },
     {
       "productId": 352722232,
@@ -654,13 +630,13 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray2/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352727545-vitrine-nimbus-bd51e34cf4dc5c377b17842435204135"
       ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352898175,
@@ -668,13 +644,13 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray3/",
       "expectedImageCount": 5,
-      "actualImageCount": 5,
+      "actualImageCount": 6,
       "distinctVitrineAssets": [
         "products/352898175-vitrine-nimbus-0a04ba4a35d3d8d9e617842440119279"
       ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     },
     {
       "productId": 352726673,
@@ -682,13 +658,11 @@
       "collection": "STREET",
       "url": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray1/",
       "expectedImageCount": 7,
-      "actualImageCount": 7,
-      "distinctVitrineAssets": [
-        "products/352726673-vitrine-nimbus-67cad958d8e05038b417842434894196"
-      ],
-      "vitrineIsPreloadedCover": true,
-      "vitrineIsOpenGraphCover": true,
-      "ok": true
+      "actualImageCount": 6,
+      "distinctVitrineAssets": [],
+      "vitrineIsPreloadedCover": false,
+      "vitrineIsOpenGraphCover": false,
+      "ok": false
     }
   ]
 }

@@ -1,0 +1,511 @@
+{
+  "generated_at": "2026-07-22T04:18:30.031Z",
+  "total_products_csv": 49,
+  "total_panels": 49,
+  "total_sheets": 10,
+  "missing": [],
+  "sheets": [
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-01.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-02.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-03.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-04.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-05.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-06.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-07.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-08.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-09.png",
+    "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/prancha-10.png"
+  ],
+  "products": [
+    {
+      "sheet": 1,
+      "position": 1,
+      "product_id": "352722510",
+      "title": "São Miguel Celeste | Blusão Moletom",
+      "collection": "NUVEM",
+      "art": "São Miguel Celeste",
+      "garment": "Blusão Moletom",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 1,
+      "position": 2,
+      "product_id": "352723243",
+      "title": "São Miguel Celeste | Camiseta Premium",
+      "collection": "NUVEM",
+      "art": "São Miguel Celeste",
+      "garment": "Camiseta Premium",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 1,
+      "position": 3,
+      "product_id": "352722685",
+      "title": "São Miguel Celeste | Moletom Canguru",
+      "collection": "NUVEM",
+      "art": "São Miguel Celeste",
+      "garment": "Moletom Canguru",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 1,
+      "position": 4,
+      "product_id": "352720257",
+      "title": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "Acima de Tudo Gótico",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 1,
+      "position": 5,
+      "product_id": "352719728",
+      "title": "Aparecida Barroca | Blusão Moletom",
+      "collection": "RELIQUIA",
+      "art": "Aparecida Barroca",
+      "garment": "Blusão Moletom",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 2,
+      "position": 1,
+      "product_id": "352890896",
+      "title": "Aparecida Barroca | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "Aparecida Barroca",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 2,
+      "position": 2,
+      "product_id": "352720127",
+      "title": "Aparecida Barroca | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Aparecida Barroca",
+      "garment": "Camiseta Premium",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 2,
+      "position": 3,
+      "product_id": "352719816",
+      "title": "Aparecida Barroca | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "art": "Aparecida Barroca",
+      "garment": "Moletom Canguru",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 2,
+      "position": 4,
+      "product_id": "352717960",
+      "title": "Azulejo Sagrado | Blusão Moletom",
+      "collection": "RELIQUIA",
+      "art": "Azulejo Sagrado",
+      "garment": "Blusão Moletom",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 2,
+      "position": 5,
+      "product_id": "352718275",
+      "title": "Azulejo Sagrado | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Azulejo Sagrado",
+      "garment": "Camiseta Premium",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 3,
+      "position": 1,
+      "product_id": "352718083",
+      "title": "Azulejo Sagrado | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "art": "Azulejo Sagrado",
+      "garment": "Moletom Canguru",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 3,
+      "position": 2,
+      "product_id": "352717723",
+      "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "Brasão NIMBUS",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 3,
+      "position": 3,
+      "product_id": "352717837",
+      "title": "Brasão NIMBUS | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Brasão NIMBUS",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 3,
+      "position": 4,
+      "product_id": "352703276",
+      "title": "Deus é Fiel | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "Deus é Fiel",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 3,
+      "position": 5,
+      "product_id": "352703343",
+      "title": "Deus é Fiel | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Deus é Fiel",
+      "garment": "Camiseta Premium",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 4,
+      "position": 1,
+      "product_id": "352702858",
+      "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "Fé Acima de Tudo",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 4,
+      "position": 2,
+      "product_id": "352703153",
+      "title": "Fé Acima de Tudo | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Fé Acima de Tudo",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 4,
+      "position": 3,
+      "product_id": "352702753",
+      "title": "Monograma NIMBUS | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "Monograma NIMBUS",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 4,
+      "position": 4,
+      "product_id": "352702796",
+      "title": "Monograma NIMBUS | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Monograma NIMBUS",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 4,
+      "position": 5,
+      "product_id": "352702020",
+      "title": "Salmo 19 | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "Salmo 19",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 5,
+      "position": 1,
+      "product_id": "352619175",
+      "title": "Salmo 19 | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "art": "Salmo 19",
+      "garment": "Moletom Canguru",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 5,
+      "position": 2,
+      "product_id": "352718943",
+      "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Neobarroco",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 5,
+      "position": 3,
+      "product_id": "352718999",
+      "title": "São Jorge Neobarroco | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Neobarroco",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 5,
+      "position": 4,
+      "product_id": "352718787",
+      "title": "São Jorge Neobarroco | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Neobarroco",
+      "garment": "Moletom Canguru",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 5,
+      "position": 5,
+      "product_id": "352618837",
+      "title": "São Jorge Vintage | Blusão Moletom",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Vintage",
+      "garment": "Blusão Moletom",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 6,
+      "position": 1,
+      "product_id": "352618903",
+      "title": "São Jorge Vintage | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Vintage",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 6,
+      "position": 2,
+      "product_id": "352618935",
+      "title": "São Jorge Vintage | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Vintage",
+      "garment": "Camiseta Premium",
+      "colors": "Branca | Preta"
+    },
+    {
+      "sheet": 6,
+      "position": 3,
+      "product_id": "352618878",
+      "title": "São Jorge Vintage | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "art": "São Jorge Vintage",
+      "garment": "Moletom Canguru",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 6,
+      "position": 4,
+      "product_id": "352407182",
+      "title": "São Miguel Vintage | Camiseta Oversized Premium",
+      "collection": "RELIQUIA",
+      "art": "São Miguel Vintage",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 6,
+      "position": 5,
+      "product_id": "352407196",
+      "title": "São Miguel Vintage | Camiseta Premium",
+      "collection": "RELIQUIA",
+      "art": "São Miguel Vintage",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 7,
+      "position": 1,
+      "product_id": "352407156",
+      "title": "São Miguel Vintage | Moletom Canguru",
+      "collection": "RELIQUIA",
+      "art": "São Miguel Vintage",
+      "garment": "Moletom Canguru",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 7,
+      "position": 2,
+      "product_id": "352728451",
+      "title": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "Acima de Tudo Grafite",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Off-White"
+    },
+    {
+      "sheet": 7,
+      "position": 3,
+      "product_id": "352728524",
+      "title": "Acima de Tudo Grafite | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Acima de Tudo Grafite",
+      "garment": "Camiseta Premium",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 7,
+      "position": 4,
+      "product_id": "352728277",
+      "title": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "Anjo da Guarda Stencil",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 7,
+      "position": 5,
+      "product_id": "352728357",
+      "title": "Anjo da Guarda Stencil | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Anjo da Guarda Stencil",
+      "garment": "Camiseta Premium",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 8,
+      "position": 1,
+      "product_id": "352727892",
+      "title": "Aparecida Spray | Blusão Moletom",
+      "collection": "STREET",
+      "art": "Aparecida Spray",
+      "garment": "Blusão Moletom",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 8,
+      "position": 2,
+      "product_id": "352728019",
+      "title": "Aparecida Spray | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "Aparecida Spray",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 8,
+      "position": 3,
+      "product_id": "352889132",
+      "title": "Aparecida Spray | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Aparecida Spray",
+      "garment": "Camiseta Premium",
+      "colors": "Preta"
+    },
+    {
+      "sheet": 8,
+      "position": 4,
+      "product_id": "352721477",
+      "title": "Espírito Santo Spray | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Espírito Santo Spray",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 8,
+      "position": 5,
+      "product_id": "352721118",
+      "title": "Fé Wildstyle | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "Fé Wildstyle",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 9,
+      "position": 1,
+      "product_id": "352721197",
+      "title": "Fé Wildstyle | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Fé Wildstyle",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 9,
+      "position": 2,
+      "product_id": "352721633",
+      "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "NIMBUS Wildstyle",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 9,
+      "position": 3,
+      "product_id": "355581274",
+      "title": "NIMBUS Wildstyle | Ecobag",
+      "collection": "STREET",
+      "art": "NIMBUS Wildstyle",
+      "garment": "Ecobag",
+      "colors": ""
+    },
+    {
+      "sheet": 9,
+      "position": 4,
+      "product_id": "352725749",
+      "title": "Querubim Spray | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "Querubim Spray",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 9,
+      "position": 5,
+      "product_id": "352725852",
+      "title": "Querubim Spray | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Querubim Spray",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 10,
+      "position": 1,
+      "product_id": "352722232",
+      "title": "Sagrado Coração Spray | Camiseta Premium",
+      "collection": "STREET",
+      "art": "Sagrado Coração Spray",
+      "garment": "Camiseta Premium",
+      "colors": "Branca"
+    },
+    {
+      "sheet": 10,
+      "position": 2,
+      "product_id": "352727545",
+      "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "art": "São Miguel Vitorioso",
+      "garment": "Camiseta Oversized Premium",
+      "colors": "Preta | Off-White"
+    },
+    {
+      "sheet": 10,
+      "position": 3,
+      "product_id": "352898175",
+      "title": "São Miguel Vitorioso | Camiseta Premium",
+      "collection": "STREET",
+      "art": "São Miguel Vitorioso",
+      "garment": "Camiseta Premium",
+      "colors": "Preta | Branca"
+    },
+    {
+      "sheet": 10,
+      "position": 4,
+      "product_id": "352726673",
+      "title": "São Miguel Vitorioso | Moletom Canguru",
+      "collection": "STREET",
+      "art": "São Miguel Vitorioso",
+      "garment": "Moletom Canguru",
+      "colors": "Preta | Branca"
+    }
+  ]
+}

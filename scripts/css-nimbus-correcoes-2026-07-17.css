@@ -1,0 +1,177 @@
+
+/* NIMBUS identidade visual final - 2026-07-20 */
+html body {
+  --nimbus-header-bg: #dcebfa !important;
+  --nimbus-header-ink: #0b2360 !important;
+  --nimbus-footer-bg: #dcebfa !important;
+  --nimbus-footer-ink: #0b2360 !important;
+}
+
+/* Garante o fundo suave no topo */
+html body .head-main,
+html body .head-main .head-logo-row,
+html body .head-main .head-nav,
+html body .head-main .head-nav .container-fluid,
+html body .head-main .nav-desktop,
+html body .head-main .head-navbar,
+html body .head-main nav {
+  background: #dcebfa !important;
+}
+
+/* Header: logo a esquerda no desktop, utilitários à direita e alinhamento vertical padrão */
+html body .head-main .head-logo-row > .container-fluid > .row {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+
+html body .head-main .js-logo-container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html body .head-main .head-nav-link,
+html body .head-main .head-main-link,
+html body .head-main .nav-list-link,
+html body .head-main .head-list-link,
+html body .head-main .nav-link {
+  color: #0b2360 !important;
+}
+
+html body .head-main .head-logo-row .js-search-utility,
+html body .head-main .head-logo-row .desktop-utility-col,
+html body .head-main .head-logo-row .js-utility-col,
+html body .head-main .head-logo-row .order-last {
+  margin-top: 0 !important;
+  align-self: center !important;
+}
+
+html body .head-main .head-logo-row .js-utility-col,
+html body .head-main .head-logo-row .desktop-utility-col {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+html body .head-main .btn-utility,
+html body .head-main .js-utility-col {
+  min-height: 44px !important;
+}
+
+/* Força esconder bloco de marca da plataforma */
+html body .powered-by-logo,
+html body .js-footer-col-sticky a[href*='nuvemshop'],
+html body .js-footer-col-sticky a[href*='Nuvemshop'],
+html body footer.js-footer a[title*='Nuvemshop'],
+html body footer.js-footer a[title*='Nuvemshop'],
+html body footer.js-footer .powered-by,
+html body footer.js-footer .js-powered-by,
+html body footer.js-footer .nuvemshop,
+html body footer.js-footer .made-by {
+  display: none !important;
+}
+
+/* Footer com a identidade nova */
+html body footer.js-footer {
+  background: #dcebfa !important;
+  color: #0b2360 !important;
+}
+
+html body footer.js-footer .footer-menu-item,
+html body footer.js-footer .footer-menu-item a {
+  color: #0b2360 !important;
+}
+
+html body footer.js-footer::before {
+  content: 'FEITO NO BRASIL. STREETWEAR CATOLICO PREMIUM.' !important;
+  display: block !important;
+  text-align: center !important;
+  padding: 34px 24px 30px !important;
+  background: #f7fbff !important;
+  color: #0b2360 !important;
+  border-top: 3px solid #e9c46a !important;
+  border-bottom: 1px solid rgba(11, 35, 96, 0.14) !important;
+  font-size: 38px !important;
+  font-family: 'Fraunces', Georgia, serif !important;
+  font-weight: 600 !important;
+  line-height: 1.05 !important;
+}
+
+html body footer.js-footer > .row {
+  max-width: 1440px !important;
+  margin: 0 auto !important;
+  padding: 58px 32px 50px !important;
+}
+
+html body footer.js-footer > .text-left.text-md-center {
+  background: #0b2360 !important;
+  color: #ffffff !important;
+}
+
+/* Coluna hero no topo do rodapé (logo + frase de propósito). */
+html body footer.js-footer > .row::before,
+html body footer.js-footer > .row::before {
+  content: "Streetwear catolico premium, feito no Brasil\A 10% do lucro e destinado ao projeto social escolhido por voce." !important;
+  white-space: pre-line !important;
+  color: #0b2360 !important;
+  display: block !important;
+}
+
+/* Carrossel de colecoes no home */
+html body .section-banners-home {
+  padding-top: 8px !important;
+}
+
+html body .section-banners-home .js-swiper-banners,
+html body .section-banners-home .swiper-wrapper {
+  overflow: hidden !important;
+}
+
+html body .section-banners-home .swiper-wrapper {
+  display: flex !important;
+  width: 300% !important;
+  animation: nimbus-collections-autoplay 18s cubic-bezier(0.42, 0, 0.58, 1) infinite !important;
+}
+
+html body .section-banners-home .swiper-slide {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+html body .section-banners-home .textbanner-image,
+html body .section-banners-home .textbanner-image img {
+  width: 100% !important;
+  height: clamp(300px, 46vw, 520px) !important;
+  object-fit: cover !important;
+}
+
+html body .section-banners-home .swiper-buttons {
+  display: none !important;
+}
+
+@keyframes nimbus-collections-autoplay {
+  0%, 20% { transform: translateX(0%) !important; }
+  33.33%, 53.33% { transform: translateX(-33.3333%) !important; }
+  66.66%, 86.66% { transform: translateX(-66.6666%) !important; }
+  100% { transform: translateX(0%) !important; }
+}
+
+@media (max-width: 767px) {
+  html body footer.js-footer::before {
+    padding: 24px 18px 24px !important;
+    font-size: 30px !important;
+  }
+
+  html body footer.js-footer > .row {
+    padding: 32px 16px 32px !important;
+  }
+
+  html body footer.js-footer > .text-left.text-md-center {
+    padding: 12px 16px 14px !important;
+  }
+
+  html body .section-banners-home .textbanner-image,
+  html body .section-banners-home .textbanner-image img {
+    height: clamp(250px, 75vw, 420px) !important;
+  }
+}

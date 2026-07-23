@@ -1,0 +1,144 @@
+{
+  "generatedAt": "2026-07-22T03:49:10.887Z",
+  "sourceCatalog": "C:\\Users\\rober\\Nimbus\\nuvemshop\\assets\\product-lifestyle\\2026-07-16\\catalog\\nuvemshop-products.json",
+  "publicProducts": 49,
+  "publicVariants": 386,
+  "uniqueSkus": 386,
+  "duplicateSkus": [],
+  "fetchErrors": [],
+  "byGarment": {
+    "Blusão Moletom": 5,
+    "Camiseta Oversized Premium": 16,
+    "Camiseta Premium": 19,
+    "Ecobag": 1,
+    "Moletom Canguru": 8
+  },
+  "byCollection": {
+    "NUVEM": 3,
+    "RELIQUIA": 28,
+    "STREET": 18
+  },
+  "uniqueArts": 21,
+  "uniqueArtsByCollection": {
+    "NUVEM": 1,
+    "RELIQUIA": 11,
+    "STREET": 9
+  },
+  "byColorMode": {
+    "singleColor": 19,
+    "multipleColors": 29,
+    "noPublicColorOption": 1
+  },
+  "unresolvedTechnicalData": [
+    {
+      "productId": 352722510,
+      "title": "São Miguel Celeste | Blusão Moletom",
+      "gap": "A Central de Ajuda informa material e modelagem, mas não publica a tabela de medidas do moletom sem capuz."
+    },
+    {
+      "productId": 352720257,
+      "title": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352719728,
+      "title": "Aparecida Barroca | Blusão Moletom",
+      "gap": "A Central de Ajuda informa material e modelagem, mas não publica a tabela de medidas do moletom sem capuz."
+    },
+    {
+      "productId": 352890896,
+      "title": "Aparecida Barroca | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352717960,
+      "title": "Azulejo Sagrado | Blusão Moletom",
+      "gap": "A Central de Ajuda informa material e modelagem, mas não publica a tabela de medidas do moletom sem capuz."
+    },
+    {
+      "productId": 352717723,
+      "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352703276,
+      "title": "Deus é Fiel | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352702858,
+      "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352702753,
+      "title": "Monograma NIMBUS | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352718943,
+      "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352618837,
+      "title": "São Jorge Vintage | Blusão Moletom",
+      "gap": "A Central de Ajuda informa material e modelagem, mas não publica a tabela de medidas do moletom sem capuz."
+    },
+    {
+      "productId": 352618903,
+      "title": "São Jorge Vintage | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352407182,
+      "title": "São Miguel Vintage | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352728451,
+      "title": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352728277,
+      "title": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352727892,
+      "title": "Aparecida Spray | Blusão Moletom",
+      "gap": "A Central de Ajuda informa material e modelagem, mas não publica a tabela de medidas do moletom sem capuz."
+    },
+    {
+      "productId": 352728019,
+      "title": "Aparecida Spray | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352721118,
+      "title": "Fé Wildstyle | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352721633,
+      "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 355581274,
+      "title": "NIMBUS Wildstyle | Ecobag",
+      "gap": "Capacidade em litros, peso suportado e método de impressão aguardam confirmação da YouDraw."
+    },
+    {
+      "productId": 352725749,
+      "title": "Querubim Spray | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    },
+    {
+      "productId": 352727545,
+      "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+      "gap": "Confirmar no painel que os produtos NIMBUS usam a versão atual de 240 g, pois há páginas antigas do marketplace citando 165 g."
+    }
+  ]
+}

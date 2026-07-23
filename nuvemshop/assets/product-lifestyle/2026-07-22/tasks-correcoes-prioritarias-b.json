@@ -1,0 +1,56 @@
+{
+  "fase": "segunda rodada de escala 2026-07-22",
+  "criadoEm": "2026-07-22",
+  "tasks": [
+    {
+      "productId": 352728357,
+      "title": "Anjo da Guarda Stencil | Camiseta Premium",
+      "collection": "STREET",
+      "family": "Anjo da Guarda Stencil",
+      "piece": "Camiseta Premium",
+      "color": "Preta",
+      "view": "back",
+      "isEcobag": false,
+      "model": "Caio",
+      "garment": "camiseta premium preta regular fit, gola careca e mangas curtas até o meio do bíceps",
+      "modelBoard": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/casting/caio-reference-board-v1.png",
+      "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352728357-anjo-da-guarda1/gallery-01.webp",
+      "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352728357-anjo-da-guarda1/gallery-02.webp",
+      "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/STREET/mockups/Anjo da Guarda [Camiseta+Oversized] [frente e verso]/costas - Anjo da Guarda.png",
+      "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728357-anjo-premium-nano-a.png",
+      "sceneRef": null,
+      "composicao": { "sup": 16, "alt": 40, "inf": 44, "larg": 39 },
+      "notes": [
+        "A rodada anterior preservou a arte, mas ainda deixou a estampa praticamente do tamanho antigo. Reduza de forma visível e mantenha a estampa inteira contida numa área central menor",
+        "O anjo, o livro, as asas e o halo devem ser cópia exata das referências; não use um anjo em pé ou outra gravura"
+      ],
+      "tag": "audit-20260722-b",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728357-anjo-premium-nano-b.png"
+    },
+    {
+      "productId": 352728019,
+      "title": "Aparecida Spray | Camiseta Oversized Premium",
+      "collection": "STREET",
+      "family": "Aparecida Spray",
+      "piece": "Camiseta Oversized Premium",
+      "color": "Preta",
+      "view": "back",
+      "isEcobag": false,
+      "model": "Helena",
+      "garment": "camiseta oversized premium preta, corpo boxy, ombros deslocados e mangas largas curtas terminando acima do cotovelo",
+      "modelBoard": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/casting/helena-reference-board-v1.png",
+      "garmentRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352728019-aparecida-spray2/gallery-01.webp",
+      "mockupRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352728019-aparecida-spray2/gallery-02.webp",
+      "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/STREET/mockups/Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]/costas - Aparecida Spray (3).png",
+      "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728019-aparecida-spray-oversized-nano-a.png",
+      "sceneRef": null,
+      "composicao": { "sup": 18, "alt": 27, "inf": 55, "larg": 28 },
+      "notes": [
+        "A rodada anterior continuou com a estampa enorme. O mockup tem uma estampa claramente compacta; esta rodada deve mostrá-la muito menor, com mais da metade inferior da camiseta completamente vazia",
+        "Preserve a arte Aparecida Spray exatamente; não transforme o desenho nem altere a assinatura NIMBUS"
+      ],
+      "tag": "audit-20260722-b",
+      "output": "C:/Users/rober/Nimbus/nuvemshop/assets/product-lifestyle/2026-07-22/352728019-aparecida-spray-oversized-nano-b.png"
+    }
+  ]
+}

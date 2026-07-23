@@ -78,3 +78,30 @@ nuvemshop/assets/product-lifestyle/**/review/revisao-*/
 
 # Pasta temporaria de trabalho: refs pro app do Gemini (tem copia de arte). Nunca no repo publico.
 /_Refazer no Gemini/
+
+# Capturas e perfis efemeros de QA. Os metrics JSON podem ser versionados,
+# mas perfis do Chrome, screenshots repetidos e HTML baixado nunca devem subir.
+nuvemshop/qa/**/chrome-cdp-profile*/
+nuvemshop/qa/**/*.png
+nuvemshop/qa/**/*.html
+
+# A auditoria final fica versionada em CSV + DOCX + PDF. Imagens intermediarias,
+# copias da galeria publica e renders de paginacao sao reproduziveis e pesados.
+nuvemshop/auditoria/**/*.png
+nuvemshop/auditoria/**/*.jpg
+nuvemshop/auditoria/**/*.jpeg
+nuvemshop/auditoria/**/*.webp
+nuvemshop/auditoria/**/cards-docx/
+
+# Arquivos locais de diagnostico e automacao descartavel.
+/.tmp_*
+/tmp_*
+/temp_*
+nuvemshop/tmp_*
+nuvemshop/*.bak_*
+nuvemshop/css-import-test.txt
+scripts/.tmp*
+scripts/_tmp*
+scripts/tmp*
+scripts/__pycache__/
+*.pyc

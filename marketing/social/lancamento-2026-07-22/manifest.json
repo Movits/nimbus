@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-07-22T11:59:19.641Z",
+  "source": "designs/prontos/_marca/logo-icone-nuvem-v2.png",
+  "colors": {
+    "sky": "#dcebfa",
+    "cloud": "#f7fbff",
+    "navy": "#0b2360",
+    "gold": "#e9c46a"
+  },
+  "outputs": [
+    {
+      "filename": "perfil-nimbus-universal-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "format": "png"
+    },
+    {
+      "filename": "perfil-nimbus-google-512.png",
+      "width": 512,
+      "height": 512,
+      "format": "png"
+    },
+    {
+      "filename": "perfil-nimbus-mini-320.png",
+      "width": 320,
+      "height": 320,
+      "format": "png"
+    },
+    {
+      "filename": "preview-perfil-nimbus.png",
+      "width": 1200,
+      "height": 720,
+      "format": "png"
+    }
+  ]
+}

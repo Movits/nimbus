@@ -1,0 +1,1309 @@
+[
+  {
+    "name": "desktop-1440",
+    "url": "https://loja.nimbuswear.com.br/?nimbusqa=1784608685816-desktop-1440",
+    "metrics": {
+      "viewportWidth": 1440,
+      "viewportHeight": 900,
+      "bodyScrollWidth": 1440,
+      "bodyScrollHeight": 2539,
+      "horizontalOverflow": false,
+      "logo": {
+        "left": 44,
+        "right": 214,
+        "top": 49.7,
+        "bottom": 104.3,
+        "width": 170,
+        "height": 54.5,
+        "centerX": 129,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "logoImage": {
+        "left": 44,
+        "right": 214,
+        "top": 49.7,
+        "bottom": 104.3,
+        "width": 170,
+        "height": 54.5,
+        "centerX": 129,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "clip",
+        "position": "static"
+      },
+      "menu": {
+        "left": 0,
+        "right": 0,
+        "top": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0,
+        "centerX": 0,
+        "display": "none",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "cart": {
+        "left": 1289.5,
+        "right": 1396,
+        "top": 55,
+        "bottom": 99,
+        "width": 106.5,
+        "height": 44,
+        "centerX": 1342.7,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "headerRow": {
+        "left": 44,
+        "right": 1396,
+        "top": 36,
+        "bottom": 118,
+        "width": 1352,
+        "height": 82,
+        "centerX": 720,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "headerVerticalOffsets": {
+        "logoFromRow": 0,
+        "menuFromRow": -77,
+        "cartFromRow": 0
+      },
+      "manifesto": {
+        "left": 0,
+        "right": 1440,
+        "top": 608.4,
+        "bottom": 1102.1,
+        "width": 1440,
+        "height": 493.8,
+        "centerX": 720,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "hidden",
+        "position": "static"
+      },
+      "manifestoRow": {
+        "left": 0,
+        "right": 1440,
+        "top": 638.4,
+        "bottom": 1072.1,
+        "width": 1440,
+        "height": 433.8,
+        "centerX": 720,
+        "display": "grid",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "manifestoTitle": {
+        "left": 100.8,
+        "right": 740.1,
+        "top": 704.4,
+        "bottom": 1002.1,
+        "width": 639.3,
+        "height": 297.8,
+        "centerX": 420.4,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoBody": {
+        "left": 878.7,
+        "right": 1318.7,
+        "top": 759.8,
+        "bottom": 946.7,
+        "width": 440,
+        "height": 187,
+        "centerX": 1098.7,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "manifestoParagraph": {
+        "left": 912.7,
+        "right": 1307.8,
+        "top": 797,
+        "bottom": 858.7,
+        "width": 395.2,
+        "height": 61.8,
+        "centerX": 1110.3,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoButton": {
+        "left": 912.7,
+        "right": 1102.6,
+        "top": 884.7,
+        "bottom": 938.7,
+        "width": 190,
+        "height": 54,
+        "centerX": 1007.7,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoContained": true,
+      "collectionsTitle": {
+        "left": 16,
+        "right": 1424,
+        "top": 177,
+        "bottom": 202,
+        "width": 1408,
+        "height": 25,
+        "centerX": 720,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "firstCollection": {
+        "left": 16,
+        "right": 473.3,
+        "top": 236,
+        "bottom": 568.4,
+        "width": 457.3,
+        "height": 332.4,
+        "centerX": 244.7,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "footer": {
+        "left": 0,
+        "right": 1440,
+        "top": 2178.4,
+        "bottom": 2538.6,
+        "width": 1440,
+        "height": 360.2,
+        "centerX": 720,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "footerRow": {
+        "left": 80,
+        "right": 1360,
+        "top": 2181.4,
+        "bottom": 2476.6,
+        "width": 1280,
+        "height": 295.2,
+        "centerX": 720,
+        "display": "grid",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "copyright": {
+        "left": 0,
+        "right": 1440,
+        "top": 2476.6,
+        "bottom": 2538.6,
+        "width": 1440,
+        "height": 62,
+        "centerX": 720,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "copyrightText": "Copyright Nimbus - 2026. Todos os direitos reservados.",
+      "copyrightVisible": true,
+      "poweredByDisplay": "none",
+      "footerText": "Início Produtos STREET RELÍQUIA NUVEM Sobre Projetos Sociais Contato Telefone 61992221022 Sobre Projetos Sociais Contato Copyright Nimbus - 2026. Todos os direitos reservados."
+    },
+    "collectionStates": [],
+    "logoOffsetPx": -591
+  },
+  {
+    "name": "mobile-390",
+    "url": "https://loja.nimbuswear.com.br/?nimbusqa=1784608691706-mobile-390",
+    "metrics": {
+      "viewportWidth": 390,
+      "viewportHeight": 844,
+      "bodyScrollWidth": 390,
+      "bodyScrollHeight": 3681,
+      "horizontalOverflow": false,
+      "logo": {
+        "left": 18,
+        "right": 150,
+        "top": 64.8,
+        "bottom": 107.2,
+        "width": 132,
+        "height": 42.3,
+        "centerX": 84,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "logoImage": {
+        "left": 18,
+        "right": 150,
+        "top": 64.8,
+        "bottom": 107.2,
+        "width": 132,
+        "height": 42.3,
+        "centerX": 84,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "clip",
+        "position": "static"
+      },
+      "menu": {
+        "left": 164,
+        "right": 224,
+        "top": 79,
+        "bottom": 97,
+        "width": 60,
+        "height": 18,
+        "centerX": 194,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "cart": {
+        "left": 276.5,
+        "right": 372,
+        "top": 66,
+        "bottom": 110,
+        "width": 95.5,
+        "height": 44,
+        "centerX": 324.3,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "headerRow": {
+        "left": 18,
+        "right": 372,
+        "top": 51,
+        "bottom": 125,
+        "width": 354,
+        "height": 74,
+        "centerX": 195,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "headerVerticalOffsets": {
+        "logoFromRow": -2,
+        "menuFromRow": 0,
+        "cartFromRow": 0
+      },
+      "manifesto": {
+        "left": 0,
+        "right": 390,
+        "top": 669.3,
+        "bottom": 1050,
+        "width": 390,
+        "height": 380.7,
+        "centerX": 195,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoRow": {
+        "left": 0,
+        "right": 390,
+        "top": 699.3,
+        "bottom": 1020,
+        "width": 390,
+        "height": 320.7,
+        "centerX": 195,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "manifestoTitle": {
+        "left": 15,
+        "right": 343.8,
+        "top": 699.3,
+        "bottom": 894,
+        "width": 328.8,
+        "height": 194.7,
+        "centerX": 179.4,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoBody": {
+        "left": 0,
+        "right": 390,
+        "top": 894,
+        "bottom": 1020,
+        "width": 390,
+        "height": 126,
+        "centerX": 195,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "manifestoParagraph": {
+        "left": 15,
+        "right": 375,
+        "top": 912,
+        "bottom": 932,
+        "width": 360,
+        "height": 20,
+        "centerX": 195,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoButton": {
+        "left": 15,
+        "right": 205.3,
+        "top": 964,
+        "bottom": 1012,
+        "width": 190.3,
+        "height": 48,
+        "centerX": 110.1,
+        "display": "inline-flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoContained": true,
+      "collectionsTitle": {
+        "left": 15,
+        "right": 375,
+        "top": 220,
+        "bottom": 245,
+        "width": 360,
+        "height": 25,
+        "centerX": 195,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "firstCollection": {
+        "left": -735,
+        "right": -375,
+        "top": 269,
+        "bottom": 641.3,
+        "width": 360,
+        "height": 372.3,
+        "centerX": -555,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "footer": {
+        "left": 0,
+        "right": 390,
+        "top": 2977,
+        "bottom": 3681.1,
+        "width": 390,
+        "height": 704.1,
+        "centerX": 195,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "footerRow": {
+        "left": 0,
+        "right": 390,
+        "top": 2980,
+        "bottom": 3615.1,
+        "width": 390,
+        "height": 635.1,
+        "centerX": 195,
+        "display": "grid",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "copyright": {
+        "left": 0,
+        "right": 390,
+        "top": 3615.1,
+        "bottom": 3681.1,
+        "width": 390,
+        "height": 66,
+        "centerX": 195,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "copyrightText": "Copyright Nimbus - 2026. Todos os direitos reservados.",
+      "copyrightVisible": true,
+      "poweredByDisplay": "none",
+      "footerText": "Início Produtos STREET RELÍQUIA NUVEM Sobre Projetos Sociais Contato Telefone 61992221022 Sobre Projetos Sociais Contato Copyright Nimbus - 2026. Todos os direitos reservados."
+    },
+    "collectionStates": [
+      {
+        "scrollY": 0,
+        "section": {
+          "className": "section-home section-banners-home position-relative overflow-none ",
+          "left": 0,
+          "right": 390,
+          "width": 390,
+          "marginRight": "0px",
+          "transform": "none",
+          "overflow": "hidden",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "wrapper": {
+          "className": "swiper-wrapper swiper-products-slider flex-nowrap row row-grid",
+          "left": 15,
+          "right": 375,
+          "width": 360,
+          "marginRight": "0px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflow": "visible",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "slides": [
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-active",
+              "left": 15,
+              "right": 375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 15,
+              "right": 375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-4603987694-ff878e4d43de8f01b894f9008f0ea79e1784182412-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": true
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 swiper-slide-next",
+              "left": 375,
+              "right": 735,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 375,
+              "right": 735,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-5630261365-d788d053207efb91f938b856eb4af90e1784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12",
+              "left": 735,
+              "right": 1095,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 735,
+              "right": 1095,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-7281246831-34829c51af77ef5a005a06fc881a92b11784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          }
+        ]
+      },
+      {
+        "scrollY": 0,
+        "section": {
+          "className": "section-home section-banners-home position-relative overflow-none ",
+          "left": 0,
+          "right": 390,
+          "width": 390,
+          "marginRight": "0px",
+          "transform": "none",
+          "overflow": "hidden",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "wrapper": {
+          "className": "swiper-wrapper swiper-products-slider flex-nowrap row row-grid",
+          "left": -360,
+          "right": 0,
+          "width": 360,
+          "marginRight": "0px",
+          "transform": "matrix(1, 0, 0, 1, -375, 0)",
+          "overflow": "visible",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "slides": [
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 swiper-slide-prev",
+              "left": -360,
+              "right": 0,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": -360,
+              "right": 0,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-4603987694-ff878e4d43de8f01b894f9008f0ea79e1784182412-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-active",
+              "left": 15,
+              "right": 375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "matrix(1, 0, 0, 1, 15, 0)",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 15,
+              "right": 375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-5630261365-d788d053207efb91f938b856eb4af90e1784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": true
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-next",
+              "left": 360,
+              "right": 720,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 360,
+              "right": 720,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-7281246831-34829c51af77ef5a005a06fc881a92b11784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          }
+        ]
+      },
+      {
+        "scrollY": 0,
+        "section": {
+          "className": "section-home section-banners-home position-relative overflow-none ",
+          "left": 0,
+          "right": 390,
+          "width": 390,
+          "marginRight": "0px",
+          "transform": "none",
+          "overflow": "hidden",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "wrapper": {
+          "className": "swiper-wrapper swiper-products-slider flex-nowrap row row-grid",
+          "left": -735,
+          "right": -375,
+          "width": 360,
+          "marginRight": "0px",
+          "transform": "matrix(1, 0, 0, 1, -750, 0)",
+          "overflow": "visible",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "slides": [
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12",
+              "left": -735,
+              "right": -375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": -735,
+              "right": -375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-4603987694-ff878e4d43de8f01b894f9008f0ea79e1784182412-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 swiper-slide-prev",
+              "left": -375,
+              "right": -15,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": -375,
+              "right": -15,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-5630261365-d788d053207efb91f938b856eb4af90e1784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-active",
+              "left": 15,
+              "right": 375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "matrix(1, 0, 0, 1, 30, 0)",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 15,
+              "right": 375,
+              "width": 360,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-7281246831-34829c51af77ef5a005a06fc881a92b11784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": true
+          }
+        ]
+      }
+    ],
+    "logoOffsetPx": -111
+  },
+  {
+    "name": "mobile-320",
+    "url": "https://loja.nimbuswear.com.br/?nimbusqa=1784608697860-mobile-320",
+    "metrics": {
+      "viewportWidth": 320,
+      "viewportHeight": 800,
+      "bodyScrollWidth": 320,
+      "bodyScrollHeight": 3673,
+      "horizontalOverflow": false,
+      "logo": {
+        "left": 12,
+        "right": 120,
+        "top": 68.7,
+        "bottom": 103.3,
+        "width": 108,
+        "height": 34.6,
+        "centerX": 66,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "logoImage": {
+        "left": 12,
+        "right": 120,
+        "top": 68.7,
+        "bottom": 103.3,
+        "width": 108,
+        "height": 34.6,
+        "centerX": 66,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "clip",
+        "position": "static"
+      },
+      "menu": {
+        "left": 128,
+        "right": 169,
+        "top": 78.5,
+        "bottom": 97.5,
+        "width": 41,
+        "height": 19,
+        "centerX": 148.5,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "cart": {
+        "left": 242.6,
+        "right": 308,
+        "top": 66,
+        "bottom": 110,
+        "width": 65.4,
+        "height": 44,
+        "centerX": 275.3,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "headerRow": {
+        "left": 12,
+        "right": 308,
+        "top": 51,
+        "bottom": 125,
+        "width": 296,
+        "height": 74,
+        "centerX": 160,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "headerVerticalOffsets": {
+        "logoFromRow": -2,
+        "menuFromRow": 0,
+        "cartFromRow": 0
+      },
+      "manifesto": {
+        "left": 0,
+        "right": 320,
+        "top": 618.9,
+        "bottom": 984.6,
+        "width": 320,
+        "height": 365.7,
+        "centerX": 160,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoRow": {
+        "left": 0,
+        "right": 320,
+        "top": 648.9,
+        "bottom": 954.6,
+        "width": 320,
+        "height": 305.7,
+        "centerX": 160,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "manifestoTitle": {
+        "left": 15,
+        "right": 284.8,
+        "top": 648.9,
+        "bottom": 808.6,
+        "width": 269.8,
+        "height": 159.7,
+        "centerX": 149.9,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoBody": {
+        "left": 0,
+        "right": 320,
+        "top": 808.6,
+        "bottom": 954.6,
+        "width": 320,
+        "height": 146,
+        "centerX": 160,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "manifestoParagraph": {
+        "left": 15,
+        "right": 305,
+        "top": 826.6,
+        "bottom": 866.6,
+        "width": 290,
+        "height": 40,
+        "centerX": 160,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoButton": {
+        "left": 15,
+        "right": 205.3,
+        "top": 898.6,
+        "bottom": 946.6,
+        "width": 190.3,
+        "height": 48,
+        "centerX": 110.1,
+        "display": "inline-flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "static"
+      },
+      "manifestoContained": true,
+      "collectionsTitle": {
+        "left": 15,
+        "right": 305,
+        "top": 220,
+        "bottom": 245,
+        "width": 290,
+        "height": 25,
+        "centerX": 160,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "firstCollection": {
+        "left": -595,
+        "right": -305,
+        "top": 269,
+        "bottom": 590.9,
+        "width": 290,
+        "height": 321.9,
+        "centerX": -450,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "footer": {
+        "left": 0,
+        "right": 320,
+        "top": 2771.6,
+        "bottom": 3673.4,
+        "width": 320,
+        "height": 901.8,
+        "centerX": 160,
+        "display": "block",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "footerRow": {
+        "left": 0,
+        "right": 320,
+        "top": 2774.6,
+        "bottom": 3597.8,
+        "width": 320,
+        "height": 823.2,
+        "centerX": 160,
+        "display": "grid",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "copyright": {
+        "left": 0,
+        "right": 320,
+        "top": 3597.8,
+        "bottom": 3673.4,
+        "width": 320,
+        "height": 75.6,
+        "centerX": 160,
+        "display": "flex",
+        "visibility": "visible",
+        "overflow": "visible",
+        "position": "relative"
+      },
+      "copyrightText": "Copyright Nimbus - 2026. Todos os direitos reservados.",
+      "copyrightVisible": true,
+      "poweredByDisplay": "none",
+      "footerText": "Início Produtos STREET RELÍQUIA NUVEM Sobre Projetos Sociais Contato Telefone 61992221022 Sobre Projetos Sociais Contato Copyright Nimbus - 2026. Todos os direitos reservados."
+    },
+    "collectionStates": [
+      {
+        "scrollY": 0,
+        "section": {
+          "className": "section-home section-banners-home position-relative overflow-none ",
+          "left": 0,
+          "right": 320,
+          "width": 320,
+          "marginRight": "0px",
+          "transform": "none",
+          "overflow": "hidden",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "wrapper": {
+          "className": "swiper-wrapper swiper-products-slider flex-nowrap row row-grid",
+          "left": 15,
+          "right": 305,
+          "width": 290,
+          "marginRight": "0px",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)",
+          "overflow": "visible",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "slides": [
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-active",
+              "left": 15,
+              "right": 305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 15,
+              "right": 305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-4603987694-ff878e4d43de8f01b894f9008f0ea79e1784182412-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": true
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 swiper-slide-next",
+              "left": 305,
+              "right": 595,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 305,
+              "right": 595,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-5630261365-d788d053207efb91f938b856eb4af90e1784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12",
+              "left": 595,
+              "right": 885,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 595,
+              "right": 885,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-7281246831-34829c51af77ef5a005a06fc881a92b11784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          }
+        ]
+      },
+      {
+        "scrollY": 0,
+        "section": {
+          "className": "section-home section-banners-home position-relative overflow-none ",
+          "left": 0,
+          "right": 320,
+          "width": 320,
+          "marginRight": "0px",
+          "transform": "none",
+          "overflow": "hidden",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "wrapper": {
+          "className": "swiper-wrapper swiper-products-slider flex-nowrap row row-grid",
+          "left": -290,
+          "right": 0,
+          "width": 290,
+          "marginRight": "0px",
+          "transform": "matrix(1, 0, 0, 1, -305, 0)",
+          "overflow": "visible",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "slides": [
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 swiper-slide-prev",
+              "left": -290,
+              "right": 0,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": -290,
+              "right": 0,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-4603987694-ff878e4d43de8f01b894f9008f0ea79e1784182412-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-active",
+              "left": 15,
+              "right": 305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "matrix(1, 0, 0, 1, 15, 0)",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 15,
+              "right": 305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-5630261365-d788d053207efb91f938b856eb4af90e1784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": true
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-next",
+              "left": 290,
+              "right": 580,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 290,
+              "right": 580,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-7281246831-34829c51af77ef5a005a06fc881a92b11784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          }
+        ]
+      },
+      {
+        "scrollY": 0,
+        "section": {
+          "className": "section-home section-banners-home position-relative overflow-none ",
+          "left": 0,
+          "right": 320,
+          "width": 320,
+          "marginRight": "0px",
+          "transform": "none",
+          "overflow": "hidden",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "wrapper": {
+          "className": "swiper-wrapper swiper-products-slider flex-nowrap row row-grid",
+          "left": -595,
+          "right": -305,
+          "width": 290,
+          "marginRight": "0px",
+          "transform": "matrix(1, 0, 0, 1, -610, 0)",
+          "overflow": "visible",
+          "backgroundImage": "none",
+          "backgroundSize": "auto"
+        },
+        "slides": [
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12",
+              "left": -595,
+              "right": -305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": -595,
+              "right": -305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-4603987694-ff878e4d43de8f01b894f9008f0ea79e1784182412-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 swiper-slide-prev",
+              "left": -305,
+              "right": -15,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": -305,
+              "right": -15,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-5630261365-d788d053207efb91f938b856eb4af90e1784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": false
+          },
+          {
+            "slide": {
+              "className": "swiper-slide col-grid col-md-12 js-swiper-slide-visible swiper-slide-active",
+              "left": 15,
+              "right": 305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "matrix(1, 0, 0, 1, 30, 0)",
+              "overflow": "visible",
+              "backgroundImage": "none",
+              "backgroundSize": "auto"
+            },
+            "image": {
+              "className": "textbanner-image  overflow-none",
+              "left": 15,
+              "right": 305,
+              "width": 290,
+              "marginRight": "0px",
+              "transform": "none",
+              "overflow": "hidden",
+              "backgroundImage": "url(\"https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/2-slide-1784182410333-7281246831-34829c51af77ef5a005a06fc881a92b11784182413-1920-1920.webp?403842389819984120\")",
+              "backgroundSize": "cover"
+            },
+            "active": true
+          }
+        ]
+      }
+    ],
+    "logoOffsetPx": -94
+  }
+]
