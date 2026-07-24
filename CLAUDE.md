@@ -180,6 +180,14 @@ A "regra da distancia" (aceitar texto corrompido porque fica ilegivel na
 miniatura) esta REVOGADA: nenhum defeito residual e aceitavel sem aprovacao
 explicita do dono, caso a caso.
 
+Decisao do dono (24/07, apos ver o artefato da auditoria ao vivo): os
+defeitos de MICROTEXTO existentes estao APROVADOS como residuo aceitavel e
+NAO devem ser refeitos — inclui a assinatura "NPMBUS" do `[352407196]`, o
+cartucho da Aparecida `[352890896]` e as pendencias de microtipografia dos
+itens REVISAR. A fila de correcao passa a cobrir somente escala, peca,
+modelo e cenario. Isso e a aprovacao caso a caso prevista acima; novas
+geracoes continuam mirando fidelidade total de texto (TEXT IS SACRED).
+
 Licao central do lote v4 (18-19/07): os julgamentos de escala "no olho" da
 propria rodada aprovaram fotos que a auditoria por dimensoes exatas reprovou
 depois (ex.: Sao Jorge Neobarroco Moletom foi aprovado com "-6,2%" e esta
@@ -281,20 +289,23 @@ Arquivos relevantes:
 
 ## Pendencias de maior prioridade
 
-1. Receber o feedback do usuario sobre o DOCX/PDF da auditoria de escala.
-2. Verificar em pixel a foto Preta atual do `[352890896]` (cartucho "BRASIL
-   SACRO") e a microtipografia do Salmo 19; o par do Salmo 19 ja esta
-   resolvido no ar (v4i publicada).
-3. Selecionar um unico produto `REFAZER` para piloto de correcao na API do
-   Google AI Studio, seguindo o protocolo um-produto-por-vez.
-4. Validar o piloto contra as dimensoes exatas da YouDraw. Somente apos
-   aprovacao, seguir para o proximo produto (sempre um por vez).
-5. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
-6. Completar material, modelagem, tabela de medidas, prazo POD, politica e
+1. FEITO em 24/07: dono aprovou a auditoria ao vivo (artefato) e decidiu
+   nao refazer microtextos; corrigir o resto (escala/peca/modelo/cenario).
+2. Piloto um-por-um em andamento no `[352718787]`: a checagem calibrada de
+   24/07 (mockup real da YouDraw + agentes independentes) indicou que a
+   foto no ar esta com escala aproximadamente CORRETA (±10%) e que o
+   veredito "+20-30% maior" do CSV veio de comparacao com template de
+   mockup com torso estreito. Antes de gerar qualquer imagem, re-derivar
+   os vereditos de escala da fila com a metrica fisica (altura da estampa
+   ÷ comprimento das costas, em cm) produto a produto.
+3. Apos re-derivacao, corrigir de fato (um produto por vez, API Google AI
+   Studio) somente os que continuarem reprovados.
+4. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
+5. Completar material, modelagem, tabela de medidas, prazo POD, politica e
    impacto social nas paginas de produto.
-7. Finalizar paginas legais e de ajuda com dados publicos aprovados.
-8. Validar analytics e os eventos do funil antes de anuncios pagos.
-9. Executar pedidos controlados apenas no futuro e com nova autorizacao, pois
+6. Finalizar paginas legais e de ajuda com dados publicos aprovados.
+7. Validar analytics e os eventos do funil antes de anuncios pagos.
+8. Executar pedidos controlados apenas no futuro e com nova autorizacao, pois
    envolvem dinheiro e fabricacao real.
 
 Ao assumir o projeto, nao comece corrigindo imagens. Primeiro apresente uma

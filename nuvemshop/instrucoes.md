@@ -77,6 +77,10 @@ sem aprovação do dono:
 A "regra da distância" (aceitar texto corrompido por ficar ilegível em miniatura) está revogada; ver
 o protocolo um-produto-por-vez no `CLAUDE.md`.
 
+Decisão do dono (24/07, após o artefato da auditoria ao vivo): os defeitos de MICROTEXTO existentes
+(assinatura "NPMBUS" no 352407196, cartucho do 352890896, microtipografias em itens REVISAR) estão
+APROVADOS como resíduo — NÃO refazer. A fila de correção cobre apenas escala/peça/modelo/cenário.
+
 ## Regras de conteúdo (valem sempre)
 
 ⚠️ **Nunca usar "troca fácil" em texto nenhum.** POD encarece devolução. Política de trocas = mínimo legal
