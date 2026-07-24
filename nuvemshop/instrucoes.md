@@ -56,13 +56,23 @@ estampa está certa. A auditoria visual das 49 foi concluída em 22–23/07 (25 
 tarja "PADROEIRA (BRAHL SAEBD)" do 352719728 foi corrigido pela substituição publicada em 22/07
 (hoje o produto é APROVAR).
 
-⚠️ **Defeitos confirmados ainda no ar (24/07)** — não regenerar nada sem aprovação do dono:
+⚠️ **Defeitos no ar (atualizado pela auditoria ao vivo de 24/07 à tarde)** — não regenerar nada
+sem aprovação do dono:
 
-- 352702020 (Salmo 19 | Camiseta Premium): fotos Preta e Branca com **modelos diferentes**; a correção
-  `352702020-branca-v4i.jpg` está pronta em `uploads-v2-small/` e nunca foi publicada.
-- 352890896 (Aparecida Barroca | Oversized): legenda minúscula "BRASIL SRCNO" em vez de "BRASIL SACRO".
-- 352407196 (São Miguel Vintage | Premium, foto Branca): assinatura "NPMBUS" em vez de "NIMBUS".
-- 352407182 (São Miguel Vintage | Oversized, Preta): escala ~12% acima do mockup.
+- 352702020 (Salmo 19 | Camiseta Premium): **RESOLVIDO** — a auditoria ao vivo confirmou que a
+  `352702020-branca-v4i.jpg` ESTÁ publicada (slug `branca-v4i` no ar) e o par Preta/Branca usa o
+  mesmo modelo. O registro anterior ("nunca foi publicada") estava errado.
+- 352890896 (Aparecida Barroca | Oversized): a galeria mudou em 24/07 — capa agora é a off-white e
+  a foto Preta no ar tem hash diferente da `preta-v4d` que continha "BRASIL SRCNO". O texto da
+  foto atual NÃO foi verificado em pixel; conferir com crop dedicado antes de qualquer veredito.
+- 352407196 (São Miguel Vintage | Premium, foto Branca): assinatura "NPMBUS" em vez de "NIMBUS" —
+  **confirmado ainda no ar em 24/07** (slug `branca-v4g`).
+- 352407182 (São Miguel Vintage | Oversized, Preta): escala ~12% acima do mockup (arquivo inalterado).
+- Capas novas publicadas pela outra sessão em 24/07, fora do protocolo um-produto-por-vez:
+  352618837, 352727545, 352726673 (medidas em pixel em 24/07 com escala calibrada: ok/limítrofe,
+  faltando checagem de microtexto) e 352898175, 352718943, 352728451, 352728524, 352727892,
+  352718275 (sem inspeção de pixel; o veredito antigo da auditoria por cm não vale para a foto
+  nova). Nenhuma conta como versão final antes do ciclo completo.
 
 A "regra da distância" (aceitar texto corrompido por ficar ilegível em miniatura) está revogada; ver
 o protocolo um-produto-por-vez no `CLAUDE.md`.

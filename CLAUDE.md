@@ -154,21 +154,27 @@ documento.
 Alem dos 13 REVISAR e 11 REFAZER da auditoria acima, estes defeitos pontuais
 estao confirmados na loja publicada:
 
-- Salmo 19 | Camiseta Premium `[352702020]`: as fotos Preta e Branca usam
-  modelos (pessoas) visivelmente diferentes; no hover o par troca de pessoa.
-  A correcao ja existe (`uploads-v2-small/352702020-branca-v4i.jpg`, mesmo
-  modelo da Preta, gerada em 19/07) mas NUNCA foi publicada. Publicar a v4i
-  resolve, apos aprovacao do dono.
-- Aparecida Barroca | Camiseta Oversized Premium `[352890896]`: a legenda
-  minuscula le "BRASIL SRCNO" em vez de "BRASIL SACRO". Foi publicada
-  conscientemente pela "regra da distancia" (ilegivel em miniatura), mas com
-  zoom na pagina do produto o erro aparece.
+- Salmo 19 | Camiseta Premium `[352702020]`: RESOLVIDO. A auditoria ao vivo
+  de 24/07 (tarde) confirmou que a correcao `352702020-branca-v4i.jpg` ESTA
+  publicada (slug `branca-v4i` no ar) e que o par Preta/Branca usa o mesmo
+  modelo. O registro anterior, que dizia que a v4i nunca tinha sido
+  publicada, estava errado.
+- Aparecida Barroca | Camiseta Oversized Premium `[352890896]`: a galeria
+  mudou em 24/07 — a capa agora e a off-white e a foto Preta no ar tem hash
+  diferente da `preta-v4d` que continha "BRASIL SRCNO". O texto da foto atual
+  NAO foi verificado em pixel; conferir com crop dedicado antes de veredito.
 - Sao Miguel Vintage | Camiseta Premium `[352407196]` (foto Branca): a
-  assinatura da marca le "NPMBUS" em vez de "NIMBUS". Mesmo caso: residuo
-  aceito pela regra da distancia.
+  assinatura da marca le "NPMBUS" em vez de "NIMBUS". Confirmado ainda no ar
+  em 24/07 (slug `branca-v4g`).
 - Sao Miguel Vintage | Camiseta Oversized Premium `[352407182]` (Preta):
   escala ~12% acima do mockup, publicada como "melhor versao disponivel" apos
-  5 rodadas sem convergir.
+  5 rodadas sem convergir. Arquivo inalterado em 24/07.
+- Capas novas publicadas por outra sessao em 22-24/07, fora do protocolo
+  um-produto-por-vez: 352618837, 352727545, 352726673 (medidas em pixel em
+  24/07 com escala calibrada: ok/limitrofe, faltando microtexto) e 352898175,
+  352718943, 352728451, 352728524, 352727892, 352718275 (sem inspecao de
+  pixel; o veredito antigo da auditoria por cm nao vale para a foto nova).
+  Nenhuma conta como versao final antes do ciclo completo de agentes.
 
 A "regra da distancia" (aceitar texto corrompido porque fica ilegivel na
 miniatura) esta REVOGADA: nenhum defeito residual e aceitavel sem aprovacao
@@ -276,8 +282,9 @@ Arquivos relevantes:
 ## Pendencias de maior prioridade
 
 1. Receber o feedback do usuario sobre o DOCX/PDF da auditoria de escala.
-2. Com aprovacao do dono, publicar a correcao ja pronta do Salmo 19
-   (`352702020-branca-v4i.jpg`) para eliminar o par com modelos diferentes.
+2. Verificar em pixel a foto Preta atual do `[352890896]` (cartucho "BRASIL
+   SACRO") e a microtipografia do Salmo 19; o par do Salmo 19 ja esta
+   resolvido no ar (v4i publicada).
 3. Selecionar um unico produto `REFAZER` para piloto de correcao na API do
    Google AI Studio, seguindo o protocolo um-produto-por-vez.
 4. Validar o piloto contra as dimensoes exatas da YouDraw. Somente apos
