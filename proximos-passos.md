@@ -1,5 +1,7 @@
 # NIMBUS — Próximos passos (do "designs prontos" até "vendendo")
 
+> ⚠️ **Documento histórico (jun/2026). O roadmap foi executado: loja no ar com 49 produtos, domínio nimbuswear.com.br, plano Impulso, tema Baires. O estado real vive no `CLAUDE.md`; o checklist abaixo NÃO reflete o que falta hoje.**
+
 Estado atual: designs criados e organizados (`designs/prontos/.../mockups/`), preços definidos
 (`precificacao.md`), plataforma decidida (`loja-plataforma.md`: Nuvemshop + YouDraw). Falta montar a
 loja e lançar. Ordem abaixo, com **quem faz**.

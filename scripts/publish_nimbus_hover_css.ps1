@@ -1,5 +1,5 @@
 param(
-    [string]$CssPath = "C:\Users\rober\Nimbus\nuvemshop\css-nimbus-correcoes-2026-07-20.css",
+    [string]$CssPath = "C:\Users\rober\Nimbus\nuvemshop\css-nimbus-publicacao-compacta-2026-07-20.css",
     [int]$StepDelayMs = 1000,
     [int]$ExtraWaitMs = 1500
 )

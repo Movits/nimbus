@@ -1,5 +1,7 @@
 # NIMBUS — Conteúdo de lançamento
 
+> ⚠️ **Documento histórico (jun/2026). Handles reais: Instagram/TikTok `@nimbuswear.br` (não os sugeridos aqui). Perfis e bios vigentes em `marketing/social/lancamento-2026-07-22/perfis-e-biografias.md`.**
+
 Tom: **sóbrio e sincero** (mesma régua das descrições). Sem travessão, sem clichê de marketing, sem
 zoar a tradição. Reverente com a fé + premium. Ajuste à vontade.
 

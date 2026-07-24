@@ -1,5 +1,7 @@
 # NIMBUS — Prompts lifestyle / try-on (Higgsfield)
 
+> ⚠️ **Biblioteca histórica. Estes prompts genéricos são ANTERIORES à auditoria de dimensões (22-23/07) e não bastam para correções: a regra vigente é arte como camada rígida, escala por cm e o protocolo um-produto-por-vez no `CLAUDE.md`. Canal vigente: API do Google AI Studio.**
+
 Modelo brasileiro vestindo as peças, pra **foto de produto** e **vídeo de redes**. A ideia destes
 prompts é serem **gerais por coleção**: você anexa **qualquer mockup da YouDraw** (camiseta,
 oversized, moletom careca ou canguru, com qualquer emblema) como referência, e o prompt **padroniza**

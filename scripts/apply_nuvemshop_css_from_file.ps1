@@ -1,5 +1,5 @@
 param(
-    [string]$CssPath = "C:\Users\rober\Nimbus\nuvemshop\css-nimbus-correcoes-2026-07-20.css",
+    [string]$CssPath = "C:\Users\rober\Nimbus\nuvemshop\css-nimbus-publicacao-compacta-2026-07-20.css",
     [string]$StoreUrl = "https://loja.nimbuswear.com.br",
     [int]$WaitMs = 900,
     [int]$LiveCheckCount = 12,
@@ -249,11 +249,8 @@ function Extract-LiveChecksFromCss {
         '.item:hover .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"',
         '.item:hover .js-item-product .item-image-secondary.js-product-item-secondary-image-private[data-srcset*="/file_name-"',
         '.nimbus-project-modal__close:hover',
-        '.nimbus-collections-autoplay',
         '.section-banners-home .swiper-wrapper',
-        '.section-banners-home .swiper-slide .textbanner-image',
         '.head-main .head-logo-row',
-        'footer.js-footer::before',
         '.powered-by-logo'
     )
 

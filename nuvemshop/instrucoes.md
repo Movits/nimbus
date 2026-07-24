@@ -1,6 +1,6 @@
 # Loja Nuvemshop — estado e guia de aplicação
 
-**Plano Impulso · tema Baires · baseline revisado em 23/07/2026.**
+**Plano Impulso · tema Baires · baseline revisado em 24/07/2026.**
 
 A Nuvemshop não tem deploy por git. Esta pasta é um kit: o CSS e as páginas são **colados à mão** no
 painel. Por isso o repo não é a fonte de verdade da loja, a loja é. Este arquivo diz o que está no ar.
@@ -49,11 +49,23 @@ andam juntos: publicar um sem o outro quebra a página.
   As imagens **não estão no repo** (ficam no Drive, mesma doutrina de `designs/`). Estão servidas pela
   Nuvemshop, que é a fonte de verdade.
 
-⚠️ **Ressalva aberta**: o `live-verification.json` diz 49/49, mas ele valida só metadados (se a foto virou
-capa, olhando `og:image` e `preload`). **Nunca olha o pixel.** O produto 352719728 (Aparecida Barroca)
-está no ar com a tarja escrita "PADROEIRA (BRAHL SAEBD)" quando a arte original diz "PADROEIRA (BRASIL
-SACRO)". O prompt de geração trava escala (REF 3) e conteúdo (REF 4), mas nada trava **texto**. Auditoria
-visual das 49 pendente. Não confie no 49/49 como prova de que a estampa está certa.
+⚠️ **Ressalva**: o `live-verification.json` diz 49/49, mas ele valida só metadados (se a foto virou
+capa, olhando `og:image` e `preload`). **Nunca olha o pixel.** Não confie no 49/49 como prova de que a
+estampa está certa. A auditoria visual das 49 foi concluída em 22–23/07 (25 APROVAR / 13 REVISAR /
+11 REFAZER — fonte: `auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`). O caso da
+tarja "PADROEIRA (BRAHL SAEBD)" do 352719728 foi corrigido pela substituição publicada em 22/07
+(hoje o produto é APROVAR).
+
+⚠️ **Defeitos confirmados ainda no ar (24/07)** — não regenerar nada sem aprovação do dono:
+
+- 352702020 (Salmo 19 | Camiseta Premium): fotos Preta e Branca com **modelos diferentes**; a correção
+  `352702020-branca-v4i.jpg` está pronta em `uploads-v2-small/` e nunca foi publicada.
+- 352890896 (Aparecida Barroca | Oversized): legenda minúscula "BRASIL SRCNO" em vez de "BRASIL SACRO".
+- 352407196 (São Miguel Vintage | Premium, foto Branca): assinatura "NPMBUS" em vez de "NIMBUS".
+- 352407182 (São Miguel Vintage | Oversized, Preta): escala ~12% acima do mockup.
+
+A "regra da distância" (aceitar texto corrompido por ficar ilegível em miniatura) está revogada; ver
+o protocolo um-produto-por-vez no `CLAUDE.md`.
 
 ## Regras de conteúdo (valem sempre)
 
@@ -100,6 +112,11 @@ mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a 
   visual em `auditoria-dimensoes-arte-nimbus.docx` e
   `auditoria-dimensoes-arte-nimbus-qa.pdf`. Resultado: 25 APROVAR, 13 REVISAR e
   11 REFAZER. Não gerar ou publicar substituições antes do feedback do dono.
+- **Substituições de capa (22/07/2026)**: 13 arquivos corrigidos publicados em
+  9 produtos (registro em `auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/`).
+  Atenção: parte dessas correções foi reprovada de novo pela auditoria de
+  dimensões (ex.: 352727545 ficou 15–20% MENOR que o mockup — sobrecorreção).
+  O CSV de dimensões é o veredito vigente.
 - **Baires (20–21/07/2026)**: consolidação atual de header, footer, manifesto,
   modais, responsividade e hover em
   `css-nimbus-publicacao-compacta-2026-07-20.css`.

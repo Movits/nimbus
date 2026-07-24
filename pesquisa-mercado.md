@@ -1,5 +1,7 @@
 # NIMBUS — Pesquisa de mercado (streetwear católico/cristão premium)
 
+> ⚠️ **Pesquisa pontual de jun/2026. Números de mercado e preços de concorrentes podem estar defasados; usar como contexto, não como dado atual.**
+
 > Pesquisa de junho/2026. Objetivo: mapear marcas parecidas em **estética** (céu, nuvem,
 > auréola, "angelcore") e, principalmente, no **nicho** (moda cristã/católica premium), e
 > achar o espaço do NIMBUS. Fontes no fim.

@@ -1,5 +1,7 @@
 # designs/ — artes das estampas (POD)
 
+> ⚠️ **Nota (24/07/2026): o canal vigente de geração é a API do Google AI Studio (Nano Banana / Nano Banana Pro), não mais o Higgsfield. O restante do fluxo (chroma, organize-designs, 300 DPI) segue válido.**
+
 Prompts em `../nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo
 público) — ficam local + Drive.
 

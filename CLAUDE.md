@@ -1,6 +1,6 @@
 # Handoff do projeto NIMBUS
 
-Atualizado em 23 de julho de 2026.
+Atualizado em 24 de julho de 2026.
 
 Este arquivo e o ponto de entrada para continuar o projeto. Antes de alterar
 qualquer coisa, leia o estado abaixo, rode as verificacoes iniciais e consulte
@@ -149,6 +149,72 @@ frente `8,9 x 9,2 cm` e costas `31,5 x 40 cm`.
 Nao gere nem publique substituicoes antes do feedback do usuario sobre esse
 documento.
 
+## Erros conhecidos no ar (registrados em 24/07)
+
+Alem dos 13 REVISAR e 11 REFAZER da auditoria acima, estes defeitos pontuais
+estao confirmados na loja publicada:
+
+- Salmo 19 | Camiseta Premium `[352702020]`: as fotos Preta e Branca usam
+  modelos (pessoas) visivelmente diferentes; no hover o par troca de pessoa.
+  A correcao ja existe (`uploads-v2-small/352702020-branca-v4i.jpg`, mesmo
+  modelo da Preta, gerada em 19/07) mas NUNCA foi publicada. Publicar a v4i
+  resolve, apos aprovacao do dono.
+- Aparecida Barroca | Camiseta Oversized Premium `[352890896]`: a legenda
+  minuscula le "BRASIL SRCNO" em vez de "BRASIL SACRO". Foi publicada
+  conscientemente pela "regra da distancia" (ilegivel em miniatura), mas com
+  zoom na pagina do produto o erro aparece.
+- Sao Miguel Vintage | Camiseta Premium `[352407196]` (foto Branca): a
+  assinatura da marca le "NPMBUS" em vez de "NIMBUS". Mesmo caso: residuo
+  aceito pela regra da distancia.
+- Sao Miguel Vintage | Camiseta Oversized Premium `[352407182]` (Preta):
+  escala ~12% acima do mockup, publicada como "melhor versao disponivel" apos
+  5 rodadas sem convergir.
+
+A "regra da distancia" (aceitar texto corrompido porque fica ilegivel na
+miniatura) esta REVOGADA: nenhum defeito residual e aceitavel sem aprovacao
+explicita do dono, caso a caso.
+
+Licao central do lote v4 (18-19/07): os julgamentos de escala "no olho" da
+propria rodada aprovaram fotos que a auditoria por dimensoes exatas reprovou
+depois (ex.: Sao Jorge Neobarroco Moletom foi aprovado com "-6,2%" e esta
+20-30% maior que o mockup). Estimativa visual nao substitui calibracao pelas
+dimensoes em cm da YouDraw.
+
+## Ferramentas de geracao (decisao vigente, 24/07)
+
+- Canal principal: **API do Google AI Studio** com Nano Banana (variacoes e
+  cenas) e Nano Banana Pro (texto e casos dificeis).
+- Higgsfield: somente fotografia editorial quando o custo se justificar. O
+  pipeline antigo via CLI do Higgsfield (`generate-lifestyle-v*.mjs`) e
+  historico de metodo; as travas de prompt (TEXT IS SACRED, GARMENT LOCK,
+  escala por espaco vazio, sceneRef/artHelperRef) continuam validas e devem
+  ser reaproveitadas no canal novo.
+- Nao remover marca d'agua/procedencia por manipulacao; preferir ferramenta
+  que entregue o arquivo licenciado sem marca visual desde a origem.
+
+## Protocolo obrigatorio de geracao: UM PRODUTO POR VEZ
+
+Decisao do dono (24/07), apos os lotes v1-v4 produzirem erros repetidos.
+E proibido gerar em lote. O ciclo e:
+
+1. Escolha UM produto (e uma cor). Gere UMA candidata com todas as
+   referencias corretas.
+2. Agentes independentes checam TODOS os fatores: modelo (pessoa) correto e
+   consistente com o par de cor, peca certa (manga/capuz/caimento), cor da
+   peca, cenario da colecao, estampa identica a arte original (tracos, cores,
+   TODO texto letra a letra, assinatura NIMBUS), escala e posicao calibradas
+   pelas dimensoes em cm da YouDraw daquele produto especifico.
+3. Qualquer fator reprovado: diagnostique exatamente o desvio, corrija o
+   prompt e gere de novo. Repita a checagem completa a cada tentativa.
+4. So existe "versao final" quando TODOS os agentes aprovam TODOS os
+   fatores. Sem "residuo aceitavel" sem aprovacao explicita do dono.
+5. So depois da versao final aprovada (e publicada, quando autorizado) passe
+   ao proximo produto.
+
+Nao tente acelerar voltando a lotes: sempre sai erro. Apos duas falhas
+equivalentes no mesmo produto, pare de gastar creditos e mude metodo ou
+modelo antes de tentar de novo.
+
 ## Regra para corrigir fotos lifestyle
 
 O problema mais importante e fidelidade. A IA nao pode redesenhar a estampa.
@@ -161,16 +227,13 @@ O problema mais importante e fidelidade. A IA nao pode redesenhar a estampa.
    pelo tamanho de outro modelo da mesma familia.
 6. Compare o resultado lado a lado com YouDraw e registre identidade, escala,
    posicao, cor e confianca.
-7. Comece por um unico piloto no Nano Banana/Gemini. Somente depois de aprovado
-   escale para Higgsfield.
+7. Gere na API do Google AI Studio (Nano Banana / Nano Banana Pro), um
+   produto por vez, seguindo o protocolo acima. Higgsfield somente quando o
+   custo se justificar.
 8. Apos duas falhas equivalentes, pare de gastar creditos e mude metodo ou
    modelo.
 9. Preserve todas as imagens oficiais da galeria YouDraw. Substitua apenas uma
    capa lifestyle rejeitada e somente com aprovacao.
-
-Nao remova marca d'agua ou identificacao de procedencia por manipulacao
-enganosa. Prefira uma ferramenta/modo que entregue o arquivo licenciado sem
-marca visual desde a origem.
 
 ## Comportamento aprovado dos cards da loja
 
@@ -213,9 +276,12 @@ Arquivos relevantes:
 ## Pendencias de maior prioridade
 
 1. Receber o feedback do usuario sobre o DOCX/PDF da auditoria de escala.
-2. Selecionar um unico produto `REFAZER` para piloto de correcao.
-3. Validar o piloto contra as dimensoes exatas da YouDraw.
-4. Somente apos aprovacao, planejar a rodada das demais capas.
+2. Com aprovacao do dono, publicar a correcao ja pronta do Salmo 19
+   (`352702020-branca-v4i.jpg`) para eliminar o par com modelos diferentes.
+3. Selecionar um unico produto `REFAZER` para piloto de correcao na API do
+   Google AI Studio, seguindo o protocolo um-produto-por-vez.
+4. Validar o piloto contra as dimensoes exatas da YouDraw. Somente apos
+   aprovacao, seguir para o proximo produto (sempre um por vez).
 5. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 6. Completar material, modelagem, tabela de medidas, prazo POD, politica e
    impacto social nas paginas de produto.

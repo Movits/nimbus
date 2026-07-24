@@ -1,5 +1,7 @@
 # NIMBUS — Kit de marca pra loja (Nuvemshop)
 
+> ⚠️ **Documento histórico (jun/2026). Paleta e tipografia seguem válidas, mas o tema recomendado (Trend/Simple/Bahia) e o plano Essencial foram superados: a loja usa tema Baires no plano Impulso. Ver `nuvemshop/instrucoes.md`.**
+
 Pra a loja ficar com a cara da marca (e não de tema genérico). Cores e fontes são as **mesmas do
 site R3F** (consistência entre a landing e a loja).
 

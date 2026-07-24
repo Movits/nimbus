@@ -265,17 +265,6 @@ button {
   opacity: 0.82;
 }
 
-/* ───────────────────────── Seção escura (Dom Bosco) ───────────────────────── */
-.section.dark {
-  color: var(--cloud);
-}
-.section.dark .lede {
-  color: #d6e2f5;
-}
-.section.dark .display {
-  font-weight: 400;
-}
-
 /* ───────────────────────── Impacto (projetos sociais) ───────────────────────── */
 .impact__grid {
   margin-top: 1.4rem;
@@ -684,9 +673,6 @@ button {
   .reveal {
     transition: opacity 0.4s ease;
     transform: none;
-  }
-  .scroll-hint {
-    animation: none;
   }
   .impact__card,
   .impact__cardCta svg,

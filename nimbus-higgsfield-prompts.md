@@ -1,5 +1,7 @@
 # NIMBUS — Biblioteca de Prompts Higgsfield (Fase 0)
 
+> ⚠️ **Biblioteca histórica de prompts (Fase 0, assets do site já gerados). O roteamento vigente de ferramentas é a API do Google AI Studio (Nano Banana / Nano Banana Pro); Higgsfield só quando o custo se justificar. Ver `CLAUDE.md`.**
+
 Artes ilustradas do site, estilo **render 3D cinematográfico etéreo** — "mundo céu":
 azul clarinho, nuvens brancas, concreto branco curvo modernista (Niemeyer) subindo pro
 céu, luz divina suave. Limpo, premium, alto padrão.

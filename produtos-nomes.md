@@ -1,5 +1,7 @@
 # NIMBUS — Nomes de produtos, descrições e estratégia de peças
 
+> ⚠️ **Documento histórico (jun-jul/2026). A régua `Arte | Peça` segue válida, mas vários nomes evoluíram (ex.: Arcanjo Spray→São Miguel Vitorioso, Padroeira→Aparecida Barroca). O catálogo real é a Nuvemshop (49 produtos).**
+
 Guia pra cadastrar a loja. Convenção de nome, descrição curta por arte, em quais peças entra cada
 uma, e a curadoria do lançamento. (Preços em `precificacao.md`.)
 

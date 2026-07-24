@@ -1,5 +1,7 @@
 # NIMBUS — Storyboard da Landing (mock pré-código)
 
+> ⚠️ **Storyboard pré-código (histórico). A landing implementada difere: Vite (não Next.js), 6 seções (Impacto no lugar de Drop/Coleção), scroll nativo com store próprio e nuvens procedurais. A fonte é `src/`.**
+
 Blueprint visual da landing **scroll-driven 3D**. Define ordem das seções, qual arte entra em
 cada uma, a copy (placeholder, marcada `TBD`) e as interações de scroll — pra guiar a
 implementação em Next.js + R3F + GSAP depois. **Nenhum código ainda.**

@@ -1,5 +1,7 @@
 # NIMBUS — Plataforma da loja (decisão + roteiro)
 
+> ⚠️ **Documento histórico (jun/2026). A decisão foi executada: Nuvemshop (Impulso, tema Baires) + YouDraw integrada + landing no GitHub Pages. O estado real vive no `CLAUDE.md`.**
+
 Decisão (jun/2026): **loja na Nuvemshop** (motor de e-commerce) + **app YouDraw** (produção POD) +
 **marketplace da YouDraw** (canal extra). A **landing R3F** (GitHub Pages) continua como home da
 marca e linka pro "Comprar". Não recriamos o site.

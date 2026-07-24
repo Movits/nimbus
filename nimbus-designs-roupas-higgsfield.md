@@ -1,5 +1,7 @@
 # NIMBUS — Estampas por coleção
 
+> ⚠️ **Biblioteca histórica de prompts de estampas. O canal vigente de geração é a API do Google AI Studio (Nano Banana / Nano Banana Pro). Regras de chroma (verde #00B140 / magenta #FF00FF) e códigos de coleção seguem válidos.**
+
 A loja é organizada em **coleções**. Cada coleção tem sua cara (bloco de estilo) e seus designs.
 Cada prompt é copy-paste e **autossuficiente** (o Higgsfield não tem memória) — já traz o estilo inteiro.
 
