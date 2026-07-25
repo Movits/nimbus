@@ -9,25 +9,238 @@
     "Pendência relacionada: scripts/finalize-prints.mjs usa TARGET.costas = 33 cm fixo para toda arte de costas, mas as larguras reais vão de 23,8 a 35,2 cm. Auditar antes de reprocessar qualquer master."
   ],
   "artes": [
-    { "arquivo": "logo-wordmark-nuvem.png", "px": "3500x1122", "aspecto": 3.119, "produto": null, "nota": "marca, não é estampa de catálogo" },
-    { "arquivo": "logo-icone-nuvem-v2.png", "px": "3500x3186", "aspecto": 1.099, "produto": null, "nota": "marca" },
-    { "arquivo": "sao-miguel-nuvem.png", "px": "3082x3500", "aspecto": 0.881, "produto": "352722510", "oficial_cm": "35x39.7", "aspecto_oficial": 0.882, "desvio_pct": -0.1 },
-    { "arquivo": "S6-sao-jorge-barroco-v1.png", "px": "2694x3500", "aspecto": 0.77, "produto": "352718943", "oficial_cm": "30.8x40", "aspecto_oficial": 0.77, "desvio_pct": 0.0 },
-    { "arquivo": "S3-azulejo-cruz-v2.png", "px": "3500x3496", "aspecto": 1.001, "produto": "352717960", "oficial_cm": "35x35", "aspecto_oficial": 1.0, "desvio_pct": 0.1 },
-    { "arquivo": "S1-aparecida-barroca.png", "px": "2426x3500", "aspecto": 0.693, "produto": "352719728", "oficial_cm": "27.8x40", "aspecto_oficial": 0.695, "desvio_pct": -0.3 },
-    { "arquivo": "H4-sao-jorge-halftone.png", "px": "2667x3500", "aspecto": 0.762, "produto": "352618837", "oficial_cm": "30.6x40", "aspecto_oficial": 0.765, "desvio_pct": -0.4 },
-    { "arquivo": "H2-sao-miguel-halftone-v2.png", "px": "2748x3500", "aspecto": 0.785, "produto": "352407182", "oficial_cm": "31.6x40", "aspecto_oficial": 0.79, "desvio_pct": -0.6 },
-    { "arquivo": "B7-fe-acima-de-tudo.png", "px": "3500x2460", "aspecto": 1.423, "produto": "352702858", "oficial_cm": "35.1x24.6", "aspecto_oficial": 1.427, "desvio_pct": -0.3 },
-    { "arquivo": "B7-fe-acima-de-tudo-branco.png", "px": "3500x2456", "aspecto": 1.425, "produto": "352702858", "nota": "variante clara da mesma arte" },
-    { "arquivo": "B8-deus-e-fiel.png", "px": "3500x3295", "aspecto": 1.062, "produto": "352703276", "oficial_cm": "35.1x33", "aspecto_oficial": 1.064, "desvio_pct": -0.2 },
-    { "arquivo": "B8-deus-e-fiel-preto.png", "px": "3500x3293", "aspecto": 1.063, "produto": "352703276", "nota": "variante escura" },
-    { "arquivo": "B2-salmo19.png", "px": "3500x2883", "aspecto": 1.214, "produto": "352702020", "oficial_cm": "35.2x28.8", "aspecto_oficial": 1.222, "desvio_pct": -0.7 },
-    { "arquivo": "B3-cruz-crest.png", "px": "2581x3500", "aspecto": 0.737, "produto": null, "nota": "não casou com nenhum produto do catálogo por proporção — confirmar se é arte ativa" },
-    { "arquivo": "B4-acima-de-tudo-gotico-branco.png", "px": "3500x3374", "aspecto": 1.037, "produto": "352720257", "oficial_cm": "35x33.8 (frente)", "aspecto_oficial": 1.036, "desvio_pct": 0.1 },
-    { "arquivo": "B4-acima-de-tudo-gotico-preto.png", "px": "3500x3376", "aspecto": 1.037, "produto": "352720257", "nota": "variante escura" },
-    { "arquivo": "B9-monograma-nmb.png", "px": "3398x3500", "aspecto": 0.971, "produto": "352702753", "oficial_cm": "29.3x30.1 (frente)", "aspecto_oficial": 0.973, "desvio_pct": -0.2 },
-    { "arquivo": "G1-nimbus-tag-azul.png", "px": "3264x3500", "aspecto": 0.933, "produto": "352721633", "oficial_cm": "35.1x37.5", "aspecto_oficial": 0.936, "desvio_pct": -0.3, "nota": "NIMBUS Wildstyle, não Brasão — o casamento por nome erra aqui" },
-    { "arquivo": "G2-anjo-livro-stencil.png", "px": "2227x3500", "aspecto": 0.636, "produto": "352728277", "oficial_cm": "25.5x40", "aspecto_oficial": 0.637, "desvio_pct": -0.2 },
-    { "arquivo": "G2-anjo-stencil.png", "px": "2220x3500", "aspecto": 0.634, "produto": "352728277", "oficial_cm": "25.5x40", "aspecto_oficial": 0.637, "desvio_pct": -0.5 }
-  ]
+    {
+      "arquivo": "logo-wordmark-nuvem.png",
+      "px": "3500x1122",
+      "aspecto": 3.119,
+      "produto": null,
+      "nota": "marca, não é estampa de catálogo"
+    },
+    {
+      "arquivo": "logo-icone-nuvem-v2.png",
+      "px": "3500x3186",
+      "aspecto": 1.099,
+      "produto": null,
+      "nota": "marca"
+    },
+    {
+      "arquivo": "sao-miguel-nuvem.png",
+      "px": "3082x3500",
+      "aspecto": 0.881,
+      "produto": "352722510",
+      "oficial_cm": "35x39.7",
+      "aspecto_oficial": 0.882,
+      "desvio_pct": -0.1
+    },
+    {
+      "arquivo": "S6-sao-jorge-barroco-v1.png",
+      "px": "2694x3500",
+      "aspecto": 0.77,
+      "produto": "352718943",
+      "oficial_cm": "30.8x40",
+      "aspecto_oficial": 0.77,
+      "desvio_pct": 0
+    },
+    {
+      "arquivo": "S3-azulejo-cruz-v2.png",
+      "px": "3500x3496",
+      "aspecto": 1.001,
+      "produto": "352717960",
+      "oficial_cm": "35x35",
+      "aspecto_oficial": 1,
+      "desvio_pct": 0.1
+    },
+    {
+      "arquivo": "S1-aparecida-barroca.png",
+      "px": "2426x3500",
+      "aspecto": 0.693,
+      "produto": "352719728",
+      "oficial_cm": "27.8x40",
+      "aspecto_oficial": 0.695,
+      "desvio_pct": -0.3
+    },
+    {
+      "arquivo": "H4-sao-jorge-halftone.png",
+      "px": "2667x3500",
+      "aspecto": 0.762,
+      "produto": "352618837",
+      "oficial_cm": "30.6x40",
+      "aspecto_oficial": 0.765,
+      "desvio_pct": -0.4
+    },
+    {
+      "arquivo": "H2-sao-miguel-halftone-v2.png",
+      "px": "2748x3500",
+      "aspecto": 0.785,
+      "produto": "352407182",
+      "oficial_cm": "31.6x40",
+      "aspecto_oficial": 0.79,
+      "desvio_pct": -0.6
+    },
+    {
+      "arquivo": "B7-fe-acima-de-tudo.png",
+      "px": "3500x2460",
+      "aspecto": 1.423,
+      "produto": "352702858",
+      "oficial_cm": "35.1x24.6",
+      "aspecto_oficial": 1.427,
+      "desvio_pct": -0.3
+    },
+    {
+      "arquivo": "B7-fe-acima-de-tudo-branco.png",
+      "px": "3500x2456",
+      "aspecto": 1.425,
+      "produto": "352702858",
+      "nota": "variante clara da mesma arte"
+    },
+    {
+      "arquivo": "B8-deus-e-fiel.png",
+      "px": "3500x3295",
+      "aspecto": 1.062,
+      "produto": "352703276",
+      "oficial_cm": "35.1x33",
+      "aspecto_oficial": 1.064,
+      "desvio_pct": -0.2
+    },
+    {
+      "arquivo": "B8-deus-e-fiel-preto.png",
+      "px": "3500x3293",
+      "aspecto": 1.063,
+      "produto": "352703276",
+      "nota": "variante escura"
+    },
+    {
+      "arquivo": "B2-salmo19.png",
+      "px": "3500x2883",
+      "aspecto": 1.214,
+      "produto": "352702020",
+      "oficial_cm": "35.2x28.8",
+      "aspecto_oficial": 1.222,
+      "desvio_pct": -0.7
+    },
+    {
+      "arquivo": "B3-cruz-crest.png",
+      "px": "2581x3500",
+      "aspecto": 0.737,
+      "produto": null,
+      "nota": "não casou com nenhum produto do catálogo por proporção — confirmar se é arte ativa"
+    },
+    {
+      "arquivo": "B4-acima-de-tudo-gotico-branco.png",
+      "px": "3500x3374",
+      "aspecto": 1.037,
+      "produto": "352720257",
+      "oficial_cm": "35x33.8 (frente)",
+      "aspecto_oficial": 1.036,
+      "desvio_pct": 0.1
+    },
+    {
+      "arquivo": "B4-acima-de-tudo-gotico-preto.png",
+      "px": "3500x3376",
+      "aspecto": 1.037,
+      "produto": "352720257",
+      "nota": "variante escura"
+    },
+    {
+      "arquivo": "B9-monograma-nmb.png",
+      "px": "3398x3500",
+      "aspecto": 0.971,
+      "produto": "352702753",
+      "oficial_cm": "29.3x30.1 (frente)",
+      "aspecto_oficial": 0.973,
+      "desvio_pct": -0.2
+    },
+    {
+      "arquivo": "G1-nimbus-tag-azul.png",
+      "px": "3264x3500",
+      "aspecto": 0.933,
+      "produto": "352721633",
+      "oficial_cm": "35.1x37.5",
+      "aspecto_oficial": 0.936,
+      "desvio_pct": -0.3,
+      "nota": "NIMBUS Wildstyle, não Brasão — o casamento por nome erra aqui"
+    },
+    {
+      "arquivo": "G2-anjo-livro-stencil.png",
+      "px": "2227x3500",
+      "aspecto": 0.636,
+      "produto": "352728277",
+      "oficial_cm": "25.5x40",
+      "aspecto_oficial": 0.637,
+      "desvio_pct": -0.2
+    },
+    {
+      "arquivo": "G2-anjo-stencil.png",
+      "px": "2220x3500",
+      "aspecto": 0.634,
+      "produto": "352728277",
+      "oficial_cm": "25.5x40",
+      "aspecto_oficial": 0.637,
+      "desvio_pct": -0.5
+    }
+  ],
+  "lote2_25_07": {
+    "recebidas": 9,
+    "conferidas_contra_cm_oficiais": 6,
+    "resultado": "6 de 6 batem dentro de 0,7% — a regua segue validada, agora tambem na familia STREET",
+    "artes": [
+      {
+        "arquivo": "G3-acima-de-tudo-tags.png",
+        "aspecto": 1.286,
+        "produto": "352728451",
+        "oficial_cm": "35.1x27.2",
+        "desvio_pct": -0.3
+      },
+      {
+        "arquivo": "G6-sao-miguel-stencil-branco.png",
+        "aspecto": 0.735,
+        "produto": "352727545",
+        "oficial_cm": "29.1x39.5",
+        "desvio_pct": -0.2
+      },
+      {
+        "arquivo": "G8-pomba-stencil-preto.png",
+        "aspecto": 0.998,
+        "produto": "352721477",
+        "oficial_cm": "35.2x35.1",
+        "desvio_pct": 0.3,
+        "nota": "Espirito Santo Spray; ha tambem a variante branca"
+      },
+      {
+        "arquivo": "G9-fe-tag-v3.png",
+        "aspecto": 0.842,
+        "produto": "352721118",
+        "oficial_cm": "33.7x40",
+        "desvio_pct": -0.1,
+        "nota": "Fe Wildstyle — o produto que virou a calibracao errada de 1,52"
+      },
+      {
+        "arquivo": "G10-aparecida-stencil-v3.png",
+        "aspecto": 0.591,
+        "produto": "352727892",
+        "oficial_cm": "23.8x40",
+        "desvio_pct": -0.7
+      },
+      {
+        "arquivo": "costas - Sagrado Coracao Spray (preto).png",
+        "aspecto": 0.621,
+        "produto": "352722232",
+        "oficial_cm": "24.9x40",
+        "desvio_pct": -0.2
+      },
+      {
+        "arquivo": "peito - Selo Nuvem.png",
+        "aspecto": 0.696,
+        "produto": null,
+        "nota": "nao casou por nome; casar por proporcao"
+      },
+      {
+        "arquivo": "G5-icone-nuvem-spray-branco.png",
+        "aspecto": 0.622,
+        "produto": null,
+        "nota": "nao e o Querubim como supus pelo nome; casar por proporcao"
+      }
+    ]
+  },
+  "total_artes_recebidas": 29
 }
