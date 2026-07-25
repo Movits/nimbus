@@ -1,0 +1,8 @@
+{"photo":"352728357-preta-v4.jpg","annotator":"z357","imageSize":{"w":1600,"h":1600},
+"art":{"tl":[56.40,34.63],"tr":[72.55,34.63],"br":[72.55,72.13],"bl":[56.40,72.13],
+"mt":[64.50,34.88],"mb":[64.50,72.13],"ml":[56.94,53.40],"mr":[70.50,53.40],"sigma_pct":0.4},
+"collar_center":{"xy":[54.20,28.10],"sigma_pct":1.8,"status":"ok"},
+"hem_center":{"xy":[56.00,97.15],"sigma_pct":1.2,"status":"low_contrast"},
+"side_left":{"xy":[48.00,53.40],"sigma_pct":1.5,"status":"ok"},
+"side_right":{"xy":[74.40,53.40],"sigma_pct":1.5,"status":"ok"},
+"flags":["shape_irregular_confirmado","torso_rotacionado"]}

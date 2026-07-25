@@ -1,0 +1,8 @@
+{"photo":"352725749-preta.jpg","annotator":"z749","imageSize":{"w":1600,"h":1600},
+"art":{"tl":[49.5,34.4],"tr":[65.5,34.4],"br":[65.5,62.5],"bl":[49.5,62.5],
+"mt":[57.5,34.45],"mb":[57.4,55.8],"ml":[56.7,48.45],"mr":[63.0,48.45],"sigma_pct":0.5},
+"collar_center":{"xy":[52.3,27.3],"sigma_pct":1.5,"status":"ok"},
+"hem_center":{"xy":[51.5,93.4],"sigma_pct":1.0,"status":"ok"},
+"side_left":{"xy":[41.5,48.45],"sigma_pct":0.8,"status":"ok"},
+"side_right":{"xy":[68.9,48.45],"sigma_pct":1.8,"status":"low_contrast"},
+"flags":["arte_irregular_sem_moldura","tronco_rotacionado"]}

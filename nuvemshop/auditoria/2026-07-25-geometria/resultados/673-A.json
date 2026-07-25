@@ -1,0 +1,8 @@
+{"photo":"352726673-preta.jpg","annotator":"A","imageSize":{"w":1600,"h":1600},
+"art":{"tl":[32.5,34.6],"tr":[54.0,34.6],"br":[54.0,70.8],"bl":[32.5,70.8],
+"mt":[43.25,36.65],"mb":[43.25,67.2],"ml":[33.4,52.7],"mr":[53.45,53.3],"sigma_pct":0.5},
+"collar_center":{"xy":[44.0,27.0],"sigma_pct":3.0,"status":"occluded_hood"},
+"hem_center":{"xy":[44.0,88.9],"sigma_pct":0.9,"status":"low_contrast"},
+"side_left":{"xy":[28.6,52.7],"sigma_pct":1.6,"status":"low_contrast"},
+"side_right":{"xy":[59.7,52.7],"sigma_pct":2.0,"status":"low_contrast"},
+"flags":["art_has_no_drawn_frame","hood_down_covers_neck_seam"]}

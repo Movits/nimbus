@@ -1,0 +1,121 @@
+{
+  "product_id": "352728357",
+  "title": "Anjo da Guarda Stencil | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "view": "back",
+  "image": "352728357-preta-v4.jpg",
+  "annotators": [
+    "z357"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0,
+    "art.tr": 0,
+    "art.br": 0,
+    "art.bl": 0,
+    "art.mt": 0,
+    "art.mb": 0,
+    "art.ml": 0,
+    "art.mr": 0,
+    "collar_center": 0,
+    "hem_center": 0,
+    "side_left": 0,
+    "side_right": 0
+  },
+  "official_cm": {
+    "w": 25.5,
+    "h": 40
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 25.5,
+    "h": 40
+  },
+  "anisotropy": {
+    "alphaPct": -32.4,
+    "alphaExpectedByWrap": [
+      -10.6,
+      -6.6
+    ],
+    "alphaExcessPct": -25.8,
+    "regime": "guinada_forte",
+    "horizontalValid": false
+  },
+  "scale": {
+    "rho_v": 0.5429,
+    "impliedGarmentLength_cm": 73.68,
+    "garmentLengthRange_cm": [
+      70.5,
+      85
+    ],
+    "insidePhysicalRange": true,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": 2.5,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 70.5,
+        "deltaPct": -4.3
+      },
+      {
+        "size": "M",
+        "length_cm": 72,
+        "deltaPct": -2.3
+      },
+      {
+        "size": "G",
+        "length_cm": 75.5,
+        "deltaPct": 2.5
+      },
+      {
+        "size": "GG",
+        "length_cm": 81.5,
+        "deltaPct": 10.6
+      },
+      {
+        "size": "EG",
+        "length_cm": 85,
+        "deltaPct": 15.4
+      }
+    ],
+    "deltaRangePct": [
+      -4.3,
+      15.4
+    ],
+    "deltaHLowerBoundPct": null,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "M",
+      "width_cm": 52.5,
+      "length_cm": 72
+    },
+    "verdict": "OK"
+  },
+  "position": {
+    "offsetX_cm": null,
+    "offsetX_pctOfArtWidth": null,
+    "collarToArtTop_cm": 7.59,
+    "rotation_deg": 2.2,
+    "rotationFlagged": false,
+    "verdict": "INCONCLUSIVO"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 28.16,
+    "impliedFlatWidth_cm": [
+      28.16,
+      44.23
+    ],
+    "consistentWithTable": false
+  },
+  "confidence": 40,
+  "verdict": "escala OK / posicao INCONCLUSIVO",
+  "notes": [
+    "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+    "centralizacao nao avaliada: alpha -32.4% indica pose que desloca o eixo visivel",
+    "largura plana implicita 28.2-44.2 cm nao encosta na faixa real 49.5-63 cm",
+    "arte sem aresta desenhada",
+    "ressalva: torso_rotacionado",
+    "barra com baixo contraste ou fora de quadro",
+    "eixos de largura e comprimento discordam"
+  ]
+}

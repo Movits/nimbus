@@ -1,0 +1,122 @@
+{
+  "product_id": "352725749",
+  "title": "Querubim Spray | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "view": "back",
+  "image": "352725749-preta.jpg",
+  "annotators": [
+    "z749"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0,
+    "art.tr": 0,
+    "art.br": 0,
+    "art.bl": 0,
+    "art.mt": 0,
+    "art.mb": 0,
+    "art.ml": 0,
+    "art.mr": 0,
+    "collar_center": 0,
+    "hem_center": 0,
+    "side_left": 0,
+    "side_right": 0
+  },
+  "official_cm": {
+    "w": 25.5,
+    "h": 40
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 25.5,
+    "h": 40
+  },
+  "anisotropy": {
+    "alphaPct": -10.7,
+    "alphaExpectedByWrap": [
+      -6.8,
+      -5.4
+    ],
+    "alphaExcessPct": -5.3,
+    "regime": "guinada_moderada",
+    "horizontalValid": true
+  },
+  "scale": {
+    "rho_v": 0.4251,
+    "impliedGarmentLength_cm": 94.1,
+    "garmentLengthRange_cm": [
+      78,
+      86
+    ],
+    "insidePhysicalRange": false,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": -12.9,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 78,
+        "deltaPct": -17.1
+      },
+      {
+        "size": "M",
+        "length_cm": 80,
+        "deltaPct": -15
+      },
+      {
+        "size": "G",
+        "length_cm": 82,
+        "deltaPct": -12.9
+      },
+      {
+        "size": "GG",
+        "length_cm": 84,
+        "deltaPct": -10.7
+      },
+      {
+        "size": "EG",
+        "length_cm": 86,
+        "deltaPct": -8.6
+      }
+    ],
+    "deltaRangePct": [
+      -17.1,
+      -8.6
+    ],
+    "deltaHLowerBoundPct": -22.2,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "EG",
+      "width_cm": 70,
+      "length_cm": 86
+    },
+    "verdict": "REPROVADO-DURO"
+  },
+  "position": {
+    "offsetX_cm": null,
+    "offsetX_pctOfArtWidth": null,
+    "collarToArtTop_cm": 9.99,
+    "rotation_deg": -0.8,
+    "rotationFlagged": false,
+    "verdict": "INCONCLUSIVO"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 39,
+    "impliedFlatWidth_cm": [
+      39,
+      61.27
+    ],
+    "consistentWithTable": false
+  },
+  "confidence": 45,
+  "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+  "notes": [
+    "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+    "centralizacao nao avaliada: alpha -10.7% indica pose que desloca o eixo visivel",
+    "largura plana implicita 39.0-61.3 cm nao encosta na faixa real 62-70 cm",
+    "comprimento implicito 94.1 cm fora da faixa fisica 78-86 cm: nenhum tamanho real explica esta geometria",
+    "arte sem aresta desenhada",
+    "ressalva: tronco_rotacionado",
+    "pose com alpha -10.7%",
+    "eixos de largura e comprimento discordam"
+  ]
+}

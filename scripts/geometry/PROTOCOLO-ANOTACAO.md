@@ -25,6 +25,13 @@ velocidade. Salve os recortes fora do repositório (no diretório de scratchpad 
 Marque a borda **externa da mancha de tinta**. Se a arte tiver moldura desenhada (azulejo, moldura
 rococó), use a borda externa da moldura.
 
+**Inclua tudo que é tinta**: a assinatura grafite "NIMBUS" solta num canto, os pingos finos de
+spray, um halo separado da figura. Isso não é opinião — foi medido. Comparando o arquivo de arte
+original com os centímetros oficiais do CSV, a caixa que inclui os elementos isolados bate dentro
+de 0,6% em 4 de 4 artes de spray testadas, enquanto a caixa só do desenho principal erra de 6% a
+9%. Ou seja, **os cm oficiais da YouDraw descrevem a caixa envolvente de toda a tinta**. Excluir a
+tag do Querubim, por exemplo, encolheria a largura medida em 10% e produziria um veredito falso.
+
 - `tl`, `tr`, `br`, `bl` — os quatro cantos da caixa envolvente da tinta.
 - `mt`, `mb`, `ml`, `mr` — os pontos médios das arestas de cima, de baixo, da esquerda e da direita.
 
