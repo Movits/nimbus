@@ -1,3 +1,19 @@
+# ============================ DOCUMENTO HISTORICO ============================
+# ATENCAO: este script REGERA um artefato da auditoria de 22-23/07, cujo METODO
+# esta INVALIDADO. Ele descreve "leitura de escala" como a comparacao da area da
+# arte contra o painel util da peca, entre mockup PLANO e foto VESTIDA. Numa
+# peca vestida o tecido enrola no dorso e a largura visivel nao e a largura
+# plana, entao essa comparacao fabrica "estampa grande" de forma sistematica.
+# Foi ela que gerou as rodadas de "reduza a estampa" de 22/07, e a medicao
+# geometrica de 25/07 mostrou que o defeito real do catalogo e o OPOSTO.
+#
+# As faixas de decisao que este script escreve no documento (+-8-10% aprova,
+# acima de 15% refaz) nao existem em nenhum metodo vigente.
+#
+# Metodo e fila vigentes: nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md
+# =============================================================================
+
+
 from __future__ import annotations
 
 import csv

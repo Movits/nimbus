@@ -1,5 +1,15 @@
 # Auditoria final de imagens — NIMBUS
 
+> [!warning] **Documento histórico (22/07), com método invalidado.**
+> Este relatório registra 13 reduções de estampa como correções bem-sucedidas, medidas contra o
+> mockup plano. A medição geométrica validada de 25/07 mostra que o defeito real do catálogo é o
+> oposto — estampa **pequena** demais — e que pelo menos duas dessas "correções" foram
+> sobrecorreções (352727545 e 352728357 hoje estão aprovadas). Não use este documento para decidir
+> o que refazer.
+>
+> Fila vigente: `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.
+
+
 Data: 22/07/2026
 
 ## Resultado

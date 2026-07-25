@@ -1,3 +1,13 @@
+// ============================ DOCUMENTO HISTORICO ============================
+// Este script regenera worklists com vereditos da auditoria de 22-23/07, cujo
+// metodo esta INVALIDADO. Ele manda "CORRIGIR CAPA" no 352728357 por estampa
+// "grande demais" e "REVISAR ESCALA" no 352407182 por "12% maior" — a medicao
+// geometrica de 25/07 aprova o primeiro (+2,5%) e atribui o problema do segundo
+// a fidelidade, nao a escala.
+//
+// Fila vigente: nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md
+// =============================================================================
+
 import fs from "node:fs";
 import path from "node:path";
 

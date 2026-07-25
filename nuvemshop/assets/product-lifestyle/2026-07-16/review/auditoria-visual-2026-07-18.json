@@ -1,4 +1,5 @@
 {
+ "_AVISO": "RESSALVA 25/07: os campos escalaFotoPct e escalaMockupPct codificam a razao estampa/peca medida no mockup PLANO contra a foto VESTIDA. Essa comparacao esta INVALIDADA: numa peca vestida as laterais fogem da camera, entao a largura visivel nao e a largura plana e a razao superestima a estampa. Todo veredito destes 49 registros que dependa de escala (ou de posicao lateral) e nulo. O que nao depende dessa regua — arte, texto, cor, peca, modelo, realismo — continua valido. Escala e posicao vigentes: nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md e medicoes.csv.",
  "auditados": 49,
  "faltaram": [],
  "resultados": [

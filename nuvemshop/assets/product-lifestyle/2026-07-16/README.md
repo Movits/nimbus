@@ -1,5 +1,16 @@
 # Campanha de produto NIMBUS — pessoas reais
 
+> [!warning] **Documento histórico (16/07), com método invalidado.**
+> Os passos abaixo mandam usar a proporção da estampa no **mockup plano** como alvo e conferir
+> **largura** com tolerância de ~3%. As duas coisas estão erradas para foto de peça vestida: o
+> tecido enrola no dorso, a largura visível não é a largura plana, e essa comparação fabrica
+> "estampa grande" — foi ela que gerou as reduções de 22/07, que a medição de 25/07 mostrou serem
+> na direção errada. A tolerância de 3% também é menor que o ruído do próprio método.
+>
+> Método e fila vigentes: `scripts/geometry/README.md` e
+> `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.
+
+
 ## Objetivo
 
 Criar fotos secundárias realistas para os produtos da loja, mantendo:

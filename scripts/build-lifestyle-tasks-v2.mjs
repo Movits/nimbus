@@ -34,9 +34,22 @@ const slug = (s) =>
 const classByProduct = new Map();
 for (const p of cls.produtos || []) classByProduct.set(String(p.productId), p.imagens || []);
 
+// Defeitos que NAO viram nota de prompt: foram julgados contra o mockup PLANO,
+// regua invalidada em 25/07. Deixar passar era pedir ao gerador que encolhesse
+// estampa — 352718787 entra na auditoria de 17/07 como "19% acima do mockup" e a
+// medicao geometrica de 25/07 o aprova. Escala e posicao agora saem de
+// `scripts/derive-composicao.mjs`, a partir dos cm oficiais e da tabela de
+// medidas, nunca de comparacao entre mockup e foto vestida.
+const TIPOS_COM_REGUA_INVALIDADA = new Set(["escala-inflada", "posicao-errada"]);
+
 const notasPorId = new Map();
 for (const e of audit.lista || []) {
-  notasPorId.set(String(e.id), (e.problemas || []).map((p) => `${p.tipo}: ${String(p.detalhe).slice(0, 140)}`));
+  notasPorId.set(
+    String(e.id),
+    (e.problemas || [])
+      .filter((p) => !TIPOS_COM_REGUA_INVALIDADA.has(p.tipo))
+      .map((p) => `${p.tipo}: ${String(p.detalhe).slice(0, 140)}`),
+  );
 }
 
 function garmentDescription(piece, color) {

@@ -1,5 +1,11 @@
 # NIMBUS — Prompt pro Claude Cowork: importar produtos YouDraw → Nuvemshop
 
+> [!warning] **Documento histórico. NÃO EXECUTAR.**
+> Este prompt importa o catálogo da YouDraw para a Nuvemshop. Ele **já foi executado**: a loja tem
+> 49 páginas de produto publicadas desde julho de 2026. Colar este bloco de novo duplicaria o
+> catálogo inteiro.
+
+
 Cole o bloco abaixo no **Claude Cowork** (agente de navegador), com a **YouDraw e a Nuvemshop já
 logadas** na mesma sessão. Dica: rode com **poucos produtos** primeiro pra validar, depois solte o
 lote inteiro. Se travar numa etapa, peça pro Cowork "me descrever o que vê na tela" e a gente ajusta.

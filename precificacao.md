@@ -6,8 +6,12 @@ o **custo de produção** por peça; o preço de venda é definido em cima disso
 
 ## ⚠️ Sobre o custo
 O custo do POD **varia com o tamanho da estampa**. O "**a partir de R$X**" é o **piso** (config mais
-barata) e é a **base** que usamos na tabela. Estampa **grande** (nossas costas ~33 cm, ou frente+
+barata) e é a **base** que usamos na tabela. Estampa **grande** (nossas costas, ou frente+
 costas) **sobe o custo** e, com o preço fixo, **baixa o markup/margem**.
+- Corrigido em 25/07: este texto dizia "nossas costas ~33 cm" como se fosse um valor único. Não é.
+  Medindo as 45 artes de costas do catálogo (`nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`,
+  colunas `back_*_cm`), a largura vai de **23,8 a 35,2 cm** e a altura de **24,6 a 40 cm**. Para
+  conferir custo, use o cm daquele produto, não uma média.
 - Ex. real: **Blusão** com estampa grande saiu **R$122,65** (em vez do piso R$110,40) → markup
   ~**120%** em vez de 145%. **Camiseta** frente+costas ~**R$73,20** (P–GG) → markup ~**105%**.
 - Ou seja: a tabela (piso) é o **melhor caso**; no cadastro, confira o custo da config que você
