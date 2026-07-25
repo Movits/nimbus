@@ -81,14 +81,18 @@ Decisão do dono (24/07, após o artefato da auditoria ao vivo): os defeitos de 
 (assinatura "NPMBUS" no 352407196, cartucho do 352890896, microtipografias em itens REVISAR) estão
 APROVADOS como resíduo — NÃO refazer. A fila de correção cobre apenas escala/peça/modelo/cenário.
 
-⚠️ **Re-derivação física de escala (24-25/07)** — substitui os vereditos de ESCALA do CSV (o
-template de mockup é ~10-15% curto e inflava as estampas na comparação; ver CLAUDE.md):
+⛔ **MEDIÇÃO DE ESCALA SUSPENSA (25/07)** — as DUAS auditorias de escala estão invalidadas e
+nenhum veredito de escala vale hoje:
 
-- Fila real: 352722685 (capa nova −27%; repor a foto antiga da galeria resolve sem gerar),
-  352618903 Off-White (−26%; par inconsistente), 352725749 (−13 a −20%), 352702796 (modelagem
-  oversized em página Premium).
-- Limítrofes: 352728277 (+8/+17%), 352728357 (−7/−12%), 352719816 (~−7%).
-- Desfeitos (fotos OK): 352718787, 352718999, 352618935, 352407182, 352618903 Preta.
+- A auditoria por cm (22-23/07) comparava mockup plano com peça vestida (cilindro visto de frente,
+  laterais fogem da câmera) e corrigia com um "fator de caimento 1,52" medido em um único produto.
+- A re-derivação física (24-25/07) usou comprimentos de peça errados (68-72 cm para canguru,
+  74-80 cm para oversized; os reais são 60-70 e 78-86), com erro em direções opostas conforme a
+  peça — foi isso que fabricou o resultado "nenhuma estampa mede maior que o oficial".
+- Nenhuma das duas mediu POSIÇÃO (centralização, distância da gola, rotação).
+
+Continuam válidos: as dimensões em cm do CSV, as colunas de identidade/texto e cor, e a decisão do
+dono sobre microtexto. Não regenerar nada por escala até o medidor novo passar na validação.
 
 ## Regras de conteúdo (valem sempre)
 

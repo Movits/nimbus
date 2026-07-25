@@ -149,36 +149,45 @@ frente `8,9 x 9,2 cm` e costas `31,5 x 40 cm`.
 Nao gere nem publique substituicoes antes do feedback do usuario sobre esse
 documento.
 
-### Re-derivacao fisica de escala (24-25/07) — SUBSTITUI os vereditos de escala do CSV
+### MEDICAO DE ESCALA SUSPENSA (25/07) — nenhum veredito de escala vale hoje
 
-O piloto um-por-um no `[352718787]` revelou que o template de mockup desenha
-a peca mais curta que a real (~62 cm implicitos vs 68-72 reais), inflando
-qualquer estampa correta na comparacao. Os 11 produtos da fila foram entao
-re-medidos direto nas fotos ao vivo com regua fisica (altura da estampa ÷
-comprimento das costas × comprimento real da peca, vs cm oficiais da
-YouDraw; cross-check pela proporcao interna da arte). Vereditos vigentes:
+Duas auditorias de escala ja foram feitas e as DUAS estao invalidadas:
 
-- REPROVADOS (fila real de correcao, nesta ordem):
-  1. `[352722685]` SM Celeste Moletom: capa nova ~-27% MENOR; a foto antiga
-     da propria galeria media ~40 cm (OK) — repor a antiga como capa resolve
-     sem gerar nada (precisa do admin Nuvemshop).
-  2. `[352618903]` SJ Vintage Oversized, foto Off-White: ~-26% MENOR; par
-     inconsistente (Preta ~25% maior que a Off-White; composicao do texto
-     difere entre as cores). Regenerar a Off-White mirando 40 cm.
-  3. `[352725749]` Querubim Spray Oversized: -13% a -20% MENOR (o CSV dizia
-     "+10-15% maior" — direcao invertida). Regenerar.
-  4. `[352702796]` Monograma Premium: modelagem errada — a foto mostra peca
-     de silhueta oversized numa pagina de Camiseta Premium regular.
-     Regenerar com caimento Premium.
-- LIMITROFES (decidir caso a caso): `[352728277]` +8 a +17% maior;
-  `[352728357]` -7 a -12% menor (peca da foto tambem aparenta oversized);
-  `[352719816]` ~-7% menor (confianca baixa-media, capuz oculta a gola).
-- OK (vereditos antigos DESFEITOS): `[352718787]` (era "+20-30% maior"),
-  `[352718999]` (era "+15-25%"), `[352618935]` (era "+8-15%"),
-  `[352407182]` (era "~+12%"), `[352618903]` foto Preta (~-8%).
-- Transversal: NENHUMA estampa mede maior que o oficial; o vies real das
-  fotos publicadas e igual-ou-menor. As colunas de identidade/texto do CSV
-  continuam validas; so a escala fica obsoleta.
+1. Auditoria por cm (22-23/07, o CSV): comparava a razao estampa/peca entre o
+   mockup plano e a foto vestida. Numa peca vestida o tecido envolve um
+   cilindro e as laterais fogem da camera, entao a largura visivel nao e a
+   largura plana e a comparacao superestima. O "fator de caimento 1,52" usado
+   para corrigir isso saiu de UM produto (`352721197`, Camiseta Premium) e foi
+   aplicado ate a moletons.
+2. Re-derivacao fisica (24-25/07): usou comprimentos de peca ERRADOS —
+   68-72 cm para Moletom Canguru e 74-80 cm para Oversized, quando a tabela
+   real da YouDraw diz 60-70 e 78-86. O erro tem direcao OPOSTA conforme a
+   peca, o que fabricou o padrao "nenhuma estampa mede maior que o oficial".
+   Cai junto a explicacao de que o template do mockup seria "curto demais
+   (~62 cm)": 62 cm e o comprimento real de um canguru P/M.
+
+Alem disso, NENHUMA das duas mediu POSICAO (centralizacao horizontal,
+distancia da gola, rotacao) — e ha estampa visivelmente deslocada no ar.
+
+Ate o medidor novo (`scripts/measure-print-geometry.mjs`) passar no teste de
+verdade conhecida, valem apenas: as dimensoes oficiais em cm do CSV, as
+colunas de identidade/texto e de cor, e a decisao do dono sobre microtexto.
+Nao gerar nem publicar correcao de escala com base nos vereditos antigos.
+
+### Tabela de medidas real das pecas (YouDraw, via `scripts/build-prelaunch-matrix.mjs`)
+
+Largura do torax x comprimento total, em cm, por tamanho. Esta e a regua:
+
+- Camiseta Premium: P 49,5x70,5 · M 52,5x72 · G 54x75,5 · GG 60,5x81,5 · EG 63x85
+- Camiseta Oversized Premium: P 62x78 · M 64x80 · G 66x82 · GG 68x84 · EG 70x86
+- Moletom Canguru: P 52x60 · M 55x64 · G 58x65 · GG 61x65 · EG 69x70
+- Blusao Moletom: SEM DADOS (aguarda confirmacao da YouDraw)
+- Ecobag: 41x35, alcas de 60
+
+Lacunas: nao existe medida de ombro-a-ombro por tamanho, nem placement oficial
+(cm abaixo da gola). Nao se sabe qual tamanho o modelo veste em cada foto — por
+isso o medidor trabalha com a FAIXA de tamanhos da peca, nunca com um valor
+unico, e reporta o comprimento de peca implicito pela estampa.
 
 ## Erros conhecidos no ar (registrados em 24/07)
 
@@ -322,15 +331,14 @@ Arquivos relevantes:
 
 1. FEITO em 24/07: dono aprovou a auditoria ao vivo (artefato) e decidiu
    nao refazer microtextos; corrigir o resto (escala/peca/modelo/cenario).
-2. Piloto um-por-um em andamento no `[352718787]`: a checagem calibrada de
-   24/07 (mockup real da YouDraw + agentes independentes) indicou que a
-   foto no ar esta com escala aproximadamente CORRETA (±10%) e que o
-   veredito "+20-30% maior" do CSV veio de comparacao com template de
-   mockup com torso estreito. Antes de gerar qualquer imagem, re-derivar
-   os vereditos de escala da fila com a metrica fisica (altura da estampa
-   ÷ comprimento das costas, em cm) produto a produto.
-3. Apos re-derivacao, corrigir de fato (um produto por vez, API Google AI
-   Studio) somente os que continuarem reprovados.
+2. EM CURSO (25/07): escrever e VALIDAR o medidor geometrico
+   (`scripts/geometry/`), que mede escala E posicao por retificacao
+   (homografia pelos cantos da arte + dimensoes oficiais em cm) e reporta o
+   comprimento de peca implicito contra a faixa real do tipo de peca.
+   Nenhum veredito antes do teste de verdade conhecida passar.
+3. Com o medidor validado, medir TODAS as pecas disponiveis (49 produtos,
+   todas as cores com foto, frente e costas) e so entao montar a fila real
+   de correcao. Corrigir um produto por vez, API Google AI Studio.
 4. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 5. Completar material, modelagem, tabela de medidas, prazo POD, politica e
    impacto social nas paginas de produto.
