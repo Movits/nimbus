@@ -44,6 +44,10 @@
   "scale": {
     "rho_v": 0.4251,
     "impliedGarmentLength_cm": 94.1,
+    "impliedGarmentLength_band_cm": [
+      87.12,
+      101.08
+    ],
     "garmentLengthRange_cm": [
       78,
       86
@@ -113,7 +117,7 @@
     "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
     "centralizacao nao avaliada: alpha -10.7% indica pose que desloca o eixo visivel",
     "largura plana implicita 39.0-61.3 cm nao encosta na faixa real 62-70 cm",
-    "comprimento implicito 94.1 cm fora da faixa fisica 78-86 cm: nenhum tamanho real explica esta geometria",
+    "comprimento implicito 94.1 cm (faixa 87.12-101.08) fora da faixa fisica 78-86 cm: nenhum tamanho real explica esta geometria",
     "arte sem aresta desenhada",
     "ressalva: tronco_rotacionado",
     "pose com alpha -10.7%",

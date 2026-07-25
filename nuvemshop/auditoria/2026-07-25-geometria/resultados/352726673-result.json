@@ -1,0 +1,124 @@
+{
+  "product_id": "352726673",
+  "title": "São Miguel Vitorioso | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "view": "back",
+  "image": "352726673-preta.jpg",
+  "annotators": [
+    "A",
+    "B"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0.05,
+    "art.tr": 0.05,
+    "art.br": 0.05,
+    "art.bl": 0.05,
+    "art.mt": 0.23,
+    "art.mb": 0.06,
+    "art.ml": 0.2,
+    "art.mr": 2.59,
+    "collar_center": 0.93,
+    "hem_center": 0.4,
+    "side_left": 0,
+    "side_right": 0.77
+  },
+  "official_cm": {
+    "w": 28.5,
+    "h": 39.4
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 28.5,
+    "h": 39.4
+  },
+  "anisotropy": {
+    "alphaPct": -18.1,
+    "alphaExpectedByWrap": [
+      -11.9,
+      -6.9
+    ],
+    "alphaExcessPct": -11.2,
+    "regime": "guinada_forte",
+    "horizontalValid": false
+  },
+  "scale": {
+    "rho_v": 0.5969,
+    "impliedGarmentLength_cm": 66,
+    "impliedGarmentLength_band_cm": [
+      58.73,
+      73.27
+    ],
+    "garmentLengthRange_cm": [
+      60,
+      70
+    ],
+    "insidePhysicalRange": true,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": -1.5,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 60,
+        "deltaPct": -9.1
+      },
+      {
+        "size": "M",
+        "length_cm": 64,
+        "deltaPct": -3
+      },
+      {
+        "size": "G",
+        "length_cm": 65,
+        "deltaPct": -1.5
+      },
+      {
+        "size": "GG",
+        "length_cm": 65,
+        "deltaPct": -1.5
+      },
+      {
+        "size": "EG",
+        "length_cm": 70,
+        "deltaPct": 6.1
+      }
+    ],
+    "deltaRangePct": [
+      -9.1,
+      6.1
+    ],
+    "deltaHLowerBoundPct": null,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "G",
+      "width_cm": 58,
+      "length_cm": 65
+    },
+    "verdict": "OK"
+  },
+  "position": {
+    "offsetX_cm": null,
+    "offsetX_pctOfArtWidth": null,
+    "collarToArtTop_cm": 7.25,
+    "rotation_deg": -0.7,
+    "rotationFlagged": false,
+    "verdict": "INCONCLUSIVO"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 34.59,
+    "impliedFlatWidth_cm": [
+      34.59,
+      54.33
+    ],
+    "consistentWithTable": true
+  },
+  "confidence": 45,
+  "verdict": "escala OK / posicao INCONCLUSIVO",
+  "notes": [
+    "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+    "centralizacao nao avaliada: alpha -18.1% indica pose que desloca o eixo visivel",
+    "arte sem aresta desenhada",
+    "gola oculta pelo capuz",
+    "barra com baixo contraste ou fora de quadro"
+  ]
+}

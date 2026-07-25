@@ -44,6 +44,10 @@
   "scale": {
     "rho_v": 0.4667,
     "impliedGarmentLength_cm": 85.71,
+    "impliedGarmentLength_band_cm": [
+      79.91,
+      91.5
+    ],
     "garmentLengthRange_cm": [
       78,
       86

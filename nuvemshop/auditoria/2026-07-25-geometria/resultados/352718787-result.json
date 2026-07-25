@@ -1,0 +1,122 @@
+{
+  "product_id": "352718787",
+  "title": "São Jorge Neobarroco | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "view": "back",
+  "image": "352718787-preta-v4.jpg",
+  "annotators": [
+    "z787"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0,
+    "art.tr": 0,
+    "art.br": 0,
+    "art.bl": 0,
+    "art.mt": 0,
+    "art.mb": 0,
+    "art.ml": 0,
+    "art.mr": 0,
+    "collar_center": 0,
+    "hem_center": 0,
+    "side_left": 0,
+    "side_right": 0
+  },
+  "official_cm": {
+    "w": 31,
+    "h": 40
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 31,
+    "h": 40
+  },
+  "anisotropy": {
+    "alphaPct": -5.2,
+    "alphaExpectedByWrap": [
+      -14,
+      -8.1
+    ],
+    "alphaExcessPct": 2.9,
+    "regime": "frontal",
+    "horizontalValid": true
+  },
+  "scale": {
+    "rho_v": 0.542,
+    "impliedGarmentLength_cm": 73.8,
+    "impliedGarmentLength_band_cm": [
+      64.16,
+      83.43
+    ],
+    "garmentLengthRange_cm": [
+      60,
+      70
+    ],
+    "insidePhysicalRange": false,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": -11.9,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 60,
+        "deltaPct": -18.7
+      },
+      {
+        "size": "M",
+        "length_cm": 64,
+        "deltaPct": -13.3
+      },
+      {
+        "size": "G",
+        "length_cm": 65,
+        "deltaPct": -11.9
+      },
+      {
+        "size": "GG",
+        "length_cm": 65,
+        "deltaPct": -11.9
+      },
+      {
+        "size": "EG",
+        "length_cm": 70,
+        "deltaPct": -5.1
+      }
+    ],
+    "deltaRangePct": [
+      -18.7,
+      -5.1
+    ],
+    "deltaHLowerBoundPct": -16.5,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "EG",
+      "width_cm": 69,
+      "length_cm": 70
+    },
+    "verdict": "INCONCLUSIVO"
+  },
+  "position": {
+    "offsetX_cm": null,
+    "offsetX_pctOfArtWidth": null,
+    "collarToArtTop_cm": 13.24,
+    "rotation_deg": 4.6,
+    "rotationFlagged": true,
+    "verdict": "INCONCLUSIVO"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 45.43,
+    "impliedFlatWidth_cm": [
+      45.43,
+      71.35
+    ],
+    "consistentWithTable": true
+  },
+  "confidence": 60,
+  "verdict": "escala INCONCLUSIVO / posicao INCONCLUSIVO",
+  "notes": [
+    "centralizacao nao avaliada: alpha -5.2% indica pose que desloca o eixo visivel",
+    "comprimento implicito 73.8 cm cai fora da faixa 60-70 cm, MAS a incerteza declarada pelo anotador (faixa 64.16-83.43 cm) alcanca a faixa real — sem anotacao melhor nao da para reprovar",
+    "gola oculta pelo capuz",
+    "ressalva: torso_rotacionado"
+  ]
+}

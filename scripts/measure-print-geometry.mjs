@@ -135,8 +135,11 @@ function mergeNamed(name) {
     entries.map((e) => e.sigma_pct ?? 1),
   );
   disagreement[name] = Number(c.spread.toFixed(2));
+  // sigma declarado pelo anotador, em % da imagem -> px (usa a maior dimensao)
+  const sigmaPct = Math.max(...entries.map((e) => e.sigma_pct ?? 1));
+  const sigma_px = (sigmaPct / 100) * Math.max(size.w, size.h);
   return {
-    value: { center: toPx(c.xy, size) },
+    value: { center: toPx(c.xy, size), sigma_px },
     status: blocking.length ? blocking.map((e) => e.status).join("|") : "ok",
   };
 }
@@ -152,7 +155,7 @@ if (hem.status !== "ok" && hem.status !== "missing") flags.push(`hem:${hem.statu
 
 const result = measurePrint(
   {
-    art,
+    art: { ...art, sigma_px: (Math.max(...annotations.map((a) => a.art?.sigma_pct ?? 0.5)) / 100) * Math.max(size.w, size.h) },
     artSize: { w_cm, h_cm },
     garment: row.garment,
     collar: collar.value,

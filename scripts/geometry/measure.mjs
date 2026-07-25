@@ -164,10 +164,30 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
 
   let rho_v = null;
   let impliedLength = null;
+  let impliedBand = null;
   if (haveCollar && haveHem) {
     const garmentLen_px = dist(input.collar.center, input.hem.center);
     rho_v = artH_px / garmentLen_px;
     impliedLength = h_cm / rho_v;
+
+    // PROPAGACAO DA INCERTEZA DO ANOTADOR.
+    // Um ponto que o anotador declarou como estimativa (gola sob capuz, barra
+    // preto-sobre-preto) nao pode virar veredito duro. O sigma declarado vira
+    // uma faixa no comprimento implicito, e se essa faixa cruza o limite da
+    // faixa fisica da peca, o veredito e INCONCLUSIVO — nao "reprovado".
+    // Sem isso o medidor repetiria o pecado das auditorias anteriores: tratar
+    // palpite como medida.
+    const sCollar = input.collar.sigma_px ?? 0;
+    const sHem = input.hem.sigma_px ?? 0;
+    const sArt = input.art.sigma_px ?? 0;
+    const sLen = Math.hypot(sCollar, sHem);
+    const relLen = garmentLen_px > 0 ? sLen / garmentLen_px : 0;
+    const relArt = artH_px > 0 ? (sArt * Math.SQRT2) / artH_px : 0;
+    const rel = Math.hypot(relLen, relArt);
+    if (rel > 0) {
+      const half = 2 * rel * impliedLength; // ~95%
+      impliedBand = [round(impliedLength - half), round(impliedLength + half)];
+    }
   } else {
     notes.push(
       `sem ${!haveCollar ? "gola" : ""}${!haveCollar && !haveHem ? " e " : ""}${!haveHem ? "barra" : ""} anotada: comprimento implicito indeterminado`,
@@ -312,10 +332,20 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   } else if (impliedLength === null || alphaRegime === "vertical_comprimido" || axesContradiction) {
     scaleVerdict = "INCONCLUSIVO";
   } else if (!insidePhysicalRange) {
-    scaleVerdict = "REPROVADO-DURO";
-    notes.push(
-      `comprimento implicito ${impliedLength.toFixed(1)} cm fora da faixa fisica ${spec.lengthRange[0]}-${spec.lengthRange[1]} cm: nenhum tamanho real explica esta geometria`,
-    );
+    const [minLen, maxLen] = spec.lengthRange;
+    const bandTouchesRange =
+      impliedBand !== null && impliedBand[1] >= minLen && impliedBand[0] <= maxLen;
+    if (bandTouchesRange) {
+      scaleVerdict = "INCONCLUSIVO";
+      notes.push(
+        `comprimento implicito ${impliedLength.toFixed(1)} cm cai fora da faixa ${minLen}-${maxLen} cm, MAS a incerteza declarada pelo anotador (faixa ${impliedBand[0]}-${impliedBand[1]} cm) alcanca a faixa real — sem anotacao melhor nao da para reprovar`,
+      );
+    } else {
+      scaleVerdict = "REPROVADO-DURO";
+      notes.push(
+        `comprimento implicito ${impliedLength.toFixed(1)} cm${impliedBand ? ` (faixa ${impliedBand[0]}-${impliedBand[1]})` : ""} fora da faixa fisica ${minLen}-${maxLen} cm: nenhum tamanho real explica esta geometria`,
+      );
+    }
   } else if (Math.abs(deltaCanonical) > tolerance.scalePct) {
     scaleVerdict = "FORA-DO-ALVO";
   } else {
@@ -379,6 +409,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     scale: {
       rho_v: rho_v === null ? null : round(rho_v, 4),
       impliedGarmentLength_cm: impliedLength === null ? null : round(impliedLength),
+      impliedGarmentLength_band_cm: impliedBand,
       garmentLengthRange_cm: spec.lengthRange,
       insidePhysicalRange,
       canonicalSize: CANONICAL_SIZE,

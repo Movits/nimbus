@@ -1,0 +1,8 @@
+{"photo":"352718787-preta-v4.jpg","annotator":"z787","imageSize":{"w":1600,"h":1600},
+"art":{"tl":[30.99,43.47],"tr":[55.84,43.47],"br":[56.21,77.30],"bl":[31.48,77.04],
+"mt":[43.45,43.50],"mb":[43.45,78.37],"ml":[30.75,60.34],"mr":[56.36,60.34],"sigma_pct":0.35},
+"collar_center":{"xy":[45.5,32.0],"sigma_pct":4.0,"status":"occluded_hood"},
+"hem_center":{"xy":[51.2,96.08],"sigma_pct":0.9,"status":"ok"},
+"side_left":{"xy":[27.2,60.34],"sigma_pct":1.1,"status":"ok"},
+"side_right":{"xy":[66.8,60.34],"sigma_pct":1.3,"status":"ok"},
+"flags":["collar_center_occluded_hood","torso_rotacionado"]}
