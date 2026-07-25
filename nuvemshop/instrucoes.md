@@ -81,6 +81,15 @@ Decisão do dono (24/07, após o artefato da auditoria ao vivo): os defeitos de 
 (assinatura "NPMBUS" no 352407196, cartucho do 352890896, microtipografias em itens REVISAR) estão
 APROVADOS como resíduo — NÃO refazer. A fila de correção cobre apenas escala/peça/modelo/cenário.
 
+⚠️ **Re-derivação física de escala (24-25/07)** — substitui os vereditos de ESCALA do CSV (o
+template de mockup é ~10-15% curto e inflava as estampas na comparação; ver CLAUDE.md):
+
+- Fila real: 352722685 (capa nova −27%; repor a foto antiga da galeria resolve sem gerar),
+  352618903 Off-White (−26%; par inconsistente), 352725749 (−13 a −20%), 352702796 (modelagem
+  oversized em página Premium).
+- Limítrofes: 352728277 (+8/+17%), 352728357 (−7/−12%), 352719816 (~−7%).
+- Desfeitos (fotos OK): 352718787, 352718999, 352618935, 352407182, 352618903 Preta.
+
 ## Regras de conteúdo (valem sempre)
 
 ⚠️ **Nunca usar "troca fácil" em texto nenhum.** POD encarece devolução. Política de trocas = mínimo legal

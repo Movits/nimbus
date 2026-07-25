@@ -149,6 +149,37 @@ frente `8,9 x 9,2 cm` e costas `31,5 x 40 cm`.
 Nao gere nem publique substituicoes antes do feedback do usuario sobre esse
 documento.
 
+### Re-derivacao fisica de escala (24-25/07) — SUBSTITUI os vereditos de escala do CSV
+
+O piloto um-por-um no `[352718787]` revelou que o template de mockup desenha
+a peca mais curta que a real (~62 cm implicitos vs 68-72 reais), inflando
+qualquer estampa correta na comparacao. Os 11 produtos da fila foram entao
+re-medidos direto nas fotos ao vivo com regua fisica (altura da estampa ÷
+comprimento das costas × comprimento real da peca, vs cm oficiais da
+YouDraw; cross-check pela proporcao interna da arte). Vereditos vigentes:
+
+- REPROVADOS (fila real de correcao, nesta ordem):
+  1. `[352722685]` SM Celeste Moletom: capa nova ~-27% MENOR; a foto antiga
+     da propria galeria media ~40 cm (OK) — repor a antiga como capa resolve
+     sem gerar nada (precisa do admin Nuvemshop).
+  2. `[352618903]` SJ Vintage Oversized, foto Off-White: ~-26% MENOR; par
+     inconsistente (Preta ~25% maior que a Off-White; composicao do texto
+     difere entre as cores). Regenerar a Off-White mirando 40 cm.
+  3. `[352725749]` Querubim Spray Oversized: -13% a -20% MENOR (o CSV dizia
+     "+10-15% maior" — direcao invertida). Regenerar.
+  4. `[352702796]` Monograma Premium: modelagem errada — a foto mostra peca
+     de silhueta oversized numa pagina de Camiseta Premium regular.
+     Regenerar com caimento Premium.
+- LIMITROFES (decidir caso a caso): `[352728277]` +8 a +17% maior;
+  `[352728357]` -7 a -12% menor (peca da foto tambem aparenta oversized);
+  `[352719816]` ~-7% menor (confianca baixa-media, capuz oculta a gola).
+- OK (vereditos antigos DESFEITOS): `[352718787]` (era "+20-30% maior"),
+  `[352718999]` (era "+15-25%"), `[352618935]` (era "+8-15%"),
+  `[352407182]` (era "~+12%"), `[352618903]` foto Preta (~-8%).
+- Transversal: NENHUMA estampa mede maior que o oficial; o vies real das
+  fotos publicadas e igual-ou-menor. As colunas de identidade/texto do CSV
+  continuam validas; so a escala fica obsoleta.
+
 ## Erros conhecidos no ar (registrados em 24/07)
 
 Alem dos 13 REVISAR e 11 REFAZER da auditoria acima, estes defeitos pontuais
