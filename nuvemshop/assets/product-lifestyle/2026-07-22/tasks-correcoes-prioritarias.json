@@ -1,4 +1,5 @@
 {
+  "_AVISO": "VENCIDO EM 25/07: a composicao deste arquivo foi escrita quando a escala era julgada contra o mockup plano, metodo depois invalidado. As faixas aqui pedem estampa MENOR que a derivada dos cm oficiais (ate 45% menor), e as notes mandam reduzir pecas que a medicao geometrica APROVA. O gerador agora recusa este arquivo. Para regerar as faixas: node scripts/derive-composicao.mjs --product <id>. Mantido como historico de metodo.",
   "fase": "auditoria visual completa 2026-07-22",
   "criadoEm": "2026-07-22",
   "tasks": [
@@ -19,7 +20,12 @@
       "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/STREET/mockups/Anjo da Guarda [Camiseta+Oversized] [frente e verso]/costas - Anjo da Guarda.png",
       "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728357-01.webp",
       "sceneRef": null,
-      "composicao": { "sup": 15, "alt": 49, "inf": 36, "larg": 47 },
+      "composicao": {
+        "sup": 15,
+        "alt": 49,
+        "inf": 36,
+        "larg": 47
+      },
       "notes": [
         "A foto ao vivo tem a arte correta, mas a estampa parece cerca de 9 a 11 por cento maior que o mockup; preserve a arte exatamente e reduza a área impressa",
         "Uma tentativa com outro modelo gerou um anjo em pé diferente; isso é proibido. A figura deve ser exatamente a do PNG e do mockup, sem redesenho"
@@ -45,7 +51,12 @@
       "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/STREET/mockups/Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]/costas - Aparecida Spray (3).png",
       "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352727892-01.webp",
       "sceneRef": null,
-      "composicao": { "sup": 14, "alt": 52, "inf": 34, "larg": 49 },
+      "composicao": {
+        "sup": 14,
+        "alt": 52,
+        "inf": 34,
+        "larg": 49
+      },
       "notes": [
         "A foto publicada mostra um capuz e está errada; o produto vendido é blusão sem capuz, exatamente como o mockup",
         "Preserve a arte Aparecida Spray elemento por elemento e não a converta em outra representação de Nossa Senhora"
@@ -70,7 +81,12 @@
       "artworkRef": "C:/Users/rober/Nimbus/designs/prontos/STREET/mockups/Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]/costas - Aparecida Spray (3).png",
       "artHelperRef": "C:/Users/rober/Nimbus/nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728019-01.webp",
       "sceneRef": null,
-      "composicao": { "sup": 18, "alt": 40, "inf": 42, "larg": 40 },
+      "composicao": {
+        "sup": 18,
+        "alt": 40,
+        "inf": 42,
+        "larg": 40
+      },
       "notes": [
         "A foto ao vivo está com a estampa aproximadamente 45 por cento maior que a proporção do mockup; reduza de forma inequívoca",
         "Preserve a arte Aparecida Spray exatamente e mantenha grande faixa de tecido preto vazio abaixo e nas laterais"

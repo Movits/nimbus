@@ -102,6 +102,25 @@ export function deriveComposicao({ garment, artH_cm, size = CANONICAL_SIZE, coll
   };
 }
 
+/**
+ * Composicao derivada para um product_id, lendo o CSV oficial de dimensoes.
+ * Exportada para que `generate-lifestyle-v3.mjs` possa CONFERIR o arquivo de
+ * tarefa contra a fonte de verdade antes de gastar credito: arquivo de tarefa
+ * guarda numeros da epoca em que foi escrito e envelhece em silencio.
+ *
+ * @returns {{sup:number,alt:number,inf:number,garmentLength_cm:number,size:string}|null}
+ *   null quando o produto nao esta no CSV, nao tem arte naquela vista, ou a
+ *   peca nao tem tabela de medidas publicada.
+ */
+export function composicaoPorProduto(productId, view = "back", size = CANONICAL_SIZE) {
+  const rows = parseCsv(fs.readFileSync(CSV_PATH, "utf8"));
+  const row = rows.find((r) => r.product_id === String(productId));
+  if (!row) return null;
+  const h = Number(view === "front" ? row.front_h_cm : row.back_h_cm);
+  if (!(h > 0)) return null;
+  return deriveComposicao({ garment: row.garment, artH_cm: h, size });
+}
+
 function main() {
   const arg = (name, fallback = null) => {
     const i = process.argv.indexOf(name);

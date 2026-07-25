@@ -23,6 +23,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";
+import { composicaoPorProduto } from "./derive-composicao.mjs";
 
 const workspace = "C:\\Users\\rober\\Nimbus";
 const higgsfieldCli = path.join(
@@ -90,6 +91,16 @@ function garmentLock(task) {
 
 // Trava de escala escrita como ESPACO VAZIO.
 //
+// ATENCAO AO SINAL. Ate 25/07 este prompt afirmava que "previous attempts
+// failed by making it too large" e mandava, na duvida, renderizar MENOR. A
+// medicao geometrica validada mostrou o oposto: as seis pecas da fila de
+// correcao tem desvio NEGATIVO, ou seja estampa pequena demais. O prompt
+// estava empurrando o modelo na direcao do defeito real, e provavelmente e
+// causa dele — as rodadas de "reduza a estampa" de 22/07 sao dessa epoca.
+//
+// A tolerancia e SIMETRICA: ficar abaixo da faixa e defeito igual a passar
+// dela. Nao reintroduzir "when unsure, smaller".
+//
 // `task.composicao` deve vir de `scripts/derive-composicao.mjs`, que calcula as
 // tres faixas a partir dos cm oficiais da YouDraw e do comprimento real da peca
 // no tamanho canonico. Antes esses numeros eram estimados olhando o mockup, que
@@ -106,17 +117,17 @@ function compositionLock(task) {
     if (task.sceneRef) {
       return "SCALE LOCK — the print must be EXACTLY the same size, in the exact same position on the garment, as it appears in the campaign-photo reference of the other color. This is the single most important requirement: the two photos will be shown side by side to the customer on hover, and any difference in print size between them is an immediate, visible defect. Do not resize, do not reinterpret the scale from the mockup — copy the size and placement pixel-for-pixel from the reference photo, changing only the garment color.";
     }
-    return "SCALE LOCK — reproduce the print at exactly the size it has in the mockup reference relative to the garment. It must never be larger; when uncertain, render it clearly SMALLER. Leave a wide band of empty fabric below the print and bare fabric on both sides.";
+    return "SCALE LOCK — reproduce the print at exactly the size it has in the mockup reference relative to the garment. Too small is as much a defect as too large: aim for the same size, do not shrink it as a safety margin.";
   }
   const sup = Math.round(g.sup), alt = Math.round(g.alt), inf = Math.round(g.inf);
   return [
-    `SCALE AND COMPOSITION LOCK — the size of the print is the single most important requirement of this image, and previous attempts failed by making it too large. Compose it by EMPTY FABRIC, not by filling the garment:`,
+    `SCALE AND COMPOSITION LOCK — the size of the print is the single most important requirement of this image. Compose it by EMPTY FABRIC, not by filling the garment:`,
     `the artwork starts a full ${sup} percent of the collar-to-hem length BELOW the collar — that upper band is EMPTY fabric with nothing printed on it;`,
     `the artwork itself covers only the middle ${alt} percent of the collar-to-hem length;`,
     `and the ENTIRE LOWER ${inf} PERCENT of the garment, down to the hem, is EMPTY fabric.`,
     `The print is CENTERED on the back: its vertical centre line sits on the garment's own centre line, halfway between the two side seams.`,
     `The model wears size ${g.size ?? "G"}; these percentages are derived from that size's real measurements.`,
-    `If you are unsure, render the artwork SMALLER — a print slightly too small is acceptable, a print too large makes the photo unusable.`,
+    `Hit the ${alt} percent band exactly. A print that falls SHORT of it is just as defective as one that overflows it — do not shrink the artwork as a safety margin.`,
   ].join(" ");
 }
 
@@ -133,7 +144,11 @@ function buildPrompt(task) {
 
   push(task.modelBoard, `REFERENCE {N} is ${task.model}'s approved identity board: preserve the exact face, skin tone, hair, age and natural body proportions. ${modelIdentity[task.model]}.`);
   push(task.garmentRef, `REFERENCE {N} defines the exact ${task.garment}: match its color, cut, SLEEVE LENGTH, hood or handles and construction exactly.`);
-  push(task.mockupRef, `REFERENCE {N} is the live YouDraw/Nuvemshop product mockup FOR THIS COLOR and is the authority for which side is printed, where the print sits and HOW BIG the print is relative to the garment.`);
+  // O mockup deixou de ser autoridade de ESCALA. Ele e plano e a foto e
+  // vestida: comparar a razao estampa/peca entre os dois foi o metodo que
+  // invalidou duas auditorias. Continua sendo autoridade de lado e de posicao,
+  // que sao imunes a esse problema. A escala vem das faixas em cm.
+  push(task.mockupRef, `REFERENCE {N} is the live YouDraw/Nuvemshop product mockup FOR THIS COLOR and is the authority for which side is printed and where the print sits. Do NOT judge print SIZE by eye against this mockup: it is a flat garment and your image is a worn one, so the comparison is misleading. Print size comes from the numeric bands below.`);
   push(task.artworkRef, `REFERENCE {N} is the original artwork and is the authority for every line, color, word and signature.`);
   push(task.artHelperRef, `REFERENCE {N} is an APPROVED photo of a different garment carrying THIS EXACT SAME artwork, correctly printed: copy the artwork content precisely as it appears there (composition, colors, framing elements), adapted to this garment at the size specified below.`);
   push(task.sceneRef, `REFERENCE {N} is the approved campaign photo of this exact product in another color: match the SAME model, SAME scene, SAME framing, SAME pose, SAME natural light and — critically — the EXACT SAME print size and position, changing ONLY the garment color to ${task.color}.`);
@@ -167,8 +182,12 @@ function buildPrompt(task) {
   const checklist = [
     `BEFORE YOU FINISH, verify each of these and fix the image if any answer is no:`,
     `(1) Are the sleeves exactly as specified in the GARMENT LOCK${/SHORT/.test(garmentLock(task)) ? ", with both forearms bare" : ", long and cuffed at the wrist"}?`,
-    task.composicao ? `(2) Is there a wide band of EMPTY fabric below the print, covering the lower ${Math.round(task.composicao.inf)} percent of the garment down to the hem?` : task.sceneRef ? `(2) Is the print EXACTLY the same size as in the other-color reference photo — not larger, not smaller?` : `(2) Is there a wide band of EMPTY fabric below the print?`,
-    `(3) Does the print stop a hand's width short of both side seams?`,
+    task.composicao ? `(2) Does the artwork actually FILL the middle ${Math.round(task.composicao.alt)} percent of the collar-to-hem length — not less — with the lower ${Math.round(task.composicao.inf)} percent left as empty fabric?` : task.sceneRef ? `(2) Is the print EXACTLY the same size as in the other-color reference photo — not larger, not smaller?` : `(2) Is there a wide band of EMPTY fabric below the print?`,
+    // A pergunta antiga era "a estampa para a um palmo das costuras laterais?".
+    // Isso e regra de LARGURA, e largura numa peca vestida so sabe subestimar,
+    // porque o tecido enrola no dorso e as laterais fogem da camera. A pergunta
+    // empurrava para estampa estreita sem nunca acusar estampa pequena demais.
+    `(3) Is the print CENTERED between the two side seams?`,
     `(4) Is every letter in the artwork spelled exactly as in the artwork reference?`,
     `(5) Does the ink follow the fabric folds instead of sitting flat like a sticker?`,
   ].join(" ");
@@ -248,6 +267,56 @@ async function generate(task, state) {
 }
 
 const tasks = (tasksDoc.tasks || []).slice(0, limit || undefined);
+
+// ===================== TRAVA CONTRA ARQUIVO DE TAREFA VENCIDO =====================
+// Arquivo de tarefa e municao carregada: ele carrega `composicao` gravada na
+// epoca em que foi escrito, e o gerador obedece sem perguntar. Os arquivos de
+// 22/07 pediam faixas ate 45% menores que as derivadas dos cm oficiais, para
+// pecas que a medicao de 25/07 aprova — rodar qualquer um deles hoje encolheria
+// estampa correta.
+//
+// Em vez de corrigir os arquivos um a um (e torcer para nao aparecer outro), a
+// composicao de cada tarefa e conferida contra a derivada na hora de rodar. Sem
+// `--force`, divergencia acima da tolerancia ABORTA em vez de gerar.
+const DIVERGENCIA_MAX_PP = 3;
+const problemas = [];
+for (const task of tasks) {
+  if (!task.composicao) continue;
+  let esperado = null;
+  try {
+    esperado = composicaoPorProduto(task.productId, task.view ?? "back");
+  } catch {
+    /* produto fora do CSV: nao da para conferir, segue */
+  }
+  if (!esperado) continue;
+  const dAlt = Math.abs(task.composicao.alt - esperado.alt);
+  const dSup = Math.abs(task.composicao.sup - esperado.sup);
+  if (dAlt > DIVERGENCIA_MAX_PP || dSup > DIVERGENCIA_MAX_PP) {
+    problemas.push(
+      `  ${task.productId}:${task.color} pede alt=${task.composicao.alt} sup=${task.composicao.sup}, ` +
+        `mas os cm oficiais no tamanho ${esperado.size} dao alt=${esperado.alt} sup=${esperado.sup}`,
+    );
+  }
+  if (task.composicao.larg !== undefined) {
+    problemas.push(
+      `  ${task.productId}:${task.color} traz o campo "larg", removido de proposito (ver derive-composicao.mjs)`,
+    );
+  }
+}
+if (problemas.length && !force) {
+  console.error(
+    `\nABORTADO: ${problemas.length} divergencia(s) entre o arquivo de tarefa e as dimensoes oficiais.\n` +
+      `${problemas.join("\n")}\n\n` +
+      `Este arquivo provavelmente e de antes de 25/07. Regere as faixas com:\n` +
+      `  node scripts/derive-composicao.mjs --product <id> [--view back|front]\n` +
+      `Se souber o que esta fazendo, repita com --force.\n`,
+  );
+  process.exit(1);
+}
+if (problemas.length) {
+  console.warn(`AVISO: ${problemas.length} divergencia(s) ignorada(s) por --force.`);
+}
+
 const state = loadState();
 console.log(`${tasks.length} tarefas${dryRun ? " (dry-run)" : ""}, concorrencia ${concurrency}`);
 

@@ -273,9 +273,17 @@ dimensoes em cm da YouDraw.
   cenas) e Nano Banana Pro (texto e casos dificeis).
 - Higgsfield: somente fotografia editorial quando o custo se justificar. O
   pipeline antigo via CLI do Higgsfield (`generate-lifestyle-v*.mjs`) e
-  historico de metodo; as travas de prompt (TEXT IS SACRED, GARMENT LOCK,
-  escala por espaco vazio, sceneRef/artHelperRef) continuam validas e devem
-  ser reaproveitadas no canal novo.
+  historico de metodo. As travas de TEXT IS SACRED, GARMENT LOCK,
+  sceneRef/artHelperRef e escala por espaco vazio continuam validas e devem
+  ser reaproveitadas no canal novo — mas SO na versao de 25/07 em diante.
+
+  ATENCAO: ate 25/07 esses mesmos prompts mandavam, na duvida, renderizar a
+  estampa MENOR, e tratavam o mockup plano como autoridade de escala relativa.
+  A medicao geometrica validada mostrou que as seis pecas da fila de correcao
+  tem desvio NEGATIVO — estampa pequena demais. Ou seja a trava empurrava na
+  direcao do defeito real e e provavel causa dele. A tolerancia e SIMETRICA:
+  ficar abaixo da faixa e defeito igual a passar dela. Nao copie prompt de
+  geracao de commit anterior a 25/07 sem conferir esse ponto.
 - Nao remover marca d'agua/procedencia por manipulacao; preferir ferramenta
   que entregue o arquivo licenciado sem marca visual desde a origem.
 

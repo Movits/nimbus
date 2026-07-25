@@ -75,13 +75,13 @@ function buildPrompt(task) {
   // Mesmo principio do correct-nuvemshop-lifestyle-batch do lote de 16/07.
   if (task.mode === "corrigir") {
     push(task.sourcePhoto, `REFERENCE {N} is the approved campaign photo. Keep every pixel of the person, face, pose, scene, lighting and garment construction UNCHANGED. Change ONLY the printed artwork on the garment.`);
-    push(task.mockupRef, `REFERENCE {N} is the exact live product mockup and is the authority for print side, print position and REAL PRINT SCALE relative to the garment.`);
+    push(task.mockupRef, `REFERENCE {N} is the exact live product mockup and is the authority for print side and print position. Do NOT judge print SIZE against it by eye: it is a flat garment and this is a worn one, and that comparison is what invalidated two audits.`);
     push(task.artworkRef, `REFERENCE {N} is the original artwork and is the authority for every line, shape, ink color, word, letterform and signature. Reproduce it EXACTLY, including its exact typeface, letter style, arch or curve layout and ornament details. Never redesign, simplify or substitute the art.`);
     const partes = [
       `Correct the printed artwork in this NIMBUS ecommerce photo of "${task.title}" (${task.color}).`,
       ...refs,
       `SPECIFIC CORRECTION REQUIRED: ${task.fix}`,
-      `The print must match the mockup scale: never larger than it appears in the mockup relative to the garment; when uncertain, smaller.`,
+      `Keep the print at the size the artwork already has in the source photo unless the correction is about size. Too small is as much a defect as too large: never shrink the artwork as a safety margin.`,
       `TEXT IS SACRED: every word and letter copied exactly, letter by letter, including small text and the NIMBUS signature. Never invent, substitute or scramble glyphs.`,
       `The corrected print must remain ink on fabric: follow folds, fabric texture through the ink, no glow brighter than the scene light, no cut-out background.`,
       `Everything else in the image stays identical. No added text, no watermark, no new elements.`,
@@ -109,7 +109,7 @@ function buildPrompt(task) {
   const partes = [
     `Create one square photorealistic NIMBUS ${task.collection} ecommerce lifestyle image for "${task.title}" (${task.color} colorway).`,
     ...refs,
-    `Reproduce the sold product exactly. Apply the artwork unchanged and keep the same relative graphic bounding box and placement shown in the mockup reference. The print must never be larger than it appears in the mockup; if there is any uncertainty, make it slightly smaller rather than larger.`,
+    `Reproduce the sold product exactly. Apply the artwork unchanged and keep the same relative graphic bounding box and placement shown in the mockup reference. Match that relative size in both directions: a print smaller than the mockup is as defective as a larger one, and must not be shrunk as a safety margin.`,
     `TEXT IS SACRED: every word and letter in the artwork must be copied EXACTLY, letter by letter, including small text, captions inside cartouches and the NIMBUS signature. Never invent, substitute, mirror or scramble glyphs. If a word is too small to paint sharply, keep it small and slightly soft but with the CORRECT letterforms.`,
     `PRINT-ON-FABRIC REALISM: the print is ink on fabric, not a sticker. It must follow every fold and wrinkle, fabric texture must show through the ink, the ink brightness must never exceed the brightest scene light, and there must be no cut-out halo, no rectangle and no separate background behind the art.`,
     pose,

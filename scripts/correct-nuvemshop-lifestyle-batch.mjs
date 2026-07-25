@@ -103,14 +103,14 @@ function promptFor(product, includeArtwork) {
     "Precision ecommerce correction.",
     "REFERENCE 1 is the approved photorealistic lifestyle image. Keep every pixel of the person, exact identity, face, hair, body, pose, hands, garment color, garment fit, folds, lighting, camera, crop and location unchanged.",
     `Change only the printed artwork on the ${side} of the garment.`,
-    "REFERENCE 2 is the exact live YouDraw/Nuvemshop product mockup and is the absolute authority for the sold artwork, its orientation, exact relative scale and exact placement on the garment.",
+    "REFERENCE 2 is the exact live YouDraw/Nuvemshop product mockup and is the absolute authority for the sold artwork, its orientation and its placement on the garment. It is a FLAT garment: do not judge print SIZE against it by eye, because the fabric wraps the torso in a worn photo and the comparison misleads.",
     includeArtwork
       ? "REFERENCE 3 is the original transparent artwork and is the absolute authority for every line, color, letter, accent, word, symbol, signature and border."
       : "REFERENCE 2 is the only artwork authority. Do not borrow from any similar product or variant.",
     includeArtwork
       ? "Remove the current generated print completely and replace it with the exact artwork from REFERENCES 2 and 3 without redesigning or interpreting it."
       : "Remove the current generated print completely and replace it with the exact artwork from REFERENCE 2 without redesigning or interpreting it.",
-    "Match the real-product print bounding box from REFERENCE 2. Never make the replacement larger than the mockup; if uncertain, err slightly smaller.",
+    "Match the real-product print bounding box from REFERENCE 2 in BOTH directions: a replacement smaller than the mockup is as defective as a larger one. Do not err slightly smaller as a safety margin — the measured defects on the live store are prints that came out too small.",
     "Preserve all Portuguese spelling and typography exactly. Do not rearrange words, invent lettering, simplify figures, change saints, add a halo, remove a border or substitute a similar image.",
     productSpecificCorrection[product.productId] || "",
     "No other edits, no new text, no new logos and no watermark.",
