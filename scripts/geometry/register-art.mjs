@@ -48,6 +48,33 @@ function pyr(src, W, H, targetMax) {
   return { data: out, width: w, height: h, factor: f };
 }
 
+/**
+ * MODELO DE ENROLAMENTO, dentro do registro.
+ *
+ * Ajustar uma SIMILARIDADE a uma arte enrolada num cilindro deixa residuo que
+ * cresce com o quanto a arte enrola. Medido: o erro do registro vai de -0,79 pp
+ * com a arte a 0,85x para -2,49 pp a 1,2x, e o desvio de 2,10 para 3,43. Nao e
+ * ruido, e o modelo errado.
+ *
+ * Dois parametros descrevem o que a projecao faz com a arte:
+ *   alpha  meio-arco que a arte ocupa no dorso, em radianos (alpha = W/2R)
+ *   rho    R/D, o quanto a profundidade varia entre o centro e a borda
+ *
+ * Para u em [-0.5, 0.5] ao longo da largura da arte:
+ *   x na tela          ~ sin(2*alpha*u) / (1 - rho*cos(2*alpha*u))
+ *   ampliacao vertical = (1 - rho) / (1 - rho*cos(2*alpha*u))
+ *
+ * Com alpha -> 0 os dois viram identidade, entao a similaridade e o caso
+ * particular: nada se perde quando a arte e pequena.
+ */
+function wrapMaps(alpha, rho) {
+  if (!(alpha > 1e-4)) return { X: (u) => u, M: () => 1 };
+  const den = (u) => 1 - rho * Math.cos(2 * alpha * u);
+  const meia = Math.sin(alpha) / den(0.5);
+  const d0 = den(0);
+  return { X: (u) => Math.sin(2 * alpha * u) / den(u) / (2 * meia), M: (u) => d0 / den(u) };
+}
+
 function bilinear(img, W, H, u, v) {
   if (u < 0 || v < 0 || u > W - 1.001 || v > H - 1.001) return null;
   const x0 = u | 0, y0 = v | 0;
@@ -65,12 +92,17 @@ function bilinear(img, W, H, u, v) {
  * `need` e a fracao minima de amostras que precisa cair dentro da cena: abaixo
  * disso o candidato e descartado em vez de pontuar alto por sair do quadro.
  */
-function ncc(scene, SW, SH, tpl, TW, TH, cx, cy, sx, sy, th, step, need = 0.9) {
+function ncc(scene, SW, SH, tpl, TW, TH, cx, cy, sx, sy, th, step, need = 0.9, wrap = null) {
   const c = Math.cos(th), s = Math.sin(th);
+  // Nomes distintos dos X/Y da projecao logo abaixo: `const X = cx + ...` no
+  // corpo do laco criava zona morta temporal e derrubava a funcao inteira.
+  const mapX = wrap ? wrap.X : (u) => u;
+  const magY = wrap ? wrap.M : () => 1;
   let n = 0, fora = 0, sa = 0, sb = 0, saa = 0, sbb = 0, sab = 0;
   for (let ty = 0; ty < TH; ty += step) {
     for (let tx = 0; tx < TW; tx += step) {
-      const dx = (tx - TW / 2) * sx, dy = (ty - TH / 2) * sy;
+      const u = tx / TW - 0.5;
+      const dx = mapX(u) * TW * sx, dy = (ty - TH / 2) * sy * magY(u);
       const X = cx + dx * c - dy * s, Y = cy + dx * s + dy * c;
       const b = bilinear(scene, SW, SH, X, Y);
       if (b === null) { fora += 1; continue; }
@@ -186,12 +218,64 @@ export function registerArt(sceneImg, artImg, opts = {}) {
     };
   }
 
+  // ------------------------------------- estagio final: enrolamento no modelo
+  // Descida por coordenadas, alternando geometria e enrolamento. Os dois no
+  // mesmo laco custariam 3^7 candidatos por iteracao sem ganho.
+  const nvF = niveis[niveis.length - 1];
+  const SF = pyr(sceneG, SW, SH, nvF.cena);
+  const TF = pyr(tplG, artImg.width, artImg.height, nvF.tpl);
+  let G = {
+    cx: cur.cx / SF.factor, cy: cur.cy / SF.factor,
+    sx: (cur.sx * TF.factor) / SF.factor, sy: (cur.sy * TF.factor) / SF.factor, th: cur.th,
+  };
+  let alpha = 0.4, rho = 0.08;
+  const av = (g, a, r) => ncc(SF.data, SF.width, SF.height, TF.data, TF.width, TF.height,
+    g.cx, g.cy, g.sx, g.sy, g.th, nvF.step, 0.9, wrapMaps(a, r));
+  let vBest = av(G, alpha, rho);
+  for (let rodada = 0; rodada < 4; rodada += 1) {
+    let dA = 0.3 / (rodada + 1), dR = 0.04 / (rodada + 1);
+    for (let it = 0; it < 5; it += 1) {
+      let m = null;
+      for (const da of [-dA, 0, dA]) for (const dr of [-dR, 0, dR]) {
+        if (!da && !dr) continue;
+        const a = Math.min(1.1, Math.max(0, alpha + da));
+        const r = Math.min(0.16, Math.max(0.02, rho + dr));
+        const v = av(G, a, r);
+        if (v > vBest && (!m || v > m.v)) m = { a, r, v };
+      }
+      if (m) { alpha = m.a; rho = m.r; vBest = m.v; } else { dA /= 2; dR /= 2; }
+    }
+    let dPos = 1.5 / (rodada + 1), dS = 0.02 / (rodada + 1), dTh = ((1.2 / (rodada + 1)) * Math.PI) / 180;
+    for (let it = 0; it < 5; it += 1) {
+      let m = null;
+      for (const dx of [-dPos, 0, dPos]) for (const dy of [-dPos, 0, dPos])
+        for (const ax of [1 - dS, 1, 1 + dS]) for (const ay of [1 - dS, 1, 1 + dS])
+          for (const dt of [-dTh, 0, dTh]) {
+            if (!dx && !dy && ax === 1 && ay === 1 && !dt) continue;
+            const cand = { cx: G.cx + dx, cy: G.cy + dy, sx: G.sx * ax, sy: G.sy * ay, th: G.th + dt };
+            const v = av(cand, alpha, rho);
+            if (v > vBest && (!m || v > m.v)) m = { ...cand, v };
+          }
+      if (m) { G = { cx: m.cx, cy: m.cy, sx: m.sx, sy: m.sy, th: m.th }; vBest = m.v; }
+      else { dPos /= 2; dS /= 2; dTh /= 2; }
+    }
+  }
+  cur = {
+    cx: G.cx * SF.factor, cy: G.cy * SF.factor,
+    sx: (G.sx * SF.factor) / TF.factor, sy: (G.sy * SF.factor) / TF.factor,
+    th: G.th, v: vBest,
+  };
+
   return {
     cx: cur.cx,
     cy: cur.cy,
     width_px: cur.sx * artImg.width,
+    // Altura da COLUNA CENTRAL, onde M(0)=1. E ela que corresponde a altura
+    // oficial em cm: os cm sao medida plana e a regua vertical da peca tambem
+    // corre pelo meridiano central.
     height_px: cur.sy * artImg.height,
     rotation_deg: (cur.th * 180) / Math.PI,
+    wrap: { alpha: +alpha.toFixed(3), rho: +rho.toFixed(3) },
     score: cur.v,
   };
 }
