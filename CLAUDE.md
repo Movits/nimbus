@@ -396,7 +396,14 @@ O problema mais importante e fidelidade. A IA nao pode redesenhar a estampa.
 - Produto com mais de uma cor: pode trocar entre capas lifestyle das cores
   reais.
 - A transicao deve manter a fluidez do Baires, sem blink.
-- Dentro da pagina do produto, os mockups reais da YouDraw continuam visiveis.
+- Dentro da pagina do produto, os mockups reais da YouDraw NAO estao mais
+  visiveis. Medido em 25/07: varredura das 49 paginas, 105 imagens
+  classificadas, ZERO mockups planos (`nuvemshop/auditoria/2026-07-25-geometria/
+  E1-ACESSO-A-MOCKUPS.md` e `inventario-imagens-loja.json`). O texto anterior
+  dizia que continuavam; nao continuam. Os mockups planos hoje so existem no
+  painel autenticado da YouDraw, e o site publico deles e uma SPA sem API de
+  catalogo. Isso importa porque o mockup plano e a melhor regua que existe:
+  resolve datum, tabela de medidas e posicao de uma vez.
 
 O CSS local mais recente e seus geradores precisam ser comparados com o CSS
 efetivamente servido pela loja. A Nuvemshop sanitiza CSS, portanto igualdade
