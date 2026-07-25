@@ -157,6 +157,38 @@ Consequência prática: apertar a tolerância exige primeiro **derrubar a margem
 número. Se a margem não cair para um tipo de arte, aquele tipo mantém o limiar
 mais folgado, com o motivo escrito no CSV.
 
+## Registro da arte: o que ele resolve e o que não resolve
+
+Medido em 270 cenas de verdade conhecida (`E2-REGISTRO-DE-ARTE.md`,
+`register-report.json`). Critério declarado antes: ≤3 pp. **Deu 7 pp, reprovado.**
+
+Mesmo assim o registro **substitui a anotação**, por três motivos que o número
+sustenta:
+
+| | anotação | registro |
+|---|---|---|
+| margem no agregado | 27 pp | **7 pp** |
+| com a tinta quase invisível | 33 pp | **8 pp** |
+| com a tinta visível | 11 pp | **7 pp** |
+
+A anotação varia 3× conforme a tinta difusa apareça ou não. O registro varia de
+8 para 7: ele não tem a dúvida, porque a arte é a **entrada**. E, decisivo para
+a portabilidade, ele **elimina a etapa humana**, que é o que impede o método de
+rodar num catálogo novo.
+
+Consequência para a tolerância: o piso honesto de arte irregular vai de 8 pp
+para **7 pp**. O ±5% continua restrito a arte com moldura desenhada.
+
+Onde o erro do registro mora, pelos recortes: escala grande (1,2× → 10 pp) e
+tecido claro (off-white → 9 pp, preto → 5 pp). O off-white ser pior é
+contraintuitivo e pode ser artefato do gerador sintético, cujo sombreado é
+multiplicativo e portanto muito mais forte em tecido claro. Confirmar em foto
+real antes de tratar como propriedade do método.
+
+**Hipótese testada e morta:** modelar o enrolamento cilíndrico dentro do
+registro não mudou nada (7 pp com e sem) e custa 3,5× mais tempo. Está atrás de
+`opts.wrap`, desligado. Não retentar sem ler o número.
+
 ## Terceiro viés sistemático: a caixa da tinta não é a altura da arte
 
 Medido em 25/07 ao construir o teste de registro, e vale para **toda** foto de

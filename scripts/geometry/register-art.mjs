@@ -219,8 +219,32 @@ export function registerArt(sceneImg, artImg, opts = {}) {
   }
 
   // ------------------------------------- estagio final: enrolamento no modelo
-  // Descida por coordenadas, alternando geometria e enrolamento. Os dois no
-  // mesmo laco custariam 3^7 candidatos por iteracao sem ganho.
+  //
+  // MEDIDO E DESLIGADO POR PADRAO. A hipotese era que o residuo do registro
+  // vinha de ajustar uma similaridade a uma superficie curva, e que modelar o
+  // enrolamento derrubaria o desvio. Rodado sobre as mesmas 270 cenas:
+  //
+  //   sem enrolamento  vies -1,51  desvio 2,64  margem 7 pp
+  //   com enrolamento  vies -1,47  desvio 2,63  margem 7 pp
+  //
+  // Nao mudou nada, e custa 3,5x mais tempo. Fica atras de `opts.wrap` para
+  // quem quiser retentar, e o numero fica escrito para ninguem refazer a mesma
+  // tentativa achando que e nova.
+  //
+  // Registro de um erro meu no caminho: antes de rodar a grade inteira eu
+  // testei tres casos isolados e vi melhora grande (-2,49 -> +1,49 pp na escala
+  // 1,2x). Era comparacao invalida — eu punha um caso unico contra a MEDIA de
+  // um conjunto diferente de condicoes. Na comparacao pareada, o ganho some.
+  if (!opts.wrap) {
+    return {
+      cx: cur.cx,
+      cy: cur.cy,
+      width_px: cur.sx * artImg.width,
+      height_px: cur.sy * artImg.height,
+      rotation_deg: (cur.th * 180) / Math.PI,
+      score: cur.v,
+    };
+  }
   const nvF = niveis[niveis.length - 1];
   const SF = pyr(sceneG, SW, SH, nvF.cena);
   const TF = pyr(tplG, artImg.width, artImg.height, nvF.tpl);
