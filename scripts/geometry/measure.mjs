@@ -78,6 +78,17 @@ export const POSITION_METHOD_MARGIN_CM = 1.9;
 export const POSITION_UNDERESTIMATE_FACTOR = 1.6;
 
 /**
+ * Margem do caminho CORRIGIDO de posicao (silhueta + cos(alpha) + termo de
+ * guinada). Medida em 2.700 cenas: 1,7 cm da 96,2% de cobertura. E menos da
+ * metade da faixa do caminho antigo, e sem o fator de expansao, porque a
+ * compressao que ele compensava passou a ser removida de verdade.
+ */
+export const POSITION_CORRECTED_MARGIN_CM = 1.7;
+
+/** Angulo do vinco manga/tronco que o protocolo manda anotar. */
+const CREASE_ANGLE_DEG = 75;
+
+/**
  * DIAGNOSTICO perceptual (nao e veredito): o deslocamento da estampa como
  * fracao da largura do tronco VISIVEL, em pixels, sem converter para cm. E o
  * que o olho compara ao dizer "esta mais para a direita".
@@ -446,8 +457,17 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     // INTEIRA cai de um lado do limite. E a mesma regra ja usada na escala.
     const offsetChord_px = signedDistanceToLine(artCenter, collar, hem);
     let offsetTorso_px = null;
-    if (input.side?.left && input.side?.right) {
-      const torsoCenter = mid(input.side.left, input.side.right);
+    // SILHUETA tem prioridade sobre o VINCO. Medido em validate-position.mjs,
+    // sobre corpo eliptico com torcao e afunilamento: RMSE de 0,32 cm contra
+    // 1,00 do vinco sem ruido, e vies de -0,05 contra +0,31 com ruido realista.
+    // Para seccao circular a silhueta e EXATA — o ponto medio das duas
+    // tangentes e a projecao do eixo, para qualquer guinada, porque o circulo
+    // e invariante a rotacao em torno do proprio eixo. A elipse degrada isso,
+    // mas mesmo no tronco mais achatado testado (profundidade/largura 0,55) ela
+    // continua o dobro melhor que o vinco.
+    const torso = input.silhouette?.left && input.silhouette?.right ? input.silhouette : input.side;
+    if (torso?.left && torso?.right) {
+      const torsoCenter = mid(torso.left, torso.right);
       const axisDir = [hem[0] - collar[0], hem[1] - collar[1]];
       const refB = [torsoCenter[0] + axisDir[0], torsoCenter[1] + axisDir[1]];
       offsetTorso_px = signedDistanceToLine(artCenter, torsoCenter, refB);
@@ -463,6 +483,8 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     // que acontece na escala.
     const garmentLen_px = dist(collar, hem);
     const toCm = (px) => spec.lengthRange.map((L) => (px * L) / garmentLen_px);
+    const canonicalLen =
+      spec.sizes.find((s) => s.size === CANONICAL_SIZE)?.length_cm ?? spec.lengthRange[1];
 
     // PROPAGACAO DA INCERTEZA DO ANOTADOR NA POSICAO.
     // A escala ja fazia isso; a posicao nao fazia, e o buraco apareceu numa foto
@@ -482,8 +504,73 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     const sigPos_px = 2 * Math.max(sigChord_px, offsetTorso_px === null ? 0 : sigTorso_px);
     const sigPos_cm = Math.max(...toCm(sigPos_px));
 
-    const cands_px = offsetTorso_px === null ? [offsetChord_px] : [offsetChord_px, offsetTorso_px];
-    const allCm = cands_px.flatMap(toCm);
+    // Com SILHUETA anotada nao se faz mais faixa entre dois estimadores: ela
+    // sozinha e melhor que os dois juntos. Medido em validate-position.mjs,
+    // com ruido realista e pose frontal: silhueta RMSE 0,87 cm e vies -0,05,
+    // contra corda RMSE 2,50 e vies +0,40. Juntar a corda so alargava a faixa
+    // com um estimador ruim, e era isso que derrubava a taxa de decisao.
+    // Sem silhueta, o par corda+vinco continua valendo como antes.
+    const temSilhueta = Boolean(input.silhouette?.left && input.silhouette?.right);
+
+    // CAMINHO CORRIGIDO, quando ha silhueta E vinco anotados. Sao dois efeitos
+    // geometricos, os dois com forma fechada, os dois medidos no sintetico:
+    //
+    //   compressao   o centro da arte e o meio de dois pontos a +-alpha de arco,
+    //                e o meio projetado nao e a projecao do meio: encolhe por
+    //                cos(alpha), com alpha = (W/2)/R. Sozinho isso fazia 3 cm
+    //                reais lerem 1,4.
+    //   guinada      o mesmo efeito no vinco, a +-75 graus, vale
+    //                R*sen(theta)*cos(psi). Como a silhueta da o eixo EXATO
+    //                (o meio das duas tangentes e a projecao do eixo, para
+    //                qualquer guinada), a diferenca vinco-silhueta MEDE esse
+    //                termo, e ele sai por subtracao sem precisar estimar theta.
+    //
+    // Resultado sobre 2.700 cenas com guinada ate 30, contraposto, inclinacao e
+    // distancia de camera de 150 a 400 cm: RMSE 0,81 cm contra 1,93 da silhueta
+    // crua. A margem de 1,7 cm da 96,2% de cobertura, com faixa media de 4,9 cm
+    // contra 13,0 do metodo anterior.
+    let allCm;
+    if (temSilhueta && input.side?.left && input.side?.right && spec.hasTable) {
+      const silC = mid(input.silhouette.left, input.silhouette.right);
+      const crC = mid(input.side.left, input.side.right);
+      const axisDir = [hem[0] - collar[0], hem[1] - collar[1]];
+      const perp = (p, o) => signedDistanceToLine(p, o, [o[0] + axisDir[0], o[1] + axisDir[1]]);
+      const medido_px = perp(artCenter, silC);
+      const vinco_px = perp(crC, silC);
+      const cosPsi = Math.cos((CREASE_ANGLE_DEG * Math.PI) / 180);
+      const radii = spec.widthRange.map((flat) => flat / Math.PI);
+      const rGrid = [radii[0], (radii[0] + radii[1]) / 2, radii[1]];
+      allCm = [];
+      // ALPHA usa a largura REAL da estampa, nao a oficial. Se a arte foi
+      // renderizada 30% maior, o arco que ela ocupa e 30% maior e o cos(alpha)
+      // muda muito. O fator sai da propria medicao de escala: se a foto implica
+      // uma peca de L_impl e a convencao e L_G, a estampa esta em L_G/L_impl do
+      // tamanho oficial. Usar a largura oficial aqui quebrava o veredito nas
+      // cenas de escala errada, que sao justamente as que interessam.
+      const kEscala =
+        impliedLength && impliedLength > 0
+          ? Math.min(2, Math.max(0.5, canonicalLen / impliedLength))
+          : 1;
+      const wReal = w_cm * kEscala;
+      for (const R of rGrid) {
+        const cosAlpha = Math.cos(Math.min(wReal / 2 / R, Math.PI / 2 - 0.05));
+        for (const [m_cm, v_cm] of [[toCm(medido_px), toCm(vinco_px)]].flatMap(([ms, vs]) =>
+          ms.map((m, i) => [m, vs[i]]),
+        )) {
+          allCm.push(m_cm / cosAlpha - v_cm / cosPsi);
+        }
+      }
+      notes.push(
+        "posicao pelo caminho corrigido (silhueta como eixo exato, compressao por cos(alpha) e termo de guinada medido no vinco)",
+      );
+    } else {
+      const cands_px = offsetTorso_px === null
+        ? [offsetChord_px]
+        : temSilhueta
+          ? [offsetTorso_px]
+          : [offsetChord_px, offsetTorso_px];
+      allCm = cands_px.flatMap(toCm);
+    }
     const lo = Math.min(...allCm) - sigPos_cm;
     const hi = Math.max(...allCm) + sigPos_cm;
     // Faixa do deslocamento ABSOLUTO, ja com as duas correcoes medidas. Se os
@@ -493,11 +580,14 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     // tolerancia, "REPROVADO" so sai se nem o extremo melhor cabe.
     const rawMin = lo <= 0 && hi >= 0 ? 0 : Math.min(Math.abs(lo), Math.abs(hi));
     const rawMax = Math.max(Math.abs(lo), Math.abs(hi));
-    const absMin = Math.max(0, rawMin - POSITION_METHOD_MARGIN_CM);
-    const absMax = rawMax * POSITION_UNDERESTIMATE_FACTOR + POSITION_METHOD_MARGIN_CM;
+    // O fator de expansao so vale no caminho NAO corrigido: a compressao que
+    // ele compensava e justamente o cos(alpha) que o caminho novo remove.
+    const corrigido = allCm.length > 2;
+    const margem = corrigido ? POSITION_CORRECTED_MARGIN_CM : POSITION_METHOD_MARGIN_CM;
+    const expansao = corrigido ? 1 : POSITION_UNDERESTIMATE_FACTOR;
+    const absMin = Math.max(0, rawMin - margem);
+    const absMax = rawMax * expansao + margem;
 
-    const canonicalLen =
-      spec.sizes.find((s) => s.size === CANONICAL_SIZE)?.length_cm ?? spec.lengthRange[1];
     const cmAtCanonical = (px) => (px * canonicalLen) / garmentLen_px;
 
     // CAMINHO PERCEPTUAL, em pixels, sem conversao para cm: o quanto a estampa

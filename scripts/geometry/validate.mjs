@@ -100,6 +100,7 @@ function run() {
                     collar: scene.landmarks.collar,
                     hem: scene.landmarks.hem,
                     side: scene.landmarks.side,
+                    silhouette: scene.landmarks.silhouette,
                   });
                 } catch (err) {
                   rows.push({ annot, scenario: sc.garment, yaw, pitch, roll, scale, offsetX, artRot, bow, error: String(err.message) });

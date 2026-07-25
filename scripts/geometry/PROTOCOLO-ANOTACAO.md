@@ -71,9 +71,21 @@ Nunca calcule um ponto médio como média dos cantos. Olhe a imagem e marque ond
 - `collar_center` — base da gola nas costas (ou na frente, se a vista for frontal), no centro:
   onde a ribana encontra o corpo da peça.
 - `hem_center` — a barra inferior, no centro.
-- `side_left`, `side_right` — as bordas do **tronco** na altura do meio da estampa. Se o braço
-  estiver colado ao corpo, marque o vinco entre manga e tronco, não a silhueta externa: a silhueta
-  com mangas desloca o centro aparente e é justamente o que engana o olho.
+- `side_left`, `side_right` — o **vinco** entre manga e tronco, na altura do meio da estampa. Não é
+  a silhueta externa com mangas: essa desloca o centro aparente e é justamente o que engana o olho.
+- `silhouette_left`, `silhouette_right` — os pontos onde a **borda do tronco** encontra o fundo, na
+  mesma altura, quando o braço está afastado o suficiente para a borda do tronco aparecer limpa.
+
+> **Por que os dois, e por que a silhueta importa tanto.** O ponto médio das duas tangentes da
+> silhueta é a projeção **exata** do eixo do tronco, para qualquer rotação da câmera, porque uma
+> seção circular é invariante a rotação em torno do próprio eixo. Medido no gerador de verdade
+> conhecida: RMSE de 0,02 cm em seção circular e 0,32 cm num corpo elíptico com torção e
+> afunilamento, contra 1,00 cm do vinco. Já o vinco, comparado à silhueta, **mede** o quanto a
+> câmera está girada, e é isso que permite corrigir o centro da estampa sem precisar estimar a
+> rotação. Com os dois anotados, a posição passou a decidir em 36% dos casos em vez de 8,5%.
+>
+> Se o braço cobre a borda do tronco, marque só o vinco e **omita** a silhueta. O medidor cai
+> sozinho para o caminho antigo, com margem maior, e diz isso no resultado.
 
 ### A vista
 
@@ -109,8 +121,10 @@ foi exatamente o número inventado que invalidou as duas auditorias anteriores.
   },
   "collar_center": { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
   "hem_center":    { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
-  "side_left":     { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
-  "side_right":    { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
+  "side_left":         { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
+  "side_right":        { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
+  "silhouette_left":   { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
+  "silhouette_right":  { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
   "flags": [],
   "notes": "o que foi difícil de ver e por quê"
 }

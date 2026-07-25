@@ -148,6 +148,8 @@ const collar = mergeNamed("collar_center");
 const hem = mergeNamed("hem_center");
 const sideL = mergeNamed("side_left");
 const sideR = mergeNamed("side_right");
+const silL = mergeNamed("silhouette_left");
+const silR = mergeNamed("silhouette_right");
 
 const flags = [...new Set(annotations.flatMap((a) => a.flags ?? []))];
 if (collar.status !== "ok" && collar.status !== "missing") flags.push(`collar:${collar.status}`);
@@ -173,6 +175,10 @@ const result = measurePrint(
             left_sigma_px: sideL.value.sigma_px,
             right_sigma_px: sideR.value.sigma_px,
           }
+        : undefined,
+    silhouette:
+      silL.value && silR.value
+        ? { left: silL.value.center, right: silR.value.center }
         : undefined,
     // Arte irregular (spray, stencil, ilustracao livre) nao tem aresta: os
     // pontos medios seguem o contorno do desenho, nao a borda da caixa. Os cm

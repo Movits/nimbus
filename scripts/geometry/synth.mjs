@@ -179,6 +179,26 @@ export function synthLandmarks(o) {
         left: project(onCylinder((-CREASE_ANGLE_DEG * Math.PI) / 180 * R, cyArt, R, axisX), cam),
         right: project(onCylinder((CREASE_ANGLE_DEG * Math.PI) / 180 * R, cyArt, R, axisX), cam),
       },
+      // SILHUETA do tronco na altura da arte: os dois extremos horizontais da
+      // projecao. Medido em `validate-position.mjs`, este estimador ganha do
+      // vinco em todos os regimes e e EXATO para seccao circular — o ponto
+      // medio das duas tangentes e a projecao do eixo, para qualquer guinada.
+      silhouette: (() => {
+        let lo = null;
+        let hi = null;
+        for (let i = 0; i <= 1440; i += 1) {
+          const phi = -Math.PI + (2 * Math.PI * i) / 1440;
+          let px;
+          try {
+            px = project(onCylinder(phi * R, cyArt, R, axisX), cam);
+          } catch {
+            continue;
+          }
+          if (!lo || px[0] < lo[0]) lo = px;
+          if (!hi || px[0] > hi[0]) hi = px;
+        }
+        return { left: lo, right: hi };
+      })(),
     },
   };
 }

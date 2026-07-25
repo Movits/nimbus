@@ -1,6 +1,6 @@
 {
   "report": {
-    "generatedAt": "2026-07-25T18:41:27.031Z",
+    "generatedAt": "2026-07-25T19:04:06.849Z",
     "method": "nimbus.medidor/1",
     "grid": {
       "scenarios": [
@@ -127,44 +127,44 @@
     "offsetBandMiss_cm": {
       "all": {
         "n": 19440,
-        "bias": 0.02,
-        "sd": 0.21,
-        "absMax": 3.28,
+        "bias": 0.01,
+        "sd": 0.09,
+        "absMax": 1.73,
         "p95abs": 0
       },
       "frontalish": {
         "n": 11664,
-        "bias": 0.04,
-        "sd": 0.27,
-        "absMax": 3.28,
+        "bias": 0,
+        "sd": 0.01,
+        "absMax": 0.36,
         "p95abs": 0
       },
-      "coverage": 0.982,
-      "coverageFrontalish": 0.973,
+      "coverage": 0.964,
+      "coverageFrontalish": 0.997,
       "byBow": {
         "0": {
-          "coverage": 0.979
+          "coverage": 0.964
         },
         "3": {
-          "coverage": 0.985
+          "coverage": 0.964
         }
       }
     },
     "positionDecision": {
-      "decisive": 0.085,
-      "decisiveFrontalish": 0.142,
+      "decisive": 0.358,
+      "decisiveFrontalish": 0.463,
       "decisiveAndWrong": 0,
       "spread_cm": {
         "n": 19440,
-        "bias": 4.96,
-        "sd": 3.29,
-        "absMax": 12.03,
-        "p95abs": 10.34
+        "bias": 2.62,
+        "sd": 2.26,
+        "absMax": 14.89,
+        "p95abs": 7.2
       },
       "verdicts": {
-        "OK": 789,
-        "INCONCLUSIVO": 17781,
-        "REPROVADO": 870
+        "OK": 2667,
+        "INCONCLUSIVO": 12483,
+        "REPROVADO": 4290
       }
     },
     "alphaDetector": {
@@ -192,52 +192,52 @@
       "0": {
         "miss": {
           "n": 3888,
-          "bias": 0.04,
-          "sd": 0.27,
-          "absMax": 3.28,
+          "bias": 0,
+          "sd": 0,
+          "absMax": 0.09,
           "p95abs": 0
         },
-        "decisive": 0.285
+        "decisive": 0.685
       },
       "10": {
         "miss": {
           "n": 3888,
-          "bias": 0.04,
-          "sd": 0.29,
-          "absMax": 3.22,
+          "bias": 0,
+          "sd": 0,
+          "absMax": 0.11,
           "p95abs": 0
         },
-        "decisive": 0.111
+        "decisive": 0.41
       },
       "20": {
         "miss": {
           "n": 3888,
-          "bias": 0.03,
-          "sd": 0.25,
-          "absMax": 3.22,
+          "bias": 0,
+          "sd": 0.02,
+          "absMax": 0.36,
           "p95abs": 0
         },
-        "decisive": 0.029
+        "decisive": 0.294
       },
       "30": {
         "miss": {
           "n": 3888,
-          "bias": 0.01,
-          "sd": 0.09,
-          "absMax": 1.13,
-          "p95abs": 0
+          "bias": 0.02,
+          "sd": 0.08,
+          "absMax": 0.89,
+          "p95abs": 0.07
         },
-        "decisive": 0.002
+        "decisive": 0.242
       },
       "40": {
         "miss": {
           "n": 3888,
-          "bias": 0,
-          "sd": 0,
-          "absMax": 0,
-          "p95abs": 0
+          "bias": 0.05,
+          "sd": 0.18,
+          "absMax": 1.73,
+          "p95abs": 0.37
         },
-        "decisive": 0
+        "decisive": 0.159
       }
     },
     "perceptualSeparation": {
@@ -276,10 +276,10 @@
     "publishedOffsetMargin_cm": 1.9,
     "offsetBandWidth_cm": {
       "n": 19440,
-      "bias": 4.96,
-      "sd": 3.29,
-      "absMax": 12.03,
-      "p95abs": 10.34
+      "bias": 2.62,
+      "sd": 2.26,
+      "absMax": 14.89,
+      "p95abs": 7.2
     },
     "criteria": {
       "perceptualNeverSeparates_documented": true,
@@ -309,7 +309,7 @@
       "scaleErrPct": 0.5,
       "offsetBand": [
         0,
-        1.9
+        1.7
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -337,7 +337,7 @@
       "scaleErrPct": 1.6,
       "offsetBand": [
         0,
-        1.9
+        1.7
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -365,16 +365,16 @@
       "scaleErrPct": 0.7,
       "offsetBand": [
         0,
-        5.6
+        2.3
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.69,
+      "offsetSpreadCm": 0.15,
       "visiblePct": -1,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -393,16 +393,16 @@
       "scaleErrPct": 1.8,
       "offsetBand": [
         0,
-        6.36
+        1.75
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.71,
+      "offsetSpreadCm": 0.03,
       "visiblePct": 0.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -421,7 +421,7 @@
       "scaleErrPct": 0.4,
       "offsetBand": [
         0,
-        1.9
+        1.7
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -449,7 +449,7 @@
       "scaleErrPct": 1.6,
       "offsetBand": [
         0,
-        1.91
+        1.71
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -477,16 +477,16 @@
       "scaleErrPct": 0.4,
       "offsetBand": [
         0,
-        5.61
+        2.3
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.69,
+      "offsetSpreadCm": 0.15,
       "visiblePct": -1,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -505,16 +505,16 @@
       "scaleErrPct": 1.5,
       "offsetBand": [
         0,
-        6.35
+        1.74
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.71,
+      "offsetSpreadCm": 0.02,
       "visiblePct": 0.2,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -533,16 +533,16 @@
       "scaleErrPct": 0.5,
       "offsetBand": [
         0,
-        3.28
+        2.89
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.15,
+      "offsetSpreadCm": 0.32,
       "visiblePct": 2.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -561,16 +561,16 @@
       "scaleErrPct": 1.6,
       "offsetBand": [
         0,
-        3.28
+        2.9
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.15,
+      "offsetSpreadCm": 0.33,
       "visiblePct": 2.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -589,16 +589,16 @@
       "scaleErrPct": 0.7,
       "offsetBand": [
         0,
-        6.99
+        2.29
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.77,
+      "offsetSpreadCm": 0.17,
       "visiblePct": 1.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -617,16 +617,16 @@
       "scaleErrPct": 1.8,
       "offsetBand": [
         0,
-        7.74
+        2.95
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.85,
+      "offsetSpreadCm": 0.36,
       "visiblePct": 2.6,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -645,16 +645,16 @@
       "scaleErrPct": 0.5,
       "offsetBand": [
         0,
-        3.29
+        2.89
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.15,
+      "offsetSpreadCm": 0.32,
       "visiblePct": 2.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -673,16 +673,16 @@
       "scaleErrPct": 1.6,
       "offsetBand": [
         0,
-        3.28
+        2.9
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.15,
+      "offsetSpreadCm": 0.33,
       "visiblePct": 2.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -701,16 +701,16 @@
       "scaleErrPct": 0.5,
       "offsetBand": [
         0,
-        6.99
+        2.29
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.77,
+      "offsetSpreadCm": 0.17,
       "visiblePct": 1.3,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -729,16 +729,16 @@
       "scaleErrPct": 1.5,
       "offsetBand": [
         0,
-        7.73
+        2.94
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.85,
+      "offsetSpreadCm": 0.36,
       "visiblePct": 2.6,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -756,11 +756,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.3,
       "offsetBand": [
-        1.64,
-        8.72
+        2.57,
+        7.55
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.73,
+      "offsetSpreadCm": 1.59,
       "visiblePct": 11.5,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -784,11 +784,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.4,
       "offsetBand": [
-        1.64,
-        8.72
+        2.59,
+        7.61
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.73,
+      "offsetSpreadCm": 1.62,
       "visiblePct": 11.5,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -812,11 +812,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.5,
       "offsetBand": [
-        1.32,
-        12.42
+        2.11,
+        6.95
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.35,
+      "offsetSpreadCm": 1.44,
       "visiblePct": 10.5,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -840,11 +840,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.5,
       "offsetBand": [
-        1.71,
-        13.17
+        2.61,
+        7.66
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.43,
+      "offsetSpreadCm": 1.66,
       "visiblePct": 11.7,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -868,11 +868,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.5,
       "offsetBand": [
-        1.64,
-        8.72
+        2.57,
+        7.56
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.73,
+      "offsetSpreadCm": 1.59,
       "visiblePct": 11.5,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -896,11 +896,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.7,
       "offsetBand": [
-        1.64,
-        8.72
+        2.6,
+        7.63
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 0.73,
+      "offsetSpreadCm": 1.64,
       "visiblePct": 11.5,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -924,11 +924,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.5,
       "offsetBand": [
-        1.32,
-        12.42
+        2.11,
+        6.95
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.35,
+      "offsetSpreadCm": 1.44,
       "visiblePct": 10.5,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -952,11 +952,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.6,
       "offsetBand": [
-        1.71,
-        13.17
+        2.61,
+        7.66
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.43,
+      "offsetSpreadCm": 1.66,
       "visiblePct": 11.7,
       "posVerdict": "INCONCLUSIVO",
       "decisive": false,
@@ -980,11 +980,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.1,
       "offsetBand": [
-        3.63,
-        12.57
+        4.96,
+        10.83
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 1.14,
+      "offsetSpreadCm": 2.47,
       "visiblePct": 17.9,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1008,11 +1008,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.1,
       "offsetBand": [
-        3.63,
-        12.56
+        4.99,
+        10.92
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 1.14,
+      "offsetSpreadCm": 2.52,
       "visiblePct": 17.9,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1036,11 +1036,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.3,
       "offsetBand": [
-        3.31,
-        16.25
+        4.5,
+        10.23
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.76,
+      "offsetSpreadCm": 2.32,
       "visiblePct": 16.9,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1064,11 +1064,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.2,
       "offsetBand": [
-        3.69,
-        17
+        5,
+        10.96
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.84,
+      "offsetSpreadCm": 2.55,
       "visiblePct": 18.2,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1092,11 +1092,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.4,
       "offsetBand": [
-        3.63,
-        12.57
+        4.97,
+        10.86
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 1.14,
+      "offsetSpreadCm": 2.49,
       "visiblePct": 17.9,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1120,11 +1120,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.5,
       "offsetBand": [
-        3.63,
-        12.57
+        5.01,
+        10.96
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 1.14,
+      "offsetSpreadCm": 2.55,
       "visiblePct": 17.9,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1148,11 +1148,11 @@
       "regime": "frontal",
       "scaleErrPct": 0.4,
       "offsetBand": [
-        3.31,
-        16.25
+        4.51,
+        10.24
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.76,
+      "offsetSpreadCm": 2.33,
       "visiblePct": 16.9,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1176,11 +1176,11 @@
       "regime": "frontal",
       "scaleErrPct": 1.4,
       "offsetBand": [
-        3.69,
-        17
+        5.01,
+        10.98
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 3.84,
+      "offsetSpreadCm": 2.56,
       "visiblePct": 18.2,
       "posVerdict": "REPROVADO",
       "decisive": true,
@@ -1205,7 +1205,7 @@
       "scaleErrPct": 0,
       "offsetBand": [
         0,
-        1.9
+        1.7
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -1233,7 +1233,7 @@
       "scaleErrPct": 1.6,
       "offsetBand": [
         0,
-        1.9
+        1.7
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -1261,16 +1261,16 @@
       "scaleErrPct": 0.1,
       "offsetBand": [
         0,
-        5.57
+        2.63
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.85,
+      "offsetSpreadCm": 0.27,
       "visiblePct": -1.5,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -1289,16 +1289,16 @@
       "scaleErrPct": 1.7,
       "offsetBand": [
         0,
-        6.6
+        1.75
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.86,
+      "offsetSpreadCm": 0.04,
       "visiblePct": 0.2,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -1317,7 +1317,7 @@
       "scaleErrPct": -0.1,
       "offsetBand": [
         0,
-        1.9
+        1.7
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -1345,7 +1345,7 @@
       "scaleErrPct": 1.6,
       "offsetBand": [
         0,
-        1.91
+        1.71
       ],
       "offsetMissCm": 0,
       "offsetSpreadCm": 0,
@@ -1373,16 +1373,16 @@
       "scaleErrPct": -0.1,
       "offsetBand": [
         0,
-        5.57
+        2.63
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.85,
+      "offsetSpreadCm": 0.27,
       "visiblePct": -1.5,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     },
     {
@@ -1401,16 +1401,16 @@
       "scaleErrPct": 1.5,
       "offsetBand": [
         0,
-        6.59
+        1.74
       ],
       "offsetMissCm": 0,
-      "offsetSpreadCm": 2.86,
+      "offsetSpreadCm": 0.03,
       "visiblePct": 0.2,
-      "posVerdict": "INCONCLUSIVO",
-      "decisive": false,
+      "posVerdict": "OK",
+      "decisive": true,
       "decisiveWrong": false,
       "rotationErrDeg": 5,
-      "verdict": "escala REPROVADO-DURO / posicao INCONCLUSIVO",
+      "verdict": "escala REPROVADO-DURO / posicao OK",
       "scaleVerdict": "REPROVADO-DURO"
     }
   ]
