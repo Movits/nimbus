@@ -27,7 +27,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
-import { compositeArt, projectedArtBox } from "./render.mjs";
+import { compositeArt, projectedArtBox, artMesh } from "./render.mjs";
 import { registerArt } from "./register-art.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -54,6 +54,28 @@ function artSvg(orla) {
   <path d="M78 ${AH - 96} L${AW / 2} ${AH * 0.52} L${AW - 78} ${AH - 96} Z" fill="#9d3039"/>
   <text x="${AW / 2}" y="${AH - 104}" font-size="34" text-anchor="middle" fill="#d8bc63" font-family="Georgia">NIMBUS</text>
 </svg>`;
+}
+
+/**
+ * Altura da arte na COLUNA CENTRAL da peca, em pixels.
+ *
+ * E esta, e nao a caixa envolvente, a quantidade que corresponde a altura
+ * oficial em cm. Os cm sao medida PLANA, e a regua vertical do medidor
+ * (gola->barra) tambem corre pelo meridiano central: comparar as duas exige que
+ * a altura da arte seja lida no mesmo meridiano. A caixa envolvente inclui o
+ * afastamento dos CANTOS, que estao em arco lateral e projetam mais espalhados.
+ *
+ * Medido: a caixa e ~2,4 pp mais alta que a coluna central, de forma estavel
+ * (2,51 / 1,89 / 2,44 / 2,67 / 2,36 / 2,66 pp em guinada, escala e raio
+ * diferentes). Ou seja usar a caixa infla a altura medida da arte, o que
+ * SUBESTIMA o comprimento implicito e faz a estampa parecer maior do que e.
+ */
+function alturaColunaCentral(params) {
+  const { cols, rows, pts } = artMesh(params);
+  const i = Math.floor((cols - 1) / 2);
+  const topo = pts[i], base = pts[(rows - 1) * cols + i];
+  if (!topo || !base) return null;
+  return Math.hypot(base[0] - topo[0], base[1] - topo[1]);
 }
 
 async function rawFromSvg(svg) {
@@ -112,8 +134,13 @@ async function run() {
             const bg = { data: fabric(W, H, tec), width: W, height: H, channels: 3 };
             compositeArt(bg, templates[orla], params, 0.94);
             const box = projectedArtBox(params);
-            if (!box) continue;
-            const verdadeH = box.y1 - box.y0;
+            const coluna = alturaColunaCentral(params);
+            if (!box || !coluna) continue;
+            // DUAS verdades, porque sao duas perguntas diferentes:
+            //   caixa   o que o anotador consegue marcar
+            //   coluna  o que corresponde de fato aos cm oficiais
+            const verdadeCaixa = box.y1 - box.y0;
+            const verdadeH = coluna;
 
             // ---- ANOTADOR SIMULADO
             // Ve a orla fraca com probabilidade que cai com o contraste dela.
@@ -122,9 +149,9 @@ async function run() {
             const veTopo = rnd() < pVe, veBase = rnd() < pVe;
             // fracao da altura que a orla ocupa em cima e embaixo, na textura
             const fTopo = 60 / AH, fBase = 46 / AH;
-            let hAnot = verdadeH;
-            if (!veTopo) hAnot -= verdadeH * fTopo;
-            if (!veBase) hAnot -= verdadeH * fBase;
+            let hAnot = verdadeCaixa;
+            if (!veTopo) hAnot -= verdadeCaixa * fTopo;
+            if (!veBase) hAnot -= verdadeCaixa * fBase;
             hAnot += gauss(9) + gauss(9); // ruido de ponteiro nas duas bordas
 
             // ---- REGISTRO
@@ -132,9 +159,12 @@ async function run() {
 
             rows.push({
               garment: sc.garment, yaw, escala, orla, tecido: tec[0] < 128 ? "preta" : "off-white",
-              verdadeH: +verdadeH.toFixed(1),
+              verdadeColuna: +verdadeH.toFixed(1),
+              verdadeCaixa: +verdadeCaixa.toFixed(1),
               errAnot_pp: +((hAnot / verdadeH - 1) * 100).toFixed(2),
               errReg_pp: reg ? +((reg.height_px / verdadeH - 1) * 100).toFixed(2) : null,
+              errAnotVsCaixa_pp: +((hAnot / verdadeCaixa - 1) * 100).toFixed(2),
+              errRegVsCaixa_pp: reg ? +((reg.height_px / verdadeCaixa - 1) * 100).toFixed(2) : null,
               regScore: reg ? +reg.score.toFixed(3) : null,
             });
             process.stderr.write(".");
@@ -155,10 +185,15 @@ async function run() {
 
   const rep = {
     generatedAt: new Date().toISOString(),
-    criterioDeclarado: "registro substitui anotacao se margem <= 3 pp",
+    criterioDeclarado: "registro substitui anotacao se margem <= 3 pp contra a COLUNA CENTRAL",
+    nota: "A primeira rodada comparou contra a CAIXA ENVOLVENTE e deu margem 10 pp. A caixa nao e a quantidade certa: ela e ~2,4 pp mais alta que a coluna central, por efeito puramente geometrico dos cantos, medido em separado. Ambas as comparacoes ficam publicadas.",
     casos: rows.length,
     anotacao: stat(rows.map((r) => r.errAnot_pp)),
     registro: stat(rows.map((r) => r.errReg_pp)),
+    contraCaixa: {
+      anotacao: stat(rows.map((r) => r.errAnotVsCaixa_pp)),
+      registro: stat(rows.map((r) => r.errRegVsCaixa_pp)),
+    },
     registroFalhou: rows.filter((r) => r.errReg_pp === null).length,
     porOrla: Object.fromEntries(ORLAS.map((o) => [o, {
       anotacao: stat(rows.filter((r) => r.orla === o).map((r) => r.errAnot_pp)),

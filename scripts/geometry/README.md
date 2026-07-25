@@ -157,6 +157,45 @@ Consequência prática: apertar a tolerância exige primeiro **derrubar a margem
 número. Se a margem não cair para um tipo de arte, aquele tipo mantém o limiar
 mais folgado, com o motivo escrito no CSV.
 
+## Terceiro viés sistemático: a caixa da tinta não é a altura da arte
+
+Medido em 25/07 ao construir o teste de registro, e vale para **toda** foto de
+arte irregular já medida — que são 38 das 41.
+
+O medidor lê a altura da arte na foto e a compara com a altura oficial em cm.
+Mas os cm são medida **plana**, e a régua vertical (gola→barra) corre pelo
+**meridiano central** da peça. Para as duas serem comparáveis, a altura da arte
+tem de ser lida no mesmo meridiano.
+
+A caixa envolvente não é lida ali: ela inclui os **cantos**, que estão em arco
+lateral e projetam mais espalhados. Medido no sintético, variando guinada,
+escala e raio do dorso:
+
+| Condição | Caixa vs coluna central |
+|---|---|
+| guinada 0° | −2,51 pp |
+| guinada 10° | −1,89 pp |
+| guinada 20° | −2,44 pp |
+| escala 1,2 | −2,67 pp |
+| escala 0,85 | −2,36 pp |
+| raio 17 cm | −2,66 pp |
+
+Ou seja **a caixa é ~2,4 pp mais alta que a coluna central**, de forma estável.
+
+**Consequência e direção.** Usar a caixa infla a altura medida da arte, o que
+subestima o comprimento implícito da peça, o que faz a estampa **parecer maior
+do que é**. A fila real tem 12 de 13 estampas *menores* que o alvo — então este
+viés também empurra contra o achado. Corrigi-lo torna os desvios mais negativos
+e a fila mais severa, nunca mais branda.
+
+É o terceiro viés sistemático identificado, e os três apontam para o mesmo lado:
+
+1. datum da altura (ombro vs gola), 3 a 5 pp, direção positiva;
+2. viés projetivo de extremos de tinta irregular, até ±1 pp, calculado por foto;
+3. caixa vs coluna central, ~2,4 pp, direção positiva.
+
+**A fila atual é conservadora nos três.** Nenhum deles pode ter inflado a fila.
+
 ## Questão aberta que vale 3 a 5%: de onde a tabela mede a "altura"
 
 Levantada pelo dono em 25/07, ao contestar a exigência de gola visível. Ele
