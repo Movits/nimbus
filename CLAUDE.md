@@ -1,6 +1,6 @@
 # Handoff do projeto NIMBUS
 
-Atualizado em 24 de julho de 2026.
+Atualizado em 25 de julho de 2026.
 
 Este arquivo e o ponto de entrada para continuar o projeto. Antes de alterar
 qualquer coisa, leia o estado abaixo, rode as verificacoes iniciais e consulte
@@ -149,30 +149,63 @@ frente `8,9 x 9,2 cm` e costas `31,5 x 40 cm`.
 Nao gere nem publique substituicoes antes do feedback do usuario sobre esse
 documento.
 
-### MEDICAO DE ESCALA SUSPENSA (25/07) — nenhum veredito de escala vale hoje
+### MEDICAO DE ESCALA: MEDIDOR VALIDADO E FILA REAL (25/07, tarde)
 
-Duas auditorias de escala ja foram feitas e as DUAS estao invalidadas:
+As duas auditorias de escala anteriores continuam INVALIDADAS. O que mudou e
+que existe substituto medido, nao que elas tenham sido reabilitadas.
+
+Por que cairam, para nao repetir:
 
 1. Auditoria por cm (22-23/07, o CSV): comparava a razao estampa/peca entre o
    mockup plano e a foto vestida. Numa peca vestida o tecido envolve um
    cilindro e as laterais fogem da camera, entao a largura visivel nao e a
-   largura plana e a comparacao superestima. O "fator de caimento 1,52" usado
-   para corrigir isso saiu de UM produto (`352721197`, Camiseta Premium) e foi
-   aplicado ate a moletons.
+   largura plana e a comparacao superestima. O "fator de caimento 1,52" saiu
+   de UM produto (`352721197`) e foi aplicado ate a moletons.
 2. Re-derivacao fisica (24-25/07): usou comprimentos de peca ERRADOS —
-   68-72 cm para Moletom Canguru e 74-80 cm para Oversized, quando a tabela
-   real da YouDraw diz 60-70 e 78-86. O erro tem direcao OPOSTA conforme a
-   peca, o que fabricou o padrao "nenhuma estampa mede maior que o oficial".
-   Cai junto a explicacao de que o template do mockup seria "curto demais
-   (~62 cm)": 62 cm e o comprimento real de um canguru P/M.
+   68-72 cm para Moletom Canguru e 74-80 para Oversized, quando a tabela real
+   diz 60-70 e 78-86. Erro em direcoes OPOSTAS conforme a peca, o que fabricou
+   o padrao "nenhuma estampa mede maior que o oficial".
 
-Alem disso, NENHUMA das duas mediu POSICAO (centralizacao horizontal,
-distancia da gola, rotacao) — e ha estampa visivelmente deslocada no ar.
+O medidor novo esta em `scripts/geometry/` e PASSA no teste de verdade
+conhecida (`node scripts/geometry/validate.mjs`, 38.880 cenas sinteticas;
+o script sai com codigo 1 se qualquer criterio falhar). Precisao publicada:
+escala com vies +0,6 pp e margem de 3 pp com anotacao de 8 pontos. Nenhum
+veredito e publicado sem esse portao verde.
 
-Ate o medidor novo (`scripts/measure-print-geometry.mjs`) passar no teste de
-verdade conhecida, valem apenas: as dimensoes oficiais em cm do CSV, as
-colunas de identidade/texto e de cor, e a decisao do dono sobre microtexto.
-Nao gerar nem publicar correcao de escala com base nos vereditos antigos.
+**Resultado, 41 fotos de 31 produtos** (`nuvemshop/auditoria/2026-07-25-geometria/`):
+
+- 19 escala OK
+- 3 REPROVADO-DURO (impossibilidade fisica)
+- 3 FORA-DO-ALVO (desvio vs tamanho G)
+- 14 sem veredito, 11 delas por capuz/cabelo cobrindo a gola
+- 2 sem tabela de medidas (Blusao Moletom)
+
+FILA DE CORRECAO, todas com estampa MENOR que o alvo:
+
+- Salmo 19 | Moletom Canguru `[352619175]` — −19,9%, implica peca de 81 cm
+- Querubim Spray | Oversized `[352725749]` — −12,9%, implica 94 cm
+- Acima de Tudo Gotico | Oversized `[352720257]` — −12,5%, implica 94 cm
+- Sao Miguel Vintage | Premium `[352407196]` — −9,7%
+- Brasao NIMBUS | Premium `[352717837]` — −8,5%
+- Espirito Santo Spray | Premium `[352721477]` — −8,1%
+
+O sinal e o oposto do que as auditorias invalidadas diziam, e coerente com o
+erro delas: comparar largura entre mockup plano e foto vestida fabrica
+"estampa grande".
+
+QUATRO fotos que a lista REFAZER antiga condenava PASSAM na medicao e NAO
+devem ser refeitas: `352726673`, `352727545`, `352718787`, `352728357`.
+
+POSICAO: as 41 sairam inconclusivas, e isso e limite MEDIDO do metodo. Tres
+efeitos fisicos (contraposto contra guinada, compressao do deslocamento,
+tamanho vestido) somam faixa minima de ~4 cm. O medidor confirma
+centralizacao abaixo de ~2 cm e reprova acima de ~7 cm; entre os dois declara
+que nao sabe. Centralizacao fina se confere no MOCKUP PLANO, nao na foto
+vestida.
+
+REQUISITO DE PRODUCAO que saiu daqui: foto de Moletom Canguru precisa mostrar
+a base da gola. Com o capuz caido sobre as costas a peca fica impossivel de
+medir, e foi essa a causa de 11 dos 14 sem veredito.
 
 ### Tabela de medidas real das pecas (YouDraw, via `scripts/build-prelaunch-matrix.mjs`)
 
@@ -331,14 +364,13 @@ Arquivos relevantes:
 
 1. FEITO em 24/07: dono aprovou a auditoria ao vivo (artefato) e decidiu
    nao refazer microtextos; corrigir o resto (escala/peca/modelo/cenario).
-2. EM CURSO (25/07): escrever e VALIDAR o medidor geometrico
-   (`scripts/geometry/`), que mede escala E posicao por retificacao
-   (homografia pelos cantos da arte + dimensoes oficiais em cm) e reporta o
-   comprimento de peca implicito contra a faixa real do tipo de peca.
-   Nenhum veredito antes do teste de verdade conhecida passar.
-3. Com o medidor validado, medir TODAS as pecas disponiveis (49 produtos,
-   todas as cores com foto, frente e costas) e so entao montar a fila real
-   de correcao. Corrigir um produto por vez, API Google AI Studio.
+2. FEITO em 25/07: medidor geometrico escrito, VALIDADO contra verdade
+   conhecida e aplicado a 41 fotos de 31 produtos. Fila de correcao real em
+   `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.
+3. PROXIMO: corrigir a fila de 6 pecas, UM PRODUTO POR VEZ, pela API do
+   Google AI Studio, com a trava de composicao vinda de
+   `scripts/derive-composicao.mjs`. Faltam ainda 18 paginas sem copia local
+   da foto publicada e segunda anotacao nos 11 casos de gola encoberta.
 4. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 5. Completar material, modelagem, tabela de medidas, prazo POD, politica e
    impacto social nas paginas de produto.

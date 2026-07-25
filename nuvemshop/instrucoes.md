@@ -81,18 +81,39 @@ Decisão do dono (24/07, após o artefato da auditoria ao vivo): os defeitos de 
 (assinatura "NPMBUS" no 352407196, cartucho do 352890896, microtipografias em itens REVISAR) estão
 APROVADOS como resíduo — NÃO refazer. A fila de correção cobre apenas escala/peça/modelo/cenário.
 
-⛔ **MEDIÇÃO DE ESCALA SUSPENSA (25/07)** — as DUAS auditorias de escala estão invalidadas e
-nenhum veredito de escala vale hoje:
+✅ **MEDIÇÃO DE ESCALA VÁLIDA (25/07, tarde)** — existe medidor validado e fila de correção real.
+As duas auditorias antigas continuam invalidadas; o que mudou é que há substituto medido.
+
+Por que as antigas caíram, para não repetir:
 
 - A auditoria por cm (22-23/07) comparava mockup plano com peça vestida (cilindro visto de frente,
   laterais fogem da câmera) e corrigia com um "fator de caimento 1,52" medido em um único produto.
 - A re-derivação física (24-25/07) usou comprimentos de peça errados (68-72 cm para canguru,
   74-80 cm para oversized; os reais são 60-70 e 78-86), com erro em direções opostas conforme a
   peça — foi isso que fabricou o resultado "nenhuma estampa mede maior que o oficial".
-- Nenhuma das duas mediu POSIÇÃO (centralização, distância da gola, rotação).
 
-Continuam válidos: as dimensões em cm do CSV, as colunas de identidade/texto e cor, e a decisão do
-dono sobre microtexto. Não regenerar nada por escala até o medidor novo passar na validação.
+O medidor está em `scripts/geometry/` e passa no teste de verdade conhecida
+(`node scripts/geometry/validate.mjs`, sai com código 1 se falhar). Margem publicada de escala:
+3 pontos percentuais com anotação de 8 pontos. **Nenhum veredito sai com esse portão vermelho.**
+
+Resultado em 41 fotos de 31 produtos, detalhado em
+`nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`: 19 OK, 3 reprovadas por impossibilidade
+física, 3 fora do alvo, 14 sem veredito, 2 sem tabela de medidas.
+
+**Fila de correção** (todas com estampa MENOR que o alvo, o oposto do que se acreditava):
+Salmo 19 Moletom `[352619175]` −19,9% · Querubim Spray Oversized `[352725749]` −12,9% ·
+Acima de Tudo Gótico Oversized `[352720257]` −12,5% · São Miguel Vintage Premium `[352407196]`
+−9,7% · Brasão NIMBUS Premium `[352717837]` −8,5% · Espírito Santo Spray Premium `[352721477]` −8,1%.
+
+**NÃO refazer** `352726673`, `352727545`, `352718787` e `352728357`: a lista REFAZER antiga
+condenava as quatro e a medição aprova.
+
+**Posição** continua sem veredito nas 41, e isso é limite medido do método, não falta de dado:
+ele confirma centralização abaixo de ~2 cm e reprova acima de ~7 cm. Centralização fina se confere
+no mockup plano, onde não há enrolamento nem pose.
+
+**Requisito de produção novo:** foto de Moletom Canguru precisa mostrar a base da gola. Capuz caído
+sobre as costas torna a peça impossível de medir, e foi a causa de 11 dos 14 sem veredito.
 
 ## Regras de conteúdo (valem sempre)
 
