@@ -22,8 +22,14 @@ velocidade. Salve os recortes fora do repositório (no diretório de scratchpad 
 
 ### A estampa
 
-Marque a borda **externa da mancha de tinta**. Se a arte tiver moldura desenhada (azulejo, moldura
-rococó), use a borda externa da moldura.
+Marque a borda **externa da mancha de tinta**. Sempre.
+
+> **A moldura desenhada não é a caixa.** Uma versão anterior deste protocolo mandava usar a borda
+> externa da moldura quando ela existisse (azulejo, rococó). Isso está errado e foi pego numa foto
+> real: no São Jorge Neobarroco o manto do cavaleiro, a asa e a cauda do dragão **estouram a
+> moldura**, e a caixa de toda a tinta é 8,2% mais larga e 4,1% mais alta que a da moldura. Os cm
+> oficiais descrevem a tinta, então é a tinta que manda. Se a moldura contém tudo, as duas caixas
+> coincidem e não há conflito; se não contém, use a tinta.
 
 **Inclua tudo que é tinta**: a assinatura grafite "NIMBUS" solta num canto, os pingos finos de
 spray, um halo separado da figura. Isso não é opinião — foi medido. Comparando o arquivo de arte
@@ -37,11 +43,13 @@ tag do Querubim, por exemplo, encolheria a largura medida em 10% e produziria um
 
 **Declare o tipo de arte**, porque ele muda o cálculo:
 
-- `"shape": "rect_frame"` — existe moldura ou borda desenhada, e os pontos médios caem sobre ela.
+- `"shape": "rect_frame"` — existe moldura ou borda desenhada **e ela contém toda a tinta**, de
+  modo que os pontos médios caem sobre a aresta.
   Aqui os pontos médios são o que dá a precisão de ±2 pontos percentuais: numa peça vestida a
   aresta é curva, e o meio dela está na mesma profundidade da gola e da barra, enquanto os cantos
   estão na parte curva do dorso, mais perto da câmera.
-- `"shape": "irregular"` — ilustração livre, spray, stencil. Não existe aresta: a tinta no meio
+- `"shape": "irregular"` — ilustração livre, spray, stencil, **ou moldura que não contém toda a
+  tinta**. Não existe aresta: a tinta no meio
   horizontal não alcança o topo da caixa. Nesse caso os pontos médios descrevem o contorno do
   desenho e **não** são usados para medir altura; a medição cai para a caixa envolvente, com
   margem de ±6 pontos percentuais.
@@ -56,6 +64,13 @@ Nunca calcule um ponto médio como média dos cantos. Olhe a imagem e marque ond
 - `side_left`, `side_right` — as bordas do **tronco** na altura do meio da estampa. Se o braço
   estiver colado ao corpo, marque o vinco entre manga e tronco, não a silhueta externa: a silhueta
   com mangas desloca o centro aparente e é justamente o que engana o olho.
+
+### A vista
+
+Declare `"view": "back"` ou `"view": "front"`. **Não é detalhe.** Numa vista frontal o decote é
+bem mais baixo que a base da gola nas costas, então a distância gola→barra medida na foto é menor
+que o comprimento total da peça, e a YouDraw não publica essa diferença. O medidor sabe disso e
+passa a aceitar só um lado do veredito nessas fotos (ver `README.md`).
 
 ## Para cada ponto
 

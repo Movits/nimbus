@@ -521,6 +521,24 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     scaleVerdict = "INCONCLUSIVO";
   } else if (!insidePhysicalRange) {
     const [minLen, maxLen] = spec.lengthRange;
+    // VISTA FRONTAL: a regua fica curta, e so um lado do veredito sobrevive.
+    // O decote da frente e bem mais baixo que a base da gola nas costas, entao
+    // a distancia gola->barra medida numa foto frontal e MENOR que o
+    // comprimento total da peca, e a YouDraw nao publica essa diferenca.
+    //
+    // Como comprimento implicito = altura_da_arte x (gola->barra em px) / arte
+    // em px, uma referencia curta demais puxa o implicito para BAIXO. Logo:
+    //   - implicito ACIMA da faixa (estampa pequena) e conservador: o valor
+    //     verdadeiro e ainda maior, entao a reprovacao continua valendo;
+    //   - implicito ABAIXO da faixa (estampa grande) pode ser puro artefato da
+    //     vista, e nao pode virar veredito.
+    if (input.view === "front" && impliedLength < minLen) {
+      scaleVerdict = "INCONCLUSIVO";
+      notes.push(
+        `vista frontal: a gola da frente e mais baixa que a das costas, entao a referencia gola-barra e curta e o comprimento implicito (${impliedLength.toFixed(1)} cm) sai subestimado. Nessa direcao o desvio pode ser artefato da vista — so o lado "estampa pequena" e conclusivo numa foto de frente`,
+      );
+      // sai do ramo sem emitir reprovacao
+    } else {
     const bandTouchesRange =
       impliedBand !== null && impliedBand[1] >= minLen && impliedBand[0] <= maxLen;
     if (bandTouchesRange) {
@@ -533,6 +551,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
       notes.push(
         `comprimento implicito ${impliedLength.toFixed(1)} cm${impliedBand ? ` (faixa ${impliedBand[0]}-${impliedBand[1]})` : ""} fora da faixa fisica ${minLen}-${maxLen} cm: nenhum tamanho real explica esta geometria`,
       );
+    }
     }
   } else if (Math.abs(deltaCanonical) > tolerance.scalePct) {
     scaleVerdict = "FORA-DO-ALVO";

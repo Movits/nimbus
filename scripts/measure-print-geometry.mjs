@@ -158,6 +158,9 @@ const result = measurePrint(
     art: { ...art, sigma_px: (Math.max(...annotations.map((a) => a.art?.sigma_pct ?? 0.5)) / 100) * Math.max(size.w, size.h) },
     artSize: { w_cm, h_cm },
     garment: row.garment,
+    // A vista muda o significado da regua gola->barra: ver o bloco de vereditos
+    // em geometry/measure.mjs.
+    view,
     collar: collar.value,
     hem: hem.value,
     side:
