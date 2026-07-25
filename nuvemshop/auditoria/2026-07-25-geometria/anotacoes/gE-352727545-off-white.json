@@ -1,0 +1,92 @@
+{
+  "photo": "352727545-off-white.jpg",
+  "annotator": "gE",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      33.2,
+      33.5
+    ],
+    "tr": [
+      52.02,
+      33.5
+    ],
+    "br": [
+      52.02,
+      64.26
+    ],
+    "bl": [
+      33.2,
+      64.26
+    ],
+    "mt": [
+      42.61,
+      34.7
+    ],
+    "mb": [
+      42.61,
+      60.25
+    ],
+    "ml": [
+      34.6,
+      48.88
+    ],
+    "mr": [
+      47.7,
+      48.88
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      47.8,
+      26.4
+    ],
+    "sigma_pct": 1.8,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      50.06,
+      93.12
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      31,
+      48.88
+    ],
+    "sigma_pct": 1.8,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      60.05,
+      48.88
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "flags": [
+    "eixo_dos_ombros_a_esquerda_do_eixo_da_barra",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Mesma arte Sao Miguel Vitorioso em oversized off-white. INCONSISTENCIA REAL da foto, registrada como coordenada e nao como veredito: os dois vincos dao centro do tronco em ~45,5 e a linha dos ombros ~46, mas o meio da barra da 50,06 e a gola 47,80 — a parte de baixo da peca esta ~4,5 pp a direita dos ombros. A cava direita e inequivoca (costura diagonal do ombro ao sovaco); a esquerda e mais suave.",
+  "top_extreme": [
+    35.8,
+    33.5
+  ],
+  "bottom_extreme": [
+    46.4,
+    64.2
+  ],
+  "complement_notes": [
+    "silhueta omitida: manga cobre o tronco. Mesma arte da 352726673, mesmo padrao. Centro 42,61; topo -6,8 e base +3,8, separacao lateral 10,6 pp."
+  ]
+}

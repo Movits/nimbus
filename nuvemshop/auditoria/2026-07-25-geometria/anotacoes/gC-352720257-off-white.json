@@ -1,0 +1,96 @@
+{
+  "photo": "352720257-off-white.jpg",
+  "annotator": "gC",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "view": "front",
+  "art": {
+    "tl": [
+      43.69,
+      41.28
+    ],
+    "tr": [
+      63.7,
+      41.28
+    ],
+    "br": [
+      63.7,
+      63.2
+    ],
+    "bl": [
+      43.69,
+      63.2
+    ],
+    "mt": [
+      53.7,
+      41.75
+    ],
+    "mb": [
+      53.7,
+      58.6
+    ],
+    "ml": [
+      44.55,
+      52.24
+    ],
+    "mr": [
+      62.45,
+      52.24
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      54,
+      34.8
+    ],
+    "sigma_pct": 0.9,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      50.7,
+      95.5
+    ],
+    "sigma_pct": 0.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      37.5,
+      52.24
+    ],
+    "sigma_pct": 1.5,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      64.6,
+      52.24
+    ],
+    "sigma_pct": 2,
+    "status": "indeterminate"
+  },
+  "flags": [
+    "front_view",
+    "front_view_collar_is_front_neckline",
+    "irregular_no_drawn_frame",
+    "side_seam_right_ambiguous",
+    "cross_included_in_bbox"
+  ],
+  "notes": "VISTA FRONTAL. Lettering blackletter em tres linhas mais uma cruz solta abaixo, sem moldura (irregular). A CRUZ ESTA INCLUIDA na caixa: ela sozinha estende a caixa 4,6 pp para baixo, ~21% da altura total; excluir seria o erro grosseiro que o protocolo avisa. AVISO IMPORTANTE: por ser vista frontal, collar_center e a base do decote da FRENTE, que fica muito mais baixa que a base da gola nas costas; a distancia gola-barra medida aqui NAO e comparavel com o comprimento total da tabela da YouDraw sem correcao. Gola bem visivel (unica do grupo). Lateral direita pode ser a cava ou dobra do braco dobrado, dai indeterminate.",
+  "top_extreme": [
+    51.2,
+    41.21
+  ],
+  "bottom_extreme": [
+    55.23,
+    63.22
+  ],
+  "complement_notes": [
+    "VISTA FRONTAL. Silhueta omitida: maos unidas na frente, bracos colados, sem vao de fundo em altura util. Extremos em lados OPOSTOS do centro (53,70): topo -2,50 pp (haste do I de ACIMA), base +1,53 pp (ponta da cruz, que sozinha estende a caixa 4,6 pp abaixo do lettering)."
+  ]
+}

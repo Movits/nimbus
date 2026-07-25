@@ -1,0 +1,94 @@
+{
+  "photo": "352407196-branca-v4g.jpg",
+  "annotator": "gA",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      36,
+      41.17
+    ],
+    "tr": [
+      51.15,
+      41.17
+    ],
+    "br": [
+      51.15,
+      69.83
+    ],
+    "bl": [
+      36,
+      69.83
+    ],
+    "mt": [
+      43.58,
+      41.23
+    ],
+    "mb": [
+      43.58,
+      69.79
+    ],
+    "ml": [
+      37.68,
+      55.5
+    ],
+    "mr": [
+      47.45,
+      55.5
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.6
+  },
+  "collar_center": {
+    "xy": [
+      47.14,
+      34.89
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      51.31,
+      94.63
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      36.3,
+      55.5
+    ],
+    "sigma_pct": 2.5,
+    "status": "no_seam"
+  },
+  "side_right": {
+    "xy": [
+      65.4,
+      55.5
+    ],
+    "sigma_pct": 4,
+    "status": "indeterminate"
+  },
+  "flags": [
+    "signature_included_in_bbox",
+    "right_side_occluded_by_arm",
+    "torso_edge_inferred",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Costas, torso ~3/4. Mesma arte do 352407182 mas MUITO menor em relacao a peca. A caixa INCLUI a assinatura solta NIMBUS (que na foto le NPMBUS): base em 69,83. Sem ela a altura cairia de 28,66 para 27,37 pontos (4,5%). Gola com ribana visivel. side_right NAO e observavel (braco da modelo passa na frente, corta em ~61,2); 65,40 e inferido espelhando a barra, por isso sigma 4,0 e status indeterminate.",
+  "top_extreme": [
+    43.2,
+    41.17
+  ],
+  "bottom_extreme": [
+    43.2,
+    69.83
+  ],
+  "complement_notes": [
+    "silhueta omitida: abaixo da manga a borda do tronco a direita cai para x~58,6-60 contra x~67,6 da manga, ou seja a manga projeta ~8 pp para fora. Base e a linha de base da assinatura NPMBUS, aresta plana: x e o centro da palavra. Deslocamento lateral quase nulo nos dois extremos."
+  ]
+}

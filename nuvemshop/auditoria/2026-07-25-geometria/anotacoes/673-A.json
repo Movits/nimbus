@@ -1,0 +1,90 @@
+{
+  "photo": "352726673-preta.jpg",
+  "annotator": "A",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      32.5,
+      34.6
+    ],
+    "tr": [
+      54,
+      34.6
+    ],
+    "br": [
+      54,
+      70.8
+    ],
+    "bl": [
+      32.5,
+      70.8
+    ],
+    "mt": [
+      43.25,
+      36.65
+    ],
+    "mb": [
+      43.25,
+      67.2
+    ],
+    "ml": [
+      33.4,
+      52.7
+    ],
+    "mr": [
+      53.45,
+      53.3
+    ],
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      44,
+      27
+    ],
+    "sigma_pct": 3,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      44,
+      88.9
+    ],
+    "sigma_pct": 0.9,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      28.6,
+      52.7
+    ],
+    "sigma_pct": 1.6,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      59.7,
+      52.7
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "art_has_no_drawn_frame",
+    "hood_down_covers_neck_seam"
+  ],
+  "top_extreme": [
+    34.9,
+    34.6
+  ],
+  "bottom_extreme": [
+    50.9,
+    70.7
+  ],
+  "complement_notes": [
+    "silhueta omitida: canguru com bracos colados. Extremos MUITO deslocados e em lados OPOSTOS: topo -8,35 pp (ponta da lanca/asa) e base +7,65 pp (tag pequena NIMBUS). Caso de vies grande previsto no protocolo."
+  ]
+}

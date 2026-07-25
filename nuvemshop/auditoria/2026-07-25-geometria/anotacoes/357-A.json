@@ -1,0 +1,90 @@
+{
+  "photo": "352728357-preta-v4.jpg",
+  "annotator": "z357",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      56.4,
+      34.63
+    ],
+    "tr": [
+      72.55,
+      34.63
+    ],
+    "br": [
+      72.55,
+      72.13
+    ],
+    "bl": [
+      56.4,
+      72.13
+    ],
+    "mt": [
+      64.5,
+      34.88
+    ],
+    "mb": [
+      64.5,
+      72.13
+    ],
+    "ml": [
+      56.94,
+      53.4
+    ],
+    "mr": [
+      70.5,
+      53.4
+    ],
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      54.2,
+      28.1
+    ],
+    "sigma_pct": 1.8,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      56,
+      97.15
+    ],
+    "sigma_pct": 1.2,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      48,
+      53.4
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      74.4,
+      53.4
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "flags": [
+    "shape_irregular_confirmado",
+    "torso_rotacionado"
+  ],
+  "top_extreme": [
+    62.85,
+    34.65
+  ],
+  "bottom_extreme": [
+    64.6,
+    72.16
+  ],
+  "complement_notes": [
+    "silhueta omitida: oversized com bracos caidos, o contorno contra o fundo e a manga nos dois lados; os vincos anotados ficam bem dentro dessas bordas. Extremos quase centrados (topo -1,6 pp, base +0,2 pp)."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "photo": "352702858-off-white.jpg",
+  "annotator": "gF",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      34.17,
+      33.4
+    ],
+    "tr": [
+      65.5,
+      33.4
+    ],
+    "br": [
+      65.5,
+      55.35
+    ],
+    "bl": [
+      34.17,
+      55.35
+    ],
+    "mt": [
+      49.84,
+      33.4
+    ],
+    "mb": [
+      49.84,
+      53.09
+    ],
+    "ml": [
+      35.14,
+      44.38
+    ],
+    "mr": [
+      65.2,
+      44.38
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      50,
+      28.05
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      50.78,
+      97.55
+    ],
+    "sigma_pct": 0.6,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      31.8,
+      44.38
+    ],
+    "sigma_pct": 1.5,
+    "status": "indeterminate"
+  },
+  "side_right": {
+    "xy": [
+      69.8,
+      44.38
+    ],
+    "sigma_pct": 1.5,
+    "status": "indeterminate"
+  },
+  "flags": [
+    "lettering_sem_moldura",
+    "halo_dourado_baixo_contraste",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "FE ACIMA DE TUDO em oversized off-white. Extremos: topo = ponta da cruz (o halo dourado so comeca em 35,90); esquerda = volta inferior do D de DE; direita = o A final de ACIMA; baixo = a volta do D de DE. O halo tem contraste baixo mas e legivel e suas extremidades ficam DENTRO da caixa. Sem indicio de rotacao. GOLA: melhor da serie, pesponto visivel. Consistencia boa: tronco pelos vincos da centro 50,80 e a barra da centro 50,78, praticamente identicos, o que reforca a leitura dos vincos.",
+  "top_extreme": [
+    49.83,
+    33.3
+  ],
+  "bottom_extreme": [
+    37,
+    55.36
+  ],
+  "complement_notes": [
+    "silhueta omitida: oversized de ombro caido, na altura da arte tronco e manga sao a mesma peca de tecido. Caso mais assimetrico do lote: topo exatamente no centro (49,84) e base 12,8 pp A ESQUERDA. Alto contraste, sigma ~0,15 pp."
+  ]
+}

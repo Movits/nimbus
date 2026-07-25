@@ -1,0 +1,93 @@
+{
+  "photo": "352890896-off-white.jpg",
+  "annotator": "gF",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      47.23,
+      37.89
+    ],
+    "tr": [
+      67.87,
+      38.14
+    ],
+    "br": [
+      67.75,
+      68.45
+    ],
+    "bl": [
+      47.44,
+      68.51
+    ],
+    "mt": [
+      57.55,
+      37.9
+    ],
+    "mb": [
+      57.55,
+      67.79
+    ],
+    "ml": [
+      47.53,
+      53.15
+    ],
+    "mr": [
+      67.83,
+      53.15
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      57.5,
+      33.2
+    ],
+    "sigma_pct": 2.5,
+    "status": "occluded_hair"
+  },
+  "hem_center": {
+    "xy": [
+      52.1,
+      96.3
+    ],
+    "sigma_pct": 0.7,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      43.04,
+      53.15
+    ],
+    "sigma_pct": 2.3,
+    "status": "indeterminate"
+  },
+  "side_right": {
+    "xy": [
+      71,
+      53.15
+    ],
+    "sigma_pct": 1.8,
+    "status": "indeterminate"
+  },
+  "flags": [
+    "moldura_azulejo_nao_contem_toda_a_tinta",
+    "nimbus_fora_da_moldura",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Aparecida Barroca com moldura de azulejo desenhada, mas o letreiro NIMBUS fica PARCIALMENTE FORA dela e desce ate 68,45-68,51 (a moldura termina em 67,18/66,86). Por isso a caixa devolvida e a de toda a tinta, e o shape e irregular: mb nao cai sobre moldura nenhuma. O letreiro ocupa so x=52,0-63,9, entao nao muda esquerda/direita. Moldura pura, se alguem precisar: tl(47,23;37,89) tr(67,87;38,14) br(67,75;66,86) bl(47,44;67,18). Havia um padrao losangular fraco acima do florao que nao consegui classificar como tinta ou textura do tecido; NAO incluido. Gola coberta por cabelo cacheado. Laterais: a manga cobre o tronco na meia-altura; abaixo da barra da manga a silhueta real do tronco esta 5 pp mais para fora a esquerda, dai sigma alto.",
+  "top_extreme": [
+    57.96,
+    37.82
+  ],
+  "bottom_extreme": [
+    61.8,
+    68.5
+  ],
+  "complement_notes": [
+    "silhueta omitida: mangas curtas cobrem o tronco; a barra da manga fica 10 pp abaixo. Topo empatado (0,06 pp) entre florao central em x=57,96 e canto superior esquerdo da moldura em x=47,13: x indeterminado entre +0,4 e -10,4 pp do centro."
+  ]
+}

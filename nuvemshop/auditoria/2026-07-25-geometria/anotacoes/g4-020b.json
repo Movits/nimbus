@@ -1,0 +1,89 @@
+{
+  "photo": "352702020-branca-v4i.jpg",
+  "annotator": "g4",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      44.45,
+      34.15
+    ],
+    "tr": [
+      71.05,
+      34.15
+    ],
+    "br": [
+      71.05,
+      59.2
+    ],
+    "bl": [
+      44.45,
+      59.2
+    ],
+    "mt": [
+      57.75,
+      34.15
+    ],
+    "mb": [
+      57.75,
+      58.9
+    ],
+    "ml": [
+      45.45,
+      46.7
+    ],
+    "mr": [
+      70,
+      46.7
+    ],
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      55,
+      28.5
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      51,
+      94.7
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      41.5,
+      46.7
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      72.25,
+      46.7
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "flags": [
+    "art_irregular_no_drawn_frame"
+  ],
+  "top_extreme": [
+    57.3,
+    34.15
+  ],
+  "bottom_extreme": [
+    55.27,
+    59.23
+  ],
+  "complement_notes": [
+    "silhueta omitida: manga e a borda externa e os vincos ficam dentro dela. Topo com tres letras empatadas em y=34,15 entre x=56,23 e 58,31: adotado o meio. Uma varredura sem recorte pegava o braco do modelo como tinta; excluido."
+  ]
+}

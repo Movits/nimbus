@@ -1,0 +1,89 @@
+{
+  "photo": "352702020-preta.jpg",
+  "annotator": "g4",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      44.7,
+      34.3
+    ],
+    "tr": [
+      70.8,
+      34.3
+    ],
+    "br": [
+      70.8,
+      59.2
+    ],
+    "bl": [
+      44.7,
+      59.2
+    ],
+    "mt": [
+      57.7,
+      34.3
+    ],
+    "mb": [
+      57.7,
+      58.8
+    ],
+    "ml": [
+      45.6,
+      46.75
+    ],
+    "mr": [
+      69.8,
+      46.75
+    ],
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      55,
+      28.5
+    ],
+    "sigma_pct": 1.5,
+    "status": "low_contrast"
+  },
+  "hem_center": {
+    "xy": [
+      51,
+      94.5
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      41.5,
+      46.75
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      72.25,
+      46.75
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "flags": [
+    "art_irregular_no_drawn_frame"
+  ],
+  "top_extreme": [
+    57.4,
+    34.31
+  ],
+  "bottom_extreme": [
+    55.9,
+    58.46
+  ],
+  "complement_notes": [
+    "silhueta omitida, mesma pose do gemeo branco. Sobre preto so a tinta clara aparece: o gemeo branco mede a mesma base em y=59,23, entao a base real esta ate ~0,8 pp mais baixa. A grade de 10% queimada na imagem disparava falso positivo e foi descartada."
+  ]
+}

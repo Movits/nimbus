@@ -1,0 +1,93 @@
+{
+  "photo": "352726673-branca.jpg",
+  "annotator": "gE",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      32.38,
+      34.5
+    ],
+    "tr": [
+      54.05,
+      34.5
+    ],
+    "br": [
+      54.05,
+      71.52
+    ],
+    "bl": [
+      32.38,
+      71.52
+    ],
+    "mt": [
+      43.22,
+      36.35
+    ],
+    "mb": [
+      43.22,
+      67.2
+    ],
+    "ml": [
+      33.45,
+      53.01
+    ],
+    "mr": [
+      48.85,
+      53.01
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.6
+  },
+  "collar_center": {
+    "xy": [
+      47,
+      32
+    ],
+    "sigma_pct": 4,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      48.71,
+      89.15
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      28.4,
+      53.01
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      72.09,
+      53.01
+    ],
+    "sigma_pct": 3,
+    "status": "indeterminate"
+  },
+  "flags": [
+    "capuz_cobre_a_gola",
+    "side_right_e_silhueta_externa",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Sao Miguel Vitorioso em canguru branco. O capuz NAO corta a arte (ha folga de tecido entre a barra do capuz e o topo da tinta). Direita = tag pequena NIMBUS com o sinal sobrescrito; baixo = pingo do bloco da caveira ate 71,52. collar_center: o capuz cobre TODA a costura da gola, estimativa pela linha dos ombros, sigma 4,0, nao usar como ancora. side_right: NAO achei vinco; reportei a silhueta externa 72,09 como indeterminate — ela INCLUI a manga.",
+  "top_extreme": [
+    34.2,
+    34.4
+  ],
+  "bottom_extreme": [
+    47.1,
+    71.5
+  ],
+  "complement_notes": [
+    "silhueta omitida: canguru de manga longa com bracos colados; a direita nao ha nem vinco visivel. Pior caso do lote: centro 43,2, topo -9,0 e base +3,9, separacao lateral 12,9 pp."
+  ]
+}

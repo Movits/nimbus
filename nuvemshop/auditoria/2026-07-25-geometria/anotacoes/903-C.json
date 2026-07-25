@@ -1,0 +1,89 @@
+{
+  "photo": "352618903-off-white.jpg",
+  "annotator": "C",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      43.38,
+      33.5
+    ],
+    "tr": [
+      67.52,
+      33.5
+    ],
+    "br": [
+      67.52,
+      63.68
+    ],
+    "bl": [
+      43.38,
+      63.68
+    ],
+    "mt": [
+      55.45,
+      33.56
+    ],
+    "mb": [
+      55.45,
+      63.55
+    ],
+    "ml": [
+      43.44,
+      48.59
+    ],
+    "mr": [
+      67.48,
+      48.59
+    ],
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      54.8,
+      26.95
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      53.8,
+      91.2
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      38.7,
+      48.59
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      70.53,
+      48.59
+    ],
+    "sigma_pct": 1.2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "side_right_crease_low_contrast"
+  ],
+  "top_extreme": [
+    55.35,
+    33.45
+  ],
+  "bottom_extreme": [
+    54.4,
+    63.7
+  ],
+  "complement_notes": [
+    "silhueta omitida: ombro caido, a manga avanca ~5 pp alem do tronco e o esconde. Base e aresta RETA plana dentro de 0,15 pp de x=43,5 a 65,3: o x reportado e o meio da aresta, nao uma saliencia. Extremos praticamente centrados."
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "photo": "352407156-branca.jpg",
+  "annotator": "g1",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      33.88,
+      41.7
+    ],
+    "tr": [
+      55.45,
+      41.7
+    ],
+    "br": [
+      55.45,
+      73.72
+    ],
+    "bl": [
+      33.88,
+      73.72
+    ],
+    "mt": [
+      44.67,
+      42.5
+    ],
+    "mb": [
+      44.67,
+      73.72
+    ],
+    "ml": [
+      37.3,
+      57.71
+    ],
+    "mr": [
+      52.2,
+      57.71
+    ],
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      49.8,
+      33
+    ],
+    "sigma_pct": 3,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      50.6,
+      90.27
+    ],
+    "sigma_pct": 2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      31.5,
+      57.71
+    ],
+    "sigma_pct": 2.5,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      60.5,
+      57.71
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "flags": [
+    "art_irregular_no_drawn_frame",
+    "collar_occluded_hood"
+  ],
+  "top_extreme": [
+    46.1,
+    41.62
+  ],
+  "bottom_extreme": [
+    45.45,
+    73.45
+  ],
+  "complement_notes": [
+    "silhueta omitida: moletom de manga longa, o tubo da manga e o contorno externo nos dois lados ate o punho. Base e a linha de base RETA de NIMBUS (sem descendente): x reportado e o meio. Extremos quase centrados (+1,4 e +0,8 pp)."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "photo": "352703153-branca.jpg",
+  "annotator": "gA",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      50.12,
+      44.72
+    ],
+    "tr": [
+      72.48,
+      44.72
+    ],
+    "br": [
+      72.48,
+      65.82
+    ],
+    "bl": [
+      50.12,
+      65.82
+    ],
+    "mt": [
+      61.3,
+      45.9
+    ],
+    "mb": [
+      61.3,
+      62.94
+    ],
+    "ml": [
+      50.82,
+      55.27
+    ],
+    "mr": [
+      72.32,
+      55.27
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.6
+  },
+  "collar_center": {
+    "xy": [
+      56.6,
+      38.05
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      43.2,
+      55.27
+    ],
+    "sigma_pct": 3,
+    "status": "no_seam"
+  },
+  "side_right": {
+    "xy": [
+      71.6,
+      55.27
+    ],
+    "sigma_pct": 3,
+    "status": "no_seam"
+  },
+  "flags": [
+    "hem_out_of_frame",
+    "torso_edge_inferred_from_underarm",
+    "print_right_of_torso_center",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Costas, torso ~3/4. Arte le FE ACIMA DE TUDO (lettering gotico em duas linhas + halo + cruz solta). A caixa INCLUI a cruz isolada no topo; sem ela o topo cairia 2,2 pontos (~10%). BAINHA fora do quadro: a peca sai pela borda inferior, entao nao dei numero. Gola e a melhor das quatro (pesponto da ribana visivel). REGISTRO NEUTRO: o centro da caixa esta em 61,30 e o centro do tronco pelas axilas em ~57,4; parte pode ser a rotacao do torso, mas a diferenca e maior que nas outras tres fotos do grupo.",
+  "top_extreme": [
+    61.8,
+    44.72
+  ],
+  "bottom_extreme": [
+    53.2,
+    65.82
+  ],
+  "complement_notes": [
+    "silhueta omitida: manga longa, bainhas em y~73-76, o meio da estampa nao aparece abaixo delas. Topo e a cruz isolada, praticamente no centro; base e a descendente do D de DE, 8,1 pp A ESQUERDA do centro — caso de extremos muito separados."
+  ]
+}

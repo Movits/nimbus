@@ -1,0 +1,95 @@
+{
+  "photo": "352721118-preta.jpg",
+  "annotator": "gD",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      35.3,
+      33.62
+    ],
+    "tr": [
+      56,
+      33.62
+    ],
+    "br": [
+      56,
+      63.1
+    ],
+    "bl": [
+      35.3,
+      63.1
+    ],
+    "mt": [
+      45.65,
+      33.75
+    ],
+    "mb": [
+      45.65,
+      61.4
+    ],
+    "ml": [
+      36.95,
+      48.36
+    ],
+    "mr": [
+      53.86,
+      48.36
+    ],
+    "shape": "irregular",
+    "sigma_pct": 1
+  },
+  "collar_center": {
+    "xy": [
+      48.18,
+      28.58
+    ],
+    "sigma_pct": 1.3,
+    "status": "low_contrast"
+  },
+  "hem_center": {
+    "xy": [
+      49.2,
+      91.6
+    ],
+    "sigma_pct": 1.2,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      30.55,
+      48.36
+    ],
+    "sigma_pct": 1.6,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      62.6,
+      48.36
+    ],
+    "sigma_pct": 1.3,
+    "status": "ok"
+  },
+  "flags": [
+    "back_view",
+    "black_garment",
+    "outer_black_outline_invisible",
+    "measured_on_brightened_copy",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Peca preta: o contorno PRETO externo da arte e indistinguivel do tecido. Medi numa copia com ganho de exposicao; a borda esquerda ainda pode estar ate ~1 ponto a esquerda, dai sigma 1,0 contra 0,6 na off-white equivalente. Enquadramento, modelo e pose praticamente identicos a 352721118-off-white, o que serve de controle: gola, barra e vincos batem dentro de 0,4 ponto entre as duas.",
+  "top_extreme": [
+    46,
+    33.88
+  ],
+  "bottom_extreme": [
+    46.28,
+    63.2
+  ],
+  "complement_notes": [
+    "silhueta omitida, mesma pose da off-white. Contorno preto externo da arte indistinguivel do tecido preto: o topo real pode estar ate ~0,3 pp acima. Extremos praticamente no centro (+0,35 e +0,63 pp)."
+  ]
+}

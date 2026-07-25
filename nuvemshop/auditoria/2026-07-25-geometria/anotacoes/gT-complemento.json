@@ -1,0 +1,44 @@
+[
+  {
+    "photo": "352407182-preta-v4b.jpg",
+    "top_extreme": [45.20, 35.64],
+    "bottom_extreme": [45.90, 66.39],
+    "notes": "SILHUETA OMITIDA nos dois lados: na altura do meio da estampa (y=51,02) a borda externa e MANGA, nao tronco. Medi a bainha da manga esquerda em y~64 (crop zT-352407182-Lwide); a direita termina ainda mais baixo. Em y=51,02 a borda esquerda cai em x=28,5 e a direita em x~71,7, ambas manga; o tronco so aparece limpo abaixo de y~64. TOPO: apice do arco SAO MIGUEL ARCANJO (letras GUEL); li o topo da tinta em y=35,42-35,45, ou seja ~0,2 pp acima do tl/tr registrado (35,64) - mantive o y da caixa existente. BASE: borda inferior do painel retangular do dragao; e uma aresta quase horizontal, varia menos de 0,05 pp entre x=41 e x=51, entao o x informado e o centro desse trecho e nao um ponto singular. Os dois extremos ficam praticamente no centro horizontal da caixa (mt/mb x=45,61), deslocamento lateral desprezivel."
+  },
+  {
+    "photo": "352407196-branca-v4g.jpg",
+    "top_extreme": [43.20, 41.17],
+    "bottom_extreme": [43.20, 69.83],
+    "notes": "SILHUETA OMITIDA nos dois lados. Em y=55,50 as duas bordas sao manga: na esquerda o perfil da manga curta e visivel inteiro (ombro, aresta externa em x~34,1 e bainha em y~64,5, crop zT-352407196-Lwide); na direita a bainha da manga esta em y~62-64 com o braco nu aparecendo abaixo (crop zT-352407196-Rwide), e a borda em y=55,50 fica em x~67,6. Abaixo da manga a borda do tronco a direita cai para x~58,6-60, ou seja a manga projeta ~8 pp para fora - impossivel usar como tangente do tronco. TOPO: picos das letras goticas de MIGUEL, faixa alta entre x=42,8 e x=44,2, informei o meio. BASE: linha de base da assinatura NPMBUS, aresta plana de x=41,5 a x=44,9, x informado e o centro da palavra; li a base da tinta em y=69,67 contra 69,83 da caixa existente (0,16 pp, dentro do sigma). Topo e base quase no mesmo x (43,2) e o centro da caixa e 43,58: deslocamento lateral quase nulo nos dois."
+  },
+  {
+    "photo": "352702753-off-white.jpg",
+    "top_extreme": [48.50, 39.62],
+    "bottom_extreme": [42.80, 58.77],
+    "notes": "SILHUETA OMITIDA nos dois lados. Vista frontal, bracos caidos: em y=49,20 as bordas sao manga (esquerda x=31,40, direita x=68,95). Medi as duas bainhas de manga no crop zT-352702753-sides: esquerda y=62,3, direita y=61,8; so abaixo disso o tronco aparece limpo, e ai as bordas do tronco caem para x~34,4 e x~66,2 (a manga projeta ~3 pp para cada lado). TOPO: aresta superior do halo, que e o elemento mais alto e esta solto das letras; o topo do halo e achatado entre x=47,4 e x=49,7, informei o meio - praticamente no centro da caixa (mt x=48,54). BASE: floreio inferior ESQUERDO do N, bem fora do centro: x=42,8 contra centro 48,54, ou seja 5,7 pp a esquerda, a 27% da largura da caixa a partir da borda esquerda. Aviso: li a base da tinta em y=59,04, 0,27 pp ABAIXO do bl/br registrado (58,77); mantive o y da caixa existente, mas essa aresta pode estar 0,3 pp curta."
+  },
+  {
+    "photo": "352703153-branca.jpg",
+    "top_extreme": [61.80, 44.72],
+    "bottom_extreme": [53.20, 65.82],
+    "notes": "SILHUETA OMITIDA nos dois lados. Em y=55,27 as duas bordas sao manga: no crop zT-352703153-sides a bainha da manga esquerda esta em y~76 (com o braco nu abaixo) e a da direita em y~73; as bordas em y=55,27 ficam em x=38,03 e x=75,48, ambas manga. Peca oversized com manga longa demais para o meio da estampa aparecer abaixo dela. TOPO: cruz isolada acima do halo, x=61,8, praticamente no centro da caixa (mt x=61,30). BASE: descendente do D de DE, x=53,2 - isso e 8,1 pp a ESQUERDA do centro da caixa, a 13,8% da largura a partir da borda esquerda, portanto o caso de extremos em lados/posicoes muito diferentes que o protocolo manda declarar. Aviso: li a base da tinta em y=65,55, 0,27 pp ACIMA do bl/br registrado (65,82); mantive o y da caixa existente."
+  },
+  {
+    "photo": "352717723-off-white.jpg",
+    "top_extreme": [44.60, 37.62],
+    "bottom_extreme": [41.90, 65.39],
+    "notes": "SILHUETA OMITIDA nos dois lados. Em y=51,51 as bordas externas sao manga: no crop zT-352717723ow-sides a bainha da manga esquerda esta em y~63,6 e a da direita em y~62,8, com braco nu abaixo das duas; a borda esquerda em y=51,51 fica em x=27,4 e abaixo da manga o tronco cai para x~31,8 (manga projeta ~4,4 pp). Confirma o registro do gB de que a silhueta externa esta 2,5 e 11,4 pp fora do vinco - ela e manga, nao tronco. TOPO: pico mais alto do lettering gotico NIMBUS. Aqui houve empate: dois picos (x=43,5 e x=44,6) ficam dentro de 0,05 pp de altura sobre off-white; desempatei pelo par preto do MESMO produto, onde o contorno claro sobre preto e nitido e o pico de x=44,65 ganha por ~0,03 pp. BASE: ponta do finial da cruz, ponto singular e nitido. Consistencia entre as tres fotos da mesma arte: topo a 62,0-63,0% da largura da caixa e base a 46,3-46,8% nas tres."
+  },
+  {
+    "photo": "352717723-preta.jpg",
+    "top_extreme": [44.65, 37.53],
+    "bottom_extreme": [41.89, 65.43],
+    "notes": "SILHUETA OMITIDA nos dois lados. Mesma pose e enquadramento da gemea off-white: em y=51,48 a borda esquerda fica em x~27,5 e a direita em x~68,5, ambas manga (bainhas em y~64,6 e y~63 na gemea, onde da para ver contra fundo claro). Sobre preto a distincao manga/tronco na propria foto e pior ainda, entao nao ha como marcar tangente de tronco honesta nessa altura. ARTE: e a foto mais facil do grupo para os extremos, linha clara sobre preto; foi ela que desempatou o pico do topo (x=44,65 vence o de x=43,45 por ~0,03 pp). BASE: ponta do finial da cruz, x=41,89, batendo com a off-white em 0,01 pp - controle util de repetibilidade. Topo esta 2,1 pp a direita do centro da caixa (mt x=42,44) e a base 0,55 pp a esquerda: extremos em lados opostos, mas o desvio e pequeno."
+  },
+  {
+    "photo": "352717837-preta.jpg",
+    "top_extreme": [46.35, 34.71],
+    "bottom_extreme": [42.77, 66.47],
+    "notes": "SILHUETA OMITIDA nos dois lados. Camiseta de modelagem regular, mas em y=50,59 ainda e manga: no crop zT-352717837-L a borda externa esquerda esta em x=25,7 (o 30,57 anotado pelo gB e o VINCO, visivel como sombra vertical) e a bainha da manga esquerda esta em y~56,4; no crop zT-352717837-R a borda direita em y=50,59 esta em x=72,1 e a bainha da manga direita em y~57,6. Pior: abaixo das duas bainhas o braco nu passa POR CIMA da borda do tronco nos dois lados, entao nao existe altura nenhuma nesta foto em que a silhueta do tronco apareca limpa contra o fundo. ARTE: mesma NIMBUS/cruz/ACIMA DE TUDO das duas fotos do 352717723, aqui maior no quadro (caixa de 21,5 pp contra 17,3 pp). Topo = mesmo pico gotico (63,0% da largura da caixa, contra 62,0-62,7% nas outras duas); base = mesma ponta do finial (46,4%, contra 46,3-46,8%). O topo esta 2,8 pp a DIREITA do centro (mt x=43,55) e a base 0,78 pp a esquerda."
+  }
+]

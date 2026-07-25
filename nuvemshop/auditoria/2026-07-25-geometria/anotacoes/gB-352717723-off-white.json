@@ -1,0 +1,93 @@
+{
+  "photo": "352717723-off-white.jpg",
+  "annotator": "gB",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      33.9,
+      37.62
+    ],
+    "tr": [
+      51.17,
+      37.62
+    ],
+    "br": [
+      51.17,
+      65.39
+    ],
+    "bl": [
+      33.9,
+      65.39
+    ],
+    "mt": [
+      42.54,
+      38.2
+    ],
+    "mb": [
+      42.54,
+      64.33
+    ],
+    "ml": [
+      36.11,
+      51.51
+    ],
+    "mr": [
+      47.03,
+      51.51
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      45.8,
+      32.21
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      45.8,
+      90.01
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      30.55,
+      51.51
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      56.85,
+      51.51
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "flags": [
+    "art_extremes_are_loose_flourishes",
+    "hem_center_x_has_no_landmark",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "ACIMA DE TUDO em oversized off-white. Os quatro extremos NAO sao o desenho principal: esquerda = laco do N de NIMBUS, direita = espiral do S, topo = picos das letras goticas, base = ponta da cruz. A faixa da fita fica dentro disso. O contorno creme quase some sobre off-white, entao a caixa pode estar 0,1-0,2 pp apertada. hem_center: a borda inferior e nitida mas nao ha costura central para fixar o x; usei o mesmo x da gola. Vincos manga/tronco marcados, nao silhueta: a silhueta externa esta 2,5 e 11,4 pp mais para fora.",
+  "top_extreme": [
+    44.6,
+    37.62
+  ],
+  "bottom_extreme": [
+    41.9,
+    65.39
+  ],
+  "complement_notes": [
+    "silhueta omitida: a manga projeta ~4,4 pp alem do tronco. Topo com empate dentro de 0,05 pp entre x=43,5 e 44,6, desempatado pelo par PRETO do mesmo produto. Consistencia entre as tres fotos da mesma arte: topo a 62,0-63,0% da largura da caixa e base a 46,3-46,8% nas tres."
+  ]
+}

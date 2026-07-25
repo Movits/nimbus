@@ -1,0 +1,94 @@
+{
+  "photo": "352718999-branca.jpg",
+  "annotator": "gC",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      36.1,
+      47.6
+    ],
+    "tr": [
+      58.9,
+      47.2
+    ],
+    "br": [
+      59.9,
+      77.9
+    ],
+    "bl": [
+      37.05,
+      78.1
+    ],
+    "mt": [
+      47.29,
+      45.95
+    ],
+    "mb": [
+      48.9,
+      78.79
+    ],
+    "ml": [
+      35.85,
+      63.1
+    ],
+    "mr": [
+      60,
+      62.15
+    ],
+    "shape": "rect_frame",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      52.6,
+      39.4
+    ],
+    "sigma_pct": 2.2,
+    "status": "occluded_hair"
+  },
+  "hem_center": {
+    "xy": [
+      50.4,
+      96.2
+    ],
+    "sigma_pct": 0.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      33.7,
+      62.4
+    ],
+    "sigma_pct": 1.5,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      63.4,
+      62.4
+    ],
+    "sigma_pct": 1.5,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "collar_occluded_hair",
+    "art_rotated_about_2.8deg",
+    "side_seam_inferred_from_sleeve_crease",
+    "art_crest_and_pendant_exceed_frame_corners"
+  ],
+  "notes": "Mesma arte com moldura desenhada. A ARTE ESTA INCLINADA: centro da crista em 47,29 e do pingente em 48,90, base ~1,6 pp a direita do topo, ~2,8 graus sobre 32,8 pp de altura. Por isso ml e mr nao estao na mesma altura. Gola coberta pelo cabelo, inferida do decote a direita, sigma 2,2. Conferencia de sanidade: largura da arte / largura do tronco = 0,80 e o esperado por enrolamento numa Premium G da ~0,79 — os dois conjuntos de pontos sao mutuamente consistentes.",
+  "top_extreme": [
+    47.34,
+    45.92
+  ],
+  "bottom_extreme": [
+    48.86,
+    78.83
+  ],
+  "complement_notes": [
+    "silhueta omitida: acima da barra da manga o contorno e a manga, abaixo e o BRACO NU passando na frente do corpo. Em nenhuma altura util o tronco fica limpo contra o fundo. Base em empate de 0,12 pp entre pingente central (48,86) e cauda do dragao (53,97); registrado o pingente, que e o mais proximo do centro."
+  ]
+}

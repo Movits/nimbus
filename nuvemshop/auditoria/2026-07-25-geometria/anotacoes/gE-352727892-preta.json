@@ -1,0 +1,94 @@
+{
+  "photo": "352727892-preta.jpg",
+  "annotator": "gE",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      40.6,
+      42.71
+    ],
+    "tr": [
+      61.4,
+      42.71
+    ],
+    "br": [
+      61.4,
+      77.71
+    ],
+    "bl": [
+      40.6,
+      77.71
+    ],
+    "mt": [
+      51,
+      45.05
+    ],
+    "mb": [
+      51,
+      73.7
+    ],
+    "ml": [
+      45.3,
+      60.21
+    ],
+    "mr": [
+      55.25,
+      60.21
+    ],
+    "shape": "irregular",
+    "sigma_pct": 2
+  },
+  "collar_center": {
+    "xy": [
+      51.4,
+      33.5
+    ],
+    "sigma_pct": 4.5,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      51.39,
+      92.93
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      34.2,
+      60.21
+    ],
+    "sigma_pct": 3,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      66,
+      60.21
+    ],
+    "sigma_pct": 3,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "tinta_escura_sobre_tecido_preto",
+    "capuz_cobre_a_gola",
+    "peca_preta_subexposta",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Aparecida em moletom com capuz PRETO: de longe a foto mais dificil e a que menos merece confianca. O dourado eu vejo bem; tinta escura sobre preto e quase invisivel. Direita da caixa = assinatura grafite ESCURA sobre preto, lida com ampliacao de 7x ate 61,40 (o elemento dourado mais a direita e o rosario, em 60,0); vale ~1,4 pp de largura e e a leitura de menor confianca, dai sigma 2,0 na arte inteira. Borda esquerda real pode estar ate 0,6 pp mais a esquerda. Sem costura nem vinco visivel no preto; silhuetas externas, essas nitidas, sao 26,31 e 73,66.",
+  "top_extreme": [
+    55.42,
+    42.7
+  ],
+  "bottom_extreme": [
+    52.75,
+    77.88
+  ],
+  "complement_notes": [
+    "silhueta omitida: bracos caidos encostados no tronco, a borda contra o fundo e a manga (~8 pp fora do vinco). Topo empatado entre dois picos do manto (55,42 e 44,45, 0,2 pp de diferenca): o x do topo NAO esta bem determinado. Medido em copia com brightness 2,6."
+  ]
+}

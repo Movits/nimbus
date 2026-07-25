@@ -1,0 +1,123 @@
+{
+  "product_id": "352618903",
+  "title": "São Jorge Vintage | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "view": "back",
+  "image": "352618903-off-white.jpg",
+  "annotators": [
+    "C"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0,
+    "art.tr": 0,
+    "art.br": 0,
+    "art.bl": 0,
+    "art.mt": 0,
+    "art.mb": 0,
+    "art.ml": 0,
+    "art.mr": 0,
+    "collar_center": 0,
+    "hem_center": 0,
+    "side_left": 0,
+    "side_right": 0
+  },
+  "official_cm": {
+    "w": 30.6,
+    "h": 40
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 30.6,
+    "h": 40
+  },
+  "anisotropy": {
+    "alphaPct": 4.8,
+    "alphaExpectedByWrap": [
+      -9.7,
+      -7.7
+    ],
+    "alphaExcessPct": 12.5,
+    "regime": "vertical_comprimido",
+    "horizontalValid": false
+  },
+  "scale": {
+    "rho_v": 0.4667,
+    "impliedGarmentLength_cm": 85.71,
+    "impliedGarmentLength_band_cm": [
+      79.91,
+      91.5
+    ],
+    "garmentLengthRange_cm": [
+      78,
+      86
+    ],
+    "insidePhysicalRange": true,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": -4.3,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 78,
+        "deltaPct": -9
+      },
+      {
+        "size": "M",
+        "length_cm": 80,
+        "deltaPct": -6.7
+      },
+      {
+        "size": "G",
+        "length_cm": 82,
+        "deltaPct": -4.3
+      },
+      {
+        "size": "GG",
+        "length_cm": 84,
+        "deltaPct": -2
+      },
+      {
+        "size": "EG",
+        "length_cm": 86,
+        "deltaPct": 0.3
+      }
+    ],
+    "deltaRangePct": [
+      -9,
+      0.3
+    ],
+    "deltaHLowerBoundPct": null,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "EG",
+      "width_cm": 70,
+      "length_cm": 86
+    },
+    "verdict": "INCONCLUSIVO"
+  },
+  "position": {
+    "offsetX_cm": null,
+    "offsetX_pctOfArtWidth": null,
+    "collarToArtTop_cm": 8.67,
+    "rotation_deg": -0.9,
+    "centerReference": "meio do tronco na altura da arte",
+    "rotationFlagged": false,
+    "verdict": "INCONCLUSIVO"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 42.45,
+    "impliedFlatWidth_cm": [
+      42.45,
+      66.69
+    ],
+    "consistentWithTable": true
+  },
+  "confidence": 45,
+  "verdict": "escala INCONCLUSIVO / posicao INCONCLUSIVO",
+  "notes": [
+    "excesso de anisotropia +12.5% : altura da arte comprimida (inclinacao de camera ou anotacao errada) — o eixo vertical nao e confiavel aqui",
+    "centralizacao nao avaliada: alpha 4.8% indica pose que desloca o eixo visivel",
+    "laterais do tronco nao visiveis",
+    "alpha positivo alto"
+  ]
+}

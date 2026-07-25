@@ -1,0 +1,95 @@
+{
+  "photo": "352721477-branca.jpg",
+  "annotator": "gD",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      35.05,
+      35.85
+    ],
+    "tr": [
+      63.45,
+      35.85
+    ],
+    "br": [
+      63.45,
+      64.3
+    ],
+    "bl": [
+      35.05,
+      64.3
+    ],
+    "mt": [
+      49.25,
+      35.9
+    ],
+    "mb": [
+      49.25,
+      59.9
+    ],
+    "ml": [
+      40.8,
+      50.08
+    ],
+    "mr": [
+      58.6,
+      50.08
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.6
+  },
+  "collar_center": {
+    "xy": [
+      48.4,
+      29.86
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      50.6,
+      96.4
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      33.2,
+      50.08
+    ],
+    "sigma_pct": 1.6,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      65.35,
+      50.08
+    ],
+    "sigma_pct": 1.6,
+    "status": "ok"
+  },
+  "flags": [
+    "back_view",
+    "nimbus_tag_inside_bbox",
+    "bbox_top_set_by_thin_rays",
+    "bbox_bottom_set_by_single_drip",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Costas, stencil/spray da pomba com halo, raios e assinatura NIMBUS. A assinatura foi considerada na caixa mas nao a altera: termina em x=60,3 (asas vao a 63,45) e y=62,5 (escorrido central vai a 64,30). O topo e definido pelas pontas FINAS dos raios, tinta rala, com ate ~0,5 ponto de folga. Como e stencil livre, ml/mr caem bem dentro da caixa (a meia altura passa entre as asas): nao usar para largura.",
+  "top_extreme": [
+    49.6,
+    35.8
+  ],
+  "bottom_extreme": [
+    50.2,
+    64.3
+  ],
+  "complement_notes": [
+    "silhueta omitida: manga larga da oversized cobre o tronco na altura da arte. Extremos praticamente sobre o centro da caixa (centro 49,25; topo +0,35; base +0,95)."
+  ]
+}

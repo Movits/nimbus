@@ -1,0 +1,92 @@
+{
+  "photo": "352725852-branca.jpg",
+  "annotator": "gE",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      41.12,
+      34.66
+    ],
+    "tr": [
+      63.2,
+      34.66
+    ],
+    "br": [
+      63.2,
+      69.86
+    ],
+    "bl": [
+      41.12,
+      69.86
+    ],
+    "mt": [
+      52.16,
+      34.68
+    ],
+    "mb": [
+      52.16,
+      65.6
+    ],
+    "ml": [
+      47.9,
+      52.26
+    ],
+    "mr": [
+      59.3,
+      52.26
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      51.2,
+      28.82
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      51.84,
+      97.62
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      34.75,
+      52.26
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      68.3,
+      52.26
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "flags": [
+    "art_bbox_inclui_tag_NIMBUS_e_pingos",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Mesma arte Querubim em branca. A foto mais facil do grupo: pose quase frontal, contraste alto. Direita = aspas da tag NIMBUS (63,20), ~1,9 pp alem da asa (61,2); baixo = pingo ate 69,86 (o pe termina em ~66,8). Os tres eixos do corpo concordam: gola 51,20, barra 51,84, meio dos vincos 51,5 — evidencia de que os vincos marcados sao mesmo manga/tronco.",
+  "top_extreme": [
+    53.6,
+    34.7
+  ],
+  "bottom_extreme": [
+    46.8,
+    69.9
+  ],
+  "complement_notes": [
+    "silhueta omitida: manga cobre o tronco. Extremos em lados OPOSTOS do centro (centro 52,16; topo +1,4; base -5,4), separacao lateral 6,8 pp."
+  ]
+}

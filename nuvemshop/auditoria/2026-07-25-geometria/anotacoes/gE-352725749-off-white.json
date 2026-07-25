@@ -1,0 +1,93 @@
+{
+  "photo": "352725749-off-white.jpg",
+  "annotator": "gE",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      49.34,
+      34.45
+    ],
+    "tr": [
+      65.6,
+      34.45
+    ],
+    "br": [
+      65.6,
+      62.7
+    ],
+    "bl": [
+      49.34,
+      62.7
+    ],
+    "mt": [
+      57.47,
+      34.45
+    ],
+    "mb": [
+      57.47,
+      57.6
+    ],
+    "ml": [
+      56.2,
+      48.58
+    ],
+    "mr": [
+      63.8,
+      48.58
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      51.8,
+      27.3
+    ],
+    "sigma_pct": 2.5,
+    "status": "occluded_hair"
+  },
+  "hem_center": {
+    "xy": [
+      51.5,
+      92.6
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      41.4,
+      48.58
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      69.75,
+      48.58
+    ],
+    "sigma_pct": 2.2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "torso_rotated",
+    "art_bbox_inclui_tag_NIMBUS_e_pingos",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Querubim spray, off-white. Tronco RODADO, nada e simetrico. Direita da caixa = as aspas da tag grafite NIMBUS (65,60), ~1,6 pp alem da ponta da asa (63,8): excluir a tag encolheria a largura. Baixo = ponta do pingo grosso ate 62,70 (o pe termina em ~60,0). side_right: nao existe costura visivel; vinco suave em ~69,7-69,9 interpretado como braco contra tronco, mas a silhueta externa esta em 73,4 — a diferenca de 3,7 pp e a maior incerteza da foto.",
+  "top_extreme": [
+    57.5,
+    34.5
+  ],
+  "bottom_extreme": [
+    55.1,
+    62.6
+  ],
+  "complement_notes": [
+    "silhueta omitida: manga cobre o tronco nos dois lados. Centro 57,47; topo centrado, base -2,4."
+  ]
+}

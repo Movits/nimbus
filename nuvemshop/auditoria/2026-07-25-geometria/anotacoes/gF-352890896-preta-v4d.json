@@ -1,0 +1,94 @@
+{
+  "photo": "352890896-preta-v4d.jpg",
+  "annotator": "gF",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      47.17,
+      37.85
+    ],
+    "tr": [
+      67.77,
+      38.18
+    ],
+    "br": [
+      67.81,
+      68.4
+    ],
+    "bl": [
+      47.41,
+      68.42
+    ],
+    "mt": [
+      57.47,
+      38.03
+    ],
+    "mb": [
+      57.47,
+      67.9
+    ],
+    "ml": [
+      47.24,
+      53.1
+    ],
+    "mr": [
+      67.94,
+      53.1
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.45
+  },
+  "collar_center": {
+    "xy": [
+      57.5,
+      33
+    ],
+    "sigma_pct": 3,
+    "status": "occluded_hair"
+  },
+  "hem_center": {
+    "xy": [
+      52.5,
+      95.8
+    ],
+    "sigma_pct": 0.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      43.27,
+      53.1
+    ],
+    "sigma_pct": 1.8,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      71.6,
+      53.1
+    ],
+    "sigma_pct": 2.2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "moldura_azulejo_nao_contem_toda_a_tinta",
+    "nimbus_fora_da_moldura",
+    "peca_preta_baixo_contraste",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Mesma arte e pose da off-white, em camiseta PRETA. Mesma ressalva: caixa = toda a tinta; a moldura termina em 67,11-67,16 e o letreiro desce a 68,40-68,42. Aqui a moldura tem um filete CLARO por fora, nitido sobre preto, que foi o usado como borda. GOLA: preto sobre preto na sombra mais cabelo, nenhuma pista da costura, valor puramente estimado pela silhueta do ombro — considerar inconclusivo. BARRA: unico ponto de alto contraste da foto, confiavel. Laterais so apareceram com ganho de brilho.",
+  "top_extreme": [
+    57.96,
+    37.85
+  ],
+  "bottom_extreme": [
+    61.9,
+    68.45
+  ],
+  "complement_notes": [
+    "silhueta omitida: mesma pose e mesmo motivo da off-white, mais contraste ruim (copia com brightness 2,4). Topo em empate como na off-white. Mesma arte na mesma pose que a off-white: divergencia entre as duas apontaria erro no resto da anotacao."
+  ]
+}

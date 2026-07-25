@@ -1,0 +1,90 @@
+{
+  "photo": "352619175-preta.jpg",
+  "annotator": "g4",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      42.6,
+      37.7
+    ],
+    "tr": [
+      68.1,
+      37.7
+    ],
+    "br": [
+      68.1,
+      59
+    ],
+    "bl": [
+      42.6,
+      59
+    ],
+    "mt": [
+      55.3,
+      37.7
+    ],
+    "mb": [
+      55.3,
+      58.95
+    ],
+    "ml": [
+      43.45,
+      48.35
+    ],
+    "mr": [
+      67.4,
+      48.35
+    ],
+    "sigma_pct": 0.4
+  },
+  "collar_center": {
+    "xy": [
+      53.5,
+      29
+    ],
+    "sigma_pct": 3,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      52,
+      89
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      40,
+      48.35
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      70.7,
+      48.35
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "flags": [
+    "art_irregular_no_drawn_frame",
+    "gola_nao_visivel_capuz"
+  ],
+  "top_extreme": [
+    54.42,
+    37.77
+  ],
+  "bottom_extreme": [
+    55.15,
+    58.69
+  ],
+  "complement_notes": [
+    "silhueta omitida: canguru preto contra vao de porta escuro a esquerda, aresta so como fio mais claro. A faixa clara em x 74-79 e coluna do fundo, nao peca. Base empatada de x=52,69 a 57,62: reportado o meio, sem ponto unico."
+  ]
+}

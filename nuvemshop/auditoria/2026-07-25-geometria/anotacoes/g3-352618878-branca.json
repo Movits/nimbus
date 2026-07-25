@@ -1,0 +1,94 @@
+{
+  "photo": "352618878-branca.jpg",
+  "annotator": "g3",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      47.8,
+      38.09
+    ],
+    "tr": [
+      68.65,
+      37.41
+    ],
+    "br": [
+      68.65,
+      66.56
+    ],
+    "bl": [
+      47.8,
+      67.24
+    ],
+    "mt": [
+      58.2,
+      37.75
+    ],
+    "mb": [
+      58.2,
+      66.9
+    ],
+    "ml": [
+      47.85,
+      52.3
+    ],
+    "mr": [
+      68.6,
+      52
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      55.7,
+      30.5
+    ],
+    "sigma_pct": 3,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      52.7,
+      86.15
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      42,
+      52.3
+    ],
+    "sigma_pct": 1.2,
+    "status": "no_seam"
+  },
+  "side_right": {
+    "xy": [
+      71.9,
+      52.3
+    ],
+    "sigma_pct": 1,
+    "status": "no_seam"
+  },
+  "flags": [
+    "collar_occluded_by_hood",
+    "art_top_occluded_by_hood",
+    "irregular_no_drawn_frame",
+    "side_seams_not_visible"
+  ],
+  "notes": "Sao Jorge Vintage: poster envelhecido com topo em ARCO. Sem moldura desenhada, entao shape=irregular. TOPO OCLUIDO pelo capuz: o topo de tinta visivel e o 'J' de JORGE em 37,75; a faixa NIMBUS+anel cairia por volta de y=36,6 e esta sob o capuz. O topo aqui e LIMITE INFERIOR e a altura esta ~3,5% subestimada. GOLA: nenhum ponto visivel, estimada pela costura de ombro e pela linha central extrapolada, sigma 3,0. LATERAIS: sem costura visivel, marcado o vinco manga/tronco; a esquerda o braco passa NA FRENTE do tronco, entao 42,00 e limite superior.",
+  "top_extreme": [
+    57.7,
+    37.62
+  ],
+  "bottom_extreme": [
+    48.9,
+    67.18
+  ],
+  "complement_notes": [
+    "silhueta omitida: a esquerda o braco passa NA FRENTE do tronco. TOPO E LIMITE INFERIOR: o capuz cobre a faixa NIMBUS e o anel, entao a arte e mais alta do que a caixa registrada. Topo com empate dentro de 1 px entre x=57,7 e x=65,0: x indeterminado."
+  ]
+}

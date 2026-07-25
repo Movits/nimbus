@@ -1,0 +1,93 @@
+{
+  "photo": "352717837-preta.jpg",
+  "annotator": "gB",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      32.79,
+      34.71
+    ],
+    "tr": [
+      54.3,
+      34.71
+    ],
+    "br": [
+      54.3,
+      66.47
+    ],
+    "bl": [
+      32.79,
+      66.47
+    ],
+    "mt": [
+      43.55,
+      35.53
+    ],
+    "mb": [
+      43.55,
+      65.31
+    ],
+    "ml": [
+      36.83,
+      50.59
+    ],
+    "mr": [
+      48.79,
+      50.59
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.3
+  },
+  "collar_center": {
+    "xy": [
+      46.3,
+      28.67
+    ],
+    "sigma_pct": 0.8,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      46.3,
+      94.2
+    ],
+    "sigma_pct": 1.5,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      30.57,
+      50.59
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      59.05,
+      50.59
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "art_extremes_are_loose_flourishes",
+    "hem_bottom_edge_inferred_from_coverstitch",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Mesma arte ACIMA DE TUDO, camiseta preta de modelagem regular, outro cenario e outra pessoa. GOLA: unico caso do grupo com pesponto nitido nas costas E minimo local do arco, ou seja centro-costas de verdade e nao chute — dai sigma 0,8. BARRA: o pesponto e visivel mas a borda inferior e preto sobre bermuda preta; o y informado soma ~1 pp de sobra de bainha ao pesponto, tratar como derivado.",
+  "top_extreme": [
+    46.35,
+    34.71
+  ],
+  "bottom_extreme": [
+    42.77,
+    66.47
+  ],
+  "complement_notes": [
+    "silhueta omitida: o x=30,57 anotado antes e o VINCO, nao a borda externa (25,7). Abaixo das bainhas o braco nu passa POR CIMA da borda do tronco nos dois lados: NAO existe altura nesta foto em que a silhueta do tronco apareca limpa. Mesma arte das duas fotos do 352717723, com topo e base nas mesmas fracoes da caixa."
+  ]
+}

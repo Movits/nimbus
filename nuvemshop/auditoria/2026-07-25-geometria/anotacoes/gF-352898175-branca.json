@@ -1,0 +1,93 @@
+{
+  "photo": "352898175-branca.jpg",
+  "annotator": "gF",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      39.83,
+      31.15
+    ],
+    "tr": [
+      65.75,
+      31.15
+    ],
+    "br": [
+      65.75,
+      69.64
+    ],
+    "bl": [
+      39.83,
+      69.64
+    ],
+    "mt": [
+      52.79,
+      33.05
+    ],
+    "mb": [
+      52.79,
+      64.78
+    ],
+    "ml": [
+      42.52,
+      50.4
+    ],
+    "mr": [
+      60.1,
+      50.4
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.6
+  },
+  "collar_center": {
+    "xy": [
+      52.3,
+      26.15
+    ],
+    "sigma_pct": 1,
+    "status": "low_contrast"
+  },
+  "hem_center": {
+    "xy": [
+      49.03,
+      94.55
+    ],
+    "sigma_pct": 0.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      33.7,
+      50.4
+    ],
+    "sigma_pct": 1.8,
+    "status": "indeterminate"
+  },
+  "side_right": {
+    "xy": [
+      67.3,
+      50.4
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "flags": [
+    "stencil_spray_sem_moldura",
+    "caixa_inclui_tag_e_pingos",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Sao Miguel Vitorioso (stencil/spray). Quem define cada extremo: topo = pontas da asa esquerda; ESQUERDA = as aspas da tag grande NIMBUS (a figura sozinha so chega a 40,1); direita = ponta da asa direita; BAIXO = a ponta de UM pingo fino. Excluir tags e pingos encolheria a caixa ~1 pp na largura e ~1 pp na altura. Pontos medios ficam MUITO dentro da caixa (mr 60,10 contra 65,75), como o protocolo preve para irregular. Sem aresta reta, nao da para avaliar rotacao. Lateral direita confere com a silhueta do tronco abaixo da manga; a esquerda diverge 2 pp, sigma alto.",
+  "top_extreme": [
+    43.45,
+    31.07
+  ],
+  "bottom_extreme": [
+    58.76,
+    69.68
+  ],
+  "complement_notes": [
+    "silhueta omitida: mangas curtas cobrem o tronco ate y~57. Extremos em LADOS OPOSTOS: topo 9,3 pp a esquerda do centro (52,79), base 6,0 pp a direita. Segunda espicula em x=41,13 empatada, mas do mesmo lado, entao o sinal e robusto."
+  ]
+}

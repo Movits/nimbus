@@ -1,0 +1,94 @@
+{
+  "photo": "352721197-branca-v4.jpg",
+  "annotator": "gD",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      32.55,
+      31.32
+    ],
+    "tr": [
+      63.15,
+      31.32
+    ],
+    "br": [
+      63.15,
+      67.84
+    ],
+    "bl": [
+      32.55,
+      67.84
+    ],
+    "mt": [
+      47.85,
+      31.35
+    ],
+    "mb": [
+      47.85,
+      65.9
+    ],
+    "ml": [
+      34.8,
+      49.58
+    ],
+    "mr": [
+      60.3,
+      49.58
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      48.4,
+      27
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      51.8,
+      95.95
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      30.66,
+      49.58
+    ],
+    "sigma_pct": 1.3,
+    "status": "ok"
+  },
+  "side_right": {
+    "xy": [
+      64.15,
+      49.58
+    ],
+    "sigma_pct": 1.3,
+    "status": "ok"
+  },
+  "flags": [
+    "back_view",
+    "bbox_bottom_set_by_single_drip",
+    "hem_left_edge_partially_occluded_by_hand",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Costas, camiseta branca, contraste alto. Limite inferior e de novo UM escorrido azul isolado (x=50,5); o splatter denso termina em ~66. Borda direita e o borrao preto difuso do canto inferior direito, nao a letra. side_right lido sobre a costura de cava, visivel; a axila cai em y~49,7, ou seja na altura do meio da estampa, entao as laterais estao na transicao cava/lateral e podem variar ~1 ponto. hem_center fica ~3 pontos a direita do centro da gola porque o corpo esta rotacionado e a mao cobre parte da barra a esquerda, dai sigma 1,5.",
+  "top_extreme": [
+    49.5,
+    31.7
+  ],
+  "bottom_extreme": [
+    50.6,
+    67.8
+  ],
+  "complement_notes": [
+    "silhueta omitida: na altura do meio da estampa o contorno externo e a MANGA, nao o tronco. Extremos quase centrados (centro 47,85; topo +1,7; base +2,8)."
+  ]
+}

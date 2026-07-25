@@ -1,0 +1,93 @@
+{
+  "photo": "352618837-branca.jpg",
+  "annotator": "gF",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      50.46,
+      33.27
+    ],
+    "tr": [
+      71.46,
+      33.27
+    ],
+    "br": [
+      71.46,
+      66.55
+    ],
+    "bl": [
+      50.46,
+      66.55
+    ],
+    "mt": [
+      60.96,
+      33.3
+    ],
+    "mb": [
+      60.96,
+      65.96
+    ],
+    "ml": [
+      50.46,
+      49.91
+    ],
+    "mr": [
+      71.46,
+      49.91
+    ],
+    "shape": "irregular",
+    "sigma_pct": 1
+  },
+  "collar_center": {
+    "xy": [
+      54,
+      26.5
+    ],
+    "sigma_pct": 1.5,
+    "status": "low_contrast"
+  },
+  "hem_center": {
+    "xy": [
+      55.1,
+      85.75
+    ],
+    "sigma_pct": 0.6,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      47.6,
+      49.91
+    ],
+    "sigma_pct": 2.8,
+    "status": "indeterminate"
+  },
+  "side_right": {
+    "xy": [
+      72.72,
+      49.91
+    ],
+    "sigma_pct": 2.5,
+    "status": "indeterminate"
+  },
+  "flags": [
+    "topo_da_arte_dissolve_em_tom_claro",
+    "possivel_anel_claro_acima_nao_confirmado",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Blusao Moletom branco, Sao Jorge Vintage: a foto mais dificil das cinco. O painel escuro tem borda RASGADA e o topo da ilustracao dissolve num ceu claro, entao o limite superior e tipografia, nao aresta. Topo = topo das letras do arco pequeno NIMBUS, o elemento confirmado mais alto. ATENCAO: com ganho de contraste aparece um ANEL claro atras do arco de texto cujo topo ficaria em ~31,5. Nao consegui decidir se e tinta clara ou vinco do moletom (ha muitas rugas curvas na regiao), entao NAO incluí. Se um segundo anotador confirmar que e tinta, a altura da caixa cresce ~5%. LATERAIS: as piores da serie; a direita as tres leituras convergem (~72,5-72,7), a esquerda divergem muito (vinco 47,60 contra cava extrapolada ~43,5 e silhueta 35,2), dai sigma 2,8.",
+  "top_extreme": [
+    60.9,
+    33.28
+  ],
+  "bottom_extreme": [
+    52.4,
+    66.45
+  ],
+  "complement_notes": [
+    "silhueta omitida: as duas mangas compridas do blusao cobrem a lateral do tronco. Topo praticamente sobre o centro da arte. Base e aresta RASGADA e quase plana de x~50,5 a 63: incerteza do x ~+-1,5 pp, a do y ~0,15 pp."
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "photo": "352717723-preta.jpg",
+  "annotator": "gB",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      33.77,
+      37.53
+    ],
+    "tr": [
+      51.11,
+      37.53
+    ],
+    "br": [
+      51.11,
+      65.43
+    ],
+    "bl": [
+      33.77,
+      65.43
+    ],
+    "mt": [
+      42.44,
+      38.05
+    ],
+    "mb": [
+      42.44,
+      64.78
+    ],
+    "ml": [
+      36.23,
+      51.48
+    ],
+    "mr": [
+      47.2,
+      51.48
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.3
+  },
+  "collar_center": {
+    "xy": [
+      46,
+      31.94
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "hem_center": {
+    "xy": [
+      46,
+      89.5
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      28.35,
+      51.48
+    ],
+    "sigma_pct": 2.5,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      54.9,
+      51.48
+    ],
+    "sigma_pct": 2.5,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "art_extremes_are_loose_flourishes",
+    "side_left_is_outer_silhouette_not_crease",
+    "collar_base_not_visible_estimated",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Par de cor da off-white, mesmo enquadramento e pose. A ARTE e facil (line-art clara sobre preto) e os quatro extremos batem com a off-white dentro de 0,06-0,13 pp — controle util. A PECA e o problema, tudo preto sobre preto: side_left e a SILHUETA EXTERNA (inclui manga), nao o vinco; na gemea off-white a diferenca silhueta-vinco foi 2,5 pp desse lado. side_right discorda 2 pp da gemea. O y da gola soma 0,84 pp de largura de ribana medida na foto off-white do MESMO produto: suposicao de modelo, nao medida desta foto.",
+  "top_extreme": [
+    44.65,
+    37.53
+  ],
+  "bottom_extreme": [
+    41.89,
+    65.43
+  ],
+  "complement_notes": [
+    "silhueta omitida: sobre preto a distincao manga/tronco e ainda pior. Foto mais facil do grupo para os extremos (linha clara sobre preto); foi ela que desempatou o topo. Base bate com a off-white em 0,01 pp — controle de repetibilidade."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "photo": "352718943-preta-v4c.jpg",
+  "annotator": "gC",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      41,
+      37.95
+    ],
+    "tr": [
+      65.3,
+      38.05
+    ],
+    "br": [
+      65.1,
+      69.75
+    ],
+    "bl": [
+      41,
+      69.8
+    ],
+    "mt": [
+      52.95,
+      36.15
+    ],
+    "mb": [
+      52.9,
+      70.5
+    ],
+    "ml": [
+      40.52,
+      53.35
+    ],
+    "mr": [
+      65.22,
+      53.35
+    ],
+    "shape": "rect_frame",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      52.5,
+      30.8
+    ],
+    "sigma_pct": 2.8,
+    "status": "occluded_hair"
+  },
+  "hem_center": {
+    "xy": [
+      50.55,
+      96.75
+    ],
+    "sigma_pct": 0.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      37.4,
+      53.35
+    ],
+    "sigma_pct": 2.5,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      70.8,
+      53.35
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "collar_occluded_hair",
+    "side_seam_low_contrast_black_on_black",
+    "art_crest_and_pendant_exceed_frame_corners"
+  ],
+  "notes": "Sao Jorge Neobarroco com moldura rococo DESENHADA (rect_frame). CONVENCAO: os cantos estao nos cantos externos dos ornamentos, mas o topo e a base absolutos da tinta nao estao neles: a crista do cartucho NIMBUS sobe ~1,8 pp acima e o pingente central desce ~0,7 pp abaixo. mt e mb estao nesses extremos, que e a caixa envolvente dos cm oficiais; usar os cantos subestimaria ~2,5 pp. Gola nao vista (cabelo cobre a nuca), sigma 2,8. Laterais em sombra profunda, sem costura visivel; a direita pode ser a cava OU a virada de luz, nao consegui separar.",
+  "top_extreme": [
+    52.91,
+    36.25
+  ],
+  "bottom_extreme": [
+    52.95,
+    70.35
+  ],
+  "complement_notes": [
+    "silhueta omitida: oversized de ombro caido, massa preta continua entre manga e tronco, sem vao de fundo. Topo e base sao ornamentos ISOLADOS (crista do cartucho e palmeta pendente), nao a aresta da moldura — por isso os campos valem mesmo com shape=rect_frame. Deslocamento lateral ~zero (-0,24 e -0,20 pp)."
+  ]
+}

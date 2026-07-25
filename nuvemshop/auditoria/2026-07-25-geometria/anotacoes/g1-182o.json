@@ -1,0 +1,90 @@
+{
+  "photo": "352407182-off-white-v4f.jpg",
+  "annotator": "g1",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      33.85,
+      35.62
+    ],
+    "tr": [
+      57.45,
+      35.62
+    ],
+    "br": [
+      57.45,
+      66.15
+    ],
+    "bl": [
+      33.85,
+      66.15
+    ],
+    "mt": [
+      45.65,
+      35.9
+    ],
+    "mb": [
+      45.65,
+      66.09
+    ],
+    "ml": [
+      36.9,
+      50.91
+    ],
+    "mr": [
+      51.5,
+      50.91
+    ],
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      47.9,
+      28.9
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      50.8,
+      92.8
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      31.8,
+      50.91
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      60,
+      50.91
+    ],
+    "sigma_pct": 1.5,
+    "status": "ok"
+  },
+  "flags": [
+    "art_irregular_no_drawn_frame",
+    "art_missing_nimbus_wordmark"
+  ],
+  "top_extreme": [
+    45.27,
+    35.55
+  ],
+  "bottom_extreme": [
+    50.2,
+    66.31
+  ],
+  "complement_notes": [
+    "silhueta omitida: oversized com bracos caidos, a borda contra o fundo (28,4 / 70,8) e manga; os vincos anotados ficam dentro dela. Base e aresta RETA horizontal, varia 0,08 pp em cinco faixas: o x=50,2 e ruido, NAO deslocamento lateral. Tratar a base como aresta cheia centrada em x=45,7."
+  ]
+}

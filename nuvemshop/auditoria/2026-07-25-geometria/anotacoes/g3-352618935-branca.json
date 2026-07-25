@@ -1,0 +1,92 @@
+{
+  "photo": "352618935-branca.jpg",
+  "annotator": "g3",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      42.33,
+      22.42
+    ],
+    "tr": [
+      70.1,
+      21.28
+    ],
+    "br": [
+      70.1,
+      65.13
+    ],
+    "bl": [
+      42.33,
+      66.27
+    ],
+    "mt": [
+      56.2,
+      21.85
+    ],
+    "mb": [
+      56.2,
+      65.7
+    ],
+    "ml": [
+      43.05,
+      44.3
+    ],
+    "mr": [
+      69.3,
+      44.3
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.5
+  },
+  "collar_center": {
+    "xy": [
+      57.8,
+      14.15
+    ],
+    "sigma_pct": 1.2,
+    "status": "ok"
+  },
+  "hem_center": {
+    "xy": [
+      51.4,
+      94.45
+    ],
+    "sigma_pct": 1,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      37.5,
+      43.8
+    ],
+    "sigma_pct": 1,
+    "status": "no_seam"
+  },
+  "side_right": {
+    "xy": [
+      72.2,
+      43.8
+    ],
+    "sigma_pct": 1,
+    "status": "no_seam"
+  },
+  "flags": [
+    "irregular_no_drawn_frame",
+    "side_seams_not_visible"
+  ],
+  "notes": "Mesma arte da foto do moletom, aqui inteira. O topo da caixa e o alto das letras NIMBUS (21,85), acima do anel fino e do 'J' de JORGE (23,47). A faixa NIMBUS e ouro palido sobre branco, contraste de ~15 niveis: legivel nos recortes ampliados, mas com incerteza maior. Se o medidor preferir so a tinta escura, o topo passa a 23,47 e a altura cai 3,7%. O canto inferior direito do desenho e arredondado: o extremo direito da caixa esta na altura do letreiro, nao num canto. LATERAIS: sem costura visivel, marcado o vinco cava/tronco; confere com a silhueta livre abaixo da manga (35,6 e 71,6 em y=60).",
+  "top_extreme": [
+    56.2,
+    21.92
+  ],
+  "bottom_extreme": [
+    50.4,
+    66.38
+  ],
+  "complement_notes": [
+    "silhueta omitida: tronco so fica limpo abaixo da bainha da manga, que e outra altura. Topo e arco fino NIMBUS em ouro palido sobre branco (contraste ~15 niveis); se so tinta escura contasse, o topo cairia para y=23,46 e a altura encolheria ~3,5%. Conferido contra o gemeo preto (56,46 / 21,85)."
+  ]
+}

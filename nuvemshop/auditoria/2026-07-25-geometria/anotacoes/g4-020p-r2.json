@@ -1,0 +1,123 @@
+{
+  "product_id": "352702020",
+  "title": "Salmo 19 | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "view": "back",
+  "image": "352702020-preta.jpg",
+  "annotators": [
+    "g4"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0,
+    "art.tr": 0,
+    "art.br": 0,
+    "art.bl": 0,
+    "art.mt": 0,
+    "art.mb": 0,
+    "art.ml": 0,
+    "art.mr": 0,
+    "collar_center": 0,
+    "hem_center": 0,
+    "side_left": 0,
+    "side_right": 0
+  },
+  "official_cm": {
+    "w": 35.2,
+    "h": 28.8
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 35.2,
+    "h": 28.8
+  },
+  "anisotropy": {
+    "alphaPct": -14.2,
+    "alphaExpectedByWrap": [
+      -19.5,
+      -12.4
+    ],
+    "alphaExcessPct": -1.8,
+    "regime": "frontal",
+    "horizontalValid": true
+  },
+  "scale": {
+    "rho_v": 0.3766,
+    "impliedGarmentLength_cm": 76.48,
+    "impliedGarmentLength_band_cm": [
+      69.73,
+      83.22
+    ],
+    "garmentLengthRange_cm": [
+      70.5,
+      85
+    ],
+    "insidePhysicalRange": true,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": -1.3,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 70.5,
+        "deltaPct": -7.8
+      },
+      {
+        "size": "M",
+        "length_cm": 72,
+        "deltaPct": -5.9
+      },
+      {
+        "size": "G",
+        "length_cm": 75.5,
+        "deltaPct": -1.3
+      },
+      {
+        "size": "GG",
+        "length_cm": 81.5,
+        "deltaPct": 6.6
+      },
+      {
+        "size": "EG",
+        "length_cm": 85,
+        "deltaPct": 11.1
+      }
+    ],
+    "deltaRangePct": [
+      -7.8,
+      11.1
+    ],
+    "deltaHLowerBoundPct": -15.4,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "G",
+      "width_cm": 54,
+      "length_cm": 75.5
+    },
+    "verdict": "OK"
+  },
+  "position": {
+    "offsetX_cm": 1.18,
+    "offsetX_pctOfArtWidth": 3.3,
+    "collarToArtTop_cm": 6.43,
+    "rotation_deg": -4,
+    "centerReference": "meio do tronco na altura da arte",
+    "rotationFlagged": true,
+    "verdict": "OK"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 35.57,
+    "impliedFlatWidth_cm": [
+      35.57,
+      55.87
+    ],
+    "consistentWithTable": true
+  },
+  "confidence": 50,
+  "verdict": "escala OK / posicao OK",
+  "notes": [
+    "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+    "arte sem aresta desenhada",
+    "gola com leitura indireta",
+    "barra com baixo contraste ou fora de quadro"
+  ]
+}

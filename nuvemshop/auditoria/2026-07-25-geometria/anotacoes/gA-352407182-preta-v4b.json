@@ -1,0 +1,94 @@
+{
+  "photo": "352407182-preta-v4b.jpg",
+  "annotator": "gA",
+  "imageSize": {
+    "w": 1300,
+    "h": 1300
+  },
+  "art": {
+    "tl": [
+      33.8,
+      35.64
+    ],
+    "tr": [
+      57.42,
+      35.64
+    ],
+    "br": [
+      57.42,
+      66.39
+    ],
+    "bl": [
+      33.8,
+      66.39
+    ],
+    "mt": [
+      45.61,
+      35.79
+    ],
+    "mb": [
+      45.61,
+      66.28
+    ],
+    "ml": [
+      37.09,
+      51.02
+    ],
+    "mr": [
+      52.17,
+      51.02
+    ],
+    "shape": "irregular",
+    "sigma_pct": 0.7
+  },
+  "collar_center": {
+    "xy": [
+      49,
+      27.6
+    ],
+    "sigma_pct": 1.6,
+    "status": "low_contrast"
+  },
+  "hem_center": {
+    "xy": [
+      50.4,
+      94.7
+    ],
+    "sigma_pct": 2.2,
+    "status": "low_contrast"
+  },
+  "side_left": {
+    "xy": [
+      30.35,
+      51.02
+    ],
+    "sigma_pct": 3,
+    "status": "no_seam"
+  },
+  "side_right": {
+    "xy": [
+      62.7,
+      51.02
+    ],
+    "sigma_pct": 3.5,
+    "status": "no_seam"
+  },
+  "flags": [
+    "black_garment_low_contrast",
+    "torso_edge_inferred_from_underarm",
+    "no_nimbus_signature_found",
+    "irregular_no_drawn_frame"
+  ],
+  "notes": "Costas, torso ~3/4. Arte sem moldura. NESTA foto NAO existe a assinatura NIMBUS abaixo do retangulo (faixa ampliada, tecido limpo); no irmao 352407196 ela existe e estica a caixa ~4,5% da altura. As duas caixas nao sao comparaveis elemento a elemento. Gola e bainha preto-sobre-preto, lidas por continuidade. Lados: sem cava visivel; numeros sao a projecao vertical das axilas observadas. Silhueta EXTERNA com manga em y=51,02 vai de 28,55 a 71,70 (43,2 pontos) contra 32,4 do tronco.",
+  "top_extreme": [
+    45.2,
+    35.64
+  ],
+  "bottom_extreme": [
+    45.9,
+    66.39
+  ],
+  "complement_notes": [
+    "silhueta omitida: em y=51,02 as duas bordas sao manga; o tronco so aparece limpo abaixo de y~64. Base e aresta quase horizontal (varia <0,05 pp entre x=41 e 51): x informado e o centro do trecho, nao ponto singular. Extremos praticamente no centro."
+  ]
+}

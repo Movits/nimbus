@@ -731,6 +731,32 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
 
   // ------------------------------------------------------------ vereditos
   let scaleVerdict;
+
+  /**
+   * EIXO DE CATALOGO: desvio contra o tamanho canonico G. Independente do eixo
+   * DURO (que pergunta se algum tamanho real explica a geometria).
+   *
+   * Os limiares sao EFETIVOS: nunca abaixo da margem do modo de anotacao desta
+   * foto, senao o veredito seria ruido. O que decide a margem NAO e `mode` (que
+   * so diz se os 8 pontos vieram) e sim se a altura saiu dos PONTOS MEDIOS de
+   * uma aresta real ou da CAIXA ENVOLVENTE da tinta: arte de spray anotada com
+   * 8 pontos ainda e caixa, porque os pontos medios seguem o contorno do
+   * desenho e nao a borda. E o mesmo par de regimes que `validate.mjs` mede
+   * como "8pt" e "4pt".
+   */
+  const catalogVerdictOf = (delta) => {
+    const marginMode = hasEdgeMidpoints ? "corners" : "bbox";
+    const margin = METHOD_MARGIN_PP[marginMode];
+    const okLimit = Math.max(tolerance.scalePct, margin);
+    const acceptableLimit = Math.max(tolerance.scaleAcceptablePct ?? okLimit, okLimit);
+    if (delta === null || !Number.isFinite(delta)) {
+      return { verdict: "INCONCLUSIVO", queued: false, okLimit, acceptableLimit, margin };
+    }
+    const dev = Math.abs(delta);
+    if (dev > acceptableLimit) return { verdict: "FORA-DO-ALVO", queued: true, okLimit, acceptableLimit, margin };
+    if (dev > okLimit) return { verdict: "ACEITAVEL", queued: false, okLimit, acceptableLimit, margin };
+    return { verdict: "OK", queued: false, okLimit, acceptableLimit, margin };
+  };
   if (!spec.hasTable) {
     scaleVerdict = "INDISPONIVEL";
     notes.push(
@@ -738,9 +764,23 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     );
   } else if (impliedLength === null || alphaRegime === "vertical_comprimido" || axesContradiction) {
     scaleVerdict = "INCONCLUSIVO";
-  } else if (!insidePhysicalRange) {
+  } else {
+    // DOIS EIXOS INDEPENDENTES, avaliados nesta ordem.
+    //
+    //   DURO      "nenhum tamanho real da peca explica esta geometria". E um
+    //             argumento de impossibilidade: quando fecha, e indiscutivel e
+    //             ganha de tudo. Quando nao fecha, ele nao diz nada — nao diz
+    //             que a foto esta certa.
+    //   CATALOGO  "desvia do tamanho G", a convencao adotada para lifestyle.
+    //
+    // Antes, um "nao sei" do eixo duro SILENCIAVA o de catalogo, porque os dois
+    // dividiam o mesmo if/else. Foi assim que a Querubim Spray Oversized preta,
+    // com -12,9% contra o G, sumiu da fila no momento em que a faixa alargou o
+    // suficiente para encostar na faixa fisica da peca. Uma incerteza maior nao
+    // pode aprovar foto nenhuma.
     const [minLen, maxLen] = spec.lengthRange;
-    // VISTA FRONTAL: a regua fica curta, e so um lado do veredito sobrevive.
+
+    // VISTA FRONTAL: a regua fica curta, e so um lado do eixo duro sobrevive.
     // O decote da frente e bem mais baixo que a base da gola nas costas, entao
     // a distancia gola->barra medida numa foto frontal e MENOR que o
     // comprimento total da peca, e a YouDraw nao publica essa diferenca.
@@ -750,55 +790,39 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     //   - implicito ACIMA da faixa (estampa pequena) e conservador: o valor
     //     verdadeiro e ainda maior, entao a reprovacao continua valendo;
     //   - implicito ABAIXO da faixa (estampa grande) pode ser puro artefato da
-    //     vista, e nao pode virar veredito.
-    if (input.view === "front" && impliedLength < minLen) {
-      scaleVerdict = "INCONCLUSIVO";
-      notes.push(
-        `vista frontal: a gola da frente e mais baixa que a das costas, entao a referencia gola-barra e curta e o comprimento implicito (${impliedLength.toFixed(1)} cm) sai subestimado. Nessa direcao o desvio pode ser artefato da vista — so o lado "estampa pequena" e conclusivo numa foto de frente`,
-      );
-      // sai do ramo sem emitir reprovacao
-    } else {
+    //     vista, e nao pode virar reprovacao dura.
+    const frontViewBlocksHard = input.view === "front" && impliedLength < minLen;
     const bandTouchesRange =
       impliedBand !== null && impliedBand[1] >= minLen && impliedBand[0] <= maxLen;
-    if (bandTouchesRange) {
-      scaleVerdict = "INCONCLUSIVO";
-      notes.push(
-        `comprimento implicito ${impliedLength.toFixed(1)} cm cai fora da faixa ${minLen}-${maxLen} cm, MAS a incerteza declarada pelo anotador (faixa ${impliedBand[0]}-${impliedBand[1]} cm) alcanca a faixa real — sem anotacao melhor nao da para reprovar`,
-      );
-    } else {
+    const hardFails = !insidePhysicalRange && !frontViewBlocksHard && !bandTouchesRange;
+
+    const { verdict: catVerdict, okLimit, acceptableLimit, margin } = catalogVerdictOf(deltaCanonical);
+
+    if (hardFails) {
       scaleVerdict = "REPROVADO-DURO";
       notes.push(
         `comprimento implicito ${impliedLength.toFixed(1)} cm${impliedBand ? ` (faixa ${impliedBand[0]}-${impliedBand[1]})` : ""} fora da faixa fisica ${minLen}-${maxLen} cm: nenhum tamanho real explica esta geometria`,
       );
-    }
-    }
-  } else {
-    // Limiares EFETIVOS: nunca abaixo da margem do modo de anotacao desta foto.
-    // Arte irregular carrega margem maior, entao ela nao e reprovada por um
-    // desvio que o proprio metodo nao consegue distinguir de zero.
-    // O que decide a margem NAO e `mode` (que so diz se os 8 pontos vieram) e
-    // sim se a altura saiu dos PONTOS MEDIOS de uma aresta real ou da CAIXA
-    // ENVOLVENTE da tinta. Arte de spray anotada com 8 pontos ainda e caixa: os
-    // pontos medios seguem o contorno do desenho, nao a borda. E o mesmo par de
-    // regimes que `validate.mjs` mede como "8pt" e "4pt".
-    const marginMode = hasEdgeMidpoints ? "corners" : "bbox";
-    const margin = METHOD_MARGIN_PP[marginMode];
-    const okLimit = Math.max(tolerance.scalePct, margin);
-    const acceptableLimit = Math.max(tolerance.scaleAcceptablePct ?? okLimit, okLimit);
-    const dev = Math.abs(deltaCanonical);
-    if (dev > acceptableLimit) {
-      scaleVerdict = "FORA-DO-ALVO";
-    } else if (dev > okLimit) {
-      scaleVerdict = "ACEITAVEL";
-      notes.push(
-        `desvio ${deltaCanonical > 0 ? "+" : ""}${deltaCanonical}% fica entre ${okLimit}% e ${acceptableLimit}%: aceitavel, permanece no ar. So refazer se a peca for regerada por outro motivo`,
-      );
     } else {
-      scaleVerdict = "OK";
+      scaleVerdict = catVerdict;
+      if (!insidePhysicalRange && frontViewBlocksHard) {
+        notes.push(
+          `vista frontal: a gola da frente e mais baixa que a das costas, entao a referencia gola-barra e curta e o comprimento implicito (${impliedLength.toFixed(1)} cm) sai subestimado. Nessa direcao o desvio pode ser artefato da vista — o eixo duro nao reprova aqui`,
+        );
+      } else if (!insidePhysicalRange) {
+        notes.push(
+          `comprimento implicito ${impliedLength.toFixed(1)} cm cai fora da faixa ${minLen}-${maxLen} cm, MAS a incerteza declarada pelo anotador (faixa ${impliedBand[0]}-${impliedBand[1]} cm) alcanca a faixa real — sem anotacao melhor nao da para reprovar por impossibilidade. O veredito abaixo e o do eixo de catalogo`,
+        );
+      }
+      if (catVerdict === "ACEITAVEL") {
+        notes.push(
+          `desvio ${deltaCanonical > 0 ? "+" : ""}${deltaCanonical}% fica entre ${okLimit}% e ${acceptableLimit}%: aceitavel, permanece no ar. So refazer se a peca for regerada por outro motivo`,
+        );
+      }
     }
     if (okLimit > tolerance.scalePct) {
       notes.push(
-        `limiar de OK elevado de ${tolerance.scalePct}% para ${okLimit}% porque a margem do metodo no modo "${mode}" e ${margin} pp — abaixo disso o veredito seria ruido`,
+        `limiar de OK elevado de ${tolerance.scalePct}% para ${okLimit}% porque a margem do metodo no modo "${hasEdgeMidpoints ? "moldura desenhada" : "caixa envolvente"}" e ${margin} pp — abaixo disso o veredito seria ruido`,
       );
     }
   }
@@ -867,6 +891,18 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
       deltaCanonicalPct: deltaCanonical,
       deltaBySize,
       deltaRangePct: deltaRange,
+      // A FAIXA CONDENA SOZINHA? Verdadeiro quando a faixa INTEIRA de desvio
+      // fica fora da tolerancia, ou seja quando nem o extremo mais favoravel da
+      // incerteza salva a foto. E o padrao de "correto por construcao" que a
+      // posicao ja usa, aplicado a escala como GRAU DE CONFIANCA, nao como
+      // criterio: o veredito continua saindo da estimativa pontual, que e o que
+      // o dono pediu comparar contra +-5/8%. Isto so diz quais entradas da fila
+      // sao indiscutiveis e quais dependem da anotacao apertar.
+      bandDecisive:
+        deltaRange === null
+          ? null
+          : deltaRange[0] > catalogVerdictOf(deltaCanonical).acceptableLimit ||
+            deltaRange[1] < -catalogVerdictOf(deltaCanonical).acceptableLimit,
       deltaHLowerBoundPct: deltaHLowerBound,
       axesContradiction,
       nearestSize: impliedLength !== null && spec.hasTable ? nearestSizeByLength(spec, impliedLength) : null,

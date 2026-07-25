@@ -1,0 +1,90 @@
+{
+  "photo": "352407156-preta-v4.jpg",
+  "annotator": "g1",
+  "imageSize": {
+    "w": 1600,
+    "h": 1600
+  },
+  "art": {
+    "tl": [
+      33.85,
+      41.85
+    ],
+    "tr": [
+      55.5,
+      41.85
+    ],
+    "br": [
+      55.5,
+      73.78
+    ],
+    "bl": [
+      33.85,
+      73.78
+    ],
+    "mt": [
+      44.68,
+      42.2
+    ],
+    "mb": [
+      44.68,
+      73.78
+    ],
+    "ml": [
+      37.13,
+      57.82
+    ],
+    "mr": [
+      52.5,
+      57.82
+    ],
+    "sigma_pct": 0.6
+  },
+  "collar_center": {
+    "xy": [
+      49.5,
+      32.8
+    ],
+    "sigma_pct": 3,
+    "status": "occluded_hood"
+  },
+  "hem_center": {
+    "xy": [
+      49.8,
+      90.35
+    ],
+    "sigma_pct": 2,
+    "status": "ok"
+  },
+  "side_left": {
+    "xy": [
+      30.7,
+      57.82
+    ],
+    "sigma_pct": 2.5,
+    "status": "low_contrast"
+  },
+  "side_right": {
+    "xy": [
+      59.8,
+      57.82
+    ],
+    "sigma_pct": 2,
+    "status": "low_contrast"
+  },
+  "flags": [
+    "art_irregular_no_drawn_frame",
+    "collar_occluded_hood"
+  ],
+  "top_extreme": [
+    46.2,
+    41.84
+  ],
+  "bottom_extreme": [
+    45.55,
+    73.58
+  ],
+  "complement_notes": [
+    "mesma tomada em preto, mesma conclusao. Topo conferido em recorte de 108 px por ponto percentual, coincide com a branca dentro de 0,1 pp. Extremos quase centrados (+1,5 e +0,9 pp)."
+  ]
+}

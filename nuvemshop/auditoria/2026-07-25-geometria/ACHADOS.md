@@ -13,46 +13,66 @@ no CSV com o motivo.
 
 | Escala | Nº |
 |---|---|
-| OK | 19 |
-| Reprovado por impossibilidade física | 3 |
-| Fora do alvo (tamanho G) | 3 |
-| Sem veredito | 14 |
+| OK (≤5%, ou ≤ a margem do método) | 21 |
+| Aceitável (5% a 8%) | 2 |
+| Fora do alvo (tamanho G) | 11 |
+| Reprovado por impossibilidade física | 2 |
+| Sem veredito | 3 |
 | Sem tabela de medidas (Blusão Moletom) | 2 |
 
-Posição: **41 inconclusivas**. Não é falta de dado, é limite do método — ver a seção própria.
+Posição: **41 inconclusivas**. Não é falta de dado, é limite do método, e a rodada complementar de
+anotação descobriu **por quê** — ver a seção própria.
 
 ## Fila de correção
 
-> [!warning] **Metade de baixo da fila está SUSPENSA (25/07, noite).**
-> Uma revisão independente da matemática achou que o gerador sintético tinha o **sinal da
-> profundidade invertido**: ele modelava um dorso côncavo, com as laterais mais perto da câmera em
-> vez de mais longe. Corrigido, o viés do caminho de medição usado por **todas as 41 fotos** (arte
-> irregular, caixa envolvente) passou de **+2,85 pp para −3,04 pp** — mesmo módulo, sinal oposto.
-> Sinal negativo significa que o medidor faz a estampa parecer **menor** do que é, que é exatamente
-> a assinatura da fila inteira.
+> [!info] **Suspensão de 25/07 (noite) LEVANTADA.** A suspensão existia porque o gerador sintético
+> tinha o sinal da profundidade invertido (modelava um dorso côncavo) e, corrigido, o viés do
+> caminho de medição de arte irregular passou de +2,85 pp para −3,04 pp. A dúvida era se esse viés
+> explicava a fila inteira.
 >
-> As três reprovações por impossibilidade física **sobrevivem** com folga: mesmo somando os 3 pp, o
-> Salmo 19 continua implicando 78 cm num canguru que vai a 70, e as duas oversized continuam acima
-> de 90 cm numa peça que vai a 86. Essas três seguem valendo.
+> Não explica. O efeito foi modelado no sintético com tinta irregular de verdade e calculado
+> **por foto** a partir da posição lateral dos extremos de tinta, que a rodada complementar de
+> anotação declarou nas 41 fotos. Resultado: nas fotos reais os extremos ficam a poucos centímetros
+> do centro e o viés não passa de **±1 pp**. Os −3,04 pp vinham de arte retangular anotada pelos
+> cantos, a ±15,5 cm de arco — um caso que o catálogo não tem.
 >
-> As três de **fora do alvo** não sobrevivem: −9,7% cairia para −6,7%, −8,5% para −5,5% e −8,1%
-> para −5,1%. **Não gerar substituição para essas três** até a margem de arte irregular ser
-> re-derivada. O número de −3,04 pp também não pode ser aplicado como correção direta: ele foi
-> medido num sintético que só sabe gerar arte RETANGULAR anotada pelos cantos, e arte de spray tem
-> os extremos de tinta bem mais perto do centro, onde o efeito é muito menor. O que falta é modelar
-> tinta irregular no sintético e medir o viés de verdade.
-
+> O viés entra agora onde é honesto: alargando a faixa de incerteza do comprimento implícito, e não
+> deslocando a estimativa. Nenhum veredito mudou por causa dele.
 
 Sinal negativo = estampa **menor** que o alvo.
 
-| Desvio | Veredito | Peça | Evidência |
+| Desvio | Veredito | Faixa decide? | Peça |
 |---|---|---|---|
-| −19,9% | Impossibilidade | Salmo 19 \| Moletom Canguru `[352619175]` | implica peça de 81,2 cm; o canguru real vai de 60 a 70 |
-| −12,9% | Impossibilidade | Querubim Spray \| Oversized `[352725749]` | implica 94,1 cm; a oversized vai de 78 a 86 |
-| −12,5% | Impossibilidade | Acima de Tudo Gótico \| Oversized `[352720257]` | implica 93,7 cm; é vista frontal e mesmo assim conclusivo (ver abaixo) |
-| −9,7% | Fora do alvo | São Miguel Vintage \| Premium `[352407196]` | 83,6 cm implícitos contra 75,5 do tamanho G |
-| −8,5% | Fora do alvo | Brasão NIMBUS \| Premium `[352717837]` | 82,5 cm implícitos |
-| −8,1% | Fora do alvo | Espírito Santo Spray \| Premium `[352721477]` | 82,1 cm implícitos |
+| −19,9% | Impossibilidade | **sim** | Salmo 19 \| Moletom Canguru `[352619175]` — implica 81,2 cm; o canguru vai a 70 |
+| −15,0% | Fora do alvo | **sim** | São Jorge Vintage \| Moletom Canguru `[352618878]` |
+| −12,9% | Fora do alvo | **sim** | Querubim Spray \| Oversized `[352725749]` (preta) |
+| −12,5% | Impossibilidade | **sim** | Acima de Tudo Gótico \| Oversized `[352720257]` — implica 93,7 cm; a oversized vai a 86 |
+| −11,9% | Fora do alvo | só a 5% | São Jorge Neobarroco \| Moletom Canguru `[352718787]` (preta) |
+| −11,3% | Fora do alvo | só a 5% | Querubim Spray \| Oversized `[352725749]` (off-white) |
+| −10,3% | Fora do alvo | só a 5% | NIMBUS Wildstyle \| Oversized `[352721633]` |
+| −9,8% | Fora do alvo | não | São Miguel Vintage \| Moletom Canguru `[352407156]` (preta) |
+| −9,7% | Fora do alvo | não | São Miguel Vintage \| Premium `[352407196]` |
+| −9,2% | Fora do alvo | não | São Miguel Vintage \| Moletom Canguru `[352407156]` (branca) |
+| **+9,2%** | Fora do alvo | não | São Jorge Neobarroco \| Premium `[352718999]` (branca) — **única positiva** |
+| −8,5% | Fora do alvo | não | Brasão NIMBUS \| Premium `[352717837]` |
+| −8,1% | Fora do alvo | não | Espírito Santo Spray \| Premium `[352721477]` |
+
+**13 fotos, 11 produtos.** A coluna "faixa decide?" (`band_decisive` no CSV) diz se a faixa INTEIRA
+de incerteza fica fora da tolerância, ou seja se nem o extremo mais favorável salva a foto. Quatro
+entradas são indiscutíveis nesse sentido; três só a 5%; seis dependem da estimativa pontual e
+apertariam com segunda anotação. Corrigir na ordem da tabela.
+
+### Por que a fila cresceu de 6 para 13
+
+Não foi a tolerância nova, e não foi medição nova: foi **um defeito de lógica**. Os dois eixos de
+veredito dividiam o mesmo `if/else`, então um "não sei" do eixo DURO (nenhum tamanho real explica)
+silenciava um "fora do alvo" do eixo de CATÁLOGO (desvia do G). Sete fotos saíam `INCONCLUSIVO`
+tendo desvio medido entre 9% e 15%.
+
+O sintoma que denunciou: a Querubim Spray Oversized preta, com −12,9% contra o G, **saiu** da fila
+no momento em que a faixa de incerteza alargou o suficiente para encostar na faixa física da peça.
+Incerteza maior não pode aprovar foto nenhuma. Os dois eixos agora são avaliados em separado, e o
+duro só ganha quando fecha — porque quando fecha é indiscutível.
 
 **Reprovação por impossibilidade** significa que nenhum tamanho real da peça explica a geometria da
 foto. Não é comparação com um alvo escolhido, e nenhum "e se o modelo veste EG" derruba. **Fora do
@@ -99,22 +119,32 @@ Barroca Oversized (−1,4% e −1,1%). Pares tão apertados em fotos independent
 a medição está estável, não só de que as peças estão certas.
 
 Casos que a auditoria antiga mandava REFAZER e que a medição **aprova**: São Miguel Vitorioso
-Moletom `[352726673]` (−1,5% e +6,8%), São Miguel Vitorioso Oversized `[352727545]` (−4,3%),
-São Jorge Neobarroco Moletom `[352718787]` (−4,1%) e Anjo da Guarda Stencil Premium `[352728357]`
-(+2,5%). Refazer essas fotos seria gastar crédito para corrigir defeito que não existe.
+Moletom `[352726673]` (−1,5% e +6,8%), São Miguel Vitorioso Oversized `[352727545]` (−4,3%) e
+Anjo da Guarda Stencil Premium `[352728357]` (+2,5%). Refazer essas fotos seria gastar crédito para
+corrigir defeito que não existe.
 
-## Por que 14 ficaram sem veredito
+> [!warning] **A aprovação é POR FOTO, não por produto — correção de 25/07.**
+> São Jorge Neobarroco Moletom `[352718787]` estava nessa lista como aprovado. A medição aprova a
+> foto **branca** (−4,1%); a foto **preta** mede −11,9% e entrou na fila. Ela vinha saindo
+> `INCONCLUSIVO` pelo defeito de lógica descrito acima, então a aprovação do produto foi lida a
+> partir da única foto que tinha veredito. Um produto com duas cores tem duas fotos e pode ter dois
+> resultados; o piloto de 22/07 mediu a branca.
+
+## Por que só 3 ficaram sem veredito (eram 14)
 
 | Causa | Nº |
 |---|---|
-| A incerteza declarada pelo anotador alcança a faixa real da peça | 11 |
 | Anisotropia positiva: a altura medida da arte não fecha | 2 |
-| Barra fora do quadro | 1 |
+| Margem do método maior que o desvio, em arte irregular | 1 |
 
-A causa dominante tem nome: **capuz e cabelo**. Em toda foto de Moletom Canguru com capuz caído a
-gola desaparece, o anotador declara sigma alto, e a faixa de incerteza atravessa o limite da peça.
-O veredito passaria a depender de um ponto que ninguém viu, e o medidor se recusa — foi exatamente
-tratar palpite como medida que invalidou as auditorias anteriores.
+As outras 11 saíam sem veredito porque a incerteza declarada pelo anotador (capuz e cabelo cobrindo
+a gola) alcançava a faixa física da peça — e isso derrubava o eixo DURO. Com os dois eixos
+separados, o eixo de catálogo continua respondendo: a incerteza da gola alarga a faixa, mas não
+apaga um desvio de 12% contra o G. Sete delas foram para a fila e quatro para `OK`.
+
+**A ressalva do capuz continua valendo** onde ela realmente morde: nenhuma dessas 11 tem
+reprovação por impossibilidade física, porque para essa é a faixa inteira que precisa cair fora, e
+com a gola encoberta ela não cai.
 
 **Consequência para produção:** foto de canguru precisa mostrar a base da gola. Isso vale como
 requisito no prompt de geração, não como preferência.
@@ -138,9 +168,40 @@ triagem humana. Os maiores: **São Miguel Vintage Premium com −24,9%**, **Anjo
 12,4%** e **São Jorge Neobarroco Moletom com −8,7%**. Não são vereditos: nas três a pose tem
 guinada, que sozinha produz esse efeito. São as fotos a olhar primeiro numa conferência visual.
 
-Para resolver de verdade não adianta mais cálculo. Ou se anotam as laterais do tronco em duas
-alturas (o que cancela o contraposto por diferença), ou se mede a posição no **mockup plano** da
-YouDraw, onde não há enrolamento, guinada nem contraposto.
+### A rodada complementar tentou destravar e descobriu por que não dá
+
+O plano era trocar o estimador de centro: em vez do vinco manga/tronco (que erra 2,3 cm a 10° de
+guinada), usar os dois pontos de **tangência da silhueta** do tronco. Para seção circular o ponto
+médio das duas tangentes é exatamente a projeção do eixo, **para qualquer guinada** — um círculo é
+invariante a rotação em torno do próprio eixo. Medido em 2.160 cenas com ruído de anotação, a
+silhueta ganha do vinco em todos os regimes: RMSE 0,87 cm contra 0,96, e viés −0,05 contra +0,31.
+
+Seis anotadores independentes foram às 41 fotos marcar esses dois pontos. **Nenhuma foto tem onde
+marcá-los.** Em 41 de 41 o contorno externo na altura do meio da estampa é a **manga**, não o
+tronco:
+
+- braço caído colado ao corpo, sem vão de fundo entre manga e tronco;
+- oversized de ombro caído, onde acima da cava tronco e manga são a mesma peça de tecido;
+- moletom de manga longa, em que dá para seguir o tubo da manga até o punho;
+- e, num caso, os dois braços dobrados com as mãos no rosto, onde quem encosta no fundo é o
+  cotovelo.
+
+As barras das mangas aparecem 7 a 10 pp da imagem **abaixo** da altura da arte. Em três fotos o
+braço nu ainda passa por cima da borda do tronco depois disso, então não existe altura nenhuma em
+que a silhueta do tronco apareça limpa contra o fundo.
+
+Isso é limite de **oclusão**, não de matemática: o estimador continua correto e continua
+implementado, só não há onde aplicá-lo. Os anotadores registraram os valores da manga nas notas,
+marcados como não utilizáveis — usar a silhueta do braço como se fosse a do tronco seria fabricar
+número, que é o erro que invalidou as auditorias anteriores.
+
+**Segundo requisito de produção, do mesmo tipo do capuz:** para que a posição seja mensurável, a
+foto precisa mostrar o **braço afastado do tronco** na altura da estampa, com fundo visível entre
+os dois. Hoje nenhuma capa do catálogo atende.
+
+Enquanto isso não existir, a centralização fina se confere no **mockup plano** da YouDraw, onde não
+há enrolamento, guinada nem contraposto — e, na geração, ela fica certa por construção quando a
+arte é composta por homografia inversa em vez de redesenhada.
 
 ## Achados de fidelidade (não são escala)
 
