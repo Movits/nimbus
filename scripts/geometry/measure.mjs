@@ -124,8 +124,18 @@ const YAW_RANGE_RAD = [-20, -10, 0, 10, 20].map((d) => (d * Math.PI) / 180);
  *
  * Aqui o vies vira faixa calculada com o que se sabe: a posicao lateral dos
  * extremos (declarada pelo anotador), o raio na faixa da tabela de medidas, e
- * a distancia de camera na faixa acima. O sinal e sempre negativo, entao a
- * correcao so pode empurrar o desvio para CIMA.
+ * a distancia de camera na faixa acima.
+ *
+ * A faixa sai de DOIS lados, nao so do negativo. Com guinada zero o efeito e
+ * de fato so de encolhimento, mas a guinada desloca o arco: um extremo pode
+ * acabar mais PERTO da camera que o centro e projetar ampliado. Como a guinada
+ * nao e conhecida, os dois sinais entram.
+ *
+ * Aplicado as anotacoes reais, este vies e PEQUENO: nas fotos medidas os
+ * extremos ficam a poucos centimetros do centro e a faixa nao passa de +-1 pp.
+ * Ou seja ele NAO explica a margem de 8 pp da arte irregular — essa margem vem
+ * de desacordo entre anotadores sobre onde a tinta difusa termina, que e
+ * problema de definicao de borda e so cai com segunda anotacao.
  *
  * @returns {[number,number]|null} faixa do vies em pontos percentuais
  */

@@ -126,6 +126,20 @@ for (const key of ART_KEYS) {
   disagreement[`art.${key}`] = Number(c.spread.toFixed(2));
 }
 
+// Extremos de tinta da arte irregular. Ficam FORA do consenso de `art` porque
+// nao sao vertices de uma caixa: sao o pixel de tinta mais alto e o mais baixo,
+// que em spray/stencil caem em posicoes laterais diferentes. E essa separacao
+// lateral que encolhe a altura medida, e o medidor so consegue corrigi-la
+// quando o anotador declara ONDE cada extremo esta.
+function mergeExtreme(name) {
+  const pts = annotations.map((a) => a[name]).filter(Boolean).map((e) => (Array.isArray(e) ? e : e.xy)).filter(Boolean);
+  if (pts.length === 0) return null;
+  const sig = annotations.map((a) => a.art?.sigma_pct ?? 1).slice(0, pts.length);
+  const c = consensus(pts, sig);
+  disagreement[name] = Number(c.spread.toFixed(2));
+  return toPx(c.xy, size);
+}
+
 function mergeNamed(name) {
   const entries = annotations.map((a) => a[name]).filter((e) => e?.xy);
   if (entries.length === 0) return { value: null, status: "missing" };
@@ -157,7 +171,12 @@ if (hem.status !== "ok" && hem.status !== "missing") flags.push(`hem:${hem.statu
 
 const result = measurePrint(
   {
-    art: { ...art, sigma_px: (Math.max(...annotations.map((a) => a.art?.sigma_pct ?? 0.5)) / 100) * Math.max(size.w, size.h) },
+    art: {
+      ...art,
+      topExtreme: mergeExtreme("top_extreme"),
+      bottomExtreme: mergeExtreme("bottom_extreme"),
+      sigma_px: (Math.max(...annotations.map((a) => a.art?.sigma_pct ?? 0.5)) / 100) * Math.max(size.w, size.h),
+    },
     artSize: { w_cm, h_cm },
     garment: row.garment,
     // A vista muda o significado da regua gola->barra: ver o bloco de vereditos
