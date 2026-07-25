@@ -153,12 +153,20 @@ function buildPrompt(task) {
   push(task.artHelperRef, `REFERENCE {N} is an APPROVED photo of a different garment carrying THIS EXACT SAME artwork, correctly printed: copy the artwork content precisely as it appears there (composition, colors, framing elements), adapted to this garment at the size specified below.`);
   push(task.sceneRef, `REFERENCE {N} is the approved campaign photo of this exact product in another color: match the SAME model, SAME scene, SAME framing, SAME pose, SAME natural light and — critically — the EXACT SAME print size and position, changing ONLY the garment color to ${task.color}.`);
 
+  // ENQUADRAMENTO MENSURAVEL. As duas condicoes abaixo nao sao estilo: elas
+  // decidem se a foto pode ser CONFERIDA depois. Na auditoria de 25/07, capuz
+  // caido sobre a gola deixou 11 fotos sem veredito de escala, e braco colado
+  // ao tronco deixou 41 de 41 sem veredito de POSICAO — na altura da estampa o
+  // contorno externo vira a manga, e o medidor perde a referencia do tronco.
+  const MEASURABLE_POSE =
+    "MEASURABLE FRAMING (required for post-generation verification): the base of the COLLAR must be visible and unobstructed — no hood, hair or collar flap covering it — and BOTH ARMS must hang clearly AWAY from the torso at print height, with visible background between each arm and the body, so the outline of the torso itself can be seen on both sides.";
+
   const pose =
     task.view === "back"
-      ? "Full or three-quarter rear view, with the whole torso from collar to hem inside the frame so the print size can be judged, and enough body visible to read the garment silhouette."
+      ? `Full or three-quarter rear view, with the whole torso from collar to hem inside the frame so the print size can be judged, and enough body visible to read the garment silhouette. ${MEASURABLE_POSE}`
       : task.isEcobag
         ? "Three-quarter front view while naturally carrying the ecobag so its entire printed face is clearly visible and flat."
-        : "Three-quarter front view with the whole torso from collar to hem inside the frame so the print size can be judged.";
+        : `Three-quarter front view with the whole torso from collar to hem inside the frame so the print size can be judged. ${MEASURABLE_POSE}`;
 
   const partes = [
     `Create one square photorealistic NIMBUS ${task.collection} ecommerce lifestyle image for "${task.title}" (${task.color} colorway).`,
@@ -188,9 +196,10 @@ function buildPrompt(task) {
     // porque o tecido enrola no dorso e as laterais fogem da camera. A pergunta
     // empurrava para estampa estreita sem nunca acusar estampa pequena demais.
     `(3) Is the print CENTERED between the two side seams?`,
+    !task.isEcobag ? `(3b) Is the base of the collar unobstructed, and is there visible background between EACH arm and the torso at print height? If not, the photo cannot be measured and must be redone.` : null,
     `(4) Is every letter in the artwork spelled exactly as in the artwork reference?`,
     `(5) Does the ink follow the fabric folds instead of sitting flat like a sticker?`,
-  ].join(" ");
+  ].filter(Boolean).join(" ");
   partes.push(checklist);
 
   return { prompt: partes.join(" "), images: imgs };

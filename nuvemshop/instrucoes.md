@@ -94,27 +94,44 @@ Por que as antigas caíram, para não repetir:
   peça — foi isso que fabricou o resultado "nenhuma estampa mede maior que o oficial".
 
 O medidor está em `scripts/geometry/` e passa no teste de verdade conhecida
-(`node scripts/geometry/validate.mjs`, sai com código 1 se falhar). Margem publicada de escala:
-3 pontos percentuais com anotação de 8 pontos. **Nenhum veredito sai com esse portão vermelho.**
+(`node scripts/geometry/validate.mjs`, sai com código 1 se falhar). **Nenhum veredito sai com esse
+portão vermelho.**
+
+**Tolerância** (decisão do dono, 25/07): OK até 5%, aceitável de 5% a 8%, fila acima de 8%. Com
+piso mecânico: o limiar efetivo nunca fica abaixo da margem medida do método no modo de anotação
+daquela foto — 4 pp com moldura desenhada, 8 pp com caixa envolvente. Hoje o ±5% só alcança as 3
+fotos de São Jorge Neobarroco; nas outras 38 o piso é 8%. Apertar exige derrubar a margem, não
+reescrever o número.
 
 Resultado em 41 fotos de 31 produtos, detalhado em
-`nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`: 19 OK, 3 reprovadas por impossibilidade
-física, 3 fora do alvo, 14 sem veredito, 2 sem tabela de medidas.
+`nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`: 21 OK, 2 aceitáveis, 11 fora do alvo,
+2 reprovadas por impossibilidade física, 3 sem veredito, 2 sem tabela de medidas.
 
-**Fila de correção** (todas com estampa MENOR que o alvo, o oposto do que se acreditava):
-Salmo 19 Moletom `[352619175]` −19,9% · Querubim Spray Oversized `[352725749]` −12,9% ·
-Acima de Tudo Gótico Oversized `[352720257]` −12,5% · São Miguel Vintage Premium `[352407196]`
-−9,7% · Brasão NIMBUS Premium `[352717837]` −8,5% · Espírito Santo Spray Premium `[352721477]` −8,1%.
+**Fila de correção: 13 fotos, 11 produtos.** Doze com estampa MENOR que o alvo, o oposto do que se
+acreditava. As quatro mais firmes (faixa inteira de incerteza fora da tolerância): Salmo 19 Moletom
+`[352619175]` −19,9% · São Jorge Vintage Moletom `[352618878]` −15,0% · Querubim Spray Oversized
+`[352725749]` preta −12,9% · Acima de Tudo Gótico Oversized `[352720257]` −12,5%. A lista completa,
+com a coluna `band_decisive`, está no ACHADOS.
 
-**NÃO refazer** `352726673`, `352727545`, `352718787` e `352728357`: a lista REFAZER antiga
-condenava as quatro e a medição aprova.
+A fila era de 6 e cresceu por correção de defeito, não por medição nova: os dois eixos de veredito
+dividiam o mesmo `if/else`, e um "não sei" do eixo duro silenciava um "fora do alvo" do eixo de
+catálogo.
 
-**Posição** continua sem veredito nas 41, e isso é limite medido do método, não falta de dado:
-ele confirma centralização abaixo de ~2 cm e reprova acima de ~7 cm. Centralização fina se confere
-no mockup plano, onde não há enrolamento nem pose.
+**NÃO refazer** `352726673`, `352727545` e `352728357`: a lista REFAZER antiga condenava e a
+medição aprova. `352718787` saiu dessa lista — a aprovação é POR FOTO, e só a branca (−4,1%) passa;
+a preta mede −11,9% e está na fila.
 
-**Requisito de produção novo:** foto de Moletom Canguru precisa mostrar a base da gola. Capuz caído
-sobre as costas torna a peça impossível de medir, e foi a causa de 11 dos 14 sem veredito.
+**Posição** continua sem veredito nas 41, e agora se sabe por quê de forma medida. O estimador bom
+(tangência da silhueta do tronco) não tem onde ser aplicado: em 41 de 41 fotos o contorno externo
+na altura da estampa é a MANGA, não o tronco. É limite de oclusão, não de matemática. Centralização
+fina se confere no mockup plano, onde não há enrolamento nem pose.
+
+**Dois requisitos de produção**, ambos para o prompt de geração:
+
+1. Foto de Moletom Canguru precisa mostrar a base da gola. Capuz caído sobre as costas torna a peça
+   impossível de medir.
+2. Para a posição ser mensurável, o braço precisa estar afastado do tronco na altura da estampa,
+   com fundo visível entre os dois. Hoje nenhuma capa do catálogo atende.
 
 ## Regras de conteúdo (valem sempre)
 

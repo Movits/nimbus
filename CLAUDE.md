@@ -190,44 +190,67 @@ Por que cairam, para nao repetir:
 
 O medidor novo esta em `scripts/geometry/` e PASSA no teste de verdade
 conhecida (`node scripts/geometry/validate.mjs`, 38.880 cenas sinteticas;
-o script sai com codigo 1 se qualquer criterio falhar). Precisao publicada:
-escala com vies +0,6 pp e margem de 3 pp com anotacao de 8 pontos. Nenhum
-veredito e publicado sem esse portao verde.
+o script sai com codigo 1 se qualquer criterio falhar). Nenhum veredito e
+publicado sem esse portao verde.
+
+TOLERANCIA (decisao do dono, 25/07): OK ate 5%, ACEITAVEL de 5% a 8%,
+FORA-DO-ALVO acima de 8%. Com uma trava mecanica: o limiar efetivo de cada
+foto nunca fica abaixo da margem MEDIDA do metodo no modo em que ela foi
+anotada — 4 pp para arte com moldura desenhada, 8 pp para arte de silhueta
+livre (spray, stencil). Na pratica o +-5% vale hoje so para as 3 fotos de Sao
+Jorge Neobarroco; para as outras 38 o piso e 8%. Apertar exige DERRUBAR a
+margem (segunda anotacao, recorte ampliado), nunca reescrever o numero. O
+criterio `toleranceExceedsMargin` em `validate.mjs` deixa o portao vermelho se
+alguem tentar.
 
 **Resultado, 41 fotos de 31 produtos** (`nuvemshop/auditoria/2026-07-25-geometria/`):
 
-- 19 escala OK
-- 3 REPROVADO-DURO (impossibilidade fisica)
-- 3 FORA-DO-ALVO (desvio vs tamanho G)
-- 14 sem veredito, 11 delas por capuz/cabelo cobrindo a gola
+- 21 escala OK
+- 2 ACEITAVEL (5-8%)
+- 11 FORA-DO-ALVO (desvio vs tamanho G)
+- 2 REPROVADO-DURO (impossibilidade fisica)
+- 3 sem veredito
 - 2 sem tabela de medidas (Blusao Moletom)
 
-FILA DE CORRECAO, todas com estampa MENOR que o alvo:
+FILA DE CORRECAO: **13 fotos, 11 produtos**. A lista completa, com a coluna
+`band_decisive` que diz quais entradas sao indiscutiveis, esta em
+`nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`. As quatro mais firmes
+(faixa inteira fora da tolerancia):
 
 - Salmo 19 | Moletom Canguru `[352619175]` — −19,9%, implica peca de 81 cm
-- Querubim Spray | Oversized `[352725749]` — −12,9%, implica 94 cm
+- Sao Jorge Vintage | Moletom Canguru `[352618878]` — −15,0%
+- Querubim Spray | Oversized `[352725749]` preta — −12,9%
 - Acima de Tudo Gotico | Oversized `[352720257]` — −12,5%, implica 94 cm
-- Sao Miguel Vintage | Premium `[352407196]` — −9,7%
-- Brasao NIMBUS | Premium `[352717837]` — −8,5%
-- Espirito Santo Spray | Premium `[352721477]` — −8,1%
 
-O sinal e o oposto do que as auditorias invalidadas diziam, e coerente com o
-erro delas: comparar largura entre mockup plano e foto vestida fabrica
-"estampa grande".
+DOZE das treze tem estampa MENOR que o alvo. A unica positiva e Sao Jorge
+Neobarroco | Premium `[352718999]` branca, +9,2%. O sinal predominante e o
+oposto do que as auditorias invalidadas diziam, e coerente com o erro delas:
+comparar largura entre mockup plano e foto vestida fabrica "estampa grande".
 
-QUATRO fotos que a lista REFAZER antiga condenava PASSAM na medicao e NAO
-devem ser refeitas: `352726673`, `352727545`, `352718787`, `352728357`.
+A fila era de 6 ate 25/07 a noite. Cresceu por CORRECAO DE DEFEITO, nao por
+medicao nova: os dois eixos de veredito dividiam o mesmo if/else, e um "nao
+sei" do eixo duro silenciava um "fora do alvo" do eixo de catalogo.
 
-POSICAO: as 41 sairam inconclusivas, e isso e limite MEDIDO do metodo. Tres
-efeitos fisicos (contraposto contra guinada, compressao do deslocamento,
-tamanho vestido) somam faixa minima de ~4 cm. O medidor confirma
-centralizacao abaixo de ~2 cm e reprova acima de ~7 cm; entre os dois declara
-que nao sabe. Centralizacao fina se confere no MOCKUP PLANO, nao na foto
-vestida.
+TRES fotos que a lista REFAZER antiga condenava PASSAM na medicao e NAO devem
+ser refeitas: `352726673`, `352727545`, `352728357`. ATENCAO: `352718787` saiu
+dessa lista — a aprovacao e POR FOTO, e so a branca (−4,1%) passa; a preta mede
+−11,9% e esta na fila.
 
-REQUISITO DE PRODUCAO que saiu daqui: foto de Moletom Canguru precisa mostrar
-a base da gola. Com o capuz caido sobre as costas a peca fica impossivel de
-medir, e foi essa a causa de 11 dos 14 sem veredito.
+POSICAO: as 41 seguem inconclusivas, e agora se sabe POR QUE de forma medida.
+O estimador bom (tangencia da silhueta do tronco, exato para seccao circular em
+qualquer guinada, RMSE 0,87 cm contra 0,96 do vinco) NAO TEM ONDE SER APLICADO:
+em 41 de 41 fotos o contorno externo na altura da estampa e a MANGA, nao o
+tronco, e as barras das mangas ficam 7 a 10 pp abaixo. E limite de OCLUSAO, nao
+de matematica. Centralizacao fina se confere no MOCKUP PLANO, e na geracao ela
+fica certa por construcao quando a arte e composta por homografia inversa.
+
+DOIS REQUISITOS DE PRODUCAO que sairam daqui, ambos para o prompt de geracao:
+
+1. Foto de Moletom Canguru precisa mostrar a base da gola. Com o capuz caido
+   sobre as costas a peca fica impossivel de medir.
+2. Para a posicao ser mensuravel, o braco precisa estar AFASTADO do tronco na
+   altura da estampa, com fundo visivel entre os dois. Hoje nenhuma capa do
+   catalogo atende.
 
 ### Tabela de medidas real das pecas (YouDraw, via `scripts/build-prelaunch-matrix.mjs`)
 

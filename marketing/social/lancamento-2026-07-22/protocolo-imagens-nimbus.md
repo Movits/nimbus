@@ -22,13 +22,26 @@
 - Não mudar a cor da peça.
 - Não adicionar ou remover capuz, bolso, gola ou manga.
 - Manter o mesmo modelo quando a tarefa for somente uma variação de cor.
-- Manter a escala da estampa dentro de 8% do alvo, medido pelo **comprimento de
-  peça implícito** (`scripts/measure-print-geometry.mjs`) contra a tabela de
+- Manter a escala da estampa dentro de **5%** do alvo, medido pelo **comprimento
+  de peça implícito** (`scripts/measure-print-geometry.mjs`) contra a tabela de
   medidas real da YouDraw no tamanho **G**, que é a convenção adotada para toda
-  foto lifestyle. Não usar "proporção observada no mockup": comparar a razão
-  estampa/peça entre um mockup plano e uma foto vestida é inválido, porque na
-  peça vestida o tecido enrola e as laterais fogem da câmera. Foi essa
+  foto lifestyle. Entre 5% e 8% é aceitável e não motiva regeração por si só;
+  acima de 8% entra na fila. Não usar "proporção observada no mockup": comparar
+  a razão estampa/peça entre um mockup plano e uma foto vestida é inválido,
+  porque na peça vestida o tecido enrola e as laterais fogem da câmera. Foi essa
   comparação que produziu as duas auditorias invalidadas.
+- A tolerância é **simétrica**. Estampa pequena demais é defeito igual a estampa
+  grande demais, e é o defeito que o catálogo realmente tem: 12 das 13 fotos da
+  fila estão ABAIXO do alvo. Nunca instruir o gerador a "na dúvida, renderizar
+  menor" — essa trava existia até 25/07 e é provável causa do defeito.
+- **Enquadramento mensurável.** Duas condições que a auditoria de 25/07 mostrou
+  serem necessárias para conferir a foto depois:
+  1. Em Moletom Canguru, a **base da gola** precisa aparecer. Capuz caído sobre
+     as costas torna a peça impossível de medir.
+  2. O **braço precisa estar afastado do tronco** na altura da estampa, com
+     fundo visível entre os dois. Sem isso o contorno externo é a manga e a
+     posição da estampa fica inconclusiva — foi o que aconteceu em 41 de 41
+     fotos do catálogo atual.
 - Preservar as fotos planas da YouDraw na galeria do produto.
 
 ## Ciclo obrigatório (um produto por vez)
