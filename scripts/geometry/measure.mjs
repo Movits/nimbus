@@ -90,14 +90,32 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   // camera que a linha central onde estao gola e barra, e projetam ~2% maiores
   // — o que injetava um vies de +2,5 pontos na escala. A linha central esta na
   // mesma profundidade dos landmarks de referencia.
+  //
+  // ATENCAO ao tipo de arte. Os cm oficiais descrevem a CAIXA ENVOLVENTE da
+  // tinta. Numa arte com moldura desenhada (azulejo, rococo) a aresta existe
+  // de fato, e o ponto medio dela esta na linha central da peca — e ai vale a
+  // regra acima. Numa arte de silhueta irregular (spray, stencil) NAO existe
+  // aresta: a tinta no meio horizontal nao chega ao topo da caixa. Medir pelo
+  // "ponto medio" nesse caso subestima a altura (num caso real, 16%).
+  // Entao: moldura => pontos medios; irregular => extensao da caixa.
   const mid = (a, b) => [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2];
-  const topMid = input.art.mt ?? mid(input.art.tl, input.art.tr);
-  const bottomMid = input.art.mb ?? mid(input.art.bl, input.art.br);
-  const leftMid = input.art.ml ?? mid(input.art.tl, input.art.bl);
-  const rightMid = input.art.mr ?? mid(input.art.tr, input.art.br);
+  const shape = input.artShape ?? (input.art.mt ? "rect_frame" : "irregular");
+  const hasEdgeMidpoints = shape === "rect_frame" && input.art.mt && input.art.mb;
+
+  const topMid = hasEdgeMidpoints ? input.art.mt : mid(input.art.tl, input.art.tr);
+  const bottomMid = hasEdgeMidpoints ? input.art.mb : mid(input.art.bl, input.art.br);
+  const leftMid =
+    shape === "rect_frame" && input.art.ml ? input.art.ml : mid(input.art.tl, input.art.bl);
+  const rightMid =
+    shape === "rect_frame" && input.art.mr ? input.art.mr : mid(input.art.tr, input.art.br);
 
   const artH_px = dist(topMid, bottomMid);
   const artW_px = dist(leftMid, rightMid);
+  if (!hasEdgeMidpoints) {
+    notes.push(
+      "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+    );
+  }
 
   // ---------------------------------------------------------------- alpha
   // Detector de anisotropia: aspecto MEDIDO em pixels contra o aspecto OFICIAL
@@ -311,7 +329,27 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     notes.push(reason);
   };
   if (mode === "bbox") penalise(15, "arte irregular: cantos sao caixa envolvente, nao vertices");
-  for (const flag of flags) penalise(20, `ressalva do anotador: ${flag}`);
+
+  // As ressalvas dos anotadores sao agrupadas por CATEGORIA antes de descontar.
+  // Dois anotadores independentes descrevendo o mesmo capuz nao sao dois
+  // problemas — sao um problema visto duas vezes, e concordancia entre eles e
+  // sinal de qualidade, nao de risco.
+  const CATEGORIES = [
+    [/hood|capuz/i, "gola oculta pelo capuz", 25],
+    [/hair|cabelo/i, "gola oculta pelo cabelo", 25],
+    [/collar/i, "gola com leitura indireta", 20],
+    [/hem|barra/i, "barra com baixo contraste ou fora de quadro", 20],
+    [/irregular|no_drawn_frame|silhouette/i, "arte sem aresta desenhada", 10],
+    [/side|seam|lateral/i, "laterais do tronco nao visiveis", 10],
+  ];
+  const seen = new Set();
+  for (const flag of flags) {
+    const hit = CATEGORIES.find(([re]) => re.test(flag));
+    const key = hit ? hit[1] : `ressalva: ${flag}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    penalise(hit ? hit[2] : 15, key);
+  }
   if (!haveCollar) penalise(40, "gola nao anotada");
   if (!haveHem) penalise(50, "barra nao anotada");
   if (alphaRegime === "guinada_moderada") penalise(15, `pose com alpha ${alphaPct.toFixed(1)}%`);
@@ -321,16 +359,10 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   if (widthCheck?.consistentWithTable === false) penalise(15, "eixos de largura e comprimento discordam");
   confidence = Math.max(0, Math.min(100, confidence));
 
-  const rank = {
-    OK: 0,
-    INDISPONIVEL: 1,
-    LIMITROFE: 1,
-    INCONCLUSIVO: 2,
-    "FORA-DO-ALVO": 3,
-    REPROVADO: 4,
-    "REPROVADO-DURO": 5,
-  };
-  const verdict = [scaleVerdict, position.verdict].reduce((a, b) => (rank[b] > rank[a] ? b : a));
+  // O veredito final NAO colapsa os dois eixos num rotulo so: "inconclusivo"
+  // no eixo da posicao nao pode apagar um "ok" solido no eixo da escala. Cada
+  // eixo responde por si, e o resumo diz os dois.
+  const verdict = `escala ${scaleVerdict} / posicao ${position.verdict}`;
 
   return {
     method: "nimbus.medidor/1",

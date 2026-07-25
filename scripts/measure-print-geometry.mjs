@@ -161,6 +161,12 @@ const result = measurePrint(
       sideL.value && sideR.value
         ? { left: sideL.value.center, right: sideR.value.center }
         : undefined,
+    // Arte irregular (spray, stencil, ilustracao livre) nao tem aresta: os
+    // pontos medios seguem o contorno do desenho, nao a borda da caixa. Os cm
+    // oficiais descrevem a CAIXA ENVOLVENTE, entao a medicao usa a caixa.
+    artShape: flags.some((f) => /irregular|no_drawn_frame|silhouette/i.test(f))
+      ? "irregular"
+      : "rect_frame",
     mode: ART_KEYS.every((k) => art[k]) ? "corners" : "bbox",
     flags,
   },
