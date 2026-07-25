@@ -129,10 +129,13 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   // ------------------------------------------------------- medidas em pixel
   // A ALTURA da arte e medida pela LINHA CENTRAL dela (meio da aresta de cima
   // ao meio da de baixo), nunca pelas bordas laterais. Motivo, medido na
-  // validacao: as bordas laterais ficam na parte curva do dorso, mais perto da
-  // camera que a linha central onde estao gola e barra, e projetam ~2% maiores
-  // — o que injetava um vies de +2,5 pontos na escala. A linha central esta na
-  // mesma profundidade dos landmarks de referencia.
+  // validacao: as bordas laterais ficam na parte curva do dorso, mais LONGE da
+  // camera que a linha central onde estao gola e barra, e projetam ~2,4%
+  // MENORES — o que injeta vies na escala. A linha central esta na mesma
+  // profundidade dos landmarks de referencia.
+  //
+  // (Ate 25/07 este comentario dizia "mais perto" e "maiores". Estava invertido,
+  // junto com o sinal da profundidade no gerador sintetico: ver synth.mjs.)
   //
   // ATENCAO ao tipo de arte. Os cm oficiais descrevem a CAIXA ENVOLVENTE da
   // tinta. Numa arte com moldura desenhada (azulejo, rococo) a aresta existe
@@ -590,8 +593,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   if (!haveCollar) penalise(40, "gola nao anotada");
   if (!haveHem) penalise(50, "barra nao anotada");
   if (alphaRegime === "guinada_moderada") penalise(15, `pose com alpha ${alphaPct.toFixed(1)}%`);
-  if (alphaRegime === "guinada_ou_enrolamento_forte")
-    penalise(25, `pose 3/4 forte, alpha ${alphaPct.toFixed(1)}%`);
+  if (alphaRegime === "guinada_forte") penalise(25, `pose 3/4 forte, alpha ${alphaPct.toFixed(1)}%`);
   if (alphaRegime === "vertical_comprimido") penalise(45, "alpha positivo alto");
   if (widthCheck?.consistentWithTable === false) penalise(15, "eixos de largura e comprimento discordam");
   confidence = Math.max(0, Math.min(100, confidence));

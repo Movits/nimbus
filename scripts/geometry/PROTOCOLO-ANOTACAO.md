@@ -47,12 +47,15 @@ tag do Querubim, por exemplo, encolheria a largura medida em 10% e produziria um
   modo que os pontos médios caem sobre a aresta.
   Aqui os pontos médios são o que dá a precisão de ±2 pontos percentuais: numa peça vestida a
   aresta é curva, e o meio dela está na mesma profundidade da gola e da barra, enquanto os cantos
-  estão na parte curva do dorso, mais perto da câmera.
+  estão na parte curva do dorso, mais longe da câmera.
 - `"shape": "irregular"` — ilustração livre, spray, stencil, **ou moldura que não contém toda a
   tinta**. Não existe aresta: a tinta no meio
   horizontal não alcança o topo da caixa. Nesse caso os pontos médios descrevem o contorno do
-  desenho e **não** são usados para medir altura; a medição cai para a caixa envolvente, com
-  margem de ±6 pontos percentuais.
+  desenho e **não** são usados para medir altura; a medição cai para a caixa envolvente, que
+  carrega margem maior. O número dessa margem está sendo re-derivado: o gerador sintético só sabia
+  gerar arte retangular, então a margem publicada até 25/07 (±6 pp) veio de um cenário que não
+  contém arte irregular nenhuma. Enquanto isso, **declare também o `x` do ponto de tinta mais alto
+  e do mais baixo** — é o que permite calcular o efeito em vez de estimá-lo.
 
 Nunca calcule um ponto médio como média dos cantos. Olhe a imagem e marque onde a borda passa.
 

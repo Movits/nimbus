@@ -29,7 +29,16 @@ function project(p, cam) {
   const cr = Math.cos(rad(cam.roll));
   const sr = Math.sin(rad(cam.roll));
   [x, y] = [x * cr - y * sr, x * sr + y * cr];
-  const zc = z + cam.distance_cm;
+  // PROFUNDIDADE ATE A CAMERA. Z aponta PARA a camera, entao z maior significa
+  // MAIS PERTO e a distancia e D - z.
+  //
+  // Isto estava escrito como `z + distance_cm`, o que punha o centro das costas
+  // no ponto MAIS LONGE e as laterais mais perto — ou seja, modelava um dorso
+  // CONCAVO. Numa pessoa fotografada de costas o centro das costas e o ponto
+  // mais proximo e as laterais fogem. O erro inverteu o sinal de todo efeito
+  // que depende de profundidade: a borda lateral da arte projetava 2,2% MAIOR
+  // que a coluna central, quando na realidade projeta menor.
+  const zc = cam.distance_cm - z;
   if (zc <= 1) throw new Error("ponto atras da camera");
   return [cam.cx + (cam.f * x) / zc, cam.cy + (cam.f * y) / zc];
 }

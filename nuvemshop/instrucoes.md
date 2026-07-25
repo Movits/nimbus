@@ -51,8 +51,9 @@ andam juntos: publicar um sem o outro quebra a página.
 
 ⚠️ **Ressalva**: o `live-verification.json` diz 49/49, mas ele valida só metadados (se a foto virou
 capa, olhando `og:image` e `preload`). **Nunca olha o pixel.** Não confie no 49/49 como prova de que a
-estampa está certa. A auditoria visual das 49 foi concluída em 22–23/07 (25 APROVAR / 13 REVISAR /
-11 REFAZER — fonte: `auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`). O caso da
+estampa está certa. A auditoria de escala vigente é a geométrica de 25/07
+(`auditoria/2026-07-25-geometria/ACHADOS.md`). A contagem de 22–23/07
+(25 APROVAR / 13 REVISAR / 11 REFAZER) é da auditoria **invalidada** e não deve ser usada. O caso da
 tarja "PADROEIRA (BRAHL SAEBD)" do 352719728 foi corrigido pela substituição publicada em 22/07
 (hoje o produto é APROVAR).
 
@@ -154,17 +155,21 @@ mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a 
 
 ## Histórico
 
-- **Auditoria de escala (22–23/07/2026)**: 49 produtos comparados com as
-  dimensões da YouDraw. Fonte em
-  `auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`; documento
-  visual em `auditoria-dimensoes-arte-nimbus.docx` e
-  `auditoria-dimensoes-arte-nimbus-qa.pdf`. Resultado: 25 APROVAR, 13 REVISAR e
-  11 REFAZER. Não gerar ou publicar substituições antes do feedback do dono.
+- **Auditoria de escala (22–23/07/2026) — INVALIDADA**: 49 produtos comparados
+  com o mockup plano. Resultado registrado: 25 APROVAR, 13 REVISAR, 11 REFAZER.
+  **Os vereditos não valem**: o método comparava a razão estampa/peça entre
+  mockup plano e foto vestida, e peça vestida sempre parece mais estreita porque
+  o tecido enrola no dorso. Do arquivo
+  `auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv` continuam
+  válidas apenas as colunas `front_*_cm` e `back_*_cm`, que são a régua oficial
+  em uso pelo medidor. O DOCX e o PDF do mesmo lote são históricos.
 - **Substituições de capa (22/07/2026)**: 13 arquivos corrigidos publicados em
   9 produtos (registro em `auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/`).
-  Atenção: parte dessas correções foi reprovada de novo pela auditoria de
-  dimensões (ex.: 352727545 ficou 15–20% MENOR que o mockup — sobrecorreção).
-  O CSV de dimensões é o veredito vigente.
+  Atenção: essas "correções" foram reduções de estampa guiadas pelo método
+  invalidado, e a medição de 25/07 mostra que o defeito real do catálogo é
+  estampa PEQUENA demais. 352727545 é o exemplo: foi reduzida por sobrecorreção
+  e hoje mede −4,3%, dentro do alvo. **O veredito vigente é
+  `auditoria/2026-07-25-geometria/ACHADOS.md`**, não o CSV de dimensões.
 - **Baires (20–21/07/2026)**: consolidação atual de header, footer, manifesto,
   modais, responsividade e hover em
   `css-nimbus-publicacao-compacta-2026-07-20.css`.

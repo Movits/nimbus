@@ -56,12 +56,21 @@ parte do conteudo ficou desatualizada.
 3. `nuvemshop/auditoria/2026-07-21/contexto-nimbus-para-conselho.md`
 4. `nuvemshop/auditoria/2026-07-21/ata-conselho-e-auditoria-pre-lancamento.md`
 5. `nuvemshop/auditoria/2026-07-21/implementacao/plano-implementacao-e-pendencias-do-dono.md`
-6. `nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`
-7. `nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte-nimbus.docx`
-8. `nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte-nimbus-qa.pdf`
+6. `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md` (auditoria VIGENTE)
+7. `nuvemshop/auditoria/2026-07-25-geometria/medicoes.csv`
+8. `scripts/geometry/README.md` (metodo e precisao medida)
 
-O CSV e a fonte estruturada da auditoria nova. O DOCX/PDF e o documento visual
-lado a lado. Os scripts de reproducao sao:
+Depois, so se precisar das DIMENSOES em cm:
+`nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`.
+
+⚠️ Nesse CSV de 22/07, SO as colunas `front_*_cm` e `back_*_cm` valem: elas sao
+a regua oficial e estao em uso por `measure-print-geometry.mjs` e
+`derive-composicao.mjs`. As colunas `scale_assessment`, `verdict` e
+`recommendation` sao da auditoria INVALIDADA e mandam reduzir estampas que a
+medicao aprova. O DOCX e o PDF daquela auditoria sao historicos pelo mesmo
+motivo e nao devem ser usados para decidir nada.
+
+Os scripts de reproducao daquele lote (historicos) sao:
 
 - `scripts/build-art-dimension-audit-cards.mjs`
 - `scripts/build-art-dimension-audit-docx.py`
@@ -85,8 +94,10 @@ node scripts/verify-prelaunch-artifacts.mjs
 Depois:
 
 1. Leia o diff e os arquivos do commit mais recente.
-2. Confirme que o CSV possui 49 IDs unicos e contagem
-   `25 APROVAR / 13 REVISAR / 11 REFAZER`.
+2. Confirme que o CSV de dimensoes possui 49 IDs unicos. NAO confira a contagem
+   `25 APROVAR / 13 REVISAR / 11 REFAZER`: ela e da auditoria invalidada e foi
+   substituida pela medicao geometrica. A contagem vigente esta em
+   `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.
 3. Compare o estado documentado com a loja publica em desktop e mobile.
 4. Se houver sessao autenticada, confira a Nuvemshop e a YouDraw sem alterar
    produtos, variantes, imagens ou configuracoes.
@@ -105,9 +116,19 @@ Nao confundir pagina vendavel com arte. Uma mesma arte pode existir em varias
 pecas, e cada peca pode ter varias cores. A colecao NUVEM, por exemplo, tinha
 tres paginas de produto, mas uma unica familia de arte: Sao Miguel Celeste.
 
-Em 22-23/07 foi concluida uma auditoria das 49 capas lifestyle contra os
-mockups e as dimensoes exatas da YouDraw. Foram coletadas as dimensoes de frente
-e costas de cada produto. Resultado:
+### ⛔ As listas abaixo sao HISTORICO, nao a fila atual
+
+Em 22-23/07 foi feita uma auditoria das 49 capas comparando a razao estampa/peca
+entre o mockup PLANO e a foto VESTIDA. Esse metodo esta INVALIDADO (ver a secao
+de medicao mais abaixo): numa peca vestida o tecido enrola e a largura visivel
+nao e a largura plana, entao a comparacao fabrica "estampa grande". Foi ela que
+gerou as rodadas de "reduza a estampa" de 22/07.
+
+**A fila vigente esta em `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.**
+Quatro pecas das listas abaixo (`352726673`, `352727545`, `352718787`,
+`352728357`) sao APROVADAS pela medicao e nao devem ser refeitas.
+
+O que aquela auditoria produziu, mantido so como registro:
 
 - 25 `APROVAR`
 - 13 `REVISAR`
@@ -146,8 +167,9 @@ frente `8,9 x 9,2 cm` e costas `31,5 x 40 cm`.
 - Querubim Spray | Camiseta Premium `[352725852]`
 - Sagrado Coracao Spray | Camiseta Premium `[352722232]`
 
-Nao gere nem publique substituicoes antes do feedback do usuario sobre esse
-documento.
+O feedback do dono ja veio (24/07 e 25/07) e mudou a fila: microtextos aceitos
+como residuo, e escala remedida pelo metodo geometrico. Nao use as duas listas
+acima para decidir o que refazer.
 
 ### MEDICAO DE ESCALA: MEDIDOR VALIDADO E FILA REAL (25/07, tarde)
 

@@ -52,9 +52,14 @@ passar.**
 | 4 pontos | +2,86 pp | 1,65 pp | ±6 pp |
 
 **Anote os 8 pontos.** Medir a altura da arte pelas bordas laterais introduz
-viés de +2,5 pontos: as bordas ficam na parte curva do dorso, mais perto da
-câmera que a linha central onde estão gola e barra, e projetam ~2% maiores.
+viés de ~3 pontos: as bordas ficam na parte curva do dorso, mais **longe** da
+câmera que a linha central onde estão gola e barra, e projetam ~2,4% **menores**.
 Os 4 pontos médios das arestas custam pouco e derrubam o viés para ~zero.
+
+> Até 25/07 este parágrafo dizia o contrário ("mais perto", "maiores"), e o
+> gerador sintético tinha o sinal da profundidade invertido — modelava um dorso
+> côncavo. Corrigido; o viés de 4 pontos passou de +2,85 pp para −3,04 pp, mesmo
+> módulo e sinal oposto.
 
 ### Posição: por que ela é fraca, e o quanto
 

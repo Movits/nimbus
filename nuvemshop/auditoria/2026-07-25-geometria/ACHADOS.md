@@ -23,6 +23,26 @@ Posição: **41 inconclusivas**. Não é falta de dado, é limite do método —
 
 ## Fila de correção
 
+> [!warning] **Metade de baixo da fila está SUSPENSA (25/07, noite).**
+> Uma revisão independente da matemática achou que o gerador sintético tinha o **sinal da
+> profundidade invertido**: ele modelava um dorso côncavo, com as laterais mais perto da câmera em
+> vez de mais longe. Corrigido, o viés do caminho de medição usado por **todas as 41 fotos** (arte
+> irregular, caixa envolvente) passou de **+2,85 pp para −3,04 pp** — mesmo módulo, sinal oposto.
+> Sinal negativo significa que o medidor faz a estampa parecer **menor** do que é, que é exatamente
+> a assinatura da fila inteira.
+>
+> As três reprovações por impossibilidade física **sobrevivem** com folga: mesmo somando os 3 pp, o
+> Salmo 19 continua implicando 78 cm num canguru que vai a 70, e as duas oversized continuam acima
+> de 90 cm numa peça que vai a 86. Essas três seguem valendo.
+>
+> As três de **fora do alvo** não sobrevivem: −9,7% cairia para −6,7%, −8,5% para −5,5% e −8,1%
+> para −5,1%. **Não gerar substituição para essas três** até a margem de arte irregular ser
+> re-derivada. O número de −3,04 pp também não pode ser aplicado como correção direta: ele foi
+> medido num sintético que só sabe gerar arte RETANGULAR anotada pelos cantos, e arte de spray tem
+> os extremos de tinta bem mais perto do centro, onde o efeito é muito menor. O que falta é modelar
+> tinta irregular no sintético e medir o viés de verdade.
+
+
 Sinal negativo = estampa **menor** que o alvo.
 
 | Desvio | Veredito | Peça | Evidência |
