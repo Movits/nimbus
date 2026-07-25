@@ -87,7 +87,7 @@ export function artMesh(o) {
 }
 
 /** Rasteriza um triangulo com mapeamento afim de textura, com alpha da arte. */
-function drawTriangle(dst, W, H, A, B, C, uvA, uvB, uvC, tex, TW, TH, TC, alphaMul) {
+function drawTriangle(dst, W, H, A, B, C, uvA, uvB, uvC, tex, TW, TH, TC, alphaMul, shade) {
   const minX = Math.max(0, Math.floor(Math.min(A[0], B[0], C[0])));
   const maxX = Math.min(W - 1, Math.ceil(Math.max(A[0], B[0], C[0])));
   const minY = Math.max(0, Math.floor(Math.min(A[1], B[1], C[1])));
@@ -121,9 +121,29 @@ function drawTriangle(dst, W, H, A, B, C, uvA, uvB, uvC, tex, TW, TH, TC, alphaM
       const al = (a / 255) * alphaMul;
       if (al <= 0.002) continue;
       const o = (y * W + x) * 3;
-      dst[o] = dst[o] * (1 - al) + r * al;
-      dst[o + 1] = dst[o + 1] * (1 - al) + g * al;
-      dst[o + 2] = dst[o + 2] * (1 - al) + b * al;
+      // SOMBREAMENTO: tinta sobre malha reflete a MESMA luz que o tecido em
+      // volta. Sem isto a estampa fica chapada e le como adesivo, que e
+      // exatamente o defeito que o protocolo proibe. O fator vem da luminancia
+      // do proprio pixel de destino, normalizada por uma referencia — entao a
+      // estampa escurece na dobra e clareia no realce, de graca.
+      // A luminancia vem de uma PLACA tirada antes de compor, e borrada.
+      // Ler `dst` direto criava realimentacao — o pixel ja continha tinta dos
+      // triangulos anteriores — e o ruido do tecido escuro virava franja
+      // colorida, porque cada canal era multiplicado por um k diferente.
+      let k = 1;
+      if (shade) {
+        const lumBg = shade.plate[y * W + x];
+        k = Math.max(shade.min, Math.min(shade.max, lumBg / shade.ref));
+      }
+      // CLAMP OBRIGATORIO. `dst` e um Buffer de 8 bits e a atribuicao faz
+      // WRAP, nao saturacao: 230 * 1,25 = 287 vira 31. Como cada canal estoura
+      // em momento diferente, o resultado nao e um branco estourado e sim
+      // cintilacao ciano/azul na borda das letras — que parecia defeito de
+      // sombreamento e era aritmetica de inteiro.
+      const cl = (v) => (v < 0 ? 0 : v > 255 ? 255 : v);
+      dst[o] = cl(dst[o] * (1 - al) + r * k * al);
+      dst[o + 1] = cl(dst[o + 1] * (1 - al) + g * k * al);
+      dst[o + 2] = cl(dst[o + 2] * (1 - al) + b * k * al);
     }
   }
 }
@@ -136,7 +156,7 @@ function drawTriangle(dst, W, H, A, B, C, uvA, uvB, uvC, tex, TW, TH, TC, alphaM
  * @param {object} params ver `artMesh`
  * @param {number} [alpha] opacidade global (tinta sobre tecido nunca e 1,0)
  */
-export function compositeArt(bg, art, params, alpha = 1) {
+export function compositeArt(bg, art, params, alpha = 1, shade = null) {
   const { cols, rows, pts } = artMesh(params);
   const { width: W, height: H } = bg;
   const dst = bg.data;
@@ -147,8 +167,8 @@ export function compositeArt(bg, art, params, alpha = 1) {
       const p00 = at(i, j), p10 = at(i + 1, j), p01 = at(i, j + 1), p11 = at(i + 1, j + 1);
       if (!p00 || !p10 || !p01 || !p11) continue;
       const u00 = uv(i, j), u10 = uv(i + 1, j), u01 = uv(i, j + 1), u11 = uv(i + 1, j + 1);
-      drawTriangle(dst, W, H, p00, p10, p11, u00, u10, u11, art.data, art.width, art.height, art.channels, alpha);
-      drawTriangle(dst, W, H, p00, p11, p01, u00, u11, u01, art.data, art.width, art.height, art.channels, alpha);
+      drawTriangle(dst, W, H, p00, p10, p11, u00, u10, u11, art.data, art.width, art.height, art.channels, alpha, shade);
+      drawTriangle(dst, W, H, p00, p11, p01, u00, u11, u01, art.data, art.width, art.height, art.channels, alpha, shade);
     }
   }
   return bg;
