@@ -153,13 +153,28 @@ function buildPrompt(task) {
   push(task.artHelperRef, `REFERENCE {N} is an APPROVED photo of a different garment carrying THIS EXACT SAME artwork, correctly printed: copy the artwork content precisely as it appears there (composition, colors, framing elements), adapted to this garment at the size specified below.`);
   push(task.sceneRef, `REFERENCE {N} is the approved campaign photo of this exact product in another color: match the SAME model, SAME scene, SAME framing, SAME pose, SAME natural light and — critically — the EXACT SAME print size and position, changing ONLY the garment color to ${task.color}.`);
 
-  // ENQUADRAMENTO MENSURAVEL. As duas condicoes abaixo nao sao estilo: elas
-  // decidem se a foto pode ser CONFERIDA depois. Na auditoria de 25/07, capuz
-  // caido sobre a gola deixou 11 fotos sem veredito de escala, e braco colado
-  // ao tronco deixou 41 de 41 sem veredito de POSICAO — na altura da estampa o
-  // contorno externo vira a manga, e o medidor perde a referencia do tronco.
+  // ENQUADRAMENTO MENSURAVEL — versao minima, depois do dono derrubar a versao
+  // anterior (25/07, noite) e ele estava certo nas duas.
+  //
+  // A regra antiga exigia gola visivel E braco afastado do tronco. Nenhuma das
+  // duas se sustenta:
+  //
+  //   GOLA   a regua vertical precisa de dois pontos com separacao conhecida em
+  //          cm, e a gola e so UMA das escolhas possiveis. A linha do OMBRO
+  //          serve igual — e provavelmente serve melhor, porque a tabela da
+  //          YouDraw mede "altura" de peca plana, que normalmente parte do
+  //          ponto mais alto do ombro e nao da base da gola.
+  //   BRACO  ele existia so para destravar o estimador de posicao por silhueta.
+  //          Mas posicao nao precisa ser MEDIDA numa foto gerada: quando a arte
+  //          e composta por homografia sobre a foto, ela fica certa POR
+  //          CONSTRUCAO. Restringir a pose para salvar uma medicao que a
+  //          composicao torna desnecessaria e trocar foto boa por auditoria.
+  //
+  // O que sobra e um piso, nao uma pose: a peca precisa caber no quadro com
+  // ALGUMA referencia de topo legivel (ombro ou gola) e a barra visivel. Sem
+  // isso nao existe regua nenhuma. Pose natural continua livre.
   const MEASURABLE_POSE =
-    "MEASURABLE FRAMING (required for post-generation verification): the base of the COLLAR must be visible and unobstructed — no hood, hair or collar flap covering it — and BOTH ARMS must hang clearly AWAY from the torso at print height, with visible background between each arm and the body, so the outline of the torso itself can be seen on both sides.";
+    "MEASURABLE FRAMING: keep the whole garment in frame from the top of the shoulders down to the hem, with the hem clearly visible against the background, and with EITHER the shoulder line OR the base of the collar readable. The pose itself is free and should look natural.";
 
   const pose =
     task.view === "back"
@@ -196,7 +211,7 @@ function buildPrompt(task) {
     // porque o tecido enrola no dorso e as laterais fogem da camera. A pergunta
     // empurrava para estampa estreita sem nunca acusar estampa pequena demais.
     `(3) Is the print CENTERED between the two side seams?`,
-    !task.isEcobag ? `(3b) Is the base of the collar unobstructed, and is there visible background between EACH arm and the torso at print height? If not, the photo cannot be measured and must be redone.` : null,
+    !task.isEcobag ? `(3b) Are both the hem and a readable top edge of the garment (shoulder line or collar) inside the frame? Without them the print size cannot be checked afterwards.` : null,
     `(4) Is every letter in the artwork spelled exactly as in the artwork reference?`,
     `(5) Does the ink follow the fabric folds instead of sitting flat like a sticker?`,
   ].filter(Boolean).join(" ");

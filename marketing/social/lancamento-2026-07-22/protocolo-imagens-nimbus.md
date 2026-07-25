@@ -34,14 +34,16 @@
   grande demais, e é o defeito que o catálogo realmente tem: 12 das 13 fotos da
   fila estão ABAIXO do alvo. Nunca instruir o gerador a "na dúvida, renderizar
   menor" — essa trava existia até 25/07 e é provável causa do defeito.
-- **Enquadramento mensurável.** Duas condições que a auditoria de 25/07 mostrou
-  serem necessárias para conferir a foto depois:
-  1. Em Moletom Canguru, a **base da gola** precisa aparecer. Capuz caído sobre
-     as costas torna a peça impossível de medir.
-  2. O **braço precisa estar afastado do tronco** na altura da estampa, com
-     fundo visível entre os dois. Sem isso o contorno externo é a manga e a
-     posição da estampa fica inconclusiva — foi o que aconteceu em 41 de 41
-     fotos do catálogo atual.
+- **Enquadramento mensurável, e só isso.** A peça inteira no quadro, do topo
+  dos ombros até a barra, com a barra visível contra o fundo e com **ou** a
+  linha do ombro **ou** a base da gola legível. É o mínimo para existir régua
+  vertical. **A pose é livre e deve parecer natural.**
+
+  Uma versão anterior desta regra exigia gola sempre visível e braço afastado do
+  tronco. As duas caíram em 25/07: a gola é apenas uma das referências de topo
+  possíveis (a linha do ombro serve, e possivelmente serve melhor), e a posição
+  da estampa não precisa ser medida numa foto gerada — quando a arte é composta
+  por homografia, ela fica certa por construção.
 - Preservar as fotos planas da YouDraw na galeria do produto.
 
 ## Ciclo obrigatório (um produto por vez)

@@ -126,12 +126,18 @@ a preta mede −11,9% e está na fila.
 na altura da estampa é a MANGA, não o tronco. É limite de oclusão, não de matemática. Centralização
 fina se confere no mockup plano, onde não há enrolamento nem pose.
 
-**Dois requisitos de produção**, ambos para o prompt de geração:
+**Requisito de foto: só o piso.** A peça inteira no quadro, barra visível, e **ou** a linha do
+ombro **ou** a base da gola legível. Pose livre.
 
-1. Foto de Moletom Canguru precisa mostrar a base da gola. Capuz caído sobre as costas torna a peça
-   impossível de medir.
-2. Para a posição ser mensurável, o braço precisa estar afastado do tronco na altura da estampa,
-   com fundo visível entre os dois. Hoje nenhuma capa do catálogo atende.
+A versão anterior exigia gola sempre visível e braço afastado do tronco; o dono derrubou as duas em
+25/07 e estava certo. A gola é só uma das referências de topo possíveis, e a posição não precisa
+ser medida numa foto gerada — composta por homografia, ela fica certa por construção.
+
+⚠️ **Questão aberta que vale 3 a 5%**, aberta por essa discussão: a tabela da YouDraw dá "largura x
+altura" de peça plana, e não está documentado se a altura sai do ombro (o usual) ou da base da gola.
+Se sair do ombro, o medidor compara uma distância contra outra, com 2 a 4 cm de diferença de datum.
+O erro empurraria os desvios para o lado positivo, então a fila atual é conservadora. Resolve com
+uma pergunta à YouDraw. Detalhe em `scripts/geometry/README.md`.
 
 ## Regras de conteúdo (valem sempre)
 

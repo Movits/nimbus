@@ -244,13 +244,27 @@ tronco, e as barras das mangas ficam 7 a 10 pp abaixo. E limite de OCLUSAO, nao
 de matematica. Centralizacao fina se confere no MOCKUP PLANO, e na geracao ela
 fica certa por construcao quando a arte e composta por homografia inversa.
 
-DOIS REQUISITOS DE PRODUCAO que sairam daqui, ambos para o prompt de geracao:
+REQUISITO DE FOTO: so o piso. Peca inteira no quadro, barra visivel, e OU a
+linha do ombro OU a base da gola legivel. POSE LIVRE.
 
-1. Foto de Moletom Canguru precisa mostrar a base da gola. Com o capuz caido
-   sobre as costas a peca fica impossivel de medir.
-2. Para a posicao ser mensuravel, o braco precisa estar AFASTADO do tronco na
-   altura da estampa, com fundo visivel entre os dois. Hoje nenhuma capa do
-   catalogo atende.
+Uma versao anterior (25/07, noite) exigia gola sempre visivel E braco afastado
+do tronco. O dono derrubou as duas e estava certo nas duas:
+
+- GOLA: a regua vertical precisa de dois pontos com separacao conhecida em cm,
+  e a gola e so UMA das escolhas. A linha do ombro serve igual. Isso abriu uma
+  QUESTAO ABERTA que vale 3 a 5% e esta em `scripts/geometry/README.md`: a
+  tabela da YouDraw da "largura x altura" de peca plana, e nao esta documentado
+  se essa altura sai do ombro (o usual) ou da base da gola. Se sair do ombro, o
+  medidor compara gola->barra contra um numero ombro->barra, com 2 a 4 cm de
+  diferenca de datum. Direcao do erro: empurraria os desvios para o lado
+  POSITIVO, entao a fila atual e conservadora, nunca inflada. Resolve com uma
+  pergunta a YouDraw ou medindo a RAZAO ombro->barra / gola->barra num mockup
+  plano (razao e adimensional, sobrevive a template normalizado).
+- BRACO: existia so para destravar o estimador de posicao por silhueta. Mas
+  posicao nao precisa ser MEDIDA numa foto gerada — com a arte composta por
+  homografia ela fica certa POR CONSTRUCAO, e o medidor vira teste de
+  regressao. Restringir pose para salvar uma medicao que a composicao torna
+  desnecessaria e trocar foto boa por auditoria.
 
 ### Tabela de medidas real das pecas (YouDraw, via `scripts/build-prelaunch-matrix.mjs`)
 

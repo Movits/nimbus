@@ -157,6 +157,50 @@ Consequência prática: apertar a tolerância exige primeiro **derrubar a margem
 número. Se a margem não cair para um tipo de arte, aquele tipo mantém o limiar
 mais folgado, com o motivo escrito no CSV.
 
+## Questão aberta que vale 3 a 5%: de onde a tabela mede a "altura"
+
+Levantada pelo dono em 25/07, ao contestar a exigência de gola visível. Ele
+perguntou por que não medir pelos ombros, e a resposta expôs um problema meu.
+
+A régua vertical precisa de **dois pontos com separação conhecida em cm**. Hoje
+são a **base da gola** e a **barra**, e o valor de comparação é a coluna
+"altura" da tabela da YouDraw (`P 52x60; M 55x64; G 58x65…`).
+
+O problema: **não está documentado de onde essa altura é medida.** Em tabela de
+peça plana, "altura" costuma sair do ponto mais alto do ombro (HPS), não da base
+da gola. Se for esse o caso, o medidor compara uma distância *gola→barra* contra
+um número *ombro→barra*, e a diferença entre os dois datums é de 2 a 4 cm — ou
+seja **3 a 5%** numa peça de 75 cm. Isso é da mesma ordem da tolerância de ±5%
+que o dono acabou de pedir, então não é detalhe.
+
+**Direção do erro, se ele existir:** gola→barra é MENOR que ombro→barra, então o
+comprimento implícito estaria sendo comparado contra um alvo grande demais, e as
+peças pareceriam com estampa GRANDE demais. Como o resultado real é o oposto
+(12 das 13 fotos da fila têm estampa pequena), esse viés estaria empurrando
+contra o achado: corrigi-lo tornaria os desvios ainda mais negativos e a fila
+maior, nunca menor. A fila atual é conservadora nesse eixo.
+
+**O que NÃO resolve:** olhar a distribuição das fotos aprovadas. Testei e o
+teste é circular — "aprovada" é definida como implícito próximo do G, então elas
+sempre parecerão centradas, com ou sem viés.
+
+**O que resolve**, em ordem de custo:
+
+1. Perguntar à YouDraw de onde sai a medida de altura. Uma frase.
+2. Medir num mockup plano. Com a arte de cm oficial conhecido calibrando px/cm,
+   dá para ler gola→barra e ombro→barra em cm e ver qual bate com a tabela.
+3. Melhor ainda, e imune a template normalizado: medir no mockup só a **razão**
+   ombro→barra ÷ gola→barra. Razão é adimensional, então sobrevive mesmo se o
+   template não for fiel em tamanho absoluto — basta ser fiel em proporção.
+
+O item 3 é o que também **destrava a linha do ombro como referência de topo**:
+com a razão conhecida por tipo de peça, tanto faz qual das duas o anotador
+consegue ver. Foi exatamente o que o dono propôs, e é melhor que contorno — pode
+ser a referência correta, não a alternativa.
+
+Até isso ser resolvido, os vereditos de escala carregam esse viés desconhecido,
+com a direção acima registrada.
+
 ## Módulos
 
 | Arquivo | Responsabilidade |

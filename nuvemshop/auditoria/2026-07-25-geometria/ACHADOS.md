@@ -146,8 +146,24 @@ apaga um desvio de 12% contra o G. Sete delas foram para a fila e quatro para `O
 reprovação por impossibilidade física, porque para essa é a faixa inteira que precisa cair fora, e
 com a gola encoberta ela não cai.
 
-**Consequência para produção:** foto de canguru precisa mostrar a base da gola. Isso vale como
-requisito no prompt de geração, não como preferência.
+**Consequência para produção — versão revisada em 25/07 (noite).** A primeira redação dizia que
+foto de canguru *precisa* mostrar a base da gola. O dono contestou: dá para medir pelos ombros. Ele
+está certo, e mais do que isso.
+
+A régua vertical precisa de dois pontos com separação conhecida em cm. A base da gola é apenas
+**uma** das escolhas possíveis — a linha do ombro serve igual, e provavelmente serve melhor: a
+tabela da YouDraw dá "largura x altura" de peça plana, e "altura" de peça plana normalmente é
+medida do ponto mais alto do ombro, não da base da gola. Se for esse o caso, o medidor vem
+comparando *gola→barra* contra um número *ombro→barra*, com 2 a 4 cm de diferença de datum — **3 a
+5% numa peça de 75 cm**, a mesma ordem da tolerância de ±5%.
+
+Está registrado como questão aberta em `scripts/geometry/README.md`, com a direção do erro: ele
+empurraria os desvios para o lado *positivo*, então a fila atual (12 de 13 negativos) é
+conservadora nesse eixo, nunca inflada. Resolve com uma pergunta à YouDraw, ou medindo num mockup
+plano a **razão** ombro→barra ÷ gola→barra, que é adimensional e sobrevive a template normalizado.
+
+O que fica como requisito de foto é só o piso: a peça inteira no quadro, barra visível, e **ou** a
+linha do ombro **ou** a gola legível. Pose livre.
 
 ## Posição: o que o método consegue e o que não consegue
 
@@ -195,9 +211,13 @@ implementado, só não há onde aplicá-lo. Os anotadores registraram os valores
 marcados como não utilizáveis — usar a silhueta do braço como se fosse a do tronco seria fabricar
 número, que é o erro que invalidou as auditorias anteriores.
 
-**Segundo requisito de produção, do mesmo tipo do capuz:** para que a posição seja mensurável, a
-foto precisa mostrar o **braço afastado do tronco** na altura da estampa, com fundo visível entre
-os dois. Hoje nenhuma capa do catálogo atende.
+**Isso não vira exigência de pose.** A primeira versão desta conclusão pedia
+que toda foto tivesse o braço afastado do tronco. O dono derrubou em 25/07 e
+está certo: posição não precisa ser MEDIDA numa foto que a gente gera — quando a
+arte é composta por homografia sobre a foto pronta, ela fica certa **por
+construção**, e o medidor vira teste de regressão em vez de loteria. Restringir
+a pose para salvar uma medição que a composição torna desnecessária seria trocar
+foto boa por auditoria.
 
 Enquanto isso não existir, a centralização fina se confere no **mockup plano** da YouDraw, onde não
 há enrolamento, guinada nem contraposto — e, na geração, ela fica certa por construção quando a
