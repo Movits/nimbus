@@ -34,9 +34,10 @@
 // - A faixa P..EG e larga (Premium ±10,3%), entao o veredito duro usa a faixa
 //   inteira e o veredito de catalogo usa o tamanho canonico declarado.
 
+// A homografia saiu do caminho da medicao: ver o bloco de posicao. Ela
+// continua em homography.mjs para a COMPOSICAO da arte na geracao (fase de
+// gerar imagem), onde o problema e o inverso e a arte plana e conhecida.
 import {
-  solveHomography,
-  applyH,
   dist,
   signedDistanceToLine,
   projectOnAxis,
@@ -50,14 +51,52 @@ export const PRINT_AREA_MAX_CM = { w: 35.2, h: 40.0 };
 /** Tamanho que, por convencao do projeto, toda foto lifestyle representa. */
 export const CANONICAL_SIZE = "G";
 
+/**
+ * Margem do METODO para posicao, em cm. Sai do teste de verdade conhecida
+ * (`validate.mjs`), nao de escolha: e o maior erro residual observado quando o
+ * modelo esta em contraposto E a camera em guinada, o unico regime em que os
+ * dois estimadores de centro erram para o MESMO lado.
+ *
+ * Por que nao da para reduzir: um contraposto que desloca a estampa 1,3 cm
+ * inclina a coluna central da arte em 1,5 grau. Sobre 450 px de altura isso e
+ * 12 px, e o sigma declarado pelos anotadores e ~8 px por ponto. O sinal que
+ * separaria "estampa deslocada" de "modelo em contraposto" esta ENTERRADO no
+ * ruido de anotacao. Nenhuma esperteza de calculo tira dai um numero melhor.
+ */
+export const POSITION_METHOD_MARGIN_CM = 1.9;
+
+/**
+ * Fator de EXPANSAO do limite superior da posicao, tambem medido em
+ * `validate.mjs`. A medicao COMPRIME deslocamento grande: um deslocamento real
+ * de 3 cm e lido entre 1,9 e 2,5 cm, e um de 8 cm entre 5,1 e 6,6. A causa e a
+ * mesma dos outros erros — o meio de dois pontos em profundidades diferentes
+ * nao e a projecao do meio verdadeiro — e o fator ficou estavel em ~1,56 entre
+ * 3 e 8 cm, entao entra arredondado para cima como termo multiplicativo.
+ *
+ * Ou seja: o numero medido e um PISO. O teto e ele vezes isto, mais a margem.
+ */
+export const POSITION_UNDERESTIMATE_FACTOR = 1.6;
+
+/**
+ * DIAGNOSTICO perceptual (nao e veredito): o deslocamento da estampa como
+ * fracao da largura do tronco VISIVEL, em pixels, sem converter para cm. E o
+ * que o olho compara ao dizer "esta mais para a direita".
+ *
+ * Foi testado como veredito e REPROVOU no teste de verdade conhecida — ver o
+ * comentario no bloco de posicao. Fica so como numero de conferencia.
+ */
+
 export const DEFAULT_TOLERANCE = {
   scalePct: 8, // desvio de escala vs o tamanho canonico
-  offsetCm: 1.5, // deslocamento lateral da estampa
+  // Tolerancia de posicao ACIMA da margem do metodo, senao o veredito seria
+  // ruido. O gate pega deslocamento GROSSEIRO — o tipo que se ve a olho nu,
+  // que e exatamente o que o dono apontou. Centralizacao fina nao e mensuravel
+  // numa foto de peca vestida, e dizer que e seria repetir o erro antigo.
+  offsetCm: 3,
   rotationDeg: 3, // rotacao da arte vs eixo da peca
   alphaWarnPct: 3, // acima disso o eixo horizontal fica suspeito
   alphaInvalidPct: 6, // acima disso o eixo horizontal e invalido
   alphaVerticalPct: 4, // alpha POSITIVO acima disso condena o proprio vertical
-  positionAlphaMaxPct: 2, // posicao so e avaliada em pose quase frontal
 };
 
 const CYLINDER_MAX = Math.PI / 2; // largura plana / largura projetada, no limite cilindrico
@@ -242,60 +281,170 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   }
 
   // ------------------------------------------------------------- posicao
-  // Retificacao planar pelos cantos da arte: converte pixels em cm no plano
-  // das costas. Usada so para posicao, onde a precisao e muito maior que na
-  // escala (nao depende do tamanho da peca nem da distancia da camera).
+  // NAO se usa homografia aqui, e a razao foi medida: retificar pelos cantos da
+  // arte da uma taxa px/cm MEDIA sobre toda a largura da arte, mas a arte
+  // enrola no dorso e suas bordas estao muito mais longe da camera que o centro.
+  // No teste de verdade conhecida, um deslocamento real de 3 cm era lido entre
+  // 1,2 e 3,3 cm conforme o tamanho da arte em relacao ao corpo — fator de 0,40
+  // a 1,10. Posicao em cm por homografia planar simplesmente nao e recuperavel.
+  //
+  // O que funciona: medir em PIXELS e converter pela taxa VERTICAL, tomada na
+  // coluna central da peca. Gola, barra e o centro da arte estao todos nessa
+  // coluna, na mesma profundidade, e o eixo vertical e imune ao enrolamento.
+  // A taxa sai do comprimento da peca (px) contra a tabela de medidas (cm) —
+  // e a ignorancia do tamanho vestido vira uma faixa estreita, porque a faixa
+  // P..EG mexe pouco num numero da ordem de 1 cm.
   let position = {
     offsetX_cm: null,
+    offsetX_estimatorRange_cm: null,
     offsetX_pctOfArtWidth: null,
     collarToArtTop_cm: null,
     rotation_deg: null,
     rotationFlagged: null,
     verdict: "INCONCLUSIVO",
   };
-  if (haveCollar && haveHem) {
-    const H = solveHomography(
-      [input.art.tl, input.art.tr, input.art.br, input.art.bl],
-      [
-        [0, 0],
-        [w_cm, 0],
-        [w_cm, h_cm],
-        [0, h_cm],
-      ],
-    );
-    const collar = applyH(H, input.collar.center);
-    const hem = applyH(H, input.hem.center);
-    const artCenter = [w_cm / 2, h_cm / 2];
-    const artTopMid = [w_cm / 2, 0];
+  if (haveCollar && haveHem && spec.hasTable) {
+    const collar = input.collar.center;
+    const hem = input.hem.center;
+    // Centro horizontal da arte tomado na MEIA-ALTURA (meio de ml..mr), que e
+    // a mesma altura em que as laterais do tronco foram anotadas. Usar o meio
+    // de topo-e-base parece equivalente e nao e: com o modelo em contraposto o
+    // tronco curva, a estampa curva junto, e a media do topo com a base cai
+    // fora da curva. No sintetico com 3 cm de contraposto isso sozinho valia
+    // 15,9 px de erro contra 1,1 px medindo na meia-altura.
+    const artCenter = mid(leftMid, rightMid);
+    const artTopMid = topMid;
 
-    const offsetX = signedDistanceToLine(artCenter, collar, hem);
-    const collarToTop = projectOnAxis(artTopMid, collar, hem);
+    // DOIS ESTIMADORES DE CENTRO, com falhas OPOSTAS que os landmarks que
+    // coletamos nao conseguem separar:
+    //
+    //   corda gola->barra  exata sob guinada (gola, barra e arte estao no mesmo
+    //                      cilindro e giram juntas), mas erra com o modelo em
+    //                      contraposto: a reta corta a curva do tronco e acusa
+    //                      deslocamento que nao existe. No Salmo 19 deu 5,1 cm.
+    //   meio do tronco     imune ao contraposto (as laterais acompanham o
+    //                      tronco), mas enviesado sob guinada: as duas laterais
+    //                      ficam em profundidades diferentes e o meio projetado
+    //                      foge do centro real. Medido no sintetico: 2,3 cm de
+    //                      erro ja a 10 graus, 4,5 cm a 20.
+    //
+    // Escolher um dos dois seria repetir o "fator de caimento 1,52": adotar a
+    // hipotese conveniente e chamar de medida. Entao nao se escolhe. Reporta-se
+    // a FAIXA que os dois delimitam, e o veredito so e decisivo quando a faixa
+    // INTEIRA cai de um lado do limite. E a mesma regra ja usada na escala.
+    const offsetChord_px = signedDistanceToLine(artCenter, collar, hem);
+    let offsetTorso_px = null;
+    if (input.side?.left && input.side?.right) {
+      const torsoCenter = mid(input.side.left, input.side.right);
+      const axisDir = [hem[0] - collar[0], hem[1] - collar[1]];
+      const refB = [torsoCenter[0] + axisDir[0], torsoCenter[1] + axisDir[1]];
+      offsetTorso_px = signedDistanceToLine(artCenter, torsoCenter, refB);
+    } else {
+      notes.push(
+        "laterais do tronco nao anotadas: so a corda gola-barra estima o centro, e ela infla o deslocamento quando o modelo esta em contraposto",
+      );
+    }
+
+    // px -> cm pela coluna central. A faixa P..EG entra aqui: nao se sabe que
+    // tamanho o modelo veste, entao o cm sai como faixa. Como o numero e da
+    // ordem de 1 cm, a faixa inteira de tamanhos move pouco — bem diferente do
+    // que acontece na escala.
+    const garmentLen_px = dist(collar, hem);
+    const toCm = (px) => spec.lengthRange.map((L) => (px * L) / garmentLen_px);
+
+    const cands_px = offsetTorso_px === null ? [offsetChord_px] : [offsetChord_px, offsetTorso_px];
+    const allCm = cands_px.flatMap(toCm);
+    const lo = Math.min(...allCm);
+    const hi = Math.max(...allCm);
+    // Faixa do deslocamento ABSOLUTO, ja com as duas correcoes medidas. Se os
+    // dois estimadores ficam em lados opostos do zero, o minimo e zero: a arte
+    // pode estar centrada. Com a faixa contendo a verdade, os vereditos ficam
+    // corretos POR CONSTRUCAO — "OK" so sai se ate o extremo pior cabe na
+    // tolerancia, "REPROVADO" so sai se nem o extremo melhor cabe.
+    const rawMin = lo <= 0 && hi >= 0 ? 0 : Math.min(Math.abs(lo), Math.abs(hi));
+    const rawMax = Math.max(Math.abs(lo), Math.abs(hi));
+    const absMin = Math.max(0, rawMin - POSITION_METHOD_MARGIN_CM);
+    const absMax = rawMax * POSITION_UNDERESTIMATE_FACTOR + POSITION_METHOD_MARGIN_CM;
+
+    const canonicalLen =
+      spec.sizes.find((s) => s.size === CANONICAL_SIZE)?.length_cm ?? spec.lengthRange[1];
+    const cmAtCanonical = (px) => (px * canonicalLen) / garmentLen_px;
+
+    // CAMINHO PERCEPTUAL, em pixels, sem conversao para cm: o quanto a estampa
+    // esta fora do meio do tronco VISIVEL. Escapa das tres fontes de erro do
+    // caminho em cm porque nao tenta desfazer nenhuma delas — e a mesma
+    // comparacao que o olho faz ao dizer "esta mais para a direita".
+    let offsetVisible_pct = null;
+    if (input.side?.left && input.side?.right) {
+      const torsoW = dist(input.side.left, input.side.right);
+      if (torsoW > 0) {
+        const torsoCenter = mid(input.side.left, input.side.right);
+        const axisDir = [hem[0] - collar[0], hem[1] - collar[1]];
+        const d = signedDistanceToLine(artCenter, torsoCenter, [
+          torsoCenter[0] + axisDir[0],
+          torsoCenter[1] + axisDir[1],
+        ]);
+        offsetVisible_pct = round((d / torsoW) * 100, 1);
+      }
+    }
+
+    const collarToTop = cmAtCanonical(projectOnAxis(artTopMid, collar, hem));
     const rotation = angleFromVertical(collar, hem);
 
-    // A centralizacao e mais exigente que a escala: numa peca girada, o eixo
-    // VISIVEL da peca se desloca em relacao ao eixo verdadeiro, e o erro cresce
-    // rapido com a guinada (validacao: desvio 0,6 cm de frente, 1,7 cm a 20
-    // graus). Entao so se reporta posicao em pose quase frontal.
-    const offsetValid = Math.abs(alphaExcessPct) <= tolerance.positionAlphaMaxPct;
+    // NAO ha portao de pose aqui, e a razao foi descoberta no teste de verdade
+    // conhecida: alpha reage tambem ao DESLOCAMENTO da arte (uma estampa 8 cm
+    // fora do centro enrola de forma assimetrica e sobe o alpha ao nivel de
+    // "guinada forte"). Usar alpha como portao suprimia o veredito de posicao
+    // justamente nas fotos mais deslocadas — o oposto do que se quer. A faixa
+    // ja se autorregula: com guinada, os dois estimadores se afastam e o
+    // resultado vira INCONCLUSIVO sozinho.
+    const rectifiable = true;
+
+    // O criterio perceptual NAO vira veredito, e a razao foi medida. A ideia
+    // era: em pose frontal, "% do tronco visivel" separaria estampa centrada de
+    // estampa deslocada. Numa sub-grade parecia separar (centrada ate 4,5%,
+    // deslocada a partir de 4,7%). Na grade COMPLETA nao separa em nenhum
+    // corte de alpha — nem com |excesso| <= 1, onde uma estampa centrada ainda
+    // chega a 11,7% e uma deslocada 5 cm ja aparece com 8,5%.
+    //
+    // A causa e que alpha nao certifica pose frontal: ele mede a razao entre os
+    // eixos, e guinada (que encolhe a largura) com inclinacao (que encolhe a
+    // altura) se cancelam nele. Alpha baixo pode ser pose frontal OU as duas
+    // deformacoes juntas. Serve para acusar pose ruim, nao para atestar pose
+    // boa — e essas duas coisas nao sao a mesma.
+    //
+    // O numero fica reportado como diagnostico, para conferir veredito contra
+    // percepcao no olho humano. Nao decide nada sozinho.
+    let posVerdict;
+    if (absMax <= tolerance.offsetCm) posVerdict = "OK";
+    else if (absMin > tolerance.offsetCm) posVerdict = "REPROVADO";
+    else {
+      posVerdict = "INCONCLUSIVO";
+      notes.push(
+        `deslocamento entre ${round(absMin)} e ${round(absMax)} cm: a faixa cruza o limite de ${tolerance.offsetCm} cm, entao nao da para aprovar nem reprovar${offsetVisible_pct === null ? "" : ` (diagnostico visual: ${offsetVisible_pct}% da largura do tronco)`}`,
+      );
+    }
+
     position = {
-      offsetX_cm: offsetValid ? round(offsetX) : null,
-      offsetX_pctOfArtWidth: offsetValid ? round((offsetX / w_cm) * 100, 1) : null,
+      // Ponto medio dos estimadores, so para leitura humana. O que vale e a
+      // faixa corrigida em offsetAbs_range_cm.
+      offsetX_cm: rectifiable ? round((lo + hi) / 2) : null,
+      offsetX_estimatorRange_cm: rectifiable ? [round(lo), round(hi)] : null,
+      offsetAbs_range_cm: rectifiable ? [round(absMin), round(absMax)] : null,
+      offsetVisible_pctOfTorso: offsetVisible_pct,
+      offsetX_pctOfArtWidth: rectifiable ? round((((lo + hi) / 2) / w_cm) * 100, 1) : null,
+      offsetX_byChord_cm: round(cmAtCanonical(offsetChord_px)),
+      offsetX_byTorso_cm: offsetTorso_px === null ? null : round(cmAtCanonical(offsetTorso_px)),
+      estimatorSpread_cm: round(hi - lo),
       collarToArtTop_cm: round(collarToTop),
       rotation_deg: round(rotation, 1),
       rotationFlagged: Math.abs(rotation) > tolerance.rotationDeg,
-      verdict: !offsetValid
-        ? "INCONCLUSIVO"
-        : Math.abs(offsetX) <= tolerance.offsetCm
-          ? "OK"
-          : Math.abs(offsetX) <= tolerance.offsetCm * 1.5
-            ? "LIMITROFE"
-            : "REPROVADO",
+      verdict: posVerdict,
     };
-    if (!offsetValid) {
-      notes.push(
-        `centralizacao nao avaliada: alpha ${alphaPct.toFixed(1)}% indica pose que desloca o eixo visivel`,
-      );
-    }
+  } else if (haveCollar && haveHem) {
+    notes.push(
+      `posicao sem regua: "${input.garment}" nao tem tabela de medidas, e a conversao de pixel para centimetro depende do comprimento da peca`,
+    );
   }
 
   // ------------------------------------------ cross-check de largura (faixa)

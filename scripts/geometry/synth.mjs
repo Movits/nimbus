@@ -11,6 +11,9 @@
 
 const rad = (deg) => (deg * Math.PI) / 180;
 
+/** Angulo do vinco manga/tronco a partir do centro das costas. */
+const CREASE_ANGLE_DEG = 75;
+
 /**
  * Projeta um ponto 3D do referencial da peca para pixels.
  * Eixos da peca: X lateral, Y para baixo (gola=0), Z na direcao da camera.
@@ -31,10 +34,13 @@ function project(p, cam) {
   return [cam.cx + (cam.f * x) / zc, cam.cy + (cam.f * y) / zc];
 }
 
-/** Ponto na superficie do cilindro: s = arco lateral em cm, y = altura em cm. */
-function onCylinder(s, y, R) {
+/**
+ * Ponto na superficie do cilindro: s = arco lateral em cm, y = altura em cm.
+ * `axisX` desloca lateralmente o eixo do tronco naquela altura (contraposto).
+ */
+function onCylinder(s, y, R, axisX = () => 0) {
   const phi = s / R;
-  return [R * Math.sin(phi), y, R * Math.cos(phi)];
+  return [R * Math.sin(phi) + axisX(y), y, R * Math.cos(phi)];
 }
 
 /**
@@ -48,6 +54,12 @@ function onCylinder(s, y, R) {
  * @param {number} [o.offsetX_cm] deslocamento lateral da arte (0 = centrada)
  * @param {number} [o.collarToTop_cm] distancia da gola ao topo da arte
  * @param {number} [o.artRotation_deg] rotacao da arte na superficie
+ * @param {number} [o.bow_cm] curvatura lateral do tronco (contraposto): zero na
+ *   gola e na barra, maxima no meio. E o que faz a RETA gola->barra deixar de
+ *   passar pelo centro do tronco na altura da estampa.
+ * @param {number} [o.hipShift_cm] deslocamento lateral do quadril, linear com a
+ *   altura. Nao engana nenhum dos dois estimadores (ambos acompanham), esta aqui
+ *   para provar isso.
  * @param {object} [o.camera]
  */
 export function synthLandmarks(o) {
@@ -72,11 +84,20 @@ export function synthLandmarks(o) {
   const cs = offsetX; // centro da arte, em arco
   const cyArt = dCollar + h / 2;
 
+  // Eixo do tronco. O termo em seno e o CONTRAPOSTO: some na gola e na barra,
+  // e maximo no meio, exatamente onde fica a estampa. E a unica deformacao que
+  // separa os dois estimadores de centro, entao sem ela a validacao ficava
+  // viciada a favor da corda gola->barra.
+  const L = o.garmentLength_cm;
+  const bow = o.bow_cm ?? 0;
+  const hip = o.hipShift_cm ?? 0;
+  const axisX = (y) => hip * (y / L) + bow * Math.sin((Math.PI * y) / L);
+
   // Cantos no plano desenrolado (arco, altura), com rotacao propria da arte.
   const corner = (dx, dy) => {
     const s = cs + dx * Math.cos(psi) - dy * Math.sin(psi);
     const y = cyArt + dx * Math.sin(psi) + dy * Math.cos(psi);
-    return onCylinder(s, y, R);
+    return onCylinder(s, y, R, axisX);
   };
 
   const art = {
@@ -101,15 +122,21 @@ export function synthLandmarks(o) {
       collarToTop_cm: dCollar,
       artRotation_deg: o.artRotation_deg ?? 0,
       radius_cm: R,
+      bow_cm: bow,
+      hipShift_cm: hip,
       camera: cam,
     },
     landmarks: {
       art,
-      collar: { center: project(onCylinder(0, 0, R), cam) },
-      hem: { center: project(onCylinder(0, o.garmentLength_cm, R), cam) },
+      collar: { center: project(onCylinder(0, 0, R, axisX), cam) },
+      hem: { center: project(onCylinder(0, L, R, axisX), cam) },
+      // As laterais ficam no VINCO manga/tronco, ~75 graus do centro das
+      // costas — nao na tangente da silhueta (90 graus). E o que o protocolo
+      // manda anotar, e a diferenca importa: na tangente os dois lados estao
+      // na profundidade extrema e a guinada os separa ao maximo.
       side: {
-        left: project(onCylinder((-Math.PI / 2) * R, cyArt, R), cam),
-        right: project(onCylinder((Math.PI / 2) * R, cyArt, R), cam),
+        left: project(onCylinder((-CREASE_ANGLE_DEG * Math.PI) / 180 * R, cyArt, R, axisX), cam),
+        right: project(onCylinder((CREASE_ANGLE_DEG * Math.PI) / 180 * R, cyArt, R, axisX), cam),
       },
     },
   };

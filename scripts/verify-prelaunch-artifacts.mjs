@@ -1,7 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = "C:/Users/rober/Nimbus";
+// A raiz do repositorio, deduzida da localizacao deste arquivo. Antes era o
+// caminho absoluto da maquina Windows do dono, entao a verificacao que o
+// CLAUDE.md manda rodar antes de qualquer mudanca so funcionava la — em
+// qualquer outro lugar ela quebrava com ENOENT e virava um passo pulado.
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const IMPL = path.join(ROOT, "nuvemshop/auditoria/2026-07-21/implementacao");
 const REQUIRED_SOCIAL_END = "<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>";
 
