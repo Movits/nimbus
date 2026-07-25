@@ -162,7 +162,14 @@ const result = measurePrint(
     hem: hem.value,
     side:
       sideL.value && sideR.value
-        ? { left: sideL.value.center, right: sideR.value.center }
+        ? {
+            left: sideL.value.center,
+            right: sideR.value.center,
+            // O sigma declarado pelo anotador nas laterais entra na faixa de
+            // posicao. Lateral "inferida" nao pode sustentar veredito duro.
+            left_sigma_px: sideL.value.sigma_px,
+            right_sigma_px: sideR.value.sigma_px,
+          }
         : undefined,
     // Arte irregular (spray, stencil, ilustracao livre) nao tem aresta: os
     // pontos medios seguem o contorno do desenho, nao a borda da caixa. Os cm

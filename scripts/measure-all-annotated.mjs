@@ -32,8 +32,16 @@ for (const file of fs.readdirSync(dir)) {
   }
   if (!annotation.photo || !annotation.art) continue;
   const photo = annotation.photo;
-  if (!byPhoto.has(photo)) byPhoto.set(photo, []);
-  byPhoto.get(photo).push(path.join(dir, file));
+  if (!byPhoto.has(photo)) byPhoto.set(photo, { files: [], view: null });
+  const entry = byPhoto.get(photo);
+  entry.files.push(path.join(dir, file));
+  // A VISTA vem do anotador, nao de um padrao. Nem toda capa e das costas:
+  // Monograma NIMBUS e estampa de peito, e o CSV so tem dimensoes de frente
+  // para ele. Medir com a vista errada procuraria uma arte que nao existe
+  // naquele lado e o produto sairia como "sem medicao" por motivo falso.
+  const declared =
+    annotation.view ?? ((annotation.flags ?? []).some((f) => /front|frente|peito/i.test(f)) ? "front" : null);
+  if (declared) entry.view = declared;
 }
 
 const COLUMNS = [
@@ -66,13 +74,15 @@ const COLUMNS = [
 ];
 
 const rows = [];
-for (const [photo, files] of [...byPhoto.entries()].sort()) {
+for (const [photo, entry] of [...byPhoto.entries()].sort()) {
+  const files = entry.files;
+  const view = entry.view ?? "back";
   const productId = photo.match(/^(\d+)/)?.[1];
   if (!productId) {
     rows.push({ photo, scale_verdict: "SEM-MEDICAO", notes: "nome do arquivo nao traz product_id" });
     continue;
   }
-  const args = ["scripts/measure-print-geometry.mjs", "--product", productId, "--view", "back"];
+  const args = ["scripts/measure-print-geometry.mjs", "--product", productId, "--view", view];
   for (const f of files) args.push("--annotation", f);
   let payload;
   try {

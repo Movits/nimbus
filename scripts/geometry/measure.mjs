@@ -352,10 +352,28 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     const garmentLen_px = dist(collar, hem);
     const toCm = (px) => spec.lengthRange.map((L) => (px * L) / garmentLen_px);
 
+    // PROPAGACAO DA INCERTEZA DO ANOTADOR NA POSICAO.
+    // A escala ja fazia isso; a posicao nao fazia, e o buraco apareceu numa foto
+    // real: o anotador declarou `side_right` como "indeterminate" com sigma 4%
+    // (o braco da modelo cobria a lateral, o ponto foi inferido espelhando a
+    // barra) e mesmo assim saiu um REPROVADO de posicao. Veredito duro apoiado
+    // em ponto que ninguem viu e exatamente o pecado das auditorias anteriores.
+    const sArt = input.art.sigma_px ?? 0;
+    const sCol = input.collar.sigma_px ?? 0;
+    const sHem = input.hem.sigma_px ?? 0;
+    const sL = input.side?.left_sigma_px ?? 0;
+    const sR = input.side?.right_sigma_px ?? 0;
+    // A corda depende de gola e barra; o meio do tronco depende das laterais.
+    // Em ambos entra o proprio centro da arte. Soma em quadratura, conservadora.
+    const sigChord_px = Math.hypot(sArt, sCol, sHem);
+    const sigTorso_px = Math.hypot(sArt, sL / 2, sR / 2, sCol / 2, sHem / 2);
+    const sigPos_px = 2 * Math.max(sigChord_px, offsetTorso_px === null ? 0 : sigTorso_px);
+    const sigPos_cm = Math.max(...toCm(sigPos_px));
+
     const cands_px = offsetTorso_px === null ? [offsetChord_px] : [offsetChord_px, offsetTorso_px];
     const allCm = cands_px.flatMap(toCm);
-    const lo = Math.min(...allCm);
-    const hi = Math.max(...allCm);
+    const lo = Math.min(...allCm) - sigPos_cm;
+    const hi = Math.max(...allCm) + sigPos_cm;
     // Faixa do deslocamento ABSOLUTO, ja com as duas correcoes medidas. Se os
     // dois estimadores ficam em lados opostos do zero, o minimo e zero: a arte
     // pode estar centrada. Com a faixa contendo a verdade, os vereditos ficam
