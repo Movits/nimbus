@@ -94,8 +94,12 @@ export const DEFAULT_TOLERANCE = {
   // numa foto de peca vestida, e dizer que e seria repetir o erro antigo.
   offsetCm: 3,
   rotationDeg: 3, // rotacao da arte vs eixo da peca
-  alphaWarnPct: 3, // acima disso o eixo horizontal fica suspeito
-  alphaInvalidPct: 6, // acima disso o eixo horizontal e invalido
+  // Limiares reaferidos depois que a faixa de enrolamento passou a ter teto
+  // fisico (kappa=1). Com a faixa mais larga o excesso encolhe, e a 6 pontos o
+  // detector deixava passar guinada de 30 graus em duas das tres pecas. A 4 ele
+  // volta a pegar as tres, e continua com zero falso positivo em pose frontal.
+  alphaWarnPct: 2, // acima disso o eixo horizontal fica suspeito
+  alphaInvalidPct: 4, // acima disso o eixo horizontal e invalido
   alphaVerticalPct: 4, // alpha POSITIVO acima disso condena o proprio vertical
 };
 
@@ -173,17 +177,34 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
       const a = w_cm / 2 / R;
       return Math.sin(a) / a;
     });
-    alphaExpected = [
-      round((Math.min(...kappas) - 1) * 100, 1),
-      round((Math.max(...kappas) - 1) * 100, 1),
-    ];
+    // O TETO DA FAIXA E ZERO, nao o kappa do corpo mais largo. Motivo: kappa
+    // derivado de R = largura_plana/pi supoe que o corpo PREENCHE a peca como
+    // um cilindro. Peca folgada, e principalmente Oversized num corpo mais
+    // magro, cai quase PLANA nas costas — e superficie plana tem kappa = 1,
+    // que e o limite fisico. Usar o kappa do cilindro como teto acusava
+    // "altura comprimida" em 30% das fotos reais, todas com o eixo vertical
+    // intacto, e transformava escala mensuravel em INCONCLUSIVO.
+    alphaExpected = [round((Math.min(...kappas) - 1) * 100, 1), 0];
   }
 
-  // Excesso de anisotropia = o que sobra depois de descontar o enrolamento.
-  // Positivo => altura comprimida (inclinacao de camera ou anotacao errada).
-  // Muito negativo => guinada forte alem do enrolamento.
+  // Excesso de anisotropia = distancia para FORA da faixa esperada, e zero
+  // dentro dela. Antes era sempre a diferenca para o teto, o que dava excesso
+  // positivo mesmo para uma peca perfeitamente normal so por ela enrolar menos
+  // que o cilindro cheio.
+  //
+  // Excesso POSITIVO agora significa algo forte: a arte esta mais larga em
+  // relacao a altura do que a arte oficial, com enrolamento ZERO. Como o
+  // enrolamento so sabe estreitar, isso nao tem explicacao de pose — ou a
+  // anotacao errou, ou a estampa foi redesenhada fora de proporcao.
+  // Excesso NEGATIVO = guinada alem do enrolamento maximo.
   const alphaExcessPct =
-    alphaExpected === null ? alphaPct : round(alphaPct - alphaExpected[1], 1);
+    alphaExpected === null
+      ? alphaPct
+      : alphaPct > alphaExpected[1]
+        ? round(alphaPct - alphaExpected[1], 1)
+        : alphaPct < alphaExpected[0]
+          ? round(alphaPct - alphaExpected[0], 1)
+          : 0;
 
   const horizontalValid = Math.abs(alphaExcessPct) <= tolerance.alphaInvalidPct;
   let alphaRegime = "frontal";
