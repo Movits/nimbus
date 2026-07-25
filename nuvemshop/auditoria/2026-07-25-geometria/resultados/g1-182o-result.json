@@ -1,0 +1,126 @@
+{
+  "product_id": "352407182",
+  "title": "São Miguel Vintage | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "view": "back",
+  "image": "352407182-off-white-v4f.jpg",
+  "annotators": [
+    "g1"
+  ],
+  "interAnnotator_pctSpread": {
+    "art.tl": 0,
+    "art.tr": 0,
+    "art.br": 0,
+    "art.bl": 0,
+    "art.mt": 0,
+    "art.mb": 0,
+    "art.ml": 0,
+    "art.mr": 0,
+    "collar_center": 0,
+    "hem_center": 0,
+    "side_left": 0,
+    "side_right": 0
+  },
+  "official_cm": {
+    "w": 31.6,
+    "h": 40
+  },
+  "method": "nimbus.medidor/1",
+  "mode": "corners",
+  "artSize_cm": {
+    "w": 31.6,
+    "h": 40
+  },
+  "anisotropy": {
+    "alphaPct": -2.2,
+    "alphaExpectedByWrap": [
+      -10.3,
+      -8.2
+    ],
+    "alphaExcessPct": 6,
+    "regime": "vertical_comprimido",
+    "horizontalValid": true
+  },
+  "scale": {
+    "rho_v": 0.4773,
+    "impliedGarmentLength_cm": 83.81,
+    "impliedGarmentLength_band_cm": [
+      77.03,
+      90.59
+    ],
+    "garmentLengthRange_cm": [
+      78,
+      86
+    ],
+    "insidePhysicalRange": true,
+    "canonicalSize": "G",
+    "deltaCanonicalPct": -2.2,
+    "deltaBySize": [
+      {
+        "size": "P",
+        "length_cm": 78,
+        "deltaPct": -6.9
+      },
+      {
+        "size": "M",
+        "length_cm": 80,
+        "deltaPct": -4.5
+      },
+      {
+        "size": "G",
+        "length_cm": 82,
+        "deltaPct": -2.2
+      },
+      {
+        "size": "GG",
+        "length_cm": 84,
+        "deltaPct": 0.2
+      },
+      {
+        "size": "EG",
+        "length_cm": 86,
+        "deltaPct": 2.6
+      }
+    ],
+    "deltaRangePct": [
+      -6.9,
+      2.6
+    ],
+    "deltaHLowerBoundPct": -4.3,
+    "axesContradiction": false,
+    "nearestSize": {
+      "size": "GG",
+      "width_cm": 68,
+      "length_cm": 84
+    },
+    "verdict": "INCONCLUSIVO"
+  },
+  "position": {
+    "offsetX_cm": null,
+    "offsetX_pctOfArtWidth": null,
+    "collarToArtTop_cm": 8.66,
+    "rotation_deg": 2.7,
+    "rotationFlagged": false,
+    "verdict": "INCONCLUSIVO"
+  },
+  "widthCheck": {
+    "visibleWidth_cm": 36.95,
+    "impliedFlatWidth_cm": [
+      36.95,
+      58.04
+    ],
+    "consistentWithTable": false
+  },
+  "confidence": 15,
+  "verdict": "escala INCONCLUSIVO / posicao INCONCLUSIVO",
+  "notes": [
+    "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+    "excesso de anisotropia +6% : altura da arte comprimida (inclinacao de camera ou anotacao errada) — o eixo vertical nao e confiavel aqui",
+    "centralizacao nao avaliada: alpha -2.2% indica pose que desloca o eixo visivel",
+    "largura plana implicita 36.9-58.0 cm nao encosta na faixa real 62-70 cm",
+    "arte sem aresta desenhada",
+    "ressalva: art_missing_nimbus_wordmark",
+    "alpha positivo alto",
+    "eixos de largura e comprimento discordam"
+  ]
+}

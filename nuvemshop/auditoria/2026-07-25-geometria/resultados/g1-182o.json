@@ -1,0 +1,8 @@
+{"photo":"352407182-off-white-v4f.jpg","annotator":"g1","imageSize":{"w":1600,"h":1600},
+"art":{"tl":[33.85,35.62],"tr":[57.45,35.62],"br":[57.45,66.15],"bl":[33.85,66.15],
+"mt":[45.65,35.90],"mb":[45.65,66.09],"ml":[36.90,50.91],"mr":[51.50,50.91],"sigma_pct":0.5},
+"collar_center":{"xy":[47.90,28.90],"sigma_pct":1.5,"status":"ok"},
+"hem_center":{"xy":[50.80,92.80],"sigma_pct":1.5,"status":"ok"},
+"side_left":{"xy":[31.80,50.91],"sigma_pct":2.0,"status":"low_contrast"},
+"side_right":{"xy":[60.00,50.91],"sigma_pct":1.5,"status":"ok"},
+"flags":["art_irregular_no_drawn_frame","art_missing_nimbus_wordmark"]}

@@ -1,0 +1,8 @@
+{"photo":"352407156-branca.jpg","annotator":"g1","imageSize":{"w":1600,"h":1600},
+"art":{"tl":[33.88,41.70],"tr":[55.45,41.70],"br":[55.45,73.72],"bl":[33.88,73.72],
+"mt":[44.67,42.50],"mb":[44.67,73.72],"ml":[37.30,57.71],"mr":[52.20,57.71],"sigma_pct":0.5},
+"collar_center":{"xy":[49.80,33.00],"sigma_pct":3.0,"status":"occluded_hood"},
+"hem_center":{"xy":[50.60,90.27],"sigma_pct":2.0,"status":"ok"},
+"side_left":{"xy":[31.50,57.71],"sigma_pct":2.5,"status":"low_contrast"},
+"side_right":{"xy":[60.50,57.71],"sigma_pct":1.5,"status":"ok"},
+"flags":["art_irregular_no_drawn_frame","collar_occluded_hood"]}
