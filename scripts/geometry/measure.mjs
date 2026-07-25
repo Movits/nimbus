@@ -155,8 +155,36 @@ export function irregularHeightBias({ sTop_cm, sBottom_cm, artH_cm, collarToArtT
   return [round(Math.min(...vals), 2), round(Math.max(...vals), 2)];
 }
 
+/**
+ * Margem publicada do metodo, POR MODO DE ANOTACAO, em pontos percentuais.
+ * Sai de `validate.mjs` (|vies| + 2 desvios, arredondado para cima), nao e
+ * escolhida a dedo. Nenhum limiar de veredito pode ficar abaixo dela: publicar
+ * veredito dentro do proprio ruido foi o que derrubou as duas auditorias
+ * anteriores, entao a regra e mecanica (criterio `toleranceExceedsMargin`).
+ */
+export const METHOD_MARGIN_PP = {
+  corners: 4, // arte com moldura desenhada, 8 pontos medios
+  bbox: 8, // arte irregular: caixa envolvente da mancha de tinta
+};
+
 export const DEFAULT_TOLERANCE = {
-  scalePct: 8, // desvio de escala vs o tamanho canonico
+  // FAIXA DE TRES NIVEIS, decidida pelo dono em 25/07: "quero que sejamos o
+  // mais fiel possivel, entao +/-5%; se for um pouquinho mais tudo bem".
+  //   ate scalePct           -> OK
+  //   entre scalePct e       -> ACEITAVEL: fica no ar, so refaz se a peca for
+  //   scaleAcceptablePct        regerada por outro motivo
+  //   acima                  -> FORA-DO-ALVO: entra na fila
+  //
+  // O limiar EFETIVO de cada foto e o maior entre estes numeros e a margem do
+  // modo em que ela foi anotada (`METHOD_MARGIN_PP`). Ou seja: o ±5% vale hoje
+  // para arte com moldura; para arte irregular o piso e a margem, ate que uma
+  // anotacao melhor a derrube. Nao se aperta o limiar sem derrubar a margem.
+  scalePct: 5, // desvio de escala vs o tamanho canonico
+  scaleAcceptablePct: 8,
+  // Folga do detector de CONTRADICAO ENTRE EIXOS. Era `scalePct` reaproveitado,
+  // o que amarrava um detector de anotacao ruim a uma decisao de negocio:
+  // apertar a tolerancia apertava junto um detector que ninguem quis mexer.
+  axesContradictionPct: 8,
   // Tolerancia de posicao ACIMA da margem do metodo, senao o veredito seria
   // ruido. O gate pega deslocamento GROSSEIRO — o tipo que se ve a olho nu,
   // que e exatamente o que o dono apontou. Centralizacao fina nao e mensuravel
@@ -228,7 +256,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   const artW_px = dist(leftMid, rightMid);
   if (!hasEdgeMidpoints) {
     notes.push(
-      "arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e +-6 pp (a de +-2 pp exige aresta real)",
+      `arte sem moldura desenhada: altura medida pela caixa envolvente, nao pelos pontos medios — a margem do metodo aqui e ${METHOD_MARGIN_PP.bbox} pp (a de ${METHOD_MARGIN_PP.corners} pp exige aresta real)`,
     );
   }
 
@@ -395,7 +423,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   let axesContradiction = false;
   if (deltaHLowerBound !== null && deltaCanonical !== null) {
     // margem generosa: so acusa contradicao quando o horizontal diz MAIS
-    if (deltaHLowerBound > deltaCanonical + tolerance.scalePct) {
+    if (deltaHLowerBound > deltaCanonical + (tolerance.axesContradictionPct ?? 8)) {
       axesContradiction = true;
       notes.push(
         `contradicao entre eixos: horizontal (limite inferior ${deltaHLowerBound}%) acima do vertical (${deltaCanonical}%) — o eixo vertical provavelmente esta mal anotado`,
@@ -734,10 +762,35 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
       );
     }
     }
-  } else if (Math.abs(deltaCanonical) > tolerance.scalePct) {
-    scaleVerdict = "FORA-DO-ALVO";
   } else {
-    scaleVerdict = "OK";
+    // Limiares EFETIVOS: nunca abaixo da margem do modo de anotacao desta foto.
+    // Arte irregular carrega margem maior, entao ela nao e reprovada por um
+    // desvio que o proprio metodo nao consegue distinguir de zero.
+    // O que decide a margem NAO e `mode` (que so diz se os 8 pontos vieram) e
+    // sim se a altura saiu dos PONTOS MEDIOS de uma aresta real ou da CAIXA
+    // ENVOLVENTE da tinta. Arte de spray anotada com 8 pontos ainda e caixa: os
+    // pontos medios seguem o contorno do desenho, nao a borda. E o mesmo par de
+    // regimes que `validate.mjs` mede como "8pt" e "4pt".
+    const marginMode = hasEdgeMidpoints ? "corners" : "bbox";
+    const margin = METHOD_MARGIN_PP[marginMode];
+    const okLimit = Math.max(tolerance.scalePct, margin);
+    const acceptableLimit = Math.max(tolerance.scaleAcceptablePct ?? okLimit, okLimit);
+    const dev = Math.abs(deltaCanonical);
+    if (dev > acceptableLimit) {
+      scaleVerdict = "FORA-DO-ALVO";
+    } else if (dev > okLimit) {
+      scaleVerdict = "ACEITAVEL";
+      notes.push(
+        `desvio ${deltaCanonical > 0 ? "+" : ""}${deltaCanonical}% fica entre ${okLimit}% e ${acceptableLimit}%: aceitavel, permanece no ar. So refazer se a peca for regerada por outro motivo`,
+      );
+    } else {
+      scaleVerdict = "OK";
+    }
+    if (okLimit > tolerance.scalePct) {
+      notes.push(
+        `limiar de OK elevado de ${tolerance.scalePct}% para ${okLimit}% porque a margem do metodo no modo "${mode}" e ${margin} pp — abaixo disso o veredito seria ruido`,
+      );
+    }
   }
 
   // ----------------------------------------------------------- confianca

@@ -11,7 +11,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { synthLandmarks } from "./synth.mjs";
-import { measurePrint, CANONICAL_SIZE, POSITION_METHOD_MARGIN_CM, DEFAULT_TOLERANCE } from "./measure.mjs";
+import { measurePrint, CANONICAL_SIZE, POSITION_METHOD_MARGIN_CM, DEFAULT_TOLERANCE, METHOD_MARGIN_PP } from "./measure.mjs";
 import { getGarmentSpec } from "./garment-specs.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -289,6 +289,39 @@ function run() {
   // para cima. E o numero que passa a valer como tolerancia minima.
   const f = report.scaleError_pp.frontalish;
   report.publishedMargin_pp = Math.ceil(Math.abs(f.bias) + 2 * f.sd);
+
+  // ---- MARGEM POR MODO DE ANOTACAO, e o portao que a amarra ao limiar.
+  //
+  // Arte com moldura desenhada ("8pt", os pontos medios das arestas) e arte
+  // irregular ("4pt", a caixa envolvente da mancha de tinta) NAO tem a mesma
+  // precisao, e 39 das 42 anotacoes reais sao do segundo tipo. Publicar um
+  // limiar de 5% valido so para o primeiro e chama-lo de tolerancia do metodo
+  // seria repetir a classe de erro que ja custou duas auditorias.
+  //
+  // Este bloco mede a margem de cada modo na grade e CONFERE que:
+  //   1. a constante declarada em measure.mjs nao e otimista frente ao medido;
+  //   2. o limiar efetivo de veredito daquele modo nao cai abaixo dela.
+  // Se qualquer uma falhar, o portao fica vermelho e nenhum veredito sai.
+  const marginOf = (annot) => {
+    const sub = byAnnot(annot).filter((r) => Math.abs(r.yaw) <= 20 && Math.abs(r.pitch) <= 10);
+    const s = stats(sub.map((r) => r.scaleErrPct));
+    return { n: sub.length, bias: s.bias, sd: s.sd, margin_pp: Math.ceil(Math.abs(s.bias) + 2 * s.sd) };
+  };
+  const measuredMargins = { corners: marginOf("8pt"), bbox: marginOf("4pt") };
+  const okLimitFor = (mode) =>
+    Math.max(DEFAULT_TOLERANCE.scalePct, METHOD_MARGIN_PP[mode] ?? METHOD_MARGIN_PP.bbox);
+  report.marginByAnnotationMode = Object.fromEntries(
+    Object.entries(measuredMargins).map(([mode, m]) => [
+      mode,
+      {
+        ...m,
+        declared_pp: METHOD_MARGIN_PP[mode],
+        declaredCoversMeasured: METHOD_MARGIN_PP[mode] >= m.margin_pp,
+        effectiveOkLimit_pct: okLimitFor(mode),
+        limitAboveMargin: okLimitFor(mode) >= METHOD_MARGIN_PP[mode],
+      },
+    ]),
+  );
   // A margem de posicao nao sai do p95 do erro (que e zero por construcao, ja
   // que a faixa contem a verdade): ela E a constante embutida no medidor, e o
   // que este teste faz e PROVAR que ela basta. O preco dela e a largura tipica
@@ -309,6 +342,12 @@ function run() {
     offsetNeverDecisiveAndWrong: report.positionDecision.decisiveAndWrong === 0,
     alphaFiresAtYaw40_ge_0_9: report.alphaDetector.firesAtYaw40 >= 0.9,
     alphaQuietAtYaw0_le_0_1: report.alphaDetector.firesAtYaw0 <= 0.1,
+    // A regra que faltava: limiar de veredito nunca abaixo da margem do modo,
+    // e margem declarada nunca abaixo da medida. Sem isto o portao ficava verde
+    // com tolerancia dentro do ruido.
+    toleranceExceedsMargin: Object.values(report.marginByAnnotationMode).every(
+      (m) => m.declaredCoversMeasured && m.limitAboveMargin,
+    ),
   };
   report.passed = Object.values(report.criteria).every(Boolean);
 

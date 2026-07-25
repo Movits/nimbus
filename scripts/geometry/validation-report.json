@@ -1,6 +1,6 @@
 {
   "report": {
-    "generatedAt": "2026-07-25T19:11:29.630Z",
+    "generatedAt": "2026-07-25T19:15:19.780Z",
     "method": "nimbus.medidor/1",
     "grid": {
       "scenarios": [
@@ -269,10 +269,33 @@
     "verdictBreakdown": {
       "REPROVADO-DURO": 13152,
       "FORA-DO-ALVO": 495,
-      "OK": 5793
+      "OK": 4377,
+      "ACEITAVEL": 1416
     },
     "errors": 0,
     "publishedMargin_pp": 4,
+    "marginByAnnotationMode": {
+      "corners": {
+        "n": 11664,
+        "bias": -0.53,
+        "sd": 1.37,
+        "margin_pp": 4,
+        "declared_pp": 4,
+        "declaredCoversMeasured": true,
+        "effectiveOkLimit_pct": 5,
+        "limitAboveMargin": true
+      },
+      "bbox": {
+        "n": 11664,
+        "bias": -3.08,
+        "sd": 1.84,
+        "margin_pp": 7,
+        "declared_pp": 8,
+        "declaredCoversMeasured": true,
+        "effectiveOkLimit_pct": 8,
+        "limitAboveMargin": true
+      }
+    },
     "publishedOffsetMargin_cm": 1.9,
     "offsetBandWidth_cm": {
       "n": 19440,
@@ -288,7 +311,8 @@
       "offsetBandCoverage_ge_0_95": true,
       "offsetNeverDecisiveAndWrong": true,
       "alphaFiresAtYaw40_ge_0_9": true,
-      "alphaQuietAtYaw0_le_0_1": true
+      "alphaQuietAtYaw0_le_0_1": true,
+      "toleranceExceedsMargin": true
     },
     "passed": true
   },

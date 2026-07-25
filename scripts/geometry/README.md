@@ -107,20 +107,55 @@ não sabe.** Centralização fina não é mensurável numa foto de peça vestida
   O número continua reportado como diagnóstico para conferência humana, e a
   tabela de sobreposição fica em `validation-report.json`.
 
-## Erro irredutível: o tamanho vestido
+## O tamanho vestido: era erro irredutível, virou convenção
 
 A faixa entre P e EG é larga — Camiseta Premium ±10,3%, Oversized ±5,1%,
-Moletom Canguru ±8,3%. Sem declarar o tamanho, **nenhuma tolerância abaixo de
-~10% é executável**, e é por isso que os vereditos antigos de "desvio de 7,5%"
-estavam dentro do próprio ruído do método.
+Moletom Canguru ±8,3%. Enquanto o tamanho vestido era desconhecido, essa faixa
+entrava inteira no veredito e **nenhuma tolerância abaixo de ~10% era
+executável**. Foi por isso que os vereditos antigos de "desvio de 7,5%"
+estavam dentro do próprio ruído.
+
+**Isso deixou de valer em 25/07**, quando o dono adotou a convenção de que
+toda foto lifestyle representa um tamanho **G** (`CANONICAL_SIZE`). Com o
+tamanho declarado, a faixa P..EG some do eixo de catálogo: ela continua
+existindo, mas como a faixa do veredito DURO, não como ruído do veredito de
+catálogo.
+
+> [!warning] Correção de 25/07
+> Este parágrafo afirmava, sem ressalva, que nenhuma tolerância abaixo de ~10%
+> era executável. Depois da convenção do G isso ficou falso, e o texto passou a
+> documentar que a meta de ±5% do dono seria ilegítima — quando o que a limita
+> hoje é outra coisa.
 
 Duas saídas, ambas implementadas:
 
 - **Veredito duro** (`REPROVADO-DURO`): usa a faixa física inteira. Reprova só
-  quando nenhum tamanho real explica a geometria. É indiscutível.
-- **Veredito de catálogo** (`FORA-DO-ALVO`): compara com o tamanho canônico
-  `G`, por convenção do projeto de que toda foto lifestyle representa um G.
-  Essa convenção precisa entrar também no prompt de geração.
+  quando nenhum tamanho real explica a geometria. É indiscutível, e é o único
+  que continua carregando a incerteza P..EG.
+- **Veredito de catálogo** (`OK` / `ACEITAVEL` / `FORA-DO-ALVO`): compara com o
+  tamanho canônico `G`. Essa convenção precisa entrar também no prompt de
+  geração.
+
+### O que limita a tolerância hoje
+
+Não é mais a faixa de tamanhos: é a **margem medida do próprio método**, que
+depende de como a arte pode ser anotada.
+
+| Tipo de arte | Margem publicada | Tolerância mínima honesta |
+|---|---|---|
+| Moldura desenhada (8 pontos médios) | ver `validation-report.json`, modo `8pt` | a margem, arredondada para cima |
+| Silhueta livre / spray / stencil (caixa envolvente) | modo `4pt`, mais larga | idem |
+
+A regra é mecânica e está codificada em `validate.mjs` como critério
+`toleranceExceedsMargin`: **nenhum limiar de veredito pode ser menor que a
+margem do modo de anotação em que a foto foi medida**. Publicar veredito dentro
+do próprio ruído foi exatamente o que derrubou as duas auditorias anteriores,
+então isso não fica por conta de disciplina.
+
+Consequência prática: apertar a tolerância exige primeiro **derrubar a margem**
+(mais landmarks, recorte ampliado, segunda anotação), nunca só reescrever o
+número. Se a margem não cair para um tipo de arte, aquele tipo mantém o limiar
+mais folgado, com o motivo escrito no CSV.
 
 ## Módulos
 

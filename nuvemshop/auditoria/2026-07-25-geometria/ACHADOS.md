@@ -64,9 +64,36 @@ diziam, e a explicação é conhecida: elas comparavam a largura entre o mockup 
 e peça vestida sempre parece mais estreita porque o tecido enrola no dorso. Isso fabricava
 "estampa grande" de forma sistemática.
 
+## Tolerância: três faixas, com piso na margem do método
+
+Decisão do dono em 25/07: "quero que sejamos o mais fiel possível, então ±5%; se for um pouquinho
+mais tudo bem". Traduzida em faixas:
+
+| Desvio vs G | Rótulo | Ação |
+|---|---|---|
+| ≤ 5% | `OK` | aprovado |
+| 5% a 8% | `ACEITAVEL` | fica no ar; só refaz se a peça for regerada por outro motivo |
+| > 8% | `FORA-DO-ALVO` | entra na fila |
+| nenhum tamanho real explica | `REPROVADO-DURO` | entra na fila |
+
+Com uma trava que não é opcional: **o limiar efetivo de cada foto nunca fica abaixo da margem
+medida do método no modo em que ela foi anotada** — 4 pp para arte com moldura desenhada, 8 pp para
+arte de silhueta livre (spray, stencil, lettering). Na prática o ±5% vale hoje para as 3 fotos de
+São Jorge Neobarroco; para as outras 38 o piso continua sendo 8%, porque abaixo disso o veredito
+seria ruído do próprio medidor. Foi publicar dentro do ruído que derrubou as duas auditorias
+anteriores, então a regra é mecânica: `validate.mjs` tem o critério `toleranceExceedsMargin` e o
+portão fica vermelho se alguém apertar o limiar sem antes derrubar a margem.
+
+Apertar de verdade exige **derrubar a margem** (mais landmarks, recorte ampliado por ponto, segunda
+anotação em arte de spray), não reescrever o número.
+
+O efeito prático de aplicar as faixas foi **uma** mudança de veredito em 41 fotos: São Jorge
+Neobarroco Premium preta `[352718999]`, +6,9%, saiu de `OK` para `ACEITAVEL`. Ela é a única foto de
+arte com moldura cujo desvio cai entre 5% e 8%. A fila de correção não mudou.
+
 ## Aprovados na escala
 
-19 fotos dentro de ±8% do tamanho G. Três pares de cor fecharam juntos, o que era uma preocupação à
+18 fotos `OK` e 1 `ACEITAVEL`. Três pares de cor fecharam juntos, o que era uma preocupação à
 parte: Salmo 19 Premium (−1,0% e −1,3%), Brasão NIMBUS Oversized (−1,5% e −0,6%) e Aparecida
 Barroca Oversized (−1,4% e −1,1%). Pares tão apertados em fotos independentes são evidência de que
 a medição está estável, não só de que as peças estão certas.

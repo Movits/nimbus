@@ -134,9 +134,18 @@ foi exatamente o número inventado que invalidou as duas auditorias anteriores.
 
 O padrão é **um anotador por foto**. Uma segunda anotação independente é obrigatória quando:
 
-- o resultado cai a menos de 3 pontos percentuais de um limite de veredito;
+- o resultado cai a menos de **uma margem-do-método** de qualquer limiar de veredito;
 - qualquer ponto tem `status` diferente de `ok`;
 - a anisotropia medida indica pose forte.
+
+A margem-do-método é a do **modo em que aquela foto foi medida**, publicada em
+`validation-report.json` → `marginByAnnotationMode` e declarada em `measure.mjs` →
+`METHOD_MARGIN_PP`: hoje 4 pp para arte com moldura desenhada e 8 pp para arte de silhueta livre.
+
+Essa regra substituiu um número fixo ("a menos de 3 pp de um limite"), e o motivo é que agora há
+**dois** limiares (5% e 8%). Com 3 pp fixos a regra passaria a cobrir de 2% a 11%, ou seja quase
+todo o catálogo, e uma regra que dispara sempre não é regra. Escrita como margem, ela **aperta
+sozinha** quando a margem cair — em vez de virar mais um número escrito à mão para envelhecer.
 
 Anotadores não leem o trabalho um do outro. A discordância entre eles é registrada no resultado e
 é a fonte de erro que a validação sintética não cobre — no piloto ficou em 0,05 ponto percentual
