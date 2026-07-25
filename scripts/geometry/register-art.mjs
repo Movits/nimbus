@@ -6,17 +6,18 @@
 // onde a tinta difusa termina. Nas anotacoes reais aparece literalmente escrito
 // — "existe um anel claro que pode ser tinta ou vinco do moletom", "o contorno
 // preto externo e indistinguivel do tecido preto", "dois picos empatados dentro
-// de 0,05 pp". Quando dois anotadores escolhem ELEMENTOS diferentes como
-// extremo, o erro nao e ruido de ponteiro, e um degrau.
+// de 0,05 pp", "se so tinta escura contar, o topo cai e a altura encolhe ~3,5%".
+// Quando dois anotadores escolhem ELEMENTOS diferentes como extremo, o erro nao
+// e ruido de ponteiro: e um degrau, e nenhuma media conserta.
 //
-// O registro nao tem essa duvida: ele sabe qual e a arte inteira, porque a arte
-// e a entrada. Ele procura ONDE ela esta, nao O QUE ela e.
+// O registro nao tem essa duvida. Ele sabe qual e a arte inteira, porque a arte
+// e a ENTRADA: ele procura ONDE ela esta, nao O QUE ela e.
 //
 // Metodo: correlacao cruzada normalizada sobre MAGNITUDE DE GRADIENTE, em
-// piramide grosso-para-fino. Gradiente porque a arte impressa muda de cor com o
-// tecido, a iluminacao e a compressao, mas as bordas ficam onde estao.
+// piramide de tres niveis. Gradiente porque a arte impressa muda de cor com o
+// tecido, com a luz e com a compressao, mas as bordas ficam onde estao.
 
-/** Magnitude de gradiente de uma imagem RGB crua, em Float32 normalizado. */
+/** Magnitude de gradiente de imagem RGB crua. */
 export function gradientMagnitude(data, W, H, C) {
   const g = new Float32Array(W * H);
   const lum = (i) => 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
@@ -31,8 +32,10 @@ export function gradientMagnitude(data, W, H, C) {
   return g;
 }
 
-/** Reduz por media de blocos inteiros. Mantem a escala relativa entre niveis. */
-export function downsample(src, W, H, f) {
+/** Reduz para uma largura alvo por media de blocos. */
+function pyr(src, W, H, targetMax) {
+  const f = Math.max(1, Math.round(Math.max(W, H) / targetMax));
+  if (f === 1) return { data: src, width: W, height: H, factor: 1 };
   const w = Math.floor(W / f), h = Math.floor(H / f);
   const out = new Float32Array(w * h);
   for (let y = 0; y < h; y += 1) {
@@ -42,41 +45,40 @@ export function downsample(src, W, H, f) {
       out[y * w + x] = s / (f * f);
     }
   }
-  return { data: out, width: w, height: h };
+  return { data: out, width: w, height: h, factor: f };
 }
 
-/** Amostra bilinear com transformacao inversa: (x,y) da cena -> template. */
-function sampleAffine(tpl, TW, TH, u, v) {
-  if (u < 0 || v < 0 || u > TW - 1.001 || v > TH - 1.001) return null;
-  const x0 = Math.floor(u), y0 = Math.floor(v);
+function bilinear(img, W, H, u, v) {
+  if (u < 0 || v < 0 || u > W - 1.001 || v > H - 1.001) return null;
+  const x0 = u | 0, y0 = v | 0;
   const fx = u - x0, fy = v - y0;
+  const i = y0 * W + x0;
   return (
-    tpl[y0 * TW + x0] * (1 - fx) * (1 - fy) +
-    tpl[y0 * TW + x0 + 1] * fx * (1 - fy) +
-    tpl[(y0 + 1) * TW + x0] * (1 - fx) * fy +
-    tpl[(y0 + 1) * TW + x0 + 1] * fx * fy
+    img[i] * (1 - fx) * (1 - fy) + img[i + 1] * fx * (1 - fy) +
+    img[i + W] * (1 - fx) * fy + img[i + W + 1] * fx * fy
   );
 }
 
 /**
- * Correlacao normalizada entre a cena e o template posto em (cx,cy) com escala
- * (sx,sy) e rotacao theta. Percorre o TEMPLATE, que e menor, e amostra a cena.
+ * Correlacao normalizada do template posto em (cx,cy) com escalas (sx,sy) e
+ * rotacao. Percorre o TEMPLATE (menor) e amostra a cena.
+ * `need` e a fracao minima de amostras que precisa cair dentro da cena: abaixo
+ * disso o candidato e descartado em vez de pontuar alto por sair do quadro.
  */
-function score(scene, SW, SH, tpl, TW, TH, cx, cy, sx, sy, theta, step) {
-  const c = Math.cos(theta), s = Math.sin(theta);
-  let n = 0, sa = 0, sb = 0, saa = 0, sbb = 0, sab = 0;
+function ncc(scene, SW, SH, tpl, TW, TH, cx, cy, sx, sy, th, step, need = 0.9) {
+  const c = Math.cos(th), s = Math.sin(th);
+  let n = 0, fora = 0, sa = 0, sb = 0, saa = 0, sbb = 0, sab = 0;
   for (let ty = 0; ty < TH; ty += step) {
     for (let tx = 0; tx < TW; tx += step) {
       const dx = (tx - TW / 2) * sx, dy = (ty - TH / 2) * sy;
       const X = cx + dx * c - dy * s, Y = cy + dx * s + dy * c;
-      if (X < 0 || Y < 0 || X >= SW - 1 || Y >= SH - 1) return -1;
+      const b = bilinear(scene, SW, SH, X, Y);
+      if (b === null) { fora += 1; continue; }
       const a = tpl[ty * TW + tx];
-      const b = sampleAffine(scene, SW, SH, X, Y);
-      if (b === null) return -1;
       n += 1; sa += a; sb += b; saa += a * a; sbb += b * b; sab += a * b;
     }
   }
-  if (n < 40) return -1;
+  if (n < 30 || n / (n + fora) < need) return -1;
   const num = sab - (sa * sb) / n;
   const den = Math.sqrt(Math.max(1e-9, (saa - (sa * sa) / n) * (sbb - (sb * sb) / n)));
   return num / den;
@@ -88,54 +90,100 @@ function score(scene, SW, SH, tpl, TW, TH, cx, cy, sx, sy, theta, step) {
  * @param {{data:Buffer,width:number,height:number,channels:number}} sceneImg
  * @param {{data:Buffer,width:number,height:number,channels:number}} artImg
  * @param {object} [opts]
- * @param {[number,number]} [opts.scaleRange] fracao da altura da cena que a
- *   arte pode ocupar. Amplo de proposito: estreitar aqui seria assumir a
- *   resposta.
- * @returns {{cx:number,cy:number,height_px:number,width_px:number,
+ * @param {[number,number]} [opts.scaleRange] fracao da ALTURA da cena que a
+ *   arte pode ocupar. Amplo de proposito: estreitar aqui seria assumir parte
+ *   da resposta que se quer medir.
+ * @returns {{cx:number,cy:number,width_px:number,height_px:number,
  *   rotation_deg:number,score:number}|null}
  */
 export function registerArt(sceneImg, artImg, opts = {}) {
-  const [loFrac, hiFrac] = opts.scaleRange ?? [0.15, 0.85];
+  const [loFrac, hiFrac] = opts.scaleRange ?? [0.15, 0.9];
   const SW = sceneImg.width, SH = sceneImg.height;
+  // `channels` ausente fazia `lum()` ler data[i+undefined] e devolver NaN em
+  // todo pixel. O NCC virava NaN, e como NaN nao e maior que nada a busca
+  // simplesmente nao achava nada — falha silenciosa que parece "nao encontrou".
+  // Exigir explicitamente e mais barato que depurar de novo.
+  for (const [nome, img] of [["cena", sceneImg], ["arte", artImg]]) {
+    if (!img?.data || !img.width || !img.height) throw new Error(`registerArt: ${nome} sem data/width/height`);
+    if (!Number.isInteger(img.channels) || img.channels < 3) {
+      throw new Error(`registerArt: ${nome} sem "channels" valido (recebido ${img.channels}). Passe 3 para RGB ou 4 para RGBA.`);
+    }
+    if (img.data.length < img.width * img.height * img.channels) {
+      throw new Error(`registerArt: ${nome} com buffer menor que width*height*channels`);
+    }
+  }
   const sceneG = gradientMagnitude(sceneImg.data, SW, SH, sceneImg.channels);
   const tplG = gradientMagnitude(artImg.data, artImg.width, artImg.height, artImg.channels);
 
-  // Nivel grosso: escala e translacao numa grade rala.
-  const f = Math.max(1, Math.round(Math.max(SW, SH) / 256));
-  const sc = downsample(sceneG, SW, SH, f);
-  const tf = Math.max(1, Math.round(Math.max(artImg.width, artImg.height) / 96));
-  const tp = downsample(tplG, artImg.width, artImg.height, tf);
+  // Tres niveis. O grosso decide escala e posicao; os finos so refinam, o que
+  // mantem o custo linear em vez de quadratico na resolucao.
+  const niveis = [
+    { cena: 128, tpl: 44, step: 1, dPos: 2, dS: 0.09, dTh: 4, iters: 6 },
+    { cena: 320, tpl: 96, step: 2, dPos: 2, dS: 0.05, dTh: 2.5, iters: 6 },
+    { cena: 720, tpl: 190, step: 3, dPos: 1.5, dS: 0.02, dTh: 1.2, iters: 7 },
+  ];
 
+  // --------------------------------------------- nivel grosso: busca completa
+  const n0 = niveis[0];
+  const S0 = pyr(sceneG, SW, SH, n0.cena);
+  const T0 = pyr(tplG, artImg.width, artImg.height, n0.tpl);
   let best = null;
-  const hCoarse = sc.height;
-  for (let k = 0; k <= 22; k += 1) {
-    const frac = loFrac + ((hiFrac - loFrac) * k) / 22;
-    const sy = (frac * hCoarse) / tp.height;
-    const sx = sy; // grosso assume isotropia; o refino solta
-    for (let cy = 0; cy < sc.height; cy += 3) {
-      for (let cx = 0; cx < sc.width; cx += 3) {
-        const v = score(sc.data, sc.width, sc.height, tp.data, tp.width, tp.height, cx, cy, sx, sy, 0, 2);
-        if (v > 0 && (!best || v > best.v)) best = { v, cx, cy, sx, sy, th: 0 };
+  const NS = 20;
+  for (let k = 0; k <= NS; k += 1) {
+    const frac = loFrac + ((hiFrac - loFrac) * k) / NS;
+    const sy = (frac * S0.height) / T0.height;
+    const halfW = (T0.width * sy) / 2, halfH = (T0.height * sy) / 2;
+    // So posicoes onde o template cabe: fora daqui o NCC pontua lixo.
+    for (let cy = halfH; cy <= S0.height - halfH; cy += 2) {
+      for (let cx = halfW; cx <= S0.width - halfW; cx += 2) {
+        const v = ncc(S0.data, S0.width, S0.height, T0.data, T0.width, T0.height, cx, cy, sy, sy, 0, n0.step);
+        if (v > 0 && (!best || v > best.v)) best = { v, cx, cy, sx: sy, sy, th: 0 };
       }
     }
   }
   if (!best) return null;
 
-  // Refino no nivel cheio: escala em x e y separadas, rotacao, translacao.
-  let cur = { v: -1, cx: best.cx * f, cy: best.cy * f, sx: (best.sx * f) / tf, sy: (best.sy * f) / tf, th: 0 };
-  let dPos = 3 * f, dS = 0.10, dTh = (5 * Math.PI) / 180;
-  for (let it = 0; it < 7; it += 1) {
-    let improved = null;
-    for (const dx of [-dPos, 0, dPos]) for (const dy of [-dPos, 0, dPos])
-      for (const ax of [1 - dS, 1, 1 + dS]) for (const ay of [1 - dS, 1, 1 + dS])
-        for (const dt of [-dTh, 0, dTh]) {
-          const cand = { cx: cur.cx + dx, cy: cur.cy + dy, sx: cur.sx * ax, sy: cur.sy * ay, th: cur.th + dt };
-          const v = score(sceneG, SW, SH, tplG, artImg.width, artImg.height,
-            cand.cx, cand.cy, cand.sx, cand.sy, cand.th, 2);
-          if (v > cur.v && (!improved || v > improved.v)) improved = { ...cand, v };
-        }
-    if (improved) cur = improved; else { dPos /= 2; dS /= 2; dTh /= 2; }
-    if (dPos < 0.25) break;
+  // Estado em coordenadas da CENA ORIGINAL, para atravessar os niveis.
+  let cur = {
+    cx: best.cx * S0.factor,
+    cy: best.cy * S0.factor,
+    // escala que leva o template ORIGINAL ate a cena original
+    sx: (best.sx * S0.factor) / T0.factor,
+    sy: (best.sy * S0.factor) / T0.factor,
+    th: 0,
+    v: best.v,
+  };
+
+  // ------------------------------------------- niveis finos: descida local
+  for (const nv of niveis) {
+    const S = pyr(sceneG, SW, SH, nv.cena);
+    const T = pyr(tplG, artImg.width, artImg.height, nv.tpl);
+    const toLvl = (st) => ({
+      cx: st.cx / S.factor, cy: st.cy / S.factor,
+      sx: (st.sx * T.factor) / S.factor, sy: (st.sy * T.factor) / S.factor, th: st.th,
+    });
+    let L = toLvl(cur);
+    L.v = ncc(S.data, S.width, S.height, T.data, T.width, T.height, L.cx, L.cy, L.sx, L.sy, L.th, nv.step);
+    let dPos = nv.dPos, dS = nv.dS, dTh = (nv.dTh * Math.PI) / 180;
+    for (let it = 0; it < nv.iters; it += 1) {
+      let melhor = null;
+      for (const dx of [-dPos, 0, dPos]) for (const dy of [-dPos, 0, dPos])
+        for (const ax of [1 - dS, 1, 1 + dS]) for (const ay of [1 - dS, 1, 1 + dS])
+          for (const dt of [-dTh, 0, dTh]) {
+            if (!dx && !dy && ax === 1 && ay === 1 && !dt) continue;
+            const cand = { cx: L.cx + dx, cy: L.cy + dy, sx: L.sx * ax, sy: L.sy * ay, th: L.th + dt };
+            const v = ncc(S.data, S.width, S.height, T.data, T.width, T.height,
+              cand.cx, cand.cy, cand.sx, cand.sy, cand.th, nv.step);
+            if (v > L.v && (!melhor || v > melhor.v)) melhor = { ...cand, v };
+          }
+      if (melhor) L = melhor; else { dPos /= 2; dS /= 2; dTh /= 2; }
+      if (dPos < 0.2) break;
+    }
+    cur = {
+      cx: L.cx * S.factor, cy: L.cy * S.factor,
+      sx: (L.sx * S.factor) / T.factor, sy: (L.sy * S.factor) / T.factor,
+      th: L.th, v: L.v,
+    };
   }
 
   return {

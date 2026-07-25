@@ -109,7 +109,7 @@ async function run() {
               bow_cm: 2,
               camera: { yaw, pitch: -4, roll: 1.5, f: 2400, distance_cm: 250, cx: W / 2, cy: H / 2 - 190 },
             };
-            const bg = { data: fabric(W, H, tec), width: W, height: H };
+            const bg = { data: fabric(W, H, tec), width: W, height: H, channels: 3 };
             compositeArt(bg, templates[orla], params, 0.94);
             const box = projectedArtBox(params);
             if (!box) continue;
