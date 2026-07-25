@@ -1,0 +1,1729 @@
+{
+  "gerado_em": "2026-07-25",
+  "tamanho_canonico": "G",
+  "fonte_dimensoes": "/home/user/nimbus/nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv",
+  "fonte_medidas": "scripts/build-prelaunch-matrix.mjs (via geometry/garment-specs.mjs)",
+  "campo_larg": "removido de proposito — ver o cabecalho de derive-composicao.mjs",
+  "itens": [
+    {
+      "product_id": "352722510",
+      "title": "São Miguel Celeste | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "back",
+      "art_cm": {
+        "w": 35,
+        "h": 39.7
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352722510",
+      "title": "São Miguel Celeste | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "front",
+      "art_cm": {
+        "w": 10.3,
+        "h": 9.4
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352723243",
+      "title": "São Miguel Celeste | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 39.7
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 52.6,
+        "inf": 36.8,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352723243",
+      "title": "São Miguel Celeste | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.5,
+        "h": 8.6
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 11.4,
+        "inf": 78,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352722685",
+      "title": "São Miguel Celeste | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 39.7
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 61.1,
+        "inf": 26.6,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352722685",
+      "title": "São Miguel Celeste | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 9.6,
+        "h": 8.7
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 13.4,
+        "inf": 74.3,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352720257",
+      "title": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 35,
+        "h": 33.8
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 41.2,
+        "inf": 49,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352719728",
+      "title": "Aparecida Barroca | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "back",
+      "art_cm": {
+        "w": 27.8,
+        "h": 40
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352719728",
+      "title": "Aparecida Barroca | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "front",
+      "art_cm": {
+        "w": 9,
+        "h": 9.3
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352890896",
+      "title": "Aparecida Barroca | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 27.9,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352890896",
+      "title": "Aparecida Barroca | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.2,
+        "h": 9.4
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.5,
+        "inf": 78.8,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352720127",
+      "title": "Aparecida Barroca | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 27.7,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352720127",
+      "title": "Aparecida Barroca | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 9
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 11.9,
+        "inf": 77.5,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352719816",
+      "title": "Aparecida Barroca | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 27.7,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 61.5,
+        "inf": 26.2,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352719816",
+      "title": "Aparecida Barroca | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 9
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 13.8,
+        "inf": 73.8,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352717960",
+      "title": "Azulejo Sagrado | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "back",
+      "art_cm": {
+        "w": 35,
+        "h": 35
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352717960",
+      "title": "Azulejo Sagrado | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "front",
+      "art_cm": {
+        "w": 9.1,
+        "h": 9.4
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718275",
+      "title": "Azulejo Sagrado | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 35
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 46.4,
+        "inf": 43,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718275",
+      "title": "Azulejo Sagrado | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.5,
+        "h": 8.8
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 11.7,
+        "inf": 77.7,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718083",
+      "title": "Azulejo Sagrado | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 35
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 53.8,
+        "inf": 33.8,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718083",
+      "title": "Azulejo Sagrado | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.8,
+        "h": 9.1
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 14,
+        "inf": 73.7,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352717723",
+      "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 29.6,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352717723",
+      "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.1,
+        "h": 9.4
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.5,
+        "inf": 78.8,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352717837",
+      "title": "Brasão NIMBUS | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 29.6,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352717837",
+      "title": "Brasão NIMBUS | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.8,
+        "h": 9.1
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 12.1,
+        "inf": 77.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352703276",
+      "title": "Deus é Fiel | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.1,
+        "h": 33
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 40.2,
+        "inf": 50,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352703276",
+      "title": "Deus é Fiel | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.1,
+        "h": 9.4
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.5,
+        "inf": 78.8,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352703343",
+      "title": "Deus é Fiel | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 32.9
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 43.6,
+        "inf": 45.8,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352703343",
+      "title": "Deus é Fiel | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 9
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 11.9,
+        "inf": 77.5,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352702858",
+      "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.1,
+        "h": 24.6
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 30,
+        "inf": 60.2,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352702858",
+      "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.9,
+        "h": 9.1
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.1,
+        "inf": 79.1,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352703153",
+      "title": "Fé Acima de Tudo | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 24.6
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 32.6,
+        "inf": 56.8,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352703153",
+      "title": "Fé Acima de Tudo | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.5,
+        "h": 8.8
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 11.7,
+        "inf": 77.7,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352702753",
+      "title": "Monograma NIMBUS | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 29.3,
+        "h": 30.1
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 36.7,
+        "inf": 53.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352702796",
+      "title": "Monograma NIMBUS | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 28.5,
+        "h": 29.4
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 38.9,
+        "inf": 50.5,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352702020",
+      "title": "Salmo 19 | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 28.8
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 38.1,
+        "inf": 51.3,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352702020",
+      "title": "Salmo 19 | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.9,
+        "h": 9.2
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 12.2,
+        "inf": 77.2,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352619175",
+      "title": "Salmo 19 | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 28.8
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 44.3,
+        "inf": 43.4,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352619175",
+      "title": "Salmo 19 | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 9
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 13.8,
+        "inf": 73.8,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718943",
+      "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 30.8,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718943",
+      "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.1,
+        "h": 9.3
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.3,
+        "inf": 78.9,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718999",
+      "title": "São Jorge Neobarroco | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 31,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718999",
+      "title": "São Jorge Neobarroco | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9,
+        "h": 9.3
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 12.3,
+        "inf": 77.1,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718787",
+      "title": "São Jorge Neobarroco | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 31,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 61.5,
+        "inf": 26.2,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352718787",
+      "title": "São Jorge Neobarroco | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.6,
+        "h": 8.9
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 13.7,
+        "inf": 74,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618837",
+      "title": "São Jorge Vintage | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "back",
+      "art_cm": {
+        "w": 30.6,
+        "h": 40
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618837",
+      "title": "São Jorge Vintage | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "front",
+      "art_cm": {
+        "w": 9,
+        "h": 9.3
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618903",
+      "title": "São Jorge Vintage | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 30.6,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618903",
+      "title": "São Jorge Vintage | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.1,
+        "h": 9.3
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.3,
+        "inf": 78.9,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618935",
+      "title": "São Jorge Vintage | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 30.6,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618935",
+      "title": "São Jorge Vintage | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.6,
+        "h": 8.9
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 11.8,
+        "inf": 77.6,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618878",
+      "title": "São Jorge Vintage | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 30.6,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 61.5,
+        "inf": 26.2,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352618878",
+      "title": "São Jorge Vintage | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 9
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 13.8,
+        "inf": 73.8,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352407182",
+      "title": "São Miguel Vintage | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 31.6,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352407182",
+      "title": "São Miguel Vintage | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.2,
+        "h": 9.5
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 11.6,
+        "inf": 78.7,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352407196",
+      "title": "São Miguel Vintage | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 31.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352407196",
+      "title": "São Miguel Vintage | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.8,
+        "h": 9.1
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 12.1,
+        "inf": 77.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352407156",
+      "title": "São Miguel Vintage | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 31.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 61.5,
+        "inf": 26.2,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352407156",
+      "title": "São Miguel Vintage | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.9,
+        "h": 9.2
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 14.2,
+        "inf": 73.5,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728451",
+      "title": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.1,
+        "h": 27.2
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 33.2,
+        "inf": 57.1,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728451",
+      "title": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.8,
+        "h": 14.1
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 17.2,
+        "inf": 73,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728524",
+      "title": "Acima de Tudo Grafite | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 27.2
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 36,
+        "inf": 53.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728524",
+      "title": "Acima de Tudo Grafite | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.6,
+        "h": 12.3
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 16.3,
+        "inf": 73.1,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728277",
+      "title": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 25.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728277",
+      "title": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.2,
+        "h": 14.7
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 17.9,
+        "inf": 72.3,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728357",
+      "title": "Anjo da Guarda Stencil | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 25.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728357",
+      "title": "Anjo da Guarda Stencil | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.4,
+        "h": 13.6
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 18,
+        "inf": 71.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352727892",
+      "title": "Aparecida Spray | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "back",
+      "art_cm": {
+        "w": 23.8,
+        "h": 40
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352727892",
+      "title": "Aparecida Spray | Blusão Moletom",
+      "garment": "Blusão Moletom",
+      "view": "front",
+      "art_cm": {
+        "w": 9.4,
+        "h": 13.4
+      },
+      "composicao": null,
+      "motivo": "\"Blusão Moletom\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728019",
+      "title": "Aparecida Spray | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 23.8,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352728019",
+      "title": "Aparecida Spray | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9,
+        "h": 14.4
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 17.6,
+        "inf": 72.7,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352889132",
+      "title": "Aparecida Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 23.8,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352889132",
+      "title": "Aparecida Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 14.1
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 18.7,
+        "inf": 70.7,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721477",
+      "title": "Espírito Santo Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.2,
+        "h": 35.1
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 46.5,
+        "inf": 42.9,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721477",
+      "title": "Espírito Santo Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.4,
+        "h": 12.1
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 16,
+        "inf": 73.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721118",
+      "title": "Fé Wildstyle | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 33.7,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721118",
+      "title": "Fé Wildstyle | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9,
+        "h": 14.5
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 17.7,
+        "inf": 72.6,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721197",
+      "title": "Fé Wildstyle | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 33.8,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721197",
+      "title": "Fé Wildstyle | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.5,
+        "h": 13.7
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 18.1,
+        "inf": 71.3,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721633",
+      "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 35.1,
+        "h": 37.5
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 45.7,
+        "inf": 44.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352721633",
+      "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9.1,
+        "h": 14.6
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 17.8,
+        "inf": 72.4,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "355581274",
+      "title": "NIMBUS Wildstyle | Ecobag",
+      "garment": "Ecobag",
+      "view": "front",
+      "art_cm": {
+        "w": 24,
+        "h": 25.7
+      },
+      "composicao": null,
+      "motivo": "\"Ecobag\" nao tem tabela de medidas publicada",
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352725749",
+      "title": "Querubim Spray | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 25.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.8,
+        "inf": 41.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352725749",
+      "title": "Querubim Spray | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 9,
+        "h": 12.9
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 15.7,
+        "inf": 74.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352725852",
+      "title": "Querubim Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 25.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352725852",
+      "title": "Querubim Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.8,
+        "h": 12.6
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 16.7,
+        "inf": 72.7,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352722232",
+      "title": "Sagrado Coração Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 24.9,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352722232",
+      "title": "Sagrado Coração Spray | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 12.5
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 16.6,
+        "inf": 72.8,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352727545",
+      "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 29.1,
+        "h": 39.5
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 48.2,
+        "inf": 42.1,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352727545",
+      "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+      "garment": "Camiseta Oversized Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.5,
+        "h": 13.7
+      },
+      "composicao": {
+        "sup": 9.8,
+        "alt": 16.7,
+        "inf": 73.5,
+        "garmentLength_cm": 82,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352898175",
+      "title": "São Miguel Vitorioso | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "back",
+      "art_cm": {
+        "w": 29.5,
+        "h": 40
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 53,
+        "inf": 36.4,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352898175",
+      "title": "São Miguel Vitorioso | Camiseta Premium",
+      "garment": "Camiseta Premium",
+      "view": "front",
+      "art_cm": {
+        "w": 8.9,
+        "h": 14.4
+      },
+      "composicao": {
+        "sup": 10.6,
+        "alt": 19.1,
+        "inf": 70.3,
+        "garmentLength_cm": 75.5,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352726673",
+      "title": "São Miguel Vitorioso | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "back",
+      "art_cm": {
+        "w": 28.5,
+        "h": 39.4
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 60.6,
+        "inf": 27.1,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    },
+    {
+      "product_id": "352726673",
+      "title": "São Miguel Vitorioso | Moletom Canguru",
+      "garment": "Moletom Canguru",
+      "view": "front",
+      "art_cm": {
+        "w": 8.7,
+        "h": 14
+      },
+      "composicao": {
+        "sup": 12.3,
+        "alt": 21.5,
+        "inf": 66.2,
+        "garmentLength_cm": 65,
+        "size": "G"
+      },
+      "motivo": null,
+      "placement_source": "suposicao (8 cm): a YouDraw nao publica placement oficial. Confirmar e trocar aqui."
+    }
+  ]
+}

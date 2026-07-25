@@ -22,7 +22,13 @@
 - Não mudar a cor da peça.
 - Não adicionar ou remover capuz, bolso, gola ou manga.
 - Manter o mesmo modelo quando a tarefa for somente uma variação de cor.
-- Manter a escala da estampa dentro de 10% da proporção observada no mockup YouDraw.
+- Manter a escala da estampa dentro de 8% do alvo, medido pelo **comprimento de
+  peça implícito** (`scripts/measure-print-geometry.mjs`) contra a tabela de
+  medidas real da YouDraw no tamanho **G**, que é a convenção adotada para toda
+  foto lifestyle. Não usar "proporção observada no mockup": comparar a razão
+  estampa/peça entre um mockup plano e uma foto vestida é inválido, porque na
+  peça vestida o tecido enrola e as laterais fogem da câmera. Foi essa
+  comparação que produziu as duas auditorias invalidadas.
 - Preservar as fotos planas da YouDraw na galeria do produto.
 
 ## Ciclo obrigatório (um produto por vez)
@@ -35,8 +41,16 @@
    caimento), cor da peça, cenário da coleção, estampa idêntica à arte
    original (traços, cores, todo texto letra a letra, assinatura NIMBUS),
    escala e posição calibradas pelas dimensões em cm da YouDraw do produto.
-3. Comparar lado a lado com mockup, arte original e variante real; medir a
-   largura da estampa em relação à largura útil das costas ou do peito.
+3. Comparar lado a lado com mockup, arte original e variante real. A medição é
+   pelo eixo **vertical**, nunca pela largura: numa peça vestida a largura só
+   sabe subestimar (a arte enrola no dorso), então largura serve como limite
+   inferior e jamais como veredito. Anotar os 8 pontos da estampa mais gola,
+   barra e as laterais do tronco pelo
+   `scripts/geometry/PROTOCOLO-ANOTACAO.md`, e rodar o medidor.
+   Sobre POSIÇÃO: o medidor confirma centralização abaixo de ~2 cm e reprova
+   acima de ~7 cm, e entre os dois declara que não sabe — é limite físico da
+   foto vestida, medido, não preguiça. Centralização fina se confere no mockup
+   plano, onde não há enrolamento nem pose.
 4. Classificar como `aprovada`, `ajuste direcionado` ou `rejeitada`.
 5. Se houver desvio, escrever o diagnóstico exato, por exemplo: `estampa 20%
    maior`, `capuz incorreto` ou `texto deformado`.

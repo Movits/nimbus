@@ -88,7 +88,18 @@ function garmentLock(task) {
   return GARMENT_LOCKS[task.piece] || "";
 }
 
-// Trava de escala escrita como ESPACO VAZIO, com a geometria medida no mockup deste produto.
+// Trava de escala escrita como ESPACO VAZIO.
+//
+// `task.composicao` deve vir de `scripts/derive-composicao.mjs`, que calcula as
+// tres faixas a partir dos cm oficiais da YouDraw e do comprimento real da peca
+// no tamanho canonico. Antes esses numeros eram estimados olhando o mockup, que
+// e a mesma estimativa visual que aprovou fotos depois reprovadas na medicao.
+//
+// O campo `larg` foi REMOVIDO. Ele pedia "X por cento da largura
+// ombro-a-ombro", e nem a medida existe na tabela da YouDraw, nem a largura
+// aparente da arte numa peca vestida e derivavel sem o raio do dorso. Ver o
+// cabecalho de derive-composicao.mjs. Em lugar dele entrou uma instrucao de
+// CENTRALIZACAO, que e verificavel e nao depende de numero inventado.
 function compositionLock(task) {
   const g = task.composicao;
   if (!g) {
@@ -97,13 +108,14 @@ function compositionLock(task) {
     }
     return "SCALE LOCK — reproduce the print at exactly the size it has in the mockup reference relative to the garment. It must never be larger; when uncertain, render it clearly SMALLER. Leave a wide band of empty fabric below the print and bare fabric on both sides.";
   }
-  const sup = Math.round(g.sup), alt = Math.round(g.alt), inf = Math.round(g.inf), larg = Math.round(g.larg);
+  const sup = Math.round(g.sup), alt = Math.round(g.alt), inf = Math.round(g.inf);
   return [
     `SCALE AND COMPOSITION LOCK — the size of the print is the single most important requirement of this image, and previous attempts failed by making it too large. Compose it by EMPTY FABRIC, not by filling the garment:`,
     `the artwork starts a full ${sup} percent of the collar-to-hem length BELOW the collar — that upper band is EMPTY fabric with nothing printed on it;`,
     `the artwork itself covers only the middle ${alt} percent of the collar-to-hem length;`,
     `and the ENTIRE LOWER ${inf} PERCENT of the garment, down to the hem, is EMPTY fabric.`,
-    `Across the body, the artwork spans only ${larg} percent of the shoulder-seam-to-shoulder-seam width, leaving a clear hand's width of bare fabric on each side; it must never reach the side seams or the underarms.`,
+    `The print is CENTERED on the back: its vertical centre line sits on the garment's own centre line, halfway between the two side seams.`,
+    `The model wears size ${g.size ?? "G"}; these percentages are derived from that size's real measurements.`,
     `If you are unsure, render the artwork SMALLER — a print slightly too small is acceptable, a print too large makes the photo unusable.`,
   ].join(" ");
 }
