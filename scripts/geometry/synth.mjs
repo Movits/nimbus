@@ -123,6 +123,37 @@ export function synthLandmarks(o) {
     mr: project(corner(+w / 2, 0), cam),
   };
 
+  // ---------------------------------------------------- ARTE IRREGULAR
+  // Spray, stencil e lettering livre nao tem aresta: o anotador marca a CAIXA
+  // ENVOLVENTE alinhada aos eixos da mancha de tinta, e o topo da caixa e o
+  // pixel de tinta mais alto, que pode estar em qualquer posicao lateral.
+  //
+  // Isto existe porque a margem publicada para arte irregular (+-6 pp) foi
+  // medida no modo "4pt", que projeta os CANTOS de um retangulo a +-W/2 de
+  // arco — o pior caso possivel de deslocamento lateral. Arte de spray tem os
+  // extremos bem mais perto do centro. Sem modelar isso, a margem descreve um
+  // cenario que nao acontece.
+  let artIrregular = null;
+  if (o.inkExtremes) {
+    const { topS_cm = 0, bottomS_cm = 0 } = o.inkExtremes;
+    // Conjunto de pontos de tinta: o extremo de cima e o de baixo nas posicoes
+    // laterais declaradas, mais os extremos laterais na meia-altura.
+    const pts = [
+      corner(topS_cm - cs, -h / 2),
+      corner(bottomS_cm - cs, +h / 2),
+      corner(-w / 2, 0),
+      corner(+w / 2, 0),
+    ].map((p) => project(p, cam));
+    const xs = pts.map((p) => p[0]);
+    const ys = pts.map((p) => p[1]);
+    const x0 = Math.min(...xs), x1 = Math.max(...xs);
+    const y0 = Math.min(...ys), y1 = Math.max(...ys);
+    // A caixa que o anotador entrega: cantos virtuais alinhados aos eixos.
+    artIrregular = {
+      tl: [x0, y0], tr: [x1, y0], br: [x1, y1], bl: [x0, y1],
+    };
+  }
+
   return {
     truth: {
       garmentLength_cm: o.garmentLength_cm,
@@ -137,6 +168,7 @@ export function synthLandmarks(o) {
     },
     landmarks: {
       art,
+      artIrregular,
       collar: { center: project(onCylinder(0, 0, R, axisX), cam) },
       hem: { center: project(onCylinder(0, L, R, axisX), cam) },
       // As laterais ficam no VINCO manga/tronco, ~75 graus do centro das

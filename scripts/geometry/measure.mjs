@@ -86,6 +86,64 @@ export const POSITION_UNDERESTIMATE_FACTOR = 1.6;
  * comentario no bloco de posicao. Fica so como numero de conferencia.
  */
 
+/**
+ * Faixa plausivel de distancia de camera em fotografia de produto, em cm.
+ * Nao e medivel na foto (so se conhece f/(D+R), nunca f e D separados), entao
+ * entra como FAIXA. Os extremos sao generosos de proposito.
+ */
+const CAMERA_DISTANCE_RANGE_CM = [120, 400];
+
+/** Guinada plausivel, em radianos. O portao de anisotropia corta acima disso. */
+const YAW_RANGE_RAD = [-20, -10, 0, 10, 20].map((d) => (d * Math.PI) / 180);
+
+/**
+ * VIES DE ALTURA EM ARTE IRREGULAR, calculado por foto.
+ *
+ * Numa arte sem aresta (spray, stencil, lettering) a caixa envolvente e
+ * definida pelo pixel de tinta mais alto e pelo mais baixo, e esses dois podem
+ * estar em posicoes LATERAIS diferentes. Como o dorso e curvo, um ponto a arco
+ * s do centro esta a profundidade D - R*cos(s/R), mais LONGE que o centro, e
+ * projeta menor. Se o topo e a base estao em lados opostos, a altura medida
+ * encolhe e a estampa parece menor do que e.
+ *
+ * Medido no sintetico: com os dois extremos no centro o vies e exatamente
+ * zero; a +-3 cm fica entre -0,1 e -1,6 pp; a +-12 cm chega a -8,2 pp. Ou seja
+ * a margem cega de +-6 pp era grosseira nos dois sentidos — punia foto boa e
+ * nao cobria o pior caso.
+ *
+ * Aqui o vies vira faixa calculada com o que se sabe: a posicao lateral dos
+ * extremos (declarada pelo anotador), o raio na faixa da tabela de medidas, e
+ * a distancia de camera na faixa acima. O sinal e sempre negativo, entao a
+ * correcao so pode empurrar o desvio para CIMA.
+ *
+ * @returns {[number,number]|null} faixa do vies em pontos percentuais
+ */
+export function irregularHeightBias({ sTop_cm, sBottom_cm, artH_cm, collarToArtTop_cm, radiusRange_cm }) {
+  if (!Number.isFinite(sTop_cm) || !Number.isFinite(sBottom_cm)) return null;
+  const yTop = collarToArtTop_cm;
+  const yBot = collarToArtTop_cm + artH_cm;
+  const vals = [];
+  for (const R of radiusRange_cm) {
+    for (const D of CAMERA_DISTANCE_RANGE_CM) {
+      // A guinada entra porque ela DESLOCA o arco: um ponto em s vai para
+      // s/R + theta, e o lado que se afasta ganha profundidade. Ignorar isso
+      // subestimava o pior caso pela metade. A faixa de theta e a que o portao
+      // de anisotropia deixa passar.
+      for (const theta of YAW_RANGE_RAD) {
+        const d = (s) => {
+          const phi = Math.min(Math.abs(s / R + theta), Math.PI / 2);
+          return D - R * Math.cos(phi);
+        };
+        const dRef = D - R * Math.cos(Math.min(Math.abs(theta), Math.PI / 2));
+        const medido = yBot / d(sBottom_cm) - yTop / d(sTop_cm);
+        const verdadeiro = (yBot - yTop) / dRef;
+        vals.push((medido / verdadeiro - 1) * 100);
+      }
+    }
+  }
+  return [round(Math.min(...vals), 2), round(Math.max(...vals), 2)];
+}
+
 export const DEFAULT_TOLERANCE = {
   scalePct: 8, // desvio de escala vs o tamanho canonico
   // Tolerancia de posicao ACIMA da margem do metodo, senao o veredito seria
@@ -228,6 +286,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
   let rho_v = null;
   let impliedLength = null;
   let impliedBand = null;
+  let irregularBias = null;
   if (haveCollar && haveHem) {
     const garmentLen_px = dist(input.collar.center, input.hem.center);
     rho_v = artH_px / garmentLen_px;
@@ -250,6 +309,35 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
     if (rel > 0) {
       const half = 2 * rel * impliedLength; // ~95%
       impliedBand = [round(impliedLength - half), round(impliedLength + half)];
+    }
+
+    // VIES DE ARTE IRREGULAR, quando o anotador declarou onde estao os extremos
+    // da tinta. Ele so sabe encolher a altura medida, logo so sabe inflar o
+    // "estampa pequena". Entra alargando a faixa do comprimento implicito, na
+    // direcao em que ele pode ter mentido.
+    if (shape === "irregular" && input.art.topExtreme && input.art.bottomExtreme && artW_px > 0) {
+      const centerX = mid(leftMid, rightMid);
+      const pxToCm = w_cm / artW_px;
+      const axis = [rightMid[0] - leftMid[0], rightMid[1] - leftMid[1]];
+      const along = (p) => ((p[0] - centerX[0]) * axis[0] + (p[1] - centerX[1]) * axis[1]) / Math.hypot(...axis);
+      irregularBias = irregularHeightBias({
+        sTop_cm: along(input.art.topExtreme) * pxToCm,
+        sBottom_cm: along(input.art.bottomExtreme) * pxToCm,
+        artH_cm: h_cm,
+        collarToArtTop_cm: 8,
+        radiusRange_cm: spec.hasTable ? spec.widthRange.map((f) => f / Math.PI) : [16, 22],
+      });
+      if (irregularBias) {
+        const [bLo, bHi] = irregularBias;
+        const base = impliedBand ?? [impliedLength, impliedLength];
+        impliedBand = [
+          round(Math.min(base[0] * (1 + bLo / 100), base[0])),
+          round(Math.max(base[1] * (1 + bHi / 100), base[1])),
+        ];
+        notes.push(
+          `arte irregular com extremos de tinta declarados: vies projetivo de ${bLo} a ${bHi} pp incorporado a faixa (extremos afastados do centro encolhem a altura medida)`,
+        );
+      }
     }
   } else {
     notes.push(
@@ -619,6 +707,7 @@ export function measurePrint(input, tolerance = DEFAULT_TOLERANCE) {
       rho_v: rho_v === null ? null : round(rho_v, 4),
       impliedGarmentLength_cm: impliedLength === null ? null : round(impliedLength),
       impliedGarmentLength_band_cm: impliedBand,
+      irregularHeightBias_pp: irregularBias,
       garmentLengthRange_cm: spec.lengthRange,
       insidePhysicalRange,
       canonicalSize: CANONICAL_SIZE,

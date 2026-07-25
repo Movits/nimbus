@@ -49,7 +49,14 @@ tag do Querubim, por exemplo, encolheria a largura medida em 10% e produziria um
   aresta é curva, e o meio dela está na mesma profundidade da gola e da barra, enquanto os cantos
   estão na parte curva do dorso, mais longe da câmera.
 - `"shape": "irregular"` — ilustração livre, spray, stencil, **ou moldura que não contém toda a
-  tinta**. Não existe aresta: a tinta no meio
+  tinta**. Nesse caso marque também, obrigatoriamente, `top_extreme` e `bottom_extreme`: as
+  coordenadas `[x, y]` do ponto de tinta que define o topo da caixa e do que define a base.
+  **O `x` é o que importa aqui**, e não é detalhe: o dorso é curvo, então um extremo afastado do
+  centro está mais longe da câmera e projeta menor. Se o topo e a base estão em lados opostos, a
+  altura medida encolhe e a estampa parece menor do que é. Medido no gerador de verdade conhecida:
+  com os dois extremos no centro o viés é **exatamente zero**; a ±3 cm vai a −1,6 pp; a ±12 cm
+  chega a −8,2 pp. Declarando o `x`, o medidor calcula esse viés por foto em vez de carregar uma
+  margem cega. Não existe aresta: a tinta no meio
   horizontal não alcança o topo da caixa. Nesse caso os pontos médios descrevem o contorno do
   desenho e **não** são usados para medir altura; a medição cai para a caixa envolvente, que
   carrega margem maior. O número dessa margem está sendo re-derivado: o gerador sintético só sabia
@@ -96,6 +103,8 @@ foi exatamente o número inventado que invalidou as duas auditorias anteriores.
     "tl": [x,y], "tr": [x,y], "br": [x,y], "bl": [x,y],
     "mt": [x,y], "mb": [x,y], "ml": [x,y], "mr": [x,y],
     "shape": "rect_frame" | "irregular",
+    "top_extreme": [x,y],
+    "bottom_extreme": [x,y],
     "sigma_pct": 0.5
   },
   "collar_center": { "xy": [x,y], "sigma_pct": 1.0, "status": "ok" },
