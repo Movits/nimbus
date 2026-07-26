@@ -36,8 +36,19 @@ provadas** entre receitas do mesmo blank. Ordem de retrabalho e método em
 [`verdades/torso-e-centro.md`](verdades/torso-e-centro.md); instrumento em
 `scripts/producao/auditar-receitas.mjs`.
 
-**Próximo passo:** reconstruir o catálogo uma capa por vez, na ordem daquela
-tabela, remedindo `torso` e `centro` no blank antes de recompor.
+**Três capas refeitas em 26/07, à espera do olho do dono:** 352725852 preta
+(Camiseta Premium, era 2,03× → 1,19×), 352728277 preta (Oversized, 1,86× →
+1,18×) e 352718787 branca (Moletom Canguru com capuz, 1,45× → 1,14×). As três
+passam gate, compressão de malha e leitura visual. A fila acima do teto caiu de
+**12 para 9**.
+
+Escolhidas para cobrir três caminhos de risco diferentes: tecido escuro, peça de
+área maior, e tecido claro com capuz.
+
+**Próximo passo:** com o aval do dono, seguir a fila em lotes, remedindo `torso`
+e `centro` no blank antes de recompor. A 352718999 branca aparece na fila mas
+**já está resolvida** — é um dos pilotos aprovados, e o que falta é promover o
+piloto a entregável, não refazer.
 
 ## Medições fechadas
 

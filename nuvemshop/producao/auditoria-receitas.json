@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-07-26T22:20:12.198Z",
+ "gerado_em": "2026-07-26T22:56:30.314Z",
  "teto_inflacao": 1.412,
  "pilotos": [
   {
@@ -806,7 +806,7 @@
    ]
   },
   {
-   "arquivo": "352718787-branca-par-v1.png",
+   "arquivo": "352718787-branca-par-v2.png",
    "id": "352718787",
    "cor": "branca",
    "fonte": "sidecar",
@@ -814,21 +814,19 @@
    "peca": "Moletom Canguru",
    "foto": "352718787-branca-par-blank-alinhado.png",
    "gola": 0.311,
-   "barra": 0.955,
+   "barra": 0.942,
    "centro": 0.497,
-   "torso": 0.4727,
+   "torso": 0.375,
    "arte_cm": "31x40",
    "placement": 3.94,
    "raio_tabela_cm": 18.46,
-   "raio_efetivo_cm": 26.7,
-   "inflacao": 1.446,
-   "arco_meio_rad": 0.58,
+   "raio_efetivo_cm": 21.1,
+   "inflacao": 1.143,
+   "arco_meio_rad": 0.735,
    "arco_sem_torso": 0.84,
    "estimado": false,
    "status": "MEDIDO",
-   "suspeitas": [
-    "torso infla o raio 1.446x a tabela (teto dos pilotos 1.412x) — estampa achatada"
-   ]
+   "suspeitas": []
   },
   {
    "arquivo": "352718787-preta-par-v1.png",
@@ -1418,29 +1416,27 @@
    "suspeitas": []
   },
   {
-   "arquivo": "352725852-preta-v1.png",
+   "arquivo": "352725852-preta-v2.png",
    "id": "352725852",
    "cor": "preta",
    "fonte": "sidecar",
    "final": true,
    "peca": "Camiseta Premium",
    "foto": "352725852-preta-blank.png",
-   "gola": 0.287,
-   "barra": 0.975,
-   "centro": 0.508,
-   "torso": 0.546,
+   "gola": 0.297,
+   "barra": 0.97,
+   "centro": 0.492,
+   "torso": 0.335,
    "arte_cm": "25.5x40",
    "placement": 8.29,
    "raio_tabela_cm": 17.19,
-   "raio_efetivo_cm": 34.8,
-   "inflacao": 2.025,
-   "arco_meio_rad": 0.366,
+   "raio_efetivo_cm": 20.5,
+   "inflacao": 1.193,
+   "arco_meio_rad": 0.623,
    "arco_sem_torso": 0.742,
    "estimado": false,
    "status": "MEDIDO",
-   "suspeitas": [
-    "torso infla o raio 2.025x a tabela (teto dos pilotos 1.412x) — estampa achatada"
-   ]
+   "suspeitas": []
   },
   {
    "arquivo": "352726673-branca-par-v1-semcapuz.png",
@@ -1581,29 +1577,27 @@
    "suspeitas": []
   },
   {
-   "arquivo": "352728277-preta-v2.png",
+   "arquivo": "352728277-preta-v3.png",
    "id": "352728277",
    "cor": "preta",
    "fonte": "sidecar",
    "final": true,
    "peca": "Camiseta Oversized Premium",
    "foto": "352728277-preta-blank.png",
-   "gola": 0.297,
-   "barra": 0.9145,
-   "centro": 0.463,
-   "torso": 0.4971,
+   "gola": 0.305,
+   "barra": 0.903,
+   "centro": 0.492,
+   "torso": 0.325,
    "arte_cm": "25.5x40",
    "placement": 12.29,
    "raio_tabela_cm": 21.01,
-   "raio_efetivo_cm": 39.1,
-   "inflacao": 1.861,
-   "arco_meio_rad": 0.326,
+   "raio_efetivo_cm": 24.7,
+   "inflacao": 1.176,
+   "arco_meio_rad": 0.516,
    "arco_sem_torso": 0.607,
    "estimado": false,
    "status": "MEDIDO",
-   "suspeitas": [
-    "torso infla o raio 1.861x a tabela (teto dos pilotos 1.412x) — estampa achatada"
-   ]
+   "suspeitas": []
   },
   {
    "arquivo": "352728357-preta-par-v1.png",
