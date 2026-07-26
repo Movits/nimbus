@@ -1,0 +1,182 @@
+{
+ "gerado_em": "2026-07-26",
+ "fonte": "PNGs de impressao recuperados do armazenamento Higgsfield (upload do dono). 31 arquivos, 3500px, RGBA.",
+ "aviso_ip": "Os arquivos NAO estao versionados: o repositorio nimbus e publico e estes sao os PNGs de producao da marca. Ficam na sessao; para uso permanente, guardar em repositorio privado ou fora do git.",
+ "metodo": "Casamento por dimensao em pixel exata contra artes-inventario.json. A razao largura/altura tambem foi conferida contra os cm oficiais do CSV: 29 de 31 batem dentro de 0,7%.",
+ "casadas": [
+  {
+   "arquivo_hf": "0230f66b-1835-4148-a046-bc6aaefb0926.png",
+   "px": "2227x3500",
+   "arquivo_original": "G2-anjo-livro-stencil.png",
+   "product_id": "352728277"
+  },
+  {
+   "arquivo_hf": "20173233-2fe2-4b51-8ec1-6c87ceb768c3.png",
+   "px": "3500x3293",
+   "arquivo_original": "B8-deus-e-fiel-preto.png",
+   "product_id": "352703276"
+  },
+  {
+   "arquivo_hf": "22a9f588-3951-4edc-b376-bc2bc7126dee.png",
+   "px": "3500x3374",
+   "arquivo_original": "B4-acima-de-tudo-gotico-branco.png",
+   "product_id": "352720257"
+  },
+  {
+   "arquivo_hf": "247a463e-9022-4ef2-9bde-62da1a6817e1.png",
+   "px": "2426x3500",
+   "arquivo_original": "S1-aparecida-barroca.png",
+   "product_id": "352719728"
+  },
+  {
+   "arquivo_hf": "2b948de0-d743-4f57-b548-af031bfcc753.png",
+   "px": "2694x3500",
+   "arquivo_original": "S6-sao-jorge-barroco-v1.png",
+   "product_id": "352718943"
+  },
+  {
+   "arquivo_hf": "359377f8-f513-449a-8deb-8e8b50a4ee4a.png",
+   "px": "3500x2460",
+   "arquivo_original": "B7-fe-acima-de-tudo.png",
+   "product_id": "352702858"
+  },
+  {
+   "arquivo_hf": "7424a4c0-d9a2-4f78-be85-55c2c17e1b53.png",
+   "px": "3500x3295",
+   "arquivo_original": "B8-deus-e-fiel.png",
+   "product_id": "352703276"
+  },
+  {
+   "arquivo_hf": "8761f0dd-04fc-4ff7-8be6-f9ff4d2b914b.png",
+   "px": "3398x3500",
+   "arquivo_original": "B9-monograma-nmb.png",
+   "product_id": "352702753"
+  },
+  {
+   "arquivo_hf": "b0950cf9-fe96-401d-b10a-0c6adc13253c.png",
+   "px": "2220x3500",
+   "arquivo_original": "G2-anjo-stencil.png",
+   "product_id": "352728277"
+  },
+  {
+   "arquivo_hf": "b210fcd0-ad09-4a8f-8aa7-bd56e17c88b1.png",
+   "px": "3500x2883",
+   "arquivo_original": "B2-salmo19.png",
+   "product_id": "352702020"
+  },
+  {
+   "arquivo_hf": "c7dbaad9-dbe5-4dc6-996b-c596a7851e6a.png",
+   "px": "3500x3376",
+   "arquivo_original": "B4-acima-de-tudo-gotico-preto.png",
+   "product_id": "352720257"
+  },
+  {
+   "arquivo_hf": "cc11585d-7dd4-413a-a714-177f141e1125.png",
+   "px": "3500x2456",
+   "arquivo_original": "B7-fe-acima-de-tudo-branco.png",
+   "product_id": "352702858"
+  },
+  {
+   "arquivo_hf": "cd5fc87a-a55a-441c-80a9-5bcf5b501428.png",
+   "px": "3082x3500",
+   "arquivo_original": "sao-miguel-nuvem.png",
+   "product_id": "352722510"
+  },
+  {
+   "arquivo_hf": "e3d41ed2-5a66-4494-be6f-1720c391829e.png",
+   "px": "3264x3500",
+   "arquivo_original": "G1-nimbus-tag-azul.png",
+   "product_id": "352721633"
+  },
+  {
+   "arquivo_hf": "e5f7881a-2765-4be4-9d63-e12fc4aaa3ec.png",
+   "px": "3500x3496",
+   "arquivo_original": "S3-azulejo-cruz-v2.png",
+   "product_id": "352717960"
+  },
+  {
+   "arquivo_hf": "f150a3be-eef9-4f52-804c-f6d5731743c6.png",
+   "px": "2748x3500",
+   "arquivo_original": "H2-sao-miguel-halftone-v2.png",
+   "product_id": "352407182"
+  },
+  {
+   "arquivo_hf": "fe09caea-5ca4-4cd1-8dc4-4dc4e88140fc.png",
+   "px": "2667x3500",
+   "arquivo_original": "H4-sao-jorge-halftone.png",
+   "product_id": "352618837"
+  }
+ ],
+ "sem_casamento": [
+  {
+   "arquivo_hf": "13af22db-0765-4b51-8265-22a0398320aa.png",
+   "px": "3500x3186",
+   "nota": "no inventario como logo-icone-nuvem-v2.png, sem produto"
+  },
+  {
+   "arquivo_hf": "14091e0b-c401-4a7d-a127-982dadfad329.png",
+   "px": "3500x2330",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "29423b8e-009a-424a-a9ee-cb63c9ed20cf.png",
+   "px": "2173x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "2c09dbee-47b1-4cd2-ba10-b193bab49f2a.png",
+   "px": "3492x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "2c76a14e-a100-4e88-bc46-fe8c2b74f37e.png",
+   "px": "2946x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "314854d1-9e25-433d-a954-2d8639e79512.png",
+   "px": "2070x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "3c45870d-b448-4b2d-a8e6-d1b918104532.png",
+   "px": "2435x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "410557b6-1e6f-499c-b5de-216d02d9a466.png",
+   "px": "3500x2721",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "4f7a0e28-1644-46a7-928b-a5d98ca70ce1.png",
+   "px": "3500x1122",
+   "nota": "no inventario como logo-wordmark-nuvem.png, sem produto"
+  },
+  {
+   "arquivo_hf": "698375f7-1fa8-4864-b1c1-4565ef9a2d88.png",
+   "px": "2572x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "6e71573b-d5cf-4ffd-97f0-ca5ef8307b17.png",
+   "px": "3500x3279",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "8e3fe1a5-cf77-4a63-987e-16d70443fc91.png",
+   "px": "2581x3500",
+   "nota": "no inventario como B3-cruz-crest.png, sem produto"
+  },
+  {
+   "arquivo_hf": "c9a628f4-d8eb-4906-85bf-7bce86065882.png",
+   "px": "2177x3500",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  },
+  {
+   "arquivo_hf": "de483d04-ac38-4aba-a175-6d55a7af0d88.png",
+   "px": "3500x3479",
+   "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
+  }
+ ]
+}
