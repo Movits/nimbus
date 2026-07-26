@@ -178,5 +178,120 @@
    "px": "3500x3479",
    "nota": "nao esta no inventario de 25/07 — arte nova, precisa identificacao por conteudo"
   }
- ]
+ ],
+ "identificadas_por_conteudo": {
+  "nota": "As 11 que a dimensao em pixel nao casou foram identificadas OLHANDO a arte e conferindo contra a razao largura/altura oficial do CSV. A razao sozinha nao identifica (ate 12 produtos compartilham razao); o conteudo decide, a razao confirma.",
+  "itens": [
+   {
+    "arquivo_hf": "29423b8e",
+    "px": "2173x3500",
+    "arte": "Sagrado Coracao Spray",
+    "product_id": "352722232",
+    "lado": "costas",
+    "oficial_cm": "24.9x40",
+    "desvio_razao_pct": 0.3
+   },
+   {
+    "arquivo_hf": "2c09dbee",
+    "px": "3492x3500",
+    "arte": "Espirito Santo Spray (tinta escura)",
+    "product_id": "352721477",
+    "lado": "costas",
+    "oficial_cm": "35.2x35.1",
+    "desvio_razao_pct": 0.5
+   },
+   {
+    "arquivo_hf": "de483d04",
+    "px": "3500x3479",
+    "arte": "Espirito Santo Spray (tinta clara)",
+    "product_id": "352721477",
+    "lado": "costas",
+    "oficial_cm": "35.2x35.1",
+    "desvio_razao_pct": 0.3
+   },
+   {
+    "arquivo_hf": "2c76a14e",
+    "px": "2946x3500",
+    "arte": "Fe Wildstyle",
+    "product_id": "352721118 / 352721197",
+    "lado": "costas",
+    "oficial_cm": "33.7x40",
+    "desvio_razao_pct": 0.1
+   },
+   {
+    "arquivo_hf": "314854d1",
+    "px": "2070x3500",
+    "arte": "Aparecida Spray",
+    "product_id": "352889132 / 352728019 / 352727892",
+    "lado": "costas",
+    "oficial_cm": "23.8x40",
+    "desvio_razao_pct": 0.6
+   },
+   {
+    "arquivo_hf": "410557b6",
+    "px": "3500x2721",
+    "arte": "Acima de Tudo Grafite",
+    "product_id": "352728451 / 352728524",
+    "lado": "costas",
+    "oficial_cm": "35.1x27.2",
+    "desvio_razao_pct": 0.3
+   },
+   {
+    "arquivo_hf": "698375f7",
+    "px": "2572x3500",
+    "arte": "Sao Miguel Vitorioso",
+    "product_id": "352727545 / 352898175",
+    "lado": "costas",
+    "oficial_cm": "29.1x39.5",
+    "desvio_razao_pct": 0.3
+   },
+   {
+    "arquivo_hf": "3c45870d",
+    "px": "2435x3500",
+    "arte": "Nuvem spray, tinta escura (estampa de peito)",
+    "product_id": null,
+    "lado": "frente",
+    "nota": "razao bate com varios peitos da familia spray; produto so se resolve por registro na foto"
+   },
+   {
+    "arquivo_hf": "c9a628f4",
+    "px": "2177x3500",
+    "arte": "Nuvem spray, tinta clara (estampa de peito)",
+    "product_id": null,
+    "lado": "frente",
+    "nota": "idem"
+   },
+   {
+    "arquivo_hf": "6e71573b",
+    "px": "3500x3279",
+    "arte": "Logo nuvem NIMBUS (vetor)",
+    "product_id": null,
+    "nota": "marca, nao e estampa de catalogo"
+   },
+   {
+    "arquivo_hf": "14091e0b",
+    "px": "3500x2330",
+    "arte": "Wordmark NIMBUS gotico com cruz e halo",
+    "product_id": null,
+    "nota": "razao 1,502 nao casa com NENHUM produto do catalogo, nem frente nem costas. Ou e arte nova, ou e ativo de marca."
+   }
+  ]
+ },
+ "faltam_para_a_fila_de_correcao": {
+  "nota": "Das 13 fotos da fila, 10 tem arte oficial disponivel. Faltam estas, e so elas:",
+  "itens": [
+   {
+    "arte": "Querubim Spray",
+    "product_id": "352725749",
+    "fotos": 2,
+    "oficial_cm": "25.5x40 (costas)"
+   },
+   {
+    "arte": "Brasao NIMBUS",
+    "product_id": "352717837",
+    "fotos": 1,
+    "oficial_cm": "29.6x40 (costas)"
+   }
+  ]
+ }
 }
