@@ -99,3 +99,29 @@ apareceu, havia 37 capas prontas e apenas 17 QA JSONs, com nomes
 inconsistentes. As receitas antigas foram recuperadas dos diários dos
 workflows (29) e do script do lote v8 (11); faltam duas
 (352718275-branca-v3, 352722685-branca-v1).
+
+## Erro de peça encontrado: 352727892
+
+Aplicar a constante do template em bloco quase introduziu um erro grande.
+
+O CSV da auditoria de 22/07 registra **Aparecida Spray | Blusão Moletom**
+`[352727892]`. O agente que mediu o mockup anotou gola em 29,4%, muito acima
+dos 12,2% dos outros Blusões, e isso parecia erro de leitura.
+
+Não era. O mockup oficial **e** a loja publicada mostram capuz e bolso canguru:
+o produto é **Moletom Canguru**. Os 29,4% eram a junção do capuz, lida
+corretamente. Forçar a constante do Blusão (12,4%) teria deslocado a estampa em
+cerca de 17 cm.
+
+Corrigido:
+
+- peça reclassificada para Moletom Canguru na tabela de placement e no plano;
+- placement recalculado com a constante do Moletom (27,3%): **4,32 cm**, que
+  cai dentro do grupo dos outros Moletons (3,71 a 4,60 cm);
+- comprimento implicado 68,0 cm contra 65 tabelados, coerente;
+- o produto saiu da amostra do comprimento do Blusão, que passa a ser a mediana
+  de **quatro** mockups (78,4 cm em vez de 78,5).
+
+A lição: o teste de consistência sinalizou o produto certo, mas a causa que eu
+supus (leitura errada) era a oposta da real (peça errada no CSV). Antes de
+sobrescrever uma leitura divergente com uma constante, vale olhar a imagem.

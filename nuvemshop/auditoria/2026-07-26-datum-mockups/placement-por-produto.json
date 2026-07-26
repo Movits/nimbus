@@ -700,21 +700,22 @@
   },
   {
    "product_id": "352727892",
-   "garment": "Blusão Moletom",
+   "garment": "Moletom Canguru",
    "grupo": "g3",
-   "gola_pct": 12.4,
+   "gola_pct": 27.3,
    "barra_pct": 95,
    "tinta_topo_pct": 31.6,
    "tinta_base_pct": 71.4,
    "altura_oficial_cm": 40,
-   "placement_cm": 19.3,
-   "placement_frac": 0.2324,
+   "placement_cm": 4.32,
+   "placement_frac": 0.0635,
    "altura_frac": 0.6067,
    "confianca": "media",
    "nota": "Aparecida Spray — DIVERGENCIA DE PECA. O CSV registra 'Blusao Moletom' (e a nota diz 'apos a troca para blusao sem capuz'), mas o mockup de referencia de 16/07 ",
    "placement_cm_anterior": 2.21,
    "gola_pct_anterior": 29.4,
-   "comprimento_implicado_cm": 77.99
+   "comprimento_implicado_cm": 77.99,
+   "correcao_peca_2026_07_26": "O CSV da auditoria de 22/07 registra Blusao Moletom, mas o mockup oficial E a loja publicada mostram capuz e bolso canguru. E Moletom Canguru. A leitura original de gola (29,4%) estava certa: era a juncao do capuz, nao um erro. Com a constante do Moletom (27,3%) o placement cai em 4,32 cm, dentro do grupo dos outros Moletons (3,71-4,60), e o comprimento implicado bate com a tabela."
   },
   {
    "product_id": "352728019",
@@ -875,8 +876,8 @@
   "sensibilidade": "Gola errada em X pontos percentuais desloca o placement em X x (cm/ponto), ~1 cm por ponto: grave. Vao da tinta errado em X% desloca o placement em X% DO PROPRIO PLACEMENT: 5% sobre 9 cm = 0,45 cm, 5% sobre o maior placement do catalogo (21 cm) = 1,05 cm, ainda dentro da tolerancia. Por isso o teste de comprimento implicado sozinho nao distingue um erro grave de um irrelevante: foi a evidencia da SILHUETA que provou que a gola e constante."
  },
  "blusao_moletom_comprimento_g_cm": {
-  "valor": 78.5,
-  "metodo": "regua-pela-arte sobre os 5 mockups de Blusao: 78,78 / 78,05 / 77,99 / 80,23 / 78,99 -> mediana 78,5 cm",
+  "valor": 78.4,
+  "metodo": "regua-pela-arte sobre os 4 mockups de Blusao: 78,78 / 78,05 / 77,99 / 80,23 -> mediana 78,4 cm (o 352727892 foi excluido: e Moletom Canguru, nao Blusao)",
   "confianca": "media",
   "ressalva": "a YouDraw nao publica tabela para Blusao Moletom. O metodo acerta -1,6% na Camiseta Premium e -0,3% no Moletom Canguru, mas erra +11% no Oversized, entao 78,5 cm pode carregar erro de escala do template. Registrar como suposicao nas capas de Blusao."
  }
