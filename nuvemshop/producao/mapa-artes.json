@@ -1,0 +1,689 @@
+{
+ "mapeamentos": [
+  {
+   "product_id": "352619175",
+   "titulo": "Salmo 19 | Moletom Canguru",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352619175-01 mostra nas costas o mesmo lettering gotico em arco 'OS CEUS PROCLAMAM / A GLORIA DE DEUS' com cruz central e 'SL 19' abaixo, em tinta creme com contorno escuro/dourado, identico a B2-salmo19.png. Unico arquivo Salmo 19 no repo (mockups/costas - Salmo 19.png e o mesmo arquivo)."
+  },
+  {
+   "product_id": "352619175",
+   "titulo": "Salmo 19 | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352619175-02 (moletom branco/off-white) mostra a mesma composicao em arco com cruz e 'SL 19'; a IA aplicou a MESMA arte creme, so lida como bege sobre branco. Nao existe variante de tinta escura de B2 no repo."
+  },
+  {
+   "product_id": "352702020",
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352702020-01 traz o mesmo bloco de texto gotico em arco de duas linhas, cruz fina no centro e 'SL 19' na base, em creme sobre camiseta preta, batendo linha por linha com B2-salmo19.png."
+  },
+  {
+   "product_id": "352702020",
+   "titulo": "Salmo 19 | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352702020-02 repete exatamente o arco 'OS CEUS PROCLAMAM / A GLORIA DE DEUS' + cruz + 'SL 19' na camiseta branca, com o mesmo desenho de letra e contorno duplo de B2-salmo19.png."
+  },
+  {
+   "product_id": "352618837",
+   "titulo": "São Jorge Vintage | Blusão Moletom",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618837-01 mostra o cavaleiro de armadura escura em cavalo branco empinado lancando o dragao, poster halftone retangular com 'NIMBUS' pequeno e 'SAO JORGE' em gotico arqueado por cima: a familia H4 (halftone), nao a S6 barroca dourada."
+  },
+  {
+   "product_id": "352618837",
+   "titulo": "São Jorge Vintage | Blusão Moletom",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618837-02 (blusao branco) exibe o mesmo poster halftone retangular de fundo preto com cavalo branco, dragao e arco 'SAO JORGE'. A arte ja contem o proprio fundo escuro, entao serve as duas cores; nao existe variante de tinta clara/escura de H4."
+  },
+  {
+   "product_id": "352618878",
+   "titulo": "São Jorge Vintage | Moletom Canguru",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618878-01 repete o mesmo bloco: cavalo branco empinado, cavaleiro escuro com lanca dourada, dragao aos pes, torre da igreja a direita e 'SAO JORGE' gotico com contorno dourado em arco."
+  },
+  {
+   "product_id": "352618878",
+   "titulo": "São Jorge Vintage | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618878-02 (moletom branco) mostra o mesmo retangulo halftone com fundo preto e o wordmark 'SAO JORGE' arqueado; mesma arte H4 aplicada sobre peca clara."
+  },
+  {
+   "product_id": "352618903",
+   "titulo": "São Jorge Vintage | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618903-01 traz o poster halftone de Sao Jorge com 'NIMBUS' minusculo acima do arco 'SAO JORGE', cavalo branco, dragao listrado dourado e castelo ao fundo, igual a H4-sao-jorge-halftone.png."
+  },
+  {
+   "product_id": "352618903",
+   "titulo": "São Jorge Vintage | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618903-02 (oversized off-white) mostra o mesmo retangulo escuro com cavaleiro, cavalo branco e dragao e o arco 'SAO JORGE'. A arte carrega fundo preto proprio, servindo tambem a peca clara."
+  },
+  {
+   "product_id": "352618935",
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618935-01 exibe o mesmo poster halftone: 'NIMBUS' acima, 'SAO JORGE' gotico arqueado com contorno dourado, cavaleiro em armadura escura sobre cavalo branco e dragao abatido."
+  },
+  {
+   "product_id": "352618935",
+   "titulo": "São Jorge Vintage | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352618935-02 (camiseta branca) repete o mesmo retangulo halftone de fundo preto com cavalo branco e o arco 'SAO JORGE'; mesma arte H4."
+  },
+  {
+   "product_id": "352407156",
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352407156-01 mostra o arcanjo com BALANCA na mao direita, manto marrom/terracota e retangulo halftone ao pe, com 'SAO MIGUEL ARCANJO' em arco e 'NIMBUS' abaixo. A balanca e o manto marrom sao exclusivos da v2; a v1 tem punho fechado e sem balanca."
+  },
+  {
+   "product_id": "352407156",
+   "titulo": "São Miguel Vintage | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352407156-02 (moletom branco) repete o arcanjo com balanca e manto marrom, arco gotico 'SAO MIGUEL ARCANJO' e 'NIMBUS' na base: mesma H2 v2. Nao ha variante de tinta separada."
+  },
+  {
+   "product_id": "352407182",
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352407182-01 traz o arcanjo segurando a balanca com o braco direito estendido e o manto marrom volumoso a esquerda, sobre bloco halftone escuro: assinatura da v2."
+  },
+  {
+   "product_id": "352407182",
+   "titulo": "São Miguel Vintage | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352407182-02 (oversized off-white) mostra o mesmo arcanjo com balanca, manto marrom e retangulo halftone escuro no pe da arte; identica a H2-sao-miguel-halftone-v2.png."
+  },
+  {
+   "product_id": "352407196",
+   "titulo": "São Miguel Vintage | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352407196-01 exibe o arcanjo com balanca na mao direita, manto marrom, demonio sob os pes em bloco halftone e 'NIMBUS' abaixo do retangulo: v2, nao v1."
+  },
+  {
+   "product_id": "352407196",
+   "titulo": "São Miguel Vintage | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352407196-02 (camiseta branca) repete o arcanjo com balanca e manto marrom com o mesmo arco 'SAO MIGUEL ARCANJO' e 'NIMBUS' abaixo; mesma arte H2 v2."
+  },
+  {
+   "product_id": "352718787",
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718787-01 (moletom preto) mostra moldura rococó dourada, borda de azulejo azul-e-branco, cartela 'NIMBUS' no topo com dois querubins, cavalo branco empinado e dragão vermelho-alaranjado — todos os elementos batem com S6-v1. A v2 é descartada porque traz o letreiro 'ESTILO NIMBUS PADROEIRA', dragão verde e palmeiras, ausentes na capa. Arte multicolorida, sem variante de tinta."
+  },
+  {
+   "product_id": "352718787",
+   "titulo": "São Jorge Neobarroco | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718787-02 (moletom branco) exibe exatamente a mesma estampa da versão preta: cartela 'NIMBUS', querubins dourados, azulejo azul, cavalo branco e dragão vermelho. Arte multicolorida com fundo escuro próprio, serve peça clara e escura sem variante de tinta."
+  },
+  {
+   "product_id": "352718943",
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718943-01 (oversized preta) tem a mesma moldura dourada com azulejo, cartela 'NIMBUS' e dragão vermelho de S6-v1. Nenhum texto 'PADROEIRA' e nenhum dragão verde, o que exclui a v2."
+  },
+  {
+   "product_id": "352718943",
+   "titulo": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718943-02 (oversized off-white) mostra a mesma composição barroca de S6-v1, com o retângulo escuro da arte visível sobre o tecido cru. Arte única multicolorida para as duas cores."
+  },
+  {
+   "product_id": "352718999",
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718999-01 (camiseta preta) repete a moldura rococó dourada, cartela 'NIMBUS', cavalo branco e dragão vermelho de S6-v1."
+  },
+  {
+   "product_id": "352718999",
+   "titulo": "São Jorge Neobarroco | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718999-02 (camiseta branca) mostra a mesma estampa barroca com moldura dourada e azulejo. Sem variante de tinta clara/escura nesta família."
+  },
+  {
+   "product_id": "352726673",
+   "titulo": "São Miguel Vitorioso | Moletom Canguru",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+   "confianca": "alta",
+   "justificativa": "Mockup oficial YouDraw da peça preta (live 352726673-06) mostra o arcanjo em stencil BRANCO com auréola/capa/escudo dourados e a tag 'NIMBUS' em dourado — exatamente G6-sao-miguel-stencil-branco.png. Peça escura pede tinta clara."
+  },
+  {
+   "product_id": "352726673",
+   "titulo": "São Miguel Vitorioso | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+   "confianca": "alta",
+   "justificativa": "Mockup oficial YouDraw da peça branca (live 352726673-04) mostra o arcanjo em azul-marinho escuro quase preto, capa e escudo em dourado claro e a tag 'NIMBUS' escura — corresponde a G6-sao-miguel-stencil-preto.png. Peça clara pede tinta escura."
+  },
+  {
+   "product_id": "352726673",
+   "titulo": "São Miguel Vitorioso | Moletom Canguru",
+   "cor": "Azul-Marinho",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+   "confianca": "alta",
+   "justificativa": "Mockup oficial YouDraw do moletom azul-marinho (references/352726673-arcanjo-spray1/gallery-06.webp) mostra a figura em stencil BRANCO com dourado sobre o navy, idêntico a G6-sao-miguel-stencil-branco.png. A versão -preto sumiria no tecido navy."
+  },
+  {
+   "product_id": "352727545",
+   "titulo": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352727545-01 (oversized preta) mostra o arcanjo em stencil branco pisando o demônio, com capa/escudo 'ESTILO NIMBUS' e tag 'NIMBUS' em dourado — a variante de tinta clara G6-branco."
+  },
+  {
+   "product_id": "352727545",
+   "titulo": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352727545-02 (oversized off-white) mostra a mesma figura com contorno azul-marinho escuro e tag 'NIMBUS' escura sobre tecido cru — a variante de tinta escura G6-preto."
+  },
+  {
+   "product_id": "352898175",
+   "titulo": "São Miguel Vitorioso | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352898175-02 (camiseta preta) traz o arcanjo em stencil branco, auréola e escudo 'ESTILO NIMBUS' dourados e a tag 'NIMBUS' dourada — G6-branco."
+  },
+  {
+   "product_id": "352898175",
+   "titulo": "São Miguel Vitorioso | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352898175-01 (camiseta clara) mostra o arcanjo com traço azul-marinho escuro, capa dourada e tag 'NIMBUS' escura sobre tecido claro — G6-preto. A capa foi renderizada em tom creme, mas a variante da loja é Branca."
+  },
+  {
+   "product_id": "352717723",
+   "titulo": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352717723-02 e o mockup oficial YouDraw (references/352717723-brasao/gallery-04.webp) mostram a cruz gótica ornamentada com 'NIMBUS' em blackletter acima e faixa 'ACIMA DE TUDO' abaixo, com contorno creme/dourado — B3-cruz-crest.png. Existe apenas uma versão desta arte."
+  },
+  {
+   "product_id": "352717723",
+   "titulo": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+   "confianca": "alta",
+   "justificativa": "Mockup oficial YouDraw da peça off-white (references/352717723-brasao/gallery-02.webp) usa a MESMA arte B3 (miolo escuro com contorno creme e detalhe dourado), que funciona tanto em tecido claro quanto escuro. Não há variante de tinta para o Brasão."
+  },
+  {
+   "product_id": "352717837",
+   "titulo": "Brasão NIMBUS | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352717837-02 (camiseta preta) mostra a cruz gótica com 'NIMBUS' blackletter e faixa 'ACIMA DE TUDO', contorno creme/dourado — B3-cruz-crest.png."
+  },
+  {
+   "product_id": "352717837",
+   "titulo": "Brasão NIMBUS | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352717837-01 (camiseta branca) mostra a mesma cruz gótica com 'NIMBUS' e 'ACIMA DE TUDO'. Arquivo único de arte, usado nas duas cores."
+  },
+  {
+   "product_id": "352719728",
+   "titulo": "Aparecida Barroca | Blusão Moletom",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352719728-01/-02 mostra nas costas o painel retangular com moldura de azulejo azul-e-branco, filigrana dourada, Nossa Senhora Aparecida de manto azul-marinho com duas bandeiras do Brasil, cartela 'PADROEIRA (BRASIL SACRO)' e wordmark NIMBUS dourado com auréola no U — bate elemento por elemento com S1-aparecida-barroca.png (idêntico ao mockup 'costas - Aparecida Ouro.png'). Arte multicolorida, serve peça clara sem variante de tinta."
+  },
+  {
+   "product_id": "352719816",
+   "titulo": "Aparecida Barroca | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352719816-01 (moletom canguru branco) e o mockup plano oficial 352719816-03 mostram a mesma estampa: moldura de azulejo azul, volutas douradas, manto azul com bandeiras, cartela PADROEIRA e NIMBUS dourado. Igual a S1-aparecida-barroca.png."
+  },
+  {
+   "product_id": "352890896",
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352890896-01 (oversized off-white) e o mockup plano 352890896-04 mostram o mesmo painel barroco com azulejo azul, coroa dourada, manto azul com bandeiras do Brasil e NIMBUS dourado. Arte multicolorida, mesma para as duas cores da peça."
+  },
+  {
+   "product_id": "352890896",
+   "titulo": "Aparecida Barroca | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352890896-02 (oversized preta) exibe exatamente o mesmo painel colorido (azulejo azul, ouro, manto azul, bandeiras, cartela PADROEIRA, NIMBUS dourado) que a versão off-white. Não existe variante de tinta clara/escura para essa família: o mesmo S1-aparecida-barroca.png atende Preta e Off-White."
+  },
+  {
+   "product_id": "352720127",
+   "titulo": "Aparecida Barroca | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352720127-01 (camiseta branca) mostra o painel barroco completo com moldura de azulejo, filigrana dourada, manto azul com as duas bandeiras, cartela PADROEIRA (BRASIL SACRO) e NIMBUS dourado — mesma arte de S1-aparecida-barroca.png."
+  },
+  {
+   "product_id": "352727892",
+   "titulo": "Aparecida Spray | Blusão Moletom",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352727892-01/-02 e o mockup plano oficial 352727892-04 mostram: auréola em DISCO cheio dourado (não anel) com escorrido à esquerda, coroa preta contornada de ouro, manto escuro com florais e cordões dourados, bandeiras do Brasil apenas em contorno dourado (sem verde/azul) e tag graffiti 'NIMBUS' no canto inferior direito. Isso descarta v1 (auréola em anel + bandeiras coloridas), v2 (anel trançado + bandeiras coloridas) e a versão branco (manto branco). Corresponde a G10-aparecida-stencil-v3.png."
+  },
+  {
+   "product_id": "352728019",
+   "titulo": "Aparecida Spray | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352728019-01/-02 e o mockup plano 352728019-04 repetem o disco dourado cheio, coroa preta com ouro, manto escuro com florais dourados, bandeiras só em contorno e o tag graffiti NIMBUS embaixo à direita — assinatura exclusiva de G10-aparecida-stencil-v3.png."
+  },
+  {
+   "product_id": "352889132",
+   "titulo": "Aparecida Spray | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352889132-01 e o mockup plano 352889132-03 mostram o mesmo stencil: auréola em disco dourado com escorrido, coroa preta/ouro, manto escuro com florais e rosário dourados, tag NIMBUS graffiti inferior direito. Igual a G10-aparecida-stencil-v3.png."
+  },
+  {
+   "product_id": "352717960",
+   "titulo": "Azulejo Sagrado | Camiseta Oversized Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352717960-01 mostra painel quadrado de azulejo azul-e-branco com cartela/moldura de volutas douradas envolvendo uma cruz azul-marinho com auréola oval e raios azuis irradiando. A auréola com raios e a moldura em cartouche dourado só existem em S3-azulejo-cruz-v2.png; a v1 tem palmeiras, sem auréola e sem raios."
+  },
+  {
+   "product_id": "352718275",
+   "titulo": "Azulejo Sagrado | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352718275-01 mostra o mesmo painel: bordas de azulejo azul, cartela dourada com folhagens verdes, cruz azul central com auréola e explosão de raios azuis. Corresponde a S3-azulejo-cruz-v2.png (não v1, que traz palmeiras e cruz sem auréola)."
+  },
+  {
+   "product_id": "352722510",
+   "titulo": "São Miguel Celeste | Blusão Moletom",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352722510-01 mostra o arcanjo em traço line-art azul-marinho sobre nuvens azul-claro, auréola dourada, espada erguida, dragão pisado embaixo e wordmark 'NIMBUS' em letras bubble dentro da nuvem no canto inferior direito — exatamente sao-miguel-nuvem.png (coleção NUVEM)."
+  },
+  {
+   "product_id": "352722685",
+   "titulo": "São Miguel Celeste | Moletom Canguru",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352722685-01 (moletom canguru off-white/branco) traz o mesmo selo celeste: contorno navy, nuvens azul-claro, auréola dourada, asas abertas, dragão vencido e NIMBUS em bubble letters na nuvem inferior direita. Igual a sao-miguel-nuvem.png."
+  },
+  {
+   "product_id": "352723243",
+   "titulo": "São Miguel Celeste | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352723243-01 (camiseta branca) mostra o mesmo desenho line-art do arcanjo entre nuvens com auréola dourada e NIMBUS bubble no canto inferior direito. Corresponde a sao-miguel-nuvem.png."
+  },
+  {
+   "product_id": "352721477",
+   "titulo": "Espírito Santo Spray | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G8-pomba-stencil-branco-teste1.png",
+   "confianca": "media",
+   "justificativa": "Mockup YouDraw das costas (live/352721477-04.webp) mostra pomba simétrica de tinta CLARA, halo dourado com pingo à direita, sunburst de raios FINOS e NUMEROSOS (~13) acima do halo, cauda em leque com pingos e tag NIMBUS branca em baixo à direita. Extraí a máscara de tinta do mockup e comparei por IoU com busca de escala/deslocamento: teste1=0,869 vs teste2=0,744 vs preto=0,602 vs 'branco'=0,328. Visualmente teste1 bate no nº de raios (teste2 tem raios menos e mais grossos), no sombreado cinza do peito/ombro das asas e no recorte das penas."
+  },
+  {
+   "product_id": "352721477",
+   "titulo": "Espírito Santo Spray | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/costas/G8-pomba-stencil-preto.png",
+   "confianca": "alta",
+   "justificativa": "Mockup YouDraw (live/352721477-06.webp) mostra a MESMA pomba simétrica, mas em tinta ESCURA: pomba preta, halo dourado preservado e tag NIMBUS preta. É o único arquivo de pomba com tinta escura no acervo (lum média da tinta = 14,6 contra 225/234 dos brancos). IoU contra a máscara do mockup branco: preto=0,660 > teste1=0,609 > teste2=0,562. Regra física confirmada: peça clara usa tinta escura."
+  },
+  {
+   "product_id": "352703343",
+   "titulo": "Deus é Fiel | Camiseta Premium (NÃO é Espírito Santo Spray Oversized)",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+   "confianca": "alta",
+   "justificativa": "As 3 imagens publicadas deste ID mostram camiseta PRETA com lettering blackletter 'DEUS É FIEL' em creme, arco dourado e cruz dourada nas costas, e monograma NMB no peito. Não é pomba/spray. B8-deus-e-fiel.png é a variante de tinta CLARA (lum 223,9) e bate com a peça preta; B8-deus-e-fiel-preto.png (lum 13,0) é a variante escura, para peça clara, que este produto não tem. Razão do arquivo 1,062 contra 35,2x32,9 cm oficiais (1,070) = -0,7%."
+  },
+  {
+   "product_id": "352702858",
+   "titulo": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo-branco.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas na peça preta (live/352702858-06.webp) mostra 'FÉ ACIMA DE TUDO' em blackletter BRANCO, arco dourado e cruz BRANCA no topo. B7-fe-acima-de-tudo-branco.png é exatamente isso (tinta clara, lum 231,2, cruz branca). IoU 0,836 e razão 1,4251 contra 35,1x24,6 cm oficiais (1,427) = -0,1%."
+  },
+  {
+   "product_id": "352702858",
+   "titulo": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas na peça off-white (live/352702858-08.webp) mostra o mesmo lettering em PRETO, arco dourado e cruz PRETA. B7-fe-acima-de-tudo.png é a variante de tinta escura (lum 16,6, cruz preta). Mesma silhueta do par claro, só muda a cor da tinta."
+  },
+  {
+   "product_id": "352703153",
+   "titulo": "Fé Acima de Tudo | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo-branco.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas preta (live/352703153-04.webp) idêntico ao da Oversized: lettering branco + arco dourado + cruz branca. IoU 0,813 a favor da variante branco; razão medida no mockup 1,445 contra 35,2x24,6 cm oficiais (1,431)."
+  },
+  {
+   "product_id": "352703153",
+   "titulo": "Fé Acima de Tudo | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas branca (live/352703153-06.webp) mostra lettering PRETO + arco dourado + cruz PRETA. IoU 0,838 e razão medida 1,4231 contra 1,4228 do arquivo (desvio 0,02%). Variante de tinta escura para peça clara."
+  },
+  {
+   "product_id": "352721118",
+   "titulo": "Fé Wildstyle | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas mostra a tag wildstyle 'FÉ' MULTICOLOR (roxo/magenta/laranja/azul) com halo dourado, ESTRELAS de 5 pontas dentro das letras e pingos azuis/brancos. Isso identifica a v3 (v1 e v2 têm paletas azul/rosa sem as estrelas laranja). Razão 0,8417 contra 33,7x40 cm oficiais (0,8425) = -0,1%; v2 daria +2,0% e v1 +18%. Confere com a identificação por conteúdo em artes-mapeamento.json (2c76a14e, 2946x3500)."
+  },
+  {
+   "product_id": "352721118",
+   "titulo": "Fé Wildstyle | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+   "confianca": "alta",
+   "justificativa": "Arte multicolorida com contorno preto e respingos pretos própria: o mockup off-white mostra exatamente a mesma estampa da peça preta, sem inversão de tinta. Não existe variante clara/escura desta família; o mesmo arquivo serve às duas cores."
+  },
+  {
+   "product_id": "352721197",
+   "titulo": "Fé Wildstyle | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+   "confianca": "alta",
+   "justificativa": "Mesma tag wildstyle multicolor com halo dourado e estrelas; comparação lado a lado da capa e do mockup contra a v3 bate letra por letra (serifas do F, seta do acento, respingos azuis). Razão 0,8417 contra 33,8x40 cm oficiais (0,845) = -0,4%."
+  },
+  {
+   "product_id": "352721197",
+   "titulo": "Fé Wildstyle | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+   "confianca": "alta",
+   "justificativa": "Teste mais decisivo do lote: máscara de tinta extraída do mockup branco (live/352721197-06.webp) contra os 5 candidatos de tag deu IoU 0,920 para a v3, contra 0,802 (v2), 0,762 (G1 azul), 0,699 (G1 roxo) e 0,672 (v1). Mesmo arquivo da peça preta."
+  },
+  {
+   "product_id": "352728277",
+   "titulo": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G2-anjo-livro-stencil.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas mostra estátua de anjo ADULTO de pé, drapeado esvoaçante, segurando um LIVRO ABERTO na mão direita, com halo dourado acima da cabeça. É o G2-anjo-livro-stencil.png (idêntico por md5 a 'mockups/Anjo da Guarda/costas - Anjo da Guarda.png'). IoU 0,572 contra 0,371 do querubim. Razão 0,6363 contra 25,5x40 cm oficiais (0,6375) = -0,2%."
+  },
+  {
+   "product_id": "352728357",
+   "titulo": "Anjo da Guarda Stencil | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G2-anjo-livro-stencil.png",
+   "confianca": "alta",
+   "justificativa": "Mesmo anjo com livro do mockup (live/352728357-04.webp); sobreposição do recorte da estampa contra a arte bate na pose, no drapeado e no livro. IoU 0,573 contra 0,373 do querubim. Sem variante de tinta escura, e o produto só existe em Preta."
+  },
+  {
+   "product_id": "352725749",
+   "titulo": "Querubim Spray | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas mostra QUERUBIM (putto infantil) voando, asas abertas, halo em traço grafitado e tag 'NIMBUS' manuscrita em baixo à direita. É o G2-anjo-stencil.png (md5 idêntico a 'mockups/Querubim Spray/costas - Querubim Spray.png'). IoU 0,524 contra 0,397 do anjo com livro. Família diferente do Anjo da Guarda apesar da razão quase igual (0,6343 vs 0,6363)."
+  },
+  {
+   "product_id": "352725749",
+   "titulo": "Querubim Spray | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+   "confianca": "media",
+   "justificativa": "O mockup YouDraw da peça off-white (live/352725749-06.webp) mostra o MESMO arquivo, não uma versão invertida: querubim de corpo claro com contornos, halo e tag NIMBUS pretos. A arte já é bicromática (branco + preto), então funciona nas duas cores. Confiança média porque NÃO existe variante de tinta escura desta família em lugar nenhum do acervo (ver problemas)."
+  },
+  {
+   "product_id": "352725852",
+   "titulo": "Querubim Spray | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+   "confianca": "alta",
+   "justificativa": "Mockup das costas preta (live/352725852-04.webp) idêntico ao da Oversized: querubim voando, halo grafitado e tag NIMBUS. IoU 0,521 contra 0,395 do anjo com livro. Razão 0,6343 contra 25,5x40 cm oficiais (0,6375) = -0,5%."
+  },
+  {
+   "product_id": "352725852",
+   "titulo": "Querubim Spray | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+   "confianca": "media",
+   "justificativa": "Comparação lado a lado (mockup branca live/352725852-06.webp contra a arte composta sobre fundo branco) bate pixel a pixel: mesmo querubim, mesmo halo preto, mesma tag NIMBUS preta. IoU 0,554 contra 0,329 do anjo com livro. Média pelo mesmo motivo do off-white: não existe variante de tinta escura própria."
+  },
+  {
+   "product_id": "352721633",
+   "titulo": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352721633-02 e mockup -06 (camiseta preta) mostram o lettering wildstyle NIMBUS em azul/laranja com aureola laranja sobre a letra I, identico ao G1-nimbus-tag-azul.png. A variante G1-nimbus-tag-roxo.png (roxo/azul com contorno laranja e aureola sobre o U de BUS) nao aparece em nenhuma imagem do produto."
+  },
+  {
+   "product_id": "352721633",
+   "titulo": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+   "confianca": "alta",
+   "justificativa": "Capa 352721633-01 (camiseta off-white) traz exatamente a mesma arte azul/laranja com aureola laranja do G1-nimbus-tag-azul.png. Arte multicolorida com contorno preto e brilho branco: serve nas duas cores de peca, sem variante de tinta clara/escura."
+  },
+  {
+   "product_id": "355581274",
+   "titulo": "NIMBUS Wildstyle | Ecobag",
+   "cor": "Bege",
+   "arquivo_arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+   "confianca": "alta",
+   "justificativa": "Capas 355581274-01 e -02 mostram a ecobag de lona crua com o mesmo lettering wildstyle NIMBUS azul/laranja e aureola laranja do G1-nimbus-tag-azul.png. Cor unica da peca (lona crua/bege) mapeada como Bege."
+  },
+  {
+   "product_id": "352728451",
+   "titulo": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 (peca off-white) mostram o bloco horizontal ACIMA DE TUDO em azul/roxo/laranja com as tres tags inferiores NIMBUS, GRAFFITI ART e ESTILO RUA. Sao exatamente os elementos exclusivos do G3-acima-de-tudo-tags.png; o G3-acima-de-tudo-laranja.png e vertical, tem aureola sobre o A e nao tem tags."
+  },
+  {
+   "product_id": "352728451",
+   "titulo": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+   "confianca": "media",
+   "justificativa": "A galeria publicada do produto so tem imagens da cor off-white, entao nao ha capa preta para confirmar. Como a arte identificada (G3-acima-de-tudo-tags.png) e multicolorida (azul, roxo, laranja e creme com contorno escuro) e nao existe par de tinta clara/escura na familia, o mesmo arquivo se aplica a peca preta."
+  },
+  {
+   "product_id": "352728524",
+   "titulo": "Acima de Tudo Grafite | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 (camiseta branca) mostram o mesmo bloco horizontal ACIMA DE TUDO com as tags NIMBUS, GRAFFITI ART e ESTILO RUA abaixo, marca exclusiva do G3-acima-de-tudo-tags.png."
+  },
+  {
+   "product_id": "352728524",
+   "titulo": "Acima de Tudo Grafite | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+   "confianca": "media",
+   "justificativa": "Galeria publicada so tem a cor branca. Arte multicolorida sem variante de tinta clara/escura na familia, portanto o mesmo G3-acima-de-tudo-tags.png se aplica a peca preta."
+  },
+  {
+   "product_id": "352720257",
+   "titulo": "Acima de Tudo Gotico | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/peito/B4-acima-de-tudo-gotico-preto.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 mostram, no PEITO da camiseta preta, ACIMA DE TUDO em gotico com tinta CREME/BRANCA e cruz abaixo. Medicao dos pixels opacos confirma que o arquivo B4-...-preto.png e o de tinta clara (luminancia media 244, 100% clara) e o B4-...-branco.png e o de tinta escura (luminancia 2). O sufixo do arquivo nomeia a cor da PECA, nao da tinta."
+  },
+  {
+   "product_id": "352720257",
+   "titulo": "Acima de Tudo Gotico | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/peito/B4-acima-de-tudo-gotico-branco.png",
+   "confianca": "alta",
+   "justificativa": "Capas -02 e -04 mostram, no peito da camiseta off-white, o mesmo lettering gotico ACIMA DE TUDO com cruz, porem em tinta PRETA. Medicao confirma B4-...-branco.png como o arquivo de tinta escura (luminancia media 2, 100% dos pixels opacos escuros)."
+  },
+  {
+   "product_id": "352703276",
+   "titulo": "Deus e Fiel | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 (peca preta) mostram nas costas DEUS E FIEL em gotico creme envelhecido sob um arco DOURADO com cruz dourada no topo. Corresponde ao B8-deus-e-fiel.png, cuja medicao da tinta e clara (luminancia media 231) com o mesmo arco e cruz dourados."
+  },
+  {
+   "product_id": "352703276",
+   "titulo": "Deus e Fiel | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel-preto.png",
+   "confianca": "media",
+   "justificativa": "A galeria publicada so tem a cor preta, entao a variante branca foi deduzida pela regra fisica: peca clara usa tinta escura. O B8-deus-e-fiel-preto.png e a mesma composicao (mesmo arco dourado, mesma cruz, mesmo arranjo do lettering) com a tinta escura medida em luminancia 13."
+  },
+  {
+   "product_id": "352722232",
+   "titulo": "Sagrado Coracao Spray | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/STREET/peito/G7-sagrado-coracao-stencil-preto.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 (camiseta branca) mostram o coracao em stencil PRETO com coroa de espinhos, chama, cruz e tag NIMBUS embaixo, dentro de um arco fino DOURADO. Isso bate com o G7-sagrado-coracao-stencil-preto.png (canvas 2173x3500, arco dourado fino, figura totalmente preta, composicao centralizada)."
+  },
+  {
+   "product_id": "352722232",
+   "titulo": "Sagrado Coracao Spray | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/STREET/peito/G7-sagrado-coracao-stencil-ouro.png",
+   "confianca": "media",
+   "justificativa": "Nao ha capa da cor preta publicada. Aplicada a regra fisica e a descricao oficial da familia (disponivel em dourado e em preto): a peca escura usa a versao dourada. O G7-sagrado-coracao-stencil-ouro.png (canvas 3019x3500) tem aureola em spray dourado grosso e todo o contorno/preenchimento em dourado, que so le sobre tecido escuro."
+  },
+  {
+   "product_id": "352702753",
+   "titulo": "Monograma NIMBUS | Camiseta Oversized Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 mostram no peito da camiseta preta o monograma NMB gotico entrelacado, com cruz no centro do M e aureola dourada acima, em creme envelhecido com contorno preto. E exatamente o B9-monograma-nmb.png (unico arquivo do monograma)."
+  },
+  {
+   "product_id": "352702753",
+   "titulo": "Monograma NIMBUS | Camiseta Oversized Premium",
+   "cor": "Off-White",
+   "arquivo_arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+   "confianca": "alta",
+   "justificativa": "Capas -02 e -04 (camiseta off-white) mostram o mesmo monograma NMB creme com contorno preto grosso e aureola dourada. Arte bicolor (creme + contorno preto + aureola dourada) que funciona nas duas cores; nao existe variante de tinta para o B9."
+  },
+  {
+   "product_id": "352702796",
+   "titulo": "Monograma NIMBUS | Camiseta Premium",
+   "cor": "Preta",
+   "arquivo_arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+   "confianca": "alta",
+   "justificativa": "Capas -01 e -03 mostram no peito da camiseta preta o monograma NMB gotico com cruz no centro e aureola dourada, identico ao B9-monograma-nmb.png."
+  },
+  {
+   "product_id": "352702796",
+   "titulo": "Monograma NIMBUS | Camiseta Premium",
+   "cor": "Branca",
+   "arquivo_arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+   "confianca": "alta",
+   "justificativa": "Capas -02 e -04 (camiseta branca) mostram o mesmo monograma NMB creme com contorno preto e aureola dourada. Arquivo unico da familia, serve as duas cores."
+  }
+ ],
+ "problemas": [
+  "[salmo-jorge-miguel-vintage] Nenhuma das tres familias deste grupo (Salmo 19 / B2, Sao Jorge Vintage / H4, Sao Miguel Vintage / H2) tem variante de tinta clara e escura no repositorio. Existe um unico arquivo por familia, entao a mesma arte foi devolvida para peca escura e peca clara.",
+  "[salmo-jorge-miguel-vintage] Salmo 19: a arte B2-salmo19.png e lettering creme com contorno escuro/dourado, pensada para peca escura. Nas capas Brancas publicadas (352619175-02 e 352702020-02) ela aparece como texto bege lavado sobre branco, com baixo contraste. Se a YouDraw tiver uma versao de tinta escura de Salmo 19, ela nao esta neste repositorio e deveria ser pedida antes de refazer as capas Brancas.",
+  "[salmo-jorge-miguel-vintage] Sao Jorge (H4) e Sao Miguel (H2 v2) sao posters halftone com fundo preto proprio dentro da area de estampa (o PNG so e transparente fora do retangulo). Por isso a mesma arte funciona nas duas cores, mas convem confirmar com a YouDraw se a peca Branca/Off-White realmente imprime o bloco preto cheio ou usa uma versao recortada.",
+  "[salmo-jorge-miguel-vintage] Sao Miguel Vintage v1 (H2-sao-miguel-halftone-v1.png, punho fechado, sem balanca) nao aparece em nenhum dos tres produtos deste grupo. Ela pode pertencer a outro produto do catalogo (ex.: Sao Miguel Vitorioso/Celeste) ou ser uma versao descartada.",
+  "[neobarroco-vitorioso-brasao] Divergencia de cores no catalogo: o inventario nuvemshop-products.json (2026-07-16) lista para 352718787 quatro cores (Preta, Rosa Bebe, Branca, Azul Marinho) e para 352718999 tres cores (Preta, Branca, Azul Marinho). O grupo pedido so citava Preta e Branca. Mapeei apenas as cores pedidas. Como a arte S6-v1 e multicolorida e unica, o mesmo arquivo serviria tambem para Azul Marinho e Rosa Bebe (Rosa Bebe nem consta no enum de cores).",
+  "[neobarroco-vitorioso-brasao] 352726673 (Moletom Sao Miguel Vitorioso): a galeria publica baixada na auditoria de 22/07 contem apenas mockups Preta e Branca (6 imagens), sem o mockup Azul-Marinho. A confirmacao da variante navy veio do mockup oficial YouDraw arquivado em nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352726673-arcanjo-spray1/gallery-06.webp, que mostra tinta clara (G6-branco) sobre navy. Vale reconferir se a variante navy ainda existe na loja atual.",
+  "[neobarroco-vitorioso-brasao] G6-sao-miguel-stencil.png (sem sufixo) NAO deve ser usado em producao: e a mesma arte da versao -preto com o rotulo 'ST. MICHAEL ARCH-STENCIL' cravado embaixo. Use somente -branco ou -preto.",
+  "[neobarroco-vitorioso-brasao] Fidelidade das capas IA (nao afeta a identificacao da arte, mas confirma a nota de REFAZER): em 352717723-01 (Off-White) a IA redesenhou o wordmark 'NIMBUS' com miolo preto chapado, enquanto a arte oficial B3 e mockup YouDraw tem contorno creme/dourado bem mais claro. Em 352898175-01 a capa foi gerada em tom creme apesar de a variante da loja ser 'Branca'.",
+  "[neobarroco-vitorioso-brasao] Confirmacao tecnica: md5 identico entre designs/prontos/<COLECAO>/costas/ e as copias em mockups/ para S6-sao-jorge-barroco-v1.png, B3-cruz-crest.png, G6-sao-miguel-stencil-branco.png e G6-sao-miguel-stencil-preto.png. Os arquivos de costas/ sao as artes oficiais, sem divergencia.",
+  "[aparecida-azulejo-celeste] Aparecida Spray (352727892, 352728019, 352889132 — todas Preta) contraria a heuristica 'peca escura usa tinta clara': a arte correta e G10-aparecida-stencil-v3.png, cujo manto e PRETO com ornamentos dourados (o preto e o proprio tecido aparecendo). Confirmei isso nao so pelas capas lifestyle mas tambem pelos mockups planos oficiais 352727892-04, 352728019-04 e 352889132-03, que mostram a peca preta com auréola em disco dourado e manto preto. Portanto G10-aparecida-stencil-branco.png (manto branco) NAO e usada em nenhum destes tres produtos deste grupo.",
+  "[aparecida-azulejo-celeste] Aparecida Barroca (S1) e uma arte multicolorida (azulejo azul, ouro, verde, manto navy) sem variante de tinta clara/escura. Por isso o mesmo arquivo S1-aparecida-barroca.png foi devolvido para 352890896 nas duas cores (Preta e Off-White), confirmado pelas capas -01 (off-white) e -02 (preta) que mostram estampa identica.",
+  "[aparecida-azulejo-celeste] Os arquivos designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png e designs/prontos/RELIQUIA/mockups/Aparecida Ouro [...]/costas - Aparecida Ouro.png sao visualmente identicos; segui a regra e preferi o de costas/. Mesma situacao para Azulejo (S3-azulejo-cruz-v2.png vs 'costas - Azulejo (2).png') e Aparecida Spray (G10-aparecida-stencil-v3.png vs 'costas - Aparecida Spray (3).png').",
+  "[aparecida-azulejo-celeste] Aviso de fidelidade (nao afeta o mapeamento): as capas lifestyle publicadas de Aparecida Barroca variam muito de escala entre pecas — em 352719728 e 352720127 a estampa aparece bem maior do que em 352890896 e 352719816. Isso confirma o diagnostico REVISAR/REFAZER ja registrado no CLAUDE.md para 352719816 e 352890896; usei as capas apenas para identificar a arte, nunca como referencia de escala.",
+  "[espirito-fe-acima-anjo] ERRO NA LISTA DE ENTRADA: 352703343 NÃO é 'Espírito Santo Spray | Camiseta Oversized Premium'. É 'Deus é Fiel | Camiseta Premium' (RELIQUIA, só Preta). Confirmado por três fontes independentes: as 3 imagens publicadas (live/352703343-01..03.webp mostram lettering blackletter 'DEUS É FIEL'), o manifest.json da auditoria de 22/07 e a linha do CSV oficial auditoria-dimensoes-arte.csv (back 35,2x32,9 cm). Mapeei pelo CONTEÚDO REAL (Deus é Fiel), não pelo título recebido.",
+  "[espirito-fe-acima-anjo] NÃO EXISTE 'Espírito Santo Spray | Camiseta Oversized Premium' no catálogo de 49 produtos. O CSV oficial só tem 352721477 'Espírito Santo Spray | Camiseta Premium' (Preta | Branca). Se essa Oversized existir na loja, ficou fora do inventário de 49 e não tem capa em live/.",
+  "[espirito-fe-acima-anjo] QUERUBIM SPRAY NÃO TEM VARIANTE DE TINTA ESCURA. Busquei em designs/prontos (todas as coleções, costas/peito/mockups) e em designs/originais: só existe UM arquivo de querubim, G2-anjo-stencil.png (md5 4fef5099, idêntico ao 'mockups/Querubim Spray/costas - Querubim Spray.png'). Isso confirma o bloqueio já registrado em nuvemshop/assets/producao-capas/REGISTRO.md ('352725749 off-white sem a arte de tinta escura'). Na prática o mockup YouDraw da peça clara usa o MESMO arquivo, porque a arte é bicromática (corpo branco + contornos/halo/tag pretos), então ela é legível nas duas cores. Devolvi o mesmo arquivo para as duas cores, mas com confiança 'media'.",
+  "[espirito-fe-acima-anjo] AMBIGUIDADE ESPÍRITO SANTO TINTA CLARA (teste1 vs teste2): existem três arquivos de pomba de tinta clara. G8-pomba-stencil-branco.png (3492x3500) é uma COMPOSIÇÃO DIFERENTE (pomba na diagonal, raios descendo para a esquerda, tag NIMBUS PRETA) e NÃO corresponde a nenhum mockup publicado — não usar. Entre teste1 (3470x3500) e teste2 (3500x3479) escolhi teste1 pelo IoU contra a máscara de tinta do mockup YouDraw (0,869 vs 0,744, com busca de escala e deslocamento) e pela contagem/espessura dos raios do sunburst. ATENÇÃO: isso CONTRADIZ nuvemshop/auditoria/2026-07-25-geometria/artes-mapeamento.json, que registra o arquivo Higgsfield de483d04 (3500x3479 = teste2) como 'Espirito Santo Spray (tinta clara)'. Vale checar na YouDraw qual PNG está de fato anexado ao produto antes de gerar capa nova.",
+  "[espirito-fe-acima-anjo] O mesmo artes-mapeamento.json rotula o arquivo Higgsfield 2c09dbee (3492x3500) como 'Espirito Santo Spray (tinta escura)'. O arquivo local com essa dimensão exata é G8-pomba-stencil-branco.png, que é de tinta CLARA e de outra composição. Ou o rótulo daquele documento está errado, ou existe um PNG de produção que não está no repositório. Não usei esse arquivo.",
+  "[espirito-fe-acima-anjo] G8-pomba-stencil-preto.png tem razão 0,9886 contra 1,0028 das dimensões oficiais (35,2x35,1 cm) — desvio de -1,4%, maior que os -0,1% a -0,5% típicos das outras artes conferidas. Ainda assim é o único candidato de tinta escura e venceu o IoU contra o mockup da peça branca (0,660). Se houver uma versão mais recente na YouDraw, ela deve substituir esta.",
+  "[wildstyle-grafite-deus-sagrado-monograma] Convencao de nome dos arquivos e INCONSISTENTE entre familias e nao pode ser usada como regra. Medi a luminancia dos pixels opacos: em B4-acima-de-tudo-gotico-*, o sufixo indica a COR DA PECA (o arquivo '-preto' tem tinta clara, luminancia 244; o '-branco' tem tinta escura, luminancia 2). Ja em B8-deus-e-fiel-*, o sufixo indica a COR DA TINTA (o '-preto' tem tinta escura, luminancia 13; o sem sufixo tem tinta clara, luminancia 231). O mesmo vale para G7-*-ouro/-preto, onde o sufixo e a cor da tinta.",
+  "[wildstyle-grafite-deus-sagrado-monograma] 352728451 e 352728524 (Acima de Tudo Grafite): a galeria publicada tem apenas 3 imagens, todas da cor CLARA (off-white e branca respectivamente). Nao existe capa da cor Preta para confirmar. Mapeei G3-acima-de-tudo-tags.png para as duas cores por ser arte multicolorida sem par de tinta clara/escura, mas isso e inferencia.",
+  "[wildstyle-grafite-deus-sagrado-monograma] Existe uma segunda colorway da familia Acima de Tudo (designs/prontos/STREET/costas/G3-acima-de-tudo-laranja.png; tambem em mockups como 'costas - Acima de Tudo (laranja).png') que NAO aparece em nenhuma imagem publicada de nenhum dos dois produtos. Composicao completamente diferente: vertical, com aureola sobre o A e sem as tags NIMBUS/GRAFFITI ART/ESTILO RUA. Se a variante Preta na verdade usar essa arte, os itens 4 e 6 mudam.",
+  "[wildstyle-grafite-deus-sagrado-monograma] 352703276 (Deus e Fiel): a galeria publicada so tem a cor Preta. A atribuicao de B8-deus-e-fiel-preto.png a cor Branca foi deduzida pela regra fisica de tinta, sem confirmacao visual na loja.",
+  "[wildstyle-grafite-deus-sagrado-monograma] 352722232 (Sagrado Coracao Spray): a galeria publicada so tem a cor Branca. A atribuicao de G7-sagrado-coracao-stencil-ouro.png a cor Preta foi deduzida pela regra fisica mais a descricao oficial da familia ('Disponivel em dourado e em preto'), sem confirmacao visual na loja.",
+  "[wildstyle-grafite-deus-sagrado-monograma] G7-sagrado-coracao-stencil-ouro.png tem a arte deslocada para a DIREITA no canvas 3019x3500 (o quarto esquerdo esta totalmente vazio). Possivel defeito de enquadramento do arquivo de impressao que deve ser checado contra a YouDraw antes de qualquer uso em producao.",
+  "[wildstyle-grafite-deus-sagrado-monograma] Os arquivos G7-* estao na pasta 'peito/' mas a familia Sagrado Coracao Spray e estampa de COSTAS (os mockups estao como 'costas - Sagrado Coracao Spray (...)'). Confirmei que os arquivos em peito/ e em mockups/ tem as mesmas dimensoes exatas (3019x3500 e 2173x3500), ou seja sao a mesma arte; segui a preferencia por peito/costas.",
+  "[wildstyle-grafite-deus-sagrado-monograma] 355581274 (Ecobag) tem cor unica (lona crua). Mapeei como 'Bege' por ser o valor mais proximo no conjunto permitido (Preta, Branca, Off-White, Bege, Azul-Marinho)."
+ ]
+}

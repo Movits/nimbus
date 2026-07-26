@@ -1,3 +1,20 @@
+> [!CAUTION]
+> # ⛔ MÉTODO PROIBIDO — status: invalidado
+>
+> **invalidado-em: 2026-07-26 · substituido-por: `docs/fluxos/capa-lifestyle.md`**
+>
+> Este protocolo manda gerar a capa pedindo à IA que **desenhe a estampa**,
+> calibrando escala por prompt. Isso é proibido desde 25/07: falhou duas vezes
+> seguidas sem mover a escala um pixel, porque com foto de referência no pedido
+> o modelo copia o tamanho errado junto.
+>
+> O método vigente gera a peça EM BRANCO e compõe a arte oficial por malha.
+
+> ⚠️ **`youdraw-dimensoes.csv` NÃO é a régua.** A fonte única de dimensões em cm é
+> `nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`,
+> colunas `front_*_cm` e `back_*_cm` — são as que `derive-composicao.mjs` e
+> `measure-print-geometry.mjs` leem de fato. Corrigido em 26/07.
+
 # Protocolo Higgsfield: 3 passos para anúncios ultra-realistas (23/07/2026)
 
 Fonte: vídeo oficial da Higgsfield "3-Step Workflow To Make Ultra-Realistic

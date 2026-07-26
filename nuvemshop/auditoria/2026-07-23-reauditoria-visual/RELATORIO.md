@@ -1,3 +1,27 @@
+> [!CAUTION]
+> # ⛔ AUDITORIA INVALIDADA — NÃO USE ESTA FILA
+>
+> **status: invalidado · invalidado-em: 2026-07-26 · substituido-por:
+> `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`**
+>
+> A fila `6 APROVAR / 27 REVISAR / 16 REFAZER` deste relatório foi produzida
+> pelo método que a medição geométrica de 25/07 derrubou: comparar a razão
+> estampa/peça entre o **mockup PLANO** e a **foto VESTIDA**. Numa peça vestida
+> o tecido envolve um cilindro e as laterais fogem da câmera, então a largura
+> visível não é a largura plana e a comparação **fabrica "estampa grande"**.
+>
+> Foi assim que 12 das 13 fotos da fila real acabaram com estampa PEQUENA
+> demais: a trava empurrava na direção do defeito.
+>
+> Esta é a **terceira** auditoria de escala invalidada, e até 26/07 era a única
+> sem aviso — qualquer agente que abrisse a pasta agia sobre a fila errada.
+>
+> O `youdraw-dimensoes.csv` desta pasta **não é fonte canônica**. A régua real é
+> `nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv`,
+> colunas `front_*_cm` e `back_*_cm` — são elas que os scripts leem.
+>
+> Mantido só como registro do método que falhou.
+
 # Reauditoria visual das 49 capas lifestyle (23/07/2026)
 
 Auditoria independente, feita sem reaproveitar os vereditos da auditoria de

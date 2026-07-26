@@ -1,0 +1,2253 @@
+[
+ {
+  "product_id": "352722510",
+  "title": "São Miguel Celeste | Blusão Moletom",
+  "garment": "Blusão Moletom",
+  "collection": "NUVEM",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35,
+   "h": 39.7
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\NUVEM\\costas\\sao-miguel-nuvem.png (-0.11%)",
+   "designs\\prontos\\NUVEM\\mockups\\São Miguel Celeste [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Celeste.png (-0.11%)",
+   "designs\\prontos\\RELIQUIA\\peito\\S4-sagrado-coracao-barroco-v1.png (0.24%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352722510-01.webp",
+  "cena_lum": 181,
+  "classificadas": [
+   "352722510-01.webp:Branca(184)",
+   "352722510-02.webp:Branca(246)",
+   "352722510-03.webp:Branca(245)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352723243",
+  "title": "São Miguel Celeste | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "NUVEM",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 39.7
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\S4-sagrado-coracao-barroco-v1.png (-0.33%)",
+   "designs\\prontos\\NUVEM\\costas\\sao-miguel-nuvem.png (-0.68%)",
+   "designs\\prontos\\NUVEM\\mockups\\São Miguel Celeste [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Celeste.png (-0.68%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352723243-01.webp",
+  "cena_lum": 191,
+  "classificadas": [
+   "352723243-01.webp:Branca(200)",
+   "352723243-02.webp:Branca(238)",
+   "352723243-03.webp:Branca(236)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352722685",
+  "title": "São Miguel Celeste | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "NUVEM",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 39.7
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\S4-sagrado-coracao-barroco-v1.png (-0.33%)",
+   "designs\\prontos\\NUVEM\\costas\\sao-miguel-nuvem.png (-0.68%)",
+   "designs\\prontos\\NUVEM\\mockups\\São Miguel Celeste [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Celeste.png (-0.68%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352722685-01.webp",
+  "cena_lum": 185,
+  "classificadas": [
+   "352722685-01.webp:Branca(185)",
+   "352722685-02.webp:Branca(246)",
+   "352722685-03.webp:Branca(184)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352720257",
+  "title": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "frente",
+  "art_cm": {
+   "w": 35,
+   "h": 33.8
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\B4-acima-de-tudo-gotico-preto.png (0.12%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Acima de Tudo Gótico [Camiseta+Oversized] [só frente]\\Acima de Tudo Gótico (preto).png (0.12%)",
+   "designs\\prontos\\RELIQUIA\\peito\\B4-acima-de-tudo-gotico-branco.png (0.17%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Acima de Tudo Gótico [Camiseta+Oversized] [só frente]\\Acima de Tudo Gótico (branco).png (0.17%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352720257-01.webp",
+  "cena_lum": 20,
+  "classificadas": [
+   "352720257-01.webp:Preta(21)",
+   "352720257-02.webp:Off-White(170)",
+   "352720257-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/peito/B4-acima-de-tudo-gotico-preto.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352720257",
+  "title": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "frente",
+  "art_cm": {
+   "w": 35,
+   "h": 33.8
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\B4-acima-de-tudo-gotico-preto.png (0.12%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Acima de Tudo Gótico [Camiseta+Oversized] [só frente]\\Acima de Tudo Gótico (preto).png (0.12%)",
+   "designs\\prontos\\RELIQUIA\\peito\\B4-acima-de-tudo-gotico-branco.png (0.17%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Acima de Tudo Gótico [Camiseta+Oversized] [só frente]\\Acima de Tudo Gótico (branco).png (0.17%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352720257-02.webp",
+  "cena_lum": 169,
+  "classificadas": [
+   "352720257-01.webp:Preta(21)",
+   "352720257-02.webp:Off-White(170)",
+   "352720257-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/peito/B4-acima-de-tudo-gotico-branco.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352719728",
+  "title": "Aparecida Barroca | Blusão Moletom",
+  "garment": "Blusão Moletom",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 27.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\peito\\G5-icone-nuvem-spray.png (0.1%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\peito - Selo Nuvem.png (0.1%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\peito - Selo Nuvem.png (0.1%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\peito - Selo Nuvem.png (0.1%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352719728-01.webp",
+  "cena_lum": 146,
+  "classificadas": [
+   "352719728-01.webp:Off-White(151)",
+   "352719728-02.webp:Bege(148)",
+   "352719728-03.webp:Branca(246)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352719728-03.webp"
+ },
+ {
+  "product_id": "352890896",
+  "title": "Aparecida Barroca | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 27.9,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\peito\\G5-icone-nuvem-spray.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\peito - Selo Nuvem.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\peito - Selo Nuvem.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\peito - Selo Nuvem.png (-0.26%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352890896-02.webp",
+  "cena_lum": 37,
+  "classificadas": [
+   "352890896-01.webp:Bege(130)",
+   "352890896-02.webp:Preta(36)",
+   "352890896-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352890896",
+  "title": "Aparecida Barroca | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 27.9,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\peito\\G5-icone-nuvem-spray.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\peito - Selo Nuvem.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\peito - Selo Nuvem.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\peito - Selo Nuvem.png (-0.26%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352890896-01.webp",
+  "cena_lum": 111,
+  "classificadas": [
+   "352890896-01.webp:Bege(130)",
+   "352890896-02.webp:Preta(36)",
+   "352890896-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352890896-03.webp"
+ },
+ {
+  "product_id": "352720127",
+  "title": "Aparecida Barroca | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 27.7,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S1-aparecida-barroca.png (0.09%)",
+   "designs\\prontos\\NUVEM\\costas\\acima-de-tudo-nuvem.png (0.09%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png (0.09%)",
+   "designs\\prontos\\STREET\\peito\\G5-icone-nuvem-spray.png (0.46%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352720127-01.webp",
+  "cena_lum": 89,
+  "classificadas": [
+   "352720127-01.webp:Bege(94)",
+   "352720127-02.webp:Branca(238)",
+   "352720127-03.webp:Bege(134)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352720127-02.webp"
+ },
+ {
+  "product_id": "352719816",
+  "title": "Aparecida Barroca | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 27.7,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S1-aparecida-barroca.png (0.09%)",
+   "designs\\prontos\\NUVEM\\costas\\acima-de-tudo-nuvem.png (0.09%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\costas - Aparecida Ouro.png (0.09%)",
+   "designs\\prontos\\STREET\\peito\\G5-icone-nuvem-spray.png (0.46%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352719816-01.webp",
+  "cena_lum": 163,
+  "classificadas": [
+   "352719816-01.webp:Branca(164)",
+   "352719816-02.webp:Branca(246)",
+   "352719816-03.webp:Bege(133)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352717960",
+  "title": "Azulejo Sagrado | Blusão Moletom",
+  "garment": "Blusão Moletom",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35,
+   "h": 35
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v2.png (0.11%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (2).png (0.11%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v1.png (0.17%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (1).png (0.17%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717960-01.webp",
+  "cena_lum": 147,
+  "classificadas": [
+   "352717960-01.webp:Off-White(158)",
+   "352717960-02.webp:Branca(246)",
+   "352717960-03.webp:Branca(159)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717960-02.webp"
+ },
+ {
+  "product_id": "352718275",
+  "title": "Azulejo Sagrado | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 35
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G8-pomba-stencil-branco-teste1.png (0.03%)",
+   "designs\\prontos\\STREET\\mockups\\Espírito Santo [Camiseta+Oversized] [frente e verso]\\costas - Espírito Santo (branco teste 1).png (0.03%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v1.png (-0.4%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (1).png (-0.4%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718275-01.webp",
+  "cena_lum": 102,
+  "classificadas": [
+   "352718275-01.webp:Bege(106)",
+   "352718275-02.webp:Branca(238)",
+   "352718275-03.webp:Branca(160)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718275-02.webp"
+ },
+ {
+  "product_id": "352718083",
+  "title": "Azulejo Sagrado | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 35
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G8-pomba-stencil-branco-teste1.png (0.03%)",
+   "designs\\prontos\\STREET\\mockups\\Espírito Santo [Camiseta+Oversized] [frente e verso]\\costas - Espírito Santo (branco teste 1).png (0.03%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v1.png (-0.4%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (1).png (-0.4%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718083-01.webp",
+  "cena_lum": 132,
+  "classificadas": [
+   "352718083-01.webp:Bege(134)",
+   "352718083-02.webp:Branca(246)",
+   "352718083-03.webp:Branca(163)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+  "arte_confianca": "media",
+  "arte_cor_origem": "familia Azulejo Sagrado (mesma dos 352717960/352718275)",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718083-02.webp"
+ },
+ {
+  "product_id": "352717723",
+  "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v2.png (0.15%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (2).png (0.15%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (-0.27%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717723-02.webp",
+  "cena_lum": 16,
+  "classificadas": [
+   "352717723-01.webp:Off-White(153)",
+   "352717723-02.webp:Preta(16)",
+   "352717723-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352717723",
+  "title": "Brasão NIMBUS | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v2.png (0.15%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (2).png (0.15%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (-0.27%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717723-01.webp",
+  "cena_lum": 153,
+  "classificadas": [
+   "352717723-01.webp:Off-White(153)",
+   "352717723-02.webp:Preta(16)",
+   "352717723-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352717837",
+  "title": "Brasão NIMBUS | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v2.png (0.15%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (2).png (0.15%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (-0.27%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717837-02.webp",
+  "cena_lum": 20,
+  "classificadas": [
+   "352717837-01.webp:Bege(148)",
+   "352717837-02.webp:Preta(20)",
+   "352717837-03.webp:Branca(238)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352717837",
+  "title": "Brasão NIMBUS | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v2.png (0.15%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (2).png (0.15%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (-0.27%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717837-01.webp",
+  "cena_lum": 146,
+  "classificadas": [
+   "352717837-01.webp:Bege(148)",
+   "352717837-02.webp:Preta(20)",
+   "352717837-03.webp:Branca(238)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352717837-03.webp"
+ },
+ {
+  "product_id": "352703276",
+  "title": "Deus é Fiel | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.1,
+   "h": 33
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B8-deus-e-fiel-preto.png (-0.07%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Deus é Fiel [Camiseta+Oversized] [frente e verso]\\costas - Deus é Fiel (preto).png (-0.07%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B8-deus-e-fiel.png (-0.14%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Deus é Fiel [Camiseta+Oversized] [frente e verso]\\costas - Deus é Fiel.png (-0.14%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352703276-01.webp",
+  "cena_lum": 22,
+  "classificadas": [
+   "352703276-01.webp:Preta(22)",
+   "352703276-02.webp:Preta(33)",
+   "352703276-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352703343",
+  "title": "Deus é Fiel | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 32.9
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\NUVEM\\mockups\\Espírito [Camiseta+Oversized] [frente e verso]\\peito - Ícone NIMBUS.png (-0.23%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\peito - Ícone NIMBUS.png (-0.23%)",
+   "designs\\prontos\\NUVEM\\mockups\\São Miguel Celeste [Camiseta+Oversized] [frente e verso]\\peito - Ícone NIMBUS.png (-0.23%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B8-deus-e-fiel-preto.png (-0.66%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352703343-01.webp",
+  "cena_lum": 15,
+  "classificadas": [
+   "352703343-01.webp:Preta(15)",
+   "352703343-02.webp:Preta(22)",
+   "352703343-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352702858",
+  "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.1,
+   "h": 24.6
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo-branco.png (-0.12%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo (branco).png (-0.12%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo.png (-0.28%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo.png (-0.28%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702858-01.webp",
+  "cena_lum": 9,
+  "classificadas": [
+   "352702858-01.webp:Preta(9)",
+   "352702858-02.webp:Off-White(152)",
+   "352702858-03.webp:Preta(11)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo-branco.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352702858",
+  "title": "Fé Acima de Tudo | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.1,
+   "h": 24.6
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo-branco.png (-0.12%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo (branco).png (-0.12%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo.png (-0.28%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo.png (-0.28%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702858-02.webp",
+  "cena_lum": 154,
+  "classificadas": [
+   "352702858-01.webp:Preta(9)",
+   "352702858-02.webp:Off-White(152)",
+   "352702858-03.webp:Preta(11)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352703153",
+  "title": "Fé Acima de Tudo | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 24.6
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo-branco.png (-0.4%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo (branco).png (-0.4%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo.png (-0.57%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo.png (-0.57%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352703153-01.webp",
+  "cena_lum": 30,
+  "classificadas": [
+   "352703153-01.webp:Preta(35)",
+   "352703153-02.webp:Off-White(197)",
+   "352703153-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo-branco.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352703153",
+  "title": "Fé Acima de Tudo | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 24.6
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo-branco.png (-0.4%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo (branco).png (-0.4%)",
+   "designs\\prontos\\RELIQUIA\\costas\\B7-fe-acima-de-tudo.png (-0.57%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Fé Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Fé Acima de Tudo.png (-0.57%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352703153-02.webp",
+  "cena_lum": 198,
+  "classificadas": [
+   "352703153-01.webp:Preta(35)",
+   "352703153-02.webp:Off-White(197)",
+   "352703153-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352702753",
+  "title": "Monograma NIMBUS | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "frente",
+  "art_cm": {
+   "w": 29.3,
+   "h": 30.1
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\B9-monograma-nmb.png (-0.26%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (-0.26%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (-0.26%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (-0.26%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702753-01.webp",
+  "cena_lum": 16,
+  "classificadas": [
+   "352702753-01.webp:Preta(16)",
+   "352702753-02.webp:Off-White(169)",
+   "352702753-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352702753",
+  "title": "Monograma NIMBUS | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "frente",
+  "art_cm": {
+   "w": 29.3,
+   "h": 30.1
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\B9-monograma-nmb.png (-0.26%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (-0.26%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (-0.26%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (-0.26%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702753-02.webp",
+  "cena_lum": 165,
+  "classificadas": [
+   "352702753-01.webp:Preta(16)",
+   "352702753-02.webp:Off-White(169)",
+   "352702753-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352702796",
+  "title": "Monograma NIMBUS | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "frente",
+  "art_cm": {
+   "w": 28.5,
+   "h": 29.4
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\B9-monograma-nmb.png (0.16%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (0.16%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (0.16%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (0.16%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702796-01.webp",
+  "cena_lum": 24,
+  "classificadas": [
+   "352702796-01.webp:Preta(24)",
+   "352702796-02.webp:Branca(196)",
+   "352702796-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352702796",
+  "title": "Monograma NIMBUS | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "frente",
+  "art_cm": {
+   "w": 28.5,
+   "h": 29.4
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\peito\\B9-monograma-nmb.png (0.16%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Aparecida Ouro [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (0.16%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (0.16%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\peito - Monograma NMB.png (0.16%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702796-02.webp",
+  "cena_lum": 193,
+  "classificadas": [
+   "352702796-01.webp:Preta(24)",
+   "352702796-02.webp:Branca(196)",
+   "352702796-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352702020",
+  "title": "Salmo 19 | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 28.8
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B2-salmo19.png (-0.67%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Salmo 19.png (-0.67%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702020-01.webp",
+  "cena_lum": 15,
+  "classificadas": [
+   "352702020-01.webp:Preta(15)",
+   "352702020-02.webp:Off-White(184)",
+   "352702020-03.webp:Preta(21)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352702020",
+  "title": "Salmo 19 | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 28.8
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B2-salmo19.png (-0.67%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Salmo 19.png (-0.67%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352702020-02.webp",
+  "cena_lum": 183,
+  "classificadas": [
+   "352702020-01.webp:Preta(15)",
+   "352702020-02.webp:Off-White(184)",
+   "352702020-03.webp:Preta(21)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352619175",
+  "title": "Salmo 19 | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 28.8
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B2-salmo19.png (-0.67%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Salmo 19.png (-0.67%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352619175-01.webp",
+  "cena_lum": 24,
+  "classificadas": [
+   "352619175-01.webp:Preta(24)",
+   "352619175-02.webp:Branca(212)",
+   "352619175-03.webp:Branca(246)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352619175",
+  "title": "Salmo 19 | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 28.8
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B2-salmo19.png (-0.67%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Salmo 19 [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Salmo 19.png (-0.67%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352619175-02.webp",
+  "cena_lum": 210,
+  "classificadas": [
+   "352619175-01.webp:Preta(24)",
+   "352619175-02.webp:Branca(212)",
+   "352619175-03.webp:Branca(246)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352718943",
+  "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v1.png (-0.04%)",
+   "designs\\prontos\\STREET\\costas\\G4-cristo-stencil-ouro.png (-0.04%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png (-0.04%)",
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.86%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718943-01.webp",
+  "cena_lum": 34,
+  "classificadas": [
+   "352718943-01.webp:Preta(33)",
+   "352718943-02.webp:Bege(120)",
+   "352718943-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352718943",
+  "title": "São Jorge Neobarroco | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v1.png (-0.04%)",
+   "designs\\prontos\\STREET\\costas\\G4-cristo-stencil-ouro.png (-0.04%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png (-0.04%)",
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.86%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718943-02.webp",
+  "cena_lum": 112,
+  "classificadas": [
+   "352718943-01.webp:Preta(33)",
+   "352718943-02.webp:Bege(120)",
+   "352718943-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718943-03.webp"
+ },
+ {
+  "product_id": "352718999",
+  "title": "São Jorge Neobarroco | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H1-cristo-redentor-halftone.png (0.31%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v1.png (-0.68%)",
+   "designs\\prontos\\STREET\\costas\\G4-cristo-stencil-ouro.png (-0.68%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png (-0.68%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718999-01.webp",
+  "cena_lum": 34,
+  "classificadas": [
+   "352718999-01.webp:Preta(27)",
+   "352718999-02.webp:Off-White(162)",
+   "352718999-03.webp:Branca(238)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352718999",
+  "title": "São Jorge Neobarroco | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H1-cristo-redentor-halftone.png (0.31%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v1.png (-0.68%)",
+   "designs\\prontos\\STREET\\costas\\G4-cristo-stencil-ouro.png (-0.68%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png (-0.68%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718999-02.webp",
+  "cena_lum": 153,
+  "classificadas": [
+   "352718999-01.webp:Preta(27)",
+   "352718999-02.webp:Off-White(162)",
+   "352718999-03.webp:Branca(238)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718999-03.webp"
+ },
+ {
+  "product_id": "352718787",
+  "title": "São Jorge Neobarroco | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H1-cristo-redentor-halftone.png (0.31%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v1.png (-0.68%)",
+   "designs\\prontos\\STREET\\costas\\G4-cristo-stencil-ouro.png (-0.68%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png (-0.68%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718787-01.webp",
+  "cena_lum": 43,
+  "classificadas": [
+   "352718787-01.webp:Preta(36)",
+   "352718787-02.webp:Bege(141)",
+   "352718787-03.webp:Branca(246)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352718787",
+  "title": "São Jorge Neobarroco | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H1-cristo-redentor-halftone.png (0.31%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S6-sao-jorge-barroco-v1.png (-0.68%)",
+   "designs\\prontos\\STREET\\costas\\G4-cristo-stencil-ouro.png (-0.68%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Jorge Ouro [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - São Jorge Ouro (1).png (-0.68%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718787-02.webp",
+  "cena_lum": 128,
+  "classificadas": [
+   "352718787-01.webp:Preta(36)",
+   "352718787-02.webp:Bege(141)",
+   "352718787-03.webp:Branca(246)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352718787-03.webp"
+ },
+ {
+  "product_id": "352618837",
+  "title": "São Jorge Vintage | Blusão Moletom",
+  "garment": "Blusão Moletom",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618837-01.webp",
+  "cena_lum": 21,
+  "classificadas": [
+   "352618837-01.webp:Preta(23)",
+   "352618837-02.webp:Off-White(192)",
+   "352618837-03.webp:Preta(23)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352618837",
+  "title": "São Jorge Vintage | Blusão Moletom",
+  "garment": "Blusão Moletom",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618837-02.webp",
+  "cena_lum": 189,
+  "classificadas": [
+   "352618837-01.webp:Preta(23)",
+   "352618837-02.webp:Off-White(192)",
+   "352618837-03.webp:Preta(23)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352618903",
+  "title": "São Jorge Vintage | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618903-01.webp",
+  "cena_lum": 29,
+  "classificadas": [
+   "352618903-01.webp:Preta(29)",
+   "352618903-02.webp:Off-White(194)",
+   "352618903-03.webp:Off-White(177)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352618903",
+  "title": "São Jorge Vintage | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618903-02.webp",
+  "cena_lum": 191,
+  "classificadas": [
+   "352618903-01.webp:Preta(29)",
+   "352618903-02.webp:Off-White(194)",
+   "352618903-03.webp:Off-White(177)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352618935",
+  "title": "São Jorge Vintage | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618935-02.webp",
+  "cena_lum": 103,
+  "classificadas": [
+   "352618935-01.webp:Preta(48)",
+   "352618935-02.webp:Bege(107)",
+   "352618935-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352618935",
+  "title": "São Jorge Vintage | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618935-01.webp",
+  "cena_lum": 53,
+  "classificadas": [
+   "352618935-01.webp:Preta(48)",
+   "352618935-02.webp:Bege(107)",
+   "352618935-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352618878",
+  "title": "São Jorge Vintage | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618878-01.webp",
+  "cena_lum": 16,
+  "classificadas": [
+   "352618878-01.webp:Preta(16)",
+   "352618878-02.webp:Off-White(159)",
+   "352618878-03.webp:Preta(19)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352618878",
+  "title": "São Jorge Vintage | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 30.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v1.png (-0.21%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (1).png (-0.21%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-nuvem.png (-0.35%)",
+   "designs\\prontos\\NUVEM\\mockups\\Redentor Celeste [Camiseta+Oversized] [frente e verso]\\costas - Redentor Celeste.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352618878-02.webp",
+  "cena_lum": 154,
+  "classificadas": [
+   "352618878-01.webp:Preta(16)",
+   "352618878-02.webp:Off-White(159)",
+   "352618878-03.webp:Preta(19)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352407182",
+  "title": "São Miguel Vintage | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-laranja.png (0.18%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (laranja).png (0.18%)",
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v2.png (-0.62%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png (-0.62%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352407182-01.webp",
+  "cena_lum": 30,
+  "classificadas": [
+   "352407182-01.webp:Preta(29)",
+   "352407182-02.webp:Off-White(164)",
+   "352407182-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352407182",
+  "title": "São Miguel Vintage | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "RELIQUIA",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31.6,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-laranja.png (0.18%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (laranja).png (0.18%)",
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v2.png (-0.62%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png (-0.62%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352407182-02.webp",
+  "cena_lum": 163,
+  "classificadas": [
+   "352407182-01.webp:Preta(29)",
+   "352407182-02.webp:Off-White(164)",
+   "352407182-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352407196",
+  "title": "São Miguel Vintage | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v2.png (-0.3%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png (-0.3%)",
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-laranja.png (0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (laranja).png (0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352407196-01.webp",
+  "cena_lum": 23,
+  "classificadas": [
+   "352407196-01.webp:Preta(29)",
+   "352407196-02.webp:Off-White(176)",
+   "352407196-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352407196",
+  "title": "São Miguel Vintage | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v2.png (-0.3%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png (-0.3%)",
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-laranja.png (0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (laranja).png (0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352407196-02.webp",
+  "cena_lum": 172,
+  "classificadas": [
+   "352407196-01.webp:Preta(29)",
+   "352407196-02.webp:Off-White(176)",
+   "352407196-03.webp:Preta(22)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352407156",
+  "title": "São Miguel Vintage | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v2.png (-0.3%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png (-0.3%)",
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-laranja.png (0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (laranja).png (0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352407156-01.webp",
+  "cena_lum": 34,
+  "classificadas": [
+   "352407156-01.webp:Preta(33)",
+   "352407156-02.webp:Off-White(196)",
+   "352407156-03.webp:Preta(19)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352407156",
+  "title": "São Miguel Vintage | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "RELIQUIA",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 31.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\H2-sao-miguel-halftone-v2.png (-0.3%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\São Miguel Vintage [Camiseta+Oversized] [frente e verso]\\costas - São Miguel Vintage (2).png (-0.3%)",
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-laranja.png (0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (laranja).png (0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352407156-02.webp",
+  "cena_lum": 194,
+  "classificadas": [
+   "352407156-01.webp:Preta(33)",
+   "352407156-02.webp:Off-White(196)",
+   "352407156-03.webp:Preta(19)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352728451",
+  "title": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.1,
+   "h": 27.2
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-tags.png (-0.32%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (tags).png (-0.32%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728451-01.webp",
+  "cena_lum": 168,
+  "classificadas": [
+   "352728451-01.webp:Off-White(168)",
+   "352728451-02.webp:Off-White(210)",
+   "352728451-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352728524",
+  "title": "Acima de Tudo Grafite | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 27.2
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G3-acima-de-tudo-tags.png (-0.6%)",
+   "designs\\prontos\\STREET\\mockups\\Acima de Tudo [Camiseta+Oversized] [frente e verso]\\costas - Acima de Tudo (tags).png (-0.6%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728524-01.webp",
+  "cena_lum": 157,
+  "classificadas": [
+   "352728524-01.webp:Off-White(155)",
+   "352728524-02.webp:Branca(238)",
+   "352728524-03.webp:Branca(236)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728524-02.webp"
+ },
+ {
+  "product_id": "352728277",
+  "title": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 25.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G2-anjo-livro-stencil.png (-0.19%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png (-0.19%)",
+   "designs\\prontos\\STREET\\costas\\G2-anjo-stencil.png (-0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Querubim Spray [Camiseta+Oversized] [frente e verso]\\costas - Querubim Spray.png (-0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728277-01.webp",
+  "cena_lum": 16,
+  "classificadas": [
+   "352728277-01.webp:Preta(15)",
+   "352728277-02.webp:Preta(33)",
+   "352728277-03.webp:Preta(34)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G2-anjo-livro-stencil.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352728357",
+  "title": "Anjo da Guarda Stencil | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 25.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G2-anjo-livro-stencil.png (-0.19%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png (-0.19%)",
+   "designs\\prontos\\STREET\\costas\\G2-anjo-stencil.png (-0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Querubim Spray [Camiseta+Oversized] [frente e verso]\\costas - Querubim Spray.png (-0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728357-01.webp",
+  "cena_lum": 14,
+  "classificadas": [
+   "352728357-01.webp:Preta(15)",
+   "352728357-02.webp:Preta(20)",
+   "352728357-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G2-anjo-livro-stencil.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352727892",
+  "title": "Aparecida Spray | Blusão Moletom",
+  "garment": "Moletom Canguru",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 23.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G10-aparecida-stencil-branco-teste.png (-0.4%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (branco teste).png (-0.4%)",
+   "designs\\prontos\\STREET\\costas\\G10-aparecida-stencil-v3.png (-0.61%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (3).png (-0.61%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352727892-01.webp",
+  "cena_lum": 24,
+  "classificadas": [
+   "352727892-01.webp:Preta(24)",
+   "352727892-02.webp:Preta(19)",
+   "352727892-03.webp:Preta(19)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352728019",
+  "title": "Aparecida Spray | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 23.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G10-aparecida-stencil-branco-teste.png (-0.4%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (branco teste).png (-0.4%)",
+   "designs\\prontos\\STREET\\costas\\G10-aparecida-stencil-v3.png (-0.61%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (3).png (-0.61%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352728019-01.webp",
+  "cena_lum": 55,
+  "classificadas": [
+   "352728019-01.webp:Preta(56)",
+   "352728019-02.webp:Preta(58)",
+   "352728019-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352889132",
+  "title": "Aparecida Spray | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 23.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G10-aparecida-stencil-branco-teste.png (-0.4%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (branco teste).png (-0.4%)",
+   "designs\\prontos\\STREET\\costas\\G10-aparecida-stencil-v3.png (-0.61%)",
+   "designs\\prontos\\STREET\\mockups\\Aparecida Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Aparecida Spray (3).png (-0.61%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352889132-01.webp",
+  "cena_lum": 41,
+  "classificadas": [
+   "352889132-01.webp:Preta(41)",
+   "352889132-02.webp:Preta(22)",
+   "352889132-03.webp:Preta(21)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352721477",
+  "title": "Espírito Santo Spray | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 35.1
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v1.png (-0.11%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (1).png (-0.11%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v2.png (-0.17%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (2).png (-0.17%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721477-01.webp",
+  "cena_lum": 26,
+  "classificadas": [
+   "352721477-01.webp:Preta(24)",
+   "352721477-02.webp:Branca(220)",
+   "352721477-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G8-pomba-stencil-branco-teste1.png",
+  "arte_confianca": "media",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352721477",
+  "title": "Espírito Santo Spray | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.2,
+   "h": 35.1
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v1.png (-0.11%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (1).png (-0.11%)",
+   "designs\\prontos\\RELIQUIA\\costas\\S3-azulejo-cruz-v2.png (-0.17%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Azulejo [Camiseta+Oversized] [frente e verso]\\costas - Azulejo (2).png (-0.17%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721477-02.webp",
+  "cena_lum": 220,
+  "classificadas": [
+   "352721477-01.webp:Preta(24)",
+   "352721477-02.webp:Branca(220)",
+   "352721477-03.webp:Preta(22)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/STREET/costas/G8-pomba-stencil-preto.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352721118",
+  "title": "Fé Wildstyle | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 33.7,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G9-fe-tag-v3.png (-0.09%)",
+   "designs\\prontos\\STREET\\mockups\\Fé [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Fé (3).png (-0.09%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721118-01.webp",
+  "cena_lum": 27,
+  "classificadas": [
+   "352721118-01.webp:Preta(27)",
+   "352721118-02.webp:Branca(168)",
+   "352721118-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352721118",
+  "title": "Fé Wildstyle | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 33.7,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G9-fe-tag-v3.png (-0.09%)",
+   "designs\\prontos\\STREET\\mockups\\Fé [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Fé (3).png (-0.09%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721118-02.webp",
+  "cena_lum": 163,
+  "classificadas": [
+   "352721118-01.webp:Preta(27)",
+   "352721118-02.webp:Branca(168)",
+   "352721118-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352721197",
+  "title": "Fé Wildstyle | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 33.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G9-fe-tag-v3.png (-0.39%)",
+   "designs\\prontos\\STREET\\mockups\\Fé [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Fé (3).png (-0.39%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721197-01.webp",
+  "cena_lum": 24,
+  "classificadas": [
+   "352721197-01.webp:Preta(24)",
+   "352721197-02.webp:Bege(121)",
+   "352721197-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352721197",
+  "title": "Fé Wildstyle | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 33.8,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G9-fe-tag-v3.png (-0.39%)",
+   "designs\\prontos\\STREET\\mockups\\Fé [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Fé (3).png (-0.39%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721197-02.webp",
+  "cena_lum": 106,
+  "classificadas": [
+   "352721197-01.webp:Preta(24)",
+   "352721197-02.webp:Bege(121)",
+   "352721197-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352721633",
+  "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.1,
+   "h": 37.5
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G1-nimbus-tag-azul.png (-0.36%)",
+   "designs\\prontos\\STREET\\mockups\\Wildstyle [Camiseta+Oversized+Moletom+Blusão+Ecobag] [frente e verso]\\costas - Wildstyle (azul).png (-0.36%)",
+   "designs\\prontos\\NUVEM\\costas\\pomba-nuvem.png (-0.95%)",
+   "designs\\prontos\\NUVEM\\mockups\\Espírito [Camiseta+Oversized] [frente e verso]\\costas - Espírito.png (-0.95%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721633-02.webp",
+  "cena_lum": 40,
+  "classificadas": [
+   "352721633-01.webp:Branca(184)",
+   "352721633-02.webp:Preta(40)",
+   "352721633-03.webp:Off-White(210)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352721633",
+  "title": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 35.1,
+   "h": 37.5
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G1-nimbus-tag-azul.png (-0.36%)",
+   "designs\\prontos\\STREET\\mockups\\Wildstyle [Camiseta+Oversized+Moletom+Blusão+Ecobag] [frente e verso]\\costas - Wildstyle (azul).png (-0.36%)",
+   "designs\\prontos\\NUVEM\\costas\\pomba-nuvem.png (-0.95%)",
+   "designs\\prontos\\NUVEM\\mockups\\Espírito [Camiseta+Oversized] [frente e verso]\\costas - Espírito.png (-0.95%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721633-01.webp",
+  "cena_lum": 184,
+  "classificadas": [
+   "352721633-01.webp:Branca(184)",
+   "352721633-02.webp:Preta(40)",
+   "352721633-03.webp:Off-White(210)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352721633-03.webp"
+ },
+ {
+  "product_id": "355581274",
+  "title": "NIMBUS Wildstyle | Ecobag",
+  "garment": "Ecobag",
+  "collection": "STREET",
+  "cor": "Bege",
+  "vista": "frente",
+  "art_cm": {
+   "w": 24,
+   "h": 25.7
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G1-nimbus-tag-azul.png (-0.13%)",
+   "designs\\prontos\\STREET\\mockups\\Wildstyle [Camiseta+Oversized+Moletom+Blusão+Ecobag] [frente e verso]\\costas - Wildstyle (azul).png (-0.13%)",
+   "designs\\prontos\\NUVEM\\costas\\pomba-nuvem.png (-0.72%)",
+   "designs\\prontos\\NUVEM\\mockups\\Espírito [Camiseta+Oversized] [frente e verso]\\costas - Espírito.png (-0.72%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/355581274-01.webp",
+  "cena_lum": 155,
+  "classificadas": [
+   "355581274-01.webp:Branca(154)",
+   "355581274-02.webp:Off-White(171)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Bege"
+ },
+ {
+  "product_id": "352725749",
+  "title": "Querubim Spray | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 25.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G2-anjo-livro-stencil.png (-0.19%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png (-0.19%)",
+   "designs\\prontos\\STREET\\costas\\G2-anjo-stencil.png (-0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Querubim Spray [Camiseta+Oversized] [frente e verso]\\costas - Querubim Spray.png (-0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352725749-01.webp",
+  "cena_lum": 29,
+  "classificadas": [
+   "352725749-01.webp:Preta(28)",
+   "352725749-02.webp:Branca(197)",
+   "352725749-03.webp:Preta(33)"
+  ],
+  "feita": true,
+  "arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352725749",
+  "title": "Querubim Spray | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 25.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G2-anjo-livro-stencil.png (-0.19%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png (-0.19%)",
+   "designs\\prontos\\STREET\\costas\\G2-anjo-stencil.png (-0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Querubim Spray [Camiseta+Oversized] [frente e verso]\\costas - Querubim Spray.png (-0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352725749-02.webp",
+  "cena_lum": 199,
+  "classificadas": [
+   "352725749-01.webp:Preta(28)",
+   "352725749-02.webp:Branca(197)",
+   "352725749-03.webp:Preta(33)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+  "arte_confianca": "media",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352725852",
+  "title": "Querubim Spray | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 25.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G2-anjo-livro-stencil.png (-0.19%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png (-0.19%)",
+   "designs\\prontos\\STREET\\costas\\G2-anjo-stencil.png (-0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Querubim Spray [Camiseta+Oversized] [frente e verso]\\costas - Querubim Spray.png (-0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352725852-01.webp",
+  "cena_lum": 20,
+  "classificadas": [
+   "352725852-01.webp:Preta(20)",
+   "352725852-02.webp:Branca(215)",
+   "352725852-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352725852",
+  "title": "Querubim Spray | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 25.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G2-anjo-livro-stencil.png (-0.19%)",
+   "designs\\prontos\\STREET\\mockups\\Anjo da Guarda [Camiseta+Oversized] [frente e verso]\\costas - Anjo da Guarda.png (-0.19%)",
+   "designs\\prontos\\STREET\\costas\\G2-anjo-stencil.png (-0.5%)",
+   "designs\\prontos\\STREET\\mockups\\Querubim Spray [Camiseta+Oversized] [frente e verso]\\costas - Querubim Spray.png (-0.5%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352725852-02.webp",
+  "cena_lum": 214,
+  "classificadas": [
+   "352725852-01.webp:Preta(20)",
+   "352725852-02.webp:Branca(215)",
+   "352725852-03.webp:Preta(22)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G2-anjo-stencil.png",
+  "arte_confianca": "media",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352722232",
+  "title": "Sagrado Coração Spray | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 24.9,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\peito\\G5-icone-nuvem-spray-branco.png (-0.08%)",
+   "designs\\prontos\\STREET\\mockups\\Selo Nuvem [Camiseta+Oversized] [só frente]\\Selo Nuvem (branco).png (-0.08%)",
+   "designs\\prontos\\STREET\\peito\\G7-sagrado-coracao-stencil-preto.png (-0.26%)",
+   "designs\\prontos\\STREET\\mockups\\Sagrado Coração Spray [Camiseta+Oversized] [frente e verso]\\costas - Sagrado Coração Spray (preto).png (-0.26%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352722232-01.webp",
+  "cena_lum": 212,
+  "classificadas": [
+   "352722232-01.webp:Branca(211)",
+   "352722232-02.webp:Branca(238)",
+   "352722232-03.webp:Branca(236)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/peito/G7-sagrado-coracao-stencil-preto.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ },
+ {
+  "product_id": "352727545",
+  "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.1,
+   "h": 39.5
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (0.09%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\costas - Brasão.png (0.09%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (0.18%)",
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil-branco.png (-0.25%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352727545-01.webp",
+  "cena_lum": 23,
+  "classificadas": [
+   "352727545-01.webp:Preta(23)",
+   "352727545-02.webp:Off-White(191)",
+   "352727545-03.webp:Off-White(188)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352727545",
+  "title": "São Miguel Vitorioso | Camiseta Oversized Premium",
+  "garment": "Camiseta Oversized Premium",
+  "collection": "STREET",
+  "cor": "Off-White",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.1,
+   "h": 39.5
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (0.09%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\costas - Brasão.png (0.09%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (0.18%)",
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil-branco.png (-0.25%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352727545-02.webp",
+  "cena_lum": 191,
+  "classificadas": [
+   "352727545-01.webp:Preta(23)",
+   "352727545-02.webp:Off-White(191)",
+   "352727545-03.webp:Off-White(188)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Off-White"
+ },
+ {
+  "product_id": "352898175",
+  "title": "São Miguel Vitorioso | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (-0.01%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\costas - Brasão.png (-0.01%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (0.07%)",
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil-branco.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352898175-02.webp",
+  "cena_lum": 20,
+  "classificadas": [
+   "352898175-01.webp:Off-White(189)",
+   "352898175-02.webp:Preta(20)",
+   "352898175-03.webp:Branca(238)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352898175",
+  "title": "São Miguel Vitorioso | Camiseta Premium",
+  "garment": "Camiseta Premium",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 29.5,
+   "h": 40
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\RELIQUIA\\costas\\B3-cruz-crest.png (-0.01%)",
+   "designs\\prontos\\RELIQUIA\\mockups\\Brasão [Camiseta+Oversized] [frente e verso]\\costas - Brasão.png (-0.01%)",
+   "designs\\prontos\\NUVEM\\costas\\cristo-crest-nuvem.png (0.07%)",
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil-branco.png (-0.35%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352898175-01.webp",
+  "cena_lum": 183,
+  "classificadas": [
+   "352898175-01.webp:Off-White(189)",
+   "352898175-02.webp:Preta(20)",
+   "352898175-03.webp:Branca(238)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca",
+  "cena_antiga": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352898175-03.webp"
+ },
+ {
+  "product_id": "352726673",
+  "title": "São Miguel Vitorioso | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "STREET",
+  "cor": "Preta",
+  "vista": "costas",
+  "art_cm": {
+   "w": 28.5,
+   "h": 39.4
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil-preto.png (-0.03%)",
+   "designs\\prontos\\STREET\\mockups\\Arcanjo Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Arcanjo Spray (preto).png (-0.03%)",
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil.png (-0.42%)",
+   "designs\\prontos\\STREET\\mockups\\Arcanjo Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Arcanjo Spray.png (-0.42%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352726673-02.webp",
+  "cena_lum": 26,
+  "classificadas": [
+   "352726673-01.webp:Branca(218)",
+   "352726673-02.webp:Preta(26)",
+   "352726673-03.webp:Branca(246)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Preta"
+ },
+ {
+  "product_id": "352726673",
+  "title": "São Miguel Vitorioso | Moletom Canguru",
+  "garment": "Moletom Canguru",
+  "collection": "STREET",
+  "cor": "Branca",
+  "vista": "costas",
+  "art_cm": {
+   "w": 28.5,
+   "h": 39.4
+  },
+  "arte_candidatos": [
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil-preto.png (-0.03%)",
+   "designs\\prontos\\STREET\\mockups\\Arcanjo Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Arcanjo Spray (preto).png (-0.03%)",
+   "designs\\prontos\\STREET\\costas\\G6-sao-miguel-stencil.png (-0.42%)",
+   "designs\\prontos\\STREET\\mockups\\Arcanjo Spray [Camiseta+Oversized+Moletom+Blusão] [frente e verso]\\costas - Arcanjo Spray.png (-0.42%)"
+  ],
+  "cena": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/live/352726673-01.webp",
+  "cena_lum": 214,
+  "classificadas": [
+   "352726673-01.webp:Branca(218)",
+   "352726673-02.webp:Preta(26)",
+   "352726673-03.webp:Branca(246)"
+  ],
+  "feita": false,
+  "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+  "arte_confianca": "alta",
+  "arte_cor_origem": "Branca"
+ }
+]

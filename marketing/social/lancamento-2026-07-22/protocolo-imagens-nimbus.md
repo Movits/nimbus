@@ -1,3 +1,10 @@
+> ⚠️ **TOLERÂNCIA INCOMPLETA — falta a TRAVA DE PISO.** Este documento manda
+> "dentro de 5%" e omite a trava mecânica decidida em 25/07: o limiar efetivo
+> de cada foto nunca fica abaixo da margem MEDIDA do método (4 pp com moldura
+> desenhada, 8 pp em silhueta livre). Na prática 38 de 41 fotos têm piso de 8%.
+> Seguir só os 5% publica veredito dentro do ruído — foi assim que duas
+> auditorias caíram. Ver `docs/verdades/limites-conhecidos.md`.
+
 # Protocolo metódico de imagens NIMBUS
 
 > Atualizado em 24/07/2026: a execução vigente é pela **API do Google AI
