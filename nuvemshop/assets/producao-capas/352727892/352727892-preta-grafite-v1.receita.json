@@ -1,0 +1,20 @@
+{
+ "produto": "352727892",
+ "cor_arquivo": "352727892-preta-grafite-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352727892/352727892-preta-grafite-blank.png",
+ "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+ "arte_cm": "23.8x40",
+ "peca": "Moletom Canguru",
+ "gola": 0.327,
+ "barra": 0.927,
+ "centro": 0.498,
+ "torso": 0.311,
+ "yaw": 8,
+ "placement": 4.32,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.645,
+ "gerado_em": "2026-07-26T19:09:32.697Z"
+}
