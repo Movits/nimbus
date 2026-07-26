@@ -143,9 +143,29 @@ export async function transplantarCor({ base, doador, out, limiar = 26, feather 
   }
   await sharp(saida, { raw: { width: W, height: H, channels: 3 } }).png().toFile(out);
 
+  // RESIDUO DA COR ANTIGA — o defeito que nenhum outro check enxerga.
+  //
+  // `qa-par-hover` compara as duas capas so ONDE OS BLANKS COINCIDEM, ou seja
+  // fora da roupa. Um pedaco de peca que ficou de fora da mascara (gola,
+  // capuz) mantem a cor da BASE nas duas imagens, os blanks coincidem ali, e o
+  // teste passa com o defeito na cara. Foi o que aconteceu no 352721477 e no
+  // 352618935, os dois pegos so no olho.
+  //
+  // Aqui e mensuravel: pixel que estava na diferenca BRUTA (base != doador,
+  // logo e peca ou entorno dela) mas ficou FORA da mascara final continua com
+  // a cor antiga. Reportar quantidade e onde.
+  let residuo = 0, rx0 = W, rx1 = -1, ry0 = H, ry1 = -1;
+  for (let p = 0; p < W * H; p += 1) {
+    if (!bruta[p] || suave[p * passo] > 8) continue;
+    residuo += 1;
+    const x = p % W, y = (p / W) | 0;
+    if (x < rx0) rx0 = x; if (x > rx1) rx1 = x;
+    if (y < ry0) ry0 = y; if (y > ry1) ry1 = y;
+  }
+
   // Quanto do quadro ficou IDENTICO a base: e isso que o hover preserva.
   let iguais = 0;
-  for (let p = 0; p < W * H; p += 1) if (suave[p] <= 0.5) iguais += 1;
+  for (let p = 0; p < W * H; p += 1) if (suave[p * passo] <= 0.5) iguais += 1;
   return {
     out,
     frac_diferente_bruta_pct: +(100 * fracBruta).toFixed(2),
@@ -154,6 +174,13 @@ export async function transplantarCor({ base, doador, out, limiar = 26, feather 
     px_cortados_acima_do_ombro: cortados,
     linha_de_corte_pct: corteOmbro ? +((100 * corte) / H).toFixed(2) : null,
     frac_identica_a_base_pct: +((100 * iguais) / (W * H)).toFixed(2),
+    residuo_cor_antiga_px: residuo,
+    residuo_cor_antiga_pct: +((100 * residuo) / (W * H)).toFixed(2),
+    residuo_caixa_pct: rx1 < 0 ? null : {
+      x0: +(100 * rx0 / W).toFixed(1), x1: +(100 * rx1 / W).toFixed(1),
+      y0: +(100 * ry0 / H).toFixed(1), y1: +(100 * ry1 / H).toFixed(1),
+    },
+    residuo_ok: residuo / (W * H) < 0.004,
     limiar, feather,
   };
 }
