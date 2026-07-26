@@ -7,9 +7,8 @@
 // S6-...png`, `nuvemshop/assets/producao-capas/<id>/<id>-preta-blank.png`.
 // Reescrever isso em 70 scripts seria pior que ligar as duas arvores aqui.
 //
-// Este script cria um link (junction no Windows, symlink no resto) de cada
-// pasta de asset para dentro da arvore principal. Nada e copiado, entao nao ha
-// duas copias para divergir.
+// Este script MESCLA as pastas de asset dentro da arvore principal, copiando
+// so o que falta. E idempotente: rodar de novo nao sobrescreve nada.
 //
 // Uso:
 //   node scripts/setup-assets.mjs [--assets ../nimbus-assets]
