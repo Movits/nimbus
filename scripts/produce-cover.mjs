@@ -113,14 +113,22 @@ const CENA = {
  * Aparecida. Oclusao correta fisicamente, capa inutil comercialmente. O mockup
  * oficial mostra o capuz assentado ACIMA da estampa, que e o alvo.
  */
-export function promptBlank({ garment, color, colecao, extra = "" }) {
+export function promptBlank({ garment, color, colecao, extra = "", vista = "costas" }) {
+  // Sete produtos do catalogo tem a estampa NA FRENTE (Acima de Tudo Gotico,
+  // Monograma NIMBUS e a Ecobag). Sem esta variante o prompt pedia "rear view"
+  // e "the back of the garment is empty", que para eles gera a foto errada.
+  const frente = vista === "frente";
+  const lado = frente ? "front" : "back";
   return [
-    `Create one square photorealistic ecommerce lifestyle photograph, rear view, of a person wearing a plain ${color} ${garment}.`,
+    `Create one square photorealistic ecommerce lifestyle photograph, ${frente ? "front view" : "rear view"}, of a person wearing a plain ${color} ${garment}.`,
     `REFERENCE 1 is the approved photograph of this exact product. Keep the SAME model (same person, same build, same hair), the SAME scene, the SAME framing, the SAME light and a natural pose of the same family.`,
-    `THE GARMENT MUST BE COMPLETELY BLANK. The back of the garment is EMPTY fabric: no print, no graphic, no artwork, no lettering, no logo, no emblem, no embroidery, no texture pattern, no watermark. Plain undecorated ${color} fabric from the collar to the hem. This is deliberate — the artwork is applied later by a separate process, and any print you draw will have to be discarded.`,
+    `THE GARMENT MUST BE COMPLETELY BLANK. The ${lado} of the garment is EMPTY fabric: no print, no graphic, no artwork, no lettering, no logo, no emblem, no embroidery, no texture pattern, no watermark. Plain undecorated ${color} fabric from the collar to the hem. This is deliberate — the artwork is applied later by a separate process, and any print you draw will have to be discarded.`,
     garmentLock(garment),
     `SCENE: ${CENA[colecao] ?? CENA.RELIQUIA}.`,
-    `MEASURABLE FRAMING (required): the whole garment is in frame from the top of the shoulders down to the hem, the hem is clearly visible and separated from the background, and either the shoulder line or the base of the collar is readable. The back must face the camera squarely enough that both side seams are visible.`,
+    `MEASURABLE FRAMING (required): the whole garment is in frame from the top of the shoulders down to the hem, the hem is clearly visible and separated from the background, and either the shoulder line or the base of the collar is readable. The ${lado} must face the camera squarely enough that both side seams are visible.`,
+    // Na frente o rosto rouba a atencao do modelo e a pose tende a fechar os
+    // bracos sobre o peito, que e exatamente a area da estampa.
+    frente ? "The arms hang naturally at the sides or rest low; they must NOT cross, fold over the chest, or cover any part of the torso, because that is where the artwork goes." : "",
     `Photographic quality: natural skin, real fabric drape and folds, no mannequin, no duplicate person, no added text, no watermark. Hands, when visible, have five separate fingers.`,
     extra ?? "",
     `BEFORE YOU FINISH, verify: (1) Is the back of the garment completely free of any print or lettering? (2) Are the hem and a readable top edge inside the frame? If either answer is no, fix it.`,
@@ -302,7 +310,11 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   if (cmd === "blank") {
     const produto = arg("--produto");
     const comp = JSON.parse(execFileSync("node", [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto], { encoding: "utf8" }))[0];
-    const prompt = promptBlank({ garment: arg("--peca", comp.garment), color: arg("--cor", "black"), colecao: arg("--colecao", "RELIQUIA"), extra: arg("--extra", "") });
+    const prompt = promptBlank({
+      garment: arg("--peca", comp.garment), color: arg("--cor", "black"),
+      colecao: arg("--colecao", "RELIQUIA"), extra: arg("--extra", ""),
+      vista: arg("--vista", "costas"),
+    });
     const out = arg("--out", `/tmp/${produto}-blank.png`);
     fs.writeFileSync(out.replace(/\.png$/, ".prompt.txt"), `${prompt}\n`);
     const r = await gerar({ prompt, refs: [arg("--cena")].filter(Boolean), out, modelo: arg("--modelo", "gemini-3-pro-image") });
