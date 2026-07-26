@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // Deriva a trava de composicao do prompt a partir das dimensoes OFICIAIS em cm
 // e da tabela de medidas da YouDraw. Substitui a estimativa visual que
 // alimentava `compositionLock()` em generate-lifestyle-v3.mjs.
@@ -187,4 +188,4 @@ function main() {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) main();
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) main();

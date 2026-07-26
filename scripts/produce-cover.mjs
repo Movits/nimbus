@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // PRODUCAO DE CAPA CORRIGIDA, EM DUAS ETAPAS SEPARADAS.
 //
 // Este script substitui o caminho "peca a IA que desenhe a estampa do tamanho
@@ -39,7 +40,7 @@ const arg = (n, d = null) => {
   return i > -1 ? process.argv[i + 1] : d;
 };
 
-const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
+const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 /* ------------------------------------------------------------------ */
 /* ETAPA 1 — peca em branco                                            */
@@ -258,7 +259,7 @@ export async function compor({ foto, arte, artCm, peca, gola, barra, centro, out
 
 /* ------------------------------------------------------------------ */
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const cmd = process.argv[2];
 
   if (cmd === "blank") {

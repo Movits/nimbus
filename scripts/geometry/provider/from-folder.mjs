@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // Adaptador: le um catalogo de uma PASTA local.
 //
 // E o caminho padrao numa migracao de fornecedor. Nenhum POD publica tudo que o
@@ -75,7 +76,7 @@ export async function readFolder(raiz, { provider = "pasta" } = {}) {
   return { provider, fetchedAt: new Date().toISOString(), products };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const raiz = process.argv[2];
   if (!raiz) {
     console.error("uso: node scripts/geometry/provider/from-folder.mjs <pasta> [--out catalogo.json]");

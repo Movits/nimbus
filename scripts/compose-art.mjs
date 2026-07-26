@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // COMPOSICAO DETERMINISTICA: aplica a arte oficial sobre uma foto ja gerada,
 // no tamanho e na posicao calculados dos cm oficiais.
 //
@@ -91,7 +92,7 @@ export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm,
   };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const foto = arg("--foto");
   const [w, h] = arg("--arte-cm").split("x").map(Number);
   const meta = await sharp(foto).metadata();

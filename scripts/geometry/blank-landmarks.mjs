@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // LANDMARKS DA PECA EM BRANCO, DETECTADOS.
 //
 // Por que este modulo existe, e por que ele e o item mais importante do
@@ -290,7 +291,7 @@ export async function detectar(src, opts = {}) {
   };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const arg = (n, d = null) => { const i = process.argv.indexOf(n); return i > -1 ? process.argv[i + 1] : d; };
   const r = await detectar(arg("--foto"), {
     capuz: process.argv.includes("--capuz"),

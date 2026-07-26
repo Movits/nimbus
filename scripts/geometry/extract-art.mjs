@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // EXTRACAO DA ARTE COM AUTO-VALIDACAO.
 //
 // Nasceu de um erro do piloto de 25/07 e existe para que ele nao se repita.
@@ -150,7 +151,7 @@ export async function extrairArte(foto, artCm, opts = {}) {
   return { ok: true, ...melhor };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const foto = process.argv[2];
   const [w, h] = process.argv[3].split("x").map(Number);
   const r = await extrairArte(foto, { w, h });

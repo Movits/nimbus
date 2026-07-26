@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // Prepara uma foto para anotacao de landmarks por um agente com visao.
 //
 // Gera uma folha com grade fina em coordenadas da IMAGEM ORIGINAL (linhas a
@@ -95,7 +96,7 @@ export async function makeAnnotationSheet(input, output, window = [0, 1, 0, 1], 
   return { output, originalSize: { w: meta.width, h: meta.height }, window };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const info = await makeAnnotationSheet(input, output, [x0, x1, y0, y1], width);
   console.log(JSON.stringify(info));
 }

@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // Medicao do piloto: registro da arte + regua vertical da peca.
 //
 // O que muda em relacao ao caminho antigo: a caixa da arte NAO e anotada, e
@@ -63,7 +64,7 @@ export async function medir({ foto, arte, golaFrac, barraFrac, arteH_cm, peca })
   };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const r = await medir({
     foto: arg("--foto"),
     arte: arg("--arte"),

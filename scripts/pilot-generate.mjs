@@ -1,3 +1,4 @@
+import { pathToFileURL, fileURLToPath } from "node:url";
 // Piloto de geracao pela API do Google AI Studio, UM PRODUTO POR VEZ.
 //
 // Diferenca para os geradores v1-v4: a trava de composicao nao e estimada, ela
@@ -100,7 +101,7 @@ export async function gerar({ prompt, refs, out }) {
   return { out, finishReason: cand.finishReason };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const produto = arg("--produto");
   const tentativa = arg("--tentativa", "1");
   const cena = arg("--cena");
