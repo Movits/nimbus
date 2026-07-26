@@ -24,22 +24,22 @@ const cru = (p) => sharp(p).removeAlpha().raw().toBuffer({ resolveWithObject: tr
 /** Maior componente conexa da mascara, para descartar respingo de ruido. */
 function maiorComponente(m, W, H) {
   const visto = new Uint8Array(W * H);
-  let melhor = null;
   const fila = new Int32Array(W * H);
+  let melhor = null;
   for (let s = 0; s < W * H; s += 1) {
     if (!m[s] || visto[s]) continue;
     let ini = 0, fim = 0;
-    fila[fim += 1] = s; visto[s] = 1;
+    fila[fim] = s; fim += 1; visto[s] = 1;
     const membros = [];
     while (ini < fim) {
-      const p = fila[ini += 1 - 1]; ini += 1;
+      const p = fila[ini]; ini += 1;
       membros.push(p);
       const x = p % W, y = (p / W) | 0;
       for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
         const nx = x + dx, ny = y + dy;
         if (nx < 0 || ny < 0 || nx >= W || ny >= H) continue;
         const q = ny * W + nx;
-        if (m[q] && !visto[q]) { visto[q] = 1; fila[fim += 1] = q; }
+        if (m[q] && !visto[q]) { visto[q] = 1; fila[fim] = q; fim += 1; }
       }
     }
     if (!melhor || membros.length > melhor.length) melhor = membros;
@@ -69,12 +69,17 @@ export async function transplantarCor({ base, doador, out, limiar = 26, feather 
   const mascara = Buffer.alloc(W * H);
   for (const p of comp) mascara[p] = 255;
 
-  const suave = await sharp(mascara, { raw: { width: W, height: H, channels: 1 } })
-    .blur(Math.max(0.3, feather)).raw().toBuffer();
+  // CUIDADO: sharp promove um raw de 1 canal para sRGB, e `.raw().toBuffer()`
+  // devolve 3 canais. Indexar por `suave[p]` lia o byte errado e o resultado
+  // saia IDENTICO a base — o transplante nao acontecia. Ler o stride real.
+  const bl = await sharp(mascara, { raw: { width: W, height: H, channels: 1 } })
+    .blur(Math.max(0.3, feather)).raw().toBuffer({ resolveWithObject: true });
+  const passo = bl.info.channels;
+  const suave = bl.data;
 
   const saida = Buffer.from(a.data);
   for (let p = 0; p < W * H; p += 1) {
-    const w = suave[p] / 255;
+    const w = suave[p * passo] / 255;
     if (w <= 0.002) continue;
     const i = p * 3;
     for (let c = 0; c < 3; c += 1) saida[i + c] = Math.round(a.data[i + c] * (1 - w) + b.data[i + c] * w);

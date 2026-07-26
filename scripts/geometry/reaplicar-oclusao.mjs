@@ -51,12 +51,20 @@ export async function reaplicarOclusao({ blank, semCapuzAntigo, finalAntigo, sem
   if (n < 50) throw new Error(`mascara de capuz vazia (${n} px): o par antigo nao parece ter oclusao`);
 
   // Suavizar a borda: sem isso a costura fica em degrau de 1 px.
-  const suave = await sharp(mascara, { raw: { width: W, height: H, channels: 1 } })
-    .blur(Math.max(0.4, feather)).raw().toBuffer();
+  //
+  // CUIDADO: sharp promove um raw de 1 canal para sRGB, e `.raw().toBuffer()`
+  // devolve 3 CANAIS. Indexar por `suave[p]` le o byte errado — na pratica uma
+  // versao esticada da mascara, comprimida no terco de cima da imagem. Como o
+  // capuz FICA no terco de cima, o resultado parecia certo no olho e estava
+  // errado no pixel. Ler o stride real.
+  const bl = await sharp(mascara, { raw: { width: W, height: H, channels: 1 } })
+    .blur(Math.max(0.4, feather)).raw().toBuffer({ resolveWithObject: true });
+  const passo = bl.info.channels;
+  const suave = bl.data;
 
   const saida = Buffer.from(sn.data);
   for (let p = 0; p < W * H; p += 1) {
-    const a = suave[p] / 255;
+    const a = suave[p * passo] / 255;
     if (a <= 0.002) continue;
     const i = p * 3;
     for (let c = 0; c < 3; c += 1) saida[i + c] = Math.round(sn.data[i + c] * (1 - a) + b.data[i + c] * a);
