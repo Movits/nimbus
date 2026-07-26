@@ -11,7 +11,18 @@ import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
 
-const D = "/tmp/claude-0/-home-user/403e6581-1ba0-5fde-837a-d6491427c02a/scratchpad/annot";
+// O diretorio precisa conter os .json de anotacao E as fotos que eles citam.
+// As anotacoes das 41 fotos publicadas estao versionadas em
+// nuvemshop/auditoria/2026-07-25-geometria/anotacoes/, mas as fotos nao; monte
+// o diretorio de teste copiando as fotos para junto das anotacoes.
+const D = process.env.ANNOT_DIR || process.argv[2];
+if (!D || !fs.existsSync(D)) {
+  console.error(
+    "uso: node scripts/geometry/validate-blank-landmarks.mjs <dir-anotacoes-e-fotos>\n" +
+    "(ou defina ANNOT_DIR). O caminho antigo era o scratchpad efemero da sessao na nuvem.",
+  );
+  process.exit(2);
+}
 
 /** Perfil de cor media por linha, numa faixa central. */
 async function perfilCentral(src, faixa = [0.44, 0.56]) {
@@ -77,6 +88,11 @@ for (const f of fs.readdirSync(D)) {
   });
 }
 
+if (linhas.length === 0) {
+  console.error(`nenhuma anotacao com foto correspondente encontrada em ${D}`);
+  process.exit(2);
+}
+
 const erroHem = linhas.map((l) => l.hem_auto - l.hem_anot);
 const erroGola = linhas.filter((l) => l.gola_anot != null).map((l) => l.gola_auto - l.gola_anot);
 const med = (a) => a.reduce((x, y) => x + y, 0) / a.length;
@@ -91,4 +107,4 @@ console.log("\npiores casos de barra:");
 linhas.map((l) => ({ ...l, e: Math.abs(l.hem_auto - l.hem_anot) })).sort((a, b) => b.e - a.e).slice(0, 8)
   .forEach((l) => console.log(`  ${l.foto.padEnd(34)} anot ${String(l.hem_anot).padStart(6)} auto ${String(l.hem_auto).padStart(6)} erro ${l.e.toFixed(1)} pp (sigma ${l.hem_sigma}, ${l.hem_status})`));
 
-fs.writeFileSync("/tmp/prod/hem-test.json", `${JSON.stringify(linhas, null, 1)}\n`);
+fs.writeFileSync(path.join(D, "hem-test.json"), `${JSON.stringify(linhas, null, 1)}\n`);

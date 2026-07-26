@@ -79,7 +79,7 @@ foto. Não é comparação com um alvo escolhido, e nenhum "e se o modelo veste 
 alvo** é o desvio contra o tamanho G, que é a convenção adotada para foto lifestyle; ali o argumento
 depende da convenção.
 
-Os seis desvios são **todos negativos**. Isso é o oposto do que as duas auditorias invalidadas
+Doze dos treze desvios são **negativos** (a única exceção é a São Jorge Neobarroco Premium branca, +9,2%). Isso é o oposto do que as duas auditorias invalidadas
 diziam, e a explicação é conhecida: elas comparavam a largura entre o mockup plano e a foto vestida,
 e peça vestida sempre parece mais estreita porque o tecido enrola no dorso. Isso fabricava
 "estampa grande" de forma sistemática.

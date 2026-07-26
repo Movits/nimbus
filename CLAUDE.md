@@ -338,8 +338,9 @@ dimensoes em cm da YouDraw.
 
   ATENCAO: ate 25/07 esses mesmos prompts mandavam, na duvida, renderizar a
   estampa MENOR, e tratavam o mockup plano como autoridade de escala relativa.
-  A medicao geometrica validada mostrou que as seis pecas da fila de correcao
-  tem desvio NEGATIVO — estampa pequena demais. Ou seja a trava empurrava na
+  A medicao geometrica validada mostrou que 12 das 13 fotos da fila de
+  correcao tem desvio NEGATIVO — estampa pequena demais (a unica positiva e
+  +9,2% na Sao Jorge Neobarroco Premium branca `[352718999]`). Ou seja a trava empurrava na
   direcao do defeito real e e provavel causa dele. A tolerancia e SIMETRICA:
   ficar abaixo da faixa e defeito igual a passar dela. Nao copie prompt de
   geracao de commit anterior a 25/07 sem conferir esse ponto.
@@ -441,10 +442,13 @@ Arquivos relevantes:
 2. FEITO em 25/07: medidor geometrico escrito, VALIDADO contra verdade
    conhecida e aplicado a 41 fotos de 31 produtos. Fila de correcao real em
    `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.
-3. PROXIMO: corrigir a fila de 6 pecas, UM PRODUTO POR VEZ, pela API do
-   Google AI Studio, com a trava de composicao vinda de
-   `scripts/derive-composicao.mjs`. Faltam ainda 18 paginas sem copia local
-   da foto publicada e segunda anotacao nos 11 casos de gola encoberta.
+3. PROXIMO: corrigir a fila de 13 fotos (11 produtos), UM PRODUTO POR VEZ,
+   pela API do Google AI Studio, com a trava de composicao vinda de
+   `scripts/derive-composicao.mjs`. A pendencia de "18 paginas sem copia
+   local" era do ambiente na nuvem: nesta maquina o espelho completo das 49
+   galerias (23/07) esta em `nuvemshop/auditoria/2026-07-21/implementacao/
+   auditoria-imagens-2026-07-22/live/`. Falta ainda a segunda anotacao nos
+   11 casos de gola encoberta.
 4. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 5. Completar material, modelagem, tabela de medidas, prazo POD, politica e
    impacto social nas paginas de produto.
