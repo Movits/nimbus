@@ -1,5 +1,5 @@
 import { pathToFileURL } from "node:url";
-// GATE NUMERICO DE CAPA COMPOSTA — consolida em um comando os checks que os
+// GATE NUMERICO DE CAPA COMPOSTA � consolida em um comando os checks que os
 // 11 paineis de verificacao de 26/07 produziram, um a um, cada um a partir de
 // um defeito real:
 //
@@ -98,7 +98,7 @@ function hf(img, mask) {
   return n ? s / n : 0;
 }
 
-export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw = 0 }) {
+export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw = 0, arco = null, placementCm = null }) {
   const bl = await raw(blank);
   const co = await raw(composta);
   const { width: W, height: H } = co;
@@ -201,25 +201,44 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     razao_medida: +razaoMedida.toFixed(4),
     razao_plana: +razaoPlana.toFixed(4),
     compressao_pct: +compressao.toFixed(2),
-    // INFORMATIVO com yaw: em pose 3/4 a compressao legitima sobe muito
-    // (Wildstyle com yaw 20 mede 15% e foi APROVADO contra a assinatura da
-    // cena). Sem yaw declarado, so alerta acima de 8%.
+    // O esperado NAO e um numero fixo: sai da geometria. Enrolando a arte num
+    // cilindro, a largura projeta por kappa = sin(t)/t, com t = meio-arco em
+    // radianos (o `arco_meio_rad` que o compor imprime). Uma estampa larga de
+    // costas (35 cm num painel de 54) chega a 11% SO de fisica � o limiar
+    // fixo de 8% acusava isso como defeito no Sao Miguel Celeste.
+    esperado_pct: arco ? +(100 * (1 - Math.sin(arco) / arco)).toFixed(2) : null,
     ok: null,
-    alerta: compressao > (yaw ? 8 + Math.abs(yaw) * 0.5 : 8) || compressao < -2,
-    nota: "sem yaw: 3-6% e o normal. Com pose 3/4, comparar com a assinatura da capa publicada (razao DR/DL), nao com este numero",
+    alerta: arco
+      ? Math.abs(compressao - 100 * (1 - Math.sin(arco) / arco)) > 4 + Math.abs(yaw) * 0.5
+      : (compressao > (yaw ? 8 + Math.abs(yaw) * 0.5 : 8) || compressao < -2),
+    nota: arco
+      ? "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+      : "passe --arco <arco_meio_rad do compor> para o esperado sair da geometria em vez de limiar fixo",
   };
 
   // ---- centro vs eixo da peca (silhueta do blank na altura da arte) ----
+  // Classifica tecido pela COR amostrada do proprio tecido (RGB), nao por
+  // luminancia contra um fundo suposto: contra ceu claro (colecao NUVEM) o
+  // criterio antigo engolia o fundo e devolvia eixo em 17% (lixo).
+  const amCor = [];
+  for (let y = Math.max(0, mom.y0 - 40); y < mom.y0 - 5; y += 2) {
+    for (let x = Math.round(0.45 * W); x < Math.round(0.55 * W); x += 2) {
+      const o = (y * W + x) * 3;
+      amCor.push([bl.data[o], bl.data[o + 1], bl.data[o + 2]]);
+    }
+  }
+  amCor.sort((a, b) => (0.299 * a[0] + 0.587 * a[1] + 0.114 * a[2]) - (0.299 * b[0] + 0.587 * b[1] + 0.114 * b[2]));
+  const cT = amCor.length ? amCor[Math.floor(amCor.length / 2)] : [lumTecido, lumTecido, lumTecido];
+  const TOL = lumTecido < 90 ? 42 : 52;
   const yMeio = Math.round((mom.y0 + mom.y1) / 2);
-  const escuro = lumTecido < 110;
-  let bx0 = -1, bx1 = -1, run = 0, bestRun = 0;
+  let bx0 = -1, bx1 = -1, run = 0, bestRun = 0, rs = 0;
   for (let x = 0; x < W; x += 1) {
     const o = (yMeio * W + x) * 3;
-    const lum = 0.299 * bl.data[o] + 0.587 * bl.data[o + 1] + 0.114 * bl.data[o + 2];
-    const dentro = escuro ? lum < 90 : Math.abs(lum - lumTecido) < 42;
-    if (dentro) { if (run === 0) var rs = x; run += 1; if (run > bestRun) { bestRun = run; bx0 = rs; bx1 = x; } }
+    const dentro = Math.abs(bl.data[o] - cT[0]) < TOL && Math.abs(bl.data[o + 1] - cT[1]) < TOL && Math.abs(bl.data[o + 2] - cT[2]) < TOL;
+    if (dentro) { if (run === 0) rs = x; run += 1; if (run > bestRun) { bestRun = run; bx0 = rs; bx1 = x; } }
     else run = 0;
   }
+  if (bestRun > 0.9 * W) { bx0 = -1; bx1 = -1; } // fundo parecido com o tecido: nao decide
   const eixo = bx1 > 0 ? (bx0 + bx1) / 2 : null;
   // INFORMATIVO: a "silhueta" na altura da arte inclui MANGAS no moletom, o
   // que puxa o eixo (deu 6 pp num aprovado). Centro so decide contra a
@@ -232,6 +251,28 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     alerta: Math.abs(100 * (mom.cx - eixo) / W) > 7,
     nota: "silhueta inclui mangas; use a capa publicada como referencia de eixo",
   } : { ok: null, motivo: "silhueta nao isolavel" };
+
+  // ---- POSICAO VERTICAL (gola -> topo da arte) ----
+  // Este check nasceu de um furo do proprio gate: ele media tamanho, forma,
+  // textura e vazamento, mas NUNCA verificava a que altura a arte caiu. Por
+  // isso 11 capas foram aprovadas com o placement de 8 cm que a medicao nos
+  // mockups oficiais mostrou estar errado para quase todo o catalogo.
+  checks.posicao = placementCm != null && L ? (() => {
+    const cmPorPxLocal = L / pecaPx;
+    const esperadoPx = gola * H + (placementCm / cmPorPxLocal);
+    const erroCm = (mom.y0 - esperadoPx) * cmPorPxLocal;
+    return {
+      topo_medido_pct: +((100 * mom.y0) / H).toFixed(2),
+      topo_esperado_pct: +((100 * esperadoPx) / H).toFixed(2),
+      placement_oficial_cm: placementCm,
+      erro_cm: +erroCm.toFixed(2),
+      ok: Math.abs(erroCm) <= 1.5,
+      nota: "placement medido no mockup oficial; +- 1,5 cm",
+    };
+  })() : {
+    ok: null,
+    nota: "sem placement oficial: passe --placement <cm> (placement-oficial.json). Sem ele a composicao usa os 8 cm historicos, que sao suposicao.",
+  };
 
   // ---- confinamento: diff forte fora da caixa da arte ----
   // O supersampling reamostra a imagem INTEIRA, entao toda borda de alto
@@ -327,6 +368,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     blank: arg("--blank"), composta: arg("--composta"), arte: arg("--arte"),
     arteCm: { w, h }, peca: arg("--peca"),
     gola: Number(arg("--gola")), barra: Number(arg("--barra")),
+    yaw: Number(arg("--yaw", "0")), arco: arg("--arco") ? Number(arg("--arco")) : null, placementCm: arg("--placement") ? Number(arg("--placement")) : null,
   });
   const txt = JSON.stringify(r, null, 2);
   if (arg("--json")) fs.writeFileSync(arg("--json"), `${txt}\n`);

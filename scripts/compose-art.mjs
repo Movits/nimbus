@@ -53,7 +53,7 @@ export async function chaveiaPorLuminancia(src, { piso = 45, teto = 150 } = {}) 
  * `sup`% abaixo da gola. Aqui isso vira pixels na imagem, e dai sai a distancia
  * focal que a malha precisa.
  */
-export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca, torsoFrac = null, yawDeg = 0 }) {
+export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca, torsoFrac = null, yawDeg = 0, placementCm = null }) {
   const spec = getGarmentSpec(peca);
   if (!spec.hasTable) throw new Error(`sem tabela de medidas para "${peca}"`);
   const L = spec.sizes.find((s) => s.size === CANONICAL_SIZE).length_cm;
@@ -66,7 +66,18 @@ export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm,
   const pecaPx = barraPx - golaPx;
   const pxPorCm = pecaPx / L;
 
-  const collarToTop_cm = 8; // suposicao declarada: a YouDraw nao publica placement
+  // PLACEMENT (gola -> topo da arte). Ate 26/07 isto era 8 cm FIXO para todo o
+  // catalogo, declarado no proprio codigo como suposicao. A medicao nos
+  // mockups oficiais mostrou que o valor real varia de 3,5 a 15,3 cm — fator
+  // 4,3x — entre pecas da mesma arte E entre artes da mesma peca. Nenhum
+  // numero unico serve, entao ele passa a vir por produto.
+  //
+  // A regua que produz esse numero usa a PROPRIA ARTE dentro do mockup
+  // (distancia gola->topo medida em alturas-de-arte, x os cm oficiais da
+  // arte). Assim ela nao depende da escala do template — que no Oversized
+  // desenha a peca ~11% mais longa que a real — nem da tabela de medidas, o
+  // que de quebra resolve o Blusao, que nao tem tabela publicada.
+  const collarToTop_cm = placementCm ?? 8;
   const alturaAlvoPx = artH_cm * pxPorCm;
   const topoAlvoPx = golaPx + collarToTop_cm * pxPorCm;
   const centroArtePx = topoAlvoPx + alturaAlvoPx / 2;
