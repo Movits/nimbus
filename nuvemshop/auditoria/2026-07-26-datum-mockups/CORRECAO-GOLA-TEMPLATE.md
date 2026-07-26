@@ -65,12 +65,30 @@ Moletom Canguru, mas erra +11% no Oversized. Os 78,5 cm podem carregar erro de
 escala do template, e as capas de Blusão devem ser marcadas como baseadas em
 suposição até a YouDraw confirmar.
 
-## Pendência aberta
+## Quanto cada erro vale em centímetros
 
-**352722232** (Sagrado Coração Spray | Camiseta Premium) continua com
-comprimento implicado de 79,3 cm contra 75,5 tabelados (+5%) mesmo após a
-correção da gola. O desvio restante está na leitura da **tinta**, não da gola.
-Remedir antes de produzir essa capa.
+O teste de comprimento implicado é sensível, mas responde a dois erros
+diferentes com gravidades muito distintas:
+
+| erro | efeito no placement |
+|---|---|
+| gola errada em X pontos percentuais | X × (cm/ponto) ≈ **1 cm por ponto** — 1:1, grave |
+| vão da tinta errado em X% | X% *do próprio placement* — 5% sobre 9 cm = 0,45 cm |
+
+Ou seja, um resíduo de 3,5% no comprimento implicado pode significar 2,6 cm de
+erro (se veio da gola) ou 0,3 cm (se veio da tinta). O teste sozinho não
+distingue os dois: foi a evidência da **silhueta** que provou que a gola é
+constante do template. Com a gola presa a essa constante, todo resíduo restante
+é da tinta, e portanto imaterial.
+
+## Falso alarme já descartado
+
+**352722232** (Sagrado Coração Spray | Camiseta Premium) ficou com comprimento
+implicado de 79,3 cm contra 75,5 tabelados (+5%) mesmo após a correção. Isso
+**não o bloqueia**: 5% sobre um placement de 9,04 cm dá 0,43 cm, dentro da
+tolerância de 1,5 cm do gate. A altura oficial da arte (24,9 × 40,0 cm) foi
+conferida no CSV da auditoria de 22/07 e está certa. O pior caso do catálogo
+seria 5% sobre o maior placement (21 cm), ainda assim 1,05 cm.
 
 ## O que mudou no processo
 

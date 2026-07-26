@@ -871,7 +871,8 @@
   },
   "validacao": "comprimento implicado pela regua-pela-arte contra a tabela publicada: Camiseta Premium 74,3 vs 75,5 (-1,6%); Moletom Canguru 64,8 vs 65 (-0,3%); Camiseta Oversized 91,0 vs 82 (+11%, template fora de escala, mas a regua-pela-arte e imune a escala porque tinta e peca esticam juntas); Blusao Moletom 78,5 (sem tabela publicada).",
   "itens_alterados": 46,
-  "atencao": "352722232 continua com comprimento implicado 79,3 cm (+5% sobre 75,5): a leitura da TINTA desse produto esta suspeita, nao so a gola. Remedir antes de produzir."
+  "atencao": "RESOLVIDO. O 352722232 tem comprimento implicado de 79,3 cm contra 75,5 (+5%), mas isso NAO o bloqueia: com a gola presa a constante do template, o residuo so pode vir do vao da tinta, e erro de vao entra no placement de forma PROPORCIONAL, nao 1:1. Cinco por cento sobre placement de 9,04 cm da 0,43 cm, dentro da tolerancia de 1,5 cm do gate. A altura oficial (40,0 cm) foi conferida no CSV da auditoria de 22/07.",
+  "sensibilidade": "Gola errada em X pontos percentuais desloca o placement em X x (cm/ponto), ~1 cm por ponto: grave. Vao da tinta errado em X% desloca o placement em X% DO PROPRIO PLACEMENT: 5% sobre 9 cm = 0,45 cm, 5% sobre o maior placement do catalogo (21 cm) = 1,05 cm, ainda dentro da tolerancia. Por isso o teste de comprimento implicado sozinho nao distingue um erro grave de um irrelevante: foi a evidencia da SILHUETA que provou que a gola e constante."
  },
  "blusao_moletom_comprimento_g_cm": {
   "valor": 78.5,
