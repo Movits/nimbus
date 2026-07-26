@@ -32,7 +32,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 import sharp from "sharp";
-import { compositeArt, artMesh } from "./geometry/render.mjs";
+import { compositeArt, artMesh, projectedArtBox, renderArtLayer } from "./geometry/render.mjs";
+import { aplicarNoTecido, camadaVazia, ocluirCamada } from "./geometry/aplicar-no-tecido.mjs";
 import { planejar } from "./compose-art.mjs";
 
 const arg = (n, d = null) => {
@@ -41,6 +42,28 @@ const arg = (n, d = null) => {
 };
 
 const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+
+/**
+ * Poligono de oclusao vindo da linha de comando: "x1,y1 x2,y2 ..." em FRACAO
+ * da imagem.
+ *
+ * Ate 26/07 a flag `--oclusao` era lida SO para escrever na receita e nunca
+ * chegava a `compor()`. O efeito e pior que ignorar: a capa saia com a arte
+ * desenhada POR CIMA do capuz, e a receita ao lado dela afirmava que a oclusao
+ * tinha sido aplicada. Quem conferisse pela receita nao encontrava o defeito.
+ */
+export function parsePoligono(s) {
+  if (!s) return null;
+  const pts = s.trim().split(/\s+/).map((par) => {
+    const [x, y] = par.split(",").map(Number);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) {
+      throw new Error(`ponto invalido em --oclusao: "${par}" (esperado x,y em fracao 0..1)`);
+    }
+    return [x, y];
+  });
+  if (pts.length < 3) throw new Error(`--oclusao precisa de 3+ pontos, recebeu ${pts.length}`);
+  return pts;
+}
 
 /* ------------------------------------------------------------------ */
 /* ETAPA 1 — peca em branco                                            */
@@ -271,7 +294,7 @@ function placaDeSombra(bg) {
   return suave;
 }
 
-export async function compor({ foto, arte, artCm, peca, gola, barra, centro, torso = null, yaw = 0, placement = null, out, opacidade = 0.93, sombraMin = 0.75, sombraMax = 1.25 }) {
+export async function compor({ foto, arte, artCm, peca, gola, barra, centro, torso = null, yaw = 0, placement = null, out, opacidade = 0.93, sombraMin = 0.6, sombraMax = 1.35, relevo = 3, sombraTecido = 0.9, oclusao = null }) {
   const meta = await sharp(foto).metadata();
   const plano = planejar({
     golaFrac: gola, barraFrac: barra, centroFrac: centro, torsoFrac: torso, yawDeg: yaw,
@@ -283,16 +306,57 @@ export async function compor({ foto, arte, artCm, peca, gola, barra, centro, tor
   const bg = { data: base.data, width: base.info.width, height: base.info.height, channels: 3 };
 
   const plate = placaDeSombra(bg);
+
+  // REFERENCIA DE SOMBRA: mediana do tecido DENTRO DA CAIXA DA ARTE.
+  //
+  // Antes era uma janela FIXA da imagem (42-64% de altura, 42-66% de largura),
+  // que so por coincidencia coincide com onde a arte cai. Quando o tecido sob
+  // a estampa e mais escuro ou mais claro que essa janela, `k = lumBg/ref` sai
+  // enviesado no bloco inteiro e aparece a faixa fantasma.
+  //
+  // Foi essa faixa que me levou a apertar o clamp para 0,9-1,12 — tratando o
+  // sintoma. O clamp apertado limita a modulacao a +-12% e ACHATA a arte sobre
+  // o pano: medida a correlacao entre a sombra do tecido e a da tinta, as
+  // capas com clamp apertado deram -0,79 a 0,25 e as com clamp folgado deram
+  // 0,85 a 0,92. Sessenta e quatro das 77 capas sairam com cara de PNG colado
+  // por causa disso.
+  //
+  // Amostrando dentro da propria caixa, `k` fica centrado em 1 por construcao,
+  // a faixa some pela raiz e o clamp volta a ser so uma trava de seguranca.
+  const caixa = projectedArtBox(plano.params);
   const amostra = [];
-  for (let y = Math.round(0.42 * bg.height); y < Math.round(0.64 * bg.height); y += 3)
-    for (let x = Math.round(0.42 * bg.width); x < Math.round(0.66 * bg.width); x += 3) {
-      const o = (y * bg.width + x) * 3;
-      amostra.push(0.299 * bg.data[o] + 0.587 * bg.data[o + 1] + 0.114 * bg.data[o + 2]);
-    }
+  if (caixa) {
+    const x0 = Math.max(0, Math.floor(caixa.x0)), x1 = Math.min(bg.width - 1, Math.ceil(caixa.x1));
+    const y0 = Math.max(0, Math.floor(caixa.y0)), y1 = Math.min(bg.height - 1, Math.ceil(caixa.y1));
+    for (let y = y0; y <= y1; y += 2) for (let x = x0; x <= x1; x += 2) amostra.push(plate[y * bg.width + x]);
+  }
+  if (amostra.length < 200) {
+    // sem caixa utilizavel, cai na janela antiga em vez de falhar
+    for (let y = Math.round(0.42 * bg.height); y < Math.round(0.64 * bg.height); y += 3)
+      for (let x = Math.round(0.42 * bg.width); x < Math.round(0.66 * bg.width); x += 3) {
+        amostra.push(plate[y * bg.width + x]);
+      }
+  }
   amostra.sort((a, b) => a - b);
   const ref = Math.max(8, amostra[Math.floor(amostra.length / 2)]);
 
-  compositeArt(bg, tex, plano.params, opacidade, { plate, ref, min: sombraMin, max: sombraMax });
+  // CAMINHO NOVO: a arte vai para uma CAMADA propria e so depois e aplicada no
+  // tecido, deslocada pelas dobras e sombreada pelo vinco. O caminho antigo
+  // (`compositeArt`, cilindro liso + multiplicador) produzia um retangulo de
+  // bordas retas sobre um pano amassado — as 77 capas de 26/07 sairam com cara
+  // de PNG colado e o dono reprovou o lote inteiro por isso.
+  // `--sem-relevo` volta ao caminho antigo, so para comparacao.
+  if (relevo > 0) {
+    const layer = camadaVazia(bg.width, bg.height);
+    renderArtLayer(layer, tex, plano.params);
+    // OCLUSAO ANTES de aplicar: o capuz do moletom cai sobre as costas e cobre
+    // o topo da estampa. Isso e o produto REAL — desenhar a arte por cima do
+    // capuz fica visivelmente falso, e foi o que o dono reprovou no piloto.
+    if (oclusao) ocluirCamada(layer, oclusao);
+    aplicarNoTecido(bg, layer, { relevo, sombra: sombraTecido, opacidade, min: sombraMin, max: sombraMax });
+  } else {
+    compositeArt(bg, tex, plano.params, opacidade, { plate, ref, min: sombraMin, max: sombraMax });
+  }
   await sharp(bg.data, { raw: { width: bg.width, height: bg.height, channels: 3 } }).png().toFile(out);
 
   const { cols, rows, pts } = artMesh(plano.params);
@@ -400,6 +464,25 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     // arte de meio-tom; o supersampling da a media que a bilinear nao faz.
     // `--ss 1` desliga (util para depurar).
     const ss = Math.max(1, Number(arg("--ss", "2")));
+    // Um so lugar para cada default, porque a receita e o compositor liam
+    // numeros DIFERENTES: a receita gravava sombra_min 0.75 / sombra_max 1.25 /
+    // relevo 3 / sombra_tecido 0.9 enquanto `compor` usava 0.6 / 1.35 / 2.2 /
+    // 0.55. Toda capa composta sem passar as flags ficou com receita mentindo
+    // sobre os proprios parametros, e recompor pela receita nao reproduzia a
+    // imagem.
+    const cfg = {
+      opacidade: Number(arg("--opacidade", "0.93")),
+      sombraMin: Number(arg("--sombra-min", "0.6")),
+      sombraMax: Number(arg("--sombra-max", "1.35")),
+      relevo: process.argv.includes("--sem-relevo") ? 0 : Number(arg("--relevo", "2.2")),
+      sombraTecido: Number(arg("--sombra-tecido", "0.55")),
+      oclusao: parsePoligono(arg("--oclusao")),
+    };
+    if (cfg.oclusao && cfg.relevo <= 0) {
+      // O caminho antigo (`compositeArt`) nao tem camada separada, entao nao ha
+      // onde ocluir. Falhar alto: silenciar aqui recria a mentira da receita.
+      throw new Error("--oclusao exige o compositor de relevo; remova --sem-relevo / --relevo 0");
+    }
     const fotoOrig = arg("--foto");
     const outFinal = arg("--out");
     let foto = fotoOrig;
@@ -425,12 +508,14 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
       // (placement-oficial.json). Sem isso cai nos 8 cm historicos, que a
       // medicao de 26/07 mostrou serem errados para quase todo o catalogo.
       placement: arg("--placement") ? Number(arg("--placement")) : null,
-      out, opacidade: Number(arg("--opacidade", "0.93")),
+      out,
       // Em tecido escuro a placa de sombra fica ruidosa (variacoes minusculas
       // de luminancia viram razoes grandes) e pode pintar faixa fantasma na
       // tinta clara — medido no painel do 352725749 v6. Aperte o clamp quando
       // a peca for escura: --sombra-min 0.9 --sombra-max 1.12.
-      sombraMin: Number(arg("--sombra-min", "0.75")), sombraMax: Number(arg("--sombra-max", "1.25")),
+      // `relevo` 0 volta ao compositor antigo (cilindro liso), so para
+      // comparacao. `oclusao` e o poligono do capuz.
+      ...cfg,
     });
     if (ss > 1) {
       await sharp(out)
@@ -453,8 +538,12 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
       torso: arg("--torso") ? Number(arg("--torso")) : null,
       yaw: Number(arg("--yaw", "0")),
       placement: arg("--placement") ? Number(arg("--placement")) : null,
-      opacidade: Number(arg("--opacidade", "0.93")),
-      sombra_min: Number(arg("--sombra-min", "0.75")), sombra_max: Number(arg("--sombra-max", "1.25")),
+      opacidade: cfg.opacidade,
+      sombra_min: cfg.sombraMin, sombra_max: cfg.sombraMax,
+      relevo: cfg.relevo,
+      sombra_tecido: cfg.sombraTecido,
+      oclusao: arg("--oclusao") ?? null,
+      oclusao_aplicada: Boolean(cfg.oclusao) && cfg.relevo > 0,
       ss, arco_meio_rad: r.alvo?.arco_meio_rad ?? null, gerado_em: new Date().toISOString(),
     };
     fs.writeFileSync(outFinal.replace(/\.png$/, ".receita.json"), `${JSON.stringify(receita, null, 1)}\n`);

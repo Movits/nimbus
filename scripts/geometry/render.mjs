@@ -186,3 +186,70 @@ export function projectedArtBox(params) {
   const xs = ok.map((p) => p[0]), ys = ok.map((p) => p[1]);
   return { x0: Math.min(...xs), x1: Math.max(...xs), y0: Math.min(...ys), y1: Math.max(...ys) };
 }
+
+/**
+ * Desenha a arte numa CAMADA RGBA propria, em vez de direto no fundo.
+ *
+ * Existe porque o tecido precisa agir sobre a arte DEPOIS de ela estar
+ * projetada: deslocar pela dobra e sombrear pelo vinco. Compondo direto no
+ * fundo, como fazia `compositeArt`, a arte ja entrava fundida e a unica
+ * interacao possivel era um multiplicador por pixel — o que produzia um
+ * retangulo liso de bordas retas sobre um pano amassado, ou seja um adesivo.
+ *
+ * Com a camada separada, `aplicar-no-tecido.mjs` reamostra a arte pelo campo
+ * de dobra antes de compor.
+ */
+export function renderArtLayer(layer, art, params) {
+  const { cols, rows, pts } = artMesh(params);
+  const { width: W, height: H } = layer;
+  const at = (i, j) => pts[j * cols + i];
+  const uv = (i, j) => [i / (cols - 1), j / (rows - 1)];
+  for (let j = 0; j < rows - 1; j += 1) {
+    for (let i = 0; i < cols - 1; i += 1) {
+      const p00 = at(i, j), p10 = at(i + 1, j), p01 = at(i, j + 1), p11 = at(i + 1, j + 1);
+      if (!p00 || !p10 || !p01 || !p11) continue;
+      const u00 = uv(i, j), u10 = uv(i + 1, j), u01 = uv(i, j + 1), u11 = uv(i + 1, j + 1);
+      drawTriangleRGBA(layer.data, W, H, p00, p10, p11, u00, u10, u11, art);
+      drawTriangleRGBA(layer.data, W, H, p00, p11, p01, u00, u11, u01, art);
+    }
+  }
+  return layer;
+}
+
+function drawTriangleRGBA(dst, W, H, A, B, C, uvA, uvB, uvC, art) {
+  const { data: tex, width: TW, height: TH, channels: TC } = art;
+  const minX = Math.max(0, Math.floor(Math.min(A[0], B[0], C[0])));
+  const maxX = Math.min(W - 1, Math.ceil(Math.max(A[0], B[0], C[0])));
+  const minY = Math.max(0, Math.floor(Math.min(A[1], B[1], C[1])));
+  const maxY = Math.min(H - 1, Math.ceil(Math.max(A[1], B[1], C[1])));
+  const d = (B[0] - A[0]) * (C[1] - A[1]) - (C[0] - A[0]) * (B[1] - A[1]);
+  if (Math.abs(d) < 1e-9) return;
+  for (let y = minY; y <= maxY; y += 1) {
+    for (let x = minX; x <= maxX; x += 1) {
+      const px = x + 0.5, py = y + 0.5;
+      const w0 = ((B[0] - px) * (C[1] - py) - (C[0] - px) * (B[1] - py)) / d;
+      const w1 = ((C[0] - px) * (A[1] - py) - (A[0] - px) * (C[1] - py)) / d;
+      const w2 = 1 - w0 - w1;
+      if (w0 < -1e-6 || w1 < -1e-6 || w2 < -1e-6) continue;
+      const u = w0 * uvA[0] + w1 * uvB[0] + w2 * uvC[0];
+      const v = w0 * uvA[1] + w1 * uvB[1] + w2 * uvC[1];
+      const tx = Math.min(TW - 1.001, Math.max(0, u * (TW - 1)));
+      const ty = Math.min(TH - 1.001, Math.max(0, v * (TH - 1)));
+      const x0 = Math.floor(tx), y0 = Math.floor(ty);
+      const fx = tx - x0, fy = ty - y0;
+      const idx = (yy, xx) => (yy * TW + xx) * TC;
+      let r = 0, g = 0, b = 0, a = 0;
+      for (const [yy, xx, w] of [
+        [y0, x0, (1 - fx) * (1 - fy)], [y0, x0 + 1, fx * (1 - fy)],
+        [y0 + 1, x0, (1 - fx) * fy], [y0 + 1, x0 + 1, fx * fy],
+      ]) {
+        const i = idx(yy, xx);
+        r += tex[i] * w; g += tex[i + 1] * w; b += tex[i + 2] * w;
+        a += (TC === 4 ? tex[i + 3] : 255) * w;
+      }
+      if (a <= 0.5) continue;
+      const o = (y * W + x) * 4;
+      dst[o] = r; dst[o + 1] = g; dst[o + 2] = b; dst[o + 3] = a;
+    }
+  }
+}

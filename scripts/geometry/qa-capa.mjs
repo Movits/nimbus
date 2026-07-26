@@ -225,10 +225,23 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
   } : { motivo: `"${peca}" sem tabela de medidas`, ok: null };
 
   // ---- aspecto: compressao horizontal vs a arte plana ----
-  const razaoMedida = mom.w / mom.h;
+  //
+  // MEDIR PELO REGISTRO, NAO PELA CAIXA POR LIMIAR. A caixa perde as bordas
+  // finas em tecido escuro e em arte de silhueta irregular (spray, stencil):
+  // ela encolhe MAIS na horizontal, onde a arte tem respingo, do que na
+  // vertical, e a razao sai comprimida demais. Isso produzia alerta de
+  // "aspecto" em capa geometricamente correta, e como o alerta era frequente
+  // os agentes passaram a descarta-lo por reflexo — que e o pior efeito
+  // possivel de um alarme falso.
+  //
+  // E o mesmo motivo pelo qual `escala` e `posicao` ja usam o registro NCC.
+  const usaRegAspecto = reg && reg.score >= 0.4 && reg.width_px > 0 && reg.height_px > 0;
+  const razaoMedida = usaRegAspecto ? reg.width_px / reg.height_px : mom.w / mom.h;
   const compressao = 100 * (1 - razaoMedida / razaoPlana);
   checks.aspecto = {
+    instrumento: usaRegAspecto ? `registro NCC (score ${reg.score.toFixed(3)})` : "caixa por limiar (registro falhou)",
     razao_medida: +razaoMedida.toFixed(4),
+    razao_caixa: +(mom.w / mom.h).toFixed(4),
     razao_plana: +razaoPlana.toFixed(4),
     compressao_pct: +compressao.toFixed(2),
     // O esperado NAO e um numero fixo: sai da geometria. Enrolando a arte num
