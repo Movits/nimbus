@@ -27,7 +27,11 @@ brain/
 # Lixo do Obsidian aberto na raiz + testes vazios do Web Clipper.
 .obsidian/
 browserify.org.md
-docs/
+
+# `docs/` ficou ignorado ate 26/07 porque era saida gerada do Obsidian. Hoje e a
+# DOCUMENTACAO DO PROJETO e o unico ponto de entrada (docs/00-COMECE-AQUI.md).
+# A regra antiga fez a estrutura nova inteira nao subir: o CLAUDE.md publicado
+# apontava para um arquivo que nao existia no repositorio.
 
 # QA e temporários: perfil de navegador guarda Login Data, Web Data e Cookies. Nunca no repo público.
 .tmp-chrome-mobile-qa/
