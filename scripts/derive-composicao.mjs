@@ -35,6 +35,24 @@ const CSV_PATH = path.join(
   "nuvemshop/auditoria/2026-07-22-dimensoes-arte/auditoria-dimensoes-arte.csv",
 );
 
+/**
+ * Correcao de PECA sobre o CSV de 22/07, que tem erro de classificacao.
+ *
+ * O CSV registra o 352727892 como "Blusao Moletom", mas o mockup oficial e a
+ * loja publicada mostram capuz e bolso canguru: e Moletom Canguru. A peca
+ * errada troca a regua — 78,4 cm do Blusao contra 65 cm do Moletom Canguru G,
+ * ou seja 20% de erro de escala direto na estampa — e ainda faz o prompt do
+ * blank pedir moletom careca, porque o GARMENT_LOCK do Blusao proibe capuz.
+ *
+ * Corrigir aqui, na fonte, e nao so na linha de comando: quem esquecer a flag
+ * `--peca` nao pode cair no erro silenciosamente.
+ *
+ * Ver nuvemshop/auditoria/2026-07-26-datum-mockups/CORRECAO-GOLA-TEMPLATE.md
+ */
+const PECA_CORRIGIDA = {
+  352727892: "Moletom Canguru",
+};
+
 // A unica lacuna real: nao existe placement oficial da YouDraw em cm abaixo da
 // gola. Ate o dono confirmar, usa-se a folga observada de forma consistente nas
 // fotos aprovadas, e o valor fica DECLARADO como suposicao, nao escondido.
@@ -119,7 +137,7 @@ export function composicaoPorProduto(productId, view = "back", size = CANONICAL_
   if (!row) return null;
   const h = Number(view === "front" ? row.front_h_cm : row.back_h_cm);
   if (!(h > 0)) return null;
-  return deriveComposicao({ garment: row.garment, artH_cm: h, size });
+  return deriveComposicao({ garment: PECA_CORRIGIDA[row.product_id] ?? row.garment, artH_cm: h, size });
 }
 
 function main() {
@@ -151,17 +169,18 @@ function main() {
       const h = Number(v === "front" ? row.front_h_cm : row.back_h_cm);
       const w = Number(v === "front" ? row.front_w_cm : row.back_w_cm);
       if (!(h > 0)) continue;
-      const c = deriveComposicao({ garment: row.garment, artH_cm: h, size });
+      const peca = PECA_CORRIGIDA[row.product_id] ?? row.garment;
+      const c = deriveComposicao({ garment: peca, artH_cm: h, size });
       out.push({
         product_id: row.product_id,
         title: row.title,
-        garment: row.garment,
+        garment: peca,
         view: v,
         art_cm: { w, h },
         composicao: c,
         // Sem tabela de medidas nao ha trava numerica possivel. O gerador
         // precisa saber disso em vez de receber um numero qualquer.
-        motivo: c ? null : `"${row.garment}" nao tem tabela de medidas publicada`,
+        motivo: c ? null : `"${peca}" nao tem tabela de medidas publicada`,
         placement_source: COLLAR_TO_ART_SOURCE,
       });
     }

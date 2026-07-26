@@ -57,6 +57,31 @@ const GARMENT_LOCK = {
     "GARMENT LOCK — this is a CREWNECK SWEATSHIRT: ribbed round collar, NO hood, NO zipper, long sleeves with ribbed cuffs and a ribbed hem band.",
 };
 
+/**
+ * Busca a trava IGNORANDO ACENTO.
+ *
+ * A chave estava escrita "Blusao Moletom" enquanto o catalogo inteiro usa
+ * "Blusão Moletom". A consulta direta devolvia undefined, `.filter(Boolean)`
+ * engolia a linha e o prompt ia SEM a trava — ou seja, nada impedia a IA de
+ * pendurar um capuz num Blusao. Falha silenciosa, e o Blusao e justamente a
+ * peca que se define por NAO ter capuz.
+ */
+const semAcento = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const LOCK_POR_CHAVE_SIMPLES = new Map(
+  Object.entries(GARMENT_LOCK).map(([k, v]) => [semAcento(k), v]),
+);
+export function garmentLock(garment) {
+  const lock = LOCK_POR_CHAVE_SIMPLES.get(semAcento(garment));
+  if (!lock) {
+    // Alto, nao silencioso: sem trava a IA escolhe a peca sozinha.
+    throw new Error(
+      `sem GARMENT LOCK para "${garment}". Conhecidas: ${Object.keys(GARMENT_LOCK).join(", ")}. `
+      + "Gerar sem a trava deixa a IA livre para trocar a peca.",
+    );
+  }
+  return lock;
+}
+
 const CENA = {
   RELIQUIA:
     "Portuguese-tiled cloister with blue-and-white azulejos, weathered limestone columns and warm daylight raking across the stone floor",
@@ -78,15 +103,26 @@ const CENA = {
  *    quadro e sem ombro ou gola legivel, a regua vertical nao fecha e a
  *    composicao nao tem onde ancorar.
  */
-export function promptBlank({ garment, color, colecao }) {
+/**
+ * `extra` acrescenta uma trava especifica do produto no fim do prompt.
+ *
+ * Nasceu do 352727892: o GARMENT_LOCK do Moletom Canguru pede o capuz "falling
+ * over the upper back", e o blank saiu com o drape descendo ate 45,8% da
+ * altura. Com o placement oficial (4,32 cm) a arte comeca em 35,0%, entao o
+ * capuz cobria os 29% de cima da estampa — a coroa inteira de Nossa Senhora
+ * Aparecida. Oclusao correta fisicamente, capa inutil comercialmente. O mockup
+ * oficial mostra o capuz assentado ACIMA da estampa, que e o alvo.
+ */
+export function promptBlank({ garment, color, colecao, extra = "" }) {
   return [
     `Create one square photorealistic ecommerce lifestyle photograph, rear view, of a person wearing a plain ${color} ${garment}.`,
     `REFERENCE 1 is the approved photograph of this exact product. Keep the SAME model (same person, same build, same hair), the SAME scene, the SAME framing, the SAME light and a natural pose of the same family.`,
     `THE GARMENT MUST BE COMPLETELY BLANK. The back of the garment is EMPTY fabric: no print, no graphic, no artwork, no lettering, no logo, no emblem, no embroidery, no texture pattern, no watermark. Plain undecorated ${color} fabric from the collar to the hem. This is deliberate — the artwork is applied later by a separate process, and any print you draw will have to be discarded.`,
-    GARMENT_LOCK[garment] ?? "",
+    garmentLock(garment),
     `SCENE: ${CENA[colecao] ?? CENA.RELIQUIA}.`,
     `MEASURABLE FRAMING (required): the whole garment is in frame from the top of the shoulders down to the hem, the hem is clearly visible and separated from the background, and either the shoulder line or the base of the collar is readable. The back must face the camera squarely enough that both side seams are visible.`,
     `Photographic quality: natural skin, real fabric drape and folds, no mannequin, no duplicate person, no added text, no watermark. Hands, when visible, have five separate fingers.`,
+    extra ?? "",
     `BEFORE YOU FINISH, verify: (1) Is the back of the garment completely free of any print or lettering? (2) Are the hem and a readable top edge inside the frame? If either answer is no, fix it.`,
   ].filter(Boolean).join(" ");
 }
@@ -266,7 +302,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   if (cmd === "blank") {
     const produto = arg("--produto");
     const comp = JSON.parse(execFileSync("node", [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto], { encoding: "utf8" }))[0];
-    const prompt = promptBlank({ garment: comp.garment, color: arg("--cor", "black"), colecao: arg("--colecao", "RELIQUIA") });
+    const prompt = promptBlank({ garment: arg("--peca", comp.garment), color: arg("--cor", "black"), colecao: arg("--colecao", "RELIQUIA"), extra: arg("--extra", "") });
     const out = arg("--out", `/tmp/${produto}-blank.png`);
     fs.writeFileSync(out.replace(/\.png$/, ".prompt.txt"), `${prompt}\n`);
     const r = await gerar({ prompt, refs: [arg("--cena")].filter(Boolean), out, modelo: arg("--modelo", "gemini-3-pro-image") });
@@ -278,6 +314,14 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     const produto = arg("--produto");
     const comp = JSON.parse(execFileSync("node", [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto], { encoding: "utf8" }))[0];
     const [w, h] = (arg("--arte-cm") ?? `${comp.art_cm.w}x${comp.art_cm.h}`).split("x").map(Number);
+    // PECA: por padrao vem do CSV de 22/07 via derive-composicao. `--peca`
+    // existe porque esse CSV tem erro de classificacao conhecido: o 352727892
+    // esta registrado como "Blusao Moletom" mas o mockup oficial e a loja
+    // mostram capuz e bolso canguru (ver
+    // nuvemshop/auditoria/2026-07-26-datum-mockups/CORRECAO-GOLA-TEMPLATE.md).
+    // A peca errada troca a regua: 78,4 cm do Blusao contra 65 cm do Moletom
+    // Canguru G, ou seja 20% de erro de escala direto na estampa.
+    const peca = arg("--peca", comp.garment);
 
     // SUPERSAMPLING (padrao 2x): compoe em resolucao dobrada e reduz com
     // Lanczos no final. Sem isso a trama halftone vira xadrez de 1-2 px na
@@ -300,7 +344,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
         .png().toFile(foto);
     }
     const r = await compor({
-      foto, arte: arg("--arte"), artCm: { w, h }, peca: comp.garment,
+      foto, arte: arg("--arte"), artCm: { w, h }, peca,
       gola: Number(arg("--gola")), barra: Number(arg("--barra")), centro: Number(arg("--centro", "0.5")),
       // largura visivel do tronco na altura da arte, em fracao da LARGURA da
       // imagem; calibra o raio efetivo da malha (ver planejar em compose-art)
@@ -335,7 +379,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     // Com a receita, recompor o catalogo inteiro vira um laco.
     const receita = {
       produto, cor_arquivo: path.basename(outFinal),
-      foto: fotoOrig, arte: arg("--arte"), arte_cm: `${w}x${h}`, peca: comp.garment,
+      foto: fotoOrig, arte: arg("--arte"), arte_cm: `${w}x${h}`, peca,
       gola: Number(arg("--gola")), barra: Number(arg("--barra")), centro: Number(arg("--centro", "0.5")),
       torso: arg("--torso") ? Number(arg("--torso")) : null,
       yaw: Number(arg("--yaw", "0")),
