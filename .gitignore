@@ -93,6 +93,16 @@ nuvemshop/auditoria/**/*.jpeg
 nuvemshop/auditoria/**/*.webp
 nuvemshop/auditoria/**/cards-docx/
 
+# Rede de seguranca para segredos: chave de API do Gemini/Google e afins.
+# NUNCA versionar. O repo e publico. A chave vive so em .env local (lido em runtime).
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+credentials*.json
+
 # Arquivos locais de diagnostico e automacao descartavel.
 /.tmp_*
 /tmp_*
@@ -105,3 +115,7 @@ scripts/_tmp*
 scripts/tmp*
 scripts/__pycache__/
 *.pyc
+
+# Quarentena local de artefatos superados (limpeza de 26/07/2026): nada aqui
+# entra no git; apagar a pasta so depois de conferir que nada faz falta.
+/_arquivo-*/

@@ -1,0 +1,50 @@
+﻿product_id,title,colors,verdict_codex_2026_07_22,verdict_novo_limiar_5pct,eixo_escala_vs_mockup,eixo_par_hover,eixo_peca,observacao
+352407156,São Miguel Vintage | Moletom Canguru,"Preta,Branca",APROVAR,REVISAR,menor ~10-15% que o mockup,OK,OK,Par bem casado; arte da foto um pouco menor que o mockup.
+352407182,São Miguel Vintage | Camiseta Oversized Premium,"Preta,Off-White",REVISAR,REVISAR,proximo (~5-10%),OK,OK,Limitrofe; medir contra cm YouDraw.
+352407196,São Miguel Vintage | Camiseta Premium,"Preta,Branca",APROVAR,REVISAR,proximo (~5-10%),"OK (re-verificado em resolucao total; zoom levemente diferente, aceitavel)",OK,Par correto.
+352618837,São Jorge Vintage | Blusão Moletom,"Preta,Branca",REFAZER,REFAZER,capas novas menores ~15-20% que o mockup; antigas eram mais fieis,OK (capas novas 1-2),OK,Galeria com 4 capas (2 antigas sobrando; limpar). A correcao de 22/07 encolheu a arte.
+352618878,São Jorge Vintage | Moletom Canguru,"Preta,Branca",APROVAR,REVISAR,menor ~10-15%,OK,OK,Codex aprovou; visualmente a arte parece menor que o mockup.
+352618903,São Jorge Vintage | Camiseta Oversized Premium,"Preta,Off-White",REFAZER,REFAZER,novas menores ~15-20%,OK (capas novas),OK,Galeria com 4 capas (2 antigas sobrando).
+352618935,São Jorge Vintage | Camiseta Premium,"Branca,Preta",REVISAR,REVISAR,"ambas ~10-15% maiores que o mockup, consistentes entre si",OK,OK,
+352619175,Salmo 19 | Moletom Canguru,"Preta,Branca",REVISAR,APROVAR,proximo (~5%),OK,OK,Visualmente colado no mockup; confirmar com medicao.
+352702020,Salmo 19 | Camiseta Premium,"Preta,Branca",REVISAR,REVISAR,menor ~5-10%,OK,OK,Par regenerado ficou bem casado.
+352702753,Monograma NIMBUS | Camiseta Oversized Premium,"Preta,Off-White",APROVAR,REFAZER,menor ~15-20% que a proporcao do mockup (medido em resolucao total; estimativa anterior de 25-30% era exagerada),OK,OK,"DIVERGENCIA FORTE com o Codex: monograma no mockup ocupa ~70% do peito, na foto ~45-50%."
+352702796,Monograma NIMBUS | Camiseta Premium,"Preta,Branca",REVISAR,REFAZER,menor que o mockup em grau a fechar com medicao fina (estimativa anterior de 25-30% era exagerada),OK,ERRADA (aparente): corpo/caimento de oversized numa pagina Premium,"Caso classico do problema apontado pelo Roberto: silhueta ampla, ombro caido, manga larga; mockup Premium e reto."
+352702858,Fé Acima de Tudo | Camiseta Oversized Premium,"Preta,Off-White",APROVAR,REVISAR,menor ~5-10%,OK (novas),OK,Galeria com 4 capas (2 antigas sobrando).
+352703153,Fé Acima de Tudo | Camiseta Premium,"Preta,Branca",APROVAR,REVISAR,menor ~10%,OK,SUSPEITA: caimento folgado para Premium,
+352703276,Deus é Fiel | Camiseta Oversized Premium,Preta,APROVAR,REVISAR,menor ~10-15%,n/a (mono),OK,
+352703343,Deus é Fiel | Camiseta Premium,Preta,APROVAR,REVISAR,menor ~5-10%,n/a (mono),OK,Limitrofe.
+352717723,Brasão NIMBUS | Camiseta Oversized Premium,"Preta,Off-White",APROVAR,REVISAR,proximo,OK (re-verificado em resolucao total; sem espelhamento),OK,Par correto; escala proxima; manter REVISAR so pela medicao de escala.
+352717837,Brasão NIMBUS | Camiseta Premium,"Preta,Branca",APROVAR,REVISAR,proximo,OK (re-verificado em resolucao total 23/07; flag anterior era erro de leitura em miniatura),leve suspeita de folga,Par bem casado; escala proxima do mockup; leve suspeita de folga na peca. Correcao pos-checagem do dono.
+352717960,Azulejo Sagrado | Blusão Moletom,Branca,APROVAR,REVISAR,menor ~10%,n/a (mono),OK,
+352718083,Azulejo Sagrado | Moletom Canguru,Branca,APROVAR,REVISAR,menor ~15%,n/a (mono),OK,Divergencia com Codex; arte visivelmente menor e mais baixa que no mockup.
+352718275,Azulejo Sagrado | Camiseta Premium,Branca,APROVAR,APROVAR,proximo (~5%),n/a (mono),OK,Confirmar com medicao.
+352718787,São Jorge Neobarroco | Moletom Canguru,"Preta,Branca",REFAZER (20-30% maior),REVISAR,"limitrofe, possivelmente maior",OK,OK,Nao confirmei visualmente o 20-30% do Codex; medir antes de refazer.
+352718943,São Jorge Neobarroco | Camiseta Oversized Premium,"Preta,Off-White",REFAZER,REFAZER,MAIOR ~15-25%,OK,OK,Confirma Codex.
+352718999,São Jorge Neobarroco | Camiseta Premium,"Preta,Branca",REFAZER,REFAZER,maior ~10-20%,OK,OK,
+352719728,Aparecida Barroca | Blusão Moletom,Branca,APROVAR,REFAZER,capa ATUAL (nova 22/07) menor ~15% que o mockup; capa antiga na galeria era mais fiel,n/a (mono),OK,A troca de 22/07 piorou a escala. Avaliar restaurar a antiga como capa.
+352719816,Aparecida Barroca | Moletom Canguru,Branca,REFAZER,REFAZER,menor ~15-20%,n/a (mono),OK,Confirma Codex.
+352720127,Aparecida Barroca | Camiseta Premium,Branca,APROVAR,APROVAR,proximo (~5%),n/a (mono),OK,Confirmar com medicao.
+352720257,Acima de Tudo Gótico | Camiseta Oversized Premium,"Preta,Off-White",APROVAR,REVISAR,menor ~15%,OK,OK,Divergencia com Codex.
+352721118,Fé Wildstyle | Camiseta Oversized Premium,"Preta,Off-White",APROVAR,APROVAR,proximo (~5%),OK,OK,Confirmar com medicao.
+352721197,Fé Wildstyle | Camiseta Premium,"Preta,Branca",APROVAR,REFAZER,proximo,"DIVERGENTE FORTE: cenarios e enquadramentos diferentes (preta em rua com moto, branca em parede de concreto)",OK,Recriar uma cor para casar o par.
+352721477,Espírito Santo Spray | Camiseta Premium,"Preta,Branca",REVISAR,REVISAR,proximo (~5-8%),OK,leve suspeita de folga,
+352721633,NIMBUS Wildstyle | Camiseta Oversized Premium,"Preta,Off-White",APROVAR,REVISAR,menor ~5-10%,OK,OK,Limitrofe.
+352722232,Sagrado Coração Spray | Camiseta Premium,Branca,REVISAR,REVISAR,menor ~10%,n/a (mono),OK,
+352722510,São Miguel Celeste | Blusão Moletom,Branca,APROVAR,REVISAR,menor ~10-20%,n/a (mono),OK,"Divergencia com Codex; cenario Niemeyer on-brand, so a escala falha."
+352722685,São Miguel Celeste | Moletom Canguru,Branca,REFAZER,REFAZER,capa ATUAL menor ~20-30%; capa antiga na galeria era maior e mais proxima do mockup,n/a (mono),OK,"CANDIDATO A PILOTO. Alvo YouDraw (CSV antigo): frente 9,6x8,7cm, costas 35,2x39,7cm; validar na YouDraw."
+352723243,São Miguel Celeste | Camiseta Premium,Branca,APROVAR,REFAZER,"menor ~20-25%, arte deslocada a esquerda",n/a (mono),OK,DIVERGENCIA FORTE com Codex.
+352725749,Querubim Spray | Camiseta Oversized Premium,"Preta,Off-White",REVISAR,REFAZER,menor ~20%,OK,OK,Querubim pequeno e alto; mockup mostra arte central ~50% da largura.
+352725852,Querubim Spray | Camiseta Premium,"Preta,Branca",REVISAR,REFAZER,menor ~15-20%,OK,SUSPEITA FORTE: corpo/caimento oversized numa pagina Premium,
+352726673,São Miguel Vitorioso | Moletom Canguru,"Preta,Branca",REFAZER (15-25% maior),REVISAR,limitrofe (nao vi claramente maior),OK,OK,Medir antes de gastar credito; Codex pode ter avaliado versao anterior.
+352727545,São Miguel Vitorioso | Camiseta Oversized Premium,"Preta,Off-White",REFAZER,REFAZER,novas menores ~15-20%,OK (novas),OK,Galeria com 4 capas (2 antigas sobrando).
+352727892,Aparecida Spray | Blusão Moletom,Preta,APROVAR,REVISAR,capa 1 proxima do mockup,n/a (mono),CAPA 2 ERRADA: mostra moletom COM CAPUZ num produto Blusão (sem capuz),Remover/substituir a capa 2 da galeria; capa 1 ok.
+352728019,Aparecida Spray | Camiseta Oversized Premium,Preta,APROVAR,REVISAR,limitrofe (~5-10%),n/a (mono),OK,2 capas quase duplicadas na galeria; limpar.
+352728277,Anjo da Guarda Stencil | Camiseta Oversized Premium,Preta,REFAZER (20-25% maior),REFAZER,MAIOR ~15-25%,n/a (mono),OK,Confirma Codex.
+352728357,Anjo da Guarda Stencil | Camiseta Premium,Preta,REVISAR,REVISAR,capa atual menor ~15%; antiga na galeria era maior,n/a (mono),leve suspeita de folga,2 capas na galeria; limpar.
+352728451,Acima de Tudo Grafite | Camiseta Oversized Premium,Off-White,APROVAR,REVISAR,proximo (~5-10%),n/a (mono),OK,Limitrofe.
+352728524,Acima de Tudo Grafite | Camiseta Premium,Branca,REVISAR,REVISAR,"menor; modelo muito de lado, arte pouco visivel",n/a (mono),OK,"Alem da escala, foto fraca como vitrine (arte quase de perfil)."
+352889132,Aparecida Spray | Camiseta Premium,Preta,REVISAR,APROVAR,proximo (~5%),n/a (mono),OK,Visualmente fiel; confirmar com medicao.
+352890896,Aparecida Barroca | Camiseta Oversized Premium,"Preta,Off-White",REVISAR,REVISAR,menor ~15%,OK,OK,
+352898175,São Miguel Vitorioso | Camiseta Premium,"Preta,Branca",REFAZER,REFAZER,inconsistente entre cores (branca maior),DIVERGENTE: cenarios diferentes entre branca e preta,branca com folga suspeita,Confirma Codex + eixo novo de par.
+355581274,NIMBUS Wildstyle | Ecobag,unica,APROVAR,APROVAR,proximo (~5%),n/a,OK,Confirmar com medicao.
