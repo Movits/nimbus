@@ -14,6 +14,9 @@
 // Uso:
 //   node scripts/geometry/transplantar-cor.mjs --base <corA.png> --doador <corB.png> \
 //     --out <corB-alinhada.png> [--limiar 26] [--feather 1.5] [--relatorio]
+//
+// PECA COM CAPUZ (Moletom Canguru): passe `--sem-corte-ombro`. Sem a flag o
+// corte de ombro apaga o capuz do doador e a saida sai com capuz da cor ERRADA.
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
@@ -47,7 +50,7 @@ function maiorComponente(m, W, H) {
   return melhor ?? [];
 }
 
-export async function transplantarCor({ base, doador, out, limiar = 26, feather = 1.5 }) {
+export async function transplantarCor({ base, doador, out, limiar = 26, feather = 1.5, corteOmbro = true }) {
   const [a, b] = await Promise.all([cru(base), cru(doador)]);
   const { width: W, height: H } = a.info;
   if (b.info.width !== W || b.info.height !== H) {
@@ -68,6 +71,45 @@ export async function transplantarCor({ base, doador, out, limiar = 26, feather 
   const comp = maiorComponente(bruta, W, H);
   const mascara = Buffer.alloc(W * H);
   for (const p of comp) mascara[p] = 255;
+
+  // CORTAR O QUE ESTA ACIMA DOS OMBROS.
+  //
+  // As duas geracoes diferem tambem no CABELO, e essa diferenca encosta na
+  // peca pelo pescoco — entao a "maior componente" engole cabeca e roupa num
+  // blob so, e o transplante troca a cabeca junto. Foi o que aconteceu no
+  // 352618935: fundo ficou identico (0,0) e o topo divergiu 47,4.
+  //
+  // A peca e LARGA e a cabeca e ESTREITA. Descendo da linha mais larga da
+  // mascara para cima, corta-se onde a largura cai abaixo de 45% do maximo:
+  // esse degrau e o ombro.
+  //
+  // ⚠️ NAO SERVE PARA PECA COM CAPUZ (`corteOmbro: false`, `--sem-corte-ombro`).
+  // A heuristica assume que tudo estreito acima do ombro e CABECA. Num moletom
+  // canguru o CAPUZ e peca, fica acima da linha do ombro e e mais estreito que
+  // o tronco — entao o corte apaga justamente o capuz. Medido no 352619175:
+  // corte em 27,8% da altura, capuz do doador descartado, e a saida ficou com
+  // o capuz PRETO sobre um corpo BRANCO, com uma linha horizontal dura no
+  // ponto do corte. Para peca com capuz o corte tem que ser desligado; o risco
+  // que ele cobre (cabelo divergente entrar na mascara) deve ser conferido
+  // pela sonda de cabeca antes, e nao presumido.
+  const largura = new Int32Array(H);
+  let corte = 0;
+  let cortados = 0;
+  if (corteOmbro) {
+    for (let y = 0; y < H; y += 1) {
+      let x0 = -1, x1 = -1;
+      for (let x = 0; x < W; x += 1) if (mascara[y * W + x]) { if (x0 < 0) x0 = x; x1 = x; }
+      largura[y] = x1 < 0 ? 0 : x1 - x0 + 1;
+    }
+    let yMax = 0;
+    for (let y = 1; y < H; y += 1) if (largura[y] > largura[yMax]) yMax = y;
+    for (let y = yMax; y >= 0; y -= 1) {
+      if (largura[y] < 0.45 * largura[yMax]) { corte = y; break; }
+    }
+    for (let y = 0; y <= corte; y += 1) {
+      for (let x = 0; x < W; x += 1) if (mascara[y * W + x]) { mascara[y * W + x] = 0; cortados += 1; }
+    }
+  }
 
   // CUIDADO: sharp promove um raw de 1 canal para sRGB, e `.raw().toBuffer()`
   // devolve 3 canais. Indexar por `suave[p]` lia o byte errado e o resultado
@@ -92,7 +134,10 @@ export async function transplantarCor({ base, doador, out, limiar = 26, feather 
   return {
     out,
     frac_diferente_bruta_pct: +(100 * fracBruta).toFixed(2),
-    frac_peca_pct: +((100 * comp.length) / (W * H)).toFixed(2),
+    frac_peca_pct: +((100 * (comp.length - cortados)) / (W * H)).toFixed(2),
+    corte_ombro: corteOmbro,
+    px_cortados_acima_do_ombro: cortados,
+    linha_de_corte_pct: corteOmbro ? +((100 * corte) / H).toFixed(2) : null,
     frac_identica_a_base_pct: +((100 * iguais) / (W * H)).toFixed(2),
     limiar, feather,
   };
@@ -103,6 +148,8 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const r = await transplantarCor({
     base: arg("--base"), doador: arg("--doador"), out: arg("--out"),
     limiar: Number(arg("--limiar", "26")), feather: Number(arg("--feather", "1.5")),
+    // Peca com capuz: o capuz e peca acima da linha do ombro e o corte o come.
+    corteOmbro: !process.argv.includes("--sem-corte-ombro"),
   });
   console.log(JSON.stringify(r, null, 2));
 }
