@@ -53,7 +53,7 @@ export async function chaveiaPorLuminancia(src, { piso = 45, teto = 150 } = {}) 
  * `sup`% abaixo da gola. Aqui isso vira pixels na imagem, e dai sai a distancia
  * focal que a malha precisa.
  */
-export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca, torsoFrac = null }) {
+export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca, torsoFrac = null, yawDeg = 0 }) {
   const spec = getGarmentSpec(peca);
   if (!spec.hasTable) throw new Error(`sem tabela de medidas para "${peca}"`);
   const L = spec.sizes.find((s) => s.size === CANONICAL_SIZE).length_cm;
@@ -95,7 +95,10 @@ export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm,
   return {
     params: {
       artW_cm, artH_cm, radius_cm: R, collarToTop_cm, garmentLength_cm: L,
-      camera: { yaw: 0, pitch: 0, roll: 0, f, distance_cm: D, cx: centroFrac * imgW, cy },
+      // yaw em graus: corpo rotacionado exige encurtamento assimetrico da
+      // estampa (pego no 352721633 v1: pose com rotacao forte composta com
+      // yaw 0 leu "frontal demais/decal" — aspecto 0,87 vs 0,79 da cena).
+      camera: { yaw: yawDeg, pitch: 0, roll: 0, f, distance_cm: D, cx: centroFrac * imgW, cy },
       grid: 64,
     },
     alvo: {
