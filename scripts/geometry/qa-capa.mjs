@@ -67,13 +67,24 @@ function mascaraTinta(a, b, thr = 38) {
 }
 
 function momentos(mask, W, H) {
-  let sx = 0, sy = 0, sxx = 0, syy = 0, n = 0, x0 = W, x1 = -1, y0 = H, y1 = -1;
+  // A CAIXA IGNORA LINHAS/COLUNAS COM POUCOS PIXELS. Com min/max absolutos,
+  // TRES pixels perdidos de ringing na regiao do cabelo puxaram o topo da
+  // caixa de 39,7% para 26,6% e produziram uma REPROVACAO FALSA de posicao
+  // (-15 cm) numa capa que estava certa. Exigir populacao minima por linha
+  // mata specks isolados sem mexer na arte de verdade.
+  const MIN_POP = 3;
+  const porLinha = new Int32Array(H), porColuna = new Int32Array(W);
+  let sx = 0, sy = 0, sxx = 0, syy = 0, n = 0;
   for (let y = 0; y < H; y += 1) for (let x = 0; x < W; x += 1) {
     if (!mask[y * W + x]) continue;
+    porLinha[y] += 1; porColuna[x] += 1;
     sx += x; sy += y; sxx += x * x; syy += y * y; n += 1;
-    if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
   }
   if (!n) return null;
+  let x0 = W, x1 = -1, y0 = H, y1 = -1;
+  for (let y = 0; y < H; y += 1) if (porLinha[y] >= MIN_POP) { if (y0 === H) y0 = y; y1 = y; }
+  for (let x = 0; x < W; x += 1) if (porColuna[x] >= MIN_POP) { if (x0 === W) x0 = x; x1 = x; }
+  if (x1 < 0 || y1 < 0) return null;
   const mx = sx / n, my = sy / n;
   return {
     n, cx: mx, cy: my,
@@ -118,7 +129,7 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     delta_pp: +(100 * (barra - barraDet)).toFixed(2),
     candidatos: det.candidatos,
     ok: null,
-    nota: "informativo; confiavel em camiseta, ruidoso em moletom",
+    nota: "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom",
   };
 
   // ---- mascara da tinta e momentos ----
