@@ -222,10 +222,10 @@ function placaDeSombra(bg) {
   return suave;
 }
 
-export async function compor({ foto, arte, artCm, peca, gola, barra, centro, out, opacidade = 0.93, sombraMin = 0.75, sombraMax = 1.25 }) {
+export async function compor({ foto, arte, artCm, peca, gola, barra, centro, torso = null, out, opacidade = 0.93, sombraMin = 0.75, sombraMax = 1.25 }) {
   const meta = await sharp(foto).metadata();
   const plano = planejar({
-    golaFrac: gola, barraFrac: barra, centroFrac: centro,
+    golaFrac: gola, barraFrac: barra, centroFrac: centro, torsoFrac: torso,
     imgW: meta.width, imgH: meta.height, artW_cm: artCm.w, artH_cm: artCm.h, peca,
   });
   const tex = await arteRecortadaPorAlpha(arte, (plano.alvo.altura_pontos / 100) * meta.height);
@@ -301,6 +301,9 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     const r = await compor({
       foto, arte: arg("--arte"), artCm: { w, h }, peca: comp.garment,
       gola: Number(arg("--gola")), barra: Number(arg("--barra")), centro: Number(arg("--centro", "0.5")),
+      // largura visivel do tronco na altura da arte, em fracao da LARGURA da
+      // imagem; calibra o raio efetivo da malha (ver planejar em compose-art)
+      torso: arg("--torso") ? Number(arg("--torso")) : null,
       out, opacidade: Number(arg("--opacidade", "0.93")),
       // Em tecido escuro a placa de sombra fica ruidosa (variacoes minusculas
       // de luminancia viram razoes grandes) e pode pintar faixa fantasma na

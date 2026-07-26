@@ -53,13 +53,13 @@ export async function chaveiaPorLuminancia(src, { piso = 45, teto = 150 } = {}) 
  * `sup`% abaixo da gola. Aqui isso vira pixels na imagem, e dai sai a distancia
  * focal que a malha precisa.
  */
-export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca }) {
+export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca, torsoFrac = null }) {
   const spec = getGarmentSpec(peca);
   if (!spec.hasTable) throw new Error(`sem tabela de medidas para "${peca}"`);
   const L = spec.sizes.find((s) => s.size === CANONICAL_SIZE).length_cm;
   const larguraPlana = spec.sizes.find((s) => s.size === CANONICAL_SIZE).width_cm;
   // largura plana = meia circunferencia => R = largura/pi
-  const R = larguraPlana / Math.PI;
+  let R = larguraPlana / Math.PI;
 
   const golaPx = golaFrac * imgH;
   const barraPx = barraFrac * imgH;
@@ -72,6 +72,23 @@ export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm,
   const centroArtePx = topoAlvoPx + alturaAlvoPx / 2;
 
   const D = 250;
+
+  // RAIO EFETIVO PELA SILHUETA REAL. O R da tabela modela a peca abracando um
+  // cilindro justo; tecido vestido (sobretudo oversized/moletom) cai mais
+  // plano, e usar o R justo enrola demais: no 352718787 a arte saiu ~11%
+  // estreita (torso implicito de 330 px contra 479 px reais na foto — medido
+  // pelo painel de verificacao). Se o chamador informa a largura visivel do
+  // tronco na altura da arte (fracao da largura da imagem), o raio efetivo
+  // sai da propria projecao: a silhueta do cilindro mede
+  // torsoPx = 2*f*R/D com f = pxPorCm*(D-R), logo R(D-R) = torsoPx*D/(2*pxPorCm)
+  // e R_eff e a raiz menor da quadratica. Nunca menor que o R da tabela.
+  if (torsoFrac) {
+    const torsoPx = torsoFrac * imgW;
+    const K = (torsoPx * D) / (2 * pxPorCm);
+    const disc = D * D - 4 * K;
+    if (disc > 0) R = Math.max(R, (D - Math.sqrt(disc)) / 2);
+  }
+
   const f = (alturaAlvoPx * (D - R)) / artH_cm;
   const cy = centroArtePx - ((collarToTop_cm + artH_cm / 2) * f) / (D - R);
 
