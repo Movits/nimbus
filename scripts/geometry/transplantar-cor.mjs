@@ -13,10 +13,25 @@
 //
 // Uso:
 //   node scripts/geometry/transplantar-cor.mjs --base <corA.png> --doador <corB.png> \
-//     --out <corB-alinhada.png> [--limiar 26] [--feather 1.5] [--relatorio]
+//     --out <corB-alinhada.png> [--limiar 26] [--feather 1.5] [--corte-ombro]
 //
-// PECA COM CAPUZ (Moletom Canguru): passe `--sem-corte-ombro`. Sem a flag o
-// corte de ombro apaga o capuz do doador e a saida sai com capuz da cor ERRADA.
+// SOBRE `--corte-ombro`, e por que ele e OPT-IN.
+//
+// O corte existe porque as duas geracoes tambem diferem no CABELO, e essa
+// diferenca encosta na peca pelo pescoco: a maior componente conexa vira um
+// blob de cabeca+roupa e o transplante troca a cabeca junto (352618935, com
+// fundo identico e topo divergindo 47,4).
+//
+// Mas ele erra na direcao oposta com a mesma facilidade: no 352721477 a gola
+// fica ACIMA da linha de corte, ficou fora da mascara, e a camiseta branca
+// herdou a GOLA PRETA da base, com uma linha dura no ponto do corte. Em peca
+// com capuz o estrago e maior — o capuz inteiro sai da cor errada.
+//
+// O padrao e DESLIGADO porque as duas falhas nao sao igualmente detectaveis:
+//   - cabeca trocada  -> `qa-par-hover` PEGA (a cabeca cai fora da roupa)
+//   - gola/capuz da cor errada -> `qa-par-hover` NAO pega (e roupa, e a regiao
+//     que o teste exclui de proposito)
+// Entre duas falhas, o padrao fica na que o instrumento enxerga.
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
@@ -50,7 +65,7 @@ function maiorComponente(m, W, H) {
   return melhor ?? [];
 }
 
-export async function transplantarCor({ base, doador, out, limiar = 26, feather = 1.5, corteOmbro = true }) {
+export async function transplantarCor({ base, doador, out, limiar = 26, feather = 1.5, corteOmbro = false }) {
   const [a, b] = await Promise.all([cru(base), cru(doador)]);
   const { width: W, height: H } = a.info;
   if (b.info.width !== W || b.info.height !== H) {
@@ -149,7 +164,7 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     base: arg("--base"), doador: arg("--doador"), out: arg("--out"),
     limiar: Number(arg("--limiar", "26")), feather: Number(arg("--feather", "1.5")),
     // Peca com capuz: o capuz e peca acima da linha do ombro e o corte o come.
-    corteOmbro: !process.argv.includes("--sem-corte-ombro"),
+    corteOmbro: process.argv.includes("--corte-ombro"),
   });
   console.log(JSON.stringify(r, null, 2));
 }

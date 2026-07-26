@@ -85,7 +85,12 @@ export function garmentLock(garment) {
 const CENA = {
   RELIQUIA:
     "Portuguese-tiled cloister with blue-and-white azulejos, weathered limestone columns and warm daylight raking across the stone floor",
-  STREET: "white modernist concrete architecture with hard sunlight and deep shadow",
+  // O texto dizia "white modernist concrete architecture" enquanto as capas
+  // publicadas da colecao STREET, que entram como REFERENCE 1, mostram um beco
+  // de grafite. Cada agente resolvia a contradicao de um jeito e a colecao saiu
+  // com o cenario MISTURADO. Decisao do dono em 26/07: unificar no beco de
+  // grafite, que e o que esta no ar e o que combina com as artes de spray.
+  STREET: "narrow urban alley with weathered concrete walls covered in colourful graffiti and spray-painted tags, hard daylight raking down the passage",
   NUVEM: "soft high-key sky-lit space, pale walls, diffuse cloudlike light",
 };
 
@@ -304,16 +309,55 @@ export async function compor({ foto, arte, artCm, peca, gola, barra, centro, tor
 
 /* ------------------------------------------------------------------ */
 
+/**
+ * Le a composicao derivada do CSV oficial, TENTANDO AS DUAS VISTAS.
+ *
+ * O CSV separa `front_*_cm` de `back_*_cm`, e `derive-composicao` filtra por
+ * vista: devolve lista VAZIA quando a arte nao existe naquela vista. Este
+ * script chamava sempre sem `--view`, ou seja com o padrao `back`, entao todo
+ * produto de estampa FRONTAL (Monograma NIMBUS, Acima de Tudo Gotico, Ecobag)
+ * morria em `TypeError: Cannot read properties of undefined (reading
+ * 'garment')` — mesmo com `--peca` e `--arte-cm` informados na linha de
+ * comando, porque o default do `arg()` e avaliado antes da flag ser lida.
+ *
+ * Duas consequencias, as duas corrigidas aqui:
+ *   1. a vista pedida e tentada primeiro, e a outra serve de reserva;
+ *   2. o retorno e OPCIONAL. Quem passou peca e cm na linha de comando nao
+ *      depende do CSV, e um produto ausente dele deixa de ser fatal.
+ */
+function composicaoDerivada(produto, vista) {
+  if (!produto) return null;
+  const ordem = vista === "frente" ? ["front", "back"] : ["back", "front"];
+  for (const v of ordem) {
+    try {
+      const lista = JSON.parse(execFileSync(
+        "node",
+        [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto, "--view", v],
+        { encoding: "utf8" },
+      ));
+      if (lista[0]) return lista[0];
+    } catch { /* produto fora do CSV: segue sem trava derivada */ }
+  }
+  return null;
+}
+
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
   const cmd = process.argv[2];
 
   if (cmd === "blank") {
     const produto = arg("--produto");
-    const comp = JSON.parse(execFileSync("node", [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto], { encoding: "utf8" }))[0];
+    const vista = arg("--vista", "costas");
+    const comp = composicaoDerivada(produto, vista);
+    const garment = arg("--peca", comp?.garment);
+    if (!garment) {
+      throw new Error(
+        `sem peca para ${produto}: nao esta no CSV de dimensoes e --peca nao foi informado.`,
+      );
+    }
     const prompt = promptBlank({
-      garment: arg("--peca", comp.garment), color: arg("--cor", "black"),
+      garment, color: arg("--cor", "black"),
       colecao: arg("--colecao", "RELIQUIA"), extra: arg("--extra", ""),
-      vista: arg("--vista", "costas"),
+      vista,
     });
     const out = arg("--out", `/tmp/${produto}-blank.png`);
     fs.writeFileSync(out.replace(/\.png$/, ".prompt.txt"), `${prompt}\n`);
@@ -324,8 +368,13 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     console.log(JSON.stringify(r));
   } else if (cmd === "compor") {
     const produto = arg("--produto");
-    const comp = JSON.parse(execFileSync("node", [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto], { encoding: "utf8" }))[0];
-    const [w, h] = (arg("--arte-cm") ?? `${comp.art_cm.w}x${comp.art_cm.h}`).split("x").map(Number);
+    const comp = composicaoDerivada(produto, arg("--vista", "costas"));
+    const [w, h] = (arg("--arte-cm") ?? `${comp?.art_cm?.w}x${comp?.art_cm?.h}`).split("x").map(Number);
+    if (!(w > 0) || !(h > 0)) {
+      throw new Error(
+        `dimensoes da arte ausentes para ${produto}: informe --arte-cm LARGURAxALTURA em cm.`,
+      );
+    }
     // PECA: por padrao vem do CSV de 22/07 via derive-composicao. `--peca`
     // existe porque esse CSV tem erro de classificacao conhecido: o 352727892
     // esta registrado como "Blusao Moletom" mas o mockup oficial e a loja
@@ -333,7 +382,15 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     // nuvemshop/auditoria/2026-07-26-datum-mockups/CORRECAO-GOLA-TEMPLATE.md).
     // A peca errada troca a regua: 78,4 cm do Blusao contra 65 cm do Moletom
     // Canguru G, ou seja 20% de erro de escala direto na estampa.
-    const peca = arg("--peca", comp.garment);
+    // `comp` e OPCIONAL (ver composicaoDerivada): produto fora do CSV, ou com a
+    // arte so na outra vista, devolve null. Sem o encadeamento opcional aqui o
+    // `compor` repetia o TypeError que o `blank` ja nao da mais.
+    const peca = arg("--peca", comp?.garment);
+    if (!peca) {
+      throw new Error(
+        `sem peca para ${produto}: nao esta no CSV de dimensoes e --peca nao foi informado.`,
+      );
+    }
 
     // SUPERSAMPLING (padrao 2x): compoe em resolucao dobrada e reduz com
     // Lanczos no final. Sem isso a trama halftone vira xadrez de 1-2 px na
