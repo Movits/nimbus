@@ -227,3 +227,80 @@ para o Anjo da Guarda [352728277], mas as pastas de mockups distinguem
   rodar). ROTACIONAR a chave depois do lote (instrução do handoff).
 - Custo observado: 1 chamada de imagem por blank (~US$0,13); zero falhas de
   geração até aqui (2 blanks utilizáveis em 2 tentativas).
+
+---
+
+## Sessão de 26/07: correções de método
+
+### Placement: a gola estava no marco errado
+
+A tabela de 26/07 foi levantada com agentes relendo a gola em cada mockup, mas
+gola e barra são constantes do template. Em quatro Camisetas Premium o agente
+marcou o topo da ribana (y=53) em vez da costura (y=66): 2,6 pontos, ou ~2,5 cm
+de deslocamento, contra uma tolerância de 1,5 cm.
+
+Arbitrado por silhueta idêntica em onze produtos, inspeção visual das duas
+linhas candidatas e a constante já verificada nos 45 mockups. Validado contra a
+tabela publicada: Camiseta Premium −1,6%, Moletom Canguru −0,3%.
+
+Detalhes em `nuvemshop/auditoria/2026-07-26-datum-mockups/CORRECAO-GOLA-TEMPLATE.md`.
+
+### Quanto cada erro vale
+
+- gola errada em X pontos percentuais → **X cm** de deslocamento (1:1)
+- vão da tinta errado em X% → X% *do próprio placement* (5% sobre 9 cm = 0,45 cm)
+
+O teste de comprimento implicado responde aos dois, então sozinho ele super-alarma.
+
+### 352727892 não é Blusão
+
+O CSV registra Blusão Moletom; o mockup oficial e a loja mostram capuz e bolso
+canguru. Corrigido na FONTE (`derive-composicao.mjs`), não só via flag, porque
+a peça errada troca a régua de 65 para 78,4 cm.
+
+Pendência: o capuz gerado desce 4x mais que o do mockup oficial e conflita com a
+estampa. Nem a versão com oclusão (enterra a coroa) nem a sem (estampa por cima
+do capuz) servem.
+
+### A trava de peça sumia no Blusão
+
+`GARMENT_LOCK` tinha a chave sem til enquanto o catálogo usa "Blusão Moletom".
+O prompt ia sem a trava, ou seja nada impedia a IA de pôr capuz num Blusão.
+Agora a busca ignora acento e lança quando não acha.
+
+### Posição medida por registro, não por caixa
+
+A caixa por limiar é cega para tinta escura sobre tecido escuro: a mesma arte no
+mesmo placement deu −0,04 cm na branca e +2,44 cm na preta. A posição passou a
+usar o registro NCC, como a escala já usava.
+
+### Receitas ao lado de cada capa
+
+`compor` grava `<capa>.receita.json` com todos os parâmetros. Sem isso não era
+possível recompor sem re-derivar landmarks à mão: havia 37 capas prontas e só
+17 QA JSONs com nomes inconsistentes.
+
+Também há `scripts/geometry/reaplicar-oclusao.mjs`, que recupera a máscara do
+capuz do par `<v>-semcapuz.png` / `<v>.png` já existente, sem precisar do
+polígono original.
+
+### Blusão Moletom: comprimento estimado
+
+A YouDraw não publica tabela. Adotado **78,4 cm**, mediana da régua-pela-arte
+sobre os quatro mockups de Blusão. Marcado como `estimado: true` no spec.
+
+### Ecobag [355581274]: NÃO regenerada, com motivo
+
+É o único item do catálogo que a pipeline não processa: painel plano, sem gola
+nem barra, então não há régua vertical nem malha cilíndrica que se apliquem.
+Construir um compositor plano para uma capa seria desproporcional.
+
+Verificado o que dava para verificar sem instrumento novo: a arte
+`G1-nimbus-tag-azul.png` tem razão 0,933 e o CSV registra 24,0 × 25,7 cm, razão
+0,934 — concordam. Uma medição improvisada da escala no mockup NÃO foi confiável
+(devolveu razão de tinta 1,126, incompatível com a arte), e por isso não é
+usada como evidência.
+
+**Decisão: manter a capa publicada.** Fica explícito que ela não passou pelo
+mesmo crivo das outras 77 e depende de decisão do dono se quiser tratamento
+próprio.
