@@ -41,12 +41,17 @@ export async function ocluir({ composta, blank, polilinha, out, featherPx = 3 })
   const poly = [[primeiro[0], 0], ...pts, [ultimo[0], 0]];
   const d = poly.map(([x, y], i) => `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ") + " Z";
 
-  // mascara branca = area do capuz (restaurar blank), com feather por blur
+  // mascara branca = area do capuz (restaurar blank), com feather por blur.
+  // IMPORTANTE: fundo PRETO OPACO no SVG. Com fundo transparente o sharp
+  // rasteriza premultiplicado e o canal R sai binario depois do blur — o
+  // feather declarado nao chegava ao PNG (transicao 0-1 px, pega na
+  // contra-prova do 352718787 v7).
   const svg = Buffer.from(
     `<svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">` +
+    `<rect width="${W}" height="${H}" fill="#000000"/>` +
     `<path d="${d}" fill="#ffffff"/></svg>`,
   );
-  const mask = await sharp(svg).blur(featherPx).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const mask = await sharp(svg).removeAlpha().blur(featherPx).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
 
   const outBuf = Buffer.from(base.data);
   let restaurados = 0;
