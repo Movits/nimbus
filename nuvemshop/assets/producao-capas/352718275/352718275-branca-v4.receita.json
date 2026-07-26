@@ -1,0 +1,20 @@
+{
+ "produto": "352718275",
+ "cor_arquivo": "352718275-branca-v4.png",
+ "foto": "nuvemshop/assets/producao-capas/352718275/352718275-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+ "arte_cm": "35.2x35",
+ "peca": "Camiseta Premium",
+ "gola": 0.318,
+ "barra": 0.9561,
+ "centro": 0.4316,
+ "torso": null,
+ "yaw": 0,
+ "placement": 11.26,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 1.024,
+ "gerado_em": "2026-07-26T15:56:13.951Z"
+}

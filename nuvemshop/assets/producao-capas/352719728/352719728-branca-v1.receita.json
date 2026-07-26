@@ -1,0 +1,20 @@
+{
+ "produto": "352719728",
+ "cor_arquivo": "352719728-branca-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352719728/352719728-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+ "arte_cm": "27.8x40",
+ "peca": "Blusão Moletom",
+ "gola": 0.334,
+ "barra": 0.8907,
+ "centro": 0.421,
+ "torso": 0.26,
+ "yaw": 0,
+ "placement": 11.86,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.699,
+ "gerado_em": "2026-07-26T16:58:39.593Z"
+}

@@ -1,0 +1,20 @@
+{
+ "produto": "352702753",
+ "cor_arquivo": "352702753-offwhite-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352702753/352702753-offwhite-blank.png",
+ "arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+ "arte_cm": "29.3x30.1",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.313,
+ "barra": 0.917,
+ "centro": 0.49,
+ "torso": 0.2686,
+ "yaw": 0,
+ "placement": 16.34,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.697,
+ "gerado_em": "2026-07-26T16:52:28.464Z"
+}

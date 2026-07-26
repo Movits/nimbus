@@ -1,0 +1,20 @@
+{
+ "produto": "352702796",
+ "cor_arquivo": "352702796-preta-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352702796/352702796-preta-blank.png",
+ "arte": "designs/prontos/RELIQUIA/peito/B9-monograma-nmb.png",
+ "arte_cm": "28.5x29.4",
+ "peca": "Camiseta Premium",
+ "gola": 0.294,
+ "barra": 0.891,
+ "centro": 0.5,
+ "torso": 0.318,
+ "yaw": 0,
+ "placement": 13.7,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.646,
+ "gerado_em": "2026-07-26T16:55:15.911Z"
+}

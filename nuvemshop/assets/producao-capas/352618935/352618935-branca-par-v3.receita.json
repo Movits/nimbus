@@ -1,0 +1,20 @@
+{
+ "produto": "352618935",
+ "cor_arquivo": "352618935-branca-par-v3.png",
+ "foto": "nuvemshop/assets/producao-capas/352618935/352618935-branca-par-blank-alinhado.png",
+ "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+ "arte_cm": "30.6x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.133,
+ "barra": 0.944,
+ "centro": 0.535,
+ "torso": 0.352,
+ "yaw": 0,
+ "placement": 12.73,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.868,
+ "gerado_em": "2026-07-26T18:23:59.894Z"
+}

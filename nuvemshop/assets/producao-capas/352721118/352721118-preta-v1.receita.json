@@ -1,0 +1,20 @@
+{
+ "produto": "352721118",
+ "cor_arquivo": "352721118-preta-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352721118/352721118-preta-blank.png",
+ "arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+ "arte_cm": "33.7x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.284,
+ "barra": 0.917,
+ "centro": 0.478,
+ "torso": 0.5215,
+ "yaw": 0,
+ "placement": 11.51,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.419,
+ "gerado_em": "2026-07-26T16:11:27.122Z"
+}

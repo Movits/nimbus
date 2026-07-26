@@ -1,0 +1,110 @@
+﻿{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade de traco e texto"
+  ],
+  "alertas": [
+    "centro"
+  ],
+  "caixa_pct": {
+    "x0": 33.3,
+    "x1": 57.03,
+    "y0": 36.62,
+    "y1": 65.92
+  },
+  "luminancia_tecido": 221.4,
+  "checks": {
+    "barra": {
+      "usada_pct": 93,
+      "detectada_pct": 93.16,
+      "delta_pp": -0.16,
+      "candidatos": [
+        {
+          "y_pct": 93.16,
+          "forca": 332.3
+        },
+        {
+          "y_pct": 90.23,
+          "forca": 18.9
+        },
+        {
+          "y_pct": 86.13,
+          "forca": 8
+        },
+        {
+          "y_pct": 82.81,
+          "forca": 19.8
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "instrumento": "registro NCC (score 0.595)",
+      "altura_medida_cm": 37.3,
+      "alvo_cm": 37.5,
+      "desvio_pct": -0.52,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 0.8106,
+      "razao_plana": 0.9326,
+      "compressao_pct": 13.08,
+      "esperado_pct": 8.83,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 45.07,
+      "eixo_silhueta_pct": 37.3,
+      "desvio_pp": 7.76,
+      "ok": null,
+      "alerta": true,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "instrumento": "registro NCC (score 0.595)",
+      "topo_medido_pct": 36.65,
+      "topo_caixa_pct": 36.62,
+      "topo_esperado_pct": 36.67,
+      "placement_oficial_cm": 10.94,
+      "erro_cm": -0.03,
+      "ok": true,
+      "nota": "placement medido no mockup oficial; +- 1,5 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 2.32,
+      "fiel_pct": 75.5,
+      "razao": 0.03,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 36.1,
+      "hf_fiel": 153.4,
+      "razao": 0.24,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    },
+    "tinta_visivel": {
+      "tecido": 221.409,
+      "tinta_mediana": 64,
+      "tinta_p05": 0,
+      "tinta_p95": 234.1,
+      "fracao_contrastante": 91.2,
+      "ok": true,
+      "sentido": "tinta escura sobre tecido claro",
+      "nota": "fracao dos pixels de tinta que se afastam do tecido mais de 40 niveis; a inversao real medida deu 0,2% e as capas corretas ficam acima de 44%"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

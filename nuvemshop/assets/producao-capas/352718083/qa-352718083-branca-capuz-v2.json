@@ -1,0 +1,100 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [
+    "centro"
+  ],
+  "caixa_pct": {
+    "x0": 34.57,
+    "x1": 63.28,
+    "y0": 34.18,
+    "y1": 68.85
+  },
+  "luminancia_tecido": 168.8,
+  "checks": {
+    "barra": {
+      "usada_pct": 94.8,
+      "detectada_pct": 94.63,
+      "delta_pp": 0.17,
+      "candidatos": [
+        {
+          "y_pct": 94.63,
+          "forca": 217.8
+        },
+        {
+          "y_pct": 89.45,
+          "forca": 28.6
+        },
+        {
+          "y_pct": 85.16,
+          "forca": 7
+        },
+        {
+          "y_pct": 80.27,
+          "forca": 5
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "instrumento": "caixa por limiar (registro falhou; tolerancia alargada)",
+      "altura_medida_cm": 35.25,
+      "alvo_cm": 35,
+      "desvio_pct": 0.73,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 0.8287,
+      "razao_plana": 1.0011,
+      "compressao_pct": 17.23,
+      "esperado_pct": 12.99,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 49.03,
+      "eixo_silhueta_pct": 67.53,
+      "desvio_pp": -18.5,
+      "ok": null,
+      "alerta": true,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "instrumento": "caixa por limiar (registro falhou)",
+      "topo_medido_pct": 34.18,
+      "topo_caixa_pct": 34.18,
+      "topo_esperado_pct": 34.38,
+      "placement_oficial_cm": 3.73,
+      "erro_cm": -0.2,
+      "ok": true,
+      "nota": "registro NCC falhou; medido pela caixa por limiar, que subestima em tecido escuro. Tolerancia alargada para 3 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 4.05,
+      "fiel_pct": 75.16,
+      "razao": 0.05,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 89.7,
+      "hf_fiel": 156.9,
+      "razao": 0.57,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

@@ -1,0 +1,20 @@
+{
+ "produto": "352718787",
+ "cor_arquivo": "352718787-preta-par-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352718787/352718787-preta-par-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+ "arte_cm": "31x40",
+ "peca": "Moletom Canguru",
+ "gola": 0.311,
+ "barra": 0.955,
+ "centro": 0.497,
+ "torso": 0.4727,
+ "yaw": -12,
+ "placement": 3.94,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.58,
+ "gerado_em": "2026-07-26T18:15:24.077Z"
+}

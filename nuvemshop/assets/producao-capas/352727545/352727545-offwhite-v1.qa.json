@@ -1,0 +1,100 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [
+    "centro"
+  ],
+  "caixa_pct": {
+    "x0": 39.26,
+    "x1": 61.23,
+    "y0": 35.74,
+    "y1": 67.68
+  },
+  "luminancia_tecido": 234,
+  "checks": {
+    "barra": {
+      "usada_pct": 93.55,
+      "detectada_pct": 97.36,
+      "delta_pp": -3.81,
+      "candidatos": [
+        {
+          "y_pct": 97.36,
+          "forca": 30.4
+        },
+        {
+          "y_pct": 93.55,
+          "forca": 377.5
+        },
+        {
+          "y_pct": 90.92,
+          "forca": 14.8
+        },
+        {
+          "y_pct": 83.69,
+          "forca": 3.7
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "instrumento": "registro NCC (score 0.685)",
+      "altura_medida_cm": 39.83,
+      "alvo_cm": 40,
+      "desvio_pct": -0.44,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 0.689,
+      "razao_plana": 0.7231,
+      "compressao_pct": 4.72,
+      "esperado_pct": 7.64,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 49.67,
+      "eixo_silhueta_pct": 11.96,
+      "desvio_pp": 37.71,
+      "ok": null,
+      "alerta": true,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "instrumento": "registro NCC (score 0.685)",
+      "topo_medido_pct": 35.4,
+      "topo_caixa_pct": 35.74,
+      "topo_esperado_pct": 35.35,
+      "placement_oficial_cm": 12.18,
+      "erro_cm": 0.06,
+      "ok": true,
+      "nota": "placement medido no mockup oficial; +- 1,5 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 0.08,
+      "fiel_pct": 75.16,
+      "razao": 0,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 73.4,
+      "hf_fiel": 181.6,
+      "razao": 0.4,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

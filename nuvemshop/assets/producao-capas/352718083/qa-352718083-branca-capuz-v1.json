@@ -1,0 +1,100 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [
+    "centro"
+  ],
+  "caixa_pct": {
+    "x0": 33.4,
+    "x1": 62.01,
+    "y0": 33.69,
+    "y1": 68.65
+  },
+  "luminancia_tecido": 165.8,
+  "checks": {
+    "barra": {
+      "usada_pct": 95,
+      "detectada_pct": 94.92,
+      "delta_pp": 0.08,
+      "candidatos": [
+        {
+          "y_pct": 94.92,
+          "forca": 209.8
+        },
+        {
+          "y_pct": 91.99,
+          "forca": 7.7
+        },
+        {
+          "y_pct": 89.55,
+          "forca": 36
+        },
+        {
+          "y_pct": 84.57,
+          "forca": 10.9
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "instrumento": "caixa por limiar (registro falhou; tolerancia alargada)",
+      "altura_medida_cm": 35.11,
+      "alvo_cm": 35,
+      "desvio_pct": 0.32,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 0.8189,
+      "razao_plana": 1.0011,
+      "compressao_pct": 18.2,
+      "esperado_pct": 13.66,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 47.66,
+      "eixo_silhueta_pct": 64.84,
+      "desvio_pp": -17.18,
+      "ok": null,
+      "alerta": true,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "instrumento": "caixa por limiar (registro falhou)",
+      "topo_medido_pct": 33.69,
+      "topo_caixa_pct": 33.69,
+      "topo_esperado_pct": 33.82,
+      "placement_oficial_cm": 3.73,
+      "erro_cm": -0.13,
+      "ok": true,
+      "nota": "registro NCC falhou; medido pela caixa por limiar, que subestima em tecido escuro. Tolerancia alargada para 3 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 3.28,
+      "fiel_pct": 75.18,
+      "razao": 0.04,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 95.8,
+      "hf_fiel": 178.3,
+      "razao": 0.54,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

@@ -1,0 +1,20 @@
+{
+ "produto": "352721197",
+ "cor_arquivo": "352721197-preta-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352721197/352721197-preta-blank.png",
+ "arte": "designs/prontos/STREET/costas/G9-fe-tag-v3.png",
+ "arte_cm": "33.8x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.291,
+ "barra": 0.962,
+ "centro": 0.56,
+ "torso": 0.335,
+ "yaw": 0,
+ "placement": 8.48,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.823,
+ "gerado_em": "2026-07-26T16:11:02.104Z"
+}

@@ -1,0 +1,20 @@
+{
+ "produto": "352727545",
+ "cor_arquivo": "352727545-preta-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352727545/352727545-preta-blank.png",
+ "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+ "arte_cm": "29.5x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.26,
+ "barra": 0.9395,
+ "centro": 0.485,
+ "torso": 0.336,
+ "yaw": 0,
+ "placement": 12.18,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.663,
+ "gerado_em": "2026-07-26T16:15:20.661Z"
+}

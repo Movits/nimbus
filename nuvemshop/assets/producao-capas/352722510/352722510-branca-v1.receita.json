@@ -1,0 +1,20 @@
+{
+ "produto": "352722510",
+ "cor_arquivo": "352722510-branca-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352722510/352722510-branca-blank.png",
+ "arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+ "arte_cm": "35x39.7",
+ "peca": "Blusão Moletom",
+ "gola": 0.262,
+ "barra": 0.874,
+ "centro": 0.485,
+ "torso": 0.28,
+ "yaw": 0,
+ "placement": 10.55,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.9,
+ "gerado_em": "2026-07-26T16:55:27.178Z"
+}

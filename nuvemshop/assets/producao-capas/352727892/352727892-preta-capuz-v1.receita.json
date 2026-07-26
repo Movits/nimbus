@@ -1,0 +1,20 @@
+{
+ "produto": "352727892",
+ "cor_arquivo": "352727892-preta-capuz-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352727892/352727892-preta-blank-capuz.png",
+ "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+ "arte_cm": "23.8x40",
+ "peca": "Moletom Canguru",
+ "gola": 0.306,
+ "barra": 0.938,
+ "centro": 0.527,
+ "torso": null,
+ "yaw": 16,
+ "placement": 4.32,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.645,
+ "gerado_em": "2026-07-26T17:11:59.579Z"
+}

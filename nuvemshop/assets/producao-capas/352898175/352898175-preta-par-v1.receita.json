@@ -1,0 +1,20 @@
+{
+ "produto": "352898175",
+ "cor_arquivo": "352898175-preta-par-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352898175/352898175-preta-par-blank.png",
+ "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-branco.png",
+ "arte_cm": "29.5x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.258,
+ "barra": 0.945,
+ "centro": 0.492,
+ "torso": 0.34,
+ "yaw": 0,
+ "placement": 11.58,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.725,
+ "gerado_em": "2026-07-26T17:52:49.089Z"
+}

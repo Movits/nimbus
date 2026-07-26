@@ -1,0 +1,20 @@
+{
+ "produto": "352726673",
+ "cor_arquivo": "352726673-branca-par-v1-semcapuz.png",
+ "foto": "nuvemshop/assets/producao-capas/352726673/352726673-branca-par-blank-alinhado.png",
+ "arte": "designs/prontos/STREET/costas/G6-sao-miguel-stencil-preto.png",
+ "arte_cm": "28.5x39.4",
+ "peca": "Moletom Canguru",
+ "gola": 0.29,
+ "barra": 0.889,
+ "centro": 0.47,
+ "torso": 0.3,
+ "yaw": 0,
+ "placement": 3.54,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.772,
+ "gerado_em": "2026-07-26T17:51:52.557Z"
+}

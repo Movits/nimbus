@@ -1,0 +1,20 @@
+{
+ "produto": "352702020",
+ "cor_arquivo": "352702020-branca-par-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352702020/352702020-branca-par-blank-alinhado.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+ "arte_cm": "35.2x28.8",
+ "peca": "Camiseta Premium",
+ "gola": 0.2695,
+ "barra": 0.9404,
+ "centro": 0.513,
+ "torso": 0.3145,
+ "yaw": 0,
+ "placement": 8.35,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.918,
+ "gerado_em": "2026-07-26T17:51:46.582Z"
+}

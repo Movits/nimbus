@@ -1,0 +1,20 @@
+{
+ "produto": "352618837",
+ "cor_arquivo": "352618837-branca-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352618837/352618837-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+ "arte_cm": "30.6x40",
+ "peca": "Blusão Moletom",
+ "gola": 0.275,
+ "barra": 0.858,
+ "centro": 0.545,
+ "torso": 0.3,
+ "yaw": 0,
+ "placement": 12.99,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.691,
+ "gerado_em": "2026-07-26T16:47:02.915Z"
+}

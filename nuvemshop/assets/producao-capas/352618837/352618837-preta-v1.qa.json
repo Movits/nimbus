@@ -1,0 +1,89 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [],
+  "caixa_pct": {
+    "x0": 50.2,
+    "x1": 69.82,
+    "y0": 37.11,
+    "y1": 66.8
+  },
+  "luminancia_tecido": 20.2,
+  "checks": {
+    "barra": {
+      "usada_pct": 86,
+      "detectada_pct": 98.05,
+      "delta_pp": -12.05,
+      "candidatos": [
+        {
+          "y_pct": 98.05,
+          "forca": 1.1
+        },
+        {
+          "y_pct": 93.55,
+          "forca": 2
+        },
+        {
+          "y_pct": 86.04,
+          "forca": 4.2
+        },
+        {
+          "y_pct": 80.96,
+          "forca": 2.5
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "motivo": "\"Blusão Moletom\" sem tabela de medidas",
+      "ok": null
+    },
+    "aspecto": {
+      "razao_medida": 0.6623,
+      "razao_plana": 0.762,
+      "compressao_pct": 13.08,
+      "esperado_pct": 11.07,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 61.07,
+      "eixo_silhueta_pct": 55.47,
+      "desvio_pp": 5.61,
+      "ok": null,
+      "alerta": false,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "ok": null,
+      "nota": "sem placement oficial: passe --placement <cm> (placement-oficial.json). Sem ele a composicao usa os 8 cm historicos, que sao suposicao."
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 7.44,
+      "fiel_pct": 75.13,
+      "razao": 0.1,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 66.1,
+      "hf_fiel": 252,
+      "razao": 0.26,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

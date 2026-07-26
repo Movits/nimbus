@@ -1,0 +1,20 @@
+{
+ "produto": "352619175",
+ "cor_arquivo": "352619175-preta-par-v1-semcapuz.png",
+ "foto": "nuvemshop/assets/producao-capas/352619175/352619175-preta-par-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B2-salmo19.png",
+ "arte_cm": "35.2x28.8",
+ "peca": "Moletom Canguru",
+ "gola": 0.293,
+ "barra": 0.889,
+ "centro": 0.516,
+ "torso": null,
+ "yaw": 0,
+ "placement": 3.74,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.953,
+ "gerado_em": "2026-07-26T18:09:49.346Z"
+}
