@@ -33,6 +33,7 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Onde a estampa fica em cada produto | [`verdades/placement.md`](verdades/placement.md) |
 | Qual arte é de qual produto e cor de tinta | [`verdades/artes-e-mapeamento.md`](verdades/artes-e-mapeamento.md) |
 | Quais são os 49 produtos e 78 variantes | [`verdades/catalogo.md`](verdades/catalogo.md) |
+| Quais receitas têm `torso` ou `centro` errados | [`verdades/torso-e-centro.md`](verdades/torso-e-centro.md) |
 | **O que os instrumentos NÃO enxergam** | [`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md) |
 
 `decisoes/` guarda as decisões do dono, datadas. Elas valem até nova decisão dele.

@@ -29,10 +29,15 @@ em resolução real. Três defeitos, todos confirmados por medição depois:
 **Três pilotos refeitos e aprovados** com o compositor novo (352718999 branca,
 352889132 preta, 352618878 preta). O dono aprovou o resultado visual.
 
-**Próximo passo:** varrer as 77 receitas atrás de `torso` e `centro` errados, e
-reconstruir o catálogo uma capa por vez. Um agente já encontrou que a receita do
-352718999 usava `torso 0.44`, que é a largura **manga a manga** — dobrava o raio
-da malha e achatava a estampa. É provável que o vício se repita.
+**A varredura de receitas foi feita.** O vício do `torso` se repete: **12 capas**
+inflam o raio acima do teto dos pilotos (a pior, 352725852 preta, a 2,03× a
+tabela), **8** estão com `centro` ou `torso` não medidos, e há **11 contradições
+provadas** entre receitas do mesmo blank. Ordem de retrabalho e método em
+[`verdades/torso-e-centro.md`](verdades/torso-e-centro.md); instrumento em
+`scripts/producao/auditar-receitas.mjs`.
+
+**Próximo passo:** reconstruir o catálogo uma capa por vez, na ordem daquela
+tabela, remedindo `torso` e `centro` no blank antes de recompor.
 
 ## Medições fechadas
 
@@ -41,6 +46,17 @@ da malha e achatava a estampa. É provável que o vício se repita.
 - Horizontal: a arte é centrada no produto, mediana de desvio **0%**.
 - Comprimento do Blusão: 78,4 cm, **estimado**, com a ressalva registrada.
 - 352727892 reclassificado de Blusão para Moletom Canguru.
+
+## A sessão na nuvem compõe sem chave de IA
+
+Provado em 26/07 num clone limpo: `npm install` + `setup-assets` + `compor`
+reproduz o piloto aprovado do 352718999 com `arco_meio_rad 0,735`, idêntico à
+receita. Os **149 blanks estão versionados** no repo de assets; só as capas
+compostas ficaram de fora.
+
+A `GEMINI_API_KEY` é necessária **apenas para gerar blank novo** (passo 1 do
+fluxo de capa). Recompor o catálogo a partir dos blanks que já existem não
+depende dela. As duas variantes sem blank são 352890896 off-white e a Ecobag.
 
 ## Pendências do projeto
 
