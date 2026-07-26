@@ -37,7 +37,7 @@ A régua-pela-arte, aplicada ao comprimento da peça, dá um autoteste:
 | Camiseta Premium | 75,5 cm | 74,3 cm | −1,6% |
 | Moletom Canguru | 65 cm | 64,8 cm | −0,3% |
 | Camiseta Oversized Premium | 82 cm | 91,0 cm | +11% |
-| Blusão Moletom | *não publicada* | 78,5 cm | — |
+| Blusão Moletom | *não publicada* | 78,4 cm | — |
 
 O Oversized é o único template fora de escala. **Isso não corrompe o
 placement**: se o render estica a peça, estica a tinta junto, então a razão
@@ -49,19 +49,20 @@ exatamente a propriedade que motivou a régua-pela-arte.
 - 46 produtos tiveram o placement recalculado; **13 mudaram mais de 1,5 cm**:
   352727892, 352720257, 352702753, 352703276, 352728451, 352618903, 352407182,
   352722232, 352728524, 352702796, 352703343, 352728019, 352890896.
-- O maior movimento é o 352727892 (Blusão): 2,21 → 19,30 cm. A leitura antiga
-  de gola (29,4%) estava claramente errada; com a constante do template o
-  comprimento implicado sai de 65,9 para 78,0 cm, alinhado aos outros quatro
-  Blusões.
+- Doze desses são correções legítimas de gola, entre −4,01 e −1,56 cm.
+- O décimo terceiro, 352727892, **não** era erro de gola: era erro de peça no
+  CSV. Ver a seção final; o placement correto dele é 4,32 cm.
 
 ## Comprimento do Blusão Moletom
 
-A YouDraw não publica tabela de medidas para essa peça. Os cinco mockups dão,
-pela régua-pela-arte, 78,78 / 78,05 / 77,99 / 80,23 / 78,99 cm — mediana
-**78,5 cm**, que é o valor adotado.
+A YouDraw não publica tabela de medidas para essa peça. Os quatro mockups de
+Blusão dão, pela régua-pela-arte, 78,78 / 78,05 / 77,99 / 80,23 cm — mediana
+**78,4 cm**, que é o valor adotado. A meia-circunferência (58 cm) vem do
+Moletom Canguru G, que é a mesma base sem capuz, e serve só de piso, porque
+`--torso` mede o raio efetivo na foto real.
 
 Ressalva registrada: o método acerta −1,6% na Camiseta Premium e −0,3% no
-Moletom Canguru, mas erra +11% no Oversized. Os 78,5 cm podem carregar erro de
+Moletom Canguru, mas erra +11% no Oversized. Os 78,4 cm podem carregar erro de
 escala do template, e as capas de Blusão devem ser marcadas como baseadas em
 suposição até a YouDraw confirmar.
 
