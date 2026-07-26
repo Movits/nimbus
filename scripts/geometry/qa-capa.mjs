@@ -190,7 +190,11 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     const cena = await menor(composta, 900);
     const tpl = await menor(tplPath, 420);
     reg = registerArt(cena, tpl, { scaleRange: [0.12, 0.85] });
-    if (reg) reg.height_pct = (100 * reg.height_px) / cena.height;
+    if (reg) {
+      reg.height_pct = (100 * reg.height_px) / cena.height;
+      // topo da arte pelo REGISTRO, para o check de posicao (ver adiante)
+      reg.topo_pct = (100 * (reg.cy - reg.height_px / 2)) / cena.height;
+    }
   } catch { /* registro pode falhar em arte esparsa */ }
   fs.unlinkSync(tplPath);
 
@@ -268,17 +272,32 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
   // textura e vazamento, mas NUNCA verificava a que altura a arte caiu. Por
   // isso 11 capas foram aprovadas com o placement de 8 cm que a medicao nos
   // mockups oficiais mostrou estar errado para quase todo o catalogo.
+  //
+  // O TOPO SAI DO REGISTRO NCC, NAO DA CAIXA POR LIMIAR. A caixa e cega para
+  // tinta escura sobre tecido escuro: no 352725852 a MESMA arte, no MESMO
+  // placement, deu erro de -0,04 cm na camiseta branca e +2,44 cm na preta,
+  // com a caixa da preta 4,4 pontos mais curta nas DUAS pontas — o halo escuro
+  // do topo e os drips da base somem no diff contra tecido preto. A escala ja
+  // usava o registro por esse mesmo motivo e passou nas duas (0,15% e -0,10%).
   checks.posicao = placementCm != null && L ? (() => {
     const cmPorPxLocal = L / pecaPx;
     const esperadoPx = gola * H + (placementCm / cmPorPxLocal);
-    const erroCm = (mom.y0 - esperadoPx) * cmPorPxLocal;
+    const usaRegistro = reg && reg.score >= 0.4 && Number.isFinite(reg.topo_pct);
+    const topoPx = usaRegistro ? (reg.topo_pct / 100) * H : mom.y0;
+    const erroCm = (topoPx - esperadoPx) * cmPorPxLocal;
     return {
-      topo_medido_pct: +((100 * mom.y0) / H).toFixed(2),
+      instrumento: usaRegistro ? `registro NCC (score ${reg.score.toFixed(3)})` : "caixa por limiar (registro falhou)",
+      topo_medido_pct: +((100 * topoPx) / H).toFixed(2),
+      topo_caixa_pct: +((100 * mom.y0) / H).toFixed(2),
       topo_esperado_pct: +((100 * esperadoPx) / H).toFixed(2),
       placement_oficial_cm: placementCm,
       erro_cm: +erroCm.toFixed(2),
-      ok: Math.abs(erroCm) <= 1.5,
-      nota: "placement medido no mockup oficial; +- 1,5 cm",
+      // Sem registro a caixa e o unico instrumento, e ela subestima em tecido
+      // escuro: alargar a tolerancia em vez de reprovar por cegueira do metodo.
+      ok: Math.abs(erroCm) <= (usaRegistro ? 1.5 : 3.0),
+      nota: usaRegistro
+        ? "placement medido no mockup oficial; +- 1,5 cm"
+        : "registro NCC falhou; medido pela caixa por limiar, que subestima em tecido escuro. Tolerancia alargada para 3 cm",
     };
   })() : {
     ok: null,
