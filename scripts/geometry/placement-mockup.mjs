@@ -23,19 +23,32 @@ import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
 
-// y em px de um canvas 500x500, medidos nos mockups oficiais
+// y em px de um canvas 500x500, medidos nos mockups oficiais.
+//
+// `corpo` e a MESMA ideia aplicada a horizontal: o painel do corpo, sem manga,
+// em x. Ele existe porque segmentar a largura da peca imagem a imagem nao
+// funciona — peca branca sobre fundo branco perde a barra, e peca preta faz a
+// deteccao de tinta estourar. Como gola e barra ja sao constantes do template
+// (verificado nos 45 produtos), a largura do corpo tambem e.
+//
+// So entram valores CONFERIDOS NO OLHO, com as linhas desenhadas sobre o
+// mockup. `corpo: null` significa "ainda nao medido" e faz o horizontal ser
+// omitido para aquela peca — nunca estimado. No Moletom a leitura automatica
+// pegou os PUNHOS junto (57-435 contra ~100-395 no olho) e a versao por maior
+// corrida contigua deu 132-359, que tambem nao bate; fica null ate ser medido
+// direito.
 const TEMPLATE = {
-  "Camiseta Premium": { gola: 65.5, barra: 453.5 },
-  "Camiseta Oversized Premium": { gola: 26, barra: 492.5 },
-  "Moletom Canguru": { gola: 136.5, barra: 475 },
-  "Blusão Moletom": { gola: 62, barra: 450 },
+  "Camiseta Premium": { gola: 65.5, barra: 453.5, corpo: [121, 379] },
+  "Camiseta Oversized Premium": { gola: 26, barra: 492.5, corpo: [119, 386] },
+  "Moletom Canguru": { gola: 136.5, barra: 475, corpo: null },
+  "Blusão Moletom": { gola: 62, barra: 450, corpo: null },
 };
 
 const REFS = "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references";
 const lum = (r, g, b) => 0.299 * r + 0.587 * g + 0.114 * b;
 
 /** Caixa da tinta num mockup plano: o que difere da cor do tecido. */
-async function caixaDaTinta(arquivo) {
+async function caixaDaTinta(arquivo, corpoTpl) {
   const r = await sharp(arquivo).resize(500, 500, { fit: "fill" }).removeAlpha()
     .raw().toBuffer({ resolveWithObject: true });
   const W = 500, H = 500;
@@ -100,7 +113,69 @@ async function caixaDaTinta(arquivo) {
       if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y;
     }
   }
-  return n > 200 ? { x0, x1, y0, y1, n, tecido: tec } : null;
+  if (n <= 200) return null;
+
+  // ---------------------------------------------------------- HORIZONTAL
+  //
+  // Ate 26/07 esta funcao devolvia so `y0/y1`, e a auditoria dos 48 mockups
+  // registrou exclusivamente campos verticais — o CONCLUSOES.md ate fecha com
+  // "nunca usar a regua vertical para larguras". Com isso a largura e a posicao
+  // horizontal da estampa nunca foram comparadas com o produto real: o
+  // compositor nunca ve um mockup e o `escala` do gate mede so altura. Era o
+  // buraco por onde o desalinhamento horizontal voltava capa apos capa.
+  //
+  // A peca e medida na MESMA BANDA de altura da tinta. Ela e mais estreita no
+  // peito e mais larga na barra; comparar tinta do peito com peca da barra
+  // inventaria erro.
+  let bx0 = W, bx1 = -1;
+  for (let y = y0; y <= y1; y += 1) {
+    for (let x = gx0; x <= gx1; x += 1) {
+      if (!peca[y * W + x]) continue;
+      if (x < bx0) bx0 = x;
+      if (x > bx1) bx1 = x;
+    }
+  }
+
+  // PAINEL DO CORPO, sem manga, vindo do TEMPLATE.
+  //
+  // A banda acima e sleeve-to-sleeve — o MESMO erro de `torso 0.44` que
+  // reprovou o lote, agora do lado da referencia. E medir o corpo por
+  // segmentacao nao funciona: peca branca sobre fundo branco perde a barra,
+  // peca preta faz a deteccao estourar, e no moletom os punhos entram junto.
+  // Como gola e barra ja sao constantes do template, o corpo tambem e.
+  const corpo = corpoTpl ? { x0: corpoTpl[0], x1: corpoTpl[1] } : null;
+
+  // SANIDADE. Sem isto o instrumento emite veredito a partir de lixo, que e
+  // exatamente como cinco dos sete defeitos catalogados nasceram. No mockup
+  // preto do 352728277 a deteccao de tinta abriu na peca inteira (caixa de
+  // y=7 a y=492 num canvas de 500) e devolveu `largura_rel` 0,7146 com cara
+  // de medida boa. Pior: a selecao "vence quem tem mais tinta" PREMIA esse
+  // estouro, porque a falha e sempre a leitura com mais pixels.
+  const altPeca = gy1 - gy0 + 1;
+  const motivos = [];
+  if ((y1 - y0 + 1) > 0.8 * altPeca) motivos.push("caixa de tinta cobre >80% da altura da peca");
+  if (y0 <= gy0 + 0.02 * altPeca) motivos.push("caixa de tinta encosta no topo da peca");
+  if (y1 >= gy1 - 0.02 * altPeca) motivos.push("caixa de tinta encosta na barra");
+  if ((x1 - x0 + 1) > 0.95 * (bx1 - bx0 + 1)) motivos.push("caixa de tinta cobre quase toda a largura");
+
+  // A busca de tinta so olha a faixa central (`cx0..cx1`, margem de 14%).
+  // Se a tinta encosta nessa borda, a caixa esta TRUNCADA e a largura medida
+  // e um piso, nao a medida. Melhor declarar do que devolver numero curto.
+  const truncada = x0 <= cx0 + 1 || x1 >= cx1 - 1;
+
+  const largCorpo = corpo ? corpo.x1 - corpo.x0 + 1 : null;
+  return {
+    x0, x1, y0, y1, n, tecido: tec,
+    peca_x0: gx0, peca_x1: gx1, peca_y0: gy0, peca_y1: gy1,
+    banda_x0: bx0, banda_x1: bx1,
+    corpo_x0: corpo?.x0 ?? null, corpo_x1: corpo?.x1 ?? null,
+    // largura da estampa sobre o PAINEL DO CORPO, nao sobre manga a manga
+    largura_rel: largCorpo ? +((x1 - x0 + 1) / largCorpo).toFixed(4) : null,
+    desvio_rel: largCorpo ? +(((x0 + x1) / 2 - (corpo.x0 + corpo.x1) / 2) / largCorpo).toFixed(4) : null,
+    truncada,
+    confiavel: motivos.length === 0,
+    motivos,
+  };
 }
 
 async function main() {
@@ -125,13 +200,23 @@ async function main() {
     const tpl = TEMPLATE[mt.garment];
     if (!tpl) { out.push({ product_id: id, garment: mt.garment, erro: "sem template (Ecobag?)" }); continue; }
 
-    // entre os mockups da pasta, o de COSTAS e o que tem MAIS tinta
+    // Entre os mockups da pasta, o de COSTAS e o que tem MAIS tinta — mas so
+    // entre os que passam na sanidade. Sem esse filtro a regra premia a
+    // falha: quando a deteccao estoura ela abre na peca inteira e ganha por
+    // ter mais pixels que qualquer leitura correta. Foi o que aconteceu no
+    // 352728277 preto.
     let melhor = null;
+    const descartados = [];
     for (const f of fs.readdirSync(path.join(REFS, pasta)).filter((f) => /\.(webp|jpe?g|png)$/i.test(f))) {
-      const cx = await caixaDaTinta(path.join(REFS, pasta, f));
-      if (cx && (!melhor || cx.n > melhor.cx.n)) melhor = { f, cx };
+      const cx = await caixaDaTinta(path.join(REFS, pasta, f), tpl.corpo);
+      if (!cx) continue;
+      if (!cx.confiavel) { descartados.push({ mockup: f, motivos: cx.motivos }); continue; }
+      if (!melhor || cx.n > melhor.cx.n) melhor = { f, cx };
     }
-    if (!melhor) { out.push({ product_id: id, garment: mt.garment, erro: "nenhuma tinta detectada" }); continue; }
+    if (!melhor) {
+      out.push({ product_id: id, garment: mt.garment, erro: "nenhuma leitura confiavel", descartados });
+      continue;
+    }
 
     const vao = tpl.barra - tpl.gola;
     const fracPlacement = (melhor.cx.y0 - tpl.gola) / vao;
@@ -143,6 +228,16 @@ async function main() {
       placement_frac: +fracPlacement.toFixed(4),
       altura_frac: +fracAltura.toFixed(4),
       altura_oficial_cm: alturaOficial,
+      // HORIZONTAL — a metade que faltava. Adimensional de proposito: e o que
+      // transfere do mockup chapado para a foto de modelo, onde a peca aparece
+      // em outra escala e outro enquadramento.
+      largura_rel: melhor.cx.largura_rel,
+      desvio_rel: melhor.cx.desvio_rel,
+      tinta_x0_px: melhor.cx.x0, tinta_x1_px: melhor.cx.x1,
+      corpo_x0_px: melhor.cx.corpo_x0, corpo_x1_px: melhor.cx.corpo_x1,
+      peca_banda_x0_px: melhor.cx.banda_x0, peca_banda_x1_px: melhor.cx.banda_x1,
+      descartados,
+      largura_truncada: melhor.cx.truncada,
       // contraprova: a altura da arte implicada pelo template, em cm, usando o
       // comprimento G — se destoar muito, a leitura (ou o template) esta errada
       pixels_tinta: melhor.cx.n,
