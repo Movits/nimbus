@@ -28,6 +28,7 @@ import { detectarBarra } from "./detect-hem.mjs";
 import { getGarmentSpec } from "./garment-specs.mjs";
 import { CANONICAL_SIZE } from "./measure.mjs";
 import { registerArt } from "./register-art.mjs";
+import { luminanciaDaTinta, avaliar as avaliarContraste } from "./contraste-tinta.mjs";
 
 const arg = (n, d = null) => {
   const i = process.argv.indexOf(n);
@@ -144,7 +145,18 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
   // sobre o tecido: removeAlpha apaga arte cujo RGB sob o alpha nao e branco
   // (pego no Espirito Santo, onde o registro travava com score 0,28).
   const spec = getGarmentSpec(peca);
-  const L = spec.hasTable ? spec.sizes.find((s) => s.size === CANONICAL_SIZE).length_cm : null;
+  // `estimado` cobre o Blusao Moletom, que a YouDraw nao tabela: a medida vem
+  // da regua-pela-arte sobre os mockups oficiais (garment-specs.mjs).
+  //
+  // Sem isso o gate ficava CEGO nessa peca: escala e posicao voltavam null, e
+  // como check null nao entra em `falhas`, o veredito saia APROVADO apoiado so
+  // em confinamento, clipping e moire. Cinco capas de Blusao passaram assim,
+  // sem a escala ter sido medida uma vez. `compose-art.mjs` ja aceitava o
+  // fallback; era so o gate que nao.
+  const L = (spec.hasTable || spec.estimado)
+    ? spec.sizes.find((s) => s.size === CANONICAL_SIZE).length_cm
+    : null;
+  const LEstimado = !spec.hasTable && Boolean(spec.estimado);
   const pecaPx = (barra - gola) * H;
 
   // ---- referencia fiel: arte oficial reamostrada + composta sobre o tecido ----
@@ -207,6 +219,9 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     alvo_cm: arteCm.h,
     desvio_pct: +(100 * (alturaCm / arteCm.h - 1)).toFixed(2),
     ok: Math.abs(100 * (alturaCm / arteCm.h - 1)) <= (alturaRegPct ? 2.0 : 6.0),
+    // A regua desta peca e estimativa, nao dado publicado: o desvio abaixo e
+    // medido CONTRA ela, entao herda o risco de escala da estimativa.
+    ...(LEstimado ? { regua_estimada: true, origem_regua: spec.origem_estimativa } : {}),
   } : { motivo: `"${peca}" sem tabela de medidas`, ok: null };
 
   // ---- aspecto: compressao horizontal vs a arte plana ----
@@ -366,6 +381,25 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     nota: "razao >1,35 = aliasing/moire (aumentar --ss)",
   };
 
+  // ---- A TINTA APARECE NO TECIDO? ----
+  // Varias artes tem duas versoes de tinta, e o sufixo do arquivo nomeia a cor
+  // da PECA, nao a da tinta — com convencao INVERTIDA entre familias: em
+  // `B4-...-branco.png` a tinta e preta, em `G6-...-branco.png` ela e clara.
+  // Trocar as duas gera estampa preta sobre peca preta, e todos os outros
+  // checks passam: escala, posicao, confinamento e moire nao olham cor. Foi
+  // assim que o 352720257 v1 saiu invisivel e so a inspecao visual pegou.
+  try {
+    const t = await luminanciaDaTinta(arte);
+    if (t) {
+      const c = avaliarContraste({ tinta: t, tecido: lumTecido });
+      checks.tinta_visivel = {
+        ...c,
+        nota: "fracao dos pixels de tinta que se afastam do tecido mais de 40 niveis; "
+          + "a inversao real medida deu 0,2% e as capas corretas ficam acima de 44%",
+      };
+    }
+  } catch { /* arte sem alpha ou ilegivel: o check simplesmente nao opina */ }
+
   const falhas = Object.entries(checks).filter(([, v]) => v.ok === false).map(([k]) => k);
   const alertas = Object.entries(checks).filter(([, v]) => v.alerta).map(([k]) => k);
   return {
@@ -379,7 +413,7 @@ export async function qa({ blank, composta, arte, arteCm, peca, gola, barra, yaw
     //    publicada separa (1,16 vs 0,85 no caso real).
     //  - compressao sutil (6,8% vs 5,6%): separacao fraca demais para gate.
     //  - fidelidade de tracos/texto, peca, modelo, cenario: nao sao numericos.
-    limitacoes: ["sinal do yaw", "compressao sutil", "fidelidade visual"],
+    limitacoes: ["sinal do yaw", "compressao sutil", "fidelidade de traco e texto"],
     alertas,
     caixa_pct: {
       x0: +(100 * mom.x0 / W).toFixed(2), x1: +(100 * mom.x1 / W).toFixed(2),
