@@ -302,6 +302,11 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
       foto, arte: arg("--arte"), artCm: { w, h }, peca: comp.garment,
       gola: Number(arg("--gola")), barra: Number(arg("--barra")), centro: Number(arg("--centro", "0.5")),
       out, opacidade: Number(arg("--opacidade", "0.93")),
+      // Em tecido escuro a placa de sombra fica ruidosa (variacoes minusculas
+      // de luminancia viram razoes grandes) e pode pintar faixa fantasma na
+      // tinta clara — medido no painel do 352725749 v6. Aperte o clamp quando
+      // a peca for escura: --sombra-min 0.9 --sombra-max 1.12.
+      sombraMin: Number(arg("--sombra-min", "0.75")), sombraMax: Number(arg("--sombra-max", "1.25")),
     });
     if (ss > 1) {
       await sharp(out)
