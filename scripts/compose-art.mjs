@@ -55,7 +55,9 @@ export async function chaveiaPorLuminancia(src, { piso = 45, teto = 150 } = {}) 
  */
 export function planejar({ golaFrac, barraFrac, centroFrac, imgW, imgH, artW_cm, artH_cm, peca, torsoFrac = null, yawDeg = 0, placementCm = null }) {
   const spec = getGarmentSpec(peca);
-  if (!spec.hasTable) throw new Error(`sem tabela de medidas para "${peca}"`);
+  // `estimado` cobre o Blusao Moletom, que a YouDraw nao publica: a medida sai
+  // da regua-pela-arte sobre os mockups oficiais (ver garment-specs.mjs).
+  if (!spec.hasTable && !spec.estimado) throw new Error(`sem tabela de medidas para "${peca}"`);
   const L = spec.sizes.find((s) => s.size === CANONICAL_SIZE).length_cm;
   const larguraPlana = spec.sizes.find((s) => s.size === CANONICAL_SIZE).width_cm;
   // largura plana = meia circunferencia => R = largura/pi

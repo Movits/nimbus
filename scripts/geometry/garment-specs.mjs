@@ -16,6 +16,31 @@ import { fileURLToPath } from "node:url";
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SOURCE_FILE = path.join(HERE, "..", "build-prelaunch-matrix.mjs");
 
+const CANONICAL = "G";
+
+/**
+ * Pecas que a YouDraw NAO publica, com medida ESTIMADA e a origem declarada.
+ *
+ * Existe porque "sem regua" travava as 6 capas de Blusao Moletom. A estimativa
+ * nao e inventada: sai da regua-pela-arte sobre os cinco mockups oficiais, o
+ * mesmo metodo que acerta -1,6% na Camiseta Premium e -0,3% no Moletom
+ * Canguru quando conferido contra a tabela publicada.
+ *
+ * `estimado: true` viaja junto para que quem consome saiba que e suposicao.
+ * Apagar esta entrada assim que a YouDraw confirmar a tabela.
+ */
+const ESTIMADAS = {
+  "Blusão Moletom": {
+    length_cm: 78.5,
+    width_cm: 58,
+    origem:
+      "comprimento: regua-pela-arte nos 5 mockups oficiais (78,78 / 78,05 / 77,99 / 80,23 / 78,99 -> mediana 78,5), "
+      + "ver nuvemshop/auditoria/2026-07-26-datum-mockups/CORRECAO-GOLA-TEMPLATE.md. "
+      + "largura: igual ao Moletom Canguru G (58 cm), que e a mesma base sem capuz; "
+      + "serve so de piso, porque --torso mede o raio efetivo na foto real.",
+  },
+};
+
 function parseNumber(value) {
   return Number.parseFloat(value.replace(",", "."));
 }
@@ -69,6 +94,19 @@ export function getGarmentSpec(garment) {
     throw new Error(`peca desconhecida: "${garment}". Conhecidas: ${known}`);
   }
   if (entry.sizes.length === 0) {
+    const est = ESTIMADAS[garment];
+    if (est) {
+      return {
+        garment,
+        hasTable: false,
+        estimado: true,
+        origem_estimativa: est.origem,
+        raw: entry.raw,
+        sizes: [{ size: CANONICAL, width_cm: est.width_cm, length_cm: est.length_cm }],
+        lengthRange: [est.length_cm, est.length_cm],
+        widthRange: [est.width_cm, est.width_cm],
+      };
+    }
     return {
       garment,
       hasTable: false,
