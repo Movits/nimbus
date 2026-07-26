@@ -277,11 +277,41 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
     const produto = arg("--produto");
     const comp = JSON.parse(execFileSync("node", [path.join(RAIZ, "scripts/derive-composicao.mjs"), "--product", produto], { encoding: "utf8" }))[0];
     const [w, h] = (arg("--arte-cm") ?? `${comp.art_cm.w}x${comp.art_cm.h}`).split("x").map(Number);
+
+    // SUPERSAMPLING (padrao 2x): compoe em resolucao dobrada e reduz com
+    // Lanczos no final. Sem isso a trama halftone vira xadrez de 1-2 px na
+    // malha cilindrica — medido no painel de verificacao do 352618878 v5:
+    // energia de alta frequencia 1,9-2,9x acima do esperado e meios-tons
+    // clareados ~10 niveis. A pre-reducao da textura sozinha nao basta para
+    // arte de meio-tom; o supersampling da a media que a bilinear nao faz.
+    // `--ss 1` desliga (util para depurar).
+    const ss = Math.max(1, Number(arg("--ss", "2")));
+    const fotoOrig = arg("--foto");
+    const outFinal = arg("--out");
+    let foto = fotoOrig;
+    let out = outFinal;
+    const metaOrig = await sharp(fotoOrig).metadata();
+    if (ss > 1) {
+      foto = outFinal.replace(/\.png$/, `.tmp-base${ss}x.png`);
+      out = outFinal.replace(/\.png$/, `.tmp-comp${ss}x.png`);
+      await sharp(fotoOrig)
+        .resize({ width: metaOrig.width * ss, height: metaOrig.height * ss, kernel: "lanczos3" })
+        .png().toFile(foto);
+    }
     const r = await compor({
-      foto: arg("--foto"), arte: arg("--arte"), artCm: { w, h }, peca: comp.garment,
+      foto, arte: arg("--arte"), artCm: { w, h }, peca: comp.garment,
       gola: Number(arg("--gola")), barra: Number(arg("--barra")), centro: Number(arg("--centro", "0.5")),
-      out: arg("--out"), opacidade: Number(arg("--opacidade", "0.93")),
+      out, opacidade: Number(arg("--opacidade", "0.93")),
     });
+    if (ss > 1) {
+      await sharp(out)
+        .resize({ width: metaOrig.width, height: metaOrig.height, kernel: "lanczos3" })
+        .png().toFile(outFinal);
+      fs.unlinkSync(foto);
+      fs.unlinkSync(out);
+      r.out = outFinal;
+      r.supersample = ss;
+    }
     console.log(JSON.stringify(r, null, 2));
   } else {
     console.error("comandos: blank | grade | compor");
