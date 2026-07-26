@@ -1,0 +1,20 @@
+{
+ "produto": "352703343",
+ "cor_arquivo": "352703343-preta-v2.png",
+ "foto": "nuvemshop\\assets\\producao-capas\\352703343\\352703343-preta-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+ "arte_cm": "35.2x32.9",
+ "peca": "Camiseta Premium",
+ "gola": 0.277,
+ "barra": 0.908,
+ "centro": 0.447,
+ "torso": 0.304,
+ "yaw": 0,
+ "placement": 8.15,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.891,
+ "gerado_em": "2026-07-26T15:37:18.812Z"
+}

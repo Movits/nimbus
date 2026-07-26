@@ -1,0 +1,20 @@
+{
+ "produto": "352721477",
+ "cor_arquivo": "352721477-branca-v9.png",
+ "foto": "nuvemshop/assets/producao-capas/352721477/352721477-branca-blank.png",
+ "arte": "designs/prontos/STREET/costas/G8-pomba-stencil-preto.png",
+ "arte_cm": "35.2x35.1",
+ "peca": "Camiseta Premium",
+ "gola": 0.299,
+ "barra": 0.9639,
+ "centro": 0.505,
+ "torso": 0.55,
+ "yaw": 0,
+ "placement": 8.82,
+ "opacidade": 0.96,
+ "sombra_min": 0.75,
+ "sombra_max": 1.25,
+ "ss": 2,
+ "arco_meio_rad": 0.481,
+ "gerado_em": "2026-07-26T15:29:04.272Z"
+}

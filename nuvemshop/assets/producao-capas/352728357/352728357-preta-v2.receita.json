@@ -1,0 +1,20 @@
+{
+ "produto": "352728357",
+ "cor_arquivo": "352728357-preta-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352728357/352728357-preta-blank.png",
+ "arte": "designs/prontos/STREET/costas/G2-anjo-livro-stencil.png",
+ "arte_cm": "25.5x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.286,
+ "barra": 0.907,
+ "centro": 0.513,
+ "torso": 0.308,
+ "yaw": 0,
+ "placement": 8.67,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.625,
+ "gerado_em": "2026-07-26T15:38:51.005Z"
+}

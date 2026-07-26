@@ -1,0 +1,20 @@
+{
+ "produto": "352717837",
+ "cor_arquivo": "352717837-preta-v9.png",
+ "foto": "nuvemshop/assets/producao-capas/352717837/352717837-preta-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+ "arte_cm": "29.6x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.287,
+ "barra": 0.95,
+ "centro": 0.496,
+ "torso": 0.4805,
+ "yaw": -15,
+ "placement": 8.13,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.1,
+ "ss": 2,
+ "arco_meio_rad": 0.473,
+ "gerado_em": "2026-07-26T15:28:22.231Z"
+}

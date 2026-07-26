@@ -1,0 +1,96 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [],
+  "caixa_pct": {
+    "x0": 45.7,
+    "x1": 72.85,
+    "y0": 46.29,
+    "y1": 67.29
+  },
+  "luminancia_tecido": 232.1,
+  "checks": {
+    "barra": {
+      "usada_pct": 105.6,
+      "detectada_pct": 97.36,
+      "delta_pp": 8.24,
+      "candidatos": [
+        {
+          "y_pct": 97.36,
+          "forca": 33.3
+        },
+        {
+          "y_pct": 94.73,
+          "forca": 18.1
+        },
+        {
+          "y_pct": 91.5,
+          "forca": 12.2
+        },
+        {
+          "y_pct": 87.3,
+          "forca": 3.8
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "instrumento": "registro NCC (score 0.612)",
+      "altura_medida_cm": 24.53,
+      "alvo_cm": 24.6,
+      "desvio_pct": -0.3,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 1.2917,
+      "razao_plana": 1.4228,
+      "compressao_pct": 9.21,
+      "esperado_pct": 5.76,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 60.21,
+      "eixo_silhueta_pct": 61.72,
+      "desvio_pp": -1.51,
+      "ok": null,
+      "alerta": false,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "topo_medido_pct": 46.29,
+      "topo_esperado_pct": 46.32,
+      "placement_oficial_cm": 8.1,
+      "erro_cm": -0.04,
+      "ok": true,
+      "nota": "placement medido no mockup oficial; +- 1,5 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 1,
+      "pct_do_quadro": 0.0001,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 0,
+      "fiel_pct": 75.04,
+      "razao": 0,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 78.8,
+      "hf_fiel": 150.4,
+      "razao": 0.52,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

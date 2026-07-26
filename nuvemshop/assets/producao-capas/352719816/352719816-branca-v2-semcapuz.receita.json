@@ -1,0 +1,20 @@
+{
+ "produto": "352719816",
+ "cor_arquivo": "352719816-branca-v2-semcapuz.png",
+ "foto": "nuvemshop/assets/producao-capas/352719816/352719816-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+ "arte_cm": "27.7x40",
+ "peca": "Moletom Canguru",
+ "gola": 0.33,
+ "barra": 0.953,
+ "centro": 0.503,
+ "torso": 0.4697,
+ "yaw": 0,
+ "placement": 3.71,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.503,
+ "gerado_em": "2026-07-26T15:50:37.800Z"
+}

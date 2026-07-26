@@ -1,0 +1,98 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [
+    "centro"
+  ],
+  "caixa_pct": {
+    "x0": 35.84,
+    "x1": 64.55,
+    "y0": 37.3,
+    "y1": 57.81
+  },
+  "luminancia_tecido": 10.8,
+  "checks": {
+    "barra": {
+      "usada_pct": 98.24,
+      "detectada_pct": 98.24,
+      "delta_pp": 0,
+      "candidatos": [
+        {
+          "y_pct": 98.24,
+          "forca": 18.5
+        },
+        {
+          "y_pct": 95.21,
+          "forca": 6.5
+        },
+        {
+          "y_pct": 90.53,
+          "forca": 2.6
+        },
+        {
+          "y_pct": 84.18,
+          "forca": 1.7
+        }
+      ],
+      "ok": null,
+      "nota": "informativo; confiavel em camiseta, ruidoso em moletom"
+    },
+    "escala": {
+      "instrumento": "registro NCC (score 0.735)",
+      "altura_medida_cm": 24.51,
+      "alvo_cm": 24.6,
+      "desvio_pct": -0.36,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 1.3981,
+      "razao_plana": 1.4251,
+      "compressao_pct": 1.89,
+      "esperado_pct": 3.36,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 51.05,
+      "eixo_silhueta_pct": 59.08,
+      "desvio_pp": -8.03,
+      "ok": null,
+      "alerta": true,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "topo_medido_pct": 37.3,
+      "topo_esperado_pct": 37.34,
+      "placement_oficial_cm": 11.61,
+      "erro_cm": -0.05,
+      "ok": true,
+      "nota": "placement medido no mockup oficial; +- 1,5 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 23.19,
+      "fiel_pct": 76.38,
+      "razao": 0.3,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 76.6,
+      "hf_fiel": 223,
+      "razao": 0.34,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

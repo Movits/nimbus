@@ -1,0 +1,20 @@
+{
+ "produto": "352718083",
+ "cor_arquivo": "352718083-branca-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352718083/352718083-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S3-azulejo-cruz-v2.png",
+ "arte_cm": "35.2x35",
+ "peca": "Moletom Canguru",
+ "gola": 0.288,
+ "barra": 0.946,
+ "centro": 0.487,
+ "torso": 0.48,
+ "yaw": 0,
+ "placement": 3.73,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.664,
+ "gerado_em": "2026-07-26T15:45:36.596Z"
+}

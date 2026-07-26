@@ -1,0 +1,20 @@
+{
+ "produto": "352889132",
+ "cor_arquivo": "352889132-preta-v1.png",
+ "foto": "nuvemshop/assets/producao-capas/352889132/352889132-preta-blank.png",
+ "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+ "arte_cm": "23.8x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.35,
+ "barra": 0.9385,
+ "centro": 0.492,
+ "torso": 0.31,
+ "yaw": 0,
+ "placement": 8.2,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.546,
+ "gerado_em": "2026-07-26T15:29:17.723Z"
+}

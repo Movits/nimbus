@@ -119,3 +119,11 @@ scripts/__pycache__/
 # Quarentena local de artefatos superados (limpeza de 26/07/2026): nada aqui
 # entra no git; apagar a pasta so depois de conferir que nada faz falta.
 /_arquivo-*/
+
+# Capas de producao: 584 MB de PNG de 2,6 MB cada. O repositorio e publico e
+# nao e lugar de binario grande. O que importa para reproduzir fica versionado:
+# REGISTRO.md, os .receita.json (todos os parametros de composicao) e os
+# qa-*.json (o veredito do gate).
+nuvemshop/assets/producao-capas/**/*.png
+nuvemshop/assets/producao-capas/**/*.webp
+nuvemshop/assets/producao-capas/**/*.prompt.txt

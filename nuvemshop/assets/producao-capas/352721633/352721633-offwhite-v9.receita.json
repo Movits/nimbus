@@ -1,0 +1,20 @@
+{
+ "produto": "352721633",
+ "cor_arquivo": "352721633-offwhite-v9.png",
+ "foto": "nuvemshop/assets/producao-capas/352721633/352721633-offwhite-blank.png",
+ "arte": "designs/prontos/STREET/costas/G1-nimbus-tag-azul.png",
+ "arte_cm": "35.1x37.5",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.281,
+ "barra": 0.932,
+ "centro": 0.322,
+ "torso": 0.5146,
+ "yaw": 20,
+ "placement": 10.94,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.25,
+ "ss": 2,
+ "arco_meio_rad": 0.459,
+ "gerado_em": "2026-07-26T15:29:10.015Z"
+}

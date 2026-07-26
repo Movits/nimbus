@@ -1,0 +1,20 @@
+{
+ "produto": "352718999",
+ "cor_arquivo": "352718999-branca-v9.png",
+ "foto": "nuvemshop/assets/producao-capas/352718999/352718999-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+ "arte_cm": "31x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.402,
+ "barra": 0.9727,
+ "centro": 0.49,
+ "torso": 0.44,
+ "yaw": 0,
+ "placement": 15.29,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.461,
+ "gerado_em": "2026-07-26T15:28:48.709Z"
+}

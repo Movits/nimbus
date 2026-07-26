@@ -1,0 +1,20 @@
+{
+ "produto": "352703153",
+ "cor_arquivo": "352703153-preta-v3.png",
+ "foto": "nuvemshop/assets/producao-capas/352703153/352703153-preta-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B7-fe-acima-de-tudo-branco.png",
+ "arte_cm": "35.2x24.6",
+ "peca": "Camiseta Premium",
+ "gola": 0.327,
+ "barra": 0.9805,
+ "centro": 0.5,
+ "torso": 0.313,
+ "yaw": 0,
+ "placement": 8.3,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.897,
+ "gerado_em": "2026-07-26T15:37:07.759Z"
+}

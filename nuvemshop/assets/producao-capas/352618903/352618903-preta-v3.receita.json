@@ -1,0 +1,20 @@
+{
+ "produto": "352618903",
+ "cor_arquivo": "352618903-preta-v3.png",
+ "foto": "nuvemshop/assets/producao-capas/352618903/352618903-preta-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+ "arte_cm": "30.6x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.27,
+ "barra": 0.9131,
+ "centro": 0.543,
+ "torso": 0.335,
+ "yaw": 0,
+ "placement": 11.74,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.649,
+ "gerado_em": "2026-07-26T15:36:15.011Z"
+}

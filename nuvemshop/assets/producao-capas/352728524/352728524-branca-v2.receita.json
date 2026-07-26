@@ -1,0 +1,20 @@
+{
+ "produto": "352728524",
+ "cor_arquivo": "352728524-branca-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352728524/352728524-branca-blank.png",
+ "arte": "designs/prontos/STREET/costas/G3-acima-de-tudo-tags.png",
+ "arte_cm": "35.2x27.2",
+ "peca": "Camiseta Premium",
+ "gola": 0.169,
+ "barra": 0.6064,
+ "centro": 0.52,
+ "torso": 0.2,
+ "yaw": 20,
+ "placement": 14.2,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.944,
+ "gerado_em": "2026-07-26T15:29:34.447Z"
+}

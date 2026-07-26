@@ -1,0 +1,20 @@
+{
+ "produto": "352717723",
+ "cor_arquivo": "352717723-offwhite-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352717723/352717723-offwhite-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B3-cruz-crest.png",
+ "arte_cm": "29.6x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.3221,
+ "barra": 0.9033,
+ "centro": 0.4804,
+ "torso": 0.412,
+ "yaw": -15,
+ "placement": 9.76,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.441,
+ "gerado_em": "2026-07-26T15:37:24.478Z"
+}

@@ -1,0 +1,20 @@
+{
+ "produto": "352703276",
+ "cor_arquivo": "352703276-preta-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352703276/352703276-preta-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+ "arte_cm": "35.1x33",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.249,
+ "barra": 0.9727,
+ "centro": 0.51,
+ "torso": 0.351,
+ "yaw": 0,
+ "placement": 10.58,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.806,
+ "gerado_em": "2026-07-26T15:37:12.923Z"
+}

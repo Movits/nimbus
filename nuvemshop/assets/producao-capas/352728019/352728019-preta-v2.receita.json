@@ -1,0 +1,20 @@
+{
+ "produto": "352728019",
+ "cor_arquivo": "352728019-preta-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352728019/352728019-preta-blank.png",
+ "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+ "arte_cm": "23.8x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.332,
+ "barra": 0.986,
+ "centro": 0.465,
+ "torso": 0.37,
+ "yaw": 30,
+ "placement": 11.18,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.46,
+ "gerado_em": "2026-07-26T15:31:56.030Z"
+}

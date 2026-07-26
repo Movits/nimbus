@@ -1,0 +1,20 @@
+{
+ "produto": "352725749",
+ "cor_arquivo": "352725749-preta-v9.png",
+ "foto": "nuvemshop/assets/producao-capas/352725749/352725749-preta-blank.png",
+ "arte": "designs/prontos/STREET/mockups/Querubim Spray [Camiseta+Oversized] [frente e verso]/costas - Querubim Spray.png",
+ "arte_cm": "25.5x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.28,
+ "barra": 0.93,
+ "centro": 0.505,
+ "torso": 0.523,
+ "yaw": 0,
+ "placement": 12.88,
+ "opacidade": 0.93,
+ "sombra_min": 0.9,
+ "sombra_max": 1.12,
+ "ss": 2,
+ "arco_meio_rad": 0.326,
+ "gerado_em": "2026-07-26T15:29:18.358Z"
+}

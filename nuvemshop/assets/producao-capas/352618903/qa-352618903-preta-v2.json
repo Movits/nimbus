@@ -1,0 +1,96 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [],
+  "caixa_pct": {
+    "x0": 43.46,
+    "x1": 65.14,
+    "y0": 38.48,
+    "y1": 69.63
+  },
+  "luminancia_tecido": 29.2,
+  "checks": {
+    "barra": {
+      "usada_pct": 91.31,
+      "detectada_pct": 98.63,
+      "delta_pp": -7.32,
+      "candidatos": [
+        {
+          "y_pct": 98.63,
+          "forca": 2.8
+        },
+        {
+          "y_pct": 93.75,
+          "forca": 2
+        },
+        {
+          "y_pct": 91.31,
+          "forca": 38.3
+        },
+        {
+          "y_pct": 88.18,
+          "forca": 3.1
+        }
+      ],
+      "ok": null,
+      "nota": "informativo. Confiavel em CAMISETA CLARA. Em moletom pega o contorno da calca/chao; em camiseta PRETA sobre calca PRETA o degrau mais baixo tambem e a calca — nesses casos use o 2o candidato e confirme no zoom"
+    },
+    "escala": {
+      "instrumento": "registro NCC (score 0.679)",
+      "altura_medida_cm": 39.88,
+      "alvo_cm": 40,
+      "desvio_pct": -0.31,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 0.6969,
+      "razao_plana": 0.762,
+      "compressao_pct": 8.55,
+      "esperado_pct": 6.87,
+      "ok": null,
+      "alerta": false,
+      "nota": "compara com o encurtamento cilindrico previsto para este arco; folga de 4 pp"
+    },
+    "centro": {
+      "centro_arte_pct": 55.65,
+      "eixo_silhueta_pct": 53.27,
+      "desvio_pp": 2.38,
+      "ok": null,
+      "alerta": false,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "posicao": {
+      "topo_medido_pct": 38.48,
+      "topo_esperado_pct": 38.4,
+      "placement_oficial_cm": 14.53,
+      "erro_cm": 0.1,
+      "ok": true,
+      "nota": "placement medido no mockup oficial; +- 1,5 cm"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 0.49,
+      "fiel_pct": 75.14,
+      "razao": 0.01,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 61.6,
+      "hf_fiel": 217.8,
+      "razao": 0.28,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

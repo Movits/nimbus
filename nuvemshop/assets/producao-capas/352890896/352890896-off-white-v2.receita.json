@@ -1,0 +1,20 @@
+{
+ "produto": "352890896",
+ "cor_arquivo": "352890896-off-white-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352890896/352890896-off-white-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+ "arte_cm": "27.9x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.336,
+ "barra": 0.9629,
+ "centro": 0.56,
+ "torso": 0.335,
+ "yaw": 6,
+ "placement": 11.51,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.575,
+ "gerado_em": "2026-07-26T15:43:11.509Z"
+}

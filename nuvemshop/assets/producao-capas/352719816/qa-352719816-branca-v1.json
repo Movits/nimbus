@@ -1,0 +1,87 @@
+{
+  "limitacoes": [
+    "sinal do yaw",
+    "compressao sutil",
+    "fidelidade visual"
+  ],
+  "alertas": [],
+  "caixa_pct": {
+    "x0": 37.79,
+    "x1": 62.7,
+    "y0": 40.72,
+    "y1": 78.91
+  },
+  "luminancia_tecido": 177.1,
+  "checks": {
+    "barra": {
+      "usada_pct": 95.3,
+      "detectada_pct": 98.34,
+      "delta_pp": -3.04,
+      "candidatos": [
+        {
+          "y_pct": 98.34,
+          "forca": 13
+        },
+        {
+          "y_pct": 95.51,
+          "forca": 230.9
+        },
+        {
+          "y_pct": 91.31,
+          "forca": 14.2
+        },
+        {
+          "y_pct": 87.79,
+          "forca": 15.6
+        }
+      ],
+      "ok": null,
+      "nota": "informativo; confiavel em camiseta, ruidoso em moletom"
+    },
+    "escala": {
+      "instrumento": "registro NCC (score 0.600)",
+      "altura_medida_cm": 39.89,
+      "alvo_cm": 40,
+      "desvio_pct": -0.28,
+      "ok": true
+    },
+    "aspecto": {
+      "razao_medida": 0.6531,
+      "razao_plana": 0.6931,
+      "compressao_pct": 5.78,
+      "ok": null,
+      "alerta": false,
+      "nota": "sem yaw: 3-6% e o normal. Com pose 3/4, comparar com a assinatura da capa publicada (razao DR/DL), nao com este numero"
+    },
+    "centro": {
+      "centro_arte_pct": 50.35,
+      "eixo_silhueta_pct": 47.9,
+      "desvio_pp": 2.45,
+      "ok": null,
+      "alerta": false,
+      "nota": "silhueta inclui mangas; use a capa publicada como referencia de eixo"
+    },
+    "confinamento": {
+      "pixels_fora_forte": 0,
+      "pct_do_quadro": 0,
+      "ok": true,
+      "nota": "so diff >70 fora da caixa; abaixo disso e ruido do supersampling"
+    },
+    "clipping": {
+      "composta_pct": 1.28,
+      "fiel_pct": 75.18,
+      "razao": 0.02,
+      "ok": true,
+      "nota": "clamp de sombra alto estoura o creme; baixar --sombra-max"
+    },
+    "moire": {
+      "hf_composta": 82.6,
+      "hf_fiel": 139.6,
+      "razao": 0.59,
+      "ok": true,
+      "nota": "razao >1,35 = aliasing/moire (aumentar --ss)"
+    }
+  },
+  "falhas": [],
+  "veredito": "APROVADO"
+}

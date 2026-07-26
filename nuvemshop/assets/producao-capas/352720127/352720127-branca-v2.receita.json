@@ -1,0 +1,20 @@
+{
+ "produto": "352720127",
+ "cor_arquivo": "352720127-branca-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352720127/352720127-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/S1-aparecida-barroca.png",
+ "arte_cm": "27.7x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.325,
+ "barra": 0.9209,
+ "centro": 0.507,
+ "torso": 0.26,
+ "yaw": 0,
+ "placement": 15.33,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.781,
+ "gerado_em": "2026-07-26T15:38:27.756Z"
+}

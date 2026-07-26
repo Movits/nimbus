@@ -1,0 +1,20 @@
+{
+ "produto": "352407196",
+ "cor_arquivo": "352407196-branca-v9.png",
+ "foto": "nuvemshop/assets/producao-capas/352407196/352407196-branca-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+ "arte_cm": "31.5x40",
+ "peca": "Camiseta Premium",
+ "gola": 0.347,
+ "barra": 0.949,
+ "centro": 0.505,
+ "torso": 0.4,
+ "yaw": 0,
+ "placement": 8.29,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.25,
+ "ss": 2,
+ "arco_meio_rad": 0.557,
+ "gerado_em": "2026-07-26T15:27:13.169Z"
+}

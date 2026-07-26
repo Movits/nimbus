@@ -1,0 +1,20 @@
+{
+ "produto": "352407182",
+ "cor_arquivo": "352407182-offwhite-v2.png",
+ "foto": "nuvemshop/assets/producao-capas/352407182/352407182-offwhite-blank.png",
+ "arte": "designs/prontos/RELIQUIA/costas/H2-sao-miguel-halftone-v2.png",
+ "arte_cm": "31.6x40",
+ "peca": "Camiseta Oversized Premium",
+ "gola": 0.29,
+ "barra": 0.9424,
+ "centro": 0.49,
+ "torso": 0.32,
+ "yaw": -18,
+ "placement": 10.1,
+ "opacidade": 0.93,
+ "sombra_min": 0.75,
+ "sombra_max": 1.15,
+ "ss": 2,
+ "arco_meio_rad": 0.716,
+ "gerado_em": "2026-07-26T15:26:45.753Z"
+}
