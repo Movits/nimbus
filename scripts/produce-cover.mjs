@@ -328,6 +328,24 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
       r.out = outFinal;
       r.supersample = ss;
     }
+    // RECEITA AO LADO DA CAPA. Sem isso nao da para recompor uma capa sem
+    // re-derivar os landmarks a mao: quando a tabela de placement foi
+    // corrigida em 26/07, 37 capas prontas tinham so 17 QA JSONs, com nomes
+    // inconsistentes, e nenhum registro completo dos parametros usados.
+    // Com a receita, recompor o catalogo inteiro vira um laco.
+    const receita = {
+      produto, cor_arquivo: path.basename(outFinal),
+      foto: fotoOrig, arte: arg("--arte"), arte_cm: `${w}x${h}`, peca: comp.garment,
+      gola: Number(arg("--gola")), barra: Number(arg("--barra")), centro: Number(arg("--centro", "0.5")),
+      torso: arg("--torso") ? Number(arg("--torso")) : null,
+      yaw: Number(arg("--yaw", "0")),
+      placement: arg("--placement") ? Number(arg("--placement")) : null,
+      opacidade: Number(arg("--opacidade", "0.93")),
+      sombra_min: Number(arg("--sombra-min", "0.75")), sombra_max: Number(arg("--sombra-max", "1.25")),
+      ss, arco_meio_rad: r.alvo?.arco_meio_rad ?? null, gerado_em: new Date().toISOString(),
+    };
+    fs.writeFileSync(outFinal.replace(/\.png$/, ".receita.json"), `${JSON.stringify(receita, null, 1)}\n`);
+    r.receita = outFinal.replace(/\.png$/, ".receita.json");
     console.log(JSON.stringify(r, null, 2));
   } else {
     console.error("comandos: blank | grade | compor");
