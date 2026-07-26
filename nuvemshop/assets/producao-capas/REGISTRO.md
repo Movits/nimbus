@@ -304,3 +304,36 @@ usada como evidência.
 **Decisão: manter a capa publicada.** Fica explícito que ela não passou pelo
 mesmo crivo das outras 77 e depende de decisão do dono se quiser tratamento
 próprio.
+
+### Capuz x estampa: decisão de 26/07
+
+Medido em todas as capas de moletom já produzidas quanto o capuz cobre da tinta:
+
+| produto | coberto |
+|---|---|
+| Aparecida Spray `352727892` | 33% |
+| Azulejo Sagrado `352718083` | 17,5% |
+| São Jorge Neobarroco `352718787` preta | 17% |
+| os outros cinco moletons | 4% a 10% |
+
+A causa é estrutural, não da foto. O placement oficial (~4 cm) foi medido no
+mockup PLANO, onde o capuz está deitado ACIMA da costura da gola. Vestido, o
+capuz cai e ocupa uns 15 cm abaixo dela. Ou seja, **no produto físico a estampa
+começa 4 cm abaixo da costura e o capuz cai por cima**. Uma foto que mostra isso
+é a verdadeira; a capa publicada hoje desceu a arte para ~11 cm, o que embeleza
+mas não corresponde ao produto.
+
+O dono decidiu entre fotografar como é e usar o capuz levantado, deixando o
+julgamento por conta da sessão, com a ressalva de que capuz levantado não pode
+ser foto chapada de costas.
+
+**Decisão: capuz na cabeça, pose 3/4, nos três piores** (e na Branca do
+`352718787` junto, para não quebrar o par de cor). Capuz levantado não engana
+sobre onde a estampa fica, é o que quem usa faz, e preserva a arte inteira;
+enterrar a coroa de Nossa Senhora numa marca devocional derruba a capa no
+elemento que identifica a peça.
+
+Os outros cinco moletons ficam como estão: 4% a 10% é margem, não arte.
+
+Perfil puro foi descartado como alvo: de lado a estampa desaparece. O alvo é
+três-quartos traseiro, com o painel das costas inteiro visível.
