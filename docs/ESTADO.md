@@ -53,6 +53,21 @@ o tecido ganhou `--sombra-global` (a estampa segue a iluminação da cena) e
 **dobra 180 · relevo 8**. As três capas estão recompostas com isso (v4/v5),
 gate aprovado, à espera do olho.
 
+**O CATÁLOGO FOI RECOMPOSTO (27/07).** As três aprovadas viraram receita, e as
+**68 variantes restantes da fila** foram compostas com ela: placement
+registrado, tecido `dobra 180 · relevo 8 · sombra-global 1`, torso/centro
+relidos nas 13 marcadas, yaw medido onde havia costura lida. **67 de 68 passam
+no gate**; a única reprova (352728524-branca) é **alarme falso provado** — arte
+de 35,2 cm dá arco ~1 rad, fora do domínio do NCC, e a compressão de malha bate
+com a tabela (16,96% vs 16,58%). Auditadas visualmente em 8 folhas de contato;
+**14 ficam em observação** (pose girada, yaw 0 plausível — conferir em resolução
+real e ler a costura se acusar), marcadas com `watch` no
+`relatorio-recomposicao.json`. Fora da fila, com motivo: Ecobag (painel plano),
+352890896-offwhite (sem blank; gerar com Gemini), e os 3 produtos frontais
+(352702753, 352702796, 352720257 — placement de frente nunca foi medido).
+Ferramentas: `fila-recomposicao.json` + `scripts/producao/recompor-fila.mjs`
+(idempotente; `ajustes-fila.json` para releituras). **Nada publicado.**
+
 **Três capas refeitas em 26/07, à espera do olho do dono:** 352725852 preta
 (Camiseta Premium, era 2,03× → 1,19×), 352728277 preta (Oversized, 1,86× →
 1,18×) e 352718787 branca (Moletom Canguru com capuz, 1,45× → 1,14×). As três

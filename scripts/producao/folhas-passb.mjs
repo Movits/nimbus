@@ -7,7 +7,7 @@ const S = process.argv[2];
 const D = "nuvemshop/assets/producao-capas";
 const rel = JSON.parse(fs.readFileSync("nuvemshop/producao/relatorio-recomposicao.json", "utf8"));
 const { fila } = JSON.parse(fs.readFileSync("nuvemshop/producao/fila-recomposicao.json", "utf8"));
-const X0 = 0.20, X1 = 0.80, Y0 = 0.10, Y1 = 0.92, TW = 850;
+const X0 = 0.20, X1 = 0.80, Y0 = 0.10, Y1 = 0.92, TW = 640;
 const tiles = [];
 for (const f of fila) {
   const k = `${f.id}|${f.cor}`;
@@ -31,7 +31,7 @@ for (const f of fila) {
   }).resize({ width: TW }).png().toBuffer();
   tiles.push(crop);
 }
-const COLS = 2, ROWS = 3;
+const COLS = 3, ROWS = 3;
 let n = 0;
 for (let i = 0; i < tiles.length; i += COLS * ROWS) {
   const grupo = tiles.slice(i, i + COLS * ROWS);

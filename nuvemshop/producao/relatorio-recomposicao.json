@@ -15,7 +15,8 @@
   "compressao": "15.65/14.32",
   "chapada": false,
   "releitura": false,
-  "s": 13
+  "s": 13,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
  },
  "352723243|branca": {
   "ok": true,
@@ -71,18 +72,20 @@
  },
  "352890896|preta": {
   "ok": true,
-  "out": "352890896-preta-v3.png",
+  "out": "352890896-preta-v4.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
   "falhas": [],
-  "alertas": [],
-  "escala_pct": -0.15,
-  "posicao_cm": -0.04,
-  "compressao": "4.42/7.19",
-  "chapada": true,
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.37,
+  "posicao_cm": 0.01,
+  "compressao": "6.4/7.19",
+  "chapada": false,
   "releitura": true,
-  "s": 14
+  "s": 13
  },
  "352890896|offwhite": {
   "ok": true,
@@ -120,18 +123,19 @@
  },
  "352719816|branca": {
   "ok": true,
-  "out": "352719816-branca-v4.png",
+  "out": "352719816-branca-v5.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
   "falhas": [],
   "alertas": [],
-  "escala_pct": 0.02,
-  "posicao_cm": -0.05,
-  "compressao": "5.61/9.12",
+  "escala_pct": -0.28,
+  "posicao_cm": 0.01,
+  "compressao": "7.59/9.12",
   "chapada": true,
   "releitura": true,
-  "s": 14
+  "s": 14,
+  "capuz": "conferido no olho: capuz enrolado na nuca, arte comeca abaixo; sem oclusao"
  },
  "352717960|branca": {
   "ok": true,
@@ -148,22 +152,25 @@
   "compressao": "17.07/14.32",
   "chapada": false,
   "releitura": false,
-  "s": 20
+  "s": 20,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
  },
  "352718275|branca": {
   "ok": true,
-  "out": "352718275-branca-v5.png",
+  "out": "352718275-branca-v6.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
   "falhas": [],
-  "alertas": [],
+  "alertas": [
+   "centro"
+  ],
   "escala_pct": 1.02,
   "posicao_cm": -0.33,
-  "compressao": "19.44/16.58",
-  "chapada": false,
+  "compressao": "13.54/16.58",
+  "chapada": true,
   "releitura": true,
-  "s": 20
+  "s": 19
  },
  "352718083|branca": {
   "ok": true,
@@ -201,37 +208,37 @@
  },
  "352717723|offwhite": {
   "ok": true,
-  "out": "352717723-offwhite-v3.png",
+  "out": "352717723-offwhite-v4.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
   "falhas": [],
-  "alertas": [
-   "centro"
-  ],
-  "escala_pct": -0.25,
-  "posicao_cm": -0.03,
-  "compressao": "4.62/8.07",
+  "alertas": [],
+  "escala_pct": 0.14,
+  "posicao_cm": -0.05,
+  "compressao": "5.66/8.07",
   "chapada": true,
   "releitura": true,
-  "s": 10
+  "s": 9
  },
  "352717837|preta": {
   "ok": true,
-  "out": "352717837-preta-v10.png",
+  "out": "352717837-preta-v11.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
   "falhas": [],
   "alertas": [
+   "aspecto",
    "centro"
   ],
-  "escala_pct": -0.22,
-  "posicao_cm": 0.03,
-  "compressao": "5.18/11.91",
+  "escala_pct": 0.02,
+  "posicao_cm": -0.05,
+  "compressao": "9.92/11.91",
   "chapada": true,
   "releitura": true,
-  "s": 10
+  "s": 10,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
  },
  "352717837|branca": {
   "ok": true,
@@ -249,7 +256,8 @@
   "compressao": "11.76/11.91",
   "chapada": false,
   "releitura": false,
-  "s": 9
+  "s": 9,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
  },
  "352703276|preta": {
   "ok": true,
@@ -266,7 +274,8 @@
   "compressao": "13.02/11.23",
   "chapada": false,
   "releitura": false,
-  "s": 8
+  "s": 8,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
  },
  "352703343|preta": {
   "ok": true,
@@ -389,7 +398,142 @@
  },
  "352619175|preta": {
   "ok": true,
-  "out": "352619175-preta-v10.png",
+  "out": "352619175-preta-v11.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.12,
+  "posicao_cm": -0.01,
+  "compressao": "7.87/14.47",
+  "chapada": true,
+  "releitura": true,
+  "s": 8,
+  "capuz": "conferido: arte abaixo do capuz enrolado"
+ },
+ "352619175|branca": {
+  "ok": true,
+  "out": "352619175-branca-v4.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "centro"
+  ],
+  "escala_pct": 0.38,
+  "posicao_cm": -0.09,
+  "compressao": "7.29/14.47",
+  "chapada": true,
+  "releitura": true,
+  "s": 8,
+  "capuz": "conferido: arte abaixo do capuz enrolado"
+ },
+ "352718943|preta": {
+  "ok": true,
+  "out": "352718943-preta-v4.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [],
+  "escala_pct": 0.13,
+  "posicao_cm": -0.09,
+  "compressao": "8.36/8.72",
+  "chapada": false,
+  "releitura": true,
+  "s": 13
+ },
+ "352718943|offwhite": {
+  "ok": true,
+  "out": "352718943-offwhite-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.13,
+  "posicao_cm": -0.06,
+  "compressao": "10.73/8.72",
+  "chapada": false,
+  "releitura": false,
+  "s": 13
+ },
+ "352718999|preta": {
+  "ok": true,
+  "out": "352718999-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.41,
+  "posicao_cm": -0.16,
+  "compressao": "11.68/13.01",
+  "chapada": false,
+  "releitura": false,
+  "s": 13
+ },
+ "352718999|branca": {
+  "ok": true,
+  "out": "352718999-branca-v11.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.1,
+  "posicao_cm": -0.11,
+  "compressao": "10.88/13.01",
+  "chapada": true,
+  "releitura": true,
+  "s": 13
+ },
+ "352718787|preta": {
+  "ok": true,
+  "out": "352718787-preta-v4.png",
+  "yaw": -14.75,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [],
+  "escala_pct": -0.11,
+  "posicao_cm": 0.01,
+  "compressao": "14.75/11.34",
+  "chapada": false,
+  "releitura": true,
+  "s": 13
+ },
+ "352618837|preta": {
+  "ok": true,
+  "out": "352618837-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.17,
+  "posicao_cm": -0.03,
+  "compressao": "13.3/11.06",
+  "chapada": false,
+  "releitura": false,
+  "s": 12,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352618837|branca": {
+  "ok": true,
+  "out": "352618837-branca-v2.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
@@ -398,16 +542,17 @@
    "aspecto",
    "centro"
   ],
-  "escala_pct": 1.03,
-  "posicao_cm": -0.18,
-  "compressao": "17.25/14.47",
+  "escala_pct": 0.14,
+  "posicao_cm": -0.09,
+  "compressao": "13.3/11.06",
   "chapada": false,
-  "releitura": true,
-  "s": 8
+  "releitura": false,
+  "s": 13,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
  },
- "352619175|branca": {
+ "352618903|preta": {
   "ok": true,
-  "out": "352619175-branca-v3.png",
+  "out": "352618903-preta-v4.png",
   "yaw": 0,
   "oclusao": false,
   "gate": "APROVADO",
@@ -415,11 +560,617 @@
   "alertas": [
    "aspecto"
   ],
-  "escala_pct": 1.19,
-  "posicao_cm": -0.16,
-  "compressao": "17.25/14.47",
+  "escala_pct": -0.07,
+  "posicao_cm": -0.06,
+  "compressao": "8.8/8.61",
+  "chapada": false,
+  "releitura": false,
+  "s": 12,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352618903|offwhite": {
+  "ok": true,
+  "out": "352618903-offwhite-v4.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [],
+  "escala_pct": 0.18,
+  "posicao_cm": -0.12,
+  "compressao": "8.33/8.61",
+  "chapada": false,
+  "releitura": false,
+  "s": 12,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352618935|branca": {
+  "ok": true,
+  "out": "352618935-branca-v4.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.51,
+  "posicao_cm": 0.06,
+  "compressao": "14.39/12.69",
+  "chapada": false,
+  "releitura": false,
+  "s": 12
+ },
+ "352618935|preta": {
+  "ok": true,
+  "out": "352618935-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.01,
+  "posicao_cm": 0,
+  "compressao": "14.39/12.69",
+  "chapada": false,
+  "releitura": false,
+  "s": 13
+ },
+ "352618878|preta": {
+  "ok": true,
+  "out": "352618878-preta-v3.png",
+  "yaw": 0,
+  "oclusao": true,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.31,
+  "posicao_cm": 0.02,
+  "compressao": "11.06/11.06",
+  "chapada": false,
+  "releitura": false,
+  "s": 13
+ },
+ "352618878|branca": {
+  "ok": true,
+  "out": "352618878-branca-v10.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": -0.04,
+  "posicao_cm": -0.03,
+  "compressao": "11.06/11.06",
+  "chapada": false,
+  "releitura": false,
+  "s": 12
+ },
+ "352407182|preta": {
+  "ok": true,
+  "out": "352407182-preta-v4.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.4,
+  "posicao_cm": 0.02,
+  "compressao": "8.68/9.16",
   "chapada": false,
   "releitura": true,
+  "s": 11
+ },
+ "352407182|offwhite": {
+  "ok": true,
+  "out": "352407182-offwhite-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": 0,
+  "posicao_cm": -0.01,
+  "compressao": "10.47/9.16",
+  "chapada": false,
+  "releitura": false,
+  "s": 11
+ },
+ "352407196|preta": {
+  "ok": true,
+  "out": "352407196-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.32,
+  "posicao_cm": 0.03,
+  "compressao": "11.35/13.42",
+  "chapada": true,
+  "releitura": false,
+  "s": 10,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352407196|branca": {
+  "ok": true,
+  "out": "352407196-branca-v11.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.13,
+  "posicao_cm": 0.01,
+  "compressao": "10.44/13.42",
+  "chapada": true,
+  "releitura": true,
+  "s": 11
+ },
+ "352407156|preta": {
+  "ok": true,
+  "out": "352407156-preta-v1.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [],
+  "escala_pct": 0,
+  "posicao_cm": -0.02,
+  "compressao": "7.14/11.7",
+  "chapada": true,
+  "releitura": false,
+  "s": 10
+ },
+ "352407156|branca": {
+  "ok": true,
+  "out": "352407156-branca-v1.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [],
+  "escala_pct": -0.14,
+  "posicao_cm": 0.02,
+  "compressao": "6.73/11.7",
+  "chapada": true,
+  "releitura": false,
+  "s": 11
+ },
+ "352728451|offwhite": {
+  "ok": true,
+  "out": "352728451-offwhite-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": -0.41,
+  "posicao_cm": -0.06,
+  "compressao": "12.31/11.23",
+  "chapada": false,
+  "releitura": false,
+  "s": 11
+ },
+ "352728524|branca": {
+  "ok": true,
+  "out": "352728524-branca-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "REPROVADO",
+  "falhas": [
+   "escala"
+  ],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": -8.9,
+  "posicao_cm": 0.54,
+  "compressao": "16.96/16.58",
+  "chapada": false,
+  "releitura": false,
+  "s": 10,
+  "veredito_final": "FALSO ALARME PROVADO: arte de 35,2 cm da arco ~1 rad, fora do dominio do NCC; compressao de malha 16,96% vs 16,58% da tabela; conferida no olho"
+ },
+ "352728357|preta": {
+  "ok": true,
+  "out": "352728357-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.21,
+  "posicao_cm": 0.03,
+  "compressao": "8.42/8.92",
+  "chapada": false,
+  "releitura": false,
   "s": 8
+ },
+ "352727892|preta": {
+  "ok": true,
+  "out": "352727892-preta-v4.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.04,
+  "posicao_cm": 0,
+  "compressao": "8.25/6.78",
+  "chapada": false,
+  "releitura": false,
+  "s": 9
+ },
+ "352728019|preta": {
+  "ok": true,
+  "out": "352728019-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "centro"
+  ],
+  "escala_pct": -0.01,
+  "posicao_cm": -0.03,
+  "compressao": "4.63/5.26",
+  "chapada": false,
+  "releitura": false,
+  "s": 8,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352889132|preta": {
+  "ok": true,
+  "out": "352889132-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "centro"
+  ],
+  "escala_pct": -0.06,
+  "posicao_cm": -0.04,
+  "compressao": "5.25/7.8",
+  "chapada": true,
+  "releitura": false,
+  "s": 8
+ },
+ "352721477|preta": {
+  "ok": true,
+  "out": "352721477-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.5,
+  "posicao_cm": -0.23,
+  "compressao": "14.62/16.58",
+  "chapada": true,
+  "releitura": false,
+  "s": 9
+ },
+ "352721477|branca": {
+  "ok": true,
+  "out": "352721477-branca-v10.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.22,
+  "posicao_cm": -0.05,
+  "compressao": "14.62/16.58",
+  "chapada": true,
+  "releitura": false,
+  "s": 8
+ },
+ "352721118|preta": {
+  "ok": true,
+  "out": "352721118-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.74,
+  "posicao_cm": 0.05,
+  "compressao": "10.24/10.38",
+  "chapada": false,
+  "releitura": false,
+  "s": 10
+ },
+ "352721118|offwhite": {
+  "ok": true,
+  "out": "352721118-offwhite-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": -0.12,
+  "posicao_cm": -0.02,
+  "compressao": "10.24/10.38",
+  "chapada": false,
+  "releitura": false,
+  "s": 10
+ },
+ "352721197|preta": {
+  "ok": true,
+  "out": "352721197-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.72,
+  "posicao_cm": 0.08,
+  "compressao": "12.64/15.35",
+  "chapada": true,
+  "releitura": false,
+  "s": 10
+ },
+ "352721197|branca": {
+  "ok": true,
+  "out": "352721197-branca-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.27,
+  "posicao_cm": 0.02,
+  "compressao": "12.64/15.35",
+  "chapada": true,
+  "releitura": false,
+  "s": 11
+ },
+ "352721633|preta": {
+  "ok": true,
+  "out": "352721633-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": -0.48,
+  "posicao_cm": 0.02,
+  "compressao": "11.27/11.23",
+  "chapada": false,
+  "releitura": false,
+  "s": 13,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352721633|offwhite": {
+  "ok": true,
+  "out": "352721633-offwhite-v10.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto",
+   "centro"
+  ],
+  "escala_pct": 0.02,
+  "posicao_cm": -0.07,
+  "compressao": "11.27/11.23",
+  "chapada": false,
+  "releitura": false,
+  "s": 13
+ },
+ "352725749|preta": {
+  "ok": true,
+  "out": "352725749-preta-v10.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.22,
+  "posicao_cm": -0.05,
+  "compressao": "7.43/6.03",
+  "chapada": false,
+  "releitura": false,
+  "s": 7,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352725749|offwhite": {
+  "ok": true,
+  "out": "352725749-offwhite-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.21,
+  "posicao_cm": -0.01,
+  "compressao": "7.43/6.03",
+  "chapada": false,
+  "releitura": false,
+  "s": 7,
+  "watch": "pose girada, yaw 0 plausivel no tile; conferir em resolucao real e, se acusar, ler costura e recompor"
+ },
+ "352725852|branca": {
+  "ok": true,
+  "out": "352725852-branca-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.1,
+  "posicao_cm": -0.02,
+  "compressao": "8.26/8.92",
+  "chapada": false,
+  "releitura": false,
+  "s": 8
+ },
+ "352722232|branca": {
+  "ok": true,
+  "out": "352722232-branca-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.62,
+  "posicao_cm": 0.11,
+  "compressao": "8.99/8.52",
+  "chapada": false,
+  "releitura": false,
+  "s": 7
+ },
+ "352727545|preta": {
+  "ok": true,
+  "out": "352727545-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.18,
+  "posicao_cm": -0.09,
+  "compressao": "9.04/7.8",
+  "chapada": false,
+  "releitura": false,
+  "s": 8
+ },
+ "352727545|offwhite": {
+  "ok": true,
+  "out": "352727545-offwhite-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.08,
+  "posicao_cm": -0.04,
+  "compressao": "9.04/7.8",
+  "chapada": false,
+  "releitura": false,
+  "s": 9
+ },
+ "352898175|preta": {
+  "ok": true,
+  "out": "352898175-preta-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": 0.29,
+  "posicao_cm": -0.08,
+  "compressao": "10.53/11.83",
+  "chapada": false,
+  "releitura": false,
+  "s": 8
+ },
+ "352898175|branca": {
+  "ok": true,
+  "out": "352898175-branca-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.1,
+  "posicao_cm": 0,
+  "compressao": "10.53/11.83",
+  "chapada": false,
+  "releitura": false,
+  "s": 9
+ },
+ "352726673|preta": {
+  "ok": true,
+  "out": "352726673-preta-v3.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.09,
+  "posicao_cm": 0.01,
+  "compressao": "11.63/9.64",
+  "chapada": false,
+  "releitura": false,
+  "s": 8
+ },
+ "352726673|branca": {
+  "ok": true,
+  "out": "352726673-branca-v2.png",
+  "yaw": 0,
+  "oclusao": false,
+  "gate": "APROVADO",
+  "falhas": [],
+  "alertas": [
+   "aspecto"
+  ],
+  "escala_pct": -0.45,
+  "posicao_cm": 0.07,
+  "compressao": "11.63/9.64",
+  "chapada": false,
+  "releitura": false,
+  "s": 9
  }
 }
