@@ -77,14 +77,23 @@ passam gate, compressão de malha e leitura visual. A fila acima do teto caiu de
 Escolhidas para cobrir três caminhos de risco diferentes: tecido escuro, peça de
 área maior, e tecido claro com capuz.
 
-**Piloto Nano Banana v2 (27/07, aguardando aprovar/reprovar do dono).** Prompt
-de 3 referências desenhado pelo dono (arte + blank + mockup de costas, sem
-números) + 1 rodada de correção. Escala resolvida em pose sem capuz: tee
-352618935 a +0,2%, oversized 352728019 a +0,3% (obedeceu "clearly smaller" e
-"halo flat"). Capuz é falha dura (4/4 tentativas põem a estampa inteira abaixo
-do capuz) — moletom fica na via geométrica. Fluxo acordado: eu gero → eu audito
-→ envio com veredito → dono aprova/reprova → itera. Prompts e vereditos em
+**O MÉTODO IA FOI APROVADO PELO DONO (27/07).** As três finais do piloto
+passaram: 352618935-branca (IA), 352728019-preta (IA, halo texturizado) e
+352718787-branca (nossa geométrica — capuz é falha dura da IA). As duas capas
+de IA estão versionadas no **nimbus-assets** como `*-ia-v1.png` (não são
+deriváveis de receita) com sidecar `*.capa.json` no repo público. Receita
+vigente do método: 3 refs (arte + blank + mockup de costas por registro),
+prompt curto, ~3–5 candidatas, rodada de correção quando a auditoria acusa,
+auditoria escolhe, dono aprova/reprova cada final. Prompts e vereditos em
 `scripts/gemini/PROMPTS-PILOTO.md`.
+
+**Fila de retrabalho: 22 capas** (erradas do dono + minhas na auditoria visual
+de 27/07). Resolvidas: #35 e #49 (as aprovadas acima). **Lote 1 enviado ao dono
+(aguardando aprovar/reprovar):** 352618935-preta (escala −0,9%, dV −1,1),
+352723243-branca (+0,7%, dV −0,8), 352718275-branca (+1,6%, dV −0,9; dH −4 cm
+seguindo o corpo girado; NCC não trava em arte de azulejo — score baixo é
+limitação do instrumento). Moletons com capuz da fila (352619175 par) vão pela
+via geométrica; Blusão (352618837 par) não tem capuz, IA deve servir.
 
 **Próximo passo:** com o aval do dono, seguir a fila em lotes, remedindo `torso`
 e `centro` no blank antes de recompor. A 352718999 branca aparece na fila mas

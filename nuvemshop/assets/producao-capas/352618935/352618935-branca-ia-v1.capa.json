@@ -1,0 +1,22 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "v2b (3 refs: arte + blank + mockup de costas; correcao de letras)",
+  "prompt_doc": "scripts/gemini/PROMPTS-PILOTO.md",
+  "refs": {
+    "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+    "blank": "nuvemshop/assets/producao-capas/352618935/352618935-branca-par-blank-alinhado.png",
+    "mockup": "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352618935-sao-jorge-vintage3/gallery-02.webp"
+  },
+  "arquivo": "352618935-branca-ia-v1.png (nimbus-assets)",
+  "auditoria": {
+    "escala_pct": 0.2,
+    "delta_vertical_cm": -0.43,
+    "centro_arte_frac": 0.5502,
+    "costura_gola_frac": 0.55,
+    "yaw_costura_deg": 4.5,
+    "ressalva": "cavaleiro levemente redesenhado pela IA (visivel so em zoom)"
+  },
+  "aprovado_dono": "2026-07-27",
+  "substitui": "352618935-branca-v4.png (geometrica, yaw 0 em pose girada)"
+}

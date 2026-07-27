@@ -1,0 +1,21 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "v4 (3 refs: arte + blank + mockup de costas; frase de tamanho; sem frase de estilo; 5 candidatas, auditoria escolheu a 4)",
+  "prompt_doc": "scripts/gemini/PROMPTS-PILOTO.md",
+  "refs": {
+    "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+    "blank": "nuvemshop/assets/producao-capas/352728019/352728019-preta-blank.png",
+    "mockup": "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352728019-aparecida-spray2/gallery-02.webp"
+  },
+  "arquivo": "352728019-preta-ia-v1.png (nimbus-assets)",
+  "auditoria": {
+    "escala_pct": -3.3,
+    "delta_vertical_cm": -0.37,
+    "desvio_horizontal_cm": 13.41,
+    "nota_horizontal": "segue o corpo girado da modelo (regra do rosto: rosto a esquerda, yaw positivo); a v3 geometrica com yaw 0 estava errada nessa pose",
+    "ressalva": "assinatura grafitada sai NIMBOS em zoom"
+  },
+  "aprovado_dono": "2026-07-27",
+  "substitui": "352728019-preta-v3.png (geometrica, yaw 0 em pose girada)"
+}
