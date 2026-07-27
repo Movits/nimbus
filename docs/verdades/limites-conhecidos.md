@@ -81,6 +81,20 @@ Corrigido em 26/07 (ponte de 3% da largura, e `suspeito` dispara também quando
 sobra outra corrida grande ou quando o resultado foge 30% da tabela). Ainda assim
 **use como segunda opinião**, não como autoridade.
 
+## Silhueta é cega para yaw — a costura central é o landmark
+
+O meio da silhueta de um cilindro girado continua sendo o eixo projetado, para
+**qualquer** yaw. Todo check que compara a caixa da arte com o meio da silhueta
+é portanto cego para rotação por construção — foi assim que três capas giradas
+passaram em todos os instrumentos e o dono viu no olho.
+
+O landmark do meridiano verdadeiro é a **costura central das costas**: a
+costura do capuz no moletom, o centro da gola (etiqueta/pingo) na camiseta. Lida
+com `grade.mjs` (contraste puxado na faixa da cor do tecido),
+`estimar-yaw.mjs` inverte o próprio `artMesh` até o meridiano da estampa cair
+nela. Validado: no 352718787 o dono escolheu −14 no olho, a costura devolve
+−14,75.
+
 ## Integração com o tecido
 
 O ponto cego que o gate declara e não mede. Em 27/07 o dono pegou dois defeitos

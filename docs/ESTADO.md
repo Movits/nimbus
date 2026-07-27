@@ -36,6 +36,18 @@ provadas** entre receitas do mesmo blank. Ordem de retrabalho e método em
 [`verdades/torso-e-centro.md`](verdades/torso-e-centro.md); instrumento em
 `scripts/producao/auditar-receitas.mjs`.
 
+**O yaw deixou de ser escolha e virou medida (27/07).** O dono apontou o
+landmark que faltava: a **costura central das costas** (capuz no moletom,
+centro da gola na camiseta) marca o meridiano verdadeiro da peça, visível na
+foto. `scripts/geometry/estimar-yaw.mjs` resolve o yaw invertendo o próprio
+`artMesh` até o meridiano da estampa cair na costura. Validação: no moletom o
+dono escolheu −14 no olho e a costura devolve **−14,75**. Medidos: 352725852
+**+7,25**, 352728277 **+9** (leitura fraca), 352718787 **−14,75**. Junto disso,
+o tecido ganhou `--sombra-global` (a estampa segue a iluminação da cena) e
+`--dobra-larga` (segue o caimento, não só o vinco); o dono escolheu
+**dobra 180 · relevo 8**. As três capas estão recompostas com isso (v4/v5),
+gate aprovado, à espera do olho.
+
 **Três capas refeitas em 26/07, à espera do olho do dono:** 352725852 preta
 (Camiseta Premium, era 2,03× → 1,19×), 352728277 preta (Oversized, 1,86× →
 1,18×) e 352718787 branca (Moletom Canguru com capuz, 1,45× → 1,14×). As três
