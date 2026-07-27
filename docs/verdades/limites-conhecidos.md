@@ -95,6 +95,14 @@ com `grade.mjs` (contraste puxado na faixa da cor do tecido),
 nela. Validado: no 352718787 o dono escolheu −14 no olho, a costura devolve
 −14,75.
 
+**A armadilha da leitura é o pescoço.** Na 352728277 a ribana some atrás do
+pescoço e a primeira leitura pegou a base dele (0,52 → yaw +9, lado errado);
+com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.
+Duas sanidades antes de aceitar uma leitura: (1) o **lado do rosto** prevê o
+sinal — rosto à esquerda → yaw positivo, à direita → negativo, nas três capas
+conferidas; (2) a ribana tem que ser visível como banda, não como contorno do
+pescoço.
+
 ## Integração com o tecido
 
 O ponto cego que o gate declara e não mede. Em 27/07 o dono pegou dois defeitos

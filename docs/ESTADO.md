@@ -42,7 +42,12 @@ centro da gola na camiseta) marca o meridiano verdadeiro da peça, visível na
 foto. `scripts/geometry/estimar-yaw.mjs` resolve o yaw invertendo o próprio
 `artMesh` até o meridiano da estampa cair na costura. Validação: no moletom o
 dono escolheu −14 no olho e a costura devolve **−14,75**. Medidos: 352725852
-**+7,25**, 352728277 **+9** (leitura fraca), 352718787 **−14,75**. Junto disso,
+**+7,25**, 352728277 **−10,25**, 352718787 **−14,75**. Na 352728277 a primeira
+leitura da costura (0,52 → +9) tinha pego a **base do pescoço**, não a gola, e
+girou para o lado errado; relida com contraste maior deu 0,46 → −10,25, e o dono
+aprovou as três. Sanidade barata que pegaria isso antes: o **lado do rosto**
+prevê o sinal (rosto à esquerda → yaw positivo, à direita → negativo, nas três
+capas conferidas). Junto disso,
 o tecido ganhou `--sombra-global` (a estampa segue a iluminação da cena) e
 `--dobra-larga` (segue o caimento, não só o vinco); o dono escolheu
 **dobra 180 · relevo 8**. As três capas estão recompostas com isso (v4/v5),
