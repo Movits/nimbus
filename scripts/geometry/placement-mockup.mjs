@@ -405,6 +405,15 @@ async function main() {
         cx.fonte_caixa = "registro";
         cx.score = +reg.score.toFixed(3);
         cx.rotacao_deg = +reg.rotation_deg.toFixed(1);
+        // RECALCULAR o horizontal. `largura_rel` e `desvio_rel` saem de x0/x1
+        // dentro de `caixaDaTinta`, ou seja da caixa por LIMIAR. Trocar a caixa
+        // pelo registro sem refazer essas duas deixava a referencia horizontal
+        // velha — e ela e justamente o que o eixo da capa e comparado contra.
+        if (cx.corpo_x0 != null) {
+          const L = cx.corpo_x1 - cx.corpo_x0 + 1;
+          cx.largura_rel = +((cx.x1 - cx.x0 + 1) / L).toFixed(4);
+          cx.desvio_rel = +(((cx.x0 + cx.x1) / 2 - (cx.corpo_x0 + cx.corpo_x1) / 2) / L).toFixed(4);
+        }
         // a sanidade de altura vale igual, e agora sobre uma caixa confiavel
         cx.motivos = motivosDeAltura(cx.y1 - cx.y0 + 1, alturaOficial, tpl, COMPRIMENTO_G[mt.garment]);
         cx.confiavel = cx.motivos.length === 0;
