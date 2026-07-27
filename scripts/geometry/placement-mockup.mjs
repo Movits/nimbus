@@ -22,6 +22,66 @@ import { pathToFileURL } from "node:url";
 import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
+import { registerArt } from "./register-art.mjs";
+
+/**
+ * Acha a arte OFICIAL dentro do mockup, por registro NCC.
+ *
+ * Substitui a caixa por limiar de cor, que tem dois defeitos que nao se
+ * consertam calibrando limiar: ela inclui o contorno antialiasado da peca
+ * (esticando a caixa ate a gola e a barra) e ela perde tinta de baixo
+ * contraste (respingo fino, escorrido). Medido nos tres casos de conferencia:
+ * no 352619175 o limiar dava base em y=355 e a arte acaba em 308; no
+ * 352718787 o limiar esticava 58 px a mais na direita; no 352725852 o limiar
+ * PERDIA os escorridos, parando em 301 onde a arte vai a 321.
+ *
+ * O score tambem resolve a SELECAO do mockup, que era "vence quem tem mais
+ * tinta" — regra que premiava a deteccao estourada e, quando a leitura boa era
+ * descartada, caia no mockup de peito. Registro casa com a arte DAQUELE
+ * produto, entao a foto de peito pontua baixo por construcao.
+ */
+async function registrarArte(mockup, artePath, corTecido) {
+  const bb = await sharp(artePath).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+  const { width: AW, height: AH, channels: AC } = bb.info;
+  let ax0 = AW, ax1 = -1, ay0 = AH, ay1 = -1;
+  for (let y = 0; y < AH; y += 1) {
+    for (let x = 0; x < AW; x += 1) {
+      if (bb.data[(y * AW + x) * AC + 3] < 24) continue;
+      if (x < ax0) ax0 = x; if (x > ax1) ax1 = x;
+      if (y < ay0) ay0 = y; if (y > ay1) ay1 = y;
+    }
+  }
+  if (ax1 < 0) return null;
+
+  // O template vai achatado sobre a COR DO TECIDO daquele mockup: o registro
+  // usa gradiente, e um fundo transparente virando preto criaria uma borda
+  // artificial que nao existe na cena.
+  const tmp = `${mockup}.tmp-tpl-${process.pid}.png`;
+  await sharp(artePath).ensureAlpha()
+    .extract({ left: ax0, top: ay0, width: ax1 - ax0 + 1, height: ay1 - ay0 + 1 })
+    .flatten({ background: { r: corTecido[0], g: corTecido[1], b: corTecido[2] } })
+    .png().toFile(tmp);
+  const menor = async (p, max) => {
+    const r = await sharp(p).resize(max, max, { fit: "inside" }).removeAlpha().raw().toBuffer({ resolveWithObject: true });
+    return { data: r.data, width: r.info.width, height: r.info.height, channels: 3 };
+  };
+  let reg = null;
+  try {
+    const cena = await menor(mockup, 500);
+    const tpl = await menor(tmp, 300);
+    reg = registerArt(cena, tpl, { scaleRange: [0.12, 0.85] });
+    if (reg) {
+      const esc = 500 / cena.height;
+      reg.caixa = {
+        x0: Math.round((reg.cx - reg.width_px / 2) * esc), x1: Math.round((reg.cx + reg.width_px / 2) * esc),
+        y0: Math.round((reg.cy - reg.height_px / 2) * esc), y1: Math.round((reg.cy + reg.height_px / 2) * esc),
+      };
+    }
+  } catch { /* arte esparsa pode nao registrar */ } finally {
+    if (fs.existsSync(tmp)) fs.unlinkSync(tmp);
+  }
+  return reg;
+}
 
 // y em px de um canvas 500x500, medidos nos mockups oficiais.
 //
@@ -54,7 +114,31 @@ const COMPRIMENTO_G = {
 };
 
 const REFS = "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references";
+const PROD_PLACEMENT = "nuvemshop/auditoria/2026-07-26-datum-mockups/placement-por-produto.json";
 const lum = (r, g, b) => 0.299 * r + 0.587 * g + 0.114 * b;
+
+/** produto -> PNG oficial da arte, para o registro. */
+const ARTE_DO_PRODUTO = new Map(
+  JSON.parse(fs.readFileSync("nuvemshop/producao/mapa-artes.json", "utf8"))
+    .mapeamentos.map((m) => [m.product_id, m.arquivo_arte]),
+);
+
+/**
+ * Sanidade da caixa contra a ALTURA OFICIAL DA ARTE.
+ *
+ * Fora da `caixaDaTinta` porque roda de novo depois do registro: a caixa muda,
+ * o criterio nao.
+ */
+function motivosDeAltura(alturaPx, alturaOficialCm, tpl, comprimentoGcm) {
+  if (!(alturaOficialCm > 0) || !comprimentoGcm) return [];
+  const espPx = (alturaOficialCm / comprimentoGcm) * (tpl.barra - tpl.gola);
+  const razao = alturaPx / espPx;
+  if (razao < 0.65 || razao > 1.4) {
+    return [`altura da tinta ${alturaPx.toFixed(0)}px contra ${espPx.toFixed(0)}px esperados `
+      + `para ${alturaOficialCm} cm (razao ${razao.toFixed(2)})`];
+  }
+  return [];
+}
 
 /** Caixa da tinta num mockup plano: o que difere da cor do tecido. */
 async function caixaDaTinta(arquivo, corpoTpl, { tplGola, tplBarra, alturaOficialCm, comprimentoGcm }) {
@@ -251,12 +335,31 @@ async function main() {
     meta.set(limpa(c[iId]), { garment: limpa(c[iG]), back_h: Number(limpa(c[iBh])), front_h: Number(limpa(c[iFh])) });
   }
 
+  // A PECA VEM DO ARQUIVO DE PRODUCAO, nao do CSV.
+  //
+  // O CSV de 22/07 e anterior a reclassificacao de 26/07, que moveu o
+  // 352727892 de Blusao para Moletom Canguru (o mockup e a loja mostram capuz
+  // e bolso canguru). Usar a peca do CSV escolhe o template errado — gola 62
+  // em vez de 136,5 — e o placement sai 13,8 cm fora. O arquivo de producao
+  // carrega a correcao, entao ele manda; o CSV so entra como reserva.
+  const pecaProducao = new Map();
+  try {
+    for (const it of JSON.parse(fs.readFileSync(PROD_PLACEMENT, "utf8")).itens) {
+      if (it.garment) pecaProducao.set(it.product_id, it.garment);
+    }
+  } catch { /* primeira rodada pode nao ter o arquivo */ }
+
   const pastas = fs.readdirSync(REFS).filter((d) => fs.statSync(path.join(REFS, d)).isDirectory());
   const out = [];
   for (const pasta of pastas) {
     const id = pasta.split("-")[0];
     const mt = meta.get(id);
     if (!mt) continue;
+    const doProd = pecaProducao.get(id);
+    if (doProd && doProd !== mt.garment) {
+      mt.garment_csv = mt.garment;
+      mt.garment = doProd;
+    }
     const tpl = TEMPLATE[mt.garment];
     if (!tpl) { out.push({ product_id: id, garment: mt.garment, erro: "sem template (Ecobag?)" }); continue; }
 
@@ -276,19 +379,47 @@ async function main() {
     }
     const alturaOficial = mt.back_h;
 
-    // Entre os mockups da pasta, o de COSTAS e o que tem MAIS tinta — mas so
-    // entre os que passam na sanidade. Sem esse filtro a regra premia a
-    // falha: quando a deteccao estoura ela abre na peca inteira e ganha por
-    // ter mais pixels que qualquer leitura correta. Foi o que aconteceu no
-    // 352728277 preto.
+    // SELECAO POR SCORE DE REGISTRO, nao por quantidade de tinta.
+    //
+    // "vence quem tem mais tinta" premiava a deteccao estourada (a falha e
+    // sempre a leitura com mais pixels) e, quando a leitura boa era
+    // descartada, caia no mockup de PEITO. O registro casa com a arte DAQUELE
+    // produto: a foto de peito e a leitura estourada pontuam baixo por
+    // construcao, sem precisar de gate nenhum para isso.
+    const arte = ARTE_DO_PRODUTO.get(id);
     let melhor = null;
     const descartados = [];
     for (const f of fs.readdirSync(path.join(REFS, pasta)).filter((f) => /\.(webp|jpe?g|png)$/i.test(f))) {
-      const cx = await caixaDaTinta(path.join(REFS, pasta, f), tpl.corpo,
+      const caminho = path.join(REFS, pasta, f);
+      const cx = await caixaDaTinta(caminho, tpl.corpo,
         { tplGola: tpl.gola, tplBarra: tpl.barra, alturaOficialCm: alturaOficial, comprimentoGcm: COMPRIMENTO_G[mt.garment] });
       if (!cx) continue;
-      if (!cx.confiavel) { descartados.push({ mockup: f, motivos: cx.motivos }); continue; }
-      if (!melhor || cx.n > melhor.cx.n) melhor = { f, cx };
+
+      // O registro substitui a caixa; o limiar so entrega a cor do tecido e a
+      // silhueta, que ele faz bem.
+      let reg = null;
+      if (arte && fs.existsSync(arte)) reg = await registrarArte(caminho, arte, cx.tecido);
+      if (reg && reg.score >= 0.45 && reg.caixa) {
+        cx.x0 = reg.caixa.x0; cx.x1 = reg.caixa.x1;
+        cx.y0 = reg.caixa.y0; cx.y1 = reg.caixa.y1;
+        cx.fonte_caixa = "registro";
+        cx.score = +reg.score.toFixed(3);
+        cx.rotacao_deg = +reg.rotation_deg.toFixed(1);
+        // a sanidade de altura vale igual, e agora sobre uma caixa confiavel
+        cx.motivos = motivosDeAltura(cx.y1 - cx.y0 + 1, alturaOficial, tpl, COMPRIMENTO_G[mt.garment]);
+        cx.confiavel = cx.motivos.length === 0;
+      } else {
+        cx.fonte_caixa = "limiar";
+        cx.score = reg ? +reg.score.toFixed(3) : null;
+      }
+
+      if (!cx.confiavel) { descartados.push({ mockup: f, fonte: cx.fonte_caixa, score: cx.score, motivos: cx.motivos }); continue; }
+      // registro vence limiar; entre dois registros, o de maior score
+      const melhorQue = !melhor
+        || (cx.fonte_caixa === "registro" && melhor.cx.fonte_caixa !== "registro")
+        || (cx.fonte_caixa === melhor.cx.fonte_caixa
+          && (cx.fonte_caixa === "registro" ? cx.score > melhor.cx.score : cx.n > melhor.cx.n));
+      if (melhorQue) melhor = { f, cx };
     }
     if (!melhor) {
       out.push({ product_id: id, garment: mt.garment, erro: "nenhuma leitura confiavel", descartados });
@@ -314,7 +445,7 @@ async function main() {
       continue;
     }
     out.push({
-      product_id: id, garment: mt.garment, mockup: melhor.f,
+      product_id: id, garment: mt.garment, garment_csv: mt.garment_csv ?? null, mockup: melhor.f,
       tinta_topo_px: melhor.cx.y0, tinta_base_px: melhor.cx.y1,
       placement_frac: +fracPlacement.toFixed(4),
       altura_frac: +fracAltura.toFixed(4),
@@ -329,6 +460,7 @@ async function main() {
       peca_banda_x0_px: melhor.cx.banda_x0, peca_banda_x1_px: melhor.cx.banda_x1,
       descartados,
       largura_truncada: melhor.cx.truncada,
+      fonte_caixa: melhor.cx.fonte_caixa, score_registro: melhor.cx.score, rotacao_deg: melhor.cx.rotacao_deg ?? null,
       // contraprova: a altura da arte implicada pelo template, em cm, usando o
       // comprimento G — se destoar muito, a leitura (ou o template) esta errada
       pixels_tinta: melhor.cx.n,

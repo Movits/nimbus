@@ -113,14 +113,35 @@ e o descarte fez a seleção cair em silêncio no mockup de **peito**. O critér
 passou a ser a **altura oficial da arte** (`back_h_cm`), que não depende do
 desenho.
 
-**Não consertado: a caixa inclui a borda da peça.** O contorno da peça contra o
-fundo é antialiasado, difere da cor do tecido e entra como tinta, esticando a
-caixa até a gola e a barra. Sobrevivem assim **5 produtos sem leitura**
-(352727892, 352889132, 352728019, 352728277, e o 352718275). Erodir a borda não
-resolve com a máscara atual: em peça branca o tecido está a 8 níveis do fundo,
-então a máscara é quase só a estampa e a erosão apaga tudo. O caminho é trocar a
-detecção por cor por **casamento com o PNG oficial da arte** (`register-art.mjs`,
-que o projeto já usa nas capas).
+**Consertado: a caixa vem do registro, não de limiar de cor.** O limiar tinha
+dois defeitos que não se resolvem calibrando: incluía o contorno antialiasado da
+peça, esticando a caixa até a gola e a barra, e perdia tinta de baixo contraste
+(respingo fino, escorrido). Medido: no 352619175 o limiar dava base em y=355 onde
+a arte acaba em 308; no 352718787 esticava 58 px a mais na direita; no 352725852
+**perdia os escorridos**, parando em 301 onde a arte vai a 321.
+
+A caixa passou a sair de `registerArt` casando o **PNG oficial da arte** com o
+mockup. Score mediano **0,883** nos 45 produtos, rotação zero em todos. O score
+também aposentou a regra de seleção "vence quem tem mais tinta", que premiava a
+detecção estourada e caía no mockup de peito: registro casa com a arte daquele
+produto, então a foto de peito pontua baixo por construção.
+
+Tentativas que **não** funcionaram, para ninguém repetir: erodir a borda da
+máscara (em peça branca o tecido está a 8 níveis do fundo, a máscara é quase só
+a estampa e a erosão apaga tudo) e preencher o fundo a partir da borda (com
+tolerância baixa a sombra de contato bloqueia o preenchimento; com tolerância
+alta vaza para dentro da peça).
+
+**Consertado: a peça vinha do CSV de 22/07.** Aquele CSV é anterior à
+reclassificação do 352727892 de Blusão para Moletom Canguru, e o template errado
+punha o placement **13,8 cm fora**. A peça agora vem do próprio
+`placement-por-produto.json`, que carrega a correção.
+
+> [!warning] Três produtos ainda caem no limiar
+> 352717960, 352718083 e 352722232 não casaram no registro (score abaixo de
+> 0,45) e mantêm a caixa por cor. No 352722232 ela **corta a auréola dourada**,
+> e o placement dele é 2,24 cm maior por isso. Estão marcados com
+> `fonte_caixa: limiar` e `confianca: baixa`.
 
 ## Detector de barra
 

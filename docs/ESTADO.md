@@ -58,22 +58,27 @@ piloto a entregável, não refazer.
 - Comprimento do Blusão: 78,4 cm, **estimado**, com a ressalva registrada.
 - 352727892 reclassificado de Blusão para Moletom Canguru.
 
-## ⛔ O placement de produção está errado
+## Placement remedido e adotado (27/07)
 
-Em 27/07 o medidor de mockup foi consertado (detalhe em
-[`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md)). Com ele,
-**21 dos 41 produtos legíveis mudam de `placement_cm`**, quase todos para
-**mais**: a mediana sobe 0,011 do vão gola→barra, cerca de **0,8 cm**, e o pior
-caso sobe 0,0325, cerca de **2,5 cm**. A estampa vinha sendo posta **alto demais**.
+O medidor de mockup foi consertado em quatro pontos e a caixa da estampa passou
+a sair do **registro com o PNG oficial da arte** (score mediano 0,883). Detalhe
+em [`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md).
 
-Os valores corrigidos estão em
-`nuvemshop/auditoria/2026-07-26-datum-mockups/horizontal-oficial.json`.
-**`placement-por-produto.json` não foi alterado**: trocá-lo move a estampa de
-todas as capas, e essa é decisão do dono.
+**Os valores corrigidos já estão em `placement-por-produto.json`:** 42
+corrigidos, 3 confirmados, 3 sem leitura. O valor de 26/07 fica ao lado em
+`placement_cm_2026_07_26`; nada de histórico foi apagado.
 
-Oito produtos ficam sem leitura: três são estampa frontal (o template de costas
-não se aplica), a Ecobag não tem template, e quatro esbarram no defeito de borda
-ainda aberto.
+As correções são pequenas na maioria (mediana ~0,1 cm) mas chegam a **2,2 cm**
+no 352722232 e **1,4 cm** no 352728451. Reaplicar depois de remedir custa um
+comando: `node scripts/geometry/adotar-placement.mjs --aplicar`.
+
+Três produtos ficam sem leitura por serem **estampa frontal** (o template de
+costas não se aplica): 352702753, 352702796 e 352720257. Eles mantêm o valor
+antigo, que foi medido com o template errado e **não deve ser usado**.
+
+> [!warning] Toda receita anterior a 27/07 usa o placement velho
+> As três capas refeitas em 26/07 incluídas. Recompor exige repassar o
+> `--placement` novo.
 
 ## A sessão na nuvem compõe sem chave de IA
 
