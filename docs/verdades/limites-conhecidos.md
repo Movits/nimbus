@@ -112,6 +112,18 @@ baixo); e **largura conferida contra o mockup** (Sao Jorge Vintage saiu maior
 que o devido). Dado completo em
 `nuvemshop/producao/auditoria-visual-2026-07-27.json`.
 
+**Piloto Nano Banana (27/07): a IA é agrimensor, não acabador.** Três capas
+compostas pela IA sobre os nossos blanks, medidas com os nossos instrumentos.
+Como ACABADOR ela perde: escala +22% a +63% na primeira tentativa, posição até
+6,3 cm fora, fidelidade 0,37–0,69 contra 0,83+ da geometria (a arte é
+redesenhada; numa rodada ela desenhou uma seta de cota "12.42cm" NA FOTO). O
+loop com correção medida converge (63→29%, 35→8,8%) mas gasta rodadas e nunca
+garante fidelidade. Como AGRIMENSOR ela ganha: **o meridiano das costas que ela
+escolhe casa com a regra do rosto em 6 de 6** e é estável entre rodadas (±0,01).
+O híbrido: 1 composição barata da IA por blank → `registerArt` extrai o
+meridiano → `estimar-yaw` resolve o yaw → nossa geometria compõe a arte fiel.
+Substitui a leitura manual de costura no catálogo inteiro (~US$0,03/blank).
+
 **A armadilha da leitura é o pescoço.** Na 352728277 a ribana some atrás do
 pescoço e a primeira leitura pegou a base dele (0,52 → yaw +9, lado errado);
 com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.
