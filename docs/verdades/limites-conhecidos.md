@@ -95,6 +95,23 @@ com `grade.mjs` (contraste puxado na faixa da cor do tecido),
 nela. Validado: no 352718787 o dono escolheu −14 no olho, a costura devolve
 −14,75.
 
+**Calibração de 27/07, com o olho do dono (12 de 12).** O dono corrigiu foto a
+foto a auditoria do catálogo recomposto, e a **regra do rosto previu todas as
+12 correções direcionais** dele: rosto virado para a esquerda → yaw positivo →
+estampa composta com yaw 0 aparece à esquerda do certo; rosto à direita →
+o espelho. Rotação sem yaw é o defeito dominante do lote (14+ capas). Duas
+convenções ficam fixadas: (1) **esquerda/direita sempre do ponto de vista de
+quem olha a foto**, de frente para as costas do modelo — relatos meus haviam
+invertido; (2) toda pose girada exige yaw medido antes de compor, sem exceção.
+
+O mesmo feedback fechou mais três correções de método: **torso travado por
+produto** (cores da mesma peça saíram com 10–35% de diferença de torso, o que é
+impossível no produto real — nenhum instrumento por capa isolada enxerga isso);
+**vertical conferida contra o mockup por registro** (Sao Jorge Neobarroco saiu
+baixo); e **largura conferida contra o mockup** (Sao Jorge Vintage saiu maior
+que o devido). Dado completo em
+`nuvemshop/producao/auditoria-visual-2026-07-27.json`.
+
 **A armadilha da leitura é o pescoço.** Na 352728277 a ribana some atrás do
 pescoço e a primeira leitura pegou a base dele (0,52 → yaw +9, lado errado);
 com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.

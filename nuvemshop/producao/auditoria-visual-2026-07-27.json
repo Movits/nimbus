@@ -54,7 +54,10 @@
    "veredito": "ERRADA",
    "motivo": "estampa pequena demais para a peca; compressao 13,54% contra 16,58% esperados",
    "classe": "tamanho",
-   "pares": []
+   "pares": [],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "qualidade",
+   "correcao_dono": "cores estranhas na arte; conferir a sombra do tecido em resolucao real (alem do tamanho)"
   },
   {
    "n": 3,
@@ -122,7 +125,10 @@
    "classe": "coerencia",
    "pares": [
     6
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "desalinhada (nao e tamanho)"
   },
   {
    "n": 6,
@@ -146,7 +152,10 @@
    "classe": "coerencia",
    "pares": [
     5
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "desalinhada (nao e tamanho)"
   },
   {
    "n": 7,
@@ -234,7 +243,10 @@
    "veredito": "ERRADA",
    "motivo": "estampa larga demais, quase encostando na cava dos dois lados",
    "classe": "tamanho",
-   "pares": []
+   "pares": [],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "deslocada bem para a DIREITA, alem de desproporcional"
   },
   {
    "n": 11,
@@ -280,7 +292,10 @@
    "classe": "coerencia",
    "pares": [
     13
-   ]
+   ],
+   "veredito_dono": "CERTA",
+   "classe_dono": null,
+   "correcao_dono": "o dono nao ve problema; minha flag de par estava errada"
   },
   {
    "n": 13,
@@ -304,7 +319,10 @@
    "classe": "coerencia",
    "pares": [
     12
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "desalinhada com a camisa (o 35% e sintoma, nao o defeito)"
   },
   {
    "n": 14,
@@ -374,7 +392,10 @@
    "veredito": "ERRADA",
    "motivo": "texto deslocado para a DIREITA, encostando na borda do ombro",
    "classe": "eixo",
-   "pares": []
+   "pares": [],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "deslocada para a ESQUERDA (eu tinha escrito direita: inverti)"
   },
   {
    "n": 17,
@@ -396,7 +417,10 @@
    "veredito": "ERRADA",
    "motivo": "texto deslocado para a ESQUERDA",
    "classe": "eixo",
-   "pares": []
+   "pares": [],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "um pouco para a DIREITA, e o texto encosta na pele do braco: le como falso"
   },
   {
    "n": 18,
@@ -516,7 +540,10 @@
    "classe": "vertical",
    "pares": [
     23
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "um pouquinho para a esquerda; o resto bom (nao era vertical)"
   },
   {
    "n": 23,
@@ -564,7 +591,10 @@
    "classe": "vertical",
    "pares": [
     25
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "BEM deslocada para a esquerda (nao era vertical)"
   },
   {
    "n": 25,
@@ -588,7 +618,10 @@
    "classe": "vertical",
    "pares": [
     24
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "BEM deslocada para a esquerda (nao era vertical)"
   },
   {
    "n": 26,
@@ -612,7 +645,10 @@
    "classe": "coerencia",
    "pares": [
     27
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "desalinhada"
   },
   {
    "n": 27,
@@ -636,7 +672,10 @@
    "classe": "coerencia",
    "pares": [
     26
-   ]
+   ],
+   "veredito_dono": "CERTA",
+   "classe_dono": null,
+   "correcao_dono": "o dono nao ve problema"
   },
   {
    "n": 28,
@@ -660,7 +699,10 @@
    "classe": "coerencia",
    "pares": [
     29
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "vertical",
+   "correcao_dono": "arte ABAIXO de onde deveria, comparando com o mockup da YouDraw"
   },
   {
    "n": 29,
@@ -684,7 +726,10 @@
    "classe": "coerencia",
    "pares": [
     28
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "vertical",
+   "correcao_dono": "arte ABAIXO de onde deveria, comparando com o mockup da YouDraw"
   },
   {
    "n": 30,
@@ -730,7 +775,10 @@
    "classe": "eixo",
    "pares": [
     32
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "deslocada para a ESQUERDA (eu tinha escrito direita: inverti)"
   },
   {
    "n": 32,
@@ -754,7 +802,10 @@
    "classe": "eixo",
    "pares": [
     31
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "deslocada para a ESQUERDA (eu tinha escrito direita: inverti)"
   },
   {
    "n": 33,
@@ -826,7 +877,10 @@
    "classe": "vertical",
    "pares": [
     36
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "tamanho",
+   "correcao_dono": "desenho MAIOR que o devido + deslocado para a esquerda + um pouco baixo"
   },
   {
    "n": 36,
@@ -850,7 +904,10 @@
    "classe": "vertical",
    "pares": [
     35
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "tamanho",
+   "correcao_dono": "desenho MAIOR que o devido + deslocado para a esquerda + um pouco baixo"
   },
   {
    "n": 37,
@@ -922,7 +979,10 @@
    "classe": "coerencia",
    "pares": [
     40
-   ]
+   ],
+   "veredito_dono": "SUSPEITA",
+   "classe_dono": "qualidade",
+   "correcao_dono": "quase ok; a ponta inferior esquerda esta estranha"
   },
   {
    "n": 40,
@@ -946,7 +1006,10 @@
    "classe": "coerencia",
    "pares": [
     39
-   ]
+   ],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "bem desalinhada, para a DIREITA do centro da camisa"
   },
   {
    "n": 41,
@@ -1152,7 +1215,10 @@
    "veredito": "ERRADA",
    "motivo": "estampa deslocada para a ESQUERDA, invadindo a manga",
    "classe": "eixo",
-   "pares": []
+   "pares": [],
+   "veredito_dono": "ERRADA",
+   "classe_dono": "eixo",
+   "correcao_dono": "muito deslocada para a esquerda, invadindo manga e braco (confirmado)"
   },
   {
    "n": 50,
@@ -1604,5 +1670,16 @@
     67
    ]
   }
- ]
+ ],
+ "rodada2": {
+  "data": "2026-07-27",
+  "convencao": "esquerda/direita do ponto de vista de quem olha a foto",
+  "regra_do_rosto": "12/12 correcoes direcionais do dono previstas",
+  "correcoes_metodo": [
+   "yaw medido em toda pose girada",
+   "torso travado por produto",
+   "vertical vs mockup por registro",
+   "largura vs mockup por registro"
+  ]
+ }
 }
