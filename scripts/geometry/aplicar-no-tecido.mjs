@@ -77,14 +77,39 @@ export function campoDeDobra(bg, { rPequeno = 3, rGrande = 24 } = {}) {
 }
 
 /**
+ * ILUMINACAO DA CENA, em baixa frequencia.
+ *
+ * O comentario de `campoDeDobra` diz que o termo grosso carrega a iluminacao
+ * "que a arte NAO deve seguir, senao ela ganha degrade inteiro". Isso esta
+ * errado, e foi o defeito que o dono pegou no Sao Jorge: a base da estampa
+ * parece colada. Uma estampa num pano que curva para a sombra TEM que escurecer
+ * junto — se ela mantem brilho uniforme enquanto o tecido em volta escurece,
+ * ela flutua sobre a peca.
+ *
+ * Medido no blank do 352718787, a iluminacao cai de 6 a 10% ao longo da
+ * largura da estampa. Nao e sutil.
+ *
+ * O medo do comentario antigo (ganhar degrade demais) se resolve com o
+ * expoente, nao removendo o termo. Com `ganho = 1` a tinta segue a iluminacao
+ * exatamente como o tecido segue, que e o fisicamente certo.
+ */
+export function campoDeIluminacao(bg, { raio = 40 } = {}) {
+  const { width: W, height: H, data } = bg;
+  const lum = new Float32Array(W * H);
+  for (let p = 0; p < W * H; p += 1) lum[p] = LUM(data, p * 3);
+  return borrar(lum, W, H, raio);
+}
+
+/**
  * Compoe a camada da arte sobre o fundo, seguindo o tecido.
  *
  * @param bg    imagem do blank, raw 3 canais
  * @param layer camada da arte ja projetada pela malha, RGBA
- * @param opts  relevo (px de deslocamento por unidade de dobra), sombra (ganho)
+ * @param opts  relevo (px de deslocamento por unidade de dobra), sombra (ganho
+ *              do vinco), sombraGlobal (expoente da iluminacao da cena)
  */
 export function aplicarNoTecido(bg, layer, {
-  relevo = 3, sombra = 0.9, opacidade = 0.93, min = 0.6, max = 1.35,
+  relevo = 3, sombra = 0.9, opacidade = 0.93, min = 0.6, max = 1.35, sombraGlobal = 1, dobraLarga = 40,
 } = {}) {
   const { width: W, height: H } = bg;
   // DUAS ESCALAS, e a separacao importa.
@@ -97,7 +122,14 @@ export function aplicarNoTecido(bg, layer, {
   // Deslocamento segue so a DOBRA (passa-banda largo). Sombra pode usar campo
   // mais fino, porque escurecer na trama e justamente o que integra a tinta ao
   // pano sem mexer na forma das letras.
-  const { campo: dobra } = campoDeDobra(bg, { rPequeno: 9, rGrande: 40 });
+  // O RAIO GRANDE DEFINE ATE QUE TAMANHO DE DOBRA A ARTE ACOMPANHA, e o 40
+  // original era curto demais. Passa-banda de 9 a 40 px guarda vinco pequeno e
+  // JOGA FORA a dobra larga — que num moletom passa de 100 px e e exatamente a
+  // que faz o pano parecer pano. A estampa entao segue a trama mas ignora o
+  // caimento, e a base dela fica reta sobre um tecido que ondula. Foi essa a
+  // reclamacao: "nao parece parte da roupa real, nao sei se ta movendo com o
+  // moletom".
+  const { campo: dobra } = campoDeDobra(bg, { rPequeno: 9, rGrande: dobraLarga });
   const { campo } = campoDeDobra(bg);
   const dst = bg.data;
   const L = layer.data;
@@ -112,6 +144,19 @@ export function aplicarNoTecido(bg, layer, {
   comTinta.sort((a, b) => a - b);
   const refDobra = comTinta[Math.floor(comTinta.length / 2)];
 
+  // A iluminacao da cena, com a mesma logica de referencia: mediana ONDE HA
+  // TINTA, para o fator ficar centrado em 1 na regiao da arte. Assim ela nao
+  // clareia nem escurece no todo — so acompanha a VARIACAO do pano, que e o
+  // que a integra a peca.
+  const ilum = sombraGlobal > 0 ? campoDeIluminacao(bg) : null;
+  let refIlum = 1;
+  if (ilum) {
+    const iTinta = [];
+    for (let p = 0; p < W * H; p += 1) if (L[p * 4 + 3] > 8) iTinta.push(ilum[p]);
+    iTinta.sort((a, b) => a - b);
+    refIlum = Math.max(1, iTinta[Math.floor(iTinta.length / 2)]);
+  }
+
   let n = 0;
   for (let y = 0; y < H; y += 1) {
     for (let x = 0; x < W; x += 1) {
@@ -125,8 +170,13 @@ export function aplicarNoTecido(bg, layer, {
       const a = L[q * 4 + 3] / 255;
       if (a <= 0.004) continue;
       n += 1;
-      // SOMBRA: o vinco escurece a tinta como escurece o pano.
-      const k = Math.max(min, Math.min(max, 1 + sombra * (campo[p] - refDobra)));
+      // SOMBRA: o vinco escurece a tinta como escurece o pano (alta
+      // frequencia), e a iluminacao da cena a acompanha (baixa frequencia).
+      // Sem o segundo termo a estampa mantem brilho uniforme enquanto o pano
+      // em volta escurece, e flutua sobre a peca.
+      const kVinco = 1 + sombra * (campo[p] - refDobra);
+      const kIlum = ilum ? (ilum[p] / refIlum) ** sombraGlobal : 1;
+      const k = Math.max(min, Math.min(max, kVinco * kIlum));
       const i = p * 3;
       for (let c = 0; c < 3; c += 1) {
         const tinta = Math.max(0, Math.min(255, L[q * 4 + c] * k));
@@ -134,7 +184,7 @@ export function aplicarNoTecido(bg, layer, {
       }
     }
   }
-  return { pixels: n, refDobra: +refDobra.toFixed(3), relevo, sombra };
+  return { pixels: n, refDobra: +refDobra.toFixed(3), relevo, sombra, sombraGlobal, dobraLarga };
 }
 
 /** Camada RGBA vazia do tamanho do fundo. */

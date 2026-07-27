@@ -294,7 +294,7 @@ function placaDeSombra(bg) {
   return suave;
 }
 
-export async function compor({ foto, arte, artCm, peca, gola, barra, centro, torso = null, yaw = 0, placement = null, out, opacidade = 0.93, sombraMin = 0.6, sombraMax = 1.35, relevo = 3, sombraTecido = 0.9, oclusao = null }) {
+export async function compor({ foto, arte, artCm, peca, gola, barra, centro, torso = null, yaw = 0, placement = null, out, opacidade = 0.93, sombraMin = 0.6, sombraMax = 1.35, relevo = 3, sombraTecido = 0.9, sombraGlobal = 1, dobraLarga = 40, oclusao = null }) {
   const meta = await sharp(foto).metadata();
   const plano = planejar({
     golaFrac: gola, barraFrac: barra, centroFrac: centro, torsoFrac: torso, yawDeg: yaw,
@@ -353,7 +353,7 @@ export async function compor({ foto, arte, artCm, peca, gola, barra, centro, tor
     // o topo da estampa. Isso e o produto REAL — desenhar a arte por cima do
     // capuz fica visivelmente falso, e foi o que o dono reprovou no piloto.
     if (oclusao) ocluirCamada(layer, oclusao);
-    aplicarNoTecido(bg, layer, { relevo, sombra: sombraTecido, opacidade, min: sombraMin, max: sombraMax });
+    aplicarNoTecido(bg, layer, { relevo, sombra: sombraTecido, opacidade, min: sombraMin, max: sombraMax, sombraGlobal, dobraLarga });
   } else {
     compositeArt(bg, tex, plano.params, opacidade, { plate, ref, min: sombraMin, max: sombraMax });
   }
@@ -476,6 +476,8 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
       sombraMax: Number(arg("--sombra-max", "1.35")),
       relevo: process.argv.includes("--sem-relevo") ? 0 : Number(arg("--relevo", "2.2")),
       sombraTecido: Number(arg("--sombra-tecido", "0.55")),
+      sombraGlobal: Number(arg("--sombra-global", "1")),
+      dobraLarga: Number(arg("--dobra-larga", "40")),
       oclusao: parsePoligono(arg("--oclusao")),
     };
     if (cfg.oclusao && cfg.relevo <= 0) {
@@ -542,6 +544,8 @@ if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {
       sombra_min: cfg.sombraMin, sombra_max: cfg.sombraMax,
       relevo: cfg.relevo,
       sombra_tecido: cfg.sombraTecido,
+      sombra_global: cfg.sombraGlobal,
+      dobra_larga: cfg.dobraLarga,
       oclusao: arg("--oclusao") ?? null,
       oclusao_aplicada: Boolean(cfg.oclusao) && cfg.relevo > 0,
       ss, arco_meio_rad: r.alvo?.arco_meio_rad ?? null, gerado_em: new Date().toISOString(),

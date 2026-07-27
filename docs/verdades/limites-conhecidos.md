@@ -81,6 +81,32 @@ Corrigido em 26/07 (ponte de 3% da largura, e `suspeito` dispara também quando
 sobra outra corrida grande ou quando o resultado foge 30% da tabela). Ainda assim
 **use como segunda opinião**, não como autoridade.
 
+## Integração com o tecido
+
+O ponto cego que o gate declara e não mede. Em 27/07 o dono pegou dois defeitos
+nele no São Jorge, e os dois são regressão do compositor de 26/07.
+
+**A arte não seguia a iluminação da cena.** `aplicarNoTecido` usava só campos
+passa-banda, e o comentário do próprio arquivo dizia que a arte "NÃO deve
+seguir" a iluminação global. Está errado: estampa em pano que curva para a
+sombra tem que escurecer junto, senão mantém brilho uniforme enquanto o tecido
+em volta escurece, e flutua sobre a peça. No blank do 352718787 a iluminação cai
+**6 a 10%** ao longo da largura da estampa. O caminho antigo (`compositeArt`,
+`k = lumBg/ref`) tinha isso; a reescrita consertou "sem dobra" e quebrou "sem
+sombra". Voltou como `--sombra-global` (expoente, padrão 1).
+
+**A arte só seguia vinco pequeno, não o caimento.** O deslocamento usava
+passa-banda de 9 a 40 px. Dobra de moletom passa de 100 px, ou seja **era
+justamente o que o filtro jogava fora** — a estampa seguia a trama e ignorava o
+caimento, e a base dela ficava reta sobre um tecido que ondula. Virou
+`--dobra-larga` (raio grande do campo de deslocamento).
+
+> [!info] Alargar a dobra é seguro para o texto; estreitar a trama não é
+> A regra "texto é sagrado" nasceu de um piloto onde o "NIMBUS" do cartucho
+> ficou ilegível — mas aquilo veio de deslocar pela **trama** (2 a 3 px), que
+> treme na escala do pixel. Alargar o raio **grande** mexe em gradiente suave:
+> conferido a `dobra 180 · relevo 8` e o cartucho continua legível.
+
 ## Caixa de tinta no mockup (`placement-mockup.mjs`)
 
 É de onde sai o `placement_cm` de todo o catálogo. Em 27/07 ela foi consertada
