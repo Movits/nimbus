@@ -1,0 +1,15 @@
+{
+  "352723243|branca": { "nota": "releitura confirmou centro 0.5 e torso 0.295; pose frontal" },
+  "352890896|preta": { "centro": 0.52, "torso": 0.37, "refazer": true },
+  "352719816|branca": { "torso": 0.40, "refazer": true, "nota": "CAPUZ CAIDO: oclusao pendente" },
+  "352718275|branca": { "centro": 0.475, "torso": 0.33, "refazer": true },
+  "352717723|offwhite": { "centro": 0.41, "torso": 0.37, "refazer": true, "nota": "confianca media" },
+  "352717837|preta": { "centro": 0.455, "torso": 0.34, "refazer": true, "nota": "confianca media" },
+  "352619175|preta": { "centro": 0.47, "torso": 0.48, "refazer": true, "nota": "CAPUZ CAIDO: oclusao pendente; modelo perto da camera" },
+  "352619175|branca": { "centro": 0.47, "torso": 0.50, "refazer": true, "nota": "CAPUZ CAIDO: oclusao pendente; modelo perto da camera" },
+  "352718943|preta": { "centro": 0.445, "torso": 0.36, "refazer": true },
+  "352718999|branca": { "centro": 0.493, "torso": 0.292, "refazer": true, "nota": "valores do piloto APROVADO pelo dono" },
+  "352718787|preta": { "centro": 0.497, "torso": 0.375, "costura_x": 0.445, "refazer": true, "nota": "par-blank da branca aprovada: mesma pose, mesmos landmarks, yaw -14.75" },
+  "352407182|preta": { "centro": 0.45, "torso": 0.36, "refazer": true },
+  "352407196|branca": { "centro": 0.49, "torso": 0.32, "refazer": true, "nota": "pose frontal, yaw ~0" }
+}
