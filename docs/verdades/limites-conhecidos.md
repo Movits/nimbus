@@ -124,6 +124,20 @@ O híbrido: 1 composição barata da IA por blank → `registerArt` extrai o
 meridiano → `estimar-yaw` resolve o yaw → nossa geometria compõe a arte fiel.
 Substitui a leitura manual de costura no catálogo inteiro (~US$0,03/blank).
 
+**A/B de prompt (27/07, Aparecida 352728019).** O dono suspeitou do prompt, e
+tinha razão em parte: (A) prompt mínimo sem medida → +79% de escala, o
+instinto do modelo é estampa gigante; (v1) prompt técnico com centímetros →
++63%, o modelo não ancora cm. O vencedor é **(B) o mockup do produto como
+referência, sem número nenhum**: "a primeira imagem é o produto real; mostre a
+pessoa vestindo o produto real". O modelo transfere o produto com fidelidade —
+a prova involuntária: alimentado por engano com a foto da FRENTE, ele copiou o
+selo de peito para as costas, obedecendo a referência ao pé da letra. Com a
+foto certa (gallery-02), a capa saiu a mais parecida com o produto real que já
+produzimos para esse blank: eixo do corpo girado certo, caimento natural,
+escala a +25% (uma rodada de correção do alvo). Armadilha registrada: escolher
+a gallery ERRADA reproduz fielmente o produto errado — a seleção de mockup de
+costas tem que vir do registro com a arte, nunca do índice da foto.
+
 **A armadilha da leitura é o pescoço.** Na 352728277 a ribana some atrás do
 pescoço e a primeira leitura pegou a base dele (0,52 → yaw +9, lado errado);
 com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.
