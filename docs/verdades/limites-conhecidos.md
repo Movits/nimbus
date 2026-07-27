@@ -157,6 +157,18 @@ paga), cartucho "NIMBUS" virou "NIMEÓN"/"NFARISOS" em 2 de 6 moletons. (3) Em
 da estampa foi para o lado que a regra do rosto prevê, contra o eixo da
 silhueta; a nossa 352728019 v3 (yaw 0) está errada e a IA está certa.
 
+**Piloto v3/v4 (27/07): a arte na referência faz falta, e correção de estilo é
+faca de dois gumes.** O halo chapado que o dono reprovou veio da nossa frase
+"keep the gold halo flat and simple" — instrução de estilo minha, não da IA;
+corrigir estilo por texto é arriscado, a referência visual é que manda. Tirar a
+arte das refs (só mockup 500 px + blank) degrada: desenho redesenhado,
+assinatura "NIMBUS" ilegível nas 4 gerações, e a **armadilha de cor** — mandado
+"vestir o produto real" (mockup preto) sobre blank branco, o modelo pintou a
+camiseta de preto. Receita vigente: 3 refs (arte + blank + mockup), frase de
+tamanho, nenhuma frase de estilo, ~5 candidatas e a auditoria escolhe (escala
+varia de −13% a +22% entre gerações idênticas). Texto pequeno (assinatura)
+nunca sai perfeito — herdeiro direto do "texto é sagrado".
+
 **A armadilha da leitura é o pescoço.** Na 352728277 a ribana some atrás do
 pescoço e a primeira leitura pegou a base dele (0,52 → yaw +9, lado errado);
 com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.

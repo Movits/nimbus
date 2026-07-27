@@ -45,3 +45,25 @@ Medido (27/07): tee 352618935 +3%/+5,6% de escala na 1a rodada; moletom
 
 Melhores: tee v2b-2 (escala +0,2%, dV −0,4 cm, dH +1,4 cm), oversized v2b-1
 (escala +0,3%, dV −2,0 cm, acompanha o corpo girado). Moletom: todas reprovadas.
+
+## v3 — teste de 2 referencias [mockup, blank], sem a arte (REPROVADO)
+O dono reprovou o halo CHAPADO da v2b-1 — mas o chapado veio da NOSSA frase de
+correcao ("keep the gold halo flat and simple"), nao do excesso de referencias.
+O teste sem a arte provou que ela faz falta:
+- fidelidade cai (o mockup de 500 px e a unica fonte de desenho): cavaleiro da
+  tee redesenhado, assinatura "NIMBUS" virou rabisco nas 4 geracoes;
+- **armadilha de cor**: "vista o produto real" com mockup preto sobre blank
+  BRANCO fez a IA pintar a camiseta de preto. Para variante de cor que nao e a
+  do mockup, o prompt tem que dizer que a cor da peca e a do blank.
+
+## v4 — VIGENTE para pose sem capuz: 3 refs + frase de tamanho, SEM frase de estilo
+Refs: [arte oficial, blank, mockup de costas por registro]. Prompt v2 +
+"Important: make the print clearly smaller than your instinct, matching the
+product photo: it covers less than half the width of the back panel. Reproduce
+the look of the print exactly as in the product photo and the artwork,
+including the texture of the gold and the small NIMBUS signature."
+Escala e loteria entre candidatas (+14,2 / −12,8 / +3,3 / −3,3 / +22,1 em 5
+geracoes): **gerar ~5 e deixar a auditoria escolher** e parte do metodo.
+Melhor: v4-4 (escala −3,3%, dV −0,4 cm, halo com textura e escorridos).
+Limite que sobra: a assinatura pequena nunca sai perfeita ("NIMBOS") — mesmo
+motivo do velho "texto e sagrado".
