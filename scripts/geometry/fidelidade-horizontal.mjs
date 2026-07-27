@@ -6,31 +6,28 @@
 // `aspecto` usa NCC, que e declaradamente cego para compressao. Por isso o
 // desalinhamento horizontal reaparecia capa apos capa — nao havia instrumento.
 //
-// A PONTE ENTRE OS DOIS MUNDOS. O mockup e a peca CHAPADA; a capa e um
-// cilindro fotografado. A mesma arte aparece mais estreita na capa porque
-// enrola. A conversao e fechada e nao tem parametro livre:
+// O QUE ELE VERIFICA, E O QUE NAO DA PARA VERIFICAR.
 //
-//   no mockup, arte de largura w num painel plano de largura pi*R:
-//       r_plano = w / (pi*R)                    =>   w = pi*R*r_plano
-//   na capa, essa arte vira corda sobre a silhueta 2R:
-//       r_cilindro = 2R*sin(w/2R) / (2R) = sin(w / 2R)
-//   logo
-//       r_cilindro_esperado = sin(pi * r_plano / 2)
+// VEREDITO: a POSICAO. O mockup diz o quanto a estampa foge do eixo do corpo,
+// em fracao da largura do corpo. Isso e adimensional, nao depende do caimento
+// nem da escala do template, e transfere direto para a capa.
 //
-// `r_cilindro` medido na capa e (largura projetada da malha) / (torso em px),
-// os dois em pixel da mesma imagem — o torso E a silhueta do cilindro, por
-// construcao de `planejar()`.
+// INFORMATIVO: a LARGURA. Ela nao tem alvo unico, e isso e conclusao e nao
+// desistencia. A largura projetada depende de quao chapado o tecido cai — que
+// e exatamente a incognita que `--torso` mede na foto. Os dois extremos:
+//     cilindro justo:  razao = sin(w / 2*R_tabela)
+//     peca chapada:    razao = w / (pi*R_tabela)
+// O mockup e o caso chapado; a capa e um ponto entre os dois. Comparar a capa
+// com o cilindro justo nao mede erro, mede caimento — e foi assim que uma
+// versao anterior deste script pediu raio 17,3 cm num Oversized cujo raio de
+// tabela e 21,0, coisa que `planejar()` nunca faz.
 //
-// O QUE ELE NAO ENXERGA, e importa:
-//   - O template do mockup NAO esta em escala com a tabela. O CONCLUSOES.md de
-//     26/07 registra que a largura do template da Camiseta implica ~50 cm
-//     contra 54 do G. Isso e ~7% de incerteza sistematica em `r_plano`, que
-//     entra inteiro aqui. Trate desvio abaixo de ~8% como empate.
-//   - Onde `largura_truncada` e true, a busca de tinta do mockup bateu na
-//     margem de 14% e a largura medida e um PISO. O alvo real e maior, entao
-//     "estreita demais" nesses casos e ainda mais grave, e "larga demais" nao
-//     pode ser concluido.
-//   - Nada aqui olha fidelidade de traco, yaw ou integracao com o tecido.
+// A saida traz os dois extremos e onde a capa caiu entre eles, para quem le
+// poder situar o numero em vez de receber um "-19%" sem referencia.
+//
+// O QUE ELE NAO ENXERGA: fidelidade de traco, sinal do yaw e integracao com o
+// tecido. E ele depende de `TEMPLATE.corpo`, que so existe para Camiseta
+// Premium e Oversized; nas outras pecas ele RECUSA em vez de estimar.
 //
 // Uso: node scripts/geometry/fidelidade-horizontal.mjs --receita <r.json>
 //      [--produto <id>]   (default: o campo `produto` da receita)
@@ -39,6 +36,8 @@ import fs from "node:fs";
 import sharp from "sharp";
 import { planejar } from "../compose-art.mjs";
 import { artMesh } from "./render.mjs";
+import { getGarmentSpec } from "./garment-specs.mjs";
+import { CANONICAL_SIZE } from "./measure.mjs";
 
 const OFICIAL = "nuvemshop/auditoria/2026-07-26-datum-mockups/horizontal-oficial.json";
 const arg = (n, d = null) => {
@@ -92,9 +91,28 @@ const centroArtePx = (Math.max(...xs) + Math.min(...xs)) / 2;
 // quando informado, mas recalcular pela camera cobre a receita sem torso.
 const torsoPx = (2 * par.camera.f * par.radius_cm) / par.camera.distance_cm;
 
+// LARGURA ESPERADA: da TABELA, nao do mockup.
+//
+// A primeira versao tirava `r_plano` do mockup (largura da tinta sobre a
+// largura do painel do corpo) e convertia com sin(pi*r/2). Isso importa
+// inteiro o erro de escala do template, que o CONCLUSOES.md ja declarava e que
+// e MUITO maior que os 8% de folga que eu tinha assumido: no Oversized o
+// painel do template implica ~52 cm onde a tabela diz 66, ou seja 21%. O
+// resultado era pedir raio 17,3 cm num produto cujo raio de tabela e 21,0 —
+// impossivel, porque `planejar()` nunca desce abaixo da tabela. Instrumento
+// pedindo o impossivel e instrumento errado, nao capa errada.
+//
+// A largura na verdade nao precisa do mockup: o painel plano da peca mede
+// pi*R_tabela, entao a arte de `arte_cm` cm subtende arco w/R e projeta corda
+//     r_esperado = sin(w / (2*R_tabela))
+// e a capa, com o raio que a receita usou,
+//     r_medido   = sin(w / (2*R_receita))
+// Ou seja: a diferenca e SO a inflacao do raio. Inflar o raio faz a estampa
+// ocupar uma fracao MENOR da peca, que e o "desalinhado" que se ve no olho.
+const spec = getGarmentSpec(rec.peca);
+const raioTabela = spec.sizes.find((s) => s.size === CANONICAL_SIZE).width_cm / Math.PI;
 const rCilindro = larguraArtePx / torsoPx;
-const rPlano = oficial.largura_rel;
-const rEsperado = Math.sin((Math.PI * rPlano) / 2);
+const rEsperado = Math.sin(aw / (2 * raioTabela));
 const desvioPct = 100 * (rCilindro / rEsperado - 1);
 
 // Posicao horizontal: o mockup diz o quanto a arte foge do eixo da peca, em
@@ -105,24 +123,45 @@ const desvioErroPp = 100 * (desvioCapa - oficial.desvio_rel);
 // Que raio faria a largura bater. Util porque `torso` e o unico botao que
 // mexe nisso: w = pi*R*r_plano tem que dar corda = r_esperado*2R, ja garantido
 // pela formula; o que sobra e a arte em cm nao casar com o mockup.
-const arcoNecessario = Math.asin(Math.min(0.999, rEsperado));
-const raioNecessario = aw / (2 * arcoNecessario);
+// Com a formula da tabela, o raio necessario E o raio da tabela por
+// construcao. O que sobra de util e a INFLACAO: quanto o `torso` afastou o
+// raio do da tabela, que e exatamente o quanto a estampa encolheu na peca.
+const raioNecessario = raioTabela;
 
-// ~8% de folga: e a incerteza declarada do template, nao um numero escolhido.
-const FOLGA_PCT = 8;
-const estreita = desvioPct < -FOLGA_PCT;
-const larga = desvioPct > FOLGA_PCT && !oficial.largura_truncada;
-const foraDoEixo = Math.abs(desvioErroPp) > 3;
+// A LARGURA NAO TEM VEREDITO, E ISSO E CONCLUSAO, NAO DESISTENCIA.
+//
+// Fui atras dela por tres caminhos e os tres caem no mesmo lugar. A largura
+// projetada da estampa depende de QUAO CHAPADO o tecido cai, e isso e
+// justamente o que `--torso` mede na foto. Para a mesma peca e a mesma arte:
+//
+//   cilindro justo (R = R_tabela):  razao = sin(w/2R)          = 0,570
+//   peca totalmente chapada:        razao = w / largura_plana   = 0,386
+//
+// (numeros do Oversized, arte de 25,5 cm). Os dois extremos sao fisicamente
+// possiveis, o mockup e o caso chapado, a capa e um ponto qualquer entre eles,
+// e nao existe "esperado" sem saber o caimento — que e a incognita. Comparar
+// com o cilindro justo, como esta versao fazia, nao mede erro: mede quanto o
+// caimento se afasta do cilindro. Foi o que produziu o pedido impossivel de
+// raio 17,3 cm num produto de raio de tabela 21,0.
+//
+// Entao a largura vai como INFORMATIVO, com os dois extremos ao lado para
+// quem le poder situar o numero. O veredito fica com a POSICAO, que e
+// adimensional, independe do caimento e o mockup mede bem.
+const rChapado = aw / (Math.PI * raioTabela);
+const FOLGA_PP = 3;
+const foraDoEixo = Math.abs(desvioErroPp) > FOLGA_PP;
 
 const saida = {
   receita: receitaPath, produto, peca: rec.peca,
   mockup: oficial.mockup,
   largura: {
-    r_plano_mockup: rPlano,
-    r_cilindro_esperado: +rEsperado.toFixed(4),
-    r_cilindro_medido: +rCilindro.toFixed(4),
-    desvio_pct: +desvioPct.toFixed(2),
-    truncada_no_mockup: Boolean(oficial.largura_truncada),
+    // informativo: os dois extremos fisicos e onde a capa caiu entre eles
+    razao_se_cilindro_justo: +rEsperado.toFixed(4),
+    razao_se_chapada: +rChapado.toFixed(4),
+    razao_medida: +rCilindro.toFixed(4),
+    posicao_entre_extremos: +((rCilindro - rChapado) / (rEsperado - rChapado)).toFixed(3),
+    inflacao_do_raio: +(par.radius_cm / raioTabela).toFixed(3),
+    nota: "sem veredito: a largura projetada depende do caimento, que e o que --torso mede",
   },
   posicao: {
     desvio_rel_mockup: oficial.desvio_rel,
@@ -134,12 +173,10 @@ const saida = {
     necessario_cm: +raioNecessario.toFixed(2),
     fator: +(raioNecessario / par.radius_cm).toFixed(3),
   },
-  folga_pct: FOLGA_PCT,
-  nota: "folga de 8% e a incerteza declarada do template do mockup (largura implica ~50 cm contra 54 do G)",
+  folga_pp: FOLGA_PP,
+  nota: "veredito e so a POSICAO; a largura vai informativa porque depende do caimento, que --torso mede",
   falhas: [
-    estreita ? `estampa ${Math.abs(desvioPct).toFixed(1)}% MAIS ESTREITA que o produto real` : null,
-    larga ? `estampa ${desvioPct.toFixed(1)}% MAIS LARGA que o produto real` : null,
-    foraDoEixo ? `estampa ${desvioErroPp.toFixed(1)} pp fora do eixo em relacao ao produto real` : null,
+    foraDoEixo ? `estampa ${desvioErroPp.toFixed(1)} pp fora do eixo em relacao ao produto real (folga ${FOLGA_PP} pp)` : null,
   ].filter(Boolean),
 };
 saida.veredito = saida.falhas.length ? "REPROVADO" : "APROVADO";
