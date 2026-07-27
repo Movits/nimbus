@@ -77,6 +77,15 @@ passam gate, compressão de malha e leitura visual. A fila acima do teto caiu de
 Escolhidas para cobrir três caminhos de risco diferentes: tecido escuro, peça de
 área maior, e tecido claro com capuz.
 
+**Piloto Nano Banana v2 (27/07, aguardando aprovar/reprovar do dono).** Prompt
+de 3 referências desenhado pelo dono (arte + blank + mockup de costas, sem
+números) + 1 rodada de correção. Escala resolvida em pose sem capuz: tee
+352618935 a +0,2%, oversized 352728019 a +0,3% (obedeceu "clearly smaller" e
+"halo flat"). Capuz é falha dura (4/4 tentativas põem a estampa inteira abaixo
+do capuz) — moletom fica na via geométrica. Fluxo acordado: eu gero → eu audito
+→ envio com veredito → dono aprova/reprova → itera. Prompts e vereditos em
+`scripts/gemini/PROMPTS-PILOTO.md`.
+
 **Próximo passo:** com o aval do dono, seguir a fila em lotes, remedindo `torso`
 e `centro` no blank antes de recompor. A 352718999 branca aparece na fila mas
 **já está resolvida** — é um dos pilotos aprovados, e o que falta é promover o

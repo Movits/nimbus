@@ -138,6 +138,25 @@ escala a +25% (uma rodada de correção do alvo). Armadilha registrada: escolher
 a gallery ERRADA reproduz fielmente o produto errado — a seleção de mockup de
 costas tem que vir do registro com a arte, nunca do índice da foto.
 
+**Piloto v2 (27/07): prompt de 3 referências, desenhado pelo dono.** Refs =
+[arte oficial, blank, mockup de costas], texto curto ("mesmo tamanho e mesma
+posição que na foto do produto"), 2 candidatas por capa + 1 rodada de correção
+com uma frase de feedback por erro. Resultado medido: **escala resolvida em pose
+reta** — tee São Jorge caiu a **+0,2%** e vertical −0,4 cm; a Aparecida
+oversized, que insistia em +21/23%, obedeceu "clearly smaller… less than half
+the width" e caiu a **+0,3%**, e "keep the gold halo flat" tirou a
+re-texturização. Três limites confirmados nas 12 gerações: (1) **capuz é
+falha dura** — em 4 tentativas, com e sem instrução explícita, a IA nunca
+esconde o topo da estampa sob o capuz; ela encolhe ou desce a estampa inteira
+para caber abaixo dele (+5,5 a 6,4 cm de erro vertical no moletom; a via
+geométrica com polígono de oclusão continua a única certa para capuz). (2) A
+**arte é sempre levemente redesenhada** — letras engrossam ou derretem numa
+candidata e não na outra (variância entre candidatas é real: gerar 2 e escolher
+paga), cartucho "NIMBUS" virou "NIMEÓN"/"NFARISOS" em 2 de 6 moletons. (3) Em
+**pose girada a IA acompanha o corpo** — nas duas capas de pose girada o centro
+da estampa foi para o lado que a regra do rosto prevê, contra o eixo da
+silhueta; a nossa 352728019 v3 (yaw 0) está errada e a IA está certa.
+
 **A armadilha da leitura é o pescoço.** Na 352728277 a ribana some atrás do
 pescoço e a primeira leitura pegou a base dele (0,52 → yaw +9, lado errado);
 com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.

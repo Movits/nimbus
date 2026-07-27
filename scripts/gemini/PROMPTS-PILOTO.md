@@ -23,3 +23,25 @@ The first image is the real product: the BACK of the t-shirt with its print. The
 ```
 Armadilha: gallery errada = produto errado reproduzido fielmente. Selecionar o
 mockup de costas pelo REGISTRO com a arte, nunca pelo indice.
+
+## v2 — 3 referencias, desenhado pelo dono (VIGENTE para pose sem capuz)
+Refs: [arte oficial PNG, blank, mockup de COSTAS escolhido por registro]
+```
+The first image is the artwork. The second image is a person wearing the blank garment, with no print. The third image is the official product photo, showing the real print on the back of this same garment.
+
+Add the print to the person's garment in the second image. Use the artwork from the first image, at the same size and the same position on the garment as shown in the third image. Keep the person, pose, folds, lighting and background of the second image exactly as they are.
+```
+Medido (27/07): tee 352618935 +3%/+5,6% de escala na 1a rodada; moletom
++2,9%/−8,3%; oversized 352728019 ainda +23%/+21%.
+
+### v2b — rodada de correcao (1 frase de feedback por erro)
+- Letras: "Reproduce the lettering of the artwork exactly as drawn, stroke by
+  stroke, without redrawing or thickening the letters."
+- Oversized grande: "make the print clearly smaller… it covers less than half
+  the width of the back panel" → escala caiu de +23% para **+0,3%**.
+  "Keep the gold halo flat and simple" → tirou a re-texturizacao do halo.
+- Capuz: "its top part is hidden under the hood" → **NAO obedece** (piorou:
+  +15,9% e +63%). Capuz e falha dura da IA; usar a via geometrica com oclusao.
+
+Melhores: tee v2b-2 (escala +0,2%, dV −0,4 cm, dH +1,4 cm), oversized v2b-1
+(escala +0,3%, dV −2,0 cm, acompanha o corpo girado). Moletom: todas reprovadas.
