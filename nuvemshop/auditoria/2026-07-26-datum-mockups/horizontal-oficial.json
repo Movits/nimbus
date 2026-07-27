@@ -2,60 +2,51 @@
  {
   "product_id": "352407156",
   "garment": "Moletom Canguru",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 157,
-  "tinta_base_px": 358,
-  "placement_frac": 0.0606,
-  "altura_frac": 0.5938,
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 159,
+  "tinta_base_px": 365,
+  "placement_frac": 0.0665,
+  "altura_frac": 0.6086,
   "altura_oficial_cm": 40,
   "largura_rel": null,
   "desvio_rel": null,
-  "tinta_x0_px": 169,
-  "tinta_x1_px": 332,
+  "tinta_x0_px": 173,
+  "tinta_x1_px": 390,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
-  "peca_banda_x0_px": 50,
-  "peca_banda_x1_px": 443,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 15898
+  "peca_banda_x0_px": 97,
+  "peca_banda_x1_px": 435,
+  "descartados": [
+   {
+    "mockup": "gallery-02.webp",
+    "motivos": [
+     "altura da tinta 337px contra 208px esperados para 40 cm (razao 1.62) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 13489
  },
  {
   "product_id": "352407182",
   "garment": "Camiseta Oversized Premium",
   "mockup": "gallery-02.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
+  "tinta_topo_px": 78,
+  "tinta_base_px": 274,
+  "placement_frac": 0.1115,
+  "altura_frac": 0.4202,
   "altura_oficial_cm": 40,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
+  "largura_rel": 0.597,
+  "desvio_rel": -0.0112,
+  "tinta_x0_px": 170,
+  "tinta_x1_px": 329,
   "corpo_x0_px": 119,
   "corpo_x1_px": 386,
   "peca_banda_x0_px": 24,
   "peca_banda_x1_px": 476,
-  "descartados": [
-   {
-    "mockup": "gallery-03.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-04.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   }
-  ],
+  "descartados": [],
   "largura_truncada": true,
-  "pixels_tinta": 14185
+  "pixels_tinta": 13831
  },
  {
   "product_id": "352407196",
@@ -74,44 +65,62 @@
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 41,
   "peca_banda_x1_px": 461,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 15739
- },
- {
-  "product_id": "352618837",
-  "garment": "Blusão Moletom",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 162,
-  "tinta_base_px": 202,
-  "placement_frac": 0.2577,
-  "altura_frac": 0.1031,
-  "altura_oficial_cm": 40,
-  "largura_rel": null,
-  "desvio_rel": null,
-  "tinta_x0_px": 299,
-  "tinta_x1_px": 341,
-  "corpo_x0_px": null,
-  "corpo_x1_px": null,
-  "peca_banda_x0_px": 107,
-  "peca_banda_x1_px": 388,
   "descartados": [
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 41px contra 206px esperados para 40 cm (razao 0.20) — mockup errado ou deteccao estourada"
     ]
    },
    {
     "mockup": "gallery-03.webp",
     "motivos": [
-     "caixa de tinta encosta na barra"
+     "altura da tinta 41px contra 206px esperados para 40 cm (razao 0.20) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 15709
+ },
+ {
+  "product_id": "352618837",
+  "garment": "Blusão Moletom",
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 132,
+  "tinta_base_px": 322,
+  "placement_frac": 0.1804,
+  "altura_frac": 0.4897,
+  "altura_oficial_cm": 40,
+  "largura_rel": null,
+  "desvio_rel": null,
+  "tinta_x0_px": 175,
+  "tinta_x1_px": 325,
+  "corpo_x0_px": null,
+  "corpo_x1_px": null,
+  "peca_banda_x0_px": 102,
+  "peca_banda_x1_px": 386,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 286px contra 198px esperados para 40 cm (razao 1.44) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-02.webp",
+    "motivos": [
+     "altura da tinta 41px contra 198px esperados para 40 cm (razao 0.21) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 320px contra 198px esperados para 40 cm (razao 1.62) — mockup errado ou deteccao estourada"
     ]
    }
   ],
   "largura_truncada": false,
-  "pixels_tinta": 367
+  "pixels_tinta": 18858
  },
  {
   "product_id": "352618878",
@@ -125,60 +134,58 @@
   "largura_rel": null,
   "desvio_rel": null,
   "tinta_x0_px": 171,
-  "tinta_x1_px": 374,
+  "tinta_x1_px": 388,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
   "peca_banda_x0_px": 93,
   "peca_banda_x1_px": 435,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 21468
+  "descartados": [
+   {
+    "mockup": "gallery-02.webp",
+    "motivos": [
+     "altura da tinta 346px contra 208px esperados para 40 cm (razao 1.66) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 20736
  },
  {
   "product_id": "352618903",
   "garment": "Camiseta Oversized Premium",
   "mockup": "gallery-02.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
+  "tinta_topo_px": 82,
+  "tinta_base_px": 285,
+  "placement_frac": 0.12,
+  "altura_frac": 0.4352,
   "altura_oficial_cm": 40,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
+  "largura_rel": 0.5784,
+  "desvio_rel": -0.0093,
+  "tinta_x0_px": 173,
+  "tinta_x1_px": 327,
   "corpo_x0_px": 119,
   "corpo_x1_px": 386,
   "peca_banda_x0_px": 24,
   "peca_banda_x1_px": 476,
   "descartados": [
    {
-    "mockup": "gallery-03.webp",
+    "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-04.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 135px contra 228px esperados para 40 cm (razao 0.59) — mockup errado ou deteccao estourada"
     ]
    }
   ],
   "largura_truncada": true,
-  "pixels_tinta": 19495
+  "pixels_tinta": 19064
  },
  {
   "product_id": "352618935",
   "garment": "Camiseta Premium",
-  "mockup": "gallery-04.webp",
-  "tinta_topo_px": 139,
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 132,
   "tinta_base_px": 340,
-  "placement_frac": 0.1894,
-  "altura_frac": 0.518,
+  "placement_frac": 0.1714,
+  "altura_frac": 0.5361,
   "altura_oficial_cm": 40,
   "largura_rel": 0.6139,
   "desvio_rel": 0.0193,
@@ -186,32 +193,58 @@
   "tinta_x1_px": 334,
   "corpo_x0_px": 121,
   "corpo_x1_px": 379,
-  "peca_banda_x0_px": 101,
-  "peca_banda_x1_px": 390,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 20772
+  "peca_banda_x0_px": 41,
+  "peca_banda_x1_px": 461,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 41px contra 206px esperados para 40 cm (razao 0.20) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 40px contra 206px esperados para 40 cm (razao 0.19) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 16907
  },
  {
   "product_id": "352619175",
   "garment": "Moletom Canguru",
-  "mockup": "gallery-04.webp",
+  "mockup": "gallery-02.webp",
   "tinta_topo_px": 157,
-  "tinta_base_px": 306,
+  "tinta_base_px": 355,
   "placement_frac": 0.0606,
-  "altura_frac": 0.4402,
+  "altura_frac": 0.5849,
   "altura_oficial_cm": 28.8,
   "largura_rel": null,
   "desvio_rel": null,
-  "tinta_x0_px": 159,
-  "tinta_x1_px": 341,
+  "tinta_x0_px": 163,
+  "tinta_x1_px": 387,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
-  "peca_banda_x0_px": 53,
-  "peca_banda_x1_px": 439,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 7916
+  "peca_banda_x0_px": 97,
+  "peca_banda_x1_px": 435,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 276px contra 150px esperados para 28.8 cm (razao 1.84) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-04.webp",
+    "motivos": [
+     "altura da tinta 285px contra 150px esperados para 28.8 cm (razao 1.90) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 3711
  },
  {
   "product_id": "352702020",
@@ -230,106 +263,69 @@
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 41,
   "peca_banda_x1_px": 461,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 7765
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 42px contra 148px esperados para 28.8 cm (razao 0.28) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 40px contra 148px esperados para 28.8 cm (razao 0.27) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 7761
  },
  {
   "product_id": "352702753",
   "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 15,
-  "tinta_base_px": 290,
-  "placement_frac": -0.0236,
-  "altura_frac": 0.5895,
-  "altura_oficial_cm": 30.1,
-  "largura_rel": 1.209,
-  "desvio_rel": -0.0112,
-  "tinta_x0_px": 88,
-  "tinta_x1_px": 411,
-  "corpo_x0_px": 119,
-  "corpo_x1_px": 386,
-  "peca_banda_x0_px": 23,
-  "peca_banda_x1_px": 476,
-  "descartados": [
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   }
-  ],
-  "largura_truncada": true,
-  "pixels_tinta": 8588
+  "erro": "estampa frontal (back_h vazio); o template de costas nao se aplica"
  },
  {
   "product_id": "352702796",
   "garment": "Camiseta Premium",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 138,
-  "tinta_base_px": 285,
-  "placement_frac": 0.1869,
-  "altura_frac": 0.3789,
-  "altura_oficial_cm": 29.4,
-  "largura_rel": 0.5521,
-  "desvio_rel": 0.0116,
-  "tinta_x0_px": 182,
-  "tinta_x1_px": 324,
-  "corpo_x0_px": 121,
-  "corpo_x1_px": 379,
-  "peca_banda_x0_px": 41,
-  "peca_banda_x1_px": 461,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 7678
+  "erro": "estampa frontal (back_h vazio); o template de costas nao se aplica"
  },
  {
   "product_id": "352702858",
   "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 15,
-  "tinta_base_px": 290,
-  "placement_frac": -0.0236,
-  "altura_frac": 0.5895,
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 83,
+  "tinta_base_px": 274,
+  "placement_frac": 0.1222,
+  "altura_frac": 0.4094,
   "altura_oficial_cm": 24.6,
-  "largura_rel": 1.209,
-  "desvio_rel": -0.0112,
-  "tinta_x0_px": 88,
-  "tinta_x1_px": 411,
+  "largura_rel": 0.8694,
+  "desvio_rel": -0.1175,
+  "tinta_x0_px": 105,
+  "tinta_x1_px": 337,
   "corpo_x0_px": 119,
   "corpo_x1_px": 386,
-  "peca_banda_x0_px": 23,
-  "peca_banda_x1_px": 476,
+  "peca_banda_x0_px": 28,
+  "peca_banda_x1_px": 470,
   "descartados": [
    {
     "mockup": "gallery-03.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-04.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 269px contra 140px esperados para 24.6 cm (razao 1.92) — mockup errado ou deteccao estourada"
     ]
    }
   ],
   "largura_truncada": true,
-  "pixels_tinta": 1540
+  "pixels_tinta": 6652
  },
  {
   "product_id": "352703153",
   "garment": "Camiseta Premium",
   "mockup": "gallery-04.webp",
-  "tinta_topo_px": 110,
+  "tinta_topo_px": 117,
   "tinta_base_px": 234,
-  "placement_frac": 0.1147,
-  "altura_frac": 0.3196,
+  "placement_frac": 0.1327,
+  "altura_frac": 0.3015,
   "altura_oficial_cm": 24.6,
   "largura_rel": 0.7066,
   "desvio_rel": 0.0193,
@@ -339,30 +335,43 @@
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 101,
   "peca_banda_x1_px": 416,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 5602
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 39px contra 126px esperados para 24.6 cm (razao 0.31) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 40px contra 126px esperados para 24.6 cm (razao 0.32) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 4635
  },
  {
   "product_id": "352703276",
   "garment": "Camiseta Oversized Premium",
   "mockup": "gallery-02.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
+  "tinta_topo_px": 82,
+  "tinta_base_px": 247,
+  "placement_frac": 0.12,
+  "altura_frac": 0.3537,
   "altura_oficial_cm": 33,
-  "largura_rel": 1.1493,
-  "desvio_rel": 0.0224,
-  "tinta_x0_px": 105,
-  "tinta_x1_px": 412,
+  "largura_rel": 0.6642,
+  "desvio_rel": -0.0112,
+  "tinta_x0_px": 161,
+  "tinta_x1_px": 338,
   "corpo_x0_px": 119,
   "corpo_x1_px": 386,
-  "peca_banda_x0_px": 24,
-  "peca_banda_x1_px": 476,
+  "peca_banda_x0_px": 29,
+  "peca_banda_x1_px": 472,
   "descartados": [],
   "largura_truncada": true,
-  "pixels_tinta": 7642
+  "pixels_tinta": 7328
  },
  {
   "product_id": "352703343",
@@ -381,46 +390,37 @@
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 41,
   "peca_banda_x1_px": 461,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 7928
- },
- {
-  "product_id": "352717723",
-  "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-04.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
-  "altura_oficial_cm": 40,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
-  "corpo_x0_px": 119,
-  "corpo_x1_px": 386,
-  "peca_banda_x0_px": 24,
-  "peca_banda_x1_px": 476,
   "descartados": [
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 40px contra 169px esperados para 32.9 cm (razao 0.24) — mockup errado ou deteccao estourada"
     ]
    }
   ],
   "largura_truncada": true,
-  "pixels_tinta": 9385
+  "pixels_tinta": 7943
+ },
+ {
+  "product_id": "352717723",
+  "garment": "Camiseta Oversized Premium",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 78,
+  "tinta_base_px": 278,
+  "placement_frac": 0.1115,
+  "altura_frac": 0.4287,
+  "altura_oficial_cm": 40,
+  "largura_rel": 0.8134,
+  "desvio_rel": -0.1455,
+  "tinta_x0_px": 105,
+  "tinta_x1_px": 322,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 28,
+  "peca_banda_x1_px": 470,
+  "descartados": [],
+  "largura_truncada": true,
+  "pixels_tinta": 10849
  },
  {
   "product_id": "352717837",
@@ -439,30 +439,50 @@
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 41,
   "peca_banda_x1_px": 461,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 9528
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 42px contra 206px esperados para 40 cm (razao 0.20) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 39px contra 206px esperados para 40 cm (razao 0.19) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 9489
  },
  {
   "product_id": "352717960",
   "garment": "Blusão Moletom",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 160,
-  "tinta_base_px": 201,
-  "placement_frac": 0.2526,
-  "altura_frac": 0.1057,
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 136,
+  "tinta_base_px": 308,
+  "placement_frac": 0.1907,
+  "altura_frac": 0.4433,
   "altura_oficial_cm": 35,
   "largura_rel": null,
   "desvio_rel": null,
-  "tinta_x0_px": 299,
-  "tinta_x1_px": 342,
+  "tinta_x0_px": 164,
+  "tinta_x1_px": 336,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
-  "peca_banda_x0_px": 107,
-  "peca_banda_x1_px": 388,
-  "descartados": [],
+  "peca_banda_x0_px": 102,
+  "peca_banda_x1_px": 385,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 42px contra 173px esperados para 35 cm (razao 0.24) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
   "largura_truncada": false,
-  "pixels_tinta": 382
+  "pixels_tinta": 18907
  },
  {
   "product_id": "352718083",
@@ -476,78 +496,105 @@
   "largura_rel": null,
   "desvio_rel": null,
   "tinta_x0_px": 159,
-  "tinta_x1_px": 374,
+  "tinta_x1_px": 386,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
   "peca_banda_x0_px": 99,
   "peca_banda_x1_px": 435,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 22145
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 276px contra 182px esperados para 35 cm (razao 1.51) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 19191
  },
  {
   "product_id": "352718275",
   "garment": "Camiseta Premium",
-  "erro": "nenhuma leitura confiavel",
-  "descartados": []
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 127,
+  "tinta_base_px": 308,
+  "placement_frac": 0.1585,
+  "altura_frac": 0.4665,
+  "altura_oficial_cm": 35,
+  "largura_rel": 0.7143,
+  "desvio_rel": 0.0232,
+  "tinta_x0_px": 164,
+  "tinta_x1_px": 348,
+  "corpo_x0_px": 121,
+  "corpo_x1_px": 379,
+  "peca_banda_x0_px": 99,
+  "peca_banda_x1_px": 438,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 40px contra 180px esperados para 35 cm (razao 0.22) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 12930
  },
  {
   "product_id": "352718787",
   "garment": "Moletom Canguru",
   "mockup": "gallery-02.webp",
-  "tinta_topo_px": 158,
+  "tinta_topo_px": 164,
   "tinta_base_px": 364,
-  "placement_frac": 0.0635,
-  "altura_frac": 0.6086,
+  "placement_frac": 0.0812,
+  "altura_frac": 0.5908,
   "altura_oficial_cm": 40,
   "largura_rel": null,
   "desvio_rel": null,
   "tinta_x0_px": 170,
-  "tinta_x1_px": 374,
+  "tinta_x1_px": 389,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
   "peca_banda_x0_px": 94,
   "peca_banda_x1_px": 435,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 25897
- },
- {
-  "product_id": "352718943",
-  "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-04.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
-  "altura_oficial_cm": 40,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
-  "corpo_x0_px": 119,
-  "corpo_x1_px": 386,
-  "peca_banda_x0_px": 24,
-  "peca_banda_x1_px": 476,
   "descartados": [
    {
-    "mockup": "gallery-01.webp",
+    "mockup": "gallery-04.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 343px contra 208px esperados para 40 cm (razao 1.65) — mockup errado ou deteccao estourada"
     ]
    }
   ],
   "largura_truncada": true,
-  "pixels_tinta": 22328
+  "pixels_tinta": 22770
+ },
+ {
+  "product_id": "352718943",
+  "garment": "Camiseta Oversized Premium",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 82,
+  "tinta_base_px": 284,
+  "placement_frac": 0.12,
+  "altura_frac": 0.433,
+  "altura_oficial_cm": 40,
+  "largura_rel": 0.8321,
+  "desvio_rel": -0.1362,
+  "tinta_x0_px": 105,
+  "tinta_x1_px": 327,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 28,
+  "peca_banda_x1_px": 470,
+  "descartados": [
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 135px contra 228px esperados para 40 cm (razao 0.59) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 23998
  },
  {
   "product_id": "352718999",
@@ -566,30 +613,50 @@
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 41,
   "peca_banda_x1_px": 461,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 22444
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 43px contra 206px esperados para 40 cm (razao 0.21) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 43px contra 206px esperados para 40 cm (razao 0.21) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 22354
  },
  {
   "product_id": "352719728",
   "garment": "Blusão Moletom",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 163,
-  "tinta_base_px": 203,
-  "placement_frac": 0.2603,
-  "altura_frac": 0.1031,
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 122,
+  "tinta_base_px": 319,
+  "placement_frac": 0.1546,
+  "altura_frac": 0.5077,
   "altura_oficial_cm": 40,
   "largura_rel": null,
   "desvio_rel": null,
-  "tinta_x0_px": 300,
-  "tinta_x1_px": 343,
+  "tinta_x0_px": 183,
+  "tinta_x1_px": 320,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
-  "peca_banda_x0_px": 108,
-  "peca_banda_x1_px": 388,
-  "descartados": [],
+  "peca_banda_x0_px": 103,
+  "peca_banda_x1_px": 386,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 41px contra 198px esperados para 40 cm (razao 0.21) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
   "largura_truncada": false,
-  "pixels_tinta": 396
+  "pixels_tinta": 24154
  },
  {
   "product_id": "352719816",
@@ -603,14 +670,14 @@
   "largura_rel": null,
   "desvio_rel": null,
   "tinta_x0_px": 179,
-  "tinta_x1_px": 374,
+  "tinta_x1_px": 389,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
   "peca_banda_x0_px": 94,
   "peca_banda_x1_px": 435,
   "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 27366
+  "largura_truncada": true,
+  "pixels_tinta": 23584
  },
  {
   "product_id": "352720127",
@@ -621,379 +688,367 @@
   "placement_frac": 0.2101,
   "altura_frac": 0.5361,
   "altura_oficial_cm": 40,
-  "largura_rel": 0.556,
-  "desvio_rel": 0.0251,
+  "largura_rel": 0.5598,
+  "desvio_rel": 0.027,
   "tinta_x0_px": 185,
-  "tinta_x1_px": 328,
+  "tinta_x1_px": 329,
   "corpo_x0_px": 121,
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 102,
   "peca_banda_x1_px": 390,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 26619
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 40px contra 206px esperados para 40 cm (razao 0.19) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 17848
  },
  {
   "product_id": "352720257",
   "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 14,
-  "tinta_base_px": 301,
-  "placement_frac": -0.0257,
-  "altura_frac": 0.6152,
-  "altura_oficial_cm": 33.8,
-  "largura_rel": 1.209,
-  "desvio_rel": -0.0112,
-  "tinta_x0_px": 88,
-  "tinta_x1_px": 411,
-  "corpo_x0_px": 119,
-  "corpo_x1_px": 386,
-  "peca_banda_x0_px": 23,
-  "peca_banda_x1_px": 476,
-  "descartados": [
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   }
-  ],
-  "largura_truncada": true,
-  "pixels_tinta": 1847
+  "erro": "estampa frontal (back_h vazio); o template de costas nao se aplica"
  },
  {
   "product_id": "352721118",
   "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 17,
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 86,
   "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
+  "placement_frac": 0.1286,
+  "altura_frac": 0.4352,
   "altura_oficial_cm": 40,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
+  "largura_rel": 0.8582,
+  "desvio_rel": -0.1231,
+  "tinta_x0_px": 105,
+  "tinta_x1_px": 334,
   "corpo_x0_px": 119,
   "corpo_x1_px": 386,
-  "peca_banda_x0_px": 24,
-  "peca_banda_x1_px": 476,
-  "descartados": [
-   {
-    "mockup": "gallery-03.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-04.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   }
-  ],
+  "peca_banda_x0_px": 28,
+  "peca_banda_x1_px": 471,
+  "descartados": [],
   "largura_truncada": true,
-  "pixels_tinta": 17706
+  "pixels_tinta": 21069
  },
  {
   "product_id": "352721197",
   "garment": "Camiseta Premium",
   "mockup": "gallery-04.webp",
-  "tinta_topo_px": 111,
-  "tinta_base_px": 319,
-  "placement_frac": 0.1173,
-  "altura_frac": 0.5361,
+  "tinta_topo_px": 113,
+  "tinta_base_px": 303,
+  "placement_frac": 0.1224,
+  "altura_frac": 0.4897,
   "altura_oficial_cm": 40,
-  "largura_rel": 0.6757,
-  "desvio_rel": 0.0193,
+  "largura_rel": 0.6795,
+  "desvio_rel": 0.0212,
   "tinta_x0_px": 168,
-  "tinta_x1_px": 342,
-  "corpo_x0_px": 121,
-  "corpo_x1_px": 379,
-  "peca_banda_x0_px": 101,
-  "peca_banda_x1_px": 391,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 20799
- },
- {
-  "product_id": "352721477",
-  "garment": "Camiseta Premium",
-  "mockup": "gallery-04.webp",
-  "tinta_topo_px": 112,
-  "tinta_base_px": 282,
-  "placement_frac": 0.1198,
-  "altura_frac": 0.4381,
-  "altura_oficial_cm": 35.1,
-  "largura_rel": 0.6911,
-  "desvio_rel": 0,
-  "tinta_x0_px": 161,
-  "tinta_x1_px": 339,
-  "corpo_x0_px": 121,
-  "corpo_x1_px": 379,
-  "peca_banda_x0_px": 101,
-  "peca_banda_x1_px": 390,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 6221
- },
- {
-  "product_id": "352721633",
-  "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-04.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
-  "altura_oficial_cm": 37.5,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
-  "corpo_x0_px": 119,
-  "corpo_x1_px": 386,
-  "peca_banda_x0_px": 24,
-  "peca_banda_x1_px": 476,
-  "descartados": [
-   {
-    "mockup": "gallery-01.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   }
-  ],
-  "largura_truncada": true,
-  "pixels_tinta": 20745
- },
- {
-  "product_id": "352722232",
-  "garment": "Camiseta Premium",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 111,
-  "tinta_base_px": 294,
-  "placement_frac": 0.1173,
-  "altura_frac": 0.4716,
-  "altura_oficial_cm": 40,
-  "largura_rel": 0.4942,
-  "desvio_rel": 0.0174,
-  "tinta_x0_px": 191,
-  "tinta_x1_px": 318,
-  "corpo_x0_px": 121,
-  "corpo_x1_px": 379,
-  "peca_banda_x0_px": 101,
-  "peca_banda_x1_px": 390,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 6990
- },
- {
-  "product_id": "352722510",
-  "garment": "Blusão Moletom",
-  "mockup": "gallery-01.webp",
-  "tinta_topo_px": 157,
-  "tinta_base_px": 201,
-  "placement_frac": 0.2448,
-  "altura_frac": 0.1134,
-  "altura_oficial_cm": 39.7,
-  "largura_rel": null,
-  "desvio_rel": null,
-  "tinta_x0_px": 298,
-  "tinta_x1_px": 347,
-  "corpo_x0_px": null,
-  "corpo_x1_px": null,
-  "peca_banda_x0_px": 107,
-  "peca_banda_x1_px": 388,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 392
- },
- {
-  "product_id": "352722685",
-  "garment": "Moletom Canguru",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 162,
-  "tinta_base_px": 362,
-  "placement_frac": 0.0753,
-  "altura_frac": 0.5908,
-  "altura_oficial_cm": 39.7,
-  "largura_rel": null,
-  "desvio_rel": null,
-  "tinta_x0_px": 162,
-  "tinta_x1_px": 374,
-  "corpo_x0_px": null,
-  "corpo_x1_px": null,
-  "peca_banda_x0_px": 94,
-  "peca_banda_x1_px": 435,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 9145
- },
- {
-  "product_id": "352723243",
-  "garment": "Camiseta Premium",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 114,
-  "tinta_base_px": 314,
-  "placement_frac": 0.125,
-  "altura_frac": 0.5155,
-  "altura_oficial_cm": 39.7,
-  "largura_rel": 0.6834,
-  "desvio_rel": 0.0193,
-  "tinta_x0_px": 167,
   "tinta_x1_px": 343,
   "corpo_x0_px": 121,
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 101,
-  "peca_banda_x1_px": 427,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 8644
- },
- {
-  "product_id": "352725749",
-  "garment": "Camiseta Oversized Premium",
-  "erro": "nenhuma leitura confiavel",
+  "peca_banda_x1_px": 391,
   "descartados": [
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 71px contra 206px esperados para 40 cm (razao 0.35) — mockup errado ou deteccao estourada"
     ]
    },
    {
     "mockup": "gallery-03.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 58px contra 206px esperados para 40 cm (razao 0.28) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 15517
+ },
+ {
+  "product_id": "352721477",
+  "garment": "Camiseta Premium",
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 115,
+  "tinta_base_px": 265,
+  "placement_frac": 0.1276,
+  "altura_frac": 0.3866,
+  "altura_oficial_cm": 35.1,
+  "largura_rel": 0.6757,
+  "desvio_rel": 0.0077,
+  "tinta_x0_px": 165,
+  "tinta_x1_px": 339,
+  "corpo_x0_px": 121,
+  "corpo_x1_px": 379,
+  "peca_banda_x0_px": 101,
+  "peca_banda_x1_px": 390,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 62px contra 180px esperados para 35.1 cm (razao 0.34) — mockup errado ou deteccao estourada"
     ]
    },
    {
-    "mockup": "gallery-04.webp",
+    "mockup": "gallery-03.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 39px contra 180px esperados para 35.1 cm (razao 0.22) — mockup errado ou deteccao estourada"
     ]
    }
-  ]
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 4528
+ },
+ {
+  "product_id": "352721633",
+  "garment": "Camiseta Oversized Premium",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 83,
+  "tinta_base_px": 274,
+  "placement_frac": 0.1222,
+  "altura_frac": 0.4094,
+  "altura_oficial_cm": 37.5,
+  "largura_rel": 0.8545,
+  "desvio_rel": -0.125,
+  "tinta_x0_px": 105,
+  "tinta_x1_px": 333,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 28,
+  "peca_banda_x1_px": 471,
+  "descartados": [],
+  "largura_truncada": true,
+  "pixels_tinta": 22516
+ },
+ {
+  "product_id": "352722232",
+  "garment": "Camiseta Premium",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 114,
+  "tinta_base_px": 286,
+  "placement_frac": 0.125,
+  "altura_frac": 0.4433,
+  "altura_oficial_cm": 40,
+  "largura_rel": 0.4981,
+  "desvio_rel": 0.0193,
+  "tinta_x0_px": 191,
+  "tinta_x1_px": 319,
+  "corpo_x0_px": 121,
+  "corpo_x1_px": 379,
+  "peca_banda_x0_px": 101,
+  "peca_banda_x1_px": 390,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 65px contra 206px esperados para 40 cm (razao 0.32) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 4062
+ },
+ {
+  "product_id": "352722510",
+  "garment": "Blusão Moletom",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 121,
+  "tinta_base_px": 304,
+  "placement_frac": 0.1521,
+  "altura_frac": 0.4716,
+  "altura_oficial_cm": 39.7,
+  "largura_rel": null,
+  "desvio_rel": null,
+  "tinta_x0_px": 167,
+  "tinta_x1_px": 333,
+  "corpo_x0_px": null,
+  "corpo_x1_px": null,
+  "peca_banda_x0_px": 102,
+  "peca_banda_x1_px": 386,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 45px contra 196px esperados para 39.7 cm (razao 0.23) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": false,
+  "pixels_tinta": 7688
+ },
+ {
+  "product_id": "352722685",
+  "garment": "Moletom Canguru",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 169,
+  "tinta_base_px": 362,
+  "placement_frac": 0.096,
+  "altura_frac": 0.5702,
+  "altura_oficial_cm": 39.7,
+  "largura_rel": null,
+  "desvio_rel": null,
+  "tinta_x0_px": 162,
+  "tinta_x1_px": 390,
+  "corpo_x0_px": null,
+  "corpo_x1_px": null,
+  "peca_banda_x0_px": 94,
+  "peca_banda_x1_px": 435,
+  "descartados": [],
+  "largura_truncada": true,
+  "pixels_tinta": 8293
+ },
+ {
+  "product_id": "352723243",
+  "garment": "Camiseta Premium",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 118,
+  "tinta_base_px": 313,
+  "placement_frac": 0.1353,
+  "altura_frac": 0.5026,
+  "altura_oficial_cm": 39.7,
+  "largura_rel": 0.6795,
+  "desvio_rel": 0.0212,
+  "tinta_x0_px": 168,
+  "tinta_x1_px": 343,
+  "corpo_x0_px": 121,
+  "corpo_x1_px": 379,
+  "peca_banda_x0_px": 101,
+  "peca_banda_x1_px": 427,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 44px contra 204px esperados para 39.7 cm (razao 0.22) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 4478
+ },
+ {
+  "product_id": "352725749",
+  "garment": "Camiseta Oversized Premium",
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 93,
+  "tinta_base_px": 283,
+  "placement_frac": 0.1436,
+  "altura_frac": 0.4073,
+  "altura_oficial_cm": 40,
+  "largura_rel": 0.7836,
+  "desvio_rel": -0.1567,
+  "tinta_x0_px": 106,
+  "tinta_x1_px": 315,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 29,
+  "peca_banda_x1_px": 470,
+  "descartados": [
+   {
+    "mockup": "gallery-02.webp",
+    "motivos": [
+     "altura da tinta 401px contra 228px esperados para 40 cm (razao 1.76) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 5719
  },
  {
   "product_id": "352725852",
   "garment": "Camiseta Premium",
   "mockup": "gallery-04.webp",
-  "tinta_topo_px": 110,
-  "tinta_base_px": 303,
-  "placement_frac": 0.1147,
-  "altura_frac": 0.4974,
+  "tinta_topo_px": 113,
+  "tinta_base_px": 301,
+  "placement_frac": 0.1224,
+  "altura_frac": 0.4845,
   "altura_oficial_cm": 40,
-  "largura_rel": 0.5097,
-  "desvio_rel": 0.0212,
-  "tinta_x0_px": 190,
+  "largura_rel": 0.4865,
+  "desvio_rel": 0.0328,
+  "tinta_x0_px": 196,
   "tinta_x1_px": 321,
   "corpo_x0_px": 121,
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 101,
   "peca_banda_x1_px": 427,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 4756
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 73px contra 206px esperados para 40 cm (razao 0.36) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 72px contra 206px esperados para 40 cm (razao 0.35) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 2901
  },
  {
   "product_id": "352726673",
   "garment": "Moletom Canguru",
   "mockup": "gallery-04.webp",
-  "tinta_topo_px": 158,
+  "tinta_topo_px": 166,
   "tinta_base_px": 358,
-  "placement_frac": 0.0635,
-  "altura_frac": 0.5908,
+  "placement_frac": 0.0871,
+  "altura_frac": 0.5672,
   "altura_oficial_cm": 39.4,
   "largura_rel": null,
   "desvio_rel": null,
   "tinta_x0_px": 176,
-  "tinta_x1_px": 375,
+  "tinta_x1_px": 390,
   "corpo_x0_px": null,
   "corpo_x1_px": null,
   "peca_banda_x0_px": 98,
   "peca_banda_x1_px": 435,
   "descartados": [
    {
+    "mockup": "gallery-02.webp",
+    "motivos": [
+     "altura da tinta 339px contra 205px esperados para 39.4 cm (razao 1.65) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
     "mockup": "gallery-05.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 346px contra 205px esperados para 39.4 cm (razao 1.69) — mockup errado ou deteccao estourada"
     ]
    },
    {
     "mockup": "gallery-06.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   }
-  ],
-  "largura_truncada": false,
-  "pixels_tinta": 12483
- },
- {
-  "product_id": "352727545",
-  "garment": "Camiseta Oversized Premium",
-  "mockup": "gallery-02.webp",
-  "tinta_topo_px": 17,
-  "tinta_base_px": 289,
-  "placement_frac": -0.0193,
-  "altura_frac": 0.5831,
-  "altura_oficial_cm": 39.5,
-  "largura_rel": 1.1455,
-  "desvio_rel": 0.0243,
-  "tinta_x0_px": 106,
-  "tinta_x1_px": 412,
-  "corpo_x0_px": 119,
-  "corpo_x1_px": 386,
-  "peca_banda_x0_px": 24,
-  "peca_banda_x1_px": 476,
-  "descartados": [
-   {
-    "mockup": "gallery-03.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-04.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 460px contra 205px esperados para 39.4 cm (razao 2.24) — mockup errado ou deteccao estourada"
     ]
    }
   ],
   "largura_truncada": true,
-  "pixels_tinta": 6561
+  "pixels_tinta": 10646
+ },
+ {
+  "product_id": "352727545",
+  "garment": "Camiseta Oversized Premium",
+  "mockup": "gallery-04.webp",
+  "tinta_topo_px": 90,
+  "tinta_base_px": 286,
+  "placement_frac": 0.1372,
+  "altura_frac": 0.4202,
+  "altura_oficial_cm": 39.5,
+  "largura_rel": 0.8134,
+  "desvio_rel": -0.1455,
+  "tinta_x0_px": 105,
+  "tinta_x1_px": 322,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 28,
+  "peca_banda_x1_px": 470,
+  "descartados": [],
+  "largura_truncada": true,
+  "pixels_tinta": 13515
  },
  {
   "product_id": "352727892",
@@ -1003,15 +1058,13 @@
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 324px contra 198px esperados para 40 cm (razao 1.64) — mockup errado ou deteccao estourada"
     ]
    },
    {
     "mockup": "gallery-02.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca"
+     "altura da tinta 443px contra 198px esperados para 40 cm (razao 2.24) — mockup errado ou deteccao estourada"
     ]
    }
   ]
@@ -1019,22 +1072,12 @@
  {
   "product_id": "352728019",
   "garment": "Camiseta Oversized Premium",
-  "erro": "nenhuma leitura confiavel",
+  "erro": "placement negativo (-0.0107) em gallery-01.webp: tinta acima da gola, mockup de peito ou caixa estourada",
   "descartados": [
-   {
-    "mockup": "gallery-01.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
    {
     "mockup": "gallery-02.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 411px contra 228px esperados para 40 cm (razao 1.81) — mockup errado ou deteccao estourada"
     ]
    }
   ]
@@ -1042,22 +1085,12 @@
  {
   "product_id": "352728277",
   "garment": "Camiseta Oversized Premium",
-  "erro": "nenhuma leitura confiavel",
+  "erro": "placement negativo (-0.0107) em gallery-01.webp: tinta acima da gola, mockup de peito ou caixa estourada",
   "descartados": [
-   {
-    "mockup": "gallery-01.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
    {
     "mockup": "gallery-02.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 406px contra 228px esperados para 40 cm (razao 1.78) — mockup errado ou deteccao estourada"
     ]
    }
   ]
@@ -1065,66 +1098,86 @@
  {
   "product_id": "352728357",
   "garment": "Camiseta Premium",
-  "erro": "nenhuma leitura confiavel",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 111,
+  "tinta_base_px": 320,
+  "placement_frac": 0.1173,
+  "altura_frac": 0.5387,
+  "altura_oficial_cm": 40,
+  "largura_rel": 0.5019,
+  "desvio_rel": 0.0212,
+  "tinta_x0_px": 191,
+  "tinta_x1_px": 320,
+  "corpo_x0_px": 121,
+  "corpo_x1_px": 379,
+  "peca_banda_x0_px": 42,
+  "peca_banda_x1_px": 461,
   "descartados": [
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 61px contra 206px esperados para 40 cm (razao 0.30) — mockup errado ou deteccao estourada"
     ]
    }
-  ]
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 2027
  },
  {
   "product_id": "352728451",
   "garment": "Camiseta Oversized Premium",
-  "erro": "nenhuma leitura confiavel",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 115,
+  "tinta_base_px": 273,
+  "placement_frac": 0.1908,
+  "altura_frac": 0.3387,
+  "altura_oficial_cm": 27.2,
+  "largura_rel": 0.8545,
+  "desvio_rel": -0.1213,
+  "tinta_x0_px": 106,
+  "tinta_x1_px": 334,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 29,
+  "peca_banda_x1_px": 470,
   "descartados": [
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 267px contra 155px esperados para 27.2 cm (razao 1.73) — mockup errado ou deteccao estourada"
     ]
    }
-  ]
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 14735
  },
  {
   "product_id": "352728524",
   "garment": "Camiseta Premium",
   "mockup": "gallery-02.webp",
-  "tinta_topo_px": 138,
-  "tinta_base_px": 272,
-  "placement_frac": 0.1869,
-  "altura_frac": 0.3454,
+  "tinta_topo_px": 141,
+  "tinta_base_px": 266,
+  "placement_frac": 0.1946,
+  "altura_frac": 0.3222,
   "altura_oficial_cm": 27.2,
-  "largura_rel": 0.6873,
-  "desvio_rel": 0.0135,
+  "largura_rel": 0.6911,
+  "desvio_rel": 0.0154,
   "tinta_x0_px": 165,
-  "tinta_x1_px": 342,
+  "tinta_x1_px": 343,
   "corpo_x0_px": 121,
   "corpo_x1_px": 379,
   "peca_banda_x0_px": 101,
-  "peca_banda_x1_px": 424,
-  "descartados": [],
-  "largura_truncada": false,
-  "pixels_tinta": 14077
+  "peca_banda_x1_px": 390,
+  "descartados": [
+   {
+    "mockup": "gallery-01.webp",
+    "motivos": [
+     "altura da tinta 56px contra 140px esperados para 27.2 cm (razao 0.40) — mockup errado ou deteccao estourada"
+    ]
+   }
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 12501
  },
  {
   "product_id": "352889132",
@@ -1134,15 +1187,13 @@
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 65px contra 206px esperados para 40 cm (razao 0.32) — mockup errado ou deteccao estourada"
     ]
    },
    {
     "mockup": "gallery-02.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 343px contra 206px esperados para 40 cm (razao 1.67) — mockup errado ou deteccao estourada"
     ]
    }
   ]
@@ -1150,51 +1201,43 @@
  {
   "product_id": "352890896",
   "garment": "Camiseta Oversized Premium",
-  "erro": "nenhuma leitura confiavel",
+  "mockup": "gallery-02.webp",
+  "tinta_topo_px": 86,
+  "tinta_base_px": 289,
+  "placement_frac": 0.1286,
+  "altura_frac": 0.4352,
+  "altura_oficial_cm": 40,
+  "largura_rel": 0.806,
+  "desvio_rel": -0.1455,
+  "tinta_x0_px": 106,
+  "tinta_x1_px": 321,
+  "corpo_x0_px": 119,
+  "corpo_x1_px": 386,
+  "peca_banda_x0_px": 29,
+  "peca_banda_x1_px": 470,
   "descartados": [
-   {
-    "mockup": "gallery-01.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-02.webp",
-    "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
-    ]
-   },
-   {
-    "mockup": "gallery-03.webp",
-    "motivos": [
-     "caixa de tinta encosta no topo da peca"
-    ]
-   },
    {
     "mockup": "gallery-04.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta no topo da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 408px contra 228px esperados para 40 cm (razao 1.79) — mockup errado ou deteccao estourada"
     ]
    }
-  ]
+  ],
+  "largura_truncada": true,
+  "pixels_tinta": 25849
  },
  {
   "product_id": "352898175",
   "garment": "Camiseta Premium",
   "mockup": "gallery-04.webp",
-  "tinta_topo_px": 128,
-  "tinta_base_px": 332,
-  "placement_frac": 0.1611,
-  "altura_frac": 0.5258,
+  "tinta_topo_px": 135,
+  "tinta_base_px": 326,
+  "placement_frac": 0.1791,
+  "altura_frac": 0.4923,
   "altura_oficial_cm": 40,
-  "largura_rel": 0.5869,
-  "desvio_rel": 0.0212,
-  "tinta_x0_px": 180,
+  "largura_rel": 0.5212,
+  "desvio_rel": 0.0541,
+  "tinta_x0_px": 197,
   "tinta_x1_px": 331,
   "corpo_x0_px": 121,
   "corpo_x1_px": 379,
@@ -1204,20 +1247,24 @@
    {
     "mockup": "gallery-01.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 74px contra 206px esperados para 40 cm (razao 0.36) — mockup errado ou deteccao estourada"
     ]
    },
    {
     "mockup": "gallery-02.webp",
     "motivos": [
-     "caixa de tinta cobre >80% da altura da peca",
-     "caixa de tinta encosta na barra"
+     "altura da tinta 326px contra 206px esperados para 40 cm (razao 1.59) — mockup errado ou deteccao estourada"
+    ]
+   },
+   {
+    "mockup": "gallery-03.webp",
+    "motivos": [
+     "altura da tinta 51px contra 206px esperados para 40 cm (razao 0.25) — mockup errado ou deteccao estourada"
     ]
    }
   ],
-  "largura_truncada": false,
-  "pixels_tinta": 12722
+  "largura_truncada": true,
+  "pixels_tinta": 8378
  },
  {
   "product_id": "355581274",

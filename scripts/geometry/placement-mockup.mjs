@@ -44,11 +44,20 @@ const TEMPLATE = {
   "Blusão Moletom": { gola: 62, barra: 450, corpo: null },
 };
 
+// Comprimento G em cm, so para converter a altura oficial da arte em pixels
+// do template no gate de sanidade. Vem da mesma tabela de `garment-specs`.
+const COMPRIMENTO_G = {
+  "Camiseta Premium": 75.5,
+  "Camiseta Oversized Premium": 82,
+  "Moletom Canguru": 65,
+  "Blusão Moletom": 78.4,
+};
+
 const REFS = "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references";
 const lum = (r, g, b) => 0.299 * r + 0.587 * g + 0.114 * b;
 
 /** Caixa da tinta num mockup plano: o que difere da cor do tecido. */
-async function caixaDaTinta(arquivo, corpoTpl) {
+async function caixaDaTinta(arquivo, corpoTpl, { tplGola, tplBarra, alturaOficialCm, comprimentoGcm }) {
   const r = await sharp(arquivo).resize(500, 500, { fit: "fill" }).removeAlpha()
     .raw().toBuffer({ resolveWithObject: true });
   const W = 500, H = 500;
@@ -75,13 +84,44 @@ async function caixaDaTinta(arquivo, corpoTpl) {
   //    do corpo inteiro passar por tinta (a caixa dava 91% da peca). A borda
   //    esquerda e direita de cada linha nunca tem estampa, entao ela da a cor
   //    do tecido NAQUELA altura, absorvendo o sombreado vertical.
-  const larg = gx1 - gx0 + 1;
-  const margem = Math.max(6, Math.round(0.14 * larg));
+  //
+  // A MARGEM E POR LINHA, e essa e a correcao de 27/07.
+  //
+  // Antes ela saia da largura GLOBAL da peca (`gx1-gx0`), que vai de manga a
+  // manga, e era aplicada como janela fixa em x. Abaixo das mangas o corpo e
+  // muito mais estreito, entao essa janela caia inteira FORA da peca: no
+  // 352889132 a peca vai de x=42 a x=461, a margem dava 59 px, e nas linhas
+  // do tronco as janelas [42,101] e [402,461] nao tinham um unico pixel de
+  // tecido. O `if (b.length < 8) continue` entao deixava a linha sem
+  // referencia, e o passo 3 caia no `?? tec` global — a cor tirada dos
+  // OMBROS. Num render iluminado no centro, o tronco inteiro fica a mais de
+  // 34 daquela cor e vira "tinta": a caixa abria ate a barra.
+  //
+  // Era o mesmo erro de `torso 0.44` e o mesmo da largura de referencia do
+  // horizontal — usar largura manga a manga onde se precisa da largura do
+  // corpo. Terceira vez que essa confusao aparece no projeto.
+  //
+  // Agora cada linha mede a propria extensao e tira dela a sua margem, entao
+  // a referencia existe em toda linha que tenha tecido.
+  const extLinha = new Array(H).fill(null);
+  for (let y = gy0; y <= gy1; y += 1) {
+    let a = -1, b2 = -1;
+    for (let x = gx0; x <= gx1; x += 1) {
+      if (!peca[y * W + x]) continue;
+      if (a < 0) a = x;
+      b2 = x;
+    }
+    if (a >= 0 && b2 - a >= 20) extLinha[y] = [a, b2];
+  }
+  const margemDe = (ext) => Math.max(4, Math.round(0.14 * (ext[1] - ext[0] + 1)));
   const tecLinha = new Array(H).fill(null);
   for (let y = gy0; y <= gy1; y += 1) {
+    const ext = extLinha[y];
+    if (!ext) continue;
+    const mg = margemDe(ext);
     const b = [];
-    for (let x = gx0; x < gx0 + margem; x += 1) if (peca[y * W + x]) b.push(px(x, y));
-    for (let x = gx1 - margem; x <= gx1; x += 1) if (peca[y * W + x]) b.push(px(x, y));
+    for (let x = ext[0]; x < ext[0] + mg; x += 1) if (peca[y * W + x]) b.push(px(x, y));
+    for (let x = ext[1] - mg; x <= ext[1]; x += 1) if (peca[y * W + x]) b.push(px(x, y));
     if (b.length < 8) continue;
     b.sort((p, q) => lum(...p) - lum(...q));
     tecLinha[y] = b[Math.floor(b.length / 2)];
@@ -91,14 +131,22 @@ async function caixaDaTinta(arquivo, corpoTpl) {
   validas.sort((a, b) => lum(...a) - lum(...b));
   const tec = validas[Math.floor(validas.length / 2)];
 
-  // 3. tinta = na faixa central da peca E longe do tecido DAQUELA linha
+  // 3. tinta = na faixa central DAQUELA linha E longe do tecido DAQUELA linha.
+  //    Linha sem referencia propria nao e chutada com a global: e pulada. O
+  //    fallback silencioso foi metade do defeito acima.
   const m = new Uint8Array(W * H);
-  const cx0 = gx0 + margem, cx1 = gx1 - margem;
+  let encostouNaMargem = false;
   for (let y = gy0; y <= gy1; y += 1) {
-    const ref = tecLinha[y] ?? tec;
-    for (let x = cx0; x <= cx1; x += 1) {
+    const ext = extLinha[y];
+    const ref = tecLinha[y];
+    if (!ext || !ref) continue;
+    const mg = margemDe(ext);
+    for (let x = ext[0] + mg; x <= ext[1] - mg; x += 1) {
       if (!peca[y * W + x]) continue;
-      if (dist(px(x, y), ref) > 34) m[y * W + x] = 1;
+      if (dist(px(x, y), ref) > 34) {
+        m[y * W + x] = 1;
+        if (x <= ext[0] + mg + 1 || x >= ext[1] - mg - 1) encostouNaMargem = true;
+      }
     }
   }
   // erosao: mata vinco de tecido e ruido de webp
@@ -145,23 +193,35 @@ async function caixaDaTinta(arquivo, corpoTpl) {
   // Como gola e barra ja sao constantes do template, o corpo tambem e.
   const corpo = corpoTpl ? { x0: corpoTpl[0], x1: corpoTpl[1] } : null;
 
-  // SANIDADE. Sem isto o instrumento emite veredito a partir de lixo, que e
-  // exatamente como cinco dos sete defeitos catalogados nasceram. No mockup
-  // preto do 352728277 a deteccao de tinta abriu na peca inteira (caixa de
-  // y=7 a y=492 num canvas de 500) e devolveu `largura_rel` 0,7146 com cara
-  // de medida boa. Pior: a selecao "vence quem tem mais tinta" PREMIA esse
-  // estouro, porque a falha e sempre a leitura com mais pixels.
-  const altPeca = gy1 - gy0 + 1;
+  // SANIDADE, contra a ALTURA OFICIAL DA ARTE — nao contra a fracao da peca.
+  //
+  // A primeira versao deste gate usava "caixa cobre >80% da altura da peca" e
+  // "encosta na barra". Parecia razoavel e reprovou uma leitura CORRETA: o
+  // 352889132 e a Aparecida com escorridos de spray, que descem quase ate a
+  // barra de proposito. A caixa grande era a arte. Pior que reprovar, o
+  // descarte fez a selecao cair em silencio no mockup de PEITO, e o produto
+  // saiu com o placement do selo de peito (0,241) em vez do das costas.
+  //
+  // Gate cego derrubando leitura boa e o mesmo defeito de sempre, so que ao
+  // contrario. O criterio certo nao e "que fracao da peca a tinta ocupa" — e
+  // "a arte medida tem a altura que a arte oficial tem". Esse numero ja existe
+  // no CSV (`back_h_cm` / `front_h_cm`) e nao depende do desenho.
   const motivos = [];
-  if ((y1 - y0 + 1) > 0.8 * altPeca) motivos.push("caixa de tinta cobre >80% da altura da peca");
-  if (y0 <= gy0 + 0.02 * altPeca) motivos.push("caixa de tinta encosta no topo da peca");
-  if (y1 >= gy1 - 0.02 * altPeca) motivos.push("caixa de tinta encosta na barra");
+  if (alturaOficialCm > 0) {
+    const vaoTpl = tplBarra - tplGola;
+    const espPx = (alturaOficialCm / comprimentoGcm) * vaoTpl;
+    const razao = (y1 - y0 + 1) / espPx;
+    if (razao < 0.65 || razao > 1.4) {
+      motivos.push(`altura da tinta ${((y1 - y0 + 1)).toFixed(0)}px contra ${espPx.toFixed(0)}px esperados `
+        + `para ${alturaOficialCm} cm (razao ${razao.toFixed(2)}) — mockup errado ou deteccao estourada`);
+    }
+  }
   if ((x1 - x0 + 1) > 0.95 * (bx1 - bx0 + 1)) motivos.push("caixa de tinta cobre quase toda a largura");
 
   // A busca de tinta so olha a faixa central (`cx0..cx1`, margem de 14%).
   // Se a tinta encosta nessa borda, a caixa esta TRUNCADA e a largura medida
   // e um piso, nao a medida. Melhor declarar do que devolver numero curto.
-  const truncada = x0 <= cx0 + 1 || x1 >= cx1 - 1;
+  const truncada = encostouNaMargem;
 
   const largCorpo = corpo ? corpo.x1 - corpo.x0 + 1 : null;
   return {
@@ -200,6 +260,22 @@ async function main() {
     const tpl = TEMPLATE[mt.garment];
     if (!tpl) { out.push({ product_id: id, garment: mt.garment, erro: "sem template (Ecobag?)" }); continue; }
 
+    // ESTAMPA FRONTAL NAO SE MEDE COM O TEMPLATE DE COSTAS.
+    //
+    // `gola`/`barra` do TEMPLATE sao as das costas. Rodar um produto de peito
+    // por aqui devolve numero, e numero errado: o 352702753 (Monograma NMB) e
+    // o 352720257 (Acima de Tudo Gotico) sao "[so frente]" e sairam com
+    // placement NEGATIVO — estampa acima da gola, que nao existe. O CSV ja
+    // sabe a vista (`back_h_cm` vazio), entao a exclusao e explicita.
+    if (!(mt.back_h > 0)) {
+      out.push({
+        product_id: id, garment: mt.garment,
+        erro: "estampa frontal (back_h vazio); o template de costas nao se aplica",
+      });
+      continue;
+    }
+    const alturaOficial = mt.back_h;
+
     // Entre os mockups da pasta, o de COSTAS e o que tem MAIS tinta — mas so
     // entre os que passam na sanidade. Sem esse filtro a regra premia a
     // falha: quando a deteccao estoura ela abre na peca inteira e ganha por
@@ -208,7 +284,8 @@ async function main() {
     let melhor = null;
     const descartados = [];
     for (const f of fs.readdirSync(path.join(REFS, pasta)).filter((f) => /\.(webp|jpe?g|png)$/i.test(f))) {
-      const cx = await caixaDaTinta(path.join(REFS, pasta, f), tpl.corpo);
+      const cx = await caixaDaTinta(path.join(REFS, pasta, f), tpl.corpo,
+        { tplGola: tpl.gola, tplBarra: tpl.barra, alturaOficialCm: alturaOficial, comprimentoGcm: COMPRIMENTO_G[mt.garment] });
       if (!cx) continue;
       if (!cx.confiavel) { descartados.push({ mockup: f, motivos: cx.motivos }); continue; }
       if (!melhor || cx.n > melhor.cx.n) melhor = { f, cx };
@@ -221,7 +298,21 @@ async function main() {
     const vao = tpl.barra - tpl.gola;
     const fracPlacement = (melhor.cx.y0 - tpl.gola) / vao;
     const fracAltura = (melhor.cx.y1 - melhor.cx.y0) / vao;
-    const alturaOficial = mt.back_h > 0 ? mt.back_h : mt.front_h;
+
+    // PLACEMENT NEGATIVO NAO EXISTE numa estampa de costas: seria tinta acima
+    // da gola. Quando aparece, a leitura pegou o mockup de PEITO (onde o selo
+    // fica alto) ou a caixa estourou para cima. Nos dois casos o numero e
+    // lixo, e lixo com cara de medida foi o que colocou nove placements
+    // errados em producao. Vale mais recusar.
+    if (fracPlacement < 0) {
+      out.push({
+        product_id: id, garment: mt.garment,
+        erro: `placement negativo (${fracPlacement.toFixed(4)}) em ${melhor.f}: tinta acima da gola, `
+          + "mockup de peito ou caixa estourada",
+        descartados,
+      });
+      continue;
+    }
     out.push({
       product_id: id, garment: mt.garment, mockup: melhor.f,
       tinta_topo_px: melhor.cx.y0, tinta_base_px: melhor.cx.y1,

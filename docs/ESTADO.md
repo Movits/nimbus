@@ -58,6 +58,23 @@ piloto a entregável, não refazer.
 - Comprimento do Blusão: 78,4 cm, **estimado**, com a ressalva registrada.
 - 352727892 reclassificado de Blusão para Moletom Canguru.
 
+## ⛔ O placement de produção está errado
+
+Em 27/07 o medidor de mockup foi consertado (detalhe em
+[`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md)). Com ele,
+**21 dos 41 produtos legíveis mudam de `placement_cm`**, quase todos para
+**mais**: a mediana sobe 0,011 do vão gola→barra, cerca de **0,8 cm**, e o pior
+caso sobe 0,0325, cerca de **2,5 cm**. A estampa vinha sendo posta **alto demais**.
+
+Os valores corrigidos estão em
+`nuvemshop/auditoria/2026-07-26-datum-mockups/horizontal-oficial.json`.
+**`placement-por-produto.json` não foi alterado**: trocá-lo move a estampa de
+todas as capas, e essa é decisão do dono.
+
+Oito produtos ficam sem leitura: três são estampa frontal (o template de costas
+não se aplica), a Ecobag não tem template, e quatro esbarram no defeito de borda
+ainda aberto.
+
 ## A sessão na nuvem compõe sem chave de IA
 
 Provado em 26/07 num clone limpo: `npm install` + `setup-assets` + `compor`

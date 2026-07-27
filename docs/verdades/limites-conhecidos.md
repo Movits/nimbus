@@ -81,6 +81,47 @@ Corrigido em 26/07 (ponte de 3% da largura, e `suspeito` dispara também quando
 sobra outra corrida grande ou quando o resultado foge 30% da tabela). Ainda assim
 **use como segunda opinião**, não como autoridade.
 
+## Caixa de tinta no mockup (`placement-mockup.mjs`)
+
+É de onde sai o `placement_cm` de todo o catálogo. Em 27/07 ela foi consertada
+em três pontos, e ainda tem um defeito conhecido.
+
+**Consertado: a referência de tecido não existia no tronco.** A margem que dá a
+cor do tecido saía da largura **manga a manga** e era aplicada como janela fixa
+em x. Abaixo das mangas o corpo é bem mais estreito, então a janela caía inteira
+fora da peça. No 352889132 a peça vai de x=42 a x=461, a margem dava 59 px, e as
+janelas [42,101] e [402,461] não tinham um pixel de tecido nas linhas do tronco.
+Sem referência própria, o código caía em silêncio na cor dos **ombros**, e num
+render iluminado ao centro o tronco inteiro passava por tinta: a caixa abria até
+a barra. Foi isso que pôs **9 placements errados em produção**. Agora a margem é
+por linha e linha sem referência é pulada, nunca chutada.
+
+> [!warning] Terceira vez que largura manga a manga é usada onde se precisa da
+> largura do corpo. As outras duas foram o `torso 0.44` e a largura de
+> referência do horizontal. Ao ler qualquer largura de peça, pergunte primeiro
+> se ela inclui manga.
+
+**Consertado: produto de estampa frontal era medido com o template de costas.**
+`gola` e `barra` do template são as das costas. O 352702753, o 352702796 e o
+352720257 são "só frente" e saíam com placement **negativo**. O CSV já sabe a
+vista (`back_h_cm` vazio), então agora são excluídos com motivo.
+
+**Consertado: o gate de sanidade reprovava leitura boa.** A primeira versão usava
+"caixa cobre mais de 80% da altura da peça". O 352889132 é a Aparecida com
+escorridos de spray que descem quase até a barra de propósito, e foi reprovado —
+e o descarte fez a seleção cair em silêncio no mockup de **peito**. O critério
+passou a ser a **altura oficial da arte** (`back_h_cm`), que não depende do
+desenho.
+
+**Não consertado: a caixa inclui a borda da peça.** O contorno da peça contra o
+fundo é antialiasado, difere da cor do tecido e entra como tinta, esticando a
+caixa até a gola e a barra. Sobrevivem assim **5 produtos sem leitura**
+(352727892, 352889132, 352728019, 352728277, e o 352718275). Erodir a borda não
+resolve com a máscara atual: em peça branca o tecido está a 8 níveis do fundo,
+então a máscara é quase só a estampa e a erosão apaga tudo. O caminho é trocar a
+detecção por cor por **casamento com o PNG oficial da arte** (`register-art.mjs`,
+que o projeto já usa nas capas).
+
 ## Detector de barra
 
 Confiável em **camiseta clara**. Em moletom pega a calça; em camiseta preta sobre
