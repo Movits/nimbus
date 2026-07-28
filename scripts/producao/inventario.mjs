@@ -1,5 +1,6 @@
 // Inventario do que ja esta produzido e do que falta.
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import { lerNome, melhor } from "./nomes-de-capa.mjs";
 
@@ -42,7 +43,8 @@ const bloco = costas.slice(0, 12).map((x) => ({
   arte: x.arte, cena: x.cena, cm: `${x.art_cm.w}x${x.art_cm.h}`,
   titulo: x.title.slice(0, 40), placement: P(x.product_id),
 }));
-fs.writeFileSync("tmp_bloco.json", JSON.stringify(bloco));
+const blocoPath = path.join(os.tmpdir(), "nimbus-proximo-bloco.json");
+fs.writeFileSync(blocoPath, JSON.stringify(bloco));
 console.log("\nPROXIMO BLOCO:");
 for (const b of bloco) console.log(`  ${b.id} ${b.cor.padEnd(10)} ${b.peca.slice(0, 26).padEnd(27)} placement ${b.placement}`);
-console.log("\nARQUIVO tmp_bloco.json escrito.");
+console.log("\nARQUIVO escrito:", blocoPath);
