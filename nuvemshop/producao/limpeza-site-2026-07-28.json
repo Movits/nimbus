@@ -1,0 +1,326 @@
+{
+ "religadas": [
+  {
+   "pid": "352618837",
+   "variante": 1549744750,
+   "cor": "branca",
+   "novo_image_id": 1222031710,
+   "lum": 243,
+   "status": 200
+  },
+  {
+   "pid": "352618837",
+   "variante": 1549744755,
+   "cor": "branca",
+   "novo_image_id": 1222031710,
+   "lum": 243,
+   "status": 200
+  },
+  {
+   "pid": "352618837",
+   "variante": 1549744761,
+   "cor": "branca",
+   "novo_image_id": 1222031710,
+   "lum": 243,
+   "status": 200
+  },
+  {
+   "pid": "352618837",
+   "variante": 1549744768,
+   "cor": "branca",
+   "novo_image_id": 1222031710,
+   "lum": 243,
+   "status": 200
+  },
+  {
+   "pid": "352618837",
+   "variante": 1549744780,
+   "cor": "branca",
+   "novo_image_id": 1222031710,
+   "lum": 243,
+   "status": 200
+  },
+  {
+   "pid": "352718943",
+   "variante": 1550060680,
+   "cor": "off-white",
+   "novo_image_id": 1222437216,
+   "lum": 209,
+   "status": 200
+  },
+  {
+   "pid": "352718943",
+   "variante": 1550060692,
+   "cor": "off-white",
+   "novo_image_id": 1222437216,
+   "lum": 209,
+   "status": 200
+  },
+  {
+   "pid": "352718943",
+   "variante": 1550060703,
+   "cor": "off-white",
+   "novo_image_id": 1222437216,
+   "lum": 209,
+   "status": 200
+  },
+  {
+   "pid": "352718943",
+   "variante": 1550060716,
+   "cor": "off-white",
+   "novo_image_id": 1222437216,
+   "lum": 209,
+   "status": 200
+  },
+  {
+   "pid": "352718943",
+   "variante": 1550060718,
+   "cor": "off-white",
+   "novo_image_id": 1222437216,
+   "lum": 209,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082556,
+   "cor": "preta",
+   "novo_image_id": 1222465120,
+   "lum": 23,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082571,
+   "cor": "branca",
+   "novo_image_id": 1222465165,
+   "lum": 237,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082591,
+   "cor": "preta",
+   "novo_image_id": 1222465120,
+   "lum": 23,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082576,
+   "cor": "branca",
+   "novo_image_id": 1222465165,
+   "lum": 237,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082596,
+   "cor": "preta",
+   "novo_image_id": 1222465120,
+   "lum": 23,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082609,
+   "cor": "branca",
+   "novo_image_id": 1222465165,
+   "lum": 237,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082627,
+   "cor": "preta",
+   "novo_image_id": 1222465120,
+   "lum": 23,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082631,
+   "cor": "branca",
+   "novo_image_id": 1222465165,
+   "lum": 237,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082654,
+   "cor": "preta",
+   "novo_image_id": 1222465120,
+   "lum": 23,
+   "status": 200
+  },
+  {
+   "pid": "352726673",
+   "variante": 1550082662,
+   "cor": "branca",
+   "novo_image_id": 1222465165,
+   "lum": 237,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085510,
+   "cor": "preta",
+   "novo_image_id": 1222467823,
+   "lum": 37,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085515,
+   "cor": "off-white",
+   "novo_image_id": 1222467847,
+   "lum": 207,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085518,
+   "cor": "preta",
+   "novo_image_id": 1222467823,
+   "lum": 37,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085521,
+   "cor": "off-white",
+   "novo_image_id": 1222467847,
+   "lum": 207,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085533,
+   "cor": "preta",
+   "novo_image_id": 1222467823,
+   "lum": 37,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085541,
+   "cor": "off-white",
+   "novo_image_id": 1222467847,
+   "lum": 207,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085546,
+   "cor": "preta",
+   "novo_image_id": 1222467823,
+   "lum": 37,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085555,
+   "cor": "off-white",
+   "novo_image_id": 1222467847,
+   "lum": 207,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085559,
+   "cor": "preta",
+   "novo_image_id": 1222467823,
+   "lum": 37,
+   "status": 200
+  },
+  {
+   "pid": "352727545",
+   "variante": 1550085568,
+   "cor": "off-white",
+   "novo_image_id": 1222467847,
+   "lum": 207,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636919,
+   "cor": "preta",
+   "novo_image_id": 1223087509,
+   "lum": 25,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636925,
+   "cor": "branca",
+   "novo_image_id": 1223087527,
+   "lum": 234,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636932,
+   "cor": "preta",
+   "novo_image_id": 1223087509,
+   "lum": 25,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636941,
+   "cor": "branca",
+   "novo_image_id": 1223087527,
+   "lum": 234,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636961,
+   "cor": "preta",
+   "novo_image_id": 1223087509,
+   "lum": 25,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636958,
+   "cor": "branca",
+   "novo_image_id": 1223087527,
+   "lum": 234,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636965,
+   "cor": "preta",
+   "novo_image_id": 1223087509,
+   "lum": 25,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636972,
+   "cor": "branca",
+   "novo_image_id": 1223087527,
+   "lum": 234,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636981,
+   "cor": "preta",
+   "novo_image_id": 1223087509,
+   "lum": 25,
+   "status": 200
+  },
+  {
+   "pid": "352898175",
+   "variante": 1550636986,
+   "cor": "branca",
+   "novo_image_id": 1223087527,
+   "lum": 234,
+   "status": 200
+  }
+ ],
+ "apagadas": 87,
+ "falhas": []
+}

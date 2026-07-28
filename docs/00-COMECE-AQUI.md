@@ -53,13 +53,39 @@ estão em `../scripts/historico/`, na mesma condição.
 
 ---
 
+## Nova sessão (qualquer conta do Claude)
+
+O dono trabalha com **duas contas do Claude**; o estado inteiro do projeto vive
+nos repositórios, nunca na conversa. Qualquer sessão nova, em qualquer conta,
+fica pronta assim:
+
+1. Clonar os TRÊS repos lado a lado: `Movits/nimbus` (público),
+   `Movits/nimbus-assets` (privado), `Movits/nimbus-brain` (privado).
+2. `npm install && node scripts/setup-assets.mjs` no nimbus.
+3. Criar o `.env` (nunca commitado) com `GEMINI_API_KEY` e as 4 variáveis
+   `NUVEMSHOP_*` — **os valores estão no repo privado da brain**, página
+   `wiki/entities/nuvemshop-api.md` (e a chave Gemini em `estado.md`).
+4. Rodar as verificações do `CLAUDE.md` (`typecheck`, `validate`, `inventario`).
+5. Ler `ESTADO.md` e seguir o fluxo da tarefa por esta página.
+
+Os processos que têm que sair IDÊNTICOS em qualquer sessão estão todos
+escritos: criação de capa ([`fluxos/capa-lifestyle.md`](fluxos/capa-lifestyle.md)),
+auditoria ([`fluxos/auditoria-capa.md`](fluxos/auditoria-capa.md)), publicação
+([`fluxos/publicar-na-loja.md`](fluxos/publicar-na-loja.md)) e os limites dos
+instrumentos ([`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md)).
+Se algo só existir na memória da conversa, está no lugar errado — escreva no
+repo antes de encerrar.
+
+---
+
 ## Layout dos repositórios
 
-O projeto vive em **dois** repositórios irmãos, clonados lado a lado:
+O projeto vive em **três** repositórios irmãos, clonados lado a lado:
 
 ```
 nimbus/          PÚBLICO  — código, documentação, medições, auditorias
-nimbus-assets/   PRIVADO  — as artes, os blanks e as capas
+nimbus-assets/   PRIVADO  — as artes, os blanks e as capas (+ capas IA aprovadas)
+nimbus-brain/    PRIVADO  — segundo cérebro do negócio (wiki) + credenciais
 ```
 
 O de assets é privado porque as artes são a propriedade da marca. Os scripts

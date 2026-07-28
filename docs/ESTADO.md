@@ -56,6 +56,13 @@ NIMBUS Capas (37697) foi autorizado na loja; a publicação agora é
 removidas; mockups YouDraw preservados. O painel manual vira fallback
 (`fluxos/publicar-na-loja.md`).
 
+**Limpeza completa do site (28/07):** as 87 capas da geração reprovada foram
+removidas via API — na loja restam SÓ as 16 aprovadas + 149 mockups YouDraw;
+34 produtos ficaram sem capa de modelo até a fila terminar. 40 variantes foram
+religadas ao mockup YouDraw da cor certa (hover ok). A foto errada do 352727892
+(moletom sem capuz) saiu junto — suspeita fechada. Relatórios:
+`nuvemshop/producao/limpeza-site-2026-07-28.{md,json}`.
+
 ## Reorganização de 28/07
 
 - Raiz limpa: 11 documentos de fundação (jun-jul/2026) → `docs/historico/`;
@@ -87,7 +94,5 @@ removidas; mockups YouDraw preservados. O painel manual vira fallback
 
 ## Suspeitas abertas
 
-- A capa publicada do **352727892** pode estar com a peça errada (foto sem
-  capuz num Moletom Canguru). Confirmar na loja durante o upload.
 - `eixo-costas.mjs` (medidor automático de eixo) não é confiável — aposentar ou
   consertar; o eixo se lê por marca física.
