@@ -1,0 +1,62 @@
+{
+ "352722510-branca": {
+  "fase": "pronto",
+  "auditorias": [
+   {
+    "n": 1,
+    "score": 0.787,
+    "escala": 7,
+    "dV": -1.02,
+    "cf": 0.475
+   },
+   {
+    "n": 2,
+    "score": 0.648,
+    "escala": 29.1,
+    "dV": -2.34,
+    "cf": 0.484
+   },
+   {
+    "n": 3,
+    "score": 0.766,
+    "escala": 24.8,
+    "dV": -0.6,
+    "cf": 0.481
+   }
+  ],
+  "escolhida": 1,
+  "resultado": {
+   "n": 1,
+   "score": 0.787,
+   "escala": 7,
+   "dV": -1.02,
+   "cf": 0.475
+  }
+ },
+ "352719728-branca": {
+  "fase": "rodada1",
+  "auditorias": [
+   {
+    "n": 1,
+    "score": 0.314,
+    "escala": 35.3,
+    "dV": -1.25,
+    "cf": 0.44
+   },
+   {
+    "n": 2,
+    "score": 0.307,
+    "escala": 18.3,
+    "dV": -2.44,
+    "cf": 0.425
+   },
+   {
+    "n": 3,
+    "score": 0.344,
+    "escala": 53.1,
+    "dV": -5.56,
+    "cf": 0.439
+   }
+  ]
+ }
+}
