@@ -1,101 +1,70 @@
 ---
 status: vigente
-atualizado: 2026-07-26
-substitui: Nimbus brain/wiki/concepts/geracao-capas-lifestyle.md
+atualizado: 2026-07-28
+substitui: a versão de 26/07 deste arquivo (só-geométrica) e Nimbus brain/wiki/concepts/geracao-capas-lifestyle.md
 ---
 
 # Fluxo: produzir uma capa de produto
 
 A capa é a foto de modelo vestindo a peça, com a estampa oficial aplicada.
+O sistema vigente foi validado pelo dono em 27-28/07 sobre 16 capas: **dois
+métodos, escolhidos pela peça e pelo caso**, com a mesma auditoria em cima.
 
-**A ideia central, e o motivo de tudo:** a IA gera a peça **em branco**, sem
-estampa nenhuma, e a arte oficial entra depois por composição. Assim não existe
-escala para a IA errar — ela fica certa por construção. Pedir à IA que desenhe a
-estampa falhou duas vezes seguidas sem mover a escala um pixel, porque com uma
-foto de referência no pedido o modelo copia o tamanho errado junto.
+## Qual método usar
 
----
+| Caso | Método |
+|---|---|
+| Camiseta / Oversized / Blusão (sem capuz), arte normal | **IA (Nano Banana)** — prompt de 3 referências |
+| Peça com capuz (Moletom Canguru) | **Geométrica** — a IA nunca esconde o topo da estampa sob o capuz (falha dura, 4/4) |
+| Arte de padrão repetido (azulejo) ou posição que precisa de controle exato | **Geométrica** — a IA redesenha o miúdo e não obedece deslocamento por texto |
+| Cor da variante ≠ cor do mockup e a IA insiste em recolorir | **Geométrica** |
 
-## 1. Peça em branco
+## Método IA (Nano Banana, `gemini-3.1-flash-image`)
 
-```bash
-node scripts/produce-cover.mjs blank \
-  --produto <id> --peca "<peça>" --vista costas|frente \
-  --cor black|white|off-white --colecao RELIQUIA|STREET|NUVEM \
-  --cena <capa publicada do produto> --out <blank.png>
-```
+Refs, nesta ordem: **arte oficial PNG · blank do produto · mockup de COSTAS**
+(o mockup escolhido por REGISTRO com a arte — `horizontal-oficial.json` — nunca
+pelo índice da galeria; a galeria errada é reproduzida fielmente).
 
-A cena de referência é a **capa publicada daquele produto e daquela cor**. O
-prompt trava a peça (`GARMENT_LOCK`) e proíbe estampa de várias formas — a
-repetição é necessária, o modelo tende a desenhar a arte junto.
+Prompt vigente e variações de correção: `scripts/gemini/PROMPTS-PILOTO.md`
+(seção v4/lote). Regras que os pilotos provaram:
 
-Abra o blank e rejeite se: a IA desenhou estampa, a peça está errada, a pose
-ficou torcida, ou na vista de frente os braços cobrem o peito. Regere **uma** vez.
+- **3–5 candidatas por capa** — escala varia de −13% a +22% entre gerações
+  idênticas; a auditoria escolhe, nunca a primeira.
+- Correção por texto funciona para **tamanho** ("clearly smaller… less than
+  half the width") e **vertical** ("place it lower"); **NÃO funciona para
+  deslocamento lateral** nem para esconder sob capuz.
+- Nenhuma frase de ESTILO no prompt (um "keep the halo flat" já matou a
+  textura da arte; estilo vem das referências).
+- Critério de escolha entre candidatas: **landmark horizontal primeiro**
+  (ver auditoria), escala depois.
+- Capa aprovada é **versionada no nimbus-assets** (`<id>-<cor>-ia-v1.png`) com
+  sidecar `.capa.json` no público — ela não é derivável de receita.
 
-Barra cortada no quadro **não** é motivo de rejeição sozinha: várias cenas
-publicadas cortam a barra e o modelo copia o enquadramento.
+## Método geométrico (compositor)
 
-## 2. Landmarks
+1. **Blank**: já existe para 77 variantes (nimbus-assets). Gerar novo só se
+   faltar: `node scripts/produce-cover.mjs blank …` (cena = capa publicada do
+   produto/cor; o prompt trava a peça e proíbe estampa).
+2. **Landmarks**: `gola`/`barra`/`centro`/`torso` por leitura visual com
+   `scripts/geometry/grade.mjs`; **yaw pela marca física do meridiano** —
+   ordem: etiqueta/relevo costurado (camiseta clara, revelar com CLAHE) >
+   costura central do capuz (o V, achar com sobel-x) > IA-agrimensor (gerar 1-2
+   candidatas de IA e ler o centro delas por registro; em preto sobre preto é o
+   único que funciona). O mergulho da gola **subestima o giro** (viés
+   documentado) — não usar como alvo em pose girada.
+   `scripts/geometry/estimar-yaw.mjs --receita <r> --costura-x <frac>`.
+3. **Placement**: o adotado em `placement-por-produto.json` (nunca o antigo).
+4. **Oclusão**: peça com capuz e arte que alcança a zona dele → polígono
+   `--oclusao` obrigatório (fronteira em preto-no-preto: onde a candidata de
+   IA se recusa a pintar).
+5. Compor: `node scripts/produce-cover.mjs compor … --sombra-global 1
+   --dobra-larga 180 --relevo 8` (receita de tecido aprovada pelo dono).
+6. **Cor da estampa: arte pura.** Nenhuma compensação de saturação/contraste —
+   régua de 4 doses foi reprovada; o dono escolheu a arte sem ajuste.
 
-São quatro, e cada um tem uma armadilha conhecida.
+## Depois de compor (qualquer método)
 
-**Barra** — `node scripts/geometry/detect-hem.mjs <blank>`. O degrau mais forte
-**não** é a barra quando a peça é escura sobre calça escura (pega a calça, mais
-abaixo), quando há pesponto ~2 cm acima da borda, ou em moletom (pega a calça).
-O teste que resolve: leia o perfil de luminância da coluna central e veja se
-**abaixo** do degrau o campo continua plano — se continua, é a barra.
-
-**Gola** — a costura, base da ribana, não o topo dela. Em moletom com capuz o
-marco é a junção capuz/corpo. Na vista de frente use a costura na **lateral do
-pescoço**: o fundo do decote desce 3 a 5 cm a mais e jogaria a estampa para baixo.
-
-**Torso** — largura visível **na altura da estampa**. Confira contra 2R da
-tabela. `measure-torso.mjs` serve de segunda opinião, nunca de autoridade.
-
-**Centro** — o **eixo do painel**, medido pelos vincos de cava. Não é o meio da
-imagem nem o meio da silhueta. Um cilindro girado em torno do próprio eixo tem a
-mesma silhueta, então o meio do tronco continua sendo o eixo mesmo com o modelo
-de lado; o que atrapalha é braço e manga cobrindo a borda.
-
-## 3. Composição
-
-```bash
-node scripts/produce-cover.mjs compor \
-  --produto <id> --peca "<peça>" --foto <blank> --arte <arte oficial> \
-  --gola <g> --barra <b> --centro <eixo> --torso <t> \
-  --placement <cm do produto> --arte-cm <LxA> \
-  [--yaw <graus>] [--oclusao "x,y x,y ..."] --out <capa.png>
-```
-
-O `placement` vem de [`../verdades/placement.md`](../verdades/placement.md) e é
-**por produto**, nunca padrão de família.
-
-A arte é deformada e sombreada pelas **dobras do próprio tecido** (`--relevo`,
-padrão 3). Sem isso ela sai como retângulo de bordas retas sobre pano amassado, e
-lê como adesivo — foi por isso que o lote de 77 foi reprovado. Texto pode
-distorcer um pouco numa dobra real: é aceitável, e é o que faz parecer roupa.
-
-**Moletom com capuz:** o capuz cai sobre as costas e cobre o topo da estampa.
-Isso é o produto real e tem que aparecer. Trace o polígono da borda do capuz e
-passe em `--oclusao`; ele fica guardado na receita. Cubra o capuz **inteiro**,
-não só a faixa da borda — cobrir só a interseção já abriu buraco no meio do
-desenho.
-
-Cada composição grava `<capa>.receita.json` com todos os parâmetros. É o que
-permite recompor sem re-derivar landmarks.
-
-## 4. Gate e checagem visual
-
-Rode o gate ([`auditoria-capa.md`](auditoria-capa.md)) e depois **abra a capa**.
-O gate não vê fidelidade de traço, sinal de yaw nem integração com o tecido.
-
-Se reprovar por escala, o erro está em gola ou barra. Se reprovar por posição,
-confira o placement e, na vista de frente, se a gola foi lida na lateral do
-pescoço. Corrija **uma** vez.
-
----
-
-## O que mudou e por quê
-
-Cada trava aqui nasceu de um defeito medido. O histórico completo está em
-[`../../nuvemshop/assets/producao-capas/REGISTRO.md`](../../nuvemshop/assets/producao-capas/REGISTRO.md).
+Auditar por [`auditoria-capa.md`](auditoria-capa.md) e enviar ao dono como
+final numerada (aprovar/reprovar dele fecha a capa). Uma capa por vez continua
+valendo dentro do lote: cada uma passa pela auditoria completa antes de entrar
+na leva enviada.

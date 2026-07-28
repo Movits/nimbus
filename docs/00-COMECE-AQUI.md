@@ -36,9 +36,20 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Quais receitas têm `torso` ou `centro` errados | [`verdades/torso-e-centro.md`](verdades/torso-e-centro.md) |
 | **O que os instrumentos NÃO enxergam** | [`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md) |
 
+## Contexto de negócio
+
+| Preciso de… | Abra |
+|---|---|
+| Preços e régua de precificação | [`projeto/precificacao.md`](projeto/precificacao.md) |
+| Estado e guia da loja (CSS, páginas, tema) | [`../nuvemshop/instrucoes.md`](../nuvemshop/instrucoes.md) |
+
 `decisoes/` guarda as decisões do dono, datadas. Elas valem até nova decisão dele.
 
-`historico/` guarda o que caiu, com o motivo. **Nada de lá deve ser seguido.**
+`historico/` guarda o que caiu, com o motivo — inclusive os documentos de
+fundação de jun-jul/2026 que moravam na raiz (pesquisa de mercado, nomes de
+produto, kit de marca, prompts Higgsfield, handoffs). **Nada de lá deve ser
+seguido**; serve só de arqueologia. Os scripts pontuais das sprints passadas
+estão em `../scripts/historico/`, na mesma condição.
 
 ---
 

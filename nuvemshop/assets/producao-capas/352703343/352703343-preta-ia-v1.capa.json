@@ -1,0 +1,18 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "lote2 (3 refs) + correcao dirigida quando a auditoria acusou; candidatas escolhidas por costura-primeiro",
+  "prompt_doc": "scripts/gemini/PROMPTS-PILOTO.md",
+  "refs": {
+    "arte": "designs/prontos/RELIQUIA/costas/B8-deus-e-fiel.png",
+    "blank": "(blank do produto, ver receita irmã)",
+    "mockup": "gallery registrada em horizontal-oficial.json"
+  },
+  "arquivo": "352703343-preta-ia-v1.png (nimbus-assets)",
+  "auditoria": {
+    "escala_pct": 5.6,
+    "delta_vertical_cm": 0.99,
+    "nota": "1a rodada ja cravou"
+  },
+  "aprovado_dono": "2026-07-28"
+}

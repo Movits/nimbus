@@ -1,181 +1,92 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-07-28
 ---
 
 # Estado do projeto
 
 Esta é a única página que envelhece rápido. Leia antes de agir e atualize ao sair.
 
-## Capas
+## Capas — o sistema está APROVADO
 
-**77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito
-(a pipeline não processa painel plano).
+O dono aprovou em 27-28/07 o sistema de criação + auditoria
+([`fluxos/capa-lifestyle.md`](fluxos/capa-lifestyle.md) e
+[`fluxos/auditoria-capa.md`](fluxos/auditoria-capa.md)): IA (Nano Banana, 3
+referências, 3-5 candidatas) para camiseta/oversized/blusão; geométrica com
+landmark físico (etiqueta / costura do capuz / IA-agrimensor) para capuz, arte
+de padrão e posição crítica. Cor da estampa: **arte pura, sem compensação**.
 
-**⛔ O lote NÃO está publicável.** Em 26/07 o dono reprovou as 77 depois de olhar
-em resolução real. Três defeitos, todos confirmados por medição depois:
+**16 capas aprovadas pelo dono até aqui** (12 por IA, versionadas no
+nimbus-assets como `*-ia-v1.png` com sidecar `.capa.json`; 4 geométricas, por
+receita):
 
-1. **Estampa parecia colada.** O compositor curvava a arte num cilindro liso e
-   multiplicava por uma sombra suavizada — retângulo de bordas retas sobre pano
-   amassado. Corrigido: a arte agora é deformada e sombreada pelas dobras do
-   próprio tecido.
-2. **Estampa torta.** O eixo do painel era estimado pela silhueta, que inclui
-   manga e braço. No Aparecida Spray o erro era de **5,4 pontos**. O check de
-   centro tinha sido rebaixado por mim para informativo, e por isso passou em
-   todas.
-3. **Arte por cima do capuz.** Regressão do compositor novo, já corrigida: a
-   oclusão voltou a ser parte da composição, com o polígono guardado na receita.
+| Produto | Variante | Método |
+|---|---|---|
+| 352618935 São Jorge Vintage | branca, preta | IA |
+| 352728019 Aparecida Spray | preta | IA |
+| 352723243 São Miguel Celeste | branca | IA |
+| 352718275 Azulejo | branca | geométrica v7 (yaw −28,5 pela etiqueta) |
+| 352718787 São Jorge Neobarroco (moletom) | branca | geométrica v4 (piloto) |
+| 352890896 Aparecida Barroca | preta | IA |
+| 352703276 Deus é Fiel (oversized) | preta | IA |
+| 352703343 Deus é Fiel (camiseta) | preta | IA |
+| 352702020 Salmo 19 (camiseta) | preta | IA |
+| 352718943 São Jorge Neobarroco (oversized) | preta | IA |
+| 352618837 São Jorge Vintage (blusão) | preta | IA |
+| 352407182 São Miguel Vintage | offwhite | geométrica v5 (etiqueta 0,425) |
+| 352717723 Brasão | offwhite | geométrica v6 (relevo 0,44) |
+| 352619175 Salmo 19 (moletom) | preta | geométrica v15 (costura do capuz 0,565 + oclusão) |
+| 352718999 São Jorge Neobarroco (camiseta) | preta | v3 mantida — os 2 mockups YouDraw batem com ela (15 cm); o dono vai refazer a ARTE depois |
 
-**Três pilotos refeitos e aprovados** com o compositor novo (352718999 branca,
-352889132 preta, 352618878 preta). O dono aprovou o resultado visual.
+**Fila restante da auditoria visual de 27/07:** 352717723 preta, 352703276 par
+offwhite?, 352718943 offwhite, 352718999 branca, 352618837 branca, 352407182
+preta, 352890896 offwhite (**sem blank** — gerar com Gemini), 352619175 branca,
+352718943/352718275 pares de cor conforme catálogo. Métodos e ressalvas por
+capa em [`../scripts/gemini/PROMPTS-PILOTO.md`](../scripts/gemini/PROMPTS-PILOTO.md).
 
-**A varredura de receitas foi feita.** O vício do `torso` se repete: **12 capas**
-inflam o raio acima do teto dos pilotos (a pior, 352725852 preta, a 2,03× a
-tabela), **8** estão com `centro` ou `torso` não medidos, e há **11 contradições
-provadas** entre receitas do mesmo blank. Ordem de retrabalho e método em
-[`verdades/torso-e-centro.md`](verdades/torso-e-centro.md); instrumento em
-`scripts/producao/auditar-receitas.mjs`.
+Fora do fluxo, com motivo: Ecobag (painel plano); 3 produtos frontais
+(352702753, 352702796, 352720257 — placement de frente nunca medido).
 
-**O yaw deixou de ser escolha e virou medida (27/07).** O dono apontou o
-landmark que faltava: a **costura central das costas** (capuz no moletom,
-centro da gola na camiseta) marca o meridiano verdadeiro da peça, visível na
-foto. `scripts/geometry/estimar-yaw.mjs` resolve o yaw invertendo o próprio
-`artMesh` até o meridiano da estampa cair na costura. Validação: no moletom o
-dono escolheu −14 no olho e a costura devolve **−14,75**. Medidos: 352725852
-**+7,25**, 352728277 **−10,25**, 352718787 **−14,75**. Na 352728277 a primeira
-leitura da costura (0,52 → +9) tinha pego a **base do pescoço**, não a gola, e
-girou para o lado errado; relida com contraste maior deu 0,46 → −10,25, e o dono
-aprovou as três. Sanidade barata que pegaria isso antes: o **lado do rosto**
-prevê o sinal (rosto à esquerda → yaw positivo, à direita → negativo, nas três
-capas conferidas). Junto disso,
-o tecido ganhou `--sombra-global` (a estampa segue a iluminação da cena) e
-`--dobra-larga` (segue o caimento, não só o vinco); o dono escolheu
-**dobra 180 · relevo 8**. As três capas estão recompostas com isso (v4/v5),
-gate aprovado, à espera do olho.
+## Publicação
 
-**O CATÁLOGO FOI RECOMPOSTO (27/07).** As três aprovadas viraram receita, e as
-**68 variantes restantes da fila** foram compostas com ela: placement
-registrado, tecido `dobra 180 · relevo 8 · sombra-global 1`, torso/centro
-relidos nas 13 marcadas, yaw medido onde havia costura lida. **67 de 68 passam
-no gate**; a única reprova (352728524-branca) é **alarme falso provado** — arte
-de 35,2 cm dá arco ~1 rad, fora do domínio do NCC, e a compressão de malha bate
-com a tabela (16,96% vs 16,58%). Auditadas visualmente em 8 folhas de contato;
-**14 ficam em observação** (pose girada, yaw 0 plausível — conferir em resolução
-real e ler a costura se acusar), marcadas com `watch` no
-`relatorio-recomposicao.json`. Fora da fila, com motivo: Ecobag (painel plano),
-352890896-offwhite (sem blank; gerar com Gemini), e os 3 produtos frontais
-(352702753, 352702796, 352720257 — placement de frente nunca foi medido).
-Ferramentas: `fila-recomposicao.json` + `scripts/producao/recompor-fila.mjs`
-(idempotente; `ajustes-fila.json` para releituras). **Nada publicado.**
+O pacote para o painel sai de `node scripts/producao/preparar-publicacao.mjs`
+(`_PUBLICAR/` + índice). A Nuvemshop é colagem manual — **o upload é do dono**,
+com a lista de conferência que a sessão entrega. Preservar as fotos oficiais
+YouDraw (decisão de 25/07); remover as fotos de modelo antigas das capas
+trocadas.
 
-**Três capas refeitas em 26/07, à espera do olho do dono:** 352725852 preta
-(Camiseta Premium, era 2,03× → 1,19×), 352728277 preta (Oversized, 1,86× →
-1,18×) e 352718787 branca (Moletom Canguru com capuz, 1,45× → 1,14×). As três
-passam gate, compressão de malha e leitura visual. A fila acima do teto caiu de
-**12 para 9**.
+## Reorganização de 28/07
 
-Escolhidas para cobrir três caminhos de risco diferentes: tecido escuro, peça de
-área maior, e tecido claro com capuz.
-
-**O MÉTODO IA FOI APROVADO PELO DONO (27/07).** As três finais do piloto
-passaram: 352618935-branca (IA), 352728019-preta (IA, halo texturizado) e
-352718787-branca (nossa geométrica — capuz é falha dura da IA). As duas capas
-de IA estão versionadas no **nimbus-assets** como `*-ia-v1.png` (não são
-deriváveis de receita) com sidecar `*.capa.json` no repo público. Receita
-vigente do método: 3 refs (arte + blank + mockup de costas por registro),
-prompt curto, ~3–5 candidatas, rodada de correção quando a auditoria acusa,
-auditoria escolhe, dono aprova/reprova cada final. Prompts e vereditos em
-`scripts/gemini/PROMPTS-PILOTO.md`.
-
-**Fila de retrabalho: 22 capas** (erradas do dono + minhas na auditoria visual
-de 27/07). **LOTE 1 FECHADO (28/07), 5 de 22 resolvidas:** #35 352618935-branca
-(IA), #49 352728019-preta (IA), #36 352618935-preta (IA, critério
-costura-primeiro), #2 352723243-branca (IA), #10 352718275-branca
-(**geométrica v7**, yaw −28,5 pela etiqueta transparente, arte pura — o dono
-escolheu a cor sem nenhum ajuste numa régua de 4 doses; ver "Cor da estampa" em
-limites-conhecidos). Capas de IA aprovadas versionadas no nimbus-assets com
-sidecar `*.capa.json` no público. Restam 17: 352890896 par (offwhite SEM
-blank), 352717723 par, 352703276, 352703343, 352702020, 352619175 par (capuz →
-geométrica), 352718943 par, 352718999 par, 352618837 par (Blusão), 352407182
-par. Moletons com capuz pela via geométrica; resto pela IA.
-
-**Próximo passo:** com o aval do dono, seguir a fila em lotes, remedindo `torso`
-e `centro` no blank antes de recompor. A 352718999 branca aparece na fila mas
-**já está resolvida** — é um dos pilotos aprovados, e o que falta é promover o
-piloto a entregável, não refazer.
+- Raiz limpa: 11 documentos de fundação (jun-jul/2026) → `docs/historico/`;
+  `precificacao.md` (vivo) → `docs/projeto/`; `tmp_bloco.json` removido.
+- Scripts pontuais de sprints passadas → `scripts/historico/` (com README).
+  Núcleo intacto: `scripts/*.mjs` centrais, `geometry/`, `gemini/`, `producao/`.
+- CSS de 16-17/07 → `nuvemshop/css-historico/`. O vigente segue
+  `css-nimbus-publicacao-compacta-2026-07-20.css` (ver `nuvemshop/instrucoes.md`).
+- Verificações (`typecheck`, `validate`, `inventario`) passam após a mudança.
 
 ## Medições fechadas
 
-- Placement por produto, régua-pela-arte sobre os 48 mockups oficiais.
-- Datum resolvido: a "altura" da tabela YouDraw é **gola→barra**.
-- Horizontal: a arte é centrada no produto, mediana de desvio **0%**.
-- Comprimento do Blusão: 78,4 cm, **estimado**, com a ressalva registrada.
+- Placement por produto (registro com a arte): `placement-por-produto.json` —
+  adotado 27/07. Horizontal oficial dos mockups: `horizontal-oficial.json`.
+- Datum: a "altura" da tabela YouDraw é gola→barra. Blusão: 78,4 cm estimado.
 - 352727892 reclassificado de Blusão para Moletom Canguru.
-
-## Placement remedido e adotado (27/07)
-
-O medidor de mockup foi consertado em quatro pontos e a caixa da estampa passou
-a sair do **registro com o PNG oficial da arte** (score mediano 0,883). Detalhe
-em [`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md).
-
-**Os valores corrigidos já estão em `placement-por-produto.json`:** 42
-corrigidos, 3 confirmados, 3 sem leitura. O valor de 26/07 fica ao lado em
-`placement_cm_2026_07_26`; nada de histórico foi apagado.
-
-As correções são pequenas na maioria (mediana ~0,1 cm) mas chegam a **2,2 cm**
-no 352722232 e **1,4 cm** no 352728451. Reaplicar depois de remedir custa um
-comando: `node scripts/geometry/adotar-placement.mjs --aplicar`.
-
-Três produtos ficam sem leitura por serem **estampa frontal** (o template de
-costas não se aplica): 352702753, 352702796 e 352720257. Eles mantêm o valor
-antigo, que foi medido com o template errado e **não deve ser usado**.
-
-> [!warning] Toda receita anterior a 27/07 usa o placement velho
-> As três capas refeitas em 26/07 incluídas. Recompor exige repassar o
-> `--placement` novo.
-
-## A sessão na nuvem compõe sem chave de IA
-
-Provado em 26/07 num clone limpo: `npm install` + `setup-assets` + `compor`
-reproduz o piloto aprovado do 352718999 com `arco_meio_rad 0,735`, idêntico à
-receita. Os **149 blanks estão versionados** no repo de assets; só as capas
-compostas ficaram de fora.
-
-A `GEMINI_API_KEY` é necessária **apenas para gerar blank novo** (passo 1 do
-fluxo de capa). Recompor o catálogo a partir dos blanks que já existem não
-depende dela. As duas variantes sem blank são 352890896 off-white e a Ecobag.
 
 ## Pendências do projeto
 
-1. Reconstruir o catálogo com o compositor novo.
-2. Publicar, com autorização produto a produto.
+1. Terminar a fila de capas restante (métodos já validados).
+2. Upload das capas aprovadas no painel (dono, com a lista de conferência).
 3. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 4. Completar páginas de produto: material, modelagem, medidas, prazo POD,
    política, impacto social.
 5. Finalizar páginas legais e de ajuda.
 6. Validar analytics e eventos do funil antes de anúncio pago.
 7. Confirmar com a YouDraw a tabela de medidas do Blusão Moletom.
-
-## Reorganização de 26/07
-
-O projeto passou a viver em **dois repositórios**: o público (código,
-documentação, medições, receitas) e `Movits/nimbus-assets`, privado, com as
-artes, os blanks e os mockups. `node scripts/setup-assets.mjs` mescla os dois.
-
-Provado de ponta a ponta: clone limpo dos dois + `npm install` + `setup-assets`
-compõe uma capa.
-
-As **capas compostas ficaram fora do repo de assets** de propósito. São
-deriváveis de blank + arte + receita, e as receitas estão versionadas. Eram 559
-MB de iterações mais 215 MB de diagnóstico.
-
-Cinco conflitos de instrução foram neutralizados, incluindo a terceira auditoria
-invalidada que estava sem aviso nenhum. `docs/` passou a ser roteado por tarefa.
+8. Dono: redesenhar a arte do São Jorge Neobarroco camiseta (decisão 28/07).
 
 ## Suspeitas abertas
 
-- A capa publicada do **352727892** pode estar com a peça errada: uma das duas
-  fotos no ar não mostra capuz, e o produto é Moletom Canguru. Confirmar na loja.
-- O medidor de eixo automático (`scripts/geometry/eixo-costas.mjs`) **não é
-  confiável**: mediu o tronco pela metade em peça preta. O eixo hoje se mede por
-  leitura visual dos vincos de cava. Consertar ou aposentar.
+- A capa publicada do **352727892** pode estar com a peça errada (foto sem
+  capuz num Moletom Canguru). Confirmar na loja durante o upload.
+- `eixo-costas.mjs` (medidor automático de eixo) não é confiável — aposentar ou
+  consertar; o eixo se lê por marca física.

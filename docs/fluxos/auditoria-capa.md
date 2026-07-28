@@ -33,20 +33,32 @@ Sai com código != 0 quando reprova, mas o JSON continua no stdout.
 
 ## 2. Olho
 
-O gate **não vê**: fidelidade de traço e texto, sinal do yaw, compressão sutil e
-integração com o tecido. Abra a capa e um recorte 1:1 da estampa, e responda:
+O gate **não vê**: fidelidade de traço e texto, sinal do yaw, compressão sutil,
+integração com o tecido, **cor da tinta** e **oclusão de capuz**. Abra a capa e
+um recorte 1:1 da estampa, e responda:
 
 - **Parece roupa ou parece adesivo?** Bordas retas e duras atravessando um pano
   amassado é a assinatura do PNG colado. A arte tem que ondular no vinco e
   escurecer na dobra. Prova barata: componha um controle com `--sem-relevo` e
   compare uma mancha grande e chapada da arte.
-- **Está centrada no produto?** Compare o centro da arte com o eixo medido pelos
-  vincos de cava.
+- **Horizontal: o centro da arte está na MARCA FÍSICA do meridiano?** Etiqueta/
+  relevo costurado (camiseta, CLAHE), costura central do capuz (moletom,
+  sobel-x) ou centro da candidata de IA (preto-no-preto). O eixo da silhueta e
+  o mergulho visível da gola NÃO servem em pose girada (vieses documentados).
+  Sanidade: regra do rosto (rosto à esquerda → estampa à direita do eixo, e
+  vice-versa).
 - **A escala bate?** Não confie só no número: veja se a estampa cabe no painel
-  com folga plausível.
-- **Moletom: a arte some por baixo do capuz**, sem furo no meio e sem passar por
-  cima dele?
+  com folga plausível. Em capa de IA, escala é loteria entre candidatas —
+  medir todas e escolher.
+- **Cor: a estampa lê como a ARTE ORIGINAL** na escala de celular, foto
+  inteira? (Decisão do dono, 28/07: arte pura, sem compensação.) Diagnóstico
+  numérico: `scripts/geometry/medir-cor-estampa.mjs` — mas o veredito é visual.
+- **Capuz: a arte some por baixo dele**, sem furo no meio e sem passar por
+  cima? Peça com capuz sem polígono de oclusão na receita = reprovada direto
+  quando a arte alcança a zona do capuz (o gate não vê isso).
 - **Fidelidade**: traço, cores e texto letra a letra contra o arquivo oficial.
+  Em capa de IA, texto pequeno (cartucho "NIMBUS") sai borrado — ressalva
+  conhecida; reprovar se estiver legivelmente ERRADO, não só borrado.
 - **Par de cor**: [`par-de-cor.md`](par-de-cor.md).
 
 ## 3. Auditoria do catálogo inteiro

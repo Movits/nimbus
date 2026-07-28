@@ -16,8 +16,9 @@ export const CORES = [...new Set(plano.map((p) => p.cor))]
   .map((c) => c.toLowerCase().replace(/-/g, ""))
   .sort((a, b) => b.length - a.length);   // mais longa primeiro: "offwhite" antes de "off"
 
-/** Ordem de preferencia: o mais recente do processo vence o mais antigo. */
-export const PRIORIDADE = ["grafite", "par", "capuz", ""];
+/** Ordem de preferencia: o mais recente do processo vence o mais antigo.
+ * `ia` = capa gerada por Nano Banana e aprovada pelo dono (28/07). */
+export const PRIORIDADE = ["ia", "grafite", "par", "capuz", ""];
 
 export function lerNome(f) {
   const m = f.match(/^(\d+)-(.+)-v(\d+)(-semcapuz)?\.png$/);

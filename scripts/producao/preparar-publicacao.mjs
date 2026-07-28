@@ -17,6 +17,10 @@ const norm = (s) => s.toLowerCase().replace(/-/g, "");
 const limpo = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "")
   .replace(/[^A-Za-z0-9]+/g, "");
 
+// Aprovacao explicita do dono vence qualquer heuristica de nome.
+const aprovadas = fs.existsSync("nuvemshop/producao/capas-aprovadas.json")
+  ? JSON.parse(fs.readFileSync("nuvemshop/producao/capas-aprovadas.json", "utf8")) : {};
+
 // capa final por produto+cor
 const finais = new Map();
 for (const d of fs.readdirSync(D)) {
@@ -26,9 +30,17 @@ for (const d of fs.readdirSync(D)) {
     const r = lerNome(f);
     if (!r) continue;
     const k = `${r.id}|${r.cor}`;
+    if (aprovadas[k]) continue;              // essa variante tem aprovacao explicita
     const atual = finais.get(k);
     if (melhor(atual, r) === r) finais.set(k, { ...r, dir, f });
   }
+}
+for (const [k, f] of Object.entries(aprovadas)) {
+  if (k.startsWith("_")) continue;
+  const id = k.split("|")[0];
+  const caminho = path.join(D, id, f);
+  if (!fs.existsSync(caminho)) { console.error(`AVISO: aprovada ausente em disco: ${caminho}`); continue; }
+  finais.set(k, { id, cor: k.split("|")[1], dir: path.join(D, id), f, aprovada: true });
 }
 
 if (fs.existsSync(SAIDA)) for (const f of fs.readdirSync(SAIDA)) fs.unlinkSync(path.join(SAIDA, f));

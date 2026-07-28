@@ -1,0 +1,16 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "lote2 (3 refs) + correcao dirigida quando a auditoria acusou; candidatas escolhidas por costura-primeiro",
+  "prompt_doc": "scripts/gemini/PROMPTS-PILOTO.md",
+  "refs": {
+    "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+    "blank": "(blank do produto, ver receita irmã)",
+    "mockup": "gallery registrada em horizontal-oficial.json"
+  },
+  "arquivo": "352618837-preta-ia-v1.png (nimbus-assets)",
+  "auditoria": {
+    "nota": "Blusao: registro NCC nao trava em estampa dobrada; auditoria visual + regra do rosto"
+  },
+  "aprovado_dono": "2026-07-28"
+}
