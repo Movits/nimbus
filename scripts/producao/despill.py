@@ -24,8 +24,13 @@ def recortar(entrada, saida):
     Gd = np.minimum(G, teto)
 
     # unpremultiply contra o verde do fundo SO onde ha opacidade relevante;
-    # dividir por alfa minusculo estoura os canais (foi o bug do fundo roxo)
-    fundo = np.array([9.0, 166.0, 79.0])
+    # dividir por alfa minusculo estoura os canais (foi o bug do fundo roxo).
+    # A cor do fundo e MEDIDA na borda da imagem (os raws usam verdes
+    # diferentes: chroma ~(9,166,79) nas estampas, ~(139,192,64) no wordmark).
+    borda = np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]).astype(np.float32)
+    bd = borda[:, 1] - np.maximum(borda[:, 0], borda[:, 2])
+    verdes = borda[bd > 25]
+    fundo = np.median(verdes, axis=0)[:3] if len(verdes) else np.array([9.0, 166.0, 79.0])
     al = np.maximum(alpha, 0.35)
     Ru = np.clip((R - (1 - al) * fundo[0]) / al, 0, 255)
     Gu = np.clip((Gd - (1 - al) * fundo[1]) / al, 0, 255)
