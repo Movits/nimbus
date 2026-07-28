@@ -32,6 +32,8 @@ outra direção". Estado atual:
 
 ## Reorganização de 28/07
 
+- CSS vigente: `nuvemshop/css-nimbus-publicacao-compacta-2026-07-28.css`
+  (28/07, hover padrão do tema). O de 20/07 é histórico.
 - Raiz limpa: 11 documentos de fundação (jun-jul/2026) → `docs/historico/`;
   `precificacao.md` (vivo) → `docs/projeto/`; `tmp_bloco.json` removido.
 - Scripts pontuais de sprints passadas → `scripts/historico/` (com README).
@@ -50,7 +52,9 @@ outra direção". Estado atual:
 ## Pendências do projeto
 
 1. Nova direção das capas (dono vai detalhar; boards de casting prontos).
-2. —
+2. **Dono colar o CSS novo no painel**: `nuvemshop/css-nimbus-publicacao-compacta-2026-07-28.css`
+   (hover volta ao padrão do tema; o de 20/07 escondia a secundária no hover e o
+   card ficava branco depois do pivô). Fluxo em `nuvemshop/instrucoes.md`.
 3. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 4. Completar páginas de produto: material, modelagem, medidas, prazo POD,
    política, impacto social.
