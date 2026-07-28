@@ -46,7 +46,7 @@ def recortar(entrada, saida):
         C[magenta] = lum[magenta]
 
     rgba = np.dstack([Ru, Gu, Bu, alpha * 255]).astype(np.uint8)
-    Image.fromarray(rgba, "RGBA").save(saida)
+    Image.fromarray(rgba, "RGBA").save(saida, dpi=(300, 300))
 
     # metricas de controle
     kept = alpha > 0.5
