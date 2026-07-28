@@ -666,7 +666,7 @@
   "ss": 2,
   "arco_meio_rad": 0.546,
   "gerado_em": "2026-07-26T15:29:17.723Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352889132\\352889132-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352889132/352889132-preta-v1.png",
   "fonte": "sidecar"
  },
  "352618878-preta-v1-semcapuz.png": {
@@ -688,7 +688,7 @@
   "ss": 2,
   "arco_meio_rad": 0.812,
   "gerado_em": "2026-07-26T15:17:55.799Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618878\\352618878-preta-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-preta-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352728524-branca-v1.png": {
@@ -710,7 +710,7 @@
   "ss": 2,
   "arco_meio_rad": 0.944,
   "gerado_em": "2026-07-26T15:16:02.523Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728524\\352728524-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352728524/352728524-branca-v1.png",
   "fonte": "sidecar"
  },
  "352407182-preta-v1.png": {
@@ -732,7 +732,7 @@
   "ss": 2,
   "arco_meio_rad": 0.494,
   "gerado_em": "2026-07-26T15:21:10.230Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352407182\\352407182-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352407182/352407182-preta-v1.png",
   "fonte": "sidecar"
  },
  "352728277-preta-v1.png": {
@@ -754,7 +754,7 @@
   "ss": 2,
   "arco_meio_rad": 0.326,
   "gerado_em": "2026-07-26T15:22:24.294Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728277\\352728277-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352728277/352728277-preta-v1.png",
   "fonte": "sidecar"
  },
  "352618935-preta-v1.png": {
@@ -812,7 +812,7 @@
   "ss": 2,
   "arco_meio_rad": 0.716,
   "gerado_em": "2026-07-26T15:18:55.227Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352407182\\352407182-offwhite-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352407182/352407182-offwhite-v1.png",
   "fonte": "sidecar"
  },
  "352728019-preta-v1.png": {
@@ -834,7 +834,7 @@
   "ss": 2,
   "arco_meio_rad": 0.46,
   "gerado_em": "2026-07-26T15:29:47.284Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728019\\352728019-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352728019/352728019-preta-v1.png",
   "fonte": "sidecar"
  },
  "352619175-preta-v8.png": {
@@ -1032,7 +1032,7 @@
   "ss": 2,
   "arco_meio_rad": 0.716,
   "gerado_em": "2026-07-26T15:26:45.753Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352407182\\352407182-offwhite-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352407182/352407182-offwhite-v2.png",
   "fonte": "sidecar"
  },
  "352407182-preta-v2.png": {
@@ -1054,7 +1054,7 @@
   "ss": 2,
   "arco_meio_rad": 0.494,
   "gerado_em": "2026-07-26T15:27:07.092Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352407182\\352407182-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352407182/352407182-preta-v2.png",
   "fonte": "sidecar"
  },
  "352407196-branca-v9.png": {
@@ -1076,7 +1076,7 @@
   "ss": 2,
   "arco_meio_rad": 0.557,
   "gerado_em": "2026-07-26T15:27:13.169Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352407196\\352407196-branca-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352407196/352407196-branca-v9.png",
   "fonte": "sidecar"
  },
  "352407196-preta-v2.png": {
@@ -1098,7 +1098,7 @@
   "ss": 2,
   "arco_meio_rad": 0.752,
   "gerado_em": "2026-07-26T15:35:55.969Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352407196\\352407196-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352407196/352407196-preta-v2.png",
   "fonte": "sidecar"
  },
  "352618837-branca-par-v1.png": {
@@ -1120,7 +1120,7 @@
   "ss": 2,
   "arco_meio_rad": 0.829,
   "gerado_em": "2026-07-26T18:12:53.362Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618837\\352618837-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352618837/352618837-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352618837-branca-v1.png": {
@@ -1142,7 +1142,7 @@
   "ss": 2,
   "arco_meio_rad": 0.691,
   "gerado_em": "2026-07-26T16:47:02.915Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618837\\352618837-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352618837/352618837-branca-v1.png",
   "fonte": "sidecar"
  },
  "352618837-preta-par-v1.png": {
@@ -1164,7 +1164,7 @@
   "ss": 2,
   "arco_meio_rad": 0.829,
   "gerado_em": "2026-07-26T18:11:00.245Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618837\\352618837-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352618837/352618837-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352618837-preta-v1.png": {
@@ -1186,7 +1186,7 @@
   "ss": 2,
   "arco_meio_rad": 0.829,
   "gerado_em": "2026-07-26T16:55:46.118Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618837\\352618837-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352618837/352618837-preta-v1.png",
   "fonte": "sidecar"
  },
  "352618878-branca-par-v1-semcapuz.png": {
@@ -1208,7 +1208,7 @@
   "ss": 2,
   "arco_meio_rad": 0.743,
   "gerado_em": "2026-07-26T18:09:59.465Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618878\\352618878-branca-par-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-branca-par-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352618878-branca-v9.png": {
@@ -1230,7 +1230,7 @@
   "ss": 2,
   "arco_meio_rad": 0.511,
   "gerado_em": "2026-07-26T15:27:22.373Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618878\\352618878-branca-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-branca-v9.png",
   "fonte": "sidecar"
  },
  "352618878-preta-par-v1-semcapuz.png": {
@@ -1252,7 +1252,59 @@
   "ss": 2,
   "arco_meio_rad": 0.743,
   "gerado_em": "2026-07-26T18:09:00.985Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618878\\352618878-preta-par-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-preta-par-v1-semcapuz.png",
+  "fonte": "sidecar"
+ },
+ "352618878-preta-piloto-v1-semcapuz.png": {
+  "produto": "352618878",
+  "cor_arquivo": "352618878-preta-piloto-v1-semcapuz.png",
+  "foto": "nuvemshop/assets/producao-capas/352618878/352618878-preta-par-blank.png",
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_cm": "30.6x40",
+  "peca": "Moletom Canguru",
+  "gola": 0.289,
+  "barra": 0.855,
+  "centro": 0.5132,
+  "torso": 0.335,
+  "yaw": 0,
+  "placement": 4.31,
+  "opacidade": 0.93,
+  "sombra_min": 0.6,
+  "sombra_max": 1.35,
+  "relevo": 3,
+  "sombra_tecido": 0.9,
+  "oclusao": null,
+  "oclusao_aplicada": false,
+  "ss": 2,
+  "arco_meio_rad": 0.729,
+  "gerado_em": "2026-07-26T20:41:06.029Z",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-preta-piloto-v1-semcapuz.png",
+  "fonte": "sidecar"
+ },
+ "352618878-preta-piloto-v1.png": {
+  "produto": "352618878",
+  "cor_arquivo": "352618878-preta-piloto-v1.png",
+  "foto": "nuvemshop/assets/producao-capas/352618878/352618878-preta-par-blank.png",
+  "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+  "arte_cm": "30.6x40",
+  "peca": "Moletom Canguru",
+  "gola": 0.289,
+  "barra": 0.855,
+  "centro": 0.5132,
+  "torso": 0.335,
+  "yaw": 0,
+  "placement": 4.31,
+  "opacidade": 0.93,
+  "sombra_min": 0.6,
+  "sombra_max": 1.35,
+  "relevo": 3,
+  "sombra_tecido": 0.9,
+  "oclusao": "0.400,0.000 0.650,0.000 0.650,0.295 0.618,0.300 0.610,0.306 0.600,0.313 0.590,0.321 0.580,0.329 0.570,0.336 0.560,0.343 0.550,0.351 0.540,0.356 0.530,0.361 0.520,0.366 0.516,0.370 0.510,0.376 0.500,0.370 0.490,0.366 0.480,0.361 0.470,0.356 0.460,0.350 0.450,0.343 0.440,0.336 0.430,0.328 0.420,0.321 0.415,0.317 0.400,0.310",
+  "oclusao_aplicada": true,
+  "ss": 2,
+  "arco_meio_rad": 0.729,
+  "gerado_em": "2026-07-26T20:49:32.735Z",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-preta-piloto-v1.png",
   "fonte": "sidecar"
  },
  "352618878-preta-v2.png": {
@@ -1274,7 +1326,7 @@
   "ss": 2,
   "arco_meio_rad": 0.812,
   "gerado_em": "2026-07-26T15:44:34.474Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618878\\352618878-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352618878/352618878-preta-v2.png",
   "fonte": "sidecar"
  },
  "352618903-offwhite-v3.png": {
@@ -1296,7 +1348,7 @@
   "ss": 2,
   "arco_meio_rad": 0.628,
   "gerado_em": "2026-07-26T15:36:08.832Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618903\\352618903-offwhite-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352618903/352618903-offwhite-v3.png",
   "fonte": "sidecar"
  },
  "352618903-preta-v3.png": {
@@ -1318,7 +1370,7 @@
   "ss": 2,
   "arco_meio_rad": 0.649,
   "gerado_em": "2026-07-26T15:36:15.011Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618903\\352618903-preta-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352618903/352618903-preta-v3.png",
   "fonte": "sidecar"
  },
  "352618935-branca-par-v1.png": {
@@ -1340,7 +1392,7 @@
   "ss": 2,
   "arco_meio_rad": 0.868,
   "gerado_em": "2026-07-26T17:51:21.886Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618935\\352618935-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352618935/352618935-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352618935-branca-par-v2-REJEITADA.png": {
@@ -1362,7 +1414,7 @@
   "ss": 2,
   "arco_meio_rad": 0.868,
   "gerado_em": "2026-07-26T18:01:49.450Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618935\\352618935-branca-par-v2-REJEITADA.png",
+  "out": "nuvemshop/assets/producao-capas/352618935/352618935-branca-par-v2-REJEITADA.png",
   "fonte": "sidecar"
  },
  "352618935-branca-par-v3.png": {
@@ -1384,7 +1436,7 @@
   "ss": 2,
   "arco_meio_rad": 0.868,
   "gerado_em": "2026-07-26T18:23:59.894Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618935\\352618935-branca-par-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352618935/352618935-branca-par-v3.png",
   "fonte": "sidecar"
  },
  "352618935-branca-v2.png": {
@@ -1406,7 +1458,7 @@
   "ss": 2,
   "arco_meio_rad": 0.873,
   "gerado_em": "2026-07-26T15:36:21.401Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618935\\352618935-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352618935/352618935-branca-v2.png",
   "fonte": "sidecar"
  },
  "352618935-preta-par-v1.png": {
@@ -1428,7 +1480,7 @@
   "ss": 2,
   "arco_meio_rad": 0.868,
   "gerado_em": "2026-07-26T17:51:08.488Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618935\\352618935-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352618935/352618935-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352618935-preta-v2.png": {
@@ -1450,7 +1502,7 @@
   "ss": 2,
   "arco_meio_rad": 0.854,
   "gerado_em": "2026-07-26T15:36:27.803Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352618935\\352618935-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352618935/352618935-preta-v2.png",
   "fonte": "sidecar"
  },
  "352619175-branca-par-v1-semcapuz.png": {
@@ -1472,7 +1524,7 @@
   "ss": 2,
   "arco_meio_rad": 0.953,
   "gerado_em": "2026-07-26T18:10:23.252Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352619175\\352619175-branca-par-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352619175/352619175-branca-par-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352619175-branca-v2.png": {
@@ -1494,7 +1546,7 @@
   "ss": 2,
   "arco_meio_rad": 0.658,
   "gerado_em": "2026-07-26T15:44:54.589Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352619175\\352619175-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352619175/352619175-branca-v2.png",
   "fonte": "sidecar"
  },
  "352619175-preta-par-v1-semcapuz.png": {
@@ -1516,7 +1568,7 @@
   "ss": 2,
   "arco_meio_rad": 0.953,
   "gerado_em": "2026-07-26T18:09:49.346Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352619175\\352619175-preta-par-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352619175/352619175-preta-par-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352619175-preta-v9.png": {
@@ -1538,7 +1590,7 @@
   "ss": 2,
   "arco_meio_rad": 0.497,
   "gerado_em": "2026-07-26T15:27:49.955Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352619175\\352619175-preta-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352619175/352619175-preta-v9.png",
   "fonte": "sidecar"
  },
  "352702020-branca-par-v1.png": {
@@ -1560,7 +1612,7 @@
   "ss": 2,
   "arco_meio_rad": 0.918,
   "gerado_em": "2026-07-26T17:51:46.582Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702020\\352702020-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702020/352702020-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352702020-branca-v3.png": {
@@ -1582,7 +1634,7 @@
   "ss": 2,
   "arco_meio_rad": 0.933,
   "gerado_em": "2026-07-26T15:36:42.202Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702020\\352702020-branca-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352702020/352702020-branca-v3.png",
   "fonte": "sidecar"
  },
  "352702020-preta-par-v1.png": {
@@ -1604,7 +1656,7 @@
   "ss": 2,
   "arco_meio_rad": 0.918,
   "gerado_em": "2026-07-26T17:51:33.525Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702020\\352702020-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702020/352702020-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352702020-preta-v2.png": {
@@ -1626,7 +1678,7 @@
   "ss": 2,
   "arco_meio_rad": 0.861,
   "gerado_em": "2026-07-26T15:36:47.643Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702020\\352702020-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352702020/352702020-preta-v2.png",
   "fonte": "sidecar"
  },
  "352702753-offwhite-par-v1.png": {
@@ -1648,7 +1700,7 @@
   "ss": 2,
   "arco_meio_rad": 0.597,
   "gerado_em": "2026-07-26T17:50:41.604Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702753\\352702753-offwhite-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702753/352702753-offwhite-par-v1.png",
   "fonte": "sidecar"
  },
  "352702753-offwhite-v1.png": {
@@ -1670,7 +1722,7 @@
   "ss": 2,
   "arco_meio_rad": 0.697,
   "gerado_em": "2026-07-26T16:52:28.464Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702753\\352702753-offwhite-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702753/352702753-offwhite-v1.png",
   "fonte": "sidecar"
  },
  "352702753-preta-par-v1.png": {
@@ -1692,7 +1744,7 @@
   "ss": 2,
   "arco_meio_rad": 0.597,
   "gerado_em": "2026-07-26T17:50:08.045Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702753\\352702753-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702753/352702753-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352702753-preta-v1.png": {
@@ -1714,7 +1766,7 @@
   "ss": 2,
   "arco_meio_rad": 0.697,
   "gerado_em": "2026-07-26T17:05:25.503Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702753\\352702753-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702753/352702753-preta-v1.png",
   "fonte": "sidecar"
  },
  "352702796-branca-v1.png": {
@@ -1736,7 +1788,7 @@
   "ss": 2,
   "arco_meio_rad": 0.757,
   "gerado_em": "2026-07-26T16:56:59.047Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702796\\352702796-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702796/352702796-branca-v1.png",
   "fonte": "sidecar"
  },
  "352702796-preta-v1.png": {
@@ -1758,7 +1810,7 @@
   "ss": 2,
   "arco_meio_rad": 0.646,
   "gerado_em": "2026-07-26T16:55:15.911Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702796\\352702796-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702796/352702796-preta-v1.png",
   "fonte": "sidecar"
  },
  "352702858-offwhite-par-v1.png": {
@@ -1780,7 +1832,7 @@
   "ss": 2,
   "arco_meio_rad": 0.755,
   "gerado_em": "2026-07-26T17:50:18.697Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702858\\352702858-offwhite-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702858/352702858-offwhite-par-v1.png",
   "fonte": "sidecar"
  },
  "352702858-offwhite-v2.png": {
@@ -1802,7 +1854,7 @@
   "ss": 2,
   "arco_meio_rad": 0.687,
   "gerado_em": "2026-07-26T15:36:52.898Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702858\\352702858-offwhite-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352702858/352702858-offwhite-v2.png",
   "fonte": "sidecar"
  },
  "352702858-preta-par-v1.png": {
@@ -1824,7 +1876,7 @@
   "ss": 2,
   "arco_meio_rad": 0.755,
   "gerado_em": "2026-07-26T17:50:07.866Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702858\\352702858-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352702858/352702858-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352702858-preta-v2.png": {
@@ -1846,7 +1898,7 @@
   "ss": 2,
   "arco_meio_rad": 0.451,
   "gerado_em": "2026-07-26T15:36:57.822Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352702858\\352702858-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352702858/352702858-preta-v2.png",
   "fonte": "sidecar"
  },
  "352703153-branca-par-v2.png": {
@@ -1868,7 +1920,7 @@
   "ss": 2,
   "arco_meio_rad": 0.947,
   "gerado_em": "2026-07-26T18:13:06.678Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703153\\352703153-branca-par-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352703153/352703153-branca-par-v2.png",
   "fonte": "sidecar"
  },
  "352703153-branca-v2.png": {
@@ -1890,7 +1942,7 @@
   "ss": 2,
   "arco_meio_rad": 0.593,
   "gerado_em": "2026-07-26T15:37:02.797Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703153\\352703153-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352703153/352703153-branca-v2.png",
   "fonte": "sidecar"
  },
  "352703153-preta-par-v1.png": {
@@ -1912,7 +1964,7 @@
   "ss": 2,
   "arco_meio_rad": 0.947,
   "gerado_em": "2026-07-26T18:10:48.243Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703153\\352703153-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352703153/352703153-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352703153-preta-v3.png": {
@@ -1934,7 +1986,7 @@
   "ss": 2,
   "arco_meio_rad": 0.897,
   "gerado_em": "2026-07-26T15:37:07.759Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703153\\352703153-preta-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352703153/352703153-preta-v3.png",
   "fonte": "sidecar"
  },
  "REJEITADA-colar-preto-352703153-branca-par-v1.png": {
@@ -1956,7 +2008,7 @@
   "ss": 2,
   "arco_meio_rad": 0.947,
   "gerado_em": "2026-07-26T18:11:27.369Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703153\\REJEITADA-colar-preto-352703153-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352703153/REJEITADA-colar-preto-352703153-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352703276-preta-v2.png": {
@@ -1978,7 +2030,7 @@
   "ss": 2,
   "arco_meio_rad": 0.806,
   "gerado_em": "2026-07-26T15:37:12.923Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703276\\352703276-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352703276/352703276-preta-v2.png",
   "fonte": "sidecar"
  },
  "352703343-preta-v2.png": {
@@ -2000,7 +2052,7 @@
   "ss": 2,
   "arco_meio_rad": 0.891,
   "gerado_em": "2026-07-26T15:37:18.812Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352703343\\352703343-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352703343/352703343-preta-v2.png",
   "fonte": "sidecar"
  },
  "352717723-offwhite-v2.png": {
@@ -2022,7 +2074,7 @@
   "ss": 2,
   "arco_meio_rad": 0.441,
   "gerado_em": "2026-07-26T15:37:24.478Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352717723\\352717723-offwhite-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352717723/352717723-offwhite-v2.png",
   "fonte": "sidecar"
  },
  "352717723-preta-v2.png": {
@@ -2044,7 +2096,7 @@
   "ss": 2,
   "arco_meio_rad": 0.698,
   "gerado_em": "2026-07-26T15:37:30.409Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352717723\\352717723-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352717723/352717723-preta-v2.png",
   "fonte": "sidecar"
  },
  "352717837-branca-v3.png": {
@@ -2066,7 +2118,7 @@
   "ss": 2,
   "arco_meio_rad": 0.773,
   "gerado_em": "2026-07-26T15:37:36.263Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352717837\\352717837-branca-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352717837/352717837-branca-v3.png",
   "fonte": "sidecar"
  },
  "352717837-preta-v9.png": {
@@ -2088,7 +2140,7 @@
   "ss": 2,
   "arco_meio_rad": 0.473,
   "gerado_em": "2026-07-26T15:28:22.231Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352717837\\352717837-preta-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352717837/352717837-preta-v9.png",
   "fonte": "sidecar"
  },
  "352717960-branca-v1.png": {
@@ -2110,7 +2162,7 @@
   "ss": 2,
   "arco_meio_rad": 0.948,
   "gerado_em": "2026-07-26T16:54:32.023Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352717960\\352717960-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352717960/352717960-branca-v1.png",
   "fonte": "sidecar"
  },
  "352718083-branca-capuz-v1.png": {
@@ -2132,7 +2184,7 @@
   "ss": 2,
   "arco_meio_rad": 0.925,
   "gerado_em": "2026-07-26T17:13:13.616Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718083\\352718083-branca-capuz-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352718083/352718083-branca-capuz-v1.png",
   "fonte": "sidecar"
  },
  "352718083-branca-capuz-v2.png": {
@@ -2154,7 +2206,7 @@
   "ss": 2,
   "arco_meio_rad": 0.901,
   "gerado_em": "2026-07-26T17:19:33.485Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718083\\352718083-branca-capuz-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352718083/352718083-branca-capuz-v2.png",
   "fonte": "sidecar"
  },
  "352718083-branca-v2.png": {
@@ -2176,7 +2228,7 @@
   "ss": 2,
   "arco_meio_rad": 0.664,
   "gerado_em": "2026-07-26T15:45:36.596Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718083\\352718083-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352718083/352718083-branca-v2.png",
   "fonte": "sidecar"
  },
  "352718275-branca-v4.png": {
@@ -2198,7 +2250,7 @@
   "ss": 2,
   "arco_meio_rad": 1.024,
   "gerado_em": "2026-07-26T15:56:13.951Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718275\\352718275-branca-v4.png",
+  "out": "nuvemshop/assets/producao-capas/352718275/352718275-branca-v4.png",
   "fonte": "sidecar"
  },
  "352718787-branca-capuz-v1.png": {
@@ -2220,7 +2272,7 @@
   "ss": 2,
   "arco_meio_rad": 0.721,
   "gerado_em": "2026-07-26T17:13:00.494Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718787\\352718787-branca-capuz-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352718787/352718787-branca-capuz-v1.png",
   "fonte": "sidecar"
  },
  "352718787-branca-par-v1.png": {
@@ -2242,7 +2294,7 @@
   "ss": 2,
   "arco_meio_rad": 0.58,
   "gerado_em": "2026-07-26T18:16:19.025Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718787\\352718787-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352718787/352718787-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352718787-preta-capuz-v1.png": {
@@ -2264,7 +2316,7 @@
   "ss": 2,
   "arco_meio_rad": 0.566,
   "gerado_em": "2026-07-26T17:11:53.308Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718787\\352718787-preta-capuz-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352718787/352718787-preta-capuz-v1.png",
   "fonte": "sidecar"
  },
  "352718787-preta-par-v1.png": {
@@ -2286,7 +2338,7 @@
   "ss": 2,
   "arco_meio_rad": 0.58,
   "gerado_em": "2026-07-26T18:15:24.077Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718787\\352718787-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352718787/352718787-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352718943-offwhite-v2.png": {
@@ -2308,7 +2360,7 @@
   "ss": 2,
   "arco_meio_rad": 0.729,
   "gerado_em": "2026-07-26T15:38:01.684Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718943\\352718943-offwhite-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352718943/352718943-offwhite-v2.png",
   "fonte": "sidecar"
  },
  "352718943-preta-v2.png": {
@@ -2330,7 +2382,33 @@
   "ss": 2,
   "arco_meio_rad": 0.5,
   "gerado_em": "2026-07-26T15:38:08.166Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718943\\352718943-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352718943/352718943-preta-v2.png",
+  "fonte": "sidecar"
+ },
+ "352718999-branca-piloto-v1.png": {
+  "produto": "352718999",
+  "cor_arquivo": "352718999-branca-piloto-v1.png",
+  "foto": "nuvemshop/assets/producao-capas/352718999/352718999-branca-blank.png",
+  "arte": "designs/prontos/RELIQUIA/costas/S6-sao-jorge-barroco-v1.png",
+  "arte_cm": "31x40",
+  "peca": "Camiseta Premium",
+  "gola": 0.402,
+  "barra": 0.9727,
+  "centro": 0.493,
+  "torso": 0.292,
+  "yaw": 0,
+  "placement": 15.29,
+  "opacidade": 0.93,
+  "sombra_min": 0.6,
+  "sombra_max": 1.35,
+  "relevo": 3,
+  "sombra_tecido": 0.9,
+  "oclusao": null,
+  "oclusao_aplicada": false,
+  "ss": 2,
+  "arco_meio_rad": 0.735,
+  "gerado_em": "2026-07-26T20:48:40.220Z",
+  "out": "nuvemshop/assets/producao-capas/352718999/352718999-branca-piloto-v1.png",
   "fonte": "sidecar"
  },
  "352718999-branca-v9.png": {
@@ -2352,7 +2430,7 @@
   "ss": 2,
   "arco_meio_rad": 0.461,
   "gerado_em": "2026-07-26T15:28:48.709Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718999\\352718999-branca-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352718999/352718999-branca-v9.png",
   "fonte": "sidecar"
  },
  "352718999-preta-v2.png": {
@@ -2374,7 +2452,7 @@
   "ss": 2,
   "arco_meio_rad": 0.766,
   "gerado_em": "2026-07-26T15:38:18.343Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352718999\\352718999-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352718999/352718999-preta-v2.png",
   "fonte": "sidecar"
  },
  "352719728-branca-v1.png": {
@@ -2396,7 +2474,7 @@
   "ss": 2,
   "arco_meio_rad": 0.699,
   "gerado_em": "2026-07-26T16:58:39.593Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352719728\\352719728-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352719728/352719728-branca-v1.png",
   "fonte": "sidecar"
  },
  "352719816-branca-v3-semcapuz.png": {
@@ -2418,7 +2496,7 @@
   "ss": 2,
   "arco_meio_rad": 0.503,
   "gerado_em": "2026-07-26T15:50:37.800Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352719816\\352719816-branca-v3-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352719816/352719816-branca-v3-semcapuz.png",
   "fonte": "sidecar"
  },
  "352720127-branca-v2.png": {
@@ -2440,7 +2518,7 @@
   "ss": 2,
   "arco_meio_rad": 0.781,
   "gerado_em": "2026-07-26T15:38:27.756Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352720127\\352720127-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352720127/352720127-branca-v2.png",
   "fonte": "sidecar"
  },
  "352720257-offwhite-v2.png": {
@@ -2462,7 +2540,7 @@
   "ss": 2,
   "arco_meio_rad": 0.833,
   "gerado_em": "2026-07-26T16:53:30.155Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352720257\\352720257-offwhite-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352720257/352720257-offwhite-v2.png",
   "fonte": "sidecar"
  },
  "352720257-preta-v1.png": {
@@ -2484,7 +2562,7 @@
   "ss": 2,
   "arco_meio_rad": 0.824,
   "gerado_em": "2026-07-26T16:50:35.437Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352720257\\352720257-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352720257/352720257-preta-v1.png",
   "fonte": "sidecar"
  },
  "352720257-preta-v2.png": {
@@ -2506,7 +2584,7 @@
   "ss": 2,
   "arco_meio_rad": 0.824,
   "gerado_em": "2026-07-26T16:51:58.138Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352720257\\352720257-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352720257/352720257-preta-v2.png",
   "fonte": "sidecar"
  },
  "352721118-offwhite-par-v1.png": {
@@ -2528,7 +2606,7 @@
   "ss": 2,
   "arco_meio_rad": 0.701,
   "gerado_em": "2026-07-26T17:49:05.128Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721118\\352721118-offwhite-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721118/352721118-offwhite-par-v1.png",
   "fonte": "sidecar"
  },
  "352721118-offwhite-v1.png": {
@@ -2550,7 +2628,7 @@
   "ss": 2,
   "arco_meio_rad": 0.752,
   "gerado_em": "2026-07-26T16:14:36.193Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721118\\352721118-offwhite-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721118/352721118-offwhite-v1.png",
   "fonte": "sidecar"
  },
  "352721118-preta-par-v1.png": {
@@ -2572,7 +2650,7 @@
   "ss": 2,
   "arco_meio_rad": 0.701,
   "gerado_em": "2026-07-26T17:48:05.403Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721118\\352721118-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721118/352721118-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352721118-preta-v1.png": {
@@ -2594,7 +2672,7 @@
   "ss": 2,
   "arco_meio_rad": 0.419,
   "gerado_em": "2026-07-26T16:11:27.122Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721118\\352721118-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721118/352721118-preta-v1.png",
   "fonte": "sidecar"
  },
  "352721197-branca-par-v1.png": {
@@ -2616,7 +2694,7 @@
   "ss": 2,
   "arco_meio_rad": 0.795,
   "gerado_em": "2026-07-26T17:50:15.021Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721197\\352721197-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721197/352721197-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352721197-branca-v1.png": {
@@ -2638,7 +2716,7 @@
   "ss": 2,
   "arco_meio_rad": 0.86,
   "gerado_em": "2026-07-26T16:03:22.822Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721197\\352721197-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721197/352721197-branca-v1.png",
   "fonte": "sidecar"
  },
  "352721197-preta-par-v1.png": {
@@ -2660,7 +2738,7 @@
   "ss": 2,
   "arco_meio_rad": 0.795,
   "gerado_em": "2026-07-26T17:50:04.085Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721197\\352721197-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721197/352721197-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352721197-preta-v1.png": {
@@ -2682,7 +2760,7 @@
   "ss": 2,
   "arco_meio_rad": 0.823,
   "gerado_em": "2026-07-26T16:11:02.104Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721197\\352721197-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721197/352721197-preta-v1.png",
   "fonte": "sidecar"
  },
  "352721477-branca-par-v1.png": {
@@ -2704,7 +2782,7 @@
   "ss": 2,
   "arco_meio_rad": 0.863,
   "gerado_em": "2026-07-26T18:06:05.529Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721477\\352721477-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721477/352721477-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352721477-branca-par-v2.png": {
@@ -2726,7 +2804,7 @@
   "ss": 2,
   "arco_meio_rad": 0.863,
   "gerado_em": "2026-07-26T18:08:41.282Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721477\\352721477-branca-par-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352721477/352721477-branca-par-v2.png",
   "fonte": "sidecar"
  },
  "352721477-branca-v9.png": {
@@ -2748,7 +2826,7 @@
   "ss": 2,
   "arco_meio_rad": 0.481,
   "gerado_em": "2026-07-26T15:29:04.272Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721477\\352721477-branca-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352721477/352721477-branca-v9.png",
   "fonte": "sidecar"
  },
  "352721477-preta-par-v1.png": {
@@ -2770,7 +2848,7 @@
   "ss": 2,
   "arco_meio_rad": 0.863,
   "gerado_em": "2026-07-26T18:05:55.526Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721477\\352721477-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721477/352721477-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352721477-preta-v1.png": {
@@ -2792,7 +2870,7 @@
   "ss": 2,
   "arco_meio_rad": 0.863,
   "gerado_em": "2026-07-26T16:04:12.972Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721477\\352721477-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721477/352721477-preta-v1.png",
   "fonte": "sidecar"
  },
  "352721633-offwhite-par-v1.png": {
@@ -2814,7 +2892,7 @@
   "ss": 2,
   "arco_meio_rad": 0.738,
   "gerado_em": "2026-07-26T17:53:35.881Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721633\\352721633-offwhite-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721633/352721633-offwhite-par-v1.png",
   "fonte": "sidecar"
  },
  "352721633-offwhite-v9.png": {
@@ -2836,7 +2914,7 @@
   "ss": 2,
   "arco_meio_rad": 0.459,
   "gerado_em": "2026-07-26T15:29:10.015Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721633\\352721633-offwhite-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352721633/352721633-offwhite-v9.png",
   "fonte": "sidecar"
  },
  "352721633-preta-par-v1.png": {
@@ -2858,7 +2936,7 @@
   "ss": 2,
   "arco_meio_rad": 0.738,
   "gerado_em": "2026-07-26T17:52:45.456Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721633\\352721633-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721633/352721633-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352721633-preta-v1.png": {
@@ -2880,7 +2958,7 @@
   "ss": 2,
   "arco_meio_rad": 0.737,
   "gerado_em": "2026-07-26T16:02:12.923Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352721633\\352721633-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352721633/352721633-preta-v1.png",
   "fonte": "sidecar"
  },
  "352722232-branca-v1.png": {
@@ -2902,7 +2980,7 @@
   "ss": 2,
   "arco_meio_rad": 0.674,
   "gerado_em": "2026-07-26T16:23:29.866Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352722232\\352722232-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352722232/352722232-branca-v1.png",
   "fonte": "sidecar"
  },
  "352722510-branca-v1.png": {
@@ -2924,7 +3002,7 @@
   "ss": 2,
   "arco_meio_rad": 0.9,
   "gerado_em": "2026-07-26T16:55:27.178Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352722510\\352722510-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352722510/352722510-branca-v1.png",
   "fonte": "sidecar"
  },
  "352722685-branca-v2-semcapuz.png": {
@@ -2946,7 +3024,7 @@
   "ss": 2,
   "arco_meio_rad": 0.93,
   "gerado_em": "2026-07-26T16:12:31.775Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352722685\\352722685-branca-v2-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352722685/352722685-branca-v2-semcapuz.png",
   "fonte": "sidecar"
  },
  "352723243-branca-v2.png": {
@@ -2968,7 +3046,7 @@
   "ss": 2,
   "arco_meio_rad": 0.824,
   "gerado_em": "2026-07-26T15:42:45.978Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352723243\\352723243-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352723243/352723243-branca-v2.png",
   "fonte": "sidecar"
  },
  "352725749-offwhite-par-v1.png": {
@@ -2990,7 +3068,7 @@
   "ss": 2,
   "arco_meio_rad": 0.602,
   "gerado_em": "2026-07-26T18:05:46.706Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352725749\\352725749-offwhite-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352725749/352725749-offwhite-par-v1.png",
   "fonte": "sidecar"
  },
  "352725749-offwhite-v1.png": {
@@ -3012,7 +3090,7 @@
   "ss": 2,
   "arco_meio_rad": 0.555,
   "gerado_em": "2026-07-26T16:05:07.966Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352725749\\352725749-offwhite-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352725749/352725749-offwhite-v1.png",
   "fonte": "sidecar"
  },
  "352725749-preta-par-v1.png": {
@@ -3034,7 +3112,7 @@
   "ss": 2,
   "arco_meio_rad": 0.602,
   "gerado_em": "2026-07-26T18:05:05.139Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352725749\\352725749-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352725749/352725749-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352725749-preta-v9.png": {
@@ -3056,7 +3134,7 @@
   "ss": 2,
   "arco_meio_rad": 0.326,
   "gerado_em": "2026-07-26T15:29:18.358Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352725749\\352725749-preta-v9.png",
+  "out": "nuvemshop/assets/producao-capas/352725749/352725749-preta-v9.png",
   "fonte": "sidecar"
  },
  "352725852-branca-v1.png": {
@@ -3078,7 +3156,7 @@
   "ss": 2,
   "arco_meio_rad": 0.64,
   "gerado_em": "2026-07-26T16:02:39.923Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352725852\\352725852-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352725852/352725852-branca-v1.png",
   "fonte": "sidecar"
  },
  "352725852-preta-v1.png": {
@@ -3100,7 +3178,7 @@
   "ss": 2,
   "arco_meio_rad": 0.366,
   "gerado_em": "2026-07-26T16:08:09.273Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352725852\\352725852-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352725852/352725852-preta-v1.png",
   "fonte": "sidecar"
  },
  "352726673-branca-par-v1-semcapuz.png": {
@@ -3122,7 +3200,7 @@
   "ss": 2,
   "arco_meio_rad": 0.772,
   "gerado_em": "2026-07-26T17:51:52.557Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352726673\\352726673-branca-par-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352726673/352726673-branca-par-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352726673-branca-v1.png": {
@@ -3144,7 +3222,7 @@
   "ss": 2,
   "arco_meio_rad": 0.624,
   "gerado_em": "2026-07-26T16:50:12.820Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352726673\\352726673-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352726673/352726673-branca-v1.png",
   "fonte": "sidecar"
  },
  "352726673-preta-par-v1-semcapuz.png": {
@@ -3166,7 +3244,7 @@
   "ss": 2,
   "arco_meio_rad": 0.772,
   "gerado_em": "2026-07-26T17:49:13.745Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352726673\\352726673-preta-par-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352726673/352726673-preta-par-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352726673-preta-v1.png": {
@@ -3188,7 +3266,7 @@
   "ss": 2,
   "arco_meio_rad": 0.799,
   "gerado_em": "2026-07-26T16:56:20.744Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352726673\\352726673-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352726673/352726673-preta-v1.png",
   "fonte": "sidecar"
  },
  "352726673-preta-v2.png": {
@@ -3210,7 +3288,7 @@
   "ss": 2,
   "arco_meio_rad": 0.799,
   "gerado_em": "2026-07-26T17:06:03.450Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352726673\\352726673-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352726673/352726673-preta-v2.png",
   "fonte": "sidecar"
  },
  "352727545-offwhite-par-v1.png": {
@@ -3232,7 +3310,7 @@
   "ss": 2,
   "arco_meio_rad": 0.664,
   "gerado_em": "2026-07-26T17:51:21.823Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727545\\352727545-offwhite-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352727545/352727545-offwhite-par-v1.png",
   "fonte": "sidecar"
  },
  "352727545-offwhite-v1.png": {
@@ -3254,7 +3332,7 @@
   "ss": 2,
   "arco_meio_rad": 0.685,
   "gerado_em": "2026-07-26T16:50:05.998Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727545\\352727545-offwhite-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352727545/352727545-offwhite-v1.png",
   "fonte": "sidecar"
  },
  "352727545-preta-par-v1.png": {
@@ -3276,7 +3354,7 @@
   "ss": 2,
   "arco_meio_rad": 0.664,
   "gerado_em": "2026-07-26T17:50:50.441Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727545\\352727545-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352727545/352727545-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352727545-preta-v1.png": {
@@ -3298,7 +3376,7 @@
   "ss": 2,
   "arco_meio_rad": 0.663,
   "gerado_em": "2026-07-26T16:15:20.661Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727545\\352727545-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352727545/352727545-preta-v1.png",
   "fonte": "sidecar"
  },
  "352727892-preta-capuz-v1.png": {
@@ -3320,7 +3398,7 @@
   "ss": 2,
   "arco_meio_rad": 0.645,
   "gerado_em": "2026-07-26T17:11:59.579Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727892\\352727892-preta-capuz-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352727892/352727892-preta-capuz-v1.png",
   "fonte": "sidecar"
  },
  "352727892-preta-grafite-v1.png": {
@@ -3342,7 +3420,7 @@
   "ss": 2,
   "arco_meio_rad": 0.645,
   "gerado_em": "2026-07-26T19:09:32.697Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727892\\352727892-preta-grafite-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352727892/352727892-preta-grafite-v1.png",
   "fonte": "sidecar"
  },
  "352727892-preta-v1-semcapuz.png": {
@@ -3364,7 +3442,7 @@
   "ss": 2,
   "arco_meio_rad": 0.444,
   "gerado_em": "2026-07-26T16:14:55.173Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727892\\352727892-preta-v1-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352727892/352727892-preta-v1-semcapuz.png",
   "fonte": "sidecar"
  },
  "352727892-preta-v2-semcapuz.png": {
@@ -3386,7 +3464,7 @@
   "ss": 2,
   "arco_meio_rad": 0.621,
   "gerado_em": "2026-07-26T16:20:16.869Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727892\\352727892-preta-v2-semcapuz.png",
+  "out": "nuvemshop/assets/producao-capas/352727892/352727892-preta-v2-semcapuz.png",
   "fonte": "sidecar"
  },
  "352727892-preta-v3.png": {
@@ -3408,7 +3486,7 @@
   "ss": 2,
   "arco_meio_rad": 0.621,
   "gerado_em": "2026-07-26T16:25:33.236Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352727892\\352727892-preta-v3.png",
+  "out": "nuvemshop/assets/producao-capas/352727892/352727892-preta-v3.png",
   "fonte": "sidecar"
  },
  "352728019-preta-v2.png": {
@@ -3430,7 +3508,7 @@
   "ss": 2,
   "arco_meio_rad": 0.46,
   "gerado_em": "2026-07-26T15:31:56.030Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728019\\352728019-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352728019/352728019-preta-v2.png",
   "fonte": "sidecar"
  },
  "352728277-preta-v2.png": {
@@ -3452,7 +3530,7 @@
   "ss": 2,
   "arco_meio_rad": 0.326,
   "gerado_em": "2026-07-26T15:29:23.325Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728277\\352728277-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352728277/352728277-preta-v2.png",
   "fonte": "sidecar"
  },
  "352728357-preta-par-v1.png": {
@@ -3474,7 +3552,7 @@
   "ss": 2,
   "arco_meio_rad": 0.647,
   "gerado_em": "2026-07-26T18:31:36.305Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728357\\352728357-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352728357/352728357-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352728357-preta-v2.png": {
@@ -3496,7 +3574,7 @@
   "ss": 2,
   "arco_meio_rad": 0.625,
   "gerado_em": "2026-07-26T15:38:51.005Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728357\\352728357-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352728357/352728357-preta-v2.png",
   "fonte": "sidecar"
  },
  "352728451-offwhite-v2.png": {
@@ -3518,7 +3596,7 @@
   "ss": 2,
   "arco_meio_rad": 0.779,
   "gerado_em": "2026-07-26T15:38:56.352Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728451\\352728451-offwhite-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352728451/352728451-offwhite-v2.png",
   "fonte": "sidecar"
  },
  "352728524-branca-v2.png": {
@@ -3540,7 +3618,7 @@
   "ss": 2,
   "arco_meio_rad": 0.944,
   "gerado_em": "2026-07-26T15:29:34.447Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352728524\\352728524-branca-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352728524/352728524-branca-v2.png",
   "fonte": "sidecar"
  },
  "352889132-preta-par-v1.png": {
@@ -3562,7 +3640,33 @@
   "ss": 2,
   "arco_meio_rad": 0.495,
   "gerado_em": "2026-07-26T18:40:10.302Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352889132\\352889132-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352889132/352889132-preta-par-v1.png",
+  "fonte": "sidecar"
+ },
+ "352889132-preta-piloto-v1.png": {
+  "produto": "352889132",
+  "cor_arquivo": "352889132-preta-piloto-v1.png",
+  "foto": "nuvemshop/assets/producao-capas/352889132/352889132-preta-par-blank.png",
+  "arte": "designs/prontos/STREET/costas/G10-aparecida-stencil-v3.png",
+  "arte_cm": "23.8x40",
+  "peca": "Camiseta Premium",
+  "gola": 0.37,
+  "barra": 0.935,
+  "centro": 0.391,
+  "torso": 0.265,
+  "yaw": 0,
+  "placement": 8.29,
+  "opacidade": 0.93,
+  "sombra_min": 0.6,
+  "sombra_max": 1.35,
+  "relevo": 3,
+  "sombra_tecido": 1.2,
+  "oclusao": null,
+  "oclusao_aplicada": false,
+  "ss": 2,
+  "arco_meio_rad": 0.621,
+  "gerado_em": "2026-07-26T20:59:07.466Z",
+  "out": "nuvemshop/assets/producao-capas/352889132/352889132-preta-piloto-v1.png",
   "fonte": "sidecar"
  },
  "352889132-preta-v2.png": {
@@ -3584,7 +3688,7 @@
   "ss": 2,
   "arco_meio_rad": 0.546,
   "gerado_em": "2026-07-26T15:32:07.446Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352889132\\352889132-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352889132/352889132-preta-v2.png",
   "fonte": "sidecar"
  },
  "352890896-off-white-v2.png": {
@@ -3606,7 +3710,7 @@
   "ss": 2,
   "arco_meio_rad": 0.575,
   "gerado_em": "2026-07-26T15:43:11.509Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352890896\\352890896-off-white-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352890896/352890896-off-white-v2.png",
   "fonte": "sidecar"
  },
  "352890896-preta-v2.png": {
@@ -3628,7 +3732,7 @@
   "ss": 2,
   "arco_meio_rad": 0.434,
   "gerado_em": "2026-07-26T15:39:10.490Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352890896\\352890896-preta-v2.png",
+  "out": "nuvemshop/assets/producao-capas/352890896/352890896-preta-v2.png",
   "fonte": "sidecar"
  },
  "352898175-branca-par-v1.png": {
@@ -3650,7 +3754,7 @@
   "ss": 2,
   "arco_meio_rad": 0.725,
   "gerado_em": "2026-07-26T17:53:19.565Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352898175\\352898175-branca-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352898175/352898175-branca-par-v1.png",
   "fonte": "sidecar"
  },
  "352898175-branca-v1.png": {
@@ -3672,7 +3776,7 @@
   "ss": 2,
   "arco_meio_rad": 0.853,
   "gerado_em": "2026-07-26T16:51:02.414Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352898175\\352898175-branca-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352898175/352898175-branca-v1.png",
   "fonte": "sidecar"
  },
  "352898175-preta-par-v1.png": {
@@ -3694,7 +3798,7 @@
   "ss": 2,
   "arco_meio_rad": 0.725,
   "gerado_em": "2026-07-26T17:52:49.089Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352898175\\352898175-preta-par-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352898175/352898175-preta-par-v1.png",
   "fonte": "sidecar"
  },
  "352898175-preta-v1.png": {
@@ -3716,7 +3820,7 @@
   "ss": 2,
   "arco_meio_rad": 0.805,
   "gerado_em": "2026-07-26T16:49:12.846Z",
-  "out": "nuvemshop\\assets\\producao-capas\\352898175\\352898175-preta-v1.png",
+  "out": "nuvemshop/assets/producao-capas/352898175/352898175-preta-v1.png",
   "fonte": "sidecar"
  }
 }

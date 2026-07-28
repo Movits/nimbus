@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-07-28
 ---
 
 # O que os instrumentos NÃO enxergam
@@ -93,6 +93,22 @@ Responde a dois erros de gravidade muito diferente: gola errada entra no
 placement **1:1** (~1 cm por ponto percentual), vão de tinta errado entra
 **proporcionalmente** (5% sobre 9 cm = 0,45 cm). Um resíduo de 3,5% pode ser 2,6
 cm de erro ou 0,3 cm. O teste sozinho não distingue.
+
+## Extensão de arquivo mente sobre o formato
+
+Vários blanks de `producao-capas/` são **JPEG salvos com extensão `.png`**
+(ex.: `352722510-branca-blank.png`). Instrumento que decide o parser pela
+extensão lê cabeçalho errado e falha em silêncio — a varredura de 28/07 perdeu
+57 das 77 medições assim antes de ler pela assinatura do arquivo. Leia sempre
+pelos **primeiros bytes**, nunca pelo nome.
+
+## Datas de receita colhida
+
+`gerado_em` nos sidecars **não** é a data da composição: a colheita de 26/07
+carimbou os 134 sidecars com a mesma data. O que distingue receita do
+compositor novo são os campos que só ele escreve: `relevo` e `sombra_tecido`.
+Caminhos colhidos no Windows vêm com barra invertida (`foto:
+"nuvemshop\\assets\\..."`) e precisam de normalização.
 
 ## O gate, no todo
 
