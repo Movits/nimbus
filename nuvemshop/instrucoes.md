@@ -18,7 +18,7 @@ plataforma remover, o fallback assume e nada quebra. O CSS de produção usa iss
 
 | O quê | Onde |
 |---|---|
-| **CSS local consolidado mais recente** | `css-nimbus-publicacao-compacta-2026-07-20.css` |
+| **CSS local consolidado mais recente** | `css-nimbus-publicacao-compacta-2026-07-28.css` |
 | Fonte legível de header/footer responsivo | `css-nimbus-responsive-header-footer-2026-07-20.css` |
 | Gerador da saída consolidada | `../scripts/build_nimbus_publication_css.mjs` |
 | Página Projetos Sociais | `pagina-projetos-sociais.html` |
@@ -162,7 +162,7 @@ uma pergunta à YouDraw. Detalhe em `scripts/geometry/README.md`.
 
 Loja online → Layout → Personalizar → **Edição de CSS avançada** → confirmar que
 o editor está atualizado → substituir pelo conteúdo completo de
-`css-nimbus-publicacao-compacta-2026-07-20.css` → Testar CSS → salvar.
+`css-nimbus-publicacao-compacta-2026-07-28.css` → Testar CSS → salvar.
 
 Depois, conferir na loja pública: home no desktop, os três modais da página Projetos Sociais, e mobile em
 390 e 320 px. Checar centro do logo, ausência de rolagem horizontal, hero sem corte, coleções com largura
@@ -178,6 +178,15 @@ mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a 
 
 ## Histórico
 
+- **Hover restaurado ao padrão do tema (28/07/2026)**:
+  `css-nimbus-publicacao-compacta-2026-07-28.css` é o consolidado de 20/07
+  **menos 7 regras** do mecanismo de hover por par de cores (transform:none nos
+  cards, pares opacity secondary/featured por produto e a regra que escondia
+  secundárias `file_name-*`). Depois que o pivô de 28/07 deixou a loja só com
+  mockups YouDraw, essas regras faziam o card ficar em branco no hover (a
+  secundária era escondida enquanto o tema apagava a principal). Agora o hover
+  volta ao comportamento nativo do Baires: mostrar a segunda imagem do produto.
+  O de 20/07 vira histórico; não colar mais.
 - **Auditoria de escala (22–23/07/2026) — INVALIDADA**: 49 produtos comparados
   com o mockup plano. Resultado registrado: 25 APROVAR, 13 REVISAR, 11 REFAZER.
   **Os vereditos não valem**: o método comparava a razão estampa/peça entre
