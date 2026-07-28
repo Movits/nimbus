@@ -186,6 +186,32 @@ ela aparece com `normalise` + `linear(3.2,−270)` entre 0,375 e 0,41 (centro
 0,39 → yaw −28,5, rosto à direita ✓). Ordem de leitura do meridiano: etiqueta >
 mergulho da gola > capuz; a sanidade do rosto valida qualquer uma.
 
+## Cor da estampa (28/07 — descoberto pelo dono)
+
+A auditoria não olhava COR, e o dono reprovou uma capa geométrica perfeita em
+escala/posição por "cor surrealista, muito clara". Diagnóstico em três camadas:
+
+1. **O clareamento é ótico, não do compositor.** Arte de traço fino (azulejo)
+   encolhida para ~245 px mistura linha azul com fundo branco: a própria arte
+   reduzida mede razão de luminância 1,28 contra a original. O compositor
+   reproduzia isso fielmente — e fiel aqui é errado, porque
+2. **a referência do olho é o mockup do produto**, que apresenta a estampa
+   bold (o renderizador da YouDraw preserva contraste ao reduzir). O cliente
+   compara capa com mockup; a capa tem que ler como o produto.
+3. **Correção = compensação de reprodução na arte antes de compor**, não nos
+   parâmetros de sombra (baixar `--sombra-max` de 1,35 para 1,08 mudou a
+   luminância medida em <1%). Na 352718275: `modulate({saturation:1.45})` +
+   `linear(1.18,−28)` sobre a arte oficial → capa lê como o mockup na escala
+   de celular. Dose única por arte; artes de campo grande (pintura, spray)
+   precisam de menos ou nada.
+
+Instrumento: `scripts/geometry/medir-cor-estampa.mjs` (medianas de luminância e
+saturação da tinta vs arte). Limite conhecido dele: mediana em janela não
+separa "lavado pelo compositor" de "lavado pela redução" — a decisão final é
+visual, **na escala em que o dono olha (celular, foto inteira)**, comparando
+com o mockup. O check de cor agora é parte da auditoria pós-criação, para capa
+geométrica E de IA.
+
 ## Integração com o tecido
 
 O ponto cego que o gate declara e não mede. Em 27/07 o dono pegou dois defeitos
