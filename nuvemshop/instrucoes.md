@@ -184,6 +184,27 @@ diferença concreta.
 O Impulso dá CSS + módulos do tema, não dá pra colar HTML custom nem editar o DOM. Fidelidade 100% a um
 mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a pena agora.
 
+## Camada de overrides via Scripts API — RETIRADO em 29/07
+
+Registro do mecanismo tentado em 28/07, guardado porque explica o
+`nimbusloja.js` e a exceção do 404 no `link-check-docs.allow.json`.
+
+A ideia: além do CSS colado, o app parceiro NIMBUS Capas (37697) teria um
+script na aba Scripts do Portal de Parceiros (o loader, hoje guardado em
+`nuvemshop/nimbusloja.js`), injetando na vitrine a folha
+`https://nimbuswear.com.br/loja/nimbus-loja.css`, servida pelo GitHub Pages a
+partir de `public/loja/nimbus-loja.css`. O painel guardaria o CSS base e a
+camada do Pages os overrides incrementais, entrando por git sem colar nada.
+
+O que barrou: a plataforma bloqueou a criação com evento **onload** ("É
+necessário permissão para criar scripts onload. Solicite em
+api@nuvemshop.com.br"); `onfirstinteraction` só aplicaria estilo após a
+primeira interação do visitante, quebra-galho de teste, não solução. **O ticket
+foi retirado em 29/07 e o mecanismo está bloqueado até nova ordem**
+(`docs/ESTADO.md`). O script nunca foi criado no Portal e a folha
+`public/loja/nimbus-loja.css` nunca existiu na `main` de propósito: o 404 dela
+é a prova cadastrada no allowlist.
+
 ## Histórico
 
 - **Auditoria de escala (22–23/07/2026) — INVALIDADA**: 49 produtos comparados
