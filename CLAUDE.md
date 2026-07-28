@@ -20,14 +20,17 @@ Todo documento tem `status:` no topo; sem status, trate como suspeito.
 A versão anterior deste arquivo, com o histórico longo, está em
 `docs/historico/CLAUDE-2026-07-25.md`.
 
-## Os dois repositórios
+## Os três repositórios
 
 ```
 nimbus/          PÚBLICO   código, documentação, medições, receitas
-nimbus-assets/   PRIVADO   artes, blanks e capas
+nimbus-assets/   PRIVADO   artes, blanks e capas (+ capas IA aprovadas)
+nimbus-brain/    PRIVADO   segundo cérebro (wiki) + credenciais
 ```
 
-Clone lado a lado. Detalhe em [`docs/REPOSITORIOS.md`](docs/REPOSITORIOS.md).
+Clone lado a lado. Sessão nova (qualquer conta): seção "Nova sessão" do
+[`docs/00-COMECE-AQUI.md`](docs/00-COMECE-AQUI.md). Detalhe em
+[`docs/REPOSITORIOS.md`](docs/REPOSITORIOS.md).
 
 ## Marca
 
