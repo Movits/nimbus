@@ -7,72 +7,28 @@ atualizado: 2026-07-28
 
 Esta é a única página que envelhece rápido. Leia antes de agir e atualize ao sair.
 
-## Capas — o sistema está APROVADO
+## Capas — PIVÔ DE DIREÇÃO (28/07, fim do dia)
 
-O dono aprovou em 27-28/07 o sistema de criação + auditoria
-([`fluxos/capa-lifestyle.md`](fluxos/capa-lifestyle.md) e
-[`fluxos/auditoria-capa.md`](fluxos/auditoria-capa.md)): IA (Nano Banana, 3
-referências, 3-5 candidatas) para camiseta/oversized/blusão; geométrica com
-landmark físico (etiqueta / costura do capuz / IA-agrimensor) para capuz, arte
-de padrão e posição crítica. Cor da estampa: **arte pura, sem compensação**.
+**O dono descartou TODA a geração de capas compostas** (as 62 que chegaram a
+ir ao ar + todos os PNGs gerados nas pastas): "está muito ruim e a gente vai em
+outra direção". Estado atual:
 
-**16 capas aprovadas pelo dono até aqui** (12 por IA, versionadas no
-nimbus-assets como `*-ia-v1.png` com sidecar `.capa.json`; 4 geométricas, por
-receita):
+- **Loja**: só os mockups oficiais YouDraw (149 imagens, 49 produtos). Nenhuma
+  capa de modelo no ar. Vínculos de variante todos nos mockups (hover ok).
+- **Preservado**: blanks (149, nimbus-assets) · mockups YouDraw · artes ·
+  receitas e sidecars (como história do método) · fluxos/instrumentos/prompts.
+- **NOVO INSUMO**: os **boards de casting dos modelos** (Higgsfield, enviados
+  pelo dono em 28/07) estão em
+  `nimbus-assets/nuvemshop/assets/product-lifestyle/2026-07-16/casting/`
+  ({caio,clara,gabriel,helena,elenco}-board-v1.png, estúdio, fundo azul-claro,
+  rosto + corpo). São a base da nova direção, que o dono ainda vai detalhar.
+- `capas-aprovadas.json` foi **zerado** (nota interna explica).
+- A recriação de 28/07 (galeria, correções, runners) fica como história em
+  `nuvemshop/producao/recriacao-*.json` e nos fluxos; o sistema de
+  criação+auditoria (IA 3-refs + geométrica com landmark) segue válido como
+  ferramenta — o que caiu foi o RESULTADO visual desta safra, não o método.
 
-| Produto | Variante | Método |
-|---|---|---|
-| 352618935 São Jorge Vintage | branca, preta | IA |
-| 352728019 Aparecida Spray | preta | IA |
-| 352723243 São Miguel Celeste | branca | IA |
-| 352718275 Azulejo | branca | geométrica v7 (yaw −28,5 pela etiqueta) |
-| 352718787 São Jorge Neobarroco (moletom) | branca | geométrica v4 (piloto) |
-| 352890896 Aparecida Barroca | preta | IA |
-| 352703276 Deus é Fiel (oversized) | preta | IA |
-| 352703343 Deus é Fiel (camiseta) | preta | IA |
-| 352702020 Salmo 19 (camiseta) | preta | IA |
-| 352718943 São Jorge Neobarroco (oversized) | preta | IA |
-| 352618837 São Jorge Vintage (blusão) | preta | IA |
-| 352407182 São Miguel Vintage | offwhite | geométrica v5 (etiqueta 0,425) |
-| 352717723 Brasão | offwhite | geométrica v6 (relevo 0,44) |
-| 352619175 Salmo 19 (moletom) | preta | geométrica v15 (costura do capuz 0,565 + oclusão) |
-| 352718999 São Jorge Neobarroco (camiseta) | preta | v3 mantida — os 2 mockups YouDraw batem com ela (15 cm); o dono vai refazer a ARTE depois |
-
-**RECRIAÇÃO CONCLUÍDA E NO AR (28/07): 62 capas publicadas** — 49 produtos
-cobertos. O dono revisou a galeria de 46, reprovou 13 por posição horizontal e
-elas foram corrigidas por deslocamento de `centro` conforme a direção verbal
-dele (régua calibrada em `correcoes-dono-2026-07-28.json`) e republicadas.
-**9 variantes seguem bloqueadas: créditos da API Gemini esgotados** (6 moletons
-sem agrimensor: 352618878-branca, 352407156 par, 352727892-preta, 352726673
-par; 3 correções: 352890896-offwhite, 352717723-preta, 352728277-preta).
-Runners resumíveis: `recriar-fila-ia.mjs` e `recriar-fila-moletom.mjs`.
-Correção de registro: os vereditos "CERTA" de 27/07 eram da MINHA auditoria
-visual, não do olho do dono.
-
-**Fila antiga da auditoria visual de 27/07 (superada pela recriação acima):** 352717723 preta, 352703276 par
-offwhite?, 352718943 offwhite, 352718999 branca, 352618837 branca, 352407182
-preta, 352890896 offwhite (**sem blank** — gerar com Gemini), 352619175 branca,
-352718943/352718275 pares de cor conforme catálogo. Métodos e ressalvas por
-capa em [`../scripts/gemini/PROMPTS-PILOTO.md`](../scripts/gemini/PROMPTS-PILOTO.md).
-
-Fora do fluxo, com motivo: Ecobag (painel plano); 3 produtos frontais
-(352702753, 352702796, 352720257 — placement de frente nunca medido).
-
-## Publicação
-
-**As 16 capas aprovadas ESTÃO NO AR (28/07, via API).** O app de parceiro
-NIMBUS Capas (37697) foi autorizado na loja; a publicação agora é
-`scripts/loja/publicar-capas-api.mjs` (dry-run + `--publicar`), relatório em
-`nuvemshop/producao/publicacao-2026-07-28.json`. Capas antigas da mesma cor
-removidas; mockups YouDraw preservados. O painel manual vira fallback
-(`fluxos/publicar-na-loja.md`).
-
-**Limpeza completa do site (28/07):** as 87 capas da geração reprovada foram
-removidas via API — na loja restam SÓ as 16 aprovadas + 149 mockups YouDraw;
-34 produtos ficaram sem capa de modelo até a fila terminar. 40 variantes foram
-religadas ao mockup YouDraw da cor certa (hover ok). A foto errada do 352727892
-(moletom sem capuz) saiu junto — suspeita fechada. Relatórios:
-`nuvemshop/producao/limpeza-site-2026-07-28.{md,json}`.
+**Aguardando o dono:** o plano da nova direção das capas.
 
 ## Reorganização de 28/07
 
@@ -93,8 +49,8 @@ religadas ao mockup YouDraw da cor certa (hover ok). A foto errada do 352727892
 
 ## Pendências do projeto
 
-1. Terminar a fila de capas restante (métodos já validados).
-2. Dono: conferir as 16 capas publicadas no site (lista em nuvemshop/producao/conferencia-site-2026-07-28.md).
+1. Nova direção das capas (dono vai detalhar; boards de casting prontos).
+2. —
 3. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 4. Completar páginas de produto: material, modelagem, medidas, prazo POD,
    política, impacto social.
