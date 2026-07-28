@@ -1,38 +1,21 @@
 ---
 status: vigente
 atualizado: 2026-07-28
-fonte: paginas publicas de izzyprint.com.br lidas em 28/07 (HTML servido, nao resumo)
+fonte: HTML servido das paginas de produto de izzyprint.com.br, lido em 28/07
 ---
 
-# IzzyPrint × YouDraw: o que dá para decidir sem entrar na conta
+# IzzyPrint: medidas e artes (anexo técnico)
 
-Levantado a pedido do dono, que avalia migrar a produção POD. Os dados abaixo
-vieram do HTML das páginas de produto da IzzyPrint, não de resumo: composição,
-gramatura e tabela de medidas estão publicadas lá e não apareciam na leitura
-superficial do site.
+Anexo do [dossiê de decisão](2026-07-28-izzyprint-dossie.md), que traz o
+comparativo completo, os riscos e a lista do que só a conta logada responde.
+Aqui ficam as duas medições que exigiram baixar o HTML e cruzar com os nossos
+dados: **as medidas das peças** e **o efeito do limite de 30 cm nas artes**.
 
-**O que este documento não responde:** custo POD para revenda, integração com a
-Nuvemshop, white label e frete real. Isso só a conta logada mostra
-(`cowork-izzyprint-avaliacao-prompt.md`).
+## Medidas: as peças não são intercambiáveis
 
-## Tecidos: a IzzyPrint publica, a YouDraw não
-
-| Peça IzzyPrint | Composição | Gramatura | Detalhes |
-|---|---|---|---|
-| Camiseta Clássica | 100% algodão penteado premium, fio 26 | **180 g/m²** | selos Sou de Algodão e BCI |
-| Camiseta Oversized Street | 100% algodão penteado premium, fio 26.1 | **200 g/m²** | gola canelada 3 cm, reforço ombro a ombro |
-| Camiseta Boxy | 100% algodão penteado premium, fio 26 | **200 g/m²** | malha encorpada, fios longos |
-| Moletom Canguru | 96% algodão + 4% elastano | **300 g** | tecido de dois cabos, reforços |
-| Moletom Careca | 96% algodão + 4% elastano | **300 g** | dois cabos, reforço ombro a ombro |
-
-Para uma marca cuja tese é acabamento premium, ter gramatura e certificação
-publicadas é vantagem real de argumento de venda. Precisa ser confirmado no
-produto físico, que é justamente o objetivo das amostras.
-
-## Medidas: as peças NÃO são intercambiáveis
-
-Tamanho G, largura × comprimento em cm. A régua da NIMBUS hoje vem da YouDraw
-(`docs/verdades/medidas-pecas.md`).
+Tamanho G, largura × comprimento em cm. Nossa régua vem da YouDraw
+(`docs/verdades/medidas-pecas.md`); a da IzzyPrint está publicada por tamanho em
+todas as peças e foi extraída para `2026-07-28-medidas-izzyprint.json`.
 
 | NIMBUS hoje | Equivalente IzzyPrint | Largura | Comprimento |
 |---|---|---|---|
@@ -41,70 +24,43 @@ Tamanho G, largura × comprimento em cm. A régua da NIMBUS hoje vem da YouDraw
 | Moletom Canguru 58×65 | Canguru 59×78 | +2% | **+20%** |
 | Blusão Moletom 58×78,4 (estimado) | Careca 58,5×77,5 | +1% | −1% |
 
-Duas leituras importantes:
+**O Moletom Canguru deles é 20% mais comprido.** Como o datum de placement é
+gola→barra, isso não é ajuste: é re-medir o placement de todos os moletons.
 
-1. **O Moletom Canguru da IzzyPrint é 20% mais comprido.** Como o datum de
-   placement da NIMBUS é gola→barra, *todo* o placement dos moletons teria que
-   ser re-medido. Não é ajuste fino: é refazer a medição.
-2. **O "Moletom Careca" é o equivalente do nosso Blusão Moletom** e sua tabela
-   publicada (58,5 × 77,5) fica a 1% da nossa estimativa de 78,4 cm — que era a
-   única medida estimada do projeto, justamente porque a YouDraw não publica
-   tabela. Não prova a estimativa (é outra peça, de outro fornecedor), mas é a
-   primeira corroboração externa que ela recebe.
+**O Moletom Careca fica a 1% da nossa estimativa de 78,4 cm** para o Blusão, que
+é a única medida estimada do projeto justamente porque a YouDraw não publica
+tabela para essa peça. Não prova nada (é outra peça, de outro fornecedor), mas é
+a primeira corroboração externa que aquele número recebe.
 
-**Sem equivalente de Ecobag** na loja da IzzyPrint. É a 78ª variante do nosso
-plano, hoje fora da pipeline de qualquer forma, mas some do catálogo se
-migrarmos.
+> [!warning] A tabela do Canguru da IzzyPrint tem erro na fonte: o G1 aparece
+> mais curto (72–75) que o P (73–75). Confirmar por escrito antes de usar.
 
-## Estampa: o limite de 30 cm é o que mais dói
+## Artes: encolher para 30 cm resolve metade do problema de DPI
 
-Regras publicadas no editor deles: **300 DPI recomendado** (mínimo 72), **PNG
-sem fundo** (avisam explicitamente para não mandar fundo nem na cor da peça) e
-**área máxima 30 cm × 40 cm = 3543 × 4724 px**.
+O editor deles limita a **30 cm × 40 cm**. Cruzando com as 26 artes
+(`2026-07-28-dpi-artes.md`):
 
-Cruzando com nossas 26 artes (`2026-07-28-dpi-artes.md`):
+- **16 das 26 artes** estouram os 30 cm de largura, até +5,2 cm. No nível de
+  variante do plano de produção, são **48 das 78**.
+- Encolher para caber **aumenta o DPI**, porque a mesma contagem de pixels passa
+  a cobrir menos centímetro. **11 artes chegam a 295–296 DPI só com isso** —
+  diferença imperceptível dos 300 recomendados.
+- As outras **15 travam entre 218 e 276 DPI**, porque quem limita é a altura de
+  40 cm e não há encolhimento que ajude. Essas precisam de resolução real
+  (fator 1,3× a 1,4×) ou vetorização. Boa parte é stencil chapado, que vetoriza
+  bem e resolve o problema em definitivo.
 
-- **16 das 26 estouram os 30 cm de largura**, até +5,2 cm (as de 35,2 cm).
-- Encolher para caber tem um efeito colateral bom: aumenta o DPI. **11 artes
-  chegam a 295–296 DPI só encolhendo** — diferença imperceptível dos 300.
-- As outras **15 continuam em 218–276 DPI** porque quem limita é a altura de
-  40 cm, e aí não há encolhimento que ajude. Essas precisam mesmo ser refeitas
-  em resolução maior (fator de 1,3× a 1,4×) ou vetorizadas — boa parte é
-  stencil chapado, que vetoriza bem e resolve o problema para sempre.
+Ou seja: o limite de 30 cm cobra presença visual nas costas, mas devolve metade
+da dívida de resolução de graça.
 
-A técnica de impressão **não está confirmada**. Há um slug de URL antigo com
-"estampa-dtg" reaproveitado numa configuração de cookies, o que sugere DTG, mas
-isso é evidência fraca e não serve como veredito. Perguntar na conta: DTG em
-algodão tem toque macio e casa com premium; DTF tem cor mais viva e toque mais
-plástico.
+## Ficha técnica: use com ressalva
 
-## Preços de vitrine (não são o custo POD)
+A IzzyPrint publica composição e gramatura, o que a YouDraw não faz — mas **a
+própria fonte se contradiz** entre a página normal e a "personalizável" do mesmo
+produto: o Oversized aparece como 200 g/m² numa e 180 g/m² na outra, e os
+moletons como 300 g numa e 260 g na outra (nunca em g/m²). Camisetas são 100%
+algodão penteado fio 26.1 com selos BCI e Sou de Algodão; moletons, 96% algodão
+com 4% elastano.
 
-Clássica R$29,90–55,90 · Oversized Street R$39,90–69,90 · Boxy R$59,90 ·
-Canguru R$139,90 · Careca R$119,90. São preços de varejo do site deles, **não**
-o custo de produção para revenda — que é o número que decide a margem e só
-aparece logado. Para comparar: na YouDraw a camiseta frente+verso custa
-~R$73,20 e o blusão com estampa grande R$122,65.
-
-## O que pesa na decisão
-
-**A favor da IzzyPrint:** tecidos publicados e certificados, gramatura de 200
-g/m² no oversized, tabela de medidas por tamanho em todas as peças (a YouDraw
-não publica a do Blusão), editor de criação muito superior, catálogo de cores
-maior no oversized (8 cores, incluindo estonados e marmorizado).
-
-**Contra:** produção até 4 dias úteis contra ~48h; sem marketplace próprio como
-vitrine extra; limite de 30 cm mexe em 16 artes; peças com medidas diferentes
-obrigam a refazer a medição de placement; sem Ecobag; custo POD e integração
-ainda desconhecidos.
-
-**Custo real da migração, em trabalho:** refazer 15 artes em alta resolução,
-reduzir 16 para 30 cm, re-medir o placement de todas as peças (o datum muda),
-refazer os blanks com o casting novo e reconstruir as capas. É praticamente o
-mesmo trabalho que a reconstrução do catálogo já exigia — o que, ironicamente,
-faz deste o **melhor momento possível** para migrar, se as amostras
-convencerem: o catálogo vai ser refeito de qualquer jeito.
-
-## Próximo passo
-
-Amostras. Nenhuma decisão de tecido ou de estampa se toma por HTML.
+**Não publique material nem gramatura na página de produto da NIMBUS a partir
+daí.** Toda spec precisa vir por escrito deles, e é item da lista do dossiê.
