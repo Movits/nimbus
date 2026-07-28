@@ -49,11 +49,12 @@ Fora do fluxo, com motivo: Ecobag (painel plano); 3 produtos frontais
 
 ## Publicação
 
-O pacote para o painel sai de `node scripts/producao/preparar-publicacao.mjs`
-(`_PUBLICAR/` + índice). A Nuvemshop é colagem manual — **o upload é do dono**,
-com a lista de conferência que a sessão entrega. Preservar as fotos oficiais
-YouDraw (decisão de 25/07); remover as fotos de modelo antigas das capas
-trocadas.
+**As 16 capas aprovadas ESTÃO NO AR (28/07, via API).** O app de parceiro
+NIMBUS Capas (37697) foi autorizado na loja; a publicação agora é
+`scripts/loja/publicar-capas-api.mjs` (dry-run + `--publicar`), relatório em
+`nuvemshop/producao/publicacao-2026-07-28.json`. Capas antigas da mesma cor
+removidas; mockups YouDraw preservados. O painel manual vira fallback
+(`fluxos/publicar-na-loja.md`).
 
 ## Reorganização de 28/07
 
@@ -75,7 +76,7 @@ trocadas.
 ## Pendências do projeto
 
 1. Terminar a fila de capas restante (métodos já validados).
-2. Upload das capas aprovadas no painel (dono, com a lista de conferência).
+2. Dono: conferir as 16 capas publicadas no site (lista em nuvemshop/producao/conferencia-site-2026-07-28.md).
 3. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 4. Completar páginas de produto: material, modelagem, medidas, prazo POD,
    política, impacto social.

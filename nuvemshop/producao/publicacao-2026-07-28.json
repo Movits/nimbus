@@ -1,0 +1,226 @@
+{
+ "executado": true,
+ "quando": "2026-07-28",
+ "relatorio": [
+  {
+   "id": "352618935",
+   "produto": "São Jorge Vintage | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 2, image_id 1240875124",
+     "removidas": [
+      "352618935-branca-e48c366816fc0f328c17844 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875142",
+     "removidas": [
+      "352618935-preta-750b205255e9aff379178443 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352728019",
+   "produto": "Aparecida Spray | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875157",
+     "removidas": [
+      "352728019-aparecida-spray-oversized-imag (ok)",
+      "352728019-vitrine-nimbus-3d91938648f7914 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352723243",
+   "produto": "São Miguel Celeste | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240875177",
+     "removidas": [
+      "352723243-vitrine-nimbus-dbdf1fd67a6630a (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352718275",
+   "produto": "Azulejo Sagrado | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240875195",
+     "removidas": [
+      "352718275-branca-capa-corrigida-5104bd37 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352718787",
+   "produto": "São Jorge Neobarroco | Moletom Canguru",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 2, image_id 1240875210",
+     "removidas": [
+      "352718787-branca-ca03bb3d8ee07825ea17844 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352890896",
+   "produto": "Aparecida Barroca | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240875227",
+     "removidas": [
+      "352890896-preta-b5cc44aa2b4d2a049e178443 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352703276",
+   "produto": "Deus é Fiel | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875238",
+     "removidas": [
+      "352703276-vitrine-nimbus-769900592dcfa6e (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352703343",
+   "produto": "Deus é Fiel | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875254",
+     "removidas": [
+      "352703343-vitrine-nimbus-0be1a8637dae925 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352702020",
+   "produto": "Salmo 19 | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875267",
+     "removidas": [
+      "352702020-preta-4dbe30318d4b788272178443 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352718943",
+   "produto": "São Jorge Neobarroco | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875280",
+     "removidas": [
+      "352718943-preta-capa-nova-14bcfd41b9e0c6 (ok)",
+      "352718943-preta-888f9042a0f6ff8576178443 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352618837",
+   "produto": "São Jorge Vintage | Blusão Moletom",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875290",
+     "removidas": [
+      "352618837-preta-capa-corrigida-d4c95a613 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352407182",
+   "produto": "São Miguel Vintage | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "offwhite",
+     "nova": "pos 2, image_id 1240875300",
+     "removidas": [
+      "352407182-off-white-v4f-b54704261a785f21 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352717723",
+   "produto": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240875307",
+     "removidas": [
+      "352717723-off-white-83450650035025d50317 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352619175",
+   "produto": "Salmo 19 | Moletom Canguru",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875329",
+     "removidas": [
+      "352619175-preta-0ccaaeca4fc5ec2c15178434 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352718999",
+   "produto": "São Jorge Neobarroco | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240875337",
+     "removidas": [
+      "352718999-preta-7c01002d62338d77dc178443 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  }
+ ]
+}

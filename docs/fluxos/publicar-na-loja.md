@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-07-28
 ---
 
 # Fluxo: publicar capas na Nuvemshop
@@ -22,9 +22,25 @@ mais recente vence (`grafite` > `par` > `capuz` > sem marcador), depois a versã
 sem `-semcapuz`, depois o número. **Marcador novo é aceito automaticamente** —
 lista fixa de sufixos já fez 36 capas sumirem em silêncio.
 
-## Publicar
+## Publicar — via API (vigente desde 28/07)
 
-A Nuvemshop não faz deploy por Git. A publicação é manual, pelo painel:
+O app de parceiro **NIMBUS Capas** (App ID 37697) dá acesso à API com escopo
+`read_products,write_products`. Credenciais no `.env` (nunca commitadas):
+`NUVEMSHOP_ACCESS_TOKEN` + `NUVEMSHOP_STORE_ID` (o token não expira; revoga-se
+no Portal de Parceiros).
+
+```bash
+node scripts/loja/publicar-capas-api.mjs             # dry-run: mostra o plano
+node scripts/loja/publicar-capas-api.mjs --publicar  # executa
+```
+
+O script publica as capas de `capas-aprovadas.json`: sobe a nova na posição da
+antiga, remove SÓ a capa antiga da mesma cor (arquivos `{id}-*`; os
+`file_name-*` são os mockups YouDraw e ficam), e grava relatório em
+`nuvemshop/producao/publicacao-<data>.json`. Ambiguidade (capa antiga sem cor
+no nome em produto multi-cor) fica no ar e é reportada.
+
+## Publicar — manual, pelo painel (fallback)
 
 1. Subir a capa nova na galeria do produto.
 2. Marcar como principal.
