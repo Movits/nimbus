@@ -1,0 +1,6 @@
+/* NIMBUS - camada de overrides da loja, carregada pelo script nimbus-loja.js
+   (Nuvemshop Scripts API). O CSS base e o consolidado colado no painel
+   (nuvemshop/css-nimbus-publicacao-compacta-2026-07-28.css). Esta camada
+   comeca vazia de proposito: ajustes futuros entram aqui por git, sem colar
+   nada no painel. Regras da plataforma valem aqui tambem: hex literal, nada
+   de custom properties sem fallback. */

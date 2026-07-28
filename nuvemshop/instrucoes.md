@@ -176,6 +176,19 @@ diferença concreta.
 O Impulso dá CSS + módulos do tema, não dá pra colar HTML custom nem editar o DOM. Fidelidade 100% a um
 mockup só no plano **Escala** (código-fonte do tema) ou headless. Não vale a pena agora.
 
+## Camada de overrides via Scripts API (em ativação, 28/07)
+
+Além do CSS colado, o app parceiro NIMBUS Capas (37697) tem um script na aba
+Scripts do Portal de Parceiros: `public/loja/nimbus-loja.js` (enviado por
+upload lá; cópia versionada aqui). Ele injeta na vitrine a folha
+`https://nimbuswear.com.br/loja/nimbus-loja.css` — servida pelo GitHub Pages a
+partir de `public/loja/nimbus-loja.css` deste repo (deploy no push para a
+`main`). **Divisão de papéis**: o painel guarda o CSS base (consolidado
+28/07); a camada do Pages guarda só overrides incrementais, que entram por
+git sem colar nada. Como o script carrega depois do primeiro paint, mudança
+estrutural grande deve ser consolidada no painel de tempos em tempos para não
+piscar. Config do script: local Store, evento onload, instalação automática.
+
 ## Histórico
 
 - **Hover restaurado ao padrão do tema (28/07/2026)**:
