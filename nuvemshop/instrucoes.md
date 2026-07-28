@@ -189,6 +189,12 @@ git sem colar nada. Como o script carrega depois do primeiro paint, mudança
 estrutural grande deve ser consolidada no painel de tempos em tempos para não
 piscar. Config do script: local Store, evento onload, instalação automática.
 
+Status 28/07: a plataforma bloqueou a criação com evento **onload** ("É
+necessário permissão para criar scripts onload. Solicite em
+api@nuvemshop.com.br"). Pedido de liberação por e-mail em andamento; até lá o
+script não foi criado (onfirstinteraction só aplicaria estilo após a primeira
+interação do visitante — serve de quebra-galho de teste, não de solução).
+
 ## Histórico
 
 - **Hover restaurado ao padrão do tema (28/07/2026)**:
