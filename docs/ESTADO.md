@@ -88,12 +88,16 @@ auditoria escolhe, dono aprova/reprova cada final. Prompts e vereditos em
 `scripts/gemini/PROMPTS-PILOTO.md`.
 
 **Fila de retrabalho: 22 capas** (erradas do dono + minhas na auditoria visual
-de 27/07). Resolvidas: #35 e #49 (as aprovadas acima). **Lote 1 enviado ao dono
-(aguardando aprovar/reprovar):** 352618935-preta (escala −0,9%, dV −1,1),
-352723243-branca (+0,7%, dV −0,8), 352718275-branca (+1,6%, dV −0,9; dH −4 cm
-seguindo o corpo girado; NCC não trava em arte de azulejo — score baixo é
-limitação do instrumento). Moletons com capuz da fila (352619175 par) vão pela
-via geométrica; Blusão (352618837 par) não tem capuz, IA deve servir.
+de 27/07). **LOTE 1 FECHADO (28/07), 5 de 22 resolvidas:** #35 352618935-branca
+(IA), #49 352728019-preta (IA), #36 352618935-preta (IA, critério
+costura-primeiro), #2 352723243-branca (IA), #10 352718275-branca
+(**geométrica v7**, yaw −28,5 pela etiqueta transparente, arte pura — o dono
+escolheu a cor sem nenhum ajuste numa régua de 4 doses; ver "Cor da estampa" em
+limites-conhecidos). Capas de IA aprovadas versionadas no nimbus-assets com
+sidecar `*.capa.json` no público. Restam 17: 352890896 par (offwhite SEM
+blank), 352717723 par, 352703276, 352703343, 352702020, 352619175 par (capuz →
+geométrica), 352718943 par, 352718999 par, 352618837 par (Blusão), 352407182
+par. Moletons com capuz pela via geométrica; resto pela IA.
 
 **Próximo passo:** com o aval do dono, seguir a fila em lotes, remedindo `torso`
 e `centro` no blank antes de recompor. A 352718999 branca aparece na fila mas

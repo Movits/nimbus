@@ -1,0 +1,21 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "lote1 v2b (3 refs) + correcao 'smaller and lower'; 6 candidatas, escolhida a 6 pelo criterio costura-primeiro",
+  "prompt_doc": "scripts/gemini/PROMPTS-PILOTO.md",
+  "refs": {
+    "arte": "designs/prontos/RELIQUIA/costas/H4-sao-jorge-halftone.png",
+    "blank": "nuvemshop/assets/producao-capas/352618935/352618935-preta-par-blank.png",
+    "mockup": "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352618935-sao-jorge-vintage3/gallery-02.webp"
+  },
+  "arquivo": "352618935-preta-ia-v1.png (nimbus-assets)",
+  "auditoria": {
+    "escala_pct": -3.7,
+    "delta_vertical_cm": -0.38,
+    "centro_arte_frac": 0.549,
+    "costura_gola_frac": 0.55,
+    "nota": "NIMBUS pequeno saiu legivel nesta candidata"
+  },
+  "aprovado_dono": "2026-07-28",
+  "substitui": "352618935-preta-v3.png (geometrica)"
+}

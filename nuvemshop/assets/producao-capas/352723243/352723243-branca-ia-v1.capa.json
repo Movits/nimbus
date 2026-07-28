@@ -1,0 +1,19 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "lote1 v2b (3 refs) + correcao 'slightly lower'; 5 candidatas, escolhida a 4",
+  "prompt_doc": "scripts/gemini/PROMPTS-PILOTO.md",
+  "refs": {
+    "arte": "designs/prontos/NUVEM/costas/sao-miguel-nuvem.png",
+    "blank": "nuvemshop/assets/producao-capas/352723243/352723243-branca-blank.png",
+    "mockup": "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/352723243-sao-miguel-celeste3/gallery-02.webp"
+  },
+  "arquivo": "352723243-branca-ia-v1.png (nimbus-assets)",
+  "auditoria": {
+    "escala_pct": 0.7,
+    "delta_vertical_cm": -0.83,
+    "desvio_horizontal_cm": 0.21
+  },
+  "aprovado_dono": "2026-07-28",
+  "substitui": "352723243-branca-v3.png (geometrica)"
+}

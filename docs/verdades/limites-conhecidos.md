@@ -198,19 +198,20 @@ escala/posição por "cor surrealista, muito clara". Diagnóstico em três camad
 2. **a referência do olho é o mockup do produto**, que apresenta a estampa
    bold (o renderizador da YouDraw preserva contraste ao reduzir). O cliente
    compara capa com mockup; a capa tem que ler como o produto.
-3. **Correção = compensação de reprodução na arte antes de compor**, não nos
-   parâmetros de sombra (baixar `--sombra-max` de 1,35 para 1,08 mudou a
-   luminância medida em <1%). Na 352718275: `modulate({saturation:1.45})` +
-   `linear(1.18,−28)` sobre a arte oficial → capa lê como o mockup na escala
-   de celular. Dose única por arte; artes de campo grande (pintura, spray)
-   precisam de menos ou nada.
+3. **DESFECHO (28/07): o dono escolheu a arte PURA.** Quatro doses de
+   compensação foram compostas (sat +45%, +22%, +5% com contraste, e −5%) e
+   todas reprovadas como "muito saturado"; posta a régua completa lado a lado,
+   ele escolheu a versão **sem nenhum ajuste**. A reclamação original de "cor
+   surrealista" era o conjunto (posição errada + lavado), não pedido de cor
+   mais forte. Parâmetros de sombra também não eram a causa (baixar
+   `--sombra-max` de 1,35 para 1,08 mudou <1%).
 
-Instrumento: `scripts/geometry/medir-cor-estampa.mjs` (medianas de luminância e
-saturação da tinta vs arte). Limite conhecido dele: mediana em janela não
-separa "lavado pelo compositor" de "lavado pela redução" — a decisão final é
-visual, **na escala em que o dono olha (celular, foto inteira)**, comparando
-com o mockup. O check de cor agora é parte da auditoria pós-criação, para capa
-geométrica E de IA.
+Método que funcionou para fechar cor: **régua de variantes em arquivos
+separados, tamanho cheio** (tira lado a lado fica pequena no celular do dono),
+numeradas, e ele devolve o número. Uma rodada, decisão dele. O check de cor da
+auditoria continua: comparar com a ARTE ORIGINAL (referência que o dono usa),
+na escala de celular; instrumento `scripts/geometry/medir-cor-estampa.mjs` só
+para diagnóstico (mediana em janela não separa compositor de redução ótica).
 
 ## Integração com o tecido
 
