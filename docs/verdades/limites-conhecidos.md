@@ -179,6 +179,16 @@ pescoço. **3ª ocorrência (28/07, 352718275):** cabelo cobria a gola, li 0,49
 com rosto à direita e a sanidade do rosto teria reprovado na hora (exigia
 costura à esquerda do eixo 0,475). A sanidade roda ANTES, sempre.
 
+**Dois checks que faltavam na auditoria (28/07, cobrados pelo dono no lote 2):**
+(1) **Oclusão do capuz é obrigatória** em peça com capuz quando o topo da arte
+alcança a zona dele — a v12 do 352619175 pintou letra POR CIMA do capuz e o
+gate aprovou (ele não vê oclusão). Em preto sobre preto a borda do capuz é
+ilegível para o olho; a **candidata de IA marca a fronteira** (ela se recusa a
+pintar sob o capuz — o dV dela diz onde o capuz termina: +5,2 cm ali = bico em
+~0,375). (2) **Horizontal se confere contra landmark** (etiqueta > mergulho da
+gola > agrimensor-IA), nunca só contra o `centro` da receita — o `centro: 0,41`
+do 352717723 estava errado e a auditoria validou a posição contra ele.
+
 **A etiqueta transparente é o melhor landmark do meridiano (28/07, achado do
 dono).** Em camiseta clara a etiqueta interna transparece no tecido logo abaixo
 da gola, costurada no centro-costas — e não é coberta por cabelo. Na 352718275
