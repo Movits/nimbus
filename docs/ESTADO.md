@@ -38,7 +38,16 @@ receita):
 | 352619175 Salmo 19 (moletom) | preta | geométrica v15 (costura do capuz 0,565 + oclusão) |
 | 352718999 São Jorge Neobarroco (camiseta) | preta | v3 mantida — os 2 mockups YouDraw batem com ela (15 cm); o dono vai refazer a ARTE depois |
 
-**Fila restante da auditoria visual de 27/07:** 352717723 preta, 352703276 par
+**RECRIAÇÃO DA FILA (28/07): 46 de 55 prontas, aguardando aprovar/reprovar do
+dono** (galeria numerada enviada). Composição: 18 novas por IA, 5 moletons
+novos pela geométrica (agrimensor + oclusão), 23 reaproveitando as versões que
+o dono deu CERTA em 27/07. **9 bloqueadas: os créditos da API Gemini acabaram**
+(6 moletons sem agrimensor + 3 correções de escala). Estado por variante em
+`nuvemshop/producao/recriacao-2026-07-28.json` e `recriacao-moletom-2026-07-28.json`;
+runners resumíveis `scripts/producao/recriar-fila-ia.mjs` e `recriar-fila-moletom.mjs`
+(rodar de novo quando houver crédito — retomam de onde pararam).
+
+**Fila antiga da auditoria visual de 27/07 (superada pela recriação acima):** 352717723 preta, 352703276 par
 offwhite?, 352718943 offwhite, 352718999 branca, 352618837 branca, 352407182
 preta, 352890896 offwhite (**sem blank** — gerar com Gemini), 352619175 branca,
 352718943/352718275 pares de cor conforme catálogo. Métodos e ressalvas por

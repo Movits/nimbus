@@ -1,0 +1,62 @@
+{
+ "352722685-branca": {
+  "fase": "composta",
+  "agrimensor": {
+   "cf": 0.514,
+   "topoFrac": 0.383,
+   "score": 0.734
+  },
+  "yaw": -5.75,
+  "oclusao": true,
+  "saida": "nuvemshop/assets/producao-capas/352722685/352722685-branca-v4-recriada.png"
+ },
+ "352719816-branca": {
+  "fase": "composta",
+  "agrimensor": {
+   "cf": 0.501,
+   "topoFrac": 0.389,
+   "score": 0.627
+  },
+  "yaw": -0.5,
+  "oclusao": true,
+  "saida": "nuvemshop/assets/producao-capas/352719816/352719816-branca-v6-recriada.png"
+ },
+ "352718083-branca": {
+  "fase": "composta",
+  "saida": "nuvemshop/assets/producao-capas/352718083/352718083-branca-v3.png",
+  "nota": "agrimensor cego no azulejo (cf 0.183); final = v3 CERTA do dono em 27/07"
+ },
+ "352619175-branca": {
+  "fase": "composta",
+  "agrimensor": {
+   "cf": 0.542,
+   "topoFrac": 0.384,
+   "score": 0.714
+  },
+  "yaw": 14.75,
+  "oclusao": true,
+  "saida": "nuvemshop/assets/producao-capas/352619175/352619175-branca-v5-recriada.png"
+ },
+ "352718787-preta": {
+  "fase": "composta",
+  "agrimensor": {
+   "cf": 0.473,
+   "topoFrac": 0.398,
+   "score": 0.628
+  },
+  "yaw": -6.75,
+  "oclusao": true,
+  "saida": "nuvemshop/assets/producao-capas/352718787/352718787-preta-v5-recriada.png"
+ },
+ "352618878-preta": {
+  "fase": "composta",
+  "agrimensor": {
+   "cf": 0.51,
+   "topoFrac": 0.337,
+   "score": 0.777
+  },
+  "yaw": -1,
+  "oclusao": true,
+  "saida": "nuvemshop/assets/producao-capas/352618878/352618878-preta-v4-recriada.png"
+ }
+}
