@@ -175,7 +175,16 @@ com contraste maior a gola aparece e o mergulho real está em 0,46 → −10,25.
 Duas sanidades antes de aceitar uma leitura: (1) o **lado do rosto** prevê o
 sinal — rosto à esquerda → yaw positivo, à direita → negativo, nas três capas
 conferidas; (2) a ribana tem que ser visível como banda, não como contorno do
-pescoço.
+pescoço. **3ª ocorrência (28/07, 352718275):** cabelo cobria a gola, li 0,49
+com rosto à direita e a sanidade do rosto teria reprovado na hora (exigia
+costura à esquerda do eixo 0,475). A sanidade roda ANTES, sempre.
+
+**A etiqueta transparente é o melhor landmark do meridiano (28/07, achado do
+dono).** Em camiseta clara a etiqueta interna transparece no tecido logo abaixo
+da gola, costurada no centro-costas — e não é coberta por cabelo. Na 352718275
+ela aparece com `normalise` + `linear(3.2,−270)` entre 0,375 e 0,41 (centro
+0,39 → yaw −28,5, rosto à direita ✓). Ordem de leitura do meridiano: etiqueta >
+mergulho da gola > capuz; a sanidade do rosto valida qualquer uma.
 
 ## Integração com o tecido
 
