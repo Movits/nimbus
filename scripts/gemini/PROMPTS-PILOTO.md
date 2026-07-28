@@ -67,3 +67,19 @@ geracoes): **gerar ~5 e deixar a auditoria escolher** e parte do metodo.
 Melhor: v4-4 (escala −3,3%, dV −0,4 cm, halo com textura e escorridos).
 Limite que sobra: a assinatura pequena nunca sai perfeita ("NIMBOS") — mesmo
 motivo do velho "texto e sagrado".
+
+## Licoes do lote 1 (28/07)
+- **O alvo horizontal da escolha e a COSTURA, nao o eixo.** Na 352618935-preta
+  escolhi a candidata de melhor escala (dH −1,1 do eixo) e o dono reprovou por
+  "esquerda"; a candidata 6, que eu tinha descartado, estava exatamente na
+  costura (0,549 vs 0,55) e passou. Criterio de escolha: primeiro costura,
+  depois escala.
+- **Empurrao lateral por texto NAO funciona** ("3 cm further to the right" →
+  posicao identica, 2 tentativas na 352718275). A alavanca de posicao
+  horizontal e gerar mais candidatas e escolher, nunca pedir deslocamento.
+- **Armadilha do pescoco, 3a ocorrencia:** li a "costura" da 352718275 em 0,49
+  com o rosto da modelo a DIREITA — a regra do rosto exige costura a esquerda
+  do eixo, entao 0,49 era a base do pescoco (cabelo cobria a gola). A sanidade
+  do rosto tem que rodar ANTES de aceitar leitura de costura.
+- NCC nao trava em arte de azulejo/padrao repetido (scores 0,13–0,32; caixas
+  absurdas). Para essas artes a auditoria e visual, com linhas desenhadas.
