@@ -1,0 +1,8 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "recriacao 28/07 (3 refs, candidatas auditadas; ver recriacao-2026-07-28.json)",
+  "auditoria": "escala -1.9% dV 0.38 score 0.685",
+  "aprovado_dono": "2026-07-28",
+  "arquivo": "352889132-preta-ia-v1.png (nimbus-assets)"
+}

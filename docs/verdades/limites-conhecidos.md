@@ -179,6 +179,20 @@ pescoço. **3ª ocorrência (28/07, 352718275):** cabelo cobria a gola, li 0,49
 com rosto à direita e a sanidade do rosto teria reprovado na hora (exigia
 costura à esquerda do eixo 0,475). A sanidade roda ANTES, sempre.
 
+**A auditoria em LOTE ainda era cega no horizontal (28/07, 13 correções do
+dono na recriação).** Dois critérios falharam juntos: (1) minha auditoria
+visual de 27/07 deu CERTA em capas com a estampa fora do centro — e esse
+veredito era MEU, não do dono (registro corrigido: ele nunca aprovou aquelas
+individualmente, só mandou tocar o lote); (2) o runner de recriação selecionava
+candidata pela ESTABILIDADE do centro entre gerações — estável ≠ certo, a IA
+erra consistentemente para o mesmo lado. Regra que fica: **horizontal só se
+valida contra marca física** (etiqueta/gola/costura via CLAHE) **ou contra a
+direção do dono**, nunca por mediana de candidatas nem pelo `centro` da
+receita. Régua calibrada das correções verbais dele: "pouquinho" ≈ 1,2 cm,
+"um pouco" ≈ 1,8 cm, "bem"/"invadindo a manga" ≈ 3,5-4,5 cm (13/13 aplicadas
+por deslocamento de `centro` na recomposição, dados em
+`nuvemshop/producao/correcoes-dono-2026-07-28.json`).
+
 **Dois checks que faltavam na auditoria (28/07, cobrados pelo dono no lote 2):**
 (1) **Oclusão do capuz é obrigatória** em peça com capuz quando o topo da arte
 alcança a zona dele — a v12 do 352619175 pintou letra POR CIMA do capuz e o

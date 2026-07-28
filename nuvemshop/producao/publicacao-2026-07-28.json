@@ -8,17 +8,17 @@
    "acoes": [
     {
      "cor": "branca",
-     "nova": "pos 2, image_id 1240875124",
+     "nova": "pos 4, image_id 1240949285",
      "removidas": [
-      "352618935-branca-e48c366816fc0f328c17844 (ok)"
+      "352618935-branca-capa-2026-07-28-436f9e4 (ok)"
      ],
      "mantidas_ambiguas": []
     },
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875142",
+     "nova": "pos 1, image_id 1240949316",
      "removidas": [
-      "352618935-preta-750b205255e9aff379178443 (ok)"
+      "352618935-preta-capa-2026-07-28-18971dc6 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -30,10 +30,9 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875157",
+     "nova": "pos 1, image_id 1240949349",
      "removidas": [
-      "352728019-aparecida-spray-oversized-imag (ok)",
-      "352728019-vitrine-nimbus-3d91938648f7914 (ok)"
+      "352728019-preta-capa-2026-07-28-6fb54a68 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -45,9 +44,9 @@
    "acoes": [
     {
      "cor": "branca",
-     "nova": "pos 1, image_id 1240875177",
+     "nova": "pos 1, image_id 1240949393",
      "removidas": [
-      "352723243-vitrine-nimbus-dbdf1fd67a6630a (ok)"
+      "352723243-branca-capa-2026-07-28-0910d53 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -59,9 +58,9 @@
    "acoes": [
     {
      "cor": "branca",
-     "nova": "pos 1, image_id 1240875195",
+     "nova": "pos 1, image_id 1240949427",
      "removidas": [
-      "352718275-branca-capa-corrigida-5104bd37 (ok)"
+      "352718275-branca-capa-2026-07-28-a99ba05 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -73,9 +72,17 @@
    "acoes": [
     {
      "cor": "branca",
-     "nova": "pos 2, image_id 1240875210",
+     "nova": "pos 3, image_id 1240949453",
      "removidas": [
-      "352718787-branca-ca03bb3d8ee07825ea17844 (ok)"
+      "352718787-branca-capa-2026-07-28-4bdf789 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240949490",
+     "removidas": [
+      "352718787-preta-capa-2026-07-28-565f228a (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -87,9 +94,9 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 2, image_id 1240875227",
+     "nova": "pos 2, image_id 1240949520",
      "removidas": [
-      "352890896-preta-b5cc44aa2b4d2a049e178443 (ok)"
+      "352890896-preta-capa-2026-07-28-30ca057e (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -101,9 +108,9 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875238",
+     "nova": "pos 1, image_id 1240949561",
      "removidas": [
-      "352703276-vitrine-nimbus-769900592dcfa6e (ok)"
+      "352703276-preta-capa-2026-07-28-948b40cc (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -115,9 +122,9 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875254",
+     "nova": "pos 1, image_id 1240949591",
      "removidas": [
-      "352703343-vitrine-nimbus-0be1a8637dae925 (ok)"
+      "352703343-preta-capa-2026-07-28-1576eb91 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -129,9 +136,17 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875267",
+     "nova": "pos 2, image_id 1240949619",
      "removidas": [
-      "352702020-preta-4dbe30318d4b788272178443 (ok)"
+      "352702020-preta-capa-2026-07-28-7ed0a158 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240949660",
+     "removidas": [
+      "352702020-branca-capa-2026-07-28-7c33d86 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -143,10 +158,17 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875280",
+     "nova": "pos 2, image_id 1240949685",
      "removidas": [
-      "352718943-preta-capa-nova-14bcfd41b9e0c6 (ok)",
-      "352718943-preta-888f9042a0f6ff8576178443 (ok)"
+      "352718943-preta-capa-2026-07-28-41a325ae (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240949718",
+     "removidas": [
+      "352718943-offwhite-capa-2026-07-28-99203 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -158,9 +180,17 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875290",
+     "nova": "pos 2, image_id 1240949745",
      "removidas": [
-      "352618837-preta-capa-corrigida-d4c95a613 (ok)"
+      "352618837-preta-capa-2026-07-28-c6d79286 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240949777",
+     "removidas": [
+      "352618837-branca-capa-2026-07-28-757e1cd (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -172,9 +202,17 @@
    "acoes": [
     {
      "cor": "offwhite",
-     "nova": "pos 2, image_id 1240875300",
+     "nova": "pos 3, image_id 1240949809",
      "removidas": [
-      "352407182-off-white-v4f-b54704261a785f21 (ok)"
+      "352407182-offwhite-capa-2026-07-28-43b69 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240949846",
+     "removidas": [
+      "352407182-preta-capa-2026-07-28-45d5c926 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -186,9 +224,9 @@
    "acoes": [
     {
      "cor": "offwhite",
-     "nova": "pos 1, image_id 1240875307",
+     "nova": "pos 1, image_id 1240949882",
      "removidas": [
-      "352717723-off-white-83450650035025d50317 (ok)"
+      "352717723-offwhite-capa-2026-07-28-c6264 (ok)"
      ],
      "mantidas_ambiguas": []
     }
@@ -200,10 +238,16 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875329",
+     "nova": "pos 1, image_id 1240949926",
      "removidas": [
-      "352619175-preta-0ccaaeca4fc5ec2c15178434 (ok)"
+      "352619175-preta-capa-2026-07-28-fe1c6228 (ok)"
      ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240949963",
+     "removidas": [],
      "mantidas_ambiguas": []
     }
    ]
@@ -214,10 +258,462 @@
    "acoes": [
     {
      "cor": "preta",
-     "nova": "pos 1, image_id 1240875337",
+     "nova": "pos 2, image_id 1240949990",
      "removidas": [
-      "352718999-preta-7c01002d62338d77dc178443 (ok)"
+      "352718999-preta-capa-2026-07-28-78272c42 (ok)"
      ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950018",
+     "removidas": [
+      "352718999-branca-capa-2026-07-28-3e4bc9f (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352722510",
+   "produto": "São Miguel Celeste | Blusão Moletom",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950048",
+     "removidas": [
+      "352722510-branca-capa-2026-07-28-a01833a (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352717837",
+   "produto": "Brasão NIMBUS | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950079",
+     "removidas": [
+      "352717837-branca-capa-2026-07-28-d5a4f7e (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240950115",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352703153",
+   "produto": "Fé Acima de Tudo | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950166",
+     "removidas": [
+      "352703153-preta-capa-2026-07-28-e47801e5 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950207",
+     "removidas": [
+      "352703153-branca-capa-2026-07-28-1d56d8b (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352407196",
+   "produto": "São Miguel Vintage | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950247",
+     "removidas": [
+      "352407196-preta-capa-2026-07-28-96fff5b0 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950272",
+     "removidas": [
+      "352407196-branca-capa-2026-07-28-3e150ad (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352728357",
+   "produto": "Anjo da Guarda Stencil | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240950305",
+     "removidas": [
+      "352728357-preta-capa-2026-07-28-c5c4e9c1 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352889132",
+   "produto": "Aparecida Spray | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240950335",
+     "removidas": [
+      "352889132-preta-capa-2026-07-28-f8412ed6 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352721477",
+   "produto": "Espírito Santo Spray | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240950376",
+     "removidas": [
+      "352721477-preta-capa-2026-07-28-07870f85 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950416",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352721118",
+   "produto": "Fé Wildstyle | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950458",
+     "removidas": [
+      "352721118-preta-capa-2026-07-28-018b64a0 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240950495",
+     "removidas": [
+      "352721118-offwhite-capa-2026-07-28-c2cee (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352721197",
+   "produto": "Fé Wildstyle | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950515",
+     "removidas": [
+      "352721197-preta-capa-2026-07-28-5aa97ec9 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950542",
+     "removidas": [
+      "352721197-branca-capa-2026-07-28-6b11a8d (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352721633",
+   "produto": "NIMBUS Wildstyle | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950585",
+     "removidas": [
+      "352721633-preta-capa-2026-07-28-d7a5025a (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240950610",
+     "removidas": [
+      "352721633-offwhite-capa-2026-07-28-954e1 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352725852",
+   "produto": "Querubim Spray | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950635",
+     "removidas": [
+      "352725852-preta-capa-2026-07-28-08f702e1 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950668",
+     "removidas": [
+      "352725852-branca-capa-2026-07-28-3929d3b (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352722685",
+   "produto": "São Miguel Celeste | Moletom Canguru",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950702",
+     "removidas": [
+      "352722685-branca-capa-2026-07-28-5f84c9b (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352719816",
+   "produto": "Aparecida Barroca | Moletom Canguru",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950746",
+     "removidas": [
+      "352719816-branca-capa-2026-07-28-43487a9 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352618878",
+   "produto": "São Jorge Vintage | Moletom Canguru",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240950786",
+     "removidas": [
+      "352618878-preta-capa-2026-07-28-36b06fea (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352719728",
+   "produto": "Aparecida Barroca | Blusão Moletom",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950820",
+     "removidas": [
+      "352719728-branca-capa-2026-07-28-81862cd (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352720127",
+   "produto": "Aparecida Barroca | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240950857",
+     "removidas": [
+      "352720127-branca-capa-2026-07-28-b658ac5 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352702858",
+   "produto": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 2, image_id 1240950915",
+     "removidas": [
+      "352702858-preta-capa-2026-07-28-c8c20f63 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240950969",
+     "removidas": [
+      "352702858-offwhite-capa-2026-07-28-af0b4 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352618903",
+   "produto": "São Jorge Vintage | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240951006",
+     "removidas": [
+      "352618903-offwhite-capa-2026-07-28-eac67 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240951045",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352728451",
+   "produto": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240951116",
+     "removidas": [
+      "352728451-offwhite-capa-2026-07-28-847fe (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352722232",
+   "produto": "Sagrado Coração Spray | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240951154",
+     "removidas": [
+      "352722232-branca-capa-2026-07-28-f49c3f3 (ok)"
+     ],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352717960",
+   "produto": "Azulejo Sagrado | Blusão Moletom",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240951194",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352718083",
+   "produto": "Azulejo Sagrado | Moletom Canguru",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240951247",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352728524",
+   "produto": "Acima de Tudo Grafite | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240951303",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352725749",
+   "produto": "Querubim Spray | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240951363",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240951430",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352727545",
+   "produto": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240951530",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "offwhite",
+     "nova": "pos 1, image_id 1240951608",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    }
+   ]
+  },
+  {
+   "id": "352898175",
+   "produto": "São Miguel Vitorioso | Camiseta Premium",
+   "acoes": [
+    {
+     "cor": "preta",
+     "nova": "pos 1, image_id 1240951665",
+     "removidas": [],
+     "mantidas_ambiguas": []
+    },
+    {
+     "cor": "branca",
+     "nova": "pos 1, image_id 1240951714",
+     "removidas": [],
      "mantidas_ambiguas": []
     }
    ]

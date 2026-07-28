@@ -1,0 +1,78 @@
+{
+ "data": "2026-07-28",
+ "origem": "correcoes do dono na galeria da recriacao",
+ "licao": "a auditoria em lote validava horizontal por estabilidade de mediana entre candidatas e pelo centro da receita; ambos cegos. O centro SEMPRE vem de marca fisica (etiqueta/gola/costura) ou da direcao do dono.",
+ "regua_cm": {
+  "pouquinho": 1.2,
+  "um pouco": 1.8,
+  "bem": 3.5,
+  "invadindo a manga": 4.5
+ },
+ "casos": {
+  "352619175-branca": {
+   "centro_antes": 0.47,
+   "centro_depois": 0.4865,
+   "arquivo": "352619175-branca-v6-ajuste.png"
+  },
+  "352717960-branca": {
+   "centro_antes": 0.492,
+   "centro_depois": 0.445,
+   "arquivo": "352717960-branca-v3-ajuste.png"
+  },
+  "352718083-branca": {
+   "centro_antes": 0.5085,
+   "centro_depois": 0.4907,
+   "arquivo": "352718083-branca-v4-ajuste.png"
+  },
+  "352717837-preta": {
+   "centro_antes": 0.455,
+   "centro_depois": 0.4392,
+   "arquivo": "352717837-preta-v12-ajuste.png"
+  },
+  "352618903-preta": {
+   "centro_antes": 0.543,
+   "centro_depois": 0.5571,
+   "arquivo": "352618903-preta-v5-ajuste.png"
+  },
+  "352728524-branca": {
+   "centro_antes": 0.52,
+   "centro_depois": 0.5461,
+   "arquivo": "352728524-branca-v4-ajuste.png"
+  },
+  "352721477-branca": {
+   "centro_antes": 0.503,
+   "centro_depois": 0.4924,
+   "arquivo": "352721477-branca-v11-ajuste.png"
+  },
+  "352725749-preta": {
+   "centro_antes": 0.515,
+   "centro_depois": 0.5433,
+   "arquivo": "352725749-preta-v11-ajuste.png"
+  },
+  "352725749-offwhite": {
+   "centro_antes": 0.515,
+   "centro_depois": 0.5433,
+   "arquivo": "352725749-offwhite-v3-ajuste.png"
+  },
+  "352727545-preta": {
+   "centro_antes": 0.483,
+   "centro_depois": 0.4704,
+   "arquivo": "352727545-preta-v3-ajuste.png"
+  },
+  "352727545-offwhite": {
+   "centro_antes": 0.483,
+   "centro_depois": 0.4704,
+   "arquivo": "352727545-offwhite-v3-ajuste.png"
+  },
+  "352898175-preta": {
+   "centro_antes": 0.492,
+   "centro_depois": 0.5084,
+   "arquivo": "352898175-preta-v3-ajuste.png"
+  },
+  "352898175-branca": {
+   "centro_antes": 0.492,
+   "centro_depois": 0.5084,
+   "arquivo": "352898175-branca-v3-ajuste.png"
+  }
+ }
+}

@@ -38,14 +38,16 @@ receita):
 | 352619175 Salmo 19 (moletom) | preta | geométrica v15 (costura do capuz 0,565 + oclusão) |
 | 352718999 São Jorge Neobarroco (camiseta) | preta | v3 mantida — os 2 mockups YouDraw batem com ela (15 cm); o dono vai refazer a ARTE depois |
 
-**RECRIAÇÃO DA FILA (28/07): 46 de 55 prontas, aguardando aprovar/reprovar do
-dono** (galeria numerada enviada). Composição: 18 novas por IA, 5 moletons
-novos pela geométrica (agrimensor + oclusão), 23 reaproveitando as versões que
-o dono deu CERTA em 27/07. **9 bloqueadas: os créditos da API Gemini acabaram**
-(6 moletons sem agrimensor + 3 correções de escala). Estado por variante em
-`nuvemshop/producao/recriacao-2026-07-28.json` e `recriacao-moletom-2026-07-28.json`;
-runners resumíveis `scripts/producao/recriar-fila-ia.mjs` e `recriar-fila-moletom.mjs`
-(rodar de novo quando houver crédito — retomam de onde pararam).
+**RECRIAÇÃO CONCLUÍDA E NO AR (28/07): 62 capas publicadas** — 49 produtos
+cobertos. O dono revisou a galeria de 46, reprovou 13 por posição horizontal e
+elas foram corrigidas por deslocamento de `centro` conforme a direção verbal
+dele (régua calibrada em `correcoes-dono-2026-07-28.json`) e republicadas.
+**9 variantes seguem bloqueadas: créditos da API Gemini esgotados** (6 moletons
+sem agrimensor: 352618878-branca, 352407156 par, 352727892-preta, 352726673
+par; 3 correções: 352890896-offwhite, 352717723-preta, 352728277-preta).
+Runners resumíveis: `recriar-fila-ia.mjs` e `recriar-fila-moletom.mjs`.
+Correção de registro: os vereditos "CERTA" de 27/07 eram da MINHA auditoria
+visual, não do olho do dono.
 
 **Fila antiga da auditoria visual de 27/07 (superada pela recriação acima):** 352717723 preta, 352703276 par
 offwhite?, 352718943 offwhite, 352718999 branca, 352618837 branca, 352407182

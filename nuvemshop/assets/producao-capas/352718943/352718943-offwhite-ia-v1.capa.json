@@ -1,0 +1,8 @@
+{
+  "metodo": "nano-banana",
+  "modelo": "gemini-3.1-flash-image",
+  "prompt": "recriacao 28/07 (3 refs, candidatas auditadas; ver recriacao-2026-07-28.json)",
+  "auditoria": "escala 0.7% dV 0.58 score 0.707",
+  "aprovado_dono": "2026-07-28",
+  "arquivo": "352718943-offwhite-ia-v1.png (nimbus-assets)"
+}
