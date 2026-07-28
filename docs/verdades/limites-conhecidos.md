@@ -196,6 +196,20 @@ ela aparece com `normalise` + `linear(3.2,−270)` entre 0,375 e 0,41 (centro
 0,39 → yaw −28,5, rosto à direita ✓). Ordem de leitura do meridiano: etiqueta >
 mergulho da gola > capuz; a sanidade do rosto valida qualquer uma.
 
+**O mergulho da gola SUBESTIMA o giro — viés sistemático (28/07, pego pelo
+dono no lote 2).** O ponto mais fundo VISÍVEL da gola fica escondido atrás do
+pescoço justamente no lado da rotação, então a leitura sai puxada para o
+centro e a estampa fica sempre "um pouco" atrasada em relação ao corpo (três
+capas seguidas: rosto à direita → estampa sobrando à direita; rosto à
+esquerda → sobrando à esquerda). O mergulho NÃO serve de alvo em pose girada.
+Alvos que servem, por peça: **camiseta = etiqueta/relevo costurado** (CLAHE
+`{width:60,height:60,maxSlope:6}` revela o relevo em tecido claro — linear
+estoura o branco e blur-diff cria listras); **moletom = costura central do
+capuz**, o V que morre no bico (sobel-x acha em preto sobre preto; na
+352619175 o V está em 0,565 e a leitura por gola tinha dado 0,536). Medidos no
+lote 2: 352717723 relevo 0,44 → yaw −19,75; 352407182 etiqueta 0,425 → yaw
+−22; 352619175 costura 0,565 → yaw +20,5.
+
 ## Cor da estampa (28/07 — descoberto pelo dono)
 
 A auditoria não olhava COR, e o dono reprovou uma capa geométrica perfeita em
