@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-07-28
 ---
 
 # Estado do projeto
@@ -34,6 +34,32 @@ reconstruir o catálogo uma capa por vez. Um agente já encontrou que a receita 
 352718999 usava `torso 0.44`, que é a largura **manga a manga** — dobrava o raio
 da malha e achatava a estampa. É provável que o vício se repita.
 
+## Reavaliação de plataforma e modelos (28/07)
+
+O dono avalia **migrar da YouDraw para a IzzyPrint** (<https://izzyprint.com.br/>).
+Plano: criar produtos-teste na IzzyPrint, **comprar amostras** e julgar a
+qualidade; só então decidir migração, integração com a Nuvemshop (existe, mas
+não é API pública — foi confirmada com eles por contato direto) e novas fotos.
+Nada foi migrado ainda; a YouDraw segue sendo a produção vigente.
+
+Decisões do dia:
+
+- **Modelos oficiais = casting de 16/07** (Caio, Clara, Gabriel e Helena), em
+  `nimbus-assets/casting/2026-07-16/`. Os **149 blanks antigos** (modelos
+  avulsos por produto, base YouDraw) foram **removidos** do assets: eram de
+  produtos que não vamos usar. Recuperáveis pelo histórico do git. O fluxo
+  blank + arte + receita continua válido — será refeito sobre a base nova
+  quando a plataforma estiver decidida.
+- **Varredura das 77 receitas feita** (`2026-07-28-varredura-receitas.md`): 6
+  torsos suspeitos, 4 sem torso. Vale como histórico de medição; a
+  reconstrução aguarda a decisão de plataforma.
+- **Nenhuma arte chega a 300 DPI** no tamanho em que imprime
+  (`2026-07-28-dpi-artes.md`): padrão de export foi 3500 px para 40 cm =
+  222 DPI. Para POD premium (IzzyPrint recomenda 300), as artes precisam de
+  re-export/regeneração a 4724 px de altura, ou vetorização. A IzzyPrint
+  também limita 30×40 cm no editor público, e temos costas de até 35,2 cm —
+  confirmar o limite do fluxo POD na conta.
+
 ## Medições fechadas
 
 - Placement por produto, régua-pela-arte sobre os 48 mockups oficiais.
@@ -44,7 +70,12 @@ da malha e achatava a estampa. É provável que o vício se repita.
 
 ## Pendências do projeto
 
-1. Reconstruir o catálogo com o compositor novo.
+0. **Avaliar a IzzyPrint**: produtos-teste na conta do dono, compra de
+   amostras, tabela de custos POD, integração Nuvemshop, área máxima de
+   estampa e white label. Se aprovada: refazer artes a 300 DPI, novos blanks
+   com o casting e integração.
+1. Reconstruir o catálogo com o compositor novo (aguarda a decisão de
+   plataforma).
 2. Publicar, com autorização produto a produto.
 3. Reconciliar 49 produtos e variantes entre Nuvemshop e YouDraw.
 4. Completar páginas de produto: material, modelagem, medidas, prazo POD,
