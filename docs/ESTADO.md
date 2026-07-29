@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-28
+atualizado: 2026-07-29
 ---
 
 # Estado do projeto
@@ -15,6 +15,19 @@ Máximo 3 frentes ativas, nesta ordem:
    `nuvemshop/auditoria/2026-07-29-conselho-vitrine/`.
 2. **Capas de produto**: reconstrução com o compositor novo (6 suspeitos + 4 sem torso primeiro).
 3. **Avaliação IzzyPrint** (amostras Boxy + Oversized + Canguru em G; aguarda WhatsApp).
+
+### Vitrine v2, estado de 29/07 (dia 2)
+
+Feito e verificado: header pela régua da landing (wordmark, nav, Sacola como CTA),
+UTM em todo link para a loja, copy sem "sob demanda" e sem "Loja oficial", lints
+novos (`link-check`, `parity-tokens`), cenários canônicos das coleções no ar.
+
+**Sala de aprovação em `/loja-preview/gates/`**: GATE B com direção aprovada pelo
+dono em 29/07, pendente só a escolha da cena STREET definitiva (Brasília SCS
+adotada por padrão, beco de SP em espera). **GATE C aguardando escolha do dono**:
+duas candidatas de hero com casting e duas de manifesto, originais em
+`nimbus-assets/marketing/2026-07-29-vitrine/`. Nada entra nas páginas da loja
+antes do ok, gate a gate.
 
 **Bloqueado até nova ordem**: ticket Nuvemshop do script onload (retirado em 29/07).
 **Bloqueador de lançamento oficial da vitrine como loja**: dono ainda não tem empresa

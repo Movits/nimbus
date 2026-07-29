@@ -1,0 +1,54 @@
+{
+  "rodada": "2026-07-29 vitrine v2",
+  "nota": "GATE B: direção das quatro cenas aprovada pelo dono em 29/07 (\"as outras ficaram legais\"). Pendente: escolher a cena STREET definitiva. GATE C: candidatas de hero com casting e de manifesto abaixo, aguardando escolha. Nada entra nas páginas da loja antes do seu ok.",
+  "itens": [
+    {
+      "titulo": "Cenário STREET · Brasília SCS",
+      "media": "cenario-street-1600.webp",
+      "situacao": "adotado por padrão",
+      "pergunta": "É a cena STREET definitiva? Conversa com o DNA modernista e com o cenário NUVEM. Para trocar pela de SP, basta pedir."
+    },
+    {
+      "titulo": "Cenário STREET · beco em São Paulo (alternativa)",
+      "media": "gate-cenario-street-sp-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Alternativa guardada. Se preferir esta como cara da STREET, a troca é um comando."
+    },
+    {
+      "titulo": "Cenário RELÍQUIA · interior de igreja",
+      "media": "cenario-reliquia-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Direção aprovada em 29/07. Confirmar que segue como cara da RELÍQUIA."
+    },
+    {
+      "titulo": "Cenário NUVEM · Esplanada",
+      "media": "cenario-nuvem-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Direção aprovada em 29/07. Confirmar que segue como cara da NUVEM."
+    },
+    {
+      "titulo": "GATE C · Hero com casting · curva de concreto",
+      "media": "gate-hero-casting-curva-1600.webp",
+      "situacao": "aguardando escolha",
+      "pergunta": "Candidata A para o hero da vitrine: camiseta off-white, curva de concreto e céu aberto à esquerda para o título. Se aprovar, substitui a cena sem pessoas que está no ar."
+    },
+    {
+      "titulo": "GATE C · Hero com casting · colunas do Planalto",
+      "media": "gate-hero-casting-planalto-1600.webp",
+      "situacao": "aguardando escolha",
+      "pergunta": "Candidata B para o hero: mesmas roupas e casting, fundo de colunas modernistas. Escolha A ou B, ou peça outra rodada."
+    },
+    {
+      "titulo": "GATE C · Manifesto · beco com luz direta",
+      "media": "gate-manifesto-beco-luz-1600.webp",
+      "situacao": "aguardando escolha",
+      "pergunta": "Candidata A para a banda do manifesto: camiseta preta, beco de São Paulo, grafite abstrato colorido. Segundo casting, para a vitrine não ficar com uma cara só."
+    },
+    {
+      "titulo": "GATE C · Manifesto · beco em sombra",
+      "media": "gate-manifesto-beco-sombra-1600.webp",
+      "situacao": "aguardando escolha",
+      "pergunta": "Candidata B para o manifesto: mesma cena com luz cortada e sombra dura. Atenção: o fundo tem letras de pichação legíveis; se incomodar, descartamos. Escolha A ou B, ou peça outra rodada."
+    }
+  ]
+}

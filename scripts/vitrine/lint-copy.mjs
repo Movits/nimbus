@@ -34,8 +34,26 @@ for (const p of cat.produtos) {
   if ((p.descricao_html.match(/Confirmar no painel/i) || []).length) erros.push(`${p.id}: marcador interno vazou para a copy`);
 }
 
+// termos banidos da copy pública (decisão do dono, 29/07): a vitrine vende a
+// peça, não o método de produção; "loja oficial" é muleta de marca alheia.
+const BANIDOS = [/sob demanda/i, /print[ -]?on[ -]?demand/i, /loja oficial/i];
+const DIR_HTML = path.join(RAIZ, "public/loja-preview");
+(function anda(dir) {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) anda(p);
+    else if (e.name.endsWith(".html")) {
+      const html = fs.readFileSync(p, "utf-8");
+      for (const re of BANIDOS)
+        if (re.test(html)) erros.push(`${path.relative(RAIZ, p)}: contém "${html.match(re)[0]}"`);
+    }
+  }
+})(DIR_HTML);
+for (const re of BANIDOS)
+  if (re.test(texto)) erros.push(`catálogo contém "${texto.match(re)[0]}"`);
+
 if (erros.length) {
   console.error("LINT FALHOU:\n" + erros.map((e) => "  - " + e).join("\n"));
   process.exit(1);
 }
-console.log(`lint OK: ${cat.produtos.length} produtos limpos`);
+console.log(`lint OK: ${cat.produtos.length} produtos limpos, HTML sem termos banidos`);

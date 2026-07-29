@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-07-29T14:30:08.550Z",
+ "gerado_em": "2026-07-29T21:18:00.307Z",
  "loja": {
   "base": "https://loja.nimbuswear.com.br",
   "frete_gratis_acima_de": 199
@@ -34,9 +34,9 @@
    "preco_formatado": "R$49,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/wildstyle/",
    "resumo": "A palavra NIMBUS em grafite wildstyle, com contorno, spray e auréola. A assinatura da marca em linguagem de rua.",
-   "descricao_html": "<p>A palavra NIMBUS em grafite wildstyle, com contorno, spray e auréola. A assinatura da marca em linguagem de rua.</p>\n<h2>A peça</h2>\n<p>100% algodão. Bolsa reutilizável. Cor: crua, no algodão natural.</p>\n<h2>Medidas</h2>\n<p>41x35 cm; alças de 60 cm.</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavável; instruções completas aguardam confirmação da YouDraw.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>A palavra NIMBUS em grafite wildstyle, com contorno, spray e auréola. A assinatura da marca em linguagem de rua.</p>\n<h2>A peça</h2>\n<p>100% algodão. Bolsa reutilizável. Cor: crua, no algodão natural.</p>\n<h2>Medidas</h2>\n<p>41x35 cm; alças de 60 cm.</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavável; instruções completas aguardam confirmação da YouDraw.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "NIMBUS Wildstyle | Ecobag | NIMBUS",
-   "meta_description": "NIMBUS Wildstyle em ecobag NIMBUS. Bolsa reutilizável. Produção sob demanda no Brasil.",
+   "meta_description": "NIMBUS Wildstyle em ecobag NIMBUS. Bolsa reutilizável. Feita no Brasil, para você.",
    "ficha": {
     "material": "100% algodão",
     "modelagem": "Bolsa reutilizável",
@@ -51,7 +51,12 @@
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8c6586eaa6a700371617840585774123-640-0.webp"
     ],
-    "por_cor": {},
+    "por_cor": {
+     "Crua": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8c6586eaa6a700371617840585774123-640-0.webp",
+      "costas": null
+     }
+    },
     "fonte_px": 500,
     "caixa_max_css": 400
    },
@@ -87,9 +92,9 @@
    "preco_formatado": "R$149,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste3/",
    "resumo": "São Miguel Arcanjo entre nuvens, em traço celeste e cores suaves. A proteção do arcanjo na linguagem mais leve da NIMBUS.",
-   "descricao_html": "<p>São Miguel Arcanjo entre nuvens, em traço celeste e cores suaves. A proteção do arcanjo na linguagem mais leve da NIMBUS.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>São Miguel Arcanjo entre nuvens, em traço celeste e cores suaves. A proteção do arcanjo na linguagem mais leve da NIMBUS.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "São Miguel Celeste | Camiseta Premium | NIMBUS",
-   "meta_description": "São Miguel Celeste em camiseta premium NIMBUS. Modelagem ajustada unissex. Produção sob demanda no Brasil.",
+   "meta_description": "São Miguel Celeste em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
    "ficha": {
     "material": "100% algodão penteado, fio 30/1",
     "modelagem": "Modelagem ajustada unissex",
@@ -99,14 +104,17 @@
     "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
    },
    "imagens": {
-    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca346e209d61c0b06b17824996722709-640-0.webp",
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca346e209d61c0b06b17824996722709-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca346e209d61c0b06b17824996722709-640-0.webp"
     ],
     "por_cor": {
-     "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-640-0.webp"
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6b5b5fe26be975947817824996689909-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca346e209d61c0b06b17824996722709-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
@@ -171,9 +179,9 @@
    "preco_formatado": "R$149,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/",
    "resumo": "São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.",
-   "descricao_html": "<p>São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "São Jorge Neobarroco | Camiseta Premium | NIMBUS",
-   "meta_description": "São Jorge Neobarroco em camiseta premium NIMBUS. Modelagem ajustada unissex. Produção sob demanda no Brasil.",
+   "meta_description": "São Jorge Neobarroco em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
    "ficha": {
     "material": "100% algodão penteado, fio 30/1",
     "modelagem": "Modelagem ajustada unissex",
@@ -184,7 +192,7 @@
    },
    "imagens": {
     "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-640-0.webp",
@@ -192,8 +200,14 @@
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp"
     ],
     "por_cor": {
-     "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp",
-     "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp"
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp"
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
@@ -291,9 +305,9 @@
    "preco_formatado": "R$149,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/aparecida-spray3/",
    "resumo": "Nossa Senhora Aparecida em stencil de spray dourado, com cores do Brasil. Devoção brasileira traduzida para o streetwear contemporâneo.",
-   "descricao_html": "<p>Nossa Senhora Aparecida em stencil de spray dourado, com cores do Brasil. Devoção brasileira traduzida para o streetwear contemporâneo.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>Nossa Senhora Aparecida em stencil de spray dourado, com cores do Brasil. Devoção brasileira traduzida para o streetwear contemporâneo.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "Aparecida Spray | Camiseta Premium | NIMBUS",
-   "meta_description": "Aparecida Spray em camiseta premium NIMBUS. Modelagem ajustada unissex. Produção sob demanda no Brasil.",
+   "meta_description": "Aparecida Spray em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
    "ficha": {
     "material": "100% algodão penteado, fio 30/1",
     "modelagem": "Modelagem ajustada unissex",
@@ -303,14 +317,17 @@
     "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
    },
    "imagens": {
-    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9d85b9493a39283c5e17826029987625-640-0.webp",
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9d85b9493a39283c5e17826029987625-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9d85b9493a39283c5e17826029987625-640-0.webp"
     ],
     "por_cor": {
-     "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-640-0.webp"
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-291abeb85d11bd740217826029958147-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9d85b9493a39283c5e17826029987625-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
@@ -375,9 +392,9 @@
    "preco_formatado": "R$179,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco2/",
    "resumo": "São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.",
-   "descricao_html": "<p>São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "São Jorge Neobarroco | Camiseta Oversized Premium | NIMBUS",
-   "meta_description": "São Jorge Neobarroco em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Produção sob demanda no Brasil.",
+   "meta_description": "São Jorge Neobarroco em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
    "ficha": {
     "material": "100% algodão",
     "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
@@ -387,8 +404,8 @@
     "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
    },
    "imagens": {
-    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b2826ba6af2429696e17824987184670-640-0.webp",
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-239d054b7233e3d8e417824987171640-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a0ec9c5fe21b46e8f17824987149010-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b2826ba6af2429696e17824987184670-640-0.webp",
@@ -396,8 +413,14 @@
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-239d054b7233e3d8e417824987171640-640-0.webp"
     ],
     "por_cor": {
-     "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-640-0.webp",
-     "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a0ec9c5fe21b46e8f17824987149010-640-0.webp"
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a0ec9c5fe21b46e8f17824987149010-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-239d054b7233e3d8e417824987171640-640-0.webp"
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-03eb79f87e559a64d417824987160839-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b2826ba6af2429696e17824987184670-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
@@ -495,9 +518,9 @@
    "preco_formatado": "R$179,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/wildstyle3/",
    "resumo": "A palavra NIMBUS em grafite wildstyle, com contorno, spray e auréola. A assinatura da marca em linguagem de rua.",
-   "descricao_html": "<p>A palavra NIMBUS em grafite wildstyle, com contorno, spray e auréola. A assinatura da marca em linguagem de rua.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>A palavra NIMBUS em grafite wildstyle, com contorno, spray e auréola. A assinatura da marca em linguagem de rua.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "NIMBUS Wildstyle | Camiseta Oversized Premium | NIMBUS",
-   "meta_description": "NIMBUS Wildstyle em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Produção sob demanda no Brasil.",
+   "meta_description": "NIMBUS Wildstyle em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
    "ficha": {
     "material": "100% algodão",
     "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
@@ -507,8 +530,8 @@
     "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
    },
    "imagens": {
-    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0a5281ab588af684f117824993010175-640-0.webp",
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-884f6f650392668c0c17824992998960-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b4c3edb4149d44ba517824992976043-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0a5281ab588af684f117824993010175-640-0.webp",
@@ -516,8 +539,14 @@
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-884f6f650392668c0c17824992998960-640-0.webp"
     ],
     "por_cor": {
-     "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-640-0.webp",
-     "Off-White": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b4c3edb4149d44ba517824992976043-640-0.webp"
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b4c3edb4149d44ba517824992976043-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-884f6f650392668c0c17824992998960-640-0.webp"
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e1b3260d073e628ec217824992988106-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0a5281ab588af684f117824993010175-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
@@ -615,9 +644,9 @@
    "preco_formatado": "R$299,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-miguel-celeste1/",
    "resumo": "São Miguel Arcanjo entre nuvens, em traço celeste e cores suaves. A proteção do arcanjo na linguagem mais leve da NIMBUS.",
-   "descricao_html": "<p>São Miguel Arcanjo entre nuvens, em traço celeste e cores suaves. A proteção do arcanjo na linguagem mais leve da NIMBUS.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>São Miguel Arcanjo entre nuvens, em traço celeste e cores suaves. A proteção do arcanjo na linguagem mais leve da NIMBUS.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "São Miguel Celeste | Moletom Canguru | NIMBUS",
-   "meta_description": "São Miguel Celeste em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Produção sob demanda no Brasil.",
+   "meta_description": "São Miguel Celeste em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
    "ficha": {
     "material": "50% algodão e 50% poliéster",
     "modelagem": "Modelagem unissex com capuz e bolso canguru",
@@ -627,14 +656,17 @@
     "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
    },
    "imagens": {
-    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-20dcbee71a7a33c44f17824995559342-640-0.webp",
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-20dcbee71a7a33c44f17824995559342-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-20dcbee71a7a33c44f17824995559342-640-0.webp"
     ],
     "por_cor": {
-     "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-640-0.webp"
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cbf37cf23eea00011217824995511582-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-20dcbee71a7a33c44f17824995559342-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
@@ -699,9 +731,9 @@
    "preco_formatado": "R$299,90",
    "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage1/",
    "resumo": "São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.",
-   "descricao_html": "<p>São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "descricao_html": "<p>São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
    "meta_title": "São Jorge Vintage | Moletom Canguru | NIMBUS",
-   "meta_description": "São Jorge Vintage em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Produção sob demanda no Brasil.",
+   "meta_description": "São Jorge Vintage em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
    "ficha": {
     "material": "50% algodão e 50% poliéster",
     "modelagem": "Modelagem unissex com capuz e bolso canguru",
@@ -711,8 +743,8 @@
     "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
    },
    "imagens": {
-    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-640-0.webp",
-    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-465da492d2783af53a17824355163791-640-0.webp",
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-465da492d2783af53a17824355163791-640-0.webp",
+    "hover": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-640-0.webp",
     "galeria": [
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-640-0.webp",
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-465da492d2783af53a17824355163791-640-0.webp",
@@ -720,8 +752,14 @@
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7fefc94136d0b163d817824355175239-640-0.webp"
     ],
     "por_cor": {
-     "Preta": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-640-0.webp",
-     "Branca": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-640-0.webp"
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3ed0a08439a6913abe17824355113983-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-465da492d2783af53a17824355163791-640-0.webp"
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8b93c01730e3bfcecd17824355127499-640-0.webp",
+      "costas": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7fefc94136d0b163d817824355175239-640-0.webp"
+     }
     },
     "fonte_px": 500,
     "caixa_max_css": 400
