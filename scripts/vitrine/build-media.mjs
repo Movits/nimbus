@@ -31,13 +31,18 @@ const jobs = [];
 jobs.push(editorial(path.join(VITRINE, "hero-editorial-niemeyer.png"), path.join(SAIDA, "hero-editorial-1600.webp"), 1600));
 
 // 2) cenários canônicos das coleções (grão de filme comprime mal: qualidade menor)
-for (const c of ["street", "reliquia", "nuvem"]) {
+//    STREET é a cena do beco de SP desde 29/07 (escolha do dono no GATE B)
+jobs.push(editorial(path.join(VITRINE, "cenario-street-sp.png"), path.join(SAIDA, "cenario-street-1600.webp"), 1600, 68));
+for (const c of ["reliquia", "nuvem"]) {
   jobs.push(editorial(path.join(VITRINE, `cenario-${c}.png`), path.join(SAIDA, `cenario-${c}-1600.webp`), 1600, 68));
 }
 
-// 3) candidatas em aprovação: aparecem só em /gates/, nunca nas páginas da loja
-jobs.push(editorial(path.join(VITRINE, "cenario-street-alternativa-sp.png"), path.join(SAIDA, "gate-cenario-street-sp-1600.webp"), 1600, 68));
-for (const c of ["hero-casting-curva", "hero-casting-planalto", "manifesto-beco-luz", "manifesto-beco-sombra"]) {
+// manifesto da home: beco em sombra, escolha do dono no GATE C em 29/07
+jobs.push(editorial(path.join(VITRINE, "manifesto-beco-sombra.png"), path.join(SAIDA, "manifesto-1600.webp"), 1600, 68));
+
+// 3) candidatas e alternativas em espera: aparecem só em /gates/, nunca nas páginas da loja
+for (const c of ["cenario-street-brasilia", "hero-casting-curva", "hero-casting-planalto",
+  "hero-casting-remix-a", "hero-casting-remix-b", "manifesto-beco-luz", "manifesto-beco-sombra"]) {
   jobs.push(editorial(path.join(VITRINE, `${c}.png`), path.join(SAIDA, `gate-${c}-1600.webp`), 1600, 68));
 }
 
@@ -48,6 +53,7 @@ const APOSENTADOS = [
   "hero-casting-1600.webp", "editorial-street-1200.webp", "editorial-reliquia-1200.webp",
   "editorial-nuvem-1200.webp", "caimento-costas-1400.webp",
   "colecao-street-900.webp", "colecao-reliquia-900.webp", "colecao-nuvem-900.webp",
+  "gate-cenario-street-sp-1600.webp",
 ];
 for (const f of APOSENTADOS) {
   const p = path.join(SAIDA, f);

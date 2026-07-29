@@ -1,18 +1,18 @@
 {
   "rodada": "2026-07-29 vitrine v2",
-  "nota": "GATE B: direção das quatro cenas aprovada pelo dono em 29/07 (\"as outras ficaram legais\"). Pendente: escolher a cena STREET definitiva. GATE C: candidatas de hero com casting e de manifesto abaixo, aguardando escolha. Nada entra nas páginas da loja antes do seu ok.",
+  "nota": "GATE B fechado em 29/07: a cena STREET definitiva é o beco de São Paulo, escolha do dono; Brasília SCS fica em espera. GATE C manifesto fechado: beco em sombra, que mostra mais o corpo, no ar na home. GATE C hero: remix pronto (corpo da curva, fundo do Planalto), duas candidatas aguardando escolha.",
   "itens": [
     {
-      "titulo": "Cenário STREET · Brasília SCS",
+      "titulo": "Cenário STREET · beco em São Paulo",
       "media": "cenario-street-1600.webp",
-      "situacao": "adotado por padrão",
-      "pergunta": "É a cena STREET definitiva? Conversa com o DNA modernista e com o cenário NUVEM. Para trocar pela de SP, basta pedir."
+      "situacao": "no ar",
+      "pergunta": "Escolhida pelo dono em 29/07 como a cena STREET definitiva."
     },
     {
-      "titulo": "Cenário STREET · beco em São Paulo (alternativa)",
-      "media": "gate-cenario-street-sp-1600.webp",
+      "titulo": "Cenário STREET · Brasília SCS (em espera)",
+      "media": "gate-cenario-street-brasilia-1600.webp",
       "situacao": "em espera",
-      "pergunta": "Alternativa guardada. Se preferir esta como cara da STREET, a troca é um comando."
+      "pergunta": "Ficou como alternativa guardada. Se quiser de volta, a troca é um comando."
     },
     {
       "titulo": "Cenário RELÍQUIA · interior de igreja",
@@ -27,28 +27,40 @@
       "pergunta": "Direção aprovada em 29/07. Confirmar que segue como cara da NUVEM."
     },
     {
-      "titulo": "GATE C · Hero com casting · curva de concreto",
-      "media": "gate-hero-casting-curva-1600.webp",
-      "situacao": "aguardando escolha",
-      "pergunta": "Candidata A para o hero da vitrine: camiseta off-white, curva de concreto e céu aberto à esquerda para o título. Se aprovar, substitui a cena sem pessoas que está no ar."
-    },
-    {
-      "titulo": "GATE C · Hero com casting · colunas do Planalto",
-      "media": "gate-hero-casting-planalto-1600.webp",
-      "situacao": "aguardando escolha",
-      "pergunta": "Candidata B para o hero: mesmas roupas e casting, fundo de colunas modernistas. Escolha A ou B, ou peça outra rodada."
-    },
-    {
-      "titulo": "GATE C · Manifesto · beco com luz direta",
-      "media": "gate-manifesto-beco-luz-1600.webp",
-      "situacao": "aguardando escolha",
-      "pergunta": "Candidata A para a banda do manifesto: camiseta preta, beco de São Paulo, grafite abstrato colorido. Segundo casting, para a vitrine não ficar com uma cara só."
-    },
-    {
       "titulo": "GATE C · Manifesto · beco em sombra",
-      "media": "gate-manifesto-beco-sombra-1600.webp",
+      "media": "manifesto-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Escolhida pelo dono em 29/07 (mostra mais o corpo). Está na banda do manifesto da home."
+    },
+    {
+      "titulo": "GATE C · Manifesto · beco com luz direta (em espera)",
+      "media": "gate-manifesto-beco-luz-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Preterida em 29/07 por mostrar menos o corpo. Fica guardada."
+    },
+    {
+      "titulo": "GATE C · Hero remix A · colunata com espelho d'água",
+      "media": "gate-hero-casting-remix-a-1600.webp",
       "situacao": "aguardando escolha",
-      "pergunta": "Candidata B para o manifesto: mesma cena com luz cortada e sombra dura. Atenção: o fundo tem letras de pichação legíveis; se incomodar, descartamos. Escolha A ou B, ou peça outra rodada."
+      "pergunta": "Remix pedido em 29/07: corpo até a coxa, fundo de colunas do Planalto. Nesta, a colunata foge em curva com espelho d'água à esquerda. Se aprovar, substitui a cena sem pessoas do hero."
+    },
+    {
+      "titulo": "GATE C · Hero remix B · colunata em contra-plongée",
+      "media": "gate-hero-casting-remix-b-1600.webp",
+      "situacao": "aguardando escolha",
+      "pergunta": "Mesmo remix, ângulo de baixo para cima, colunas mais presentes. Escolha A ou B, ou peça outra rodada."
+    },
+    {
+      "titulo": "GATE C · Hero · rodada anterior · curva de concreto",
+      "media": "gate-hero-casting-curva-1600.webp",
+      "situacao": "insumo do remix",
+      "pergunta": "O dono aprovou este enquadramento, que mostra mais o corpo, e pediu o fundo da outra. Fica como registro da rodada."
+    },
+    {
+      "titulo": "GATE C · Hero · rodada anterior · colunas do Planalto",
+      "media": "gate-hero-casting-planalto-1600.webp",
+      "situacao": "insumo do remix",
+      "pergunta": "O dono aprovou este fundo, com o enquadramento da outra. Fica como registro da rodada."
     }
   ]
 }
