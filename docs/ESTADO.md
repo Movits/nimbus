@@ -7,6 +7,19 @@ atualizado: 2026-07-28
 
 Esta é a única página que envelhece rápido. Leia antes de agir e atualize ao sair.
 
+## Sequenciamento vigente (29/07, ordem do conselho da 2ª rodada)
+
+Máximo 3 frentes ativas, nesta ordem:
+1. **Vitrine v2** (`public/loja-preview/`): timebox de 5 dias úteis; se estourar, corta-se
+   escopo visual, nunca funil nem medição. Ata e prompt em
+   `nuvemshop/auditoria/2026-07-29-conselho-vitrine/`.
+2. **Capas de produto**: reconstrução com o compositor novo (6 suspeitos + 4 sem torso primeiro).
+3. **Avaliação IzzyPrint** (amostras Boxy + Oversized + Canguru em G; aguarda WhatsApp).
+
+**Bloqueado até nova ordem**: ticket Nuvemshop do script onload (retirado em 29/07).
+**Bloqueador de lançamento oficial da vitrine como loja**: dono ainda não tem empresa
+registrada; o bloco de identificação do rodapé (CDC) fica pendente até existir CNPJ/MEI.
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito

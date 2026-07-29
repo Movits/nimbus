@@ -70,6 +70,7 @@ function urlImagem(u) {
   return s;
 }
 
+const CURADORIA = JSON.parse(fs.readFileSync(path.join(RAIZ, "scripts/vitrine/curadoria-fotos.json"), "utf-8"));
 const variantes = lerCsv(path.join(IMPL, "matriz-variantes-nuvemshop-parcial.csv"));
 const copy = new Map(lerCsv(path.join(IMPL, "descricoes-e-seo-draft.csv")).map((r) => [r.product_id, r]));
 const tecnico = new Map(lerCsv(path.join(IMPL, "matriz-produtos-conteudo-tecnico.csv")).map((r) => [r.product_id, r]));
@@ -101,13 +102,22 @@ for (const pid of HEROES) {
 
   // imagens: só família file_name-* (a -vitrine-nimbus- é o lote reprovado)
   const fotos = (g.gallery || []).map(urlImagem).filter((u) => u && u.includes("file_name-"));
+  // curadoria manual (29/07): frente/costas POR COR, corrigindo os rótulos trocados do
+  // products.json. Regra: capa = COSTAS da cor padrão (a arte), hover = FRENTE da MESMA cor.
+  const cur = CURADORIA[pid] || {};
   const porCor = {};
-  for (const [cor, u] of Object.entries(g.colorImages || {})) {
-    const uu = urlImagem(u);
-    if (cores.includes(cor) && uu && uu.includes("file_name-")) porCor[cor] = uu;
+  for (const cor of cores) {
+    const frag = cur[cor] || {};
+    const frente = frag.frente ? fotos.find((u) => u.includes(frag.frente)) : null;
+    const costas = frag.costas ? fotos.find((u) => u.includes(frag.costas)) : null;
+    porCor[cor] = { frente: frente || null, costas: costas || null };
   }
-  const capa = porCor[cores[0]] || fotos[0] || null;
+  const pc0 = porCor[cores[0]] || {};
+  const capa = pc0.costas || pc0.frente || fotos[0] || null;
+  const hover = capa && pc0.costas && pc0.frente ? pc0.frente : null;
   if (!capa) { erros.push(`${pid}: nenhuma foto da familia file_name-*`); continue; }
+  if (cur && Object.keys(cur).length && cores.some((c) => !porCor[c].costas && !porCor[c].frente))
+    erros.push(`${pid}: curadoria nao casou com a galeria`);
 
   const preco = Number(v0.price_brl);
   const [arte, peca] = v0.product_title.split(" | ");
@@ -138,7 +148,7 @@ for (const pid of HEROES) {
       material: t.material || "", modelagem: t.fit || "", gola: t.collar || "",
       estampa: t.print || "", cuidados: t.care || "", medidas: t.measurements || "",
     },
-    imagens: { capa, hover: fotos.find((f) => f !== capa) || null, galeria: fotos, por_cor: porCor, fonte_px: 500, caixa_max_css: 400 },
+    imagens: { capa, hover, galeria: fotos, por_cor: porCor, fonte_px: 500, caixa_max_css: 400 },
     opcoes: { tamanhos, cores },
     variantes_por_cor: dispPorCor,
     variante_padrao: padrao ? padrao.variant_id : null,
