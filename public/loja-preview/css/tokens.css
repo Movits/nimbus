@@ -1,0 +1,97 @@
+/* ===========================================================================
+   NIMBUS vitrine — tokens e primitivas
+   Derivado de src/styles/global.css (paleta e tipografia canônicas).
+   NÃO copiar .section{min-height:100vh} da landing: aqui é loja, não scroll 3D.
+   =========================================================================== */
+:root {
+  --sky: #dcebfa;
+  --cloud: #f7fbff;
+  --blue: #8fc1ea;
+  --deep: #0b2360;
+  --gold: #e9c46a;
+  --ink: #1b2733;
+  --ink-soft: #41506180;
+  --line: rgba(11, 35, 96, 0.14);
+  --shadow: 0 20px 55px rgba(11, 35, 96, 0.12);
+
+  --campo-street: #101418;
+  --campo-reliquia: #0b2360;
+  --campo-nuvem: #dcebfa;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --maxw-loja: 1280px;
+  --maxw-listagem: 1180px;
+  --pad: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cloud);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font: inherit; cursor: pointer; }
+
+/* --- primitivas de texto ------------------------------------------------- */
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.kicker--gold { color: var(--gold); opacity: 1; }
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+}
+.display--md { font-size: clamp(2rem, 4vw, 3.2rem); }
+
+.lede {
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  line-height: 1.65;
+  max-width: 34em;
+}
+.note { font-size: 0.85rem; line-height: 1.6; color: #415061; }
+
+/* --- botões --------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.9em 1.8em;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--primary { background: var(--deep); color: var(--cloud); box-shadow: var(--shadow); }
+.btn--primary:hover { background: #12307c; }
+.btn--gold { background: var(--gold); color: var(--deep); }
+.btn--ghost { border-color: var(--line); color: var(--deep); background: transparent; }
+.btn--ghost:hover { border-color: var(--deep); }
+
+/* --- reveal (IntersectionObserver põe .in) -------------------------------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.reveal:nth-child(2) { transition-delay: 0.08s; }
+.reveal:nth-child(3) { transition-delay: 0.16s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+}

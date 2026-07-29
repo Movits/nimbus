@@ -10,7 +10,12 @@
     "typecheck": "tsc --noEmit",
     "assets": "node scripts/cutout.mjs",
     "finalize": "node scripts/finalize-prints.mjs",
-    "cutout:inbox": "node scripts/transparentize.mjs"
+    "cutout:inbox": "node scripts/transparentize.mjs",
+    "vitrine:catalogo": "node scripts/vitrine/build-catalogo.mjs",
+    "vitrine:media": "node scripts/vitrine/build-media.mjs",
+    "vitrine:paginas": "node scripts/vitrine/build-paginas.mjs",
+    "vitrine:lint": "node scripts/vitrine/lint-copy.mjs",
+    "vitrine": "npm run vitrine:catalogo && npm run vitrine:lint && npm run vitrine:paginas"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",
