@@ -29,13 +29,13 @@ Custo = **piso** da YouDraw (config mais barata). **Markup = lucro ÷ custo** (o
 | **Camiseta Oversized Premium** ⭐âncora | 83,86 | **R$ 179,90** | 96,04 | 53% | 115% |
 | **Moletom Canguru c/ Capuz** ⭐âncora | 121,20 | **R$ 299,90** | 178,70 | 60% | 147% |
 | Blusão Moletom (crewneck) | 110,40 | **R$ 269,90** | 159,50 | 59% | 145% |
-| Ecobag | 16,93 | **R$ 69,90** | 52,97 | 76% | 313% |
+| Ecobag | 16,93 | **R$ 49,90** | 32,97 | 66% | 195% |
 
 (Pós-prova social, dá pra subir a camiseta p/ R$159,90 e a oversized p/ R$199,90.)
 
 ## Estratégia de preço
 - **Âncoras de marca:** Oversized Premium (R$179,90) e Moletom Canguru (R$299,90) definem o "teto"
-  premium. Porta de entrada = **Camiseta Premium (R$149,90)** e **Ecobag (R$69,90)**.
+  premium. Porta de entrada = **Camiseta Premium (R$149,90)** e **Ecobag (R$49,90)**.
 - **Piso premium:** sem peças de entrada baratas (cortamos básica/regata/baby/infantil) — a
   camiseta mais barata é a Premium a **R$149,90**, o que reforça o posicionamento.
 - **Promo de estreia sem queimar o premium:** manter o preço de tabela e usar **cupom de abertura

@@ -1,0 +1,176 @@
+// Gera public/loja-preview/catalogo.json a partir das fontes já auditadas.
+//
+// Fontes e papel de cada uma (não misturar):
+//   matriz-variantes-nuvemshop-parcial.csv  -> verdade comercial: preço, cor,
+//     tamanho, SKU, variant_id, URL da loja
+//   catalog/nuvemshop-products.json         -> APENAS slug e URLs de imagem da
+//     família file_name-* (cor e preço dele estão vencidos, é de 16/07)
+//   descricoes-e-seo-draft.csv              -> copy, meta e o status que decide
+//     quem entra
+//   matriz-produtos-conteudo-tecnico.csv    -> ficha técnica
+//
+// Normalizações que valem como regra:
+//   toda URL vira https (o build FALHA se sobrar http://)
+//   todo sufixo de imagem vira -640-0.webp (o maior que a CDN entrega: 500x500)
+//   as capas da família -vitrine-nimbus- (lote reprovado em 26/07) nunca entram
+//
+// Uso: node scripts/vitrine/build-catalogo.mjs [--dry]
+import fs from "node:fs";
+import path from "node:path";
+
+const RAIZ = path.resolve(import.meta.dirname, "..", "..");
+const IMPL = path.join(RAIZ, "nuvemshop/auditoria/2026-07-21/implementacao");
+const SAIDA = path.join(RAIZ, "public/loja-preview/catalogo.json");
+const DRY = process.argv.includes("--dry");
+
+// Os 8 heroes aprovados no plano (cobrem as 3 coleções e 4 faixas de preço).
+const HEROES = [
+  "355581274", // NIMBUS Wildstyle | Ecobag            STREET   49,90
+  "352723243", // São Miguel Celeste | Camiseta        NUVEM   149,90
+  "352718999", // São Jorge Neobarroco | Camiseta      RELÍQUIA 149,90 piloto
+  "352889132", // Aparecida Spray | Camiseta           STREET  149,90 piloto
+  "352718943", // São Jorge Neobarroco | Oversized     RELÍQUIA 179,90
+  "352721633", // NIMBUS Wildstyle | Oversized         STREET  179,90
+  "352722685", // São Miguel Celeste | Moletom Canguru NUVEM   299,90
+  "352618878", // São Jorge Vintage | Moletom Canguru  RELÍQUIA 299,90 piloto
+];
+
+const ROTULO = { STREET: "STREET", RELIQUIA: "RELÍQUIA", NUVEM: "NUVEM" };
+const ORDEM_TAM = ["Único", "P", "M", "G", "GG", "EG"];
+
+function lerCsv(arquivo) {
+  const texto = fs.readFileSync(arquivo, "utf-8");
+  const linhas = [];
+  let campo = "", linha = [], dentro = false;
+  for (let i = 0; i < texto.length; i++) {
+    const c = texto[i];
+    if (dentro) {
+      if (c === '"' && texto[i + 1] === '"') { campo += '"'; i++; }
+      else if (c === '"') dentro = false;
+      else campo += c;
+    } else if (c === '"') dentro = true;
+    else if (c === ",") { linha.push(campo); campo = ""; }
+    else if (c === "\n" || c === "\r") {
+      if (campo !== "" || linha.length) { linha.push(campo); linhas.push(linha); campo = ""; linha = []; }
+      if (c === "\r" && texto[i + 1] === "\n") i++;
+    } else campo += c;
+  }
+  if (campo !== "" || linha.length) { linha.push(campo); linhas.push(linha); }
+  const cab = linhas.shift();
+  return linhas.map((l) => Object.fromEntries(cab.map((k, i) => [k, l[i] ?? ""])));
+}
+
+function urlImagem(u) {
+  if (!u) return null;
+  let s = u.trim();
+  if (s.startsWith("//")) s = "https:" + s;
+  s = s.replace(/^http:\/\//, "https://");
+  // força o maior tamanho real da CDN
+  s = s.replace(/-\d+-\d+(\.webp)$/, "-640-0$1");
+  return s;
+}
+
+const variantes = lerCsv(path.join(IMPL, "matriz-variantes-nuvemshop-parcial.csv"));
+const copy = new Map(lerCsv(path.join(IMPL, "descricoes-e-seo-draft.csv")).map((r) => [r.product_id, r]));
+const tecnico = new Map(lerCsv(path.join(IMPL, "matriz-produtos-conteudo-tecnico.csv")).map((r) => [r.product_id, r]));
+const galeria = new Map(
+  JSON.parse(fs.readFileSync(path.join(RAIZ, "nuvemshop/assets/product-lifestyle/2026-07-16/catalog/nuvemshop-products.json"), "utf-8"))
+    .products.map((p) => [String(p.productId), p])
+);
+
+const brl = (n) => "R$" + n.toFixed(2).replace(".", ",");
+const erros = [];
+const produtos = [];
+
+for (const pid of HEROES) {
+  const vs = variantes.filter((v) => v.product_id === pid);
+  if (!vs.length) { erros.push(`${pid}: sem variantes no CSV`); continue; }
+  const c = copy.get(pid);
+  if (!c) { erros.push(`${pid}: sem copy`); continue; }
+  if (!c.status.startsWith("PRONTO")) { erros.push(`${pid}: copy nao esta PRONTO (${c.status})`); continue; }
+  const t = tecnico.get(pid) || {};
+  const g = galeria.get(pid);
+  if (!g) { erros.push(`${pid}: sem galeria no products.json`); continue; }
+
+  const v0 = vs[0];
+  const ehEcobag = v0.garment === "Ecobag";
+  // Ecobag quebra o esquema: a única linha tem size="Bege" e color=""
+  const cores = ehEcobag ? ["Crua"] : [...new Set(vs.map((v) => v.color).filter(Boolean))];
+  const tamanhos = ehEcobag ? ["Único"]
+    : [...new Set(vs.map((v) => v.size).filter(Boolean))].sort((a, b) => ORDEM_TAM.indexOf(a) - ORDEM_TAM.indexOf(b));
+
+  // imagens: só família file_name-* (a -vitrine-nimbus- é o lote reprovado)
+  const fotos = (g.gallery || []).map(urlImagem).filter((u) => u && u.includes("file_name-"));
+  const porCor = {};
+  for (const [cor, u] of Object.entries(g.colorImages || {})) {
+    const uu = urlImagem(u);
+    if (cores.includes(cor) && uu && uu.includes("file_name-")) porCor[cor] = uu;
+  }
+  const capa = porCor[cores[0]] || fotos[0] || null;
+  if (!capa) { erros.push(`${pid}: nenhuma foto da familia file_name-*`); continue; }
+
+  const preco = Number(v0.price_brl);
+  const [arte, peca] = v0.product_title.split(" | ");
+  const resumo = (c.description_html.match(/<p>(.*?)<\/p>/s)?.[1] || "").replace(/<[^>]+>/g, "").trim();
+
+  const dispPorCor = {};
+  for (const cor of cores) {
+    dispPorCor[cor] = vs.filter((v) => (ehEcobag || v.color === cor) && v.available === "true")
+      .map((v) => ({ variant_id: v.nuvemshop_variant_id, sku: v.sku, tamanho: ehEcobag ? "Único" : v.size, preco: Number(v.price_brl) }));
+  }
+  const padrao = (dispPorCor[cores[0]] || []).find((v) => ["M", "G", "P", "Único"].includes(v.tamanho)) || (dispPorCor[cores[0]] || [])[0];
+
+  produtos.push({
+    id: pid,
+    slug: g.slug,
+    nome: v0.product_title,
+    arte, peca,
+    colecao: v0.collection.toLowerCase(),
+    colecao_rotulo: ROTULO[v0.collection],
+    preco,
+    preco_formatado: brl(preco),
+    url_loja: v0.product_url,
+    resumo: resumo.slice(0, 180),
+    descricao_html: c.description_html,
+    meta_title: c.meta_title,
+    meta_description: c.meta_description,
+    ficha: {
+      material: t.material || "", modelagem: t.fit || "", gola: t.collar || "",
+      estampa: t.print || "", cuidados: t.care || "", medidas: t.measurements || "",
+    },
+    imagens: { capa, hover: fotos.find((f) => f !== capa) || null, galeria: fotos, por_cor: porCor, fonte_px: 500, caixa_max_css: 400 },
+    opcoes: { tamanhos, cores },
+    variantes_por_cor: dispPorCor,
+    variante_padrao: padrao ? padrao.variant_id : null,
+  });
+}
+
+const catalogo = {
+  gerado_em: new Date().toISOString(),
+  loja: { base: "https://loja.nimbuswear.com.br", frete_gratis_acima_de: 199 },
+  colecoes: [
+    { id: "street", rotulo: "STREET", resumo: "Grafite, spray e stencil. Fé com energia de rua." },
+    { id: "reliquia", rotulo: "RELÍQUIA", resumo: "Band-tee devocional: halftone, barroco e ouro." },
+    { id: "nuvem", rotulo: "NUVEM", resumo: "Céu, nuvens e auréolas. O DNA da marca." },
+  ],
+  produtos,
+};
+
+// gates
+const json = JSON.stringify(catalogo, null, 1);
+if (/http:\/\//.test(json)) erros.push("sobrou http:// no JSON");
+if (produtos.length !== HEROES.length) erros.push(`esperava ${HEROES.length} produtos, saiu ${produtos.length}`);
+
+if (erros.length) {
+  console.error("ERROS:\n" + erros.map((e) => "  - " + e).join("\n"));
+  process.exit(1);
+}
+if (DRY) {
+  for (const p of produtos)
+    console.log(`${p.id} ${p.colecao_rotulo.padEnd(8)} ${p.preco_formatado.padEnd(9)} cores=${p.opcoes.cores.join("/")} fotos=${p.imagens.galeria.length} ${p.nome}`);
+  console.log(`\nOK (dry): ${produtos.length} produtos, nada gravado`);
+} else {
+  fs.mkdirSync(path.dirname(SAIDA), { recursive: true });
+  fs.writeFileSync(SAIDA, json);
+  console.log(`OK: ${SAIDA} com ${produtos.length} produtos`);
+}
