@@ -1,6 +1,6 @@
 {
   "rodada": "2026-07-29 vitrine v2",
-  "nota": "GATE B fechado em 29/07: a cena STREET definitiva é o beco de São Paulo, escolha do dono; Brasília SCS fica em espera. GATE C manifesto fechado: beco em sombra, que mostra mais o corpo, no ar na home. GATE C hero: remix pronto (corpo da curva, fundo do Planalto), duas candidatas aguardando escolha.",
+  "nota": "GATES B e C fechados em 29/07. STREET definitiva: beco de São Paulo (Brasília SCS em espera). Manifesto: beco em sombra, no ar na banda da home. Hero: remix B (contra-plongée nas colunas do Planalto), no ar na home; remix A e a cena sem pessoas ficam em espera.",
   "itens": [
     {
       "titulo": "Cenário STREET · beco em São Paulo",
@@ -39,16 +39,22 @@
       "pergunta": "Preterida em 29/07 por mostrar menos o corpo. Fica guardada."
     },
     {
-      "titulo": "GATE C · Hero remix A · colunata com espelho d'água",
-      "media": "gate-hero-casting-remix-a-1600.webp",
-      "situacao": "aguardando escolha",
-      "pergunta": "Remix pedido em 29/07: corpo até a coxa, fundo de colunas do Planalto. Nesta, a colunata foge em curva com espelho d'água à esquerda. Se aprovar, substitui a cena sem pessoas do hero."
+      "titulo": "GATE C · Hero · remix B · colunata em contra-plongée",
+      "media": "hero-editorial-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Escolhida pelo dono em 29/07. É o hero da home: corpo até a coxa, colunas do Planalto, céu livre para o título."
     },
     {
-      "titulo": "GATE C · Hero remix B · colunata em contra-plongée",
-      "media": "gate-hero-casting-remix-b-1600.webp",
-      "situacao": "aguardando escolha",
-      "pergunta": "Mesmo remix, ângulo de baixo para cima, colunas mais presentes. Escolha A ou B, ou peça outra rodada."
+      "titulo": "GATE C · Hero · remix A · colunata com espelho d'água (em espera)",
+      "media": "gate-hero-casting-remix-a-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Preterida em 29/07. Fica guardada; a troca é um comando."
+    },
+    {
+      "titulo": "Hero anterior · cena sem pessoas (em espera)",
+      "media": "gate-hero-editorial-niemeyer-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Era o hero até 29/07, quando o remix B com casting entrou no lugar. Fica guardada."
     },
     {
       "titulo": "GATE C · Hero · rodada anterior · curva de concreto",
