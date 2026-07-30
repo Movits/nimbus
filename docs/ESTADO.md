@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-29
+atualizado: 2026-07-30
 ---
 
 # Estado do projeto
@@ -16,11 +16,26 @@ Máximo 3 frentes ativas, nesta ordem:
 2. **Capas de produto**: reconstrução com o compositor novo (6 suspeitos + 4 sem torso primeiro).
 3. **Avaliação IzzyPrint** (amostras Boxy + Oversized + Canguru em G; aguarda WhatsApp).
 
-### Vitrine v2, estado de 29/07 (dia 2)
+### Vitrine v2, estado de 30/07 (dia 3)
 
-Feito e verificado: header pela régua da landing (wordmark, nav, Sacola como CTA),
-UTM em todo link para a loja, copy sem "sob demanda" e sem "Loja oficial", lints
-novos (`link-check`, `parity-tokens`), cenários canônicos das coleções no ar.
+Dia 2 **publicado e aceito pelo dono em 30/07** (header pela régua da landing,
+UTM, copy sem "sob demanda" e sem "Loja oficial", lints `link-check` e
+`parity-tokens`, cenários canônicos, GATES B e C no ar).
+
+Dia 3 (feedback do dono de 30/07, decisão em
+`docs/decisoes/2026-07-30-visual-loja-e-sacola.md`):
+
+- **Visual pela loja publicada**: announcement e footer claros (footer com borda
+  dourada e faixa legal navy), títulos e botão primário navy, sublinhado ouro no
+  nav. A vitrine e a loja devem ficar idênticas; o que faltar do lado Nuvemshop
+  é lote único no painel, pós aceite.
+- **Sacola sem sair da vitrine**: PDP com POST do formulário oficial da loja em
+  iframe oculto + contador local; handoff só no carrinho. **Pendente: teste de
+  funil em produção com 2 produtos antes de considerar aprovado.**
+- **GATE A aberto**: protótipo de densidade no ar em
+  `/loja-preview/prototipo-grid/` (variantes A atual, B 5 colunas, C 6 colunas).
+  Aguarda escolha do dono; a escolhida vira o grid, as outras saem do código.
+- **Curadoria de fotos por cor: adiada por ordem do dono (30/07).**
 
 **Sala de aprovação em `/loja-preview/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).

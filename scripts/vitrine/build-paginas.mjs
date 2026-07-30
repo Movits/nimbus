@@ -59,23 +59,25 @@ const header = (medium) => `
   </nav>
   <div class="header__tools">
     <a href="https://nimbuswear.com.br/" data-manifesto>Manifesto</a>
-    <a class="header__cta" href="${esc(SACOLA(medium))}">Sacola</a>
+    <a class="header__cta" href="${esc(SACOLA(medium))}">Sacola<span class="sacola-n" data-sacola-n hidden></span></a>
   </div>
 </header>`;
 
+// réplica do rodapé da loja publicada: corpo claro com borda dourada, colunas
+// com título serif, faixa legal navy. Tagline idêntica à da loja.
 const footer = (medium) => `
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__grid">
-      <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="note" style="color:#b8c6e6;margin-top:1em;max-width:26em">Streetwear católico premium brasileiro. Acima de tudo.</p></div>
-      <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a></div>
-      <div><h4>A marca</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="${esc(utm("https://loja.nimbuswear.com.br/projetos-sociais/", medium))}">Projetos sociais</a></div>
-      <div><h4>Ajuda</h4><a href="${esc(SACOLA(medium))}">Sacola</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a gente</a></div>
+      <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
+      <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA(medium))}">Sacola</a></div>
+      <div><h4>Nimbus</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="${esc(utm("https://loja.nimbuswear.com.br/projetos-sociais/", medium))}">Projetos Sociais</a></div>
+      <div><h4>Ajuda</h4><a href="${esc(utm("https://loja.nimbuswear.com.br/contato/", medium))}">Trocas e devoluções</a><a href="${esc(utm("https://loja.nimbuswear.com.br/contato/", medium))}">Envios e prazos</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
     </div>
-    <div class="footer__meta">
-      <span>© 2026 NIMBUS · nimbuswear.com.br</span>
-      <span>Imagens de campanha. As fotos definitivas de produto estão em produção.</span>
-    </div>
+  </div>
+  <div class="footer__legal">
+    <span>© 2026 NIMBUS · nimbuswear.com.br</span>
+    <span>Imagens de campanha. As fotos definitivas de produto estão em produção.</span>
   </div>
 </footer>`;
 
@@ -197,8 +199,8 @@ ${footer("colecao")}
 const produto = (p) => {
   const urlLoja = utm(p.url_loja, "pdp", p.slug);
   const dados = {
-    url_loja: urlLoja, imagens: p.imagens, opcoes: p.opcoes,
-    variantes_por_cor: p.variantes_por_cor,
+    url_loja: urlLoja, url_carrinho: SACOLA("pdp"), imagens: p.imagens,
+    opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor,
   };
   // galeria com a cor padrão primeiro (costas = arte, depois frente), para os
   // thumbs abrirem coerentes com a capa
@@ -245,7 +247,17 @@ ${header("pdp")}
         </div>
       </div>
 
-      <a class="btn btn--primary pdp__comprar" href="${esc(urlLoja)}">Comprar na loja</a>
+      <!-- mesmo POST do formulário oficial da loja (fluxo do dono, 30/07):
+           adiciona à sacola sem sair da vitrine; o handoff acontece na Sacola.
+           Sem JS, o POST abre o carrinho da loja em aba nova, já com o item. -->
+      <form class="pdp__form" method="post" action="${esc(utm("https://loja.nimbuswear.com.br/comprar/", "pdp", p.slug))}" target="_blank" data-sacola-form>
+        <input type="hidden" name="add_to_cart" value="${esc(p.id)}">
+        <input type="hidden" name="variation[0]" value="${esc(p.opcoes.tamanhos[0])}" data-var-tamanho>
+        <input type="hidden" name="variation[1]" value="${esc(p.opcoes.cores[0])}" data-var-cor>
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="btn btn--primary pdp__comprar">Adicionar à sacola</button>
+      </form>
+      <span class="avisa-tamanho" data-avisa-tamanho>Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
         <span class="note">Frete grátis acima de R$199. Pix, boleto e cartão em até 12x.</span>
         <span class="note">Feita no Brasil, para você.</span>
@@ -266,6 +278,37 @@ ${footer("pdp")}
 <script type="application/json" id="produto-dados">${JSON.stringify(dados)}</script>
 <script src="${PREFIXO}/js/ui.js" defer></script>
 <script src="${PREFIXO}/js/produto.js" defer></script>
+</body></html>`;
+};
+
+/* -------------------------------------------------------- protótipo GATE A */
+// Página interna (fora do menu, noindex como todas) com as variantes de
+// densidade do grid, para o dono escolher em lote. A escolhida vira a .grade
+// padrão; a decisão é registrada em docs/ESTADO.md com data.
+const prototipo = () => {
+  const variantes = [
+    { classe: "", titulo: "Variante A, a atual", nota: "4 colunas a partir de 1100px, respiro maior entre os cards." },
+    { classe: "grade--b", titulo: "Variante B, densa", nota: "5 colunas a partir de 1400px, respiro menor. Mais peças por dobra em desktop largo." },
+    { classe: "grade--c", titulo: "Variante C, máxima", nota: "6 colunas a partir de 1500px, grid apertado como marketplace. A foto fica pequena; avaliar se o premium sobrevive." },
+  ];
+  return `${head("Protótipo de densidade | NIMBUS (interno)", "Variantes de densidade do grid para o GATE A.")}
+${header("gates")}
+<main>
+  <section class="secao"><div class="secao__inner">
+    <div class="secao__head">
+      <div><div class="kicker">Interno · GATE A</div><h1 class="display display--md">Densidade do grid</h1></div>
+    </div>
+    <p class="note" style="max-width:52em">Compare em tela larga (1440px ou mais). A variante escolhida vira o grid da home e das coleções; as outras saem do código. Em telas menores as três são iguais (3 colunas em tablet, 2 no celular).</p>
+    ${variantes.map((v) => `
+    <div style="margin-top:3em">
+      <h2 class="display display--md" style="font-size:1.5rem">${esc(v.titulo)}</h2>
+      <p class="note" style="margin:0.4em 0 1.2em">${esc(v.nota)}</p>
+      <div class="grade ${v.classe}">${cat.produtos.map(card).join("")}</div>
+    </div>`).join("")}
+  </div></section>
+</main>
+${footer("gates")}
+<script src="${PREFIXO}/js/ui.js" defer></script>
 </body></html>`;
 };
 
@@ -304,6 +347,8 @@ ${footer("gates")}
 fs.writeFileSync(path.join(BASE, "index.html"), home());
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
+fs.mkdirSync(path.join(BASE, "prototipo-grid"), { recursive: true });
+fs.writeFileSync(path.join(BASE, "prototipo-grid", "index.html"), prototipo());
 for (const c of cat.colecoes) {
   const dir = path.join(BASE, "c", c.id);
   fs.mkdirSync(dir, { recursive: true });
