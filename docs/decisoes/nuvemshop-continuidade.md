@@ -57,14 +57,58 @@ URL externa). Testar com um item antes de trocar todos.
 - **Mensagem na página de seguimento** (Opções de checkout): texto pós-compra
   convidando a voltar à vitrine. É texto, não redirecionamento.
 
+## Parte 2b · Header da loja lendo como a vitrine (CSS, já pronto)
+
+Decisão do dono (30/07): a **vitrine é a referência de design**; o header da loja
+deve ler como o dela. Isso foi feito **só com CSS** (a loja já usa um kit de CSS
+nosso, colado em Loja online → Layout → Personalizar → Edição de CSS avançada) e
+está pronto para colar:
+
+- Some com **Buscar** e **Conta/Login** no desktop (a vitrine não tem nenhum dos dois).
+- **Carrinho** vira a **pill "Sacola"** com o badge de contagem, igual ao CTA da vitrine.
+- Navegação ganha **sublinhado dourado no hover**.
+
+Arquivo a colar: `nuvemshop/css-nimbus-publicacao-compacta-2026-07-20.css`
+(regenerado em 30/07, "Rodada 8"; fonte legível em
+`css-nimbus-responsive-header-footer-2026-07-20.css`). Reaplicar pelo passo a
+passo de `nuvemshop/instrucoes.md`. Isto é aparência; **não muda para onde o logo
+clica** (ver Parte 3).
+
+O que o CSS **não** alcança e fica para o painel/tema: o **conteúdo** do menu
+(quais itens aparecem) é a Parte 1 (o dono aponta os itens para a vitrine); e um
+link "Manifesto" no header, se quiser, é um item de menu novo apontando para a
+landing.
+
 ## Parte 3 · O que continua interno à loja, e por quê
 
 - **"Seguir comprando" / "Ver todos os produtos" do carrinho** e **o clique no
-  logo**: destino fixo no código do tema. Mudar exige abrir a edição de código
-  (FTP), e o plano Impulso até permite, mas **abrir o FTP trava a troca de
-  layout, corta atualizações do Baires e não tem backup da Nuvemshop**. Já está
-  registrado no projeto que não vale o pedágio agora. Com o menu apontado para a
-  vitrine, esses dois viram caminhos secundários.
+  logo**: destino fixo no código do tema. **Nem a API nem o CSS mudam um `href`**
+  (confirmado na doc da Nuvemshop em 30/07: a API REST não expõe menu nem tema, e
+  a Edição de CSS não altera destino de link). Mudar exige abrir a edição de
+  código (FTP). O plano Impulso permite, mas **abrir o FTP trava a troca de
+  layout, corta atualizações do Baires e não tem backup da Nuvemshop**. Com o
+  menu apontado para a vitrine (Parte 1) e o header já lendo como a vitrine
+  (Parte 2b), esses dois viram caminhos secundários.
+
+  **Se o dono decidir abrir o editor de código**, as edições são estas (base: o
+  tema base público da Nuvemshop; os nomes exatos do Baires se confirmam no
+  editor ao vivo):
+  - **Logo** → no template do cabeçalho o logo é um `<a href="{{ store.url }}">`
+    (tema clássico) ou está dentro de `{{ component('logos/logo', ...) }}` (tema
+    novo). Trocar o destino por
+    `https://nimbuswear.com.br/loja-preview/?utm_source=loja&utm_medium=logo`. No
+    tema novo, envolver o logo com um `<a href="...">` próprio, porque `store.url`
+    nem aparece ali.
+  - **"Seguir comprando"** → em `snipplets/cart-totals.tpl` (e `cart-panel.tpl`),
+    trocar `{{ store.products_url }}` por
+    `https://nimbuswear.com.br/loja-preview/?utm_source=loja&utm_medium=carrinho`;
+    `templates/cart.tpl` inclui esses snipplets.
+  - Renomear o rótulo "Carrinho" do botão para "Sacola" de forma definitiva
+    também é template (o CSS da Parte 2b já faz a troca visual).
+
+  Nenhuma dessas edições é executável desta sessão (sem acesso ao painel e sem
+  token de API da loja). Ficam prontas para quando o dono abrir o editor, ou para
+  ele me passar os arquivos do tema para eu editar e devolver.
 - **Checkout inteiro** (da tela de pagamento ao /success/): bloqueado por
   segurança pela plataforma, para todo mundo. E é onde o cliente deve mesmo
   ficar até pagar.

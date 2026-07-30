@@ -900,3 +900,71 @@ html body section[data-store="home-institutional-message"]
     margin-left: auto !important;
   }
 }
+
+/* Rodada 8 | 2026-07-30 | Loja como funil: header lê como o da vitrine.
+   Decisão do dono (30/07): a vitrine é a referência de design; a Nuvemshop é só
+   carrinho e checkout. Aqui, SÓ com CSS, o header da loja passa a ler como o da
+   vitrine: some com Buscar e Conta (a vitrine não tem nenhum dos dois), o
+   Carrinho vira a pill "Sacola" e a navegação ganha o sublinhado dourado no
+   hover. O DESTINO do clique no logo e do "Seguir comprando" continua sendo
+   código do tema (só muda via editor de código/FTP) — ver
+   docs/decisoes/nuvemshop-continuidade.md. */
+
+/* Esconde Buscar e Conta no desktop (utilitários que a vitrine não tem). Para
+   trazer a Conta de volta, remover a segunda linha deste seletor. */
+@media (min-width: 768px) {
+  html body .head-main .head-logo-row .js-search-utility,
+  html body .head-main .head-logo-row .js-utility-col.text-right {
+    display: none !important;
+  }
+}
+/* Some com a barra de busca grande do mobile, como na vitrine. */
+html body .head-main .js-big-search-mobile {
+  display: none !important;
+}
+
+/* Carrinho vira pill "Sacola", igual ao CTA da vitrine. */
+html body .head-main .js-utility-col.order-last .btn-utility {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  min-height: 40px !important;
+  padding: 0 16px !important;
+  border: 1.5px solid #0b2360 !important;
+  border-radius: 999px !important;
+  color: #0b2360 !important;
+  transition: background-color 180ms ease, color 180ms ease !important;
+}
+html body .head-main .js-utility-col.order-last .btn-utility:hover,
+html body .head-main .js-utility-col.order-last .btn-utility:focus-visible {
+  background: #0b2360 !important;
+  color: #ffffff !important;
+}
+/* Troca "Carrinho" por "Sacola" (span dedicado do tema, troca limpa). */
+html body .head-main .js-utility-col.order-last .utilities-text {
+  font-size: 0 !important;
+}
+html body .head-main .js-utility-col.order-last .utilities-text::after {
+  content: "Sacola" !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+}
+/* Badge de contagem em navy, e ouro no hover (espelha a pill da vitrine). */
+html body .head-main .js-utility-col.order-last .js-cart-widget-amount.badge {
+  background: #0b2360 !important;
+  color: #f7fbff !important;
+}
+html body .head-main .js-utility-col.order-last .btn-utility:hover .js-cart-widget-amount.badge {
+  background: #e9c46a !important;
+  color: #0b2360 !important;
+}
+
+/* Sublinhado dourado no hover da navegação, como o nav da vitrine. */
+html body .head-main .nav-list-link:hover {
+  text-decoration: underline !important;
+  text-decoration-color: #e9c46a !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 6px !important;
+}
