@@ -32,9 +32,9 @@ Dia 3 (feedback do dono de 30/07, decisão em
 - **Sacola sem sair da vitrine**: PDP com POST do formulário oficial da loja em
   iframe oculto + contador local; handoff só no carrinho. **Pendente: teste de
   funil em produção com 2 produtos antes de considerar aprovado.**
-- **GATE A aberto**: protótipo de densidade no ar em
-  `/loja-preview/prototipo-grid/` (variantes A atual, B 5 colunas, C 6 colunas).
-  Aguarda escolha do dono; a escolhida vira o grid, as outras saem do código.
+- **GATE A fechado em 30/07: variante A** (grid atual, 4 colunas a partir de
+  1100px). Escolha do dono no mesmo dia em que o protótipo foi ao ar; a página
+  `prototipo-grid/` e as variantes B e C saíram do código.
 - **Curadoria de fotos por cor: adiada por ordem do dono (30/07).**
 
 **Sala de aprovação em `/loja-preview/gates/`**: GATES B e C **fechados em
