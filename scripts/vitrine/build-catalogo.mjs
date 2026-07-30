@@ -1,4 +1,4 @@
-// Gera public/loja-preview/catalogo.json a partir das fontes já auditadas.
+// Gera public/loja/catalogo.json a partir das fontes já auditadas.
 //
 // Fontes e papel de cada uma (não misturar):
 //   matriz-variantes-nuvemshop-parcial.csv  -> verdade comercial: preço, cor,
@@ -20,7 +20,7 @@ import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const IMPL = path.join(RAIZ, "nuvemshop/auditoria/2026-07-21/implementacao");
-const SAIDA = path.join(RAIZ, "public/loja-preview/catalogo.json");
+const SAIDA = path.join(RAIZ, "public/loja/catalogo.json");
 const DRY = process.argv.includes("--dry");
 
 // Os 8 heroes aprovados no plano (cobrem as 3 coleções e 4 faixas de preço).

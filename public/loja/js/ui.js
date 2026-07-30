@@ -20,6 +20,14 @@ NIMBUS.sacola = {
 };
 NIMBUS.sacola.pinta();
 
+// Cache de retorno (/sw.js, escopo do domínio inteiro): registrado também aqui
+// para quem entra direto pela vitrine, sem passar pela landing.
+if ("serviceWorker" in navigator && location.protocol === "https:") {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch(() => {});
+  });
+}
+
 (function () {
   const io = new IntersectionObserver(
     (entradas) => entradas.forEach((e) => e.isIntersecting && e.target.classList.add("in")),

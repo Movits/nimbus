@@ -1,4 +1,4 @@
-# Vitrine NIMBUS (loja-preview)
+# Vitrine NIMBUS (/loja/)
 
 Vitrine estatica da marca. A Nuvemshop segue como motor de carrinho/checkout.
 

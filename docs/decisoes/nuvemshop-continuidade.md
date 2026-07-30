@@ -29,11 +29,11 @@ para sites e páginas externos", pelo campo "Leva a" na opção "URL".
 
 | Item atual | Novo destino |
 |---|---|
-| Início | `https://nimbuswear.com.br/loja-preview/?utm_source=loja&utm_medium=menu` |
-| Produtos | `https://nimbuswear.com.br/loja-preview/?utm_source=loja&utm_medium=menu#colecoes` |
-| STREET | `https://nimbuswear.com.br/loja-preview/c/street/?utm_source=loja&utm_medium=menu` |
-| RELÍQUIA | `https://nimbuswear.com.br/loja-preview/c/reliquia/?utm_source=loja&utm_medium=menu` |
-| NUVEM | `https://nimbuswear.com.br/loja-preview/c/nuvem/?utm_source=loja&utm_medium=menu` |
+| Início | `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=menu` |
+| Produtos | `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=menu#colecoes` |
+| STREET | `https://nimbuswear.com.br/loja/c/street/?utm_source=loja&utm_medium=menu` |
+| RELÍQUIA | `https://nimbuswear.com.br/loja/c/reliquia/?utm_source=loja&utm_medium=menu` |
+| NUVEM | `https://nimbuswear.com.br/loja/c/nuvem/?utm_source=loja&utm_medium=menu` |
 | Sobre | manter, ou apontar para `https://nimbuswear.com.br/` (manifesto) |
 | Projetos Sociais | manter interno (a página vive na loja) |
 | Contato | manter interno (Ajuda da vitrine aponta para cá) |
@@ -96,12 +96,12 @@ landing.
   - **Logo** → no template do cabeçalho o logo é um `<a href="{{ store.url }}">`
     (tema clássico) ou está dentro de `{{ component('logos/logo', ...) }}` (tema
     novo). Trocar o destino por
-    `https://nimbuswear.com.br/loja-preview/?utm_source=loja&utm_medium=logo`. No
+    `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=logo`. No
     tema novo, envolver o logo com um `<a href="...">` próprio, porque `store.url`
     nem aparece ali.
   - **"Seguir comprando"** → em `snipplets/cart-totals.tpl` (e `cart-panel.tpl`),
     trocar `{{ store.products_url }}` por
-    `https://nimbuswear.com.br/loja-preview/?utm_source=loja&utm_medium=carrinho`;
+    `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=carrinho`;
     `templates/cart.tpl` inclui esses snipplets.
   - Renomear o rótulo "Carrinho" do botão para "Sacola" de forma definitiva
     também é template (o CSS da Parte 2b já faz a troca visual).

@@ -1,5 +1,5 @@
-// Gate de links da vitrine. Varre os HTML gerados em public/loja-preview e:
-//   1) todo caminho interno (/loja-preview/..., /img/...) tem que existir em
+// Gate de links da vitrine. Varre os HTML gerados em public/loja e:
+//   1) todo caminho interno (/loja/..., /img/...) tem que existir em
 //      public/ no disco; caminho de página aceita index.html implícito;
 //   2) toda URL externa da marca (loja.nimbuswear.com.br, nimbuswear.com.br)
 //      e toda foto de produto na CDN da Nuvemshop tem que responder < 400.
@@ -12,7 +12,7 @@ import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const PUBLIC = path.join(RAIZ, "public");
-const VITRINE = path.join(PUBLIC, "loja-preview");
+const VITRINE = path.join(PUBLIC, "loja");
 
 const htmls = [];
 (function anda(dir) {
@@ -37,7 +37,7 @@ for (const arq of htmls) {
   for (let u of urls) {
     u = u.replace(/&amp;/g, "&");
     if (u.startsWith("#") || u.startsWith("mailto:") || u.startsWith("data:")) continue;
-    const proprio = u.match(/^https:\/\/nimbuswear\.com\.br(\/loja-preview\/[^?#]*)/);
+    const proprio = u.match(/^https:\/\/nimbuswear\.com\.br(\/loja\/[^?#]*)/);
     if (proprio) u = proprio[1];
     if (u.startsWith("/")) {
       if (!internos.has(u)) internos.set(u, rel);

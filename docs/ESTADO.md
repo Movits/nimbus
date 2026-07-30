@@ -10,7 +10,7 @@ Esta é a única página que envelhece rápido. Leia antes de agir e atualize ao
 ## Sequenciamento vigente (29/07, ordem do conselho da 2ª rodada)
 
 Máximo 3 frentes ativas, nesta ordem:
-1. **Vitrine v2** (`public/loja-preview/`): timebox de 5 dias úteis; se estourar, corta-se
+1. **Vitrine v2** (`public/loja/`): timebox de 5 dias úteis; se estourar, corta-se
    escopo visual, nunca funil nem medição. Ata e prompt em
    `nuvemshop/auditoria/2026-07-29-conselho-vitrine/`.
 2. **Capas de produto**: reconstrução com o compositor novo (6 suspeitos + 4 sem torso primeiro).
@@ -52,8 +52,23 @@ Dia 3 (feedback do dono de 30/07, decisão em
     editor de código do tema (FTP), com o pedágio de travar o Baires. Edições
     exatas prontas em `nuvemshop-continuidade.md` Parte 3. **Decisão e execução:
     dono.** Sem acesso ao painel/API da loja nesta sessão.
+  - **CSS Rodada 8 colado pelo dono e conferido no ar em 30/07** (bloco inline da
+    loja com as regras novas; o editor só reescreveu `::after` para `:after`).
+- **30/07, tarde (pedidos do dono ao usar o site):**
+  - **Vitrine renomeada para `/loja/`** (`nimbuswear.com.br/loja/`): URL
+    profissional no lugar de `/loja-preview/`. Todos os builds e lints migrados;
+    caminhos antigos redirecionam por stubs gerados pelo build + `404.html`.
+  - **CTAs da landing** (Topbar e os 2 botões do Overlay) agora levam à vitrine
+    `/loja/`, não mais à Nuvemshop.
+  - **Cache de retorno**: service worker (`public/sw.js`, escopo do domínio)
+    para o GitHub Pages não expirar tudo em 10 min: assets com hash em
+    cache-first, imagens em stale-while-revalidate, HTML em network-first.
+    Registrado no `main.tsx` (landing) e no `ui.js` (vitrine). A textura das
+    nuvens 3D do drei foi **auto-hospedada** (`img/drei-cloud.png`): antes vinha
+    de CDN de terceiros (rawcdn.githack.com) a cada visita, e derrubava o app
+    offline. Verificado local: recarga offline monta a landing completa.
 
-**Sala de aprovação em `/loja-preview/gates/`**: GATES B e C **fechados em
+**Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
 Manifesto: beco em sombra, no ar na banda da home. Hero: **remix B** com casting
 (contra-plongée nas colunas do Planalto), no ar na home; remix A e a antiga cena

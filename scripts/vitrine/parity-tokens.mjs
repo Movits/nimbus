@@ -1,5 +1,5 @@
 // Gate de paridade de identidade: os tokens do :root da vitrine
-// (public/loja-preview/css/tokens.css) têm que bater com os da landing
+// (public/loja/css/tokens.css) têm que bater com os da landing
 // (src/styles/global.css). Token compartilhado com valor diferente é regressão
 // de marca; token novo em qualquer lado só passa se estiver na allowlist.
 // Sai com código != 0 em qualquer divergência.
@@ -8,7 +8,7 @@ import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const LANDING = path.join(RAIZ, "src/styles/global.css");
-const VITRINE = path.join(RAIZ, "public/loja-preview/css/tokens.css");
+const VITRINE = path.join(RAIZ, "public/loja/css/tokens.css");
 
 // só existem na vitrine (superfícies de loja que a landing não tem)
 const SO_VITRINE = new Set([

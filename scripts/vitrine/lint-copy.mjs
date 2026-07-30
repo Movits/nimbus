@@ -6,7 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
-const ARQ = path.join(RAIZ, "public/loja-preview/catalogo.json");
+const ARQ = path.join(RAIZ, "public/loja/catalogo.json");
 const FRASE_10 = "Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.";
 const PECAS = new Set(["Camiseta Premium", "Camiseta Oversized Premium", "Moletom Canguru", "Blusão Moletom", "Ecobag"]);
 
@@ -37,7 +37,7 @@ for (const p of cat.produtos) {
 // termos banidos da copy pública (decisão do dono, 29/07): a vitrine vende a
 // peça, não o método de produção; "loja oficial" é muleta de marca alheia.
 const BANIDOS = [/sob demanda/i, /print[ -]?on[ -]?demand/i, /loja oficial/i];
-const DIR_HTML = path.join(RAIZ, "public/loja-preview");
+const DIR_HTML = path.join(RAIZ, "public/loja");
 (function anda(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const p = path.join(dir, e.name);

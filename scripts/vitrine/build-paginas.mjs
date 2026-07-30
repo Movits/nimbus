@@ -1,4 +1,4 @@
-// Gera o HTML da vitrine a partir de public/loja-preview/catalogo.json.
+// Gera o HTML da vitrine a partir de public/loja/catalogo.json.
 // Nada em index.html, c/ ou p/ é editado à mão; o template é este arquivo.
 //
 // Uso: node scripts/vitrine/build-paginas.mjs
@@ -6,11 +6,11 @@ import fs from "node:fs";
 import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
-const BASE = path.join(RAIZ, "public/loja-preview");
+const BASE = path.join(RAIZ, "public/loja");
 const cat = JSON.parse(fs.readFileSync(path.join(BASE, "catalogo.json"), "utf-8"));
 
-const URL_BASE = "https://nimbuswear.com.br/loja-preview";
-const PREFIXO = "/loja-preview";
+const URL_BASE = "https://nimbuswear.com.br/loja";
+const PREFIXO = "/loja";
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 // Todo link para a loja carrega UTM (condição do conselho, 29/07), preservando
@@ -313,6 +313,30 @@ ${footer("gates")}
 };
 
 /* ------------------------------------------------------------------ grava */
+// A vitrine viveu em /loja-preview/ até 30/07; links antigos (WhatsApp, menu da
+// loja) continuam chegando lá. Cada página ganha um stub de redirect no caminho
+// antigo (o 404.html cobre qualquer rota que escapar).
+const stub = (rel) => `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0;url=${PREFIXO}/${rel}">
+<link rel="canonical" href="${URL_BASE}/${rel}">
+<script>location.replace("${PREFIXO}/${rel}" + location.search + location.hash);</script>
+<title>NIMBUS</title>
+</head>
+<body><p>A vitrine mudou de endereço. <a href="${PREFIXO}/${rel}">Continuar para a loja</a>.</p></body></html>`;
+const ANTIGO = path.join(RAIZ, "public/loja-preview");
+const relForStub = ["", "gates/", "teste-carrinho/",
+  ...cat.colecoes.map((c) => `c/${c.id}/`),
+  ...cat.produtos.map((p) => `p/${p.slug}/`)];
+for (const rel of relForStub) {
+  const dir = path.join(ANTIGO, rel);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "index.html"), stub(rel));
+}
+
 fs.writeFileSync(path.join(BASE, "index.html"), home());
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
@@ -326,4 +350,4 @@ for (const p of cat.produtos) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), produto(p));
 }
-console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja-preview/`);
+console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/`);
