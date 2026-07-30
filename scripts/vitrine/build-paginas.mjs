@@ -281,37 +281,6 @@ ${footer("pdp")}
 </body></html>`;
 };
 
-/* -------------------------------------------------------- protótipo GATE A */
-// Página interna (fora do menu, noindex como todas) com as variantes de
-// densidade do grid, para o dono escolher em lote. A escolhida vira a .grade
-// padrão; a decisão é registrada em docs/ESTADO.md com data.
-const prototipo = () => {
-  const variantes = [
-    { classe: "", titulo: "Variante A, a atual", nota: "4 colunas a partir de 1100px, respiro maior entre os cards." },
-    { classe: "grade--b", titulo: "Variante B, densa", nota: "5 colunas a partir de 1400px, respiro menor. Mais peças por dobra em desktop largo." },
-    { classe: "grade--c", titulo: "Variante C, máxima", nota: "6 colunas a partir de 1500px, grid apertado como marketplace. A foto fica pequena; avaliar se o premium sobrevive." },
-  ];
-  return `${head("Protótipo de densidade | NIMBUS (interno)", "Variantes de densidade do grid para o GATE A.")}
-${header("gates")}
-<main>
-  <section class="secao"><div class="secao__inner">
-    <div class="secao__head">
-      <div><div class="kicker">Interno · GATE A</div><h1 class="display display--md">Densidade do grid</h1></div>
-    </div>
-    <p class="note" style="max-width:52em">Compare em tela larga (1440px ou mais). A variante escolhida vira o grid da home e das coleções; as outras saem do código. Em telas menores as três são iguais (3 colunas em tablet, 2 no celular).</p>
-    ${variantes.map((v) => `
-    <div style="margin-top:3em">
-      <h2 class="display display--md" style="font-size:1.5rem">${esc(v.titulo)}</h2>
-      <p class="note" style="margin:0.4em 0 1.2em">${esc(v.nota)}</p>
-      <div class="grade ${v.classe}">${cat.produtos.map(card).join("")}</div>
-    </div>`).join("")}
-  </div></section>
-</main>
-${footer("gates")}
-<script src="${PREFIXO}/js/ui.js" defer></script>
-</body></html>`;
-};
-
 /* ------------------------------------------------------------------- gates */
 // Sala de aprovação do dono: fora do menu, noindex, um lote por rodada.
 // O conteúdo vem de scripts/vitrine/gates.json; imagem só entra nas páginas
@@ -347,8 +316,6 @@ ${footer("gates")}
 fs.writeFileSync(path.join(BASE, "index.html"), home());
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
-fs.mkdirSync(path.join(BASE, "prototipo-grid"), { recursive: true });
-fs.writeFileSync(path.join(BASE, "prototipo-grid", "index.html"), prototipo());
 for (const c of cat.colecoes) {
   const dir = path.join(BASE, "c", c.id);
   fs.mkdirSync(dir, { recursive: true });
