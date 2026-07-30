@@ -35,6 +35,14 @@ O CSS **não é um tema completo**: é uma camada de correção. O Baires é con
 linha única no desktop, logo no centro geométrico no mobile, três coleções simultâneas, modais dos
 projetos, footer editorial. Por isso ele começa direto em "Cabecalho:" e não estiliza `body`.
 
+**Rodada 8 (30/07/2026) — loja como funil, header lendo como a vitrine.** Decisão do dono: a vitrine é a
+referência de design. A camada nova (fonte legível em `css-nimbus-responsive-header-footer-2026-07-20.css`,
+já no consolidado) esconde Buscar e Conta no header, transforma o Carrinho na pill "Sacola" com badge, e
+põe sublinhado dourado no hover da navegação. É só aparência: o destino do clique no logo e do "Seguir
+comprando" continua sendo código do tema (ver `../docs/decisoes/nuvemshop-continuidade.md`). Regenerar o
+consolidado com `scripts/build_nimbus_publication_css.mjs` (ajustar o `root` para o caminho local antes de
+rodar). Conferido por screenshot offline em desktop 1440 e mobile 390.
+
 `pagina-projetos-sociais.html` **depende do CSS consolidado**. Os modais são feitos por âncora `:target` (a
 Nuvemshop não permite JS na página), então sem o CSS eles aparecem todos abertos e empilhados. Os dois
 andam juntos: publicar um sem o outro quebra a página.

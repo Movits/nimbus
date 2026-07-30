@@ -38,10 +38,20 @@ Dia 3 (feedback do dono de 30/07, decisão em
 - **Curadoria de fotos por cor: adiada por ordem do dono (30/07).**
 - **Sacola aprovada no teste do dono (30/07)**: 2 itens chegaram ao carrinho com
   tamanho e cor certos, sem desafio, contador batendo. Pendência que sobrou do
-  teste: navegar pelo menu da loja Nuvemshop não volta para a vitrine. O menu
-  vive no painel, não no Git; especificação pronta com passo a passo em
-  `docs/decisoes/nuvemshop-continuidade.md` (menus aceitam URL externa,
-  confirmado na central de ajuda). **Execução: dono, no painel.**
+  teste: navegar pelo menu da loja Nuvemshop não volta para a vitrine.
+- **Nova direção do dono (30/07): a vitrine é a referência de design; a Nuvemshop
+  é só o funil (carrinho + checkout).** Desdobramentos:
+  - **Header da loja lendo como a vitrine — FEITO em CSS** (Rodada 8): esconde
+    Buscar e Conta, Carrinho vira pill "Sacola", hover dourado no nav. No
+    consolidado `nuvemshop/css-nimbus-publicacao-compacta-2026-07-20.css`
+    (regenerado, 50,7 KB), conferido por screenshot. **Falta o dono colar** no
+    painel (Edição de CSS avançada).
+  - **Menu da loja → vitrine**: painel aceita URL externa; tabela em
+    `docs/decisoes/nuvemshop-continuidade.md` Parte 1. **Execução: dono, no painel.**
+  - **Logo e "Seguir comprando" → vitrine**: nem API nem CSS mudam `href`; só
+    editor de código do tema (FTP), com o pedágio de travar o Baires. Edições
+    exatas prontas em `nuvemshop-continuidade.md` Parte 3. **Decisão e execução:
+    dono.** Sem acesso ao painel/API da loja nesta sessão.
 
 **Sala de aprovação em `/loja-preview/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
