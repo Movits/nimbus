@@ -30,7 +30,7 @@
   </nav>
   <div class="header__tools">
     <a href="https://nimbuswear.com.br/" data-manifesto>Manifesto</a>
-    <a class="header__cta" href="https://loja.nimbuswear.com.br/comprar/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Sacola</a>
+    <a class="header__cta" href="https://loja.nimbuswear.com.br/comprar/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Sacola<span class="sacola-n" data-sacola-n hidden></span></a>
   </div>
 </header>
 <main>
@@ -65,7 +65,17 @@
         </div>
       </div>
 
-      <a class="btn btn--primary pdp__comprar" href="https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=sao-jorge-neobarroco3">Comprar na loja</a>
+      <!-- mesmo POST do formulário oficial da loja (fluxo do dono, 30/07):
+           adiciona à sacola sem sair da vitrine; o handoff acontece na Sacola.
+           Sem JS, o POST abre o carrinho da loja em aba nova, já com o item. -->
+      <form class="pdp__form" method="post" action="https://loja.nimbuswear.com.br/comprar/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=sao-jorge-neobarroco3" target="_blank" data-sacola-form>
+        <input type="hidden" name="add_to_cart" value="352718999">
+        <input type="hidden" name="variation[0]" value="P" data-var-tamanho>
+        <input type="hidden" name="variation[1]" value="Preta" data-var-cor>
+        <input type="hidden" name="quantity" value="1">
+        <button type="submit" class="btn btn--primary pdp__comprar">Adicionar à sacola</button>
+      </form>
+      <span class="avisa-tamanho" data-avisa-tamanho>Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
         <span class="note">Frete grátis acima de R$199. Pix, boleto e cartão em até 12x.</span>
         <span class="note">Feita no Brasil, para você.</span>
@@ -86,18 +96,18 @@
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__grid">
-      <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="note" style="color:#b8c6e6;margin-top:1em;max-width:26em">Streetwear católico premium brasileiro. Acima de tudo.</p></div>
-      <div><h4>Loja</h4><a href="/loja-preview/c/street/">STREET</a><a href="/loja-preview/c/reliquia/">RELÍQUIA</a><a href="/loja-preview/c/nuvem/">NUVEM</a></div>
-      <div><h4>A marca</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="https://loja.nimbuswear.com.br/projetos-sociais/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Projetos sociais</a></div>
-      <div><h4>Ajuda</h4><a href="https://loja.nimbuswear.com.br/comprar/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Sacola</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a gente</a></div>
-    </div>
-    <div class="footer__meta">
-      <span>© 2026 NIMBUS · nimbuswear.com.br</span>
-      <span>Imagens de campanha. As fotos definitivas de produto estão em produção.</span>
+      <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
+      <div><h4>Loja</h4><a href="/loja-preview/c/street/">STREET</a><a href="/loja-preview/c/reliquia/">RELÍQUIA</a><a href="/loja-preview/c/nuvem/">NUVEM</a><a href="https://loja.nimbuswear.com.br/comprar/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Sacola</a></div>
+      <div><h4>Nimbus</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="https://loja.nimbuswear.com.br/projetos-sociais/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Projetos Sociais</a></div>
+      <div><h4>Ajuda</h4><a href="https://loja.nimbuswear.com.br/contato/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Trocas e devoluções</a><a href="https://loja.nimbuswear.com.br/contato/?utm_source=vitrine&amp;utm_medium=pdp&amp;utm_campaign=vitrine">Envios e prazos</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
     </div>
   </div>
+  <div class="footer__legal">
+    <span>© 2026 NIMBUS · nimbuswear.com.br</span>
+    <span>Imagens de campanha. As fotos definitivas de produto estão em produção.</span>
+  </div>
 </footer>
-<script type="application/json" id="produto-dados">{"url_loja":"https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/?utm_source=vitrine&utm_medium=pdp&utm_campaign=sao-jorge-neobarroco3","imagens":{"capa":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp","hover":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp","galeria":["https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp","https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-640-0.webp","https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp","https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp"],"por_cor":{"Preta":{"frente":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp","costas":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp"},"Branca":{"frente":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp","costas":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-640-0.webp"}},"fonte_px":500,"caixa_max_css":400},"opcoes":{"tamanhos":["P","M","G","GG","EG"],"cores":["Preta","Branca"]},"variantes_por_cor":{"Preta":[{"variant_id":"1550060886","sku":"CfxarEaM","tamanho":"P","preco":149.9},{"variant_id":"1550060905","sku":"0rbqcC1a","tamanho":"M","preco":149.9},{"variant_id":"1550060914","sku":"GSosWmOp","tamanho":"G","preco":149.9},{"variant_id":"1550060932","sku":"6gCJTCLA","tamanho":"GG","preco":149.9},{"variant_id":"1550060940","sku":"sItFFQEV","tamanho":"EG","preco":149.9}],"Branca":[{"variant_id":"1550060893","sku":"1VLY459I","tamanho":"P","preco":149.9},{"variant_id":"1550060912","sku":"WwKfItBe","tamanho":"M","preco":149.9},{"variant_id":"1550060924","sku":"V7TqBiEi","tamanho":"G","preco":149.9},{"variant_id":"1550060928","sku":"VeqJQ2KO","tamanho":"GG","preco":149.9},{"variant_id":"1550060938","sku":"upZK2BI2","tamanho":"EG","preco":149.9}]}}</script>
+<script type="application/json" id="produto-dados">{"url_loja":"https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco3/?utm_source=vitrine&utm_medium=pdp&utm_campaign=sao-jorge-neobarroco3","url_carrinho":"https://loja.nimbuswear.com.br/comprar/?utm_source=vitrine&utm_medium=pdp&utm_campaign=vitrine","imagens":{"capa":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp","hover":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp","galeria":["https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp","https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-640-0.webp","https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp","https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp"],"por_cor":{"Preta":{"frente":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2d5386b4c4ccf8d4f017824987327672-640-0.webp","costas":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cf94853c007bf58ef317824987364205-640-0.webp"},"Branca":{"frente":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e63cda1cd767513d2517824987340465-640-0.webp","costas":"https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e9e752e5844adaa70017824987376752-640-0.webp"}},"fonte_px":500,"caixa_max_css":400},"opcoes":{"tamanhos":["P","M","G","GG","EG"],"cores":["Preta","Branca"]},"variantes_por_cor":{"Preta":[{"variant_id":"1550060886","sku":"CfxarEaM","tamanho":"P","preco":149.9},{"variant_id":"1550060905","sku":"0rbqcC1a","tamanho":"M","preco":149.9},{"variant_id":"1550060914","sku":"GSosWmOp","tamanho":"G","preco":149.9},{"variant_id":"1550060932","sku":"6gCJTCLA","tamanho":"GG","preco":149.9},{"variant_id":"1550060940","sku":"sItFFQEV","tamanho":"EG","preco":149.9}],"Branca":[{"variant_id":"1550060893","sku":"1VLY459I","tamanho":"P","preco":149.9},{"variant_id":"1550060912","sku":"WwKfItBe","tamanho":"M","preco":149.9},{"variant_id":"1550060924","sku":"V7TqBiEi","tamanho":"G","preco":149.9},{"variant_id":"1550060928","sku":"VeqJQ2KO","tamanho":"GG","preco":149.9},{"variant_id":"1550060938","sku":"upZK2BI2","tamanho":"EG","preco":149.9}]}}</script>
 <script src="/loja-preview/js/ui.js" defer></script>
 <script src="/loja-preview/js/produto.js" defer></script>
 </body></html>

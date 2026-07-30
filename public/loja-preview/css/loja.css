@@ -5,16 +5,17 @@
    =========================================================================== */
 
 /* --- announcement + header ------------------------------------------------ */
+/* claro com texto navy, como a barra da loja publicada (30/07) */
 .announcement {
-  background: var(--deep);
-  color: var(--cloud);
+  background: var(--sky);
+  color: var(--deep);
   font-size: 11px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
   padding: 9px var(--pad);
 }
-.announcement b { color: var(--gold); font-weight: 600; }
+.announcement b { color: var(--deep); font-weight: 700; }
 
 /* mesma régua da landing (.topbar): logo à ESQUERDA com clamp(34px,5vw,46px),
    navegação na sequência, ferramentas à direita e Sacola como pill de borda */
@@ -48,6 +49,9 @@
   text-decoration: none;
   opacity: 0.85;
 }
+/* sublinhado dourado no hover, como o nav da loja publicada */
+.header__nav a { padding-bottom: 5px; border-bottom: 2px solid transparent; }
+.header__nav a:hover { border-bottom-color: var(--gold); }
 .header__nav a:hover, .header__tools a:hover { opacity: 1; color: var(--deep); }
 .header__tools { margin-left: auto; display: flex; align-items: center; gap: 1.6em; }
 .header__cta {
@@ -58,6 +62,21 @@
   color: var(--ink) !important;
 }
 .header__cta:hover { background: var(--ink); color: var(--cloud) !important; }
+/* contagem local da sacola (espelho em localStorage; a verdade é o carrinho
+   da loja). Some quando zerada. */
+.sacola-n[hidden] { display: none; }
+.sacola-n {
+  display: inline-block;
+  min-width: 16px;
+  margin-left: 7px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: var(--deep);
+  color: var(--cloud);
+  font-size: 9.5px;
+  text-align: center;
+}
+.header__cta:hover .sacola-n { background: var(--cloud); color: var(--deep); }
 @media (max-width: 640px) {
   .header { height: 62px; padding: 0 14px; gap: 0.85em; }
   .header__nav { gap: 0.85em; }
@@ -117,7 +136,7 @@
   gap: 1em;
   text-align: center;
   font-size: 0.82rem;
-  color: #415061;
+  color: var(--deep);
 }
 @media (max-width: 700px) { .trust__inner { grid-template-columns: 1fr; gap: 0.4em; } }
 
@@ -152,6 +171,14 @@
 .grade { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 @media (min-width: 820px) { .grade { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
 @media (min-width: 1100px) { .grade { grid-template-columns: repeat(4, 1fr); gap: 26px; } }
+/* variantes do protótipo de densidade (GATE A, página interna prototipo-grid/):
+   B = 5 colunas acima de 1400px; C = 6 colunas acima de 1500px. A escolhida
+   vira a .grade padrão e as outras saem. */
+.grade--b { gap: 16px; }
+@media (min-width: 1400px) { .grade--b { grid-template-columns: repeat(5, 1fr); gap: 18px; } }
+.grade--c { gap: 12px; }
+@media (min-width: 1100px) { .grade--c { gap: 14px; } }
+@media (min-width: 1500px) { .grade--c { grid-template-columns: repeat(6, 1fr); } }
 .card { text-decoration: none; color: inherit; display: block; }
 .card__midia {
   position: relative;
@@ -196,6 +223,9 @@
 .banda__midia img { border-radius: 24px; box-shadow: var(--shadow); }
 .banda--manifesto { background: var(--deep); color: var(--cloud); }
 .banda--manifesto .note { color: #b8c6e6; }
+/* contextos escuros mantêm o título claro (o navy do .display é p/ fundo claro) */
+.banda--manifesto .display { color: var(--cloud); }
+.cabecalho-colecao .display { color: inherit; }
 
 /* "Como a sua peça nasce": 3 passos só de texto, no lugar do bloco de impacto
    que repetia a landing (feedback do dono, 29/07) */
@@ -262,7 +292,7 @@
 .pdp__palco[data-colecao="nuvem"] .pdp__cenario figcaption { color: var(--deep); }
 
 .pdp__info { position: sticky; top: 96px; }
-.pdp__info h1 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.02em; line-height: 1.02; font-size: clamp(2.1rem, 4vw, 3.2rem); margin: 0.2em 0 0.1em; }
+.pdp__info h1 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.02em; line-height: 1.02; font-size: clamp(2.1rem, 4vw, 3.2rem); margin: 0.2em 0 0.1em; color: var(--deep); }
 .pdp__peca { color: #7a8495; font-size: 0.95rem; }
 .pdp__preco { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; font-variant-numeric: tabular-nums; margin: 0.5em 0; }
 .pdp__resumo { margin: 0.6em 0 1.2em; }
@@ -277,8 +307,36 @@
 .tamanho[aria-pressed="true"] { background: var(--deep); color: var(--cloud); border-color: var(--deep); }
 .tamanho:disabled { opacity: 0.35; cursor: not-allowed; }
 
-.pdp__comprar { width: 100%; margin-top: 1.2em; font-size: 1rem; padding: 1.05em; }
+.pdp__form { margin: 0; }
+.pdp__comprar { width: 100%; margin-top: 1.2em; font-size: 1rem; padding: 1.05em; border: 0; }
+.pdp__comprar:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+.avisa-tamanho { display: none; color: #b3261e; font-size: 0.82rem; margin-top: 0.6em; }
+.avisa-tamanho.on { display: block; }
 .pdp__notas { margin-top: 1em; display: grid; gap: 0.3em; }
+
+/* aviso de item adicionado; a Sacola do header leva ao carrinho da loja */
+.sacola-aviso {
+  position: fixed;
+  left: 50%;
+  bottom: 26px;
+  transform: translate(-50%, 16px);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 1.1em;
+  background: var(--deep);
+  color: var(--cloud);
+  border-radius: 14px;
+  padding: 0.95em 1.5em;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: min(92vw, 460px);
+}
+.sacola-aviso.on { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.sacola-aviso a { color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 .opcao__valor { font-weight: 400; text-transform: none; letter-spacing: 0.02em; color: var(--ink); margin-left: 0.5em; }
 
 .pdp__detalhes { margin-top: 2em; border-top: 1px solid var(--line); }
@@ -299,12 +357,26 @@
 .gate .card__pill { position: static; }
 
 /* --- footer ----------------------------------------------------------------- */
-.footer { background: var(--deep); color: var(--cloud); margin-top: clamp(72px, 9vw, 132px); }
-.footer__inner { max-width: var(--maxw-loja); margin: 0 auto; padding: clamp(48px, 6vw, 80px) var(--pad) 32px; }
+/* réplica do rodapé da loja publicada (30/07): corpo céu claro com borda
+   superior dourada, títulos serif navy, e faixa legal navy no pé. */
+.footer { background: var(--sky); color: var(--deep); border-top: 3px solid var(--gold); margin-top: clamp(72px, 9vw, 132px); }
+.footer__inner { max-width: var(--maxw-loja); margin: 0 auto; padding: clamp(48px, 6vw, 80px) var(--pad); }
 .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2em; }
 @media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
-.footer__logo img { height: 44px; width: auto; }
-.footer h4 { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.9em; }
-.footer a { display: block; color: var(--cloud); opacity: 0.8; text-decoration: none; font-size: 0.88rem; padding: 0.25em 0; }
-.footer a:hover { opacity: 1; }
-.footer__meta { border-top: 1px solid rgba(247, 251, 255, 0.15); margin-top: 2.4em; padding-top: 1.4em; font-size: 0.78rem; opacity: 0.6; display: flex; justify-content: space-between; gap: 1em; flex-wrap: wrap; }
+.footer__logo img { height: 52px; width: auto; }
+.footer__tagline { font-size: 0.88rem; line-height: 1.6; color: var(--ink); margin-top: 1em; max-width: 26em; }
+.footer h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--deep); margin-bottom: 0.9em; }
+.footer a { display: block; color: var(--deep); opacity: 0.85; text-decoration: none; font-size: 0.88rem; padding: 0.25em 0; }
+.footer a:hover { opacity: 1; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
+.footer__legal {
+  background: var(--deep);
+  color: var(--cloud);
+  font-size: 0.78rem;
+  text-align: center;
+  padding: 1.2em var(--pad);
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+.footer__legal span { opacity: 0.85; }
