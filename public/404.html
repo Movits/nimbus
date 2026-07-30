@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>NIMBUS</title>
+<script>
+// A vitrine mudou de /loja-preview/ para /loja/ em 30/07/2026; qualquer rota
+// antiga que não tenha stub próprio cai aqui e é reescrita preservando o resto.
+(function () {
+  var p = location.pathname;
+  if (p.indexOf("/loja-preview") === 0) {
+    location.replace("/loja" + p.slice("/loja-preview".length) + location.search + location.hash);
+  }
+})();
+</script>
+<style>body{font-family:Inter,system-ui,sans-serif;color:#1b2733;background:#f7fbff;display:flex;min-height:100vh;align-items:center;justify-content:center;margin:0}a{color:#0b2360}</style>
+</head>
+<body><p>Página não encontrada. <a href="/">Voltar ao início</a> · <a href="/loja/">Ir para a loja</a></p></body>
+</html>

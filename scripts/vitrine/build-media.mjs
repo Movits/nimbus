@@ -13,7 +13,7 @@ import sharp from "sharp";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const ASSETS = process.env.NIMBUS_ASSETS || path.resolve(RAIZ, "..", "nimbus-assets");
-const SAIDA = path.join(RAIZ, "public/loja-preview/media");
+const SAIDA = path.join(RAIZ, "public/loja/media");
 fs.mkdirSync(SAIDA, { recursive: true });
 
 const VITRINE = path.join(ASSETS, "marketing/2026-07-29-vitrine");

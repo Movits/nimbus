@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { Clouds, Cloud } from '@react-three/drei'
-import { SECTION } from '../data/content'
+import { ASSETS, SECTION } from '../data/content'
 import { pointer, weightAt } from './scrollStore'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useIsMobile } from '../hooks/useIsMobile'
@@ -45,7 +45,7 @@ export default function ParallaxLayers() {
 
   return (
     <group ref={root}>
-      <Clouds material={THREE.MeshBasicMaterial} limit={mobile ? 180 : 300}>
+      <Clouds material={THREE.MeshBasicMaterial} limit={mobile ? 180 : 300} texture={ASSETS.cloudTexture}>
         <Cloud
           seed={2}
           segments={mobile ? 18 : 26}

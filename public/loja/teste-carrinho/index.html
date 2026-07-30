@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>NIMBUS - teste do carrinho direto (interno)</title>
+<style>body{font-family:system-ui;max-width:640px;margin:3em auto;padding:0 1em;line-height:1.6}
+button{padding:.8em 1.6em;font-size:1rem;cursor:pointer}</style>
+</head>
+<body>
+<h1>Teste: POST direto para o carrinho</h1>
+<p><b>Página interna.</b> Valida se um formulário externo consegue adicionar um item ao
+carrinho da loja Nuvemshop. Produto de teste: São Jorge Neobarroco | Camiseta Premium,
+tamanho M, cor Preta.</p>
+<ol>
+<li>Abra o DevTools (F12), aba Network, e marque <b>Preserve log</b>.</li>
+<li>Clique no botão abaixo. Uma aba nova abre no domínio da loja.</li>
+<li>Se aparecer um desafio de verificação, resolva e veja se o item entrou no carrinho.</li>
+<li>Anote: o item apareceu? Com tamanho e cor certos? O primeiro clique foi desafiado?</li>
+<li><b>Não finalize a compra.</b> Esvazie o carrinho depois do teste.</li>
+</ol>
+<form method="post" action="https://loja.nimbuswear.com.br/comprar/" target="_blank">
+  <input type="hidden" name="add_to_cart" value="352718999">
+  <input type="hidden" name="variation[0]" value="M">
+  <input type="hidden" name="variation[1]" value="Preta">
+  <input type="hidden" name="quantity" value="1">
+  <button type="submit">Adicionar ao carrinho da loja (aba nova)</button>
+</form>
+<p>Se o POST nao funcionar, o caminho da vitrine continua sendo o link da pagina do
+produto, que ja esta em uso e e garantido. Este teste so decide se um dia o botao pula
+uma etapa.</p>
+</body></html>

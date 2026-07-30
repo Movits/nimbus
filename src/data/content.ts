@@ -6,8 +6,10 @@
 const base = import.meta.env.BASE_URL
 const img = (file: string) => `${base}img/${file}`
 
-// Loja Nuvemshop (subdomínio do mesmo domínio). CTAs de compra apontam pra cá.
-export const STORE_URL = 'https://loja.nimbuswear.com.br'
+// A loja é a vitrine própria em /loja/ (decisão do dono, 30/07). A Nuvemshop
+// (loja.nimbuswear.com.br) é só o motor de carrinho e checkout; nenhum CTA da
+// landing aponta mais direto pra ela.
+export const STORE_URL = '/loja/'
 
 export const ASSETS = {
   heroDesktop: img('hero-desktop.webp'),
@@ -18,6 +20,9 @@ export const ASSETS = {
   pampulha: img('bg-pampulha.webp'),
   pampulhaMobile: img('bg-pampulha-mobile.webp'),
   wordmark: img('wordmark-nimbus.webp'),
+  // textura das nuvens 3D auto-hospedada: o padrão do drei baixa de um CDN de
+  // terceiros (rawcdn.githack.com) a cada visita, lento e fora do nosso cache
+  cloudTexture: img('drei-cloud.png'),
 }
 
 // índice de cada seção na ordem do scroll (0 = topo). 6 seções.
