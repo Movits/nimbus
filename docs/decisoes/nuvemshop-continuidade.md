@@ -109,6 +109,15 @@ landing.
   Nenhuma dessas edições é executável desta sessão (sem acesso ao painel e sem
   token de API da loja). Ficam prontas para quando o dono abrir o editor, ou para
   ele me passar os arquivos do tema para eu editar e devolver.
+
+  > [!info] Atualizado em 2026-07-30: **o dono aceitou o pedágio do FTP**, ciente
+  > de que o Baires deixa de receber atualizações automáticas. A manutenção do
+  > tema passa a ser manual, com a documentação oficial como referência:
+  > <https://docs.nuvemshop.com.br/help> (link entregue pelo dono para consulta
+  > em caso de problema). Regras operacionais a partir daqui: backup completo do
+  > tema no `nimbus-assets` (privado) ANTES de qualquer edição; código do tema
+  > nunca no repo público (licenciado); toda mudança de tema documentada com data
+  > e arquivo tocado.
 - **Checkout inteiro** (da tela de pagamento ao /success/): bloqueado por
   segurança pela plataforma, para todo mundo. E é onde o cliente deve mesmo
   ficar até pagar.
