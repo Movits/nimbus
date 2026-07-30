@@ -36,6 +36,12 @@ Dia 3 (feedback do dono de 30/07, decisão em
   1100px). Escolha do dono no mesmo dia em que o protótipo foi ao ar; a página
   `prototipo-grid/` e as variantes B e C saíram do código.
 - **Curadoria de fotos por cor: adiada por ordem do dono (30/07).**
+- **Sacola aprovada no teste do dono (30/07)**: 2 itens chegaram ao carrinho com
+  tamanho e cor certos, sem desafio, contador batendo. Pendência que sobrou do
+  teste: navegar pelo menu da loja Nuvemshop não volta para a vitrine. O menu
+  vive no painel, não no Git; especificação pronta com passo a passo em
+  `docs/decisoes/nuvemshop-continuidade.md` (menus aceitam URL externa,
+  confirmado na central de ajuda). **Execução: dono, no painel.**
 
 **Sala de aprovação em `/loja-preview/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
