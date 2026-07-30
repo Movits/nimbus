@@ -48,10 +48,17 @@ Dia 3 (feedback do dono de 30/07, decisão em
     painel (Edição de CSS avançada).
   - **Menu da loja → vitrine**: painel aceita URL externa; tabela em
     `docs/decisoes/nuvemshop-continuidade.md` Parte 1. **Execução: dono, no painel.**
-  - **Logo e "Seguir comprando" → vitrine**: nem API nem CSS mudam `href`; só
-    editor de código do tema (FTP), com o pedágio de travar o Baires. Edições
-    exatas prontas em `nuvemshop-continuidade.md` Parte 3. **Decisão e execução:
-    dono.** Sem acesso ao painel/API da loja nesta sessão.
+  - **Logo e "Seguir comprando" → vitrine: NO AR em 30/07.** O dono aceitou o
+    pedágio do FTP, baixou o tema pelo WinSCP (FTP com TLS explícito, hotspot,
+    porque a rede do trabalho bloqueia a porta) e subiu os 4 arquivos que eu
+    editei: `snipplets/header/header-logo.tpl` (logo → vitrine, componente
+    substituído por markup explícito), `snipplets/cart-totals.tpl` ("Ver mais
+    produtos" → vitrine), `snipplets/cart-panel.tpl` e `templates/cart.tpl`
+    (aviso de sem estoque → vitrine). Verificado no ar pela página do carrinho;
+    a home da loja demora minutos pelo cache de página da Nuvemshop. Backup
+    completo do tema + os 4 editados em `nimbus-assets/nuvemshop/tema-baires/`.
+    **O Baires agora está congelado (sem atualizações automáticas); manutenção
+    manual com a doc oficial docs.nuvemshop.com.br/help.**
   - **CSS Rodada 8 colado pelo dono e conferido no ar em 30/07** (bloco inline da
     loja com as regras novas; o editor só reescreveu `::after` para `:after`).
 - **30/07, tarde (pedidos do dono ao usar o site):**
