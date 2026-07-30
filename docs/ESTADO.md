@@ -54,8 +54,9 @@ Dia 3 (feedback do dono de 30/07, decisão em
     editei: `snipplets/header/header-logo.tpl` (logo → vitrine, componente
     substituído por markup explícito), `snipplets/cart-totals.tpl` ("Ver mais
     produtos" → vitrine), `snipplets/cart-panel.tpl` e `templates/cart.tpl`
-    (aviso de sem estoque → vitrine). Verificado no ar pela página do carrinho;
-    a home da loja demora minutos pelo cache de página da Nuvemshop. Backup
+    (aviso de sem estoque → vitrine). Verificado no ar: página do carrinho na
+    hora, e a home da loja confirmada às 21:58 UTC de 30/07, depois de o cache
+    de página da plataforma drenar. Backup
     completo do tema + os 4 editados em `nimbus-assets/nuvemshop/tema-baires/`.
     **O Baires agora está congelado (sem atualizações automáticas); manutenção
     manual com a doc oficial docs.nuvemshop.com.br/help.**
