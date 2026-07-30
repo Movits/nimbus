@@ -1,0 +1,72 @@
+{
+  "rodada": "2026-07-29 vitrine v2",
+  "nota": "GATES B e C fechados em 29/07. STREET definitiva: beco de São Paulo (Brasília SCS em espera). Manifesto: beco em sombra, no ar na banda da home. Hero: remix B (contra-plongée nas colunas do Planalto), no ar na home; remix A e a cena sem pessoas ficam em espera.",
+  "itens": [
+    {
+      "titulo": "Cenário STREET · beco em São Paulo",
+      "media": "cenario-street-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Escolhida pelo dono em 29/07 como a cena STREET definitiva."
+    },
+    {
+      "titulo": "Cenário STREET · Brasília SCS (em espera)",
+      "media": "gate-cenario-street-brasilia-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Ficou como alternativa guardada. Se quiser de volta, a troca é um comando."
+    },
+    {
+      "titulo": "Cenário RELÍQUIA · interior de igreja",
+      "media": "cenario-reliquia-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Direção aprovada em 29/07. Confirmar que segue como cara da RELÍQUIA."
+    },
+    {
+      "titulo": "Cenário NUVEM · Esplanada",
+      "media": "cenario-nuvem-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Direção aprovada em 29/07. Confirmar que segue como cara da NUVEM."
+    },
+    {
+      "titulo": "GATE C · Manifesto · beco em sombra",
+      "media": "manifesto-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Escolhida pelo dono em 29/07 (mostra mais o corpo). Está na banda do manifesto da home."
+    },
+    {
+      "titulo": "GATE C · Manifesto · beco com luz direta (em espera)",
+      "media": "gate-manifesto-beco-luz-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Preterida em 29/07 por mostrar menos o corpo. Fica guardada."
+    },
+    {
+      "titulo": "GATE C · Hero · remix B · colunata em contra-plongée",
+      "media": "hero-editorial-1600.webp",
+      "situacao": "no ar",
+      "pergunta": "Escolhida pelo dono em 29/07. É o hero da home: corpo até a coxa, colunas do Planalto, céu livre para o título."
+    },
+    {
+      "titulo": "GATE C · Hero · remix A · colunata com espelho d'água (em espera)",
+      "media": "gate-hero-casting-remix-a-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Preterida em 29/07. Fica guardada; a troca é um comando."
+    },
+    {
+      "titulo": "Hero anterior · cena sem pessoas (em espera)",
+      "media": "gate-hero-editorial-niemeyer-1600.webp",
+      "situacao": "em espera",
+      "pergunta": "Era o hero até 29/07, quando o remix B com casting entrou no lugar. Fica guardada."
+    },
+    {
+      "titulo": "GATE C · Hero · rodada anterior · curva de concreto",
+      "media": "gate-hero-casting-curva-1600.webp",
+      "situacao": "insumo do remix",
+      "pergunta": "O dono aprovou este enquadramento, que mostra mais o corpo, e pediu o fundo da outra. Fica como registro da rodada."
+    },
+    {
+      "titulo": "GATE C · Hero · rodada anterior · colunas do Planalto",
+      "media": "gate-hero-casting-planalto-1600.webp",
+      "situacao": "insumo do remix",
+      "pergunta": "O dono aprovou este fundo, com o enquadramento da outra. Fica como registro da rodada."
+    }
+  ]
+}

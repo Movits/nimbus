@@ -21,8 +21,8 @@
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  --maxw-loja: 1280px;
-  --maxw-listagem: 1180px;
+  --maxw-loja: 1520px;
+  --maxw-listagem: 1520px;
   --pad: clamp(1.25rem, 4vw, 3.5rem);
 }
 
@@ -81,8 +81,9 @@ button { font: inherit; cursor: pointer; }
   transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 .btn:hover { transform: translateY(-1px); }
-.btn--primary { background: var(--deep); color: var(--cloud); box-shadow: var(--shadow); }
-.btn--primary:hover { background: #12307c; }
+/* mesma régua da landing: primário é --ink, não navy (navy fica p/ campos) */
+.btn--primary { background: var(--ink); color: var(--cloud); box-shadow: 0 10px 30px rgba(27, 39, 51, 0.22); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(27, 39, 51, 0.3); }
 .btn--gold { background: var(--gold); color: var(--deep); }
 .btn--ghost { border-color: var(--line); color: var(--deep); background: transparent; }
 .btn--ghost:hover { border-color: var(--deep); }
