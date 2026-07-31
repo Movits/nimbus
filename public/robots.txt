@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /loja/gates/
+Disallow: /loja/teste-carrinho/
+Disallow: /loja-preview/
+
+Sitemap: https://nimbuswear.com.br/sitemap.xml

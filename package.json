@@ -15,7 +15,8 @@
     "vitrine:media": "node scripts/vitrine/build-media.mjs",
     "vitrine:paginas": "node scripts/vitrine/build-paginas.mjs",
     "vitrine:lint": "node scripts/vitrine/lint-copy.mjs",
-    "vitrine": "npm run vitrine:catalogo && npm run vitrine:lint && npm run vitrine:paginas"
+    "vitrine:claims": "node scripts/vitrine/lint-claims.mjs",
+    "vitrine": "npm run vitrine:catalogo && npm run vitrine:lint && npm run vitrine:paginas && npm run vitrine:claims"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",
