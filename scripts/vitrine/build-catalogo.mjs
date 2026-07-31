@@ -24,6 +24,8 @@ const SAIDA = path.join(RAIZ, "public/loja/catalogo.json");
 const DRY = process.argv.includes("--dry");
 
 // Os 8 heroes aprovados no plano (cobrem as 3 coleções e 4 faixas de preço).
+// Desde 30/07 (ordem do dono: "adicione todos os outros produtos") o catálogo
+// inclui TODO produto com copy PRONTO; os heroes viram os destaques da home.
 const HEROES = [
   "355581274", // NIMBUS Wildstyle | Ecobag            STREET   49,90
   "352723243", // São Miguel Celeste | Camiseta        NUVEM   149,90
@@ -83,7 +85,18 @@ const brl = (n) => "R$" + n.toFixed(2).replace(".", ",");
 const erros = [];
 const produtos = [];
 
-for (const pid of HEROES) {
+// entram: heroes primeiro (na ordem do plano), depois todo PRONTO restante.
+// BLOQUEADO fica fora (hoje: 5 Blusão Moletom, sem tabela de medidas YouDraw).
+const RESTANTES = [...copy.keys()]
+  .filter((pid) => !HEROES.includes(pid) && copy.get(pid).status.startsWith("PRONTO"))
+  .sort((a, b) => {
+    const ga = galeria.get(a), gb = galeria.get(b);
+    const ka = `${ga?.collection || ""} ${ga?.title || ""}`, kb = `${gb?.collection || ""} ${gb?.title || ""}`;
+    return ka.localeCompare(kb, "pt");
+  });
+const ENTRAM = [...HEROES, ...RESTANTES];
+
+for (const pid of ENTRAM) {
   const vs = variantes.filter((v) => v.product_id === pid);
   if (!vs.length) { erros.push(`${pid}: sem variantes no CSV`); continue; }
   const c = copy.get(pid);
@@ -104,19 +117,28 @@ for (const pid of HEROES) {
   const fotos = (g.gallery || []).map(urlImagem).filter((u) => u && u.includes("file_name-"));
   // curadoria manual (29/07): frente/costas POR COR, corrigindo os rótulos trocados do
   // products.json. Regra: capa = COSTAS da cor padrão (a arte), hover = FRENTE da MESMA cor.
+  // Sem curadoria (curadoria por cor está adiada por ordem do dono, 30/07):
+  // a foto da cor é a colorImages do products.json, a MESMA que a loja usa como
+  // capa daquela cor; sem hover, para não piscar foto de outra cor no card.
   const cur = CURADORIA[pid] || {};
+  const temCuradoria = Object.keys(cur).length > 0;
+  const corImg = g.colorImages || {};
   const porCor = {};
   for (const cor of cores) {
     const frag = cur[cor] || {};
-    const frente = frag.frente ? fotos.find((u) => u.includes(frag.frente)) : null;
+    let frente = frag.frente ? fotos.find((u) => u.includes(frag.frente)) : null;
     const costas = frag.costas ? fotos.find((u) => u.includes(frag.costas)) : null;
+    if (!frente && !costas && corImg[cor]) {
+      const u = urlImagem(corImg[cor]);
+      if (u && u.includes("file_name-")) frente = fotos.find((f) => f === u) || u;
+    }
     porCor[cor] = { frente: frente || null, costas: costas || null };
   }
   const pc0 = porCor[cores[0]] || {};
   const capa = pc0.costas || pc0.frente || fotos[0] || null;
-  const hover = capa && pc0.costas && pc0.frente ? pc0.frente : null;
+  const hover = temCuradoria && capa && pc0.costas && pc0.frente ? pc0.frente : null;
   if (!capa) { erros.push(`${pid}: nenhuma foto da familia file_name-*`); continue; }
-  if (cur && Object.keys(cur).length && cores.some((c) => !porCor[c].costas && !porCor[c].frente))
+  if (temCuradoria && cores.some((c) => !porCor[c].costas && !porCor[c].frente))
     erros.push(`${pid}: curadoria nao casou com a galeria`);
 
   const preco = Number(v0.price_brl);
@@ -132,6 +154,7 @@ for (const pid of HEROES) {
 
   produtos.push({
     id: pid,
+    destaque: HEROES.includes(pid),
     slug: g.slug,
     nome: v0.product_title,
     arte, peca,
@@ -169,7 +192,7 @@ const catalogo = {
 // gates
 const json = JSON.stringify(catalogo, null, 1);
 if (/http:\/\//.test(json)) erros.push("sobrou http:// no JSON");
-if (produtos.length !== HEROES.length) erros.push(`esperava ${HEROES.length} produtos, saiu ${produtos.length}`);
+if (produtos.length !== ENTRAM.length) erros.push(`esperava ${ENTRAM.length} produtos, saiu ${produtos.length}`);
 
 if (erros.length) {
   console.error("ERROS:\n" + erros.map((e) => "  - " + e).join("\n"));

@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-07-30T18:25:17.716Z",
+ "gerado_em": "2026-07-31T00:46:04.758Z",
  "loja": {
   "base": "https://loja.nimbuswear.com.br",
   "frete_gratis_acima_de": 199
@@ -24,6 +24,7 @@
  "produtos": [
   {
    "id": "355581274",
+   "destaque": true,
    "slug": "wildstyle",
    "nome": "NIMBUS Wildstyle | Ecobag",
    "arte": "NIMBUS Wildstyle",
@@ -82,6 +83,7 @@
   },
   {
    "id": "352723243",
+   "destaque": true,
    "slug": "sao-miguel-celeste3",
    "nome": "São Miguel Celeste | Camiseta Premium",
    "arte": "São Miguel Celeste",
@@ -169,6 +171,7 @@
   },
   {
    "id": "352718999",
+   "destaque": true,
    "slug": "sao-jorge-neobarroco3",
    "nome": "São Jorge Neobarroco | Camiseta Premium",
    "arte": "São Jorge Neobarroco",
@@ -295,6 +298,7 @@
   },
   {
    "id": "352889132",
+   "destaque": true,
    "slug": "aparecida-spray3",
    "nome": "Aparecida Spray | Camiseta Premium",
    "arte": "Aparecida Spray",
@@ -382,6 +386,7 @@
   },
   {
    "id": "352718943",
+   "destaque": true,
    "slug": "sao-jorge-neobarroco2",
    "nome": "São Jorge Neobarroco | Camiseta Oversized Premium",
    "arte": "São Jorge Neobarroco",
@@ -508,6 +513,7 @@
   },
   {
    "id": "352721633",
+   "destaque": true,
    "slug": "wildstyle3",
    "nome": "NIMBUS Wildstyle | Camiseta Oversized Premium",
    "arte": "NIMBUS Wildstyle",
@@ -634,6 +640,7 @@
   },
   {
    "id": "352722685",
+   "destaque": true,
    "slug": "sao-miguel-celeste1",
    "nome": "São Miguel Celeste | Moletom Canguru",
    "arte": "São Miguel Celeste",
@@ -721,6 +728,7 @@
   },
   {
    "id": "352618878",
+   "destaque": true,
    "slug": "sao-jorge-vintage1",
    "nome": "São Jorge Vintage | Moletom Canguru",
    "arte": "São Jorge Vintage",
@@ -844,6 +852,4106 @@
     ]
    },
    "variante_padrao": "1549744908"
+  },
+  {
+   "id": "352720257",
+   "destaque": false,
+   "slug": "acima-de-tudo-gotico",
+   "nome": "Acima de Tudo Gótico | Camiseta Oversized Premium",
+   "arte": "Acima de Tudo Gótico",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo-gotico/",
+   "resumo": "A frase Acima de Tudo em letra gótica compacta, acompanhada por uma cruz. Uma declaração de fé direta, sóbria e atemporal.",
+   "descricao_html": "<p>A frase Acima de Tudo em letra gótica compacta, acompanhada por uma cruz. Uma declaração de fé direta, sóbria e atemporal.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Acima de Tudo Gótico | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Acima de Tudo Gótico em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c398a6d5790ec7709517824989990487-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c398a6d5790ec7709517824989990487-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea1f36c62775229d6217824990001386-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c398a6d5790ec7709517824989990487-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea1f36c62775229d6217824990001386-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550064806",
+      "sku": "kuX7CAg4",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064816",
+      "sku": "Y4wmNXv2",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064824",
+      "sku": "y0Qd0zjE",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064829",
+      "sku": "Odva7S7V",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064846",
+      "sku": "FSoXA3Ox",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550064812",
+      "sku": "5a07dsH0",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064820",
+      "sku": "TeGgVBeF",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064826",
+      "sku": "nennaZRA",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064836",
+      "sku": "IoBPIPQo",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550064841",
+      "sku": "tdtauipe",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550064806"
+  },
+  {
+   "id": "352890896",
+   "destaque": false,
+   "slug": "aparecida-barroca2",
+   "nome": "Aparecida Barroca | Camiseta Oversized Premium",
+   "arte": "Aparecida Barroca",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca2/",
+   "resumo": "Nossa Senhora Aparecida em composição barroca, com filigrana dourada e referências ao azulejo. Uma homenagem reverente à Padroeira do Brasil.",
+   "descricao_html": "<p>Nossa Senhora Aparecida em composição barroca, com filigrana dourada e referências ao azulejo. Uma homenagem reverente à Padroeira do Brasil.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Aparecida Barroca | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Aparecida Barroca em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1a60f71a303a4621f917826042210405-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1a60f71a303a4621f917826042210405-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ef39a072351a5841017826042229355-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-dd38789f520846213917826042202015-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb2275f099a8cfed1c17826042219692-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1a60f71a303a4621f917826042210405-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-dd38789f520846213917826042202015-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550620536",
+      "sku": "zJKEiwF4",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620542",
+      "sku": "v99aZhuA",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620551",
+      "sku": "H6eQSPw4",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620556",
+      "sku": "jhl19ykx",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620560",
+      "sku": "VRmh1lNi",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550620540",
+      "sku": "rBR0gHUa",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620545",
+      "sku": "B6fA39GL",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620549",
+      "sku": "TEH7jrMp",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620558",
+      "sku": "sEya1uEa",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550620562",
+      "sku": "pfBfkjGk",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550620536"
+  },
+  {
+   "id": "352720127",
+   "destaque": false,
+   "slug": "aparecida-barroca3",
+   "nome": "Aparecida Barroca | Camiseta Premium",
+   "arte": "Aparecida Barroca",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca3/",
+   "resumo": "Nossa Senhora Aparecida em composição barroca, com filigrana dourada e referências ao azulejo. Uma homenagem reverente à Padroeira do Brasil.",
+   "descricao_html": "<p>Nossa Senhora Aparecida em composição barroca, com filigrana dourada e referências ao azulejo. Uma homenagem reverente à Padroeira do Brasil.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Aparecida Barroca | Camiseta Premium | NIMBUS",
+   "meta_description": "Aparecida Barroca em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb888e369e4bf0fa217824989776213-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb888e369e4bf0fa217824989776213-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9a7d69c22c9030ebc317824989811410-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb888e369e4bf0fa217824989776213-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1550064482",
+      "sku": "87nsDMUj",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550064487",
+      "sku": "YuvS0r9k",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550064496",
+      "sku": "9gpbdK75",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550064510",
+      "sku": "5s5AYetR",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550064527",
+      "sku": "EmwWnRWj",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550064482"
+  },
+  {
+   "id": "352719816",
+   "destaque": false,
+   "slug": "aparecida-barroca1",
+   "nome": "Aparecida Barroca | Moletom Canguru",
+   "arte": "Aparecida Barroca",
+   "peca": "Moletom Canguru",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 299.9,
+   "preco_formatado": "R$299,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/aparecida-barroca1/",
+   "resumo": "Nossa Senhora Aparecida em composição barroca, com filigrana dourada e referências ao azulejo. Uma homenagem reverente à Padroeira do Brasil.",
+   "descricao_html": "<p>Nossa Senhora Aparecida em composição barroca, com filigrana dourada e referências ao azulejo. Uma homenagem reverente à Padroeira do Brasil.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Aparecida Barroca | Moletom Canguru | NIMBUS",
+   "meta_description": "Aparecida Barroca em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "50% algodão e 50% poliéster",
+    "modelagem": "Modelagem unissex com capuz e bolso canguru",
+    "gola": "Ribana 1x1: 49,7% algodão, 49,7% poliéster e 0,6% elastano",
+    "estampa": "DTF",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a88e8e720c99729ad017824989164962-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a88e8e720c99729ad017824989164962-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c8add9467f32f53ce717824989216744-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a88e8e720c99729ad017824989164962-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1550063841",
+      "sku": "aoHKz97e",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550063864",
+      "sku": "PbE9ABPV",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550063871",
+      "sku": "Al1Jr61o",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550063885",
+      "sku": "CgI51HVF",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550063904",
+      "sku": "DSKLdrNu",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "variante_padrao": "1550063841"
+  },
+  {
+   "id": "352718275",
+   "destaque": false,
+   "slug": "azulejo3",
+   "nome": "Azulejo Sagrado | Camiseta Premium",
+   "arte": "Azulejo Sagrado",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/azulejo3/",
+   "resumo": "Azulejo em azul e branco, cruz central e filigrana dourada. Tradição luso-brasileira e arte sacra em uma composição ornamental.",
+   "descricao_html": "<p>Azulejo em azul e branco, cruz central e filigrana dourada. Tradição luso-brasileira e arte sacra em uma composição ornamental.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Azulejo Sagrado | Camiseta Premium | NIMBUS",
+   "meta_description": "Azulejo Sagrado em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-33a775d03498056be017824985675544-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-33a775d03498056be017824985675544-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eabc39985162c4524f17824985708707-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-33a775d03498056be017824985675544-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1550058297",
+      "sku": "Szialg1E",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550058309",
+      "sku": "6H50NwXW",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550058324",
+      "sku": "6UASfZFo",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550058329",
+      "sku": "hQUdkMSR",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550058336",
+      "sku": "5BaxIac2",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550058297"
+  },
+  {
+   "id": "352718083",
+   "destaque": false,
+   "slug": "azulejo1",
+   "nome": "Azulejo Sagrado | Moletom Canguru",
+   "arte": "Azulejo Sagrado",
+   "peca": "Moletom Canguru",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 299.9,
+   "preco_formatado": "R$299,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/azulejo1/",
+   "resumo": "Azulejo em azul e branco, cruz central e filigrana dourada. Tradição luso-brasileira e arte sacra em uma composição ornamental.",
+   "descricao_html": "<p>Azulejo em azul e branco, cruz central e filigrana dourada. Tradição luso-brasileira e arte sacra em uma composição ornamental.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Azulejo Sagrado | Moletom Canguru | NIMBUS",
+   "meta_description": "Azulejo Sagrado em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "50% algodão e 50% poliéster",
+    "modelagem": "Modelagem unissex com capuz e bolso canguru",
+    "gola": "Ribana 1x1: 49,7% algodão, 49,7% poliéster e 0,6% elastano",
+    "estampa": "DTF",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea4ccb75c91469ba3d17824985167048-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea4ccb75c91469ba3d17824985167048-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-66661d28da2ca3f8dd17824985220563-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ea4ccb75c91469ba3d17824985167048-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1550057490",
+      "sku": "xvFCOJt3",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550057506",
+      "sku": "kWzFZH15",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550057524",
+      "sku": "vQ07bULE",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550057560",
+      "sku": "nDH2KBik",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550057638",
+      "sku": "XbtQxQSv",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "variante_padrao": "1550057490"
+  },
+  {
+   "id": "352717723",
+   "destaque": false,
+   "slug": "brasao",
+   "nome": "Brasão NIMBUS | Camiseta Oversized Premium",
+   "arte": "Brasão NIMBUS",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/brasao/",
+   "resumo": "Cruz gótica ornamentada, NIMBUS e a frase Acima de Tudo formam o brasão da marca. Um emblema de fé com textura vintage.",
+   "descricao_html": "<p>Cruz gótica ornamentada, NIMBUS e a frase Acima de Tudo formam o brasão da marca. Um emblema de fé com textura vintage.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Brasão NIMBUS | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Brasão NIMBUS em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b668502a5aba94b24b17824984594790-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b668502a5aba94b24b17824984594790-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-86f597de18b1422dc317824984616807-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-79b1e3f444cbc1fc0917824984585967-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0eb7a27c978cd5f3a117824984605304-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b668502a5aba94b24b17824984594790-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-79b1e3f444cbc1fc0917824984585967-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550056603",
+      "sku": "HE78ZEJI",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056614",
+      "sku": "AXRfRkrW",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056623",
+      "sku": "mfKZ06bq",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056634",
+      "sku": "nsiTNzRm",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056644",
+      "sku": "qquNJgfI",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550056610",
+      "sku": "wKqiAI42",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056619",
+      "sku": "SjEnmbmD",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056628",
+      "sku": "QxWtMMyw",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056639",
+      "sku": "oCdXsQr0",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550056650",
+      "sku": "rrbCyyPC",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550056603"
+  },
+  {
+   "id": "352717837",
+   "destaque": false,
+   "slug": "brasao1",
+   "nome": "Brasão NIMBUS | Camiseta Premium",
+   "arte": "Brasão NIMBUS",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/brasao1/",
+   "resumo": "Cruz gótica ornamentada, NIMBUS e a frase Acima de Tudo formam o brasão da marca. Um emblema de fé com textura vintage.",
+   "descricao_html": "<p>Cruz gótica ornamentada, NIMBUS e a frase Acima de Tudo formam o brasão da marca. Um emblema de fé com textura vintage.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Brasão NIMBUS | Camiseta Premium | NIMBUS",
+   "meta_description": "Brasão NIMBUS em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cd59c5903ff49575fc17824984766098-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cd59c5903ff49575fc17824984766098-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6fa2ef7509c94ca1b817824984799792-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e767f69285784699c217824984754554-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5d0594d97f30cbcb3217824984787716-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cd59c5903ff49575fc17824984766098-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e767f69285784699c217824984754554-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550056861",
+      "sku": "YcYfat9a",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056872",
+      "sku": "snb8377X",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056884",
+      "sku": "Gk6e4Z3J",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056904",
+      "sku": "JAQfq5tQ",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056908",
+      "sku": "QZAhHOVO",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550056865",
+      "sku": "xIBd7Krn",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056875",
+      "sku": "UHlXMLt1",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056892",
+      "sku": "SgRGxuTK",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056897",
+      "sku": "hUhz9LNh",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550056911",
+      "sku": "o67saDpY",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550056861"
+  },
+  {
+   "id": "352703276",
+   "destaque": false,
+   "slug": "deus-e-fiel",
+   "nome": "Deus é Fiel | Camiseta Oversized Premium",
+   "arte": "Deus é Fiel",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel/",
+   "resumo": "A frase Deus é Fiel em letra gótica, com cruz e acabamento vintage. Uma promessa curta e firme para carregar todos os dias.",
+   "descricao_html": "<p>A frase Deus é Fiel em letra gótica, com cruz e acabamento vintage. Uma promessa curta e firme para carregar todos os dias.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Deus é Fiel | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Deus é Fiel em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c1acfe04248379a44d17824954106781-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c1acfe04248379a44d17824954106781-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8be047b6fa8f2fe76317824954128358-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c1acfe04248379a44d17824954106781-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550019409",
+      "sku": "sT5QIJfj",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550019416",
+      "sku": "z1B9qAAp",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550019426",
+      "sku": "UQlaZWsb",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550019427",
+      "sku": "6tGKWZ62",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550019432",
+      "sku": "Kj3L2k9l",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550019409"
+  },
+  {
+   "id": "352703343",
+   "destaque": false,
+   "slug": "deus-e-fiel1",
+   "nome": "Deus é Fiel | Camiseta Premium",
+   "arte": "Deus é Fiel",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/deus-e-fiel1/",
+   "resumo": "A frase Deus é Fiel em letra gótica, com cruz e acabamento vintage. Uma promessa curta e firme para carregar todos os dias.",
+   "descricao_html": "<p>A frase Deus é Fiel em letra gótica, com cruz e acabamento vintage. Uma promessa curta e firme para carregar todos os dias.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Deus é Fiel | Camiseta Premium | NIMBUS",
+   "meta_description": "Deus é Fiel em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67e7511f1690bc9e9b17824954285251-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67e7511f1690bc9e9b17824954285251-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0fafb1183bc565e78f17824954320104-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-67e7511f1690bc9e9b17824954285251-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550019608",
+      "sku": "fCwYq9wa",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550019642",
+      "sku": "e5BYDpo0",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550019652",
+      "sku": "ZNM7WP6B",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550019658",
+      "sku": "MG9u5Lf2",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550019665",
+      "sku": "ccApEP3C",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550019608"
+  },
+  {
+   "id": "352702858",
+   "destaque": false,
+   "slug": "fe-acima-de-tudo",
+   "nome": "Fé Acima de Tudo | Camiseta Oversized Premium",
+   "arte": "Fé Acima de Tudo",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo/",
+   "resumo": "A frase Fé Acima de Tudo em letra gótica, com cruz e auréola dourada. Uma declaração simples, firme e reverente.",
+   "descricao_html": "<p>A frase Fé Acima de Tudo em letra gótica, com cruz e auréola dourada. Uma declaração simples, firme e reverente.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Fé Acima de Tudo | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Fé Acima de Tudo em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3827e8e8fb4c7accc417824952591022-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3827e8e8fb4c7accc417824952591022-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4c9b8026131aeb74f617824952612478-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3161aa35dda888210717824952601772-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3f8fe4b68885cf52dd17824952622946-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3827e8e8fb4c7accc417824952591022-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3161aa35dda888210717824952601772-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550017062",
+      "sku": "Vpywx5lL",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017071",
+      "sku": "i94NRy5N",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017088",
+      "sku": "SLtaKUY6",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017096",
+      "sku": "107Sw3R8",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017106",
+      "sku": "NdPjfjXP",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550017067",
+      "sku": "4i7GfcHX",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017078",
+      "sku": "vGs3lU7T",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017084",
+      "sku": "mQL2eqlF",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017090",
+      "sku": "aRgXb0bW",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550017102",
+      "sku": "pmJ1va8n",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550017062"
+  },
+  {
+   "id": "352703153",
+   "destaque": false,
+   "slug": "fe-acima-de-tudo1",
+   "nome": "Fé Acima de Tudo | Camiseta Premium",
+   "arte": "Fé Acima de Tudo",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/fe-acima-de-tudo1/",
+   "resumo": "A frase Fé Acima de Tudo em letra gótica, com cruz e auréola dourada. Uma declaração simples, firme e reverente.",
+   "descricao_html": "<p>A frase Fé Acima de Tudo em letra gótica, com cruz e auréola dourada. Uma declaração simples, firme e reverente.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Fé Acima de Tudo | Camiseta Premium | NIMBUS",
+   "meta_description": "Fé Acima de Tudo em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ec9a024367e2c5dd117824953781712-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ec9a024367e2c5dd117824953781712-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8624c155bdfa2928b517824953813918-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8dccd8d884af53c65817824953793641-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5f32cd0cb683ac87b517824953825590-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ec9a024367e2c5dd117824953781712-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8dccd8d884af53c65817824953793641-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550018597",
+      "sku": "pt0F0CDw",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018609",
+      "sku": "IiIqjBhD",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018616",
+      "sku": "9u4HZ7F4",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018627",
+      "sku": "W6zj2EFN",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018637",
+      "sku": "IMjLRrJu",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550018600",
+      "sku": "gDsGglmr",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018614",
+      "sku": "M50MhEsu",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018619",
+      "sku": "pxaErJ4f",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018629",
+      "sku": "aYSQRWWz",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550018635",
+      "sku": "CcATQHMO",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550018597"
+  },
+  {
+   "id": "352702753",
+   "destaque": false,
+   "slug": "monograma-nmb",
+   "nome": "Monograma NIMBUS | Camiseta Oversized Premium",
+   "arte": "Monograma NIMBUS",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/monograma-nmb/",
+   "resumo": "O monograma NIMBUS em letra gótica forma um emblema com cruz e auréola. Uma assinatura discreta da marca.",
+   "descricao_html": "<p>O monograma NIMBUS em letra gótica forma um emblema com cruz e auréola. Uma assinatura discreta da marca.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Monograma NIMBUS | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Monograma NIMBUS em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-fab87cd6b1e4c7611d17824952275705-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-fab87cd6b1e4c7611d17824952275705-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9f8ffa397abff17acd17824952285765-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-fab87cd6b1e4c7611d17824952275705-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9f8ffa397abff17acd17824952285765-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550016803",
+      "sku": "3yzqomgL",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016806",
+      "sku": "QHNOYjPS",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016811",
+      "sku": "IxYiXGv9",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016813",
+      "sku": "sTtTaz3y",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016822",
+      "sku": "2va1JeLU",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550016804",
+      "sku": "Eo5PvphE",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016808",
+      "sku": "pxBD2xLR",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016812",
+      "sku": "kwrqdbrC",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016817",
+      "sku": "ALpKzJ0z",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550016826",
+      "sku": "PCP5mefk",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550016803"
+  },
+  {
+   "id": "352702796",
+   "destaque": false,
+   "slug": "monograma-nmb1",
+   "nome": "Monograma NIMBUS | Camiseta Premium",
+   "arte": "Monograma NIMBUS",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/monograma-nmb1/",
+   "resumo": "O monograma NIMBUS em letra gótica forma um emblema com cruz e auréola. Uma assinatura discreta da marca.",
+   "descricao_html": "<p>O monograma NIMBUS em letra gótica forma um emblema com cruz e auréola. Uma assinatura discreta da marca.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Monograma NIMBUS | Camiseta Premium | NIMBUS",
+   "meta_description": "Monograma NIMBUS em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca6c7828abb616678617824952433816-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca6c7828abb616678617824952433816-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-05ca95ef04211f49b317824952446274-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ca6c7828abb616678617824952433816-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-05ca95ef04211f49b317824952446274-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550016916",
+      "sku": "uf4eo5WH",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016923",
+      "sku": "TeGHyphd",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016933",
+      "sku": "rDDHuGPN",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016940",
+      "sku": "6wQJhCGZ",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016953",
+      "sku": "K4YIFwMD",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550016918",
+      "sku": "t0vlLKcj",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016931",
+      "sku": "I5PHyGks",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016936",
+      "sku": "NfufNbRF",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016946",
+      "sku": "C8wpN6I7",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550016955",
+      "sku": "sNLagcvU",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550016916"
+  },
+  {
+   "id": "352702020",
+   "destaque": false,
+   "slug": "salmo-193",
+   "nome": "Salmo 19 | Camiseta Premium",
+   "arte": "Salmo 19",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/salmo-193/",
+   "resumo": "Os céus proclamam a glória de Deus em letra gótica e textura de pôster antigo. Palavra e estética editorial na mesma arte.",
+   "descricao_html": "<p>Os céus proclamam a glória de Deus em letra gótica e textura de pôster antigo. Palavra e estética editorial na mesma arte.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Salmo 19 | Camiseta Premium | NIMBUS",
+   "meta_description": "Salmo 19 em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8781964905950ec0c017824950176121-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8781964905950ec0c017824950176121-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ef0ad9d3821fb0569e17824950210031-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d42e9bd0215b858e817824950164498-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-163dd1797a5b15f09d17824950197340-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8781964905950ec0c017824950176121-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d42e9bd0215b858e817824950164498-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550014728",
+      "sku": "mm7bVSFS",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014745",
+      "sku": "0KgsRg4y",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014756",
+      "sku": "Ei4WCygv",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014771",
+      "sku": "fBjTdH5f",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014777",
+      "sku": "wE7BplAS",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550014731",
+      "sku": "fnTeJlrp",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014747",
+      "sku": "y4KLavoX",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014767",
+      "sku": "Ng9ZhfE7",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014773",
+      "sku": "AgshU2Ns",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550014780",
+      "sku": "qmcyvnjK",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550014728"
+  },
+  {
+   "id": "352619175",
+   "destaque": false,
+   "slug": "salmo-191",
+   "nome": "Salmo 19 | Moletom Canguru",
+   "arte": "Salmo 19",
+   "peca": "Moletom Canguru",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 299.9,
+   "preco_formatado": "R$299,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/salmo-191/",
+   "resumo": "Os céus proclamam a glória de Deus em letra gótica e textura de pôster antigo. Palavra e estética editorial na mesma arte.",
+   "descricao_html": "<p>Os céus proclamam a glória de Deus em letra gótica e textura de pôster antigo. Palavra e estética editorial na mesma arte.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Salmo 19 | Moletom Canguru | NIMBUS",
+   "meta_description": "Salmo 19 em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "50% algodão e 50% poliéster",
+    "modelagem": "Modelagem unissex com capuz e bolso canguru",
+    "gola": "Ribana 1x1: 49,7% algodão, 49,7% poliéster e 0,6% elastano",
+    "estampa": "DTF",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-31de72d70034b12f9a17824357440058-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-31de72d70034b12f9a17824357440058-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2cf7d153fe86ba39db17824357495455-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6263b0d7a3be8d6e7817824357428188-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3e1df4a00f3c4ce0bf17824357482238-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-31de72d70034b12f9a17824357440058-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6263b0d7a3be8d6e7817824357428188-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1549745853",
+      "sku": "2unq2rUV",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745861",
+      "sku": "lavouick",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745865",
+      "sku": "aMgG3Akg",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745871",
+      "sku": "PHIHYzK6",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745876",
+      "sku": "tRBJaqmY",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1549745854",
+      "sku": "Zmgsxe9m",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745862",
+      "sku": "4h2Elvg1",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745866",
+      "sku": "oWQrqfH2",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745872",
+      "sku": "UJn7n1r7",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549745880",
+      "sku": "JIuWNOur",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "variante_padrao": "1549745853"
+  },
+  {
+   "id": "352718787",
+   "destaque": false,
+   "slug": "sao-jorge-neobarroco1",
+   "nome": "São Jorge Neobarroco | Moletom Canguru",
+   "arte": "São Jorge Neobarroco",
+   "peca": "Moletom Canguru",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 299.9,
+   "preco_formatado": "R$299,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-jorge-neobarroco1/",
+   "resumo": "São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.",
+   "descricao_html": "<p>São Jorge e o dragão em composição neobarroca, com ornamentos e alto contraste. A imagem do santo guerreiro tratada com reverência e presença.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Jorge Neobarroco | Moletom Canguru | NIMBUS",
+   "meta_description": "São Jorge Neobarroco em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "50% algodão e 50% poliéster",
+    "modelagem": "Modelagem unissex com capuz e bolso canguru",
+    "gola": "Ribana 1x1: 49,7% algodão, 49,7% poliéster e 0,6% elastano",
+    "estampa": "DTF",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f747c2f6612d48a37e17824986803780-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a40593cce4dbf63fe717824986855991-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-d5009e252f7901ff2f17824986840412-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-6786b25cad6cdd7e6c17824986790386-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550060096",
+      "sku": "vCbi3YUQ",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060115",
+      "sku": "TklesrZw",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060134",
+      "sku": "9Ml9TFQd",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060147",
+      "sku": "wj1KdW3D",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060155",
+      "sku": "q1Rq7LoZ",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550060108",
+      "sku": "RCy0CCar",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060118",
+      "sku": "W6PmZHaX",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060130",
+      "sku": "zT0pA3W2",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060142",
+      "sku": "ltYRiIcj",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550060167",
+      "sku": "4ta8HDBY",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "variante_padrao": "1550060096"
+  },
+  {
+   "id": "352618903",
+   "destaque": false,
+   "slug": "sao-jorge-vintage2",
+   "nome": "São Jorge Vintage | Camiseta Oversized Premium",
+   "arte": "São Jorge Vintage",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage2/",
+   "resumo": "São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.",
+   "descricao_html": "<p>São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Jorge Vintage | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "São Jorge Vintage em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cfa0683b43b6fa806017824355321724-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cfa0683b43b6fa806017824355321724-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7b7115345fc83120b717824355342348-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ff209b091194b101a217824355331591-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-d86e9c960dd7fdd21117824355351363-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-cfa0683b43b6fa806017824355321724-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ff209b091194b101a217824355331591-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1549745024",
+      "sku": "DdSTHymb",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745032",
+      "sku": "U2bkAFaM",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745038",
+      "sku": "bob7u5sE",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745042",
+      "sku": "Ll0bOSMU",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745048",
+      "sku": "M3vIpPF9",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1549745025",
+      "sku": "cJDPbW0T",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745036",
+      "sku": "yzKKrAiL",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745040",
+      "sku": "3FWZ6rqL",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745045",
+      "sku": "9S5jsAPx",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549745050",
+      "sku": "r5xmOEXw",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1549745024"
+  },
+  {
+   "id": "352618935",
+   "destaque": false,
+   "slug": "sao-jorge-vintage3",
+   "nome": "São Jorge Vintage | Camiseta Premium",
+   "arte": "São Jorge Vintage",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-jorge-vintage3/",
+   "resumo": "São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.",
+   "descricao_html": "<p>São Jorge vencendo o dragão em halftone e letra gótica. A imagem do santo guerreiro em uma leitura vintage de alto contraste.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca | Preta.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Jorge Vintage | Camiseta Premium | NIMBUS",
+   "meta_description": "São Jorge Vintage em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2de92608da13c8803e17824355544782-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2de92608da13c8803e17824355544782-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8c7774ad2e64b100c17824355576288-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-52c47c67481765119917824355566287-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-da5814dc0dbbfdedf817824355599414-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2de92608da13c8803e17824355544782-640-0.webp",
+      "costas": null
+     },
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-52c47c67481765119917824355566287-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca",
+     "Preta"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1549745124",
+      "sku": "ZKre5u32",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745129",
+      "sku": "QcjtyBHr",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745141",
+      "sku": "Aj6zZjuO",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745153",
+      "sku": "obUXbmGG",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745158",
+      "sku": "BlLiNlGQ",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Preta": [
+     {
+      "variant_id": "1549745126",
+      "sku": "XTwSxJ43",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745127",
+      "sku": "F5R067qh",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745134",
+      "sku": "WuUuAc2T",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745151",
+      "sku": "jBPC6LWJ",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549745156",
+      "sku": "DXbV0urH",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1549745124"
+  },
+  {
+   "id": "352407182",
+   "destaque": false,
+   "slug": "sao-miguel-vintage2",
+   "nome": "São Miguel Vintage | Camiseta Oversized Premium",
+   "arte": "São Miguel Vintage",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage2/",
+   "resumo": "São Miguel Arcanjo em halftone, com letra gótica e textura vintage. Tradição e proteção em uma estampa de alto contraste.",
+   "descricao_html": "<p>São Miguel Arcanjo em halftone, com letra gótica e textura vintage. Tradição e proteção em uma estampa de alto contraste.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Miguel Vintage | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "São Miguel Vintage em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2117536615c75023d117823890585923-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-661c5cc203393fabbd17823890562040-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2117536615c75023d117823890585923-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-de05b9b7ef19d55fac17823890573633-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f7f2ebadcbe20df99817823890598114-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-2117536615c75023d117823890585923-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f7f2ebadcbe20df99817823890598114-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1549181094",
+      "sku": "UpZmmaeP",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181097",
+      "sku": "hzylg2m0",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181101",
+      "sku": "6W5t1xYs",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181104",
+      "sku": "wQ1Fblnw",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181110",
+      "sku": "RH9vaCNh",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1549181095",
+      "sku": "gXjY7H4p",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181100",
+      "sku": "r7ouHFuJ",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181103",
+      "sku": "PVHQqjX0",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181108",
+      "sku": "W7UEDCSY",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1549181109",
+      "sku": "MaPPUFc8",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1549181094"
+  },
+  {
+   "id": "352407196",
+   "destaque": false,
+   "slug": "sao-miguel-vintage3",
+   "nome": "São Miguel Vintage | Camiseta Premium",
+   "arte": "São Miguel Vintage",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage3/",
+   "resumo": "São Miguel Arcanjo em halftone, com letra gótica e textura vintage. Tradição e proteção em uma estampa de alto contraste.",
+   "descricao_html": "<p>São Miguel Arcanjo em halftone, com letra gótica e textura vintage. Tradição e proteção em uma estampa de alto contraste.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Miguel Vintage | Camiseta Premium | NIMBUS",
+   "meta_description": "São Miguel Vintage em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-604579dbe074fef10317823890759831-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-604579dbe074fef10317823890759831-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-95b2948e3965a07de217823890796491-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8763124d9c78da3b2017823890772120-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5e5eaffeb5605c776417823890807835-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-604579dbe074fef10317823890759831-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8763124d9c78da3b2017823890772120-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1549181139",
+      "sku": "eH0Ejdh4",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181146",
+      "sku": "zXVR8IGQ",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181161",
+      "sku": "VzAnWVzD",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181165",
+      "sku": "z1s3g1Ti",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181176",
+      "sku": "JAmYkvP7",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1549181143",
+      "sku": "KiTk7LAO",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181151",
+      "sku": "KLs9Dxr2",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181163",
+      "sku": "rrKGOdTR",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181169",
+      "sku": "ncqLRruP",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1549181183",
+      "sku": "tGoVkLdZ",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1549181139"
+  },
+  {
+   "id": "352407156",
+   "destaque": false,
+   "slug": "sao-miguel-vintage1",
+   "nome": "São Miguel Vintage | Moletom Canguru",
+   "arte": "São Miguel Vintage",
+   "peca": "Moletom Canguru",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 299.9,
+   "preco_formatado": "R$299,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vintage1/",
+   "resumo": "São Miguel Arcanjo em halftone, com letra gótica e textura vintage. Tradição e proteção em uma estampa de alto contraste.",
+   "descricao_html": "<p>São Miguel Arcanjo em halftone, com letra gótica e textura vintage. Tradição e proteção em uma estampa de alto contraste.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Miguel Vintage | Moletom Canguru | NIMBUS",
+   "meta_description": "São Miguel Vintage em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "50% algodão e 50% poliéster",
+    "modelagem": "Modelagem unissex com capuz e bolso canguru",
+    "gola": "Ribana 1x1: 49,7% algodão, 49,7% poliéster e 0,6% elastano",
+    "estampa": "DTF",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10f45e5a44ca51675817823890339206-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10f45e5a44ca51675817823890339206-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-da50f0e8333a28fae817823890391946-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-43b3b3cc279e5bccb017823890365652-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-90eede9c5f27dc72f517823890416958-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10f45e5a44ca51675817823890339206-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-43b3b3cc279e5bccb017823890365652-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1549180960",
+      "sku": "hqxW4uuJ",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180966",
+      "sku": "Q6fM73Hp",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180972",
+      "sku": "CueW8Oyr",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180979",
+      "sku": "LF2VoA8x",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180987",
+      "sku": "yfjzPrOL",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1549180963",
+      "sku": "KmFQcbFZ",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180969",
+      "sku": "Z0PpMRTX",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180975",
+      "sku": "VncImJLo",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180980",
+      "sku": "XjHfjXiF",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1549180991",
+      "sku": "xJvD7tIc",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "variante_padrao": "1549180960"
+  },
+  {
+   "id": "352728451",
+   "destaque": false,
+   "slug": "acima-de-tudo",
+   "nome": "Acima de Tudo Grafite | Camiseta Oversized Premium",
+   "arte": "Acima de Tudo Grafite",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo/",
+   "resumo": "A frase Acima de Tudo em grafite wildstyle, com spray e respingos. A fé encontra a linguagem visual da rua em uma estampa de presença.",
+   "descricao_html": "<p>A frase Acima de Tudo em grafite wildstyle, com spray e respingos. A fé encontra a linguagem visual da rua em uma estampa de presença.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Acima de Tudo Grafite | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Acima de Tudo Grafite em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1958020e36925fa93d17825007566196-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1958020e36925fa93d17825007566196-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-e6582e093e1382cfe117825007586927-640-0.webp"
+    ],
+    "por_cor": {
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1958020e36925fa93d17825007566196-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Off-White": [
+     {
+      "variant_id": "1550088975",
+      "sku": "qDzAZ2Nb",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550088987",
+      "sku": "ZZJ4ITct",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550089001",
+      "sku": "WuiA8WGo",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550089011",
+      "sku": "R6U2OzA3",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550089014",
+      "sku": "7NPRG49j",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550088975"
+  },
+  {
+   "id": "352728524",
+   "destaque": false,
+   "slug": "acima-de-tudo1",
+   "nome": "Acima de Tudo Grafite | Camiseta Premium",
+   "arte": "Acima de Tudo Grafite",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/acima-de-tudo1/",
+   "resumo": "A frase Acima de Tudo em grafite wildstyle, com spray e respingos. A fé encontra a linguagem visual da rua em uma estampa de presença.",
+   "descricao_html": "<p>A frase Acima de Tudo em grafite wildstyle, com spray e respingos. A fé encontra a linguagem visual da rua em uma estampa de presença.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Acima de Tudo Grafite | Camiseta Premium | NIMBUS",
+   "meta_description": "Acima de Tudo Grafite em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d3db3afbf1db2b60217825007765099-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d3db3afbf1db2b60217825007765099-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3d3c39c1cdd59307db17825007796036-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4d3db3afbf1db2b60217825007765099-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1550089244",
+      "sku": "0VEZxlet",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550089264",
+      "sku": "kqTl53T2",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550089276",
+      "sku": "lS1GmO3r",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550089288",
+      "sku": "1EXfvcDO",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550089297",
+      "sku": "GiZlSsi4",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550089244"
+  },
+  {
+   "id": "352728277",
+   "destaque": false,
+   "slug": "anjo-da-guarda",
+   "nome": "Anjo da Guarda Stencil | Camiseta Oversized Premium",
+   "arte": "Anjo da Guarda Stencil",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda/",
+   "resumo": "O Anjo da Guarda em stencil de alto contraste. Uma releitura urbana e sóbria da imagem de proteção que acompanha o cotidiano.",
+   "descricao_html": "<p>O Anjo da Guarda em stencil de alto contraste. Uma releitura urbana e sóbria da imagem de proteção que acompanha o cotidiano.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Anjo da Guarda Stencil | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Anjo da Guarda Stencil em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-636c506d20304e3b3e17825007193890-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-636c506d20304e3b3e17825007193890-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ad0e949a0c3e8137c917825007216525-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-636c506d20304e3b3e17825007193890-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550088298",
+      "sku": "PAhKs5nv",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550088308",
+      "sku": "JqDDkHkY",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550088318",
+      "sku": "AR9dRTL1",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550088329",
+      "sku": "vjm7KcCT",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550088342",
+      "sku": "DtATp9WQ",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550088298"
+  },
+  {
+   "id": "352728357",
+   "destaque": false,
+   "slug": "anjo-da-guarda1",
+   "nome": "Anjo da Guarda Stencil | Camiseta Premium",
+   "arte": "Anjo da Guarda Stencil",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/anjo-da-guarda1/",
+   "resumo": "O Anjo da Guarda em stencil de alto contraste. Uma releitura urbana e sóbria da imagem de proteção que acompanha o cotidiano.",
+   "descricao_html": "<p>O Anjo da Guarda em stencil de alto contraste. Uma releitura urbana e sóbria da imagem de proteção que acompanha o cotidiano.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Anjo da Guarda Stencil | Camiseta Premium | NIMBUS",
+   "meta_description": "Anjo da Guarda Stencil em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-50a98f27b16f6ff64b17825007379335-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-50a98f27b16f6ff64b17825007379335-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-401aefe940fd53a68c17825007415972-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-50a98f27b16f6ff64b17825007379335-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550088566",
+      "sku": "ILemxv0j",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550088604",
+      "sku": "K7mMYEPR",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550088618",
+      "sku": "4VH9DJm3",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550088629",
+      "sku": "gKAmneLz",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550088651",
+      "sku": "tvIVGhLr",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550088566"
+  },
+  {
+   "id": "352728019",
+   "destaque": false,
+   "slug": "aparecida-spray2",
+   "nome": "Aparecida Spray | Camiseta Oversized Premium",
+   "arte": "Aparecida Spray",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/aparecida-spray2/",
+   "resumo": "Nossa Senhora Aparecida em stencil de spray dourado, com cores do Brasil. Devoção brasileira traduzida para o streetwear contemporâneo.",
+   "descricao_html": "<p>Nossa Senhora Aparecida em stencil de spray dourado, com cores do Brasil. Devoção brasileira traduzida para o streetwear contemporâneo.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Aparecida Spray | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Aparecida Spray em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-53bc84d217ce0634e417825006673491-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-53bc84d217ce0634e417825006673491-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1ada82c552e5492bc117825006697228-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-53bc84d217ce0634e417825006673491-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550087299",
+      "sku": "NcKtIiVH",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550087309",
+      "sku": "fqbGR2C2",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550087326",
+      "sku": "ppoA7g8B",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550087334",
+      "sku": "cVHuRRvB",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550087355",
+      "sku": "w7PSnKJs",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550087299"
+  },
+  {
+   "id": "352721477",
+   "destaque": false,
+   "slug": "espirito-santo1",
+   "nome": "Espírito Santo Spray | Camiseta Premium",
+   "arte": "Espírito Santo Spray",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/espirito-santo1/",
+   "resumo": "A pomba do Espírito Santo em stencil de spray, com asas abertas e raios. Um símbolo de paz e graça em linguagem urbana.",
+   "descricao_html": "<p>A pomba do Espírito Santo em stencil de spray, com asas abertas e raios. Um símbolo de paz e graça em linguagem urbana.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Espírito Santo Spray | Camiseta Premium | NIMBUS",
+   "meta_description": "Espírito Santo Spray em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f6e73005f573cd273f17824992760353-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f6e73005f573cd273f17824992760353-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-68296b6506f28e085517824992793499-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7692776ec970d61b0517824992737564-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8b4f7558660ca8a5ed17824992771729-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-f6e73005f573cd273f17824992760353-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7692776ec970d61b0517824992737564-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550067875",
+      "sku": "5yzYwR2z",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067885",
+      "sku": "FGzjWWc3",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067898",
+      "sku": "N9UikPNk",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067904",
+      "sku": "xZCOYzIg",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067915",
+      "sku": "tjhkb8kX",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550067877",
+      "sku": "CObONzZ9",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067882",
+      "sku": "B9ISFJ4s",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067895",
+      "sku": "CZoNrWu4",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067900",
+      "sku": "TV2T8QaM",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067911",
+      "sku": "QHmDMXHR",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550067875"
+  },
+  {
+   "id": "352721118",
+   "destaque": false,
+   "slug": "fe2",
+   "nome": "Fé Wildstyle | Camiseta Oversized Premium",
+   "arte": "Fé Wildstyle",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/fe2/",
+   "resumo": "A palavra Fé em grafite wildstyle, com spray, cor e movimento. Curta na mensagem e marcante na presença.",
+   "descricao_html": "<p>A palavra Fé em grafite wildstyle, com spray, cor e movimento. Curta na mensagem e marcante na presença.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Fé Wildstyle | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Fé Wildstyle em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8dc7b41ca17ab15bc17824992144873-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8dc7b41ca17ab15bc17824992144873-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-74d5d487ebdd2cff9f17824992167523-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-625a5b7ce118614a7c17824992156320-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a35d5e1d0ffa19129117824992178029-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8dc7b41ca17ab15bc17824992144873-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-625a5b7ce118614a7c17824992156320-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550067219",
+      "sku": "A0Uw0OMN",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067239",
+      "sku": "2B9qwijv",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067251",
+      "sku": "Y1SQi5ck",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067256",
+      "sku": "FeRi3687",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067262",
+      "sku": "9Jywqstm",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550067226",
+      "sku": "Zydh1IcH",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067231",
+      "sku": "Qw3l70o0",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067254",
+      "sku": "n7qVfKvi",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067259",
+      "sku": "xuogac03",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550067265",
+      "sku": "zIsxMMPz",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550067219"
+  },
+  {
+   "id": "352721197",
+   "destaque": false,
+   "slug": "fe3",
+   "nome": "Fé Wildstyle | Camiseta Premium",
+   "arte": "Fé Wildstyle",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/fe3/",
+   "resumo": "A palavra Fé em grafite wildstyle, com spray, cor e movimento. Curta na mensagem e marcante na presença.",
+   "descricao_html": "<p>A palavra Fé em grafite wildstyle, com spray, cor e movimento. Curta na mensagem e marcante na presença.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Fé Wildstyle | Camiseta Premium | NIMBUS",
+   "meta_description": "Fé Wildstyle em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c2a647fe6aa4b785f317824992338999-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c2a647fe6aa4b785f317824992338999-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-4c27b72dd30108f31917824992373666-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10fe687942e4c1aefc17824992351081-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5f6a4ca9bd9b91606e17824992385293-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-c2a647fe6aa4b785f317824992338999-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-10fe687942e4c1aefc17824992351081-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550067416",
+      "sku": "VeB01du8",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067424",
+      "sku": "J34jDa70",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067432",
+      "sku": "LMN15bOt",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067455",
+      "sku": "0uhpTLq1",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067460",
+      "sku": "ciu3LrNV",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550067419",
+      "sku": "QTr5Sn3y",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067427",
+      "sku": "wX0GSfRf",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067435",
+      "sku": "s9Nrdkey",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067446",
+      "sku": "bT8pxPpN",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550067473",
+      "sku": "8CfiRROv",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550067416"
+  },
+  {
+   "id": "352725749",
+   "destaque": false,
+   "slug": "querubim-spray",
+   "nome": "Querubim Spray | Camiseta Oversized Premium",
+   "arte": "Querubim Spray",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/querubim-spray/",
+   "resumo": "Um querubim barroco recriado em stencil de spray. Arte sacra clássica e textura urbana no mesmo desenho.",
+   "descricao_html": "<p>Um querubim barroco recriado em stencil de spray. Arte sacra clássica e textura urbana no mesmo desenho.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Querubim Spray | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Querubim Spray em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb3a5ea12ab948cc1917825002515909-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb3a5ea12ab948cc1917825002515909-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b67a4542d8d57dfdae17825002536849-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb4016c17d2e80860417825002526267-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32fee351834ac995f617825002546078-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb3a5ea12ab948cc1917825002515909-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eb4016c17d2e80860417825002526267-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550079741",
+      "sku": "UCtEMhJY",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079746",
+      "sku": "lqRL1NGA",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079766",
+      "sku": "tHzZINbG",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079769",
+      "sku": "ADRcIZXk",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079784",
+      "sku": "3WGLv9Ze",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550079743",
+      "sku": "3WZ8xGZu",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079755",
+      "sku": "nk80ZIJa",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079763",
+      "sku": "MqvYpYND",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079774",
+      "sku": "pTpsxw5J",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550079777",
+      "sku": "xWUNXkm5",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550079741"
+  },
+  {
+   "id": "352725852",
+   "destaque": false,
+   "slug": "querubim-spray1",
+   "nome": "Querubim Spray | Camiseta Premium",
+   "arte": "Querubim Spray",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/querubim-spray1/",
+   "resumo": "Um querubim barroco recriado em stencil de spray. Arte sacra clássica e textura urbana no mesmo desenho.",
+   "descricao_html": "<p>Um querubim barroco recriado em stencil de spray. Arte sacra clássica e textura urbana no mesmo desenho.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Querubim Spray | Camiseta Premium | NIMBUS",
+   "meta_description": "Querubim Spray em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3fe39855adc68532f517825002713919-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3fe39855adc68532f517825002713919-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-1b1efeed1e633640a717825002742341-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-861da41196738a678217825002723821-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-7bb7a124c3117ab5a917825002753652-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-3fe39855adc68532f517825002713919-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-861da41196738a678217825002723821-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550080012",
+      "sku": "CXfK5Su6",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080023",
+      "sku": "VoeR6w1y",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080040",
+      "sku": "SPSLKHoM",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080050",
+      "sku": "uz4qjvFy",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080067",
+      "sku": "yUund0g7",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550080014",
+      "sku": "8WAlIbaN",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080026",
+      "sku": "gw2naA2d",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080035",
+      "sku": "qLSvbdHF",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080055",
+      "sku": "YCxC56ev",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550080070",
+      "sku": "2I33sIiK",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550080012"
+  },
+  {
+   "id": "352722232",
+   "destaque": false,
+   "slug": "sagrado-coracao-spray1",
+   "nome": "Sagrado Coração Spray | Camiseta Premium",
+   "arte": "Sagrado Coração Spray",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/sagrado-coracao-spray1/",
+   "resumo": "O Sagrado Coração de Jesus em stencil de spray, com coroa de espinhos e chama. Uma devoção tradicional em traço streetwear.",
+   "descricao_html": "<p>O Sagrado Coração de Jesus em stencil de spray, com coroa de espinhos e chama. Uma devoção tradicional em traço streetwear.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "Sagrado Coração Spray | Camiseta Premium | NIMBUS",
+   "meta_description": "Sagrado Coração Spray em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eaa8e5eb3b6d4a0ea517824994460990-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eaa8e5eb3b6d4a0ea517824994460990-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5437908ebe4102ca3417824994495112-640-0.webp"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-eaa8e5eb3b6d4a0ea517824994460990-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "variant_id": "1550070192",
+      "sku": "o8HCc2Q4",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550070195",
+      "sku": "IoRgPqix",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550070200",
+      "sku": "flsxe9Qf",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550070203",
+      "sku": "9dUucGqk",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550070233",
+      "sku": "OehEg3B0",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550070192"
+  },
+  {
+   "id": "352727545",
+   "destaque": false,
+   "slug": "arcanjo-spray2",
+   "nome": "São Miguel Vitorioso | Camiseta Oversized Premium",
+   "arte": "São Miguel Vitorioso",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$179,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray2/",
+   "resumo": "São Miguel Arcanjo vencendo o mal em stencil de spray. Força, proteção e fé reunidas em uma composição urbana.",
+   "descricao_html": "<p>São Miguel Arcanjo vencendo o mal em stencil de spray. Força, proteção e fé reunidas em uma composição urbana.</p>\n<h2>A peça</h2>\n<p>100% algodão, com gramatura informada de 240 g. Modelagem oversized unissex, mangas 3/4 e caimento solto. Estampa em DTG. Cores disponíveis: Preta | Off-White.</p>\n<h2>Medidas</h2>\n<p>P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Miguel Vitorioso | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "São Miguel Vitorioso em camiseta oversized premium NIMBUS. Modelagem oversized unissex, mangas 3/4 e caimento solto. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão",
+    "modelagem": "Modelagem oversized unissex, mangas 3/4 e caimento solto",
+    "gola": "Gola canelada de 3 cm",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 62x78; M 64x80; G 66x82; GG 68x84; EG 70x86 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b6379866c287698b5d17825005740948-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b6379866c287698b5d17825005740948-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-0b93311b0b3954ca9517825005764840-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5ae7e49554f518dd3417825005753418-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-13b4e5d9b2cf3e03a817825005775257-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b6379866c287698b5d17825005740948-640-0.webp",
+      "costas": null
+     },
+     "Off-White": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-5ae7e49554f518dd3417825005753418-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Off-White"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550085510",
+      "sku": "jokYaJeJ",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085518",
+      "sku": "tWZoPbQ7",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085533",
+      "sku": "94W4PlsW",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085546",
+      "sku": "M2ilUsFS",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085559",
+      "sku": "mvofuuyy",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ],
+    "Off-White": [
+     {
+      "variant_id": "1550085515",
+      "sku": "fXQKLzBW",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085521",
+      "sku": "wOp8z2aA",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085541",
+      "sku": "mUt6KlnS",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085555",
+      "sku": "VPd5yomP",
+      "tamanho": "GG",
+      "preco": 179.9
+     },
+     {
+      "variant_id": "1550085568",
+      "sku": "Jcvf0rsj",
+      "tamanho": "EG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "variante_padrao": "1550085510"
+  },
+  {
+   "id": "352898175",
+   "destaque": false,
+   "slug": "arcanjo-spray3",
+   "nome": "São Miguel Vitorioso | Camiseta Premium",
+   "arte": "São Miguel Vitorioso",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$149,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray3/",
+   "resumo": "São Miguel Arcanjo vencendo o mal em stencil de spray. Força, proteção e fé reunidas em uma composição urbana.",
+   "descricao_html": "<p>São Miguel Arcanjo vencendo o mal em stencil de spray. Força, proteção e fé reunidas em uma composição urbana.</p>\n<h2>A peça</h2>\n<p>100% algodão penteado, fio 30/1. Modelagem ajustada unissex. Estampa em DTG. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Miguel Vitorioso | Camiseta Premium | NIMBUS",
+   "meta_description": "São Miguel Vitorioso em camiseta premium NIMBUS. Modelagem ajustada unissex. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "100% algodão penteado, fio 30/1",
+    "modelagem": "Modelagem ajustada unissex",
+    "gola": "Ribana canelada com reforço ombro a ombro",
+    "estampa": "DTG",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 49,5x70,5; M 52,5x72; G 54x75,5; GG 60,5x81,5; EG 63x85 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9047f059d949574b4617826075055942-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9047f059d949574b4617826075055942-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-66d42ada8e63049b7617826075088716-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b56c0b8c5d2e66951217826075068366-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-113da775b4d9c0e19517826075098194-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-9047f059d949574b4617826075055942-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-b56c0b8c5d2e66951217826075068366-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550636919",
+      "sku": "n8CQPjtH",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636932",
+      "sku": "IEJdswBP",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636961",
+      "sku": "2xqihOSw",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636965",
+      "sku": "FCbSqgdR",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636981",
+      "sku": "lrIjiSvg",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550636925",
+      "sku": "qbgOGuhx",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636941",
+      "sku": "mdjtVmTD",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636958",
+      "sku": "b1sFEOEI",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636972",
+      "sku": "yc4VvBKx",
+      "tamanho": "GG",
+      "preco": 149.9
+     },
+     {
+      "variant_id": "1550636986",
+      "sku": "KB7nc96L",
+      "tamanho": "EG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "variante_padrao": "1550636919"
+  },
+  {
+   "id": "352726673",
+   "destaque": false,
+   "slug": "arcanjo-spray1",
+   "nome": "São Miguel Vitorioso | Moletom Canguru",
+   "arte": "São Miguel Vitorioso",
+   "peca": "Moletom Canguru",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 299.9,
+   "preco_formatado": "R$299,90",
+   "url_loja": "https://loja.nimbuswear.com.br/produtos/arcanjo-spray1/",
+   "resumo": "São Miguel Arcanjo vencendo o mal em stencil de spray. Força, proteção e fé reunidas em uma composição urbana.",
+   "descricao_html": "<p>São Miguel Arcanjo vencendo o mal em stencil de spray. Força, proteção e fé reunidas em uma composição urbana.</p>\n<h2>A peça</h2>\n<p>50% algodão e 50% poliéster, com gramatura informada de 300 g. Modelagem unissex com capuz e bolso canguru. Estampa em DTF. Cores disponíveis: Preta | Branca.</p>\n<h2>Medidas</h2>\n<p>P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura).</p>\n<p>Compare as medidas com uma peça sua. Pode haver pequena variação de fabricação.</p>\n<h2>Cuidados</h2>\n<p>Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.</p>\n<h2>Produção e envio</h2>\n<p>Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p>\n<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>",
+   "meta_title": "São Miguel Vitorioso | Moletom Canguru | NIMBUS",
+   "meta_description": "São Miguel Vitorioso em moletom canguru NIMBUS. Modelagem unissex com capuz e bolso canguru. Feita no Brasil, para você.",
+   "ficha": {
+    "material": "50% algodão e 50% poliéster",
+    "modelagem": "Modelagem unissex com capuz e bolso canguru",
+    "gola": "Ribana 1x1: 49,7% algodão, 49,7% poliéster e 0,6% elastano",
+    "estampa": "DTF",
+    "cuidados": "Lavar com água fria e sabão neutro; não usar alvejante, amaciante ou secadora; secar à sombra; passar do avesso.",
+    "medidas": "P 52x60; M 55x64; G 58x65; GG 61x65; EG 69x70 cm (largura x altura)"
+   },
+   "imagens": {
+    "capa": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-59c13b3f80df99441317825004166519-640-0.webp",
+    "hover": null,
+    "galeria": [
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-59c13b3f80df99441317825004166519-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-24ef91e1fd1f4937cf17825004217028-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-a8a5714c7ef4028ffd17825004192279-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-76f19fc6a2da934d7117825004242625-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32741010943d53b1ee17825004178343-640-0.webp",
+     "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-ba7e322de33e02afa617825004229550-640-0.webp"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-59c13b3f80df99441317825004166519-640-0.webp",
+      "costas": null
+     },
+     "Branca": {
+      "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-32741010943d53b1ee17825004178343-640-0.webp",
+      "costas": null
+     }
+    },
+    "fonte_px": 500,
+    "caixa_max_css": 400
+   },
+   "opcoes": {
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG",
+     "EG"
+    ],
+    "cores": [
+     "Preta",
+     "Branca"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "variant_id": "1550082556",
+      "sku": "lBTRizhd",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082591",
+      "sku": "Ru1NHkHK",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082596",
+      "sku": "dmOiPqE5",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082627",
+      "sku": "Azw7ermG",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082654",
+      "sku": "6VYw8mRH",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ],
+    "Branca": [
+     {
+      "variant_id": "1550082571",
+      "sku": "DHPWIfDZ",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082576",
+      "sku": "TWrmIoRD",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082609",
+      "sku": "qaIXgKi2",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082631",
+      "sku": "UCkjSpyX",
+      "tamanho": "GG",
+      "preco": 299.9
+     },
+     {
+      "variant_id": "1550082662",
+      "sku": "C0FJsFVH",
+      "tamanho": "EG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "variante_padrao": "1550082556"
   }
  ]
 }
