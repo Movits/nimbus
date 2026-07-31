@@ -112,8 +112,20 @@ frete grátis estática (PDP, Ecobag como completa-pedido) e dinâmica (toast co
 valor da sacola em localStorage), gate novo `lint-claims.mjs` no build e no
 deploy (frete grátis sem condição, overclaims, CDN acima de -640-0.webp,
 JSON-LD divergente do catálogo), `sitemap.xml` (53 páginas públicas) e
-`robots.txt` gerados no build. Da pauta restam só: ID do GA4 (dono) e Search
-Console (precisa do Google do dono).
+`robots.txt` gerados no build. Da pauta resta só o Search Console (precisa do
+Google do dono; o sitemap já está pronto para envio).
+
+**Feedback do dono aplicado em 31/07 (PR #27, no ar)**: relacionados deixou de
+sugerir a mesma arte em outra peça e virou "Você também pode gostar" (outras
+artes da mesma coleção, mesma peça primeiro); nota da galeria informa que as
+pessoas das fotos vestem tamanho G (só peças com numeração); **GA4 ATIVO** com
+o ID `G-E041S3ZHWB` gerado pelo dono (vitrine via `GA4_ID` no build-paginas e
+landing via index.html). **Decisões em aberto com o dono**: subir o teto do
+frete grátis de R$199 para R$399,90 com Ecobag de brinde (exige configurar a
+regra no painel da Nuvemshop ANTES de trocar a promessa no site, mais
+announcement, PDPs, toast, /envios/ e lint-claims no mesmo dia) e o valor do
+frete abaixo do teto (recomendação: repassar o cálculo do checkout, sem
+subsídio). Senha do FTP rotacionada pelo dono em 31/07; tema segue congelado.
 
 **Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
