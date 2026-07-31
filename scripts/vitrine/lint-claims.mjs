@@ -1,6 +1,6 @@
 // Gate de claims da vitrine (P1-6 do conselho r3). Sai com código != 0 se uma
-// promessa publicada não tiver lastro: frete grátis sem a condição dos R$199 na
-// mesma página, superlativo sem prova, imagem da CDN acima do teto de 640 px
+// promessa publicada não tiver lastro: frete grátis sem a condição dos R$399,90
+// na mesma página, superlativo sem prova, imagem da CDN acima do teto de 640 px
 // (proteção da arte, decisão de 30/07) ou preço do JSON-LD divergindo do
 // catálogo (dado que o Google indexa tem que bater com o que a loja cobra).
 import fs from "node:fs";
@@ -39,8 +39,8 @@ for (const arq of htmls) {
   const rel = path.relative(RAIZ, arq);
   const html = fs.readFileSync(arq, "utf-8");
 
-  if (/frete gr[aá]tis/i.test(html) && !html.includes("199"))
-    erros.push(`${rel}: promete frete grátis sem a condição dos R$199`);
+  if (/frete gr[aá]tis/i.test(html) && !html.includes("399"))
+    erros.push(`${rel}: promete frete grátis sem a condição dos R$399,90`);
 
   for (const re of OVERCLAIMS)
     if (re.test(html)) erros.push(`${rel}: overclaim "${html.match(re)[0]}"`);

@@ -69,8 +69,19 @@
 
   thumbs.forEach((b) => b.addEventListener("click", () => mostra(b.dataset.src)));
 
+  // --- GA4: eventos de funil (o gtag só existe com GA4_ID no build) ----------
+  function evento(nome, params) {
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", nome, Object.assign({
+      currency: "BRL",
+      value: p.preco,
+      items: [{ item_id: p.slug, item_name: p.nome, price: p.preco, quantity: 1 }],
+    }, params || {}));
+  }
+  evento("view_item");
+
   // --- envio sem sair da página -------------------------------------------
-  const FRETE_GRATIS = 199; // mesmo teto anunciado nas PDPs; régua espelho, a verdade é o carrinho
+  const FRETE_GRATIS = 399.9; // mesmo teto anunciado nas PDPs; régua espelho, a verdade é o carrinho
   function reais(v) {
     return "R$ " + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",").replace(",00", "");
   }
@@ -92,8 +103,8 @@
       const regua = document.createElement("span");
       regua.className = "sacola-aviso__frete";
       regua.textContent = total >= FRETE_GRATIS
-        ? "Sua sacola ganhou frete grátis."
-        : "Faltam " + reais(FRETE_GRATIS - total) + " para o frete grátis.";
+        ? "Sua sacola ganhou frete grátis e uma Ecobag de brinde."
+        : "Faltam " + reais(FRETE_GRATIS - total) + " para frete grátis e Ecobag de brinde.";
       aviso.append(regua);
     }
     const link = document.createElement("a");
@@ -125,6 +136,9 @@
     form.target = "sacola-sink";
     form.submit();
     if (window.NIMBUS && NIMBUS.sacola) NIMBUS.sacola.soma(1, p.preco || 0);
+    evento("add_to_cart", {
+      items: [{ item_id: p.slug, item_name: p.nome, item_variant: tamanho ? cor + "/" + tamanho : cor, price: p.preco, quantity: 1 }],
+    });
     mostraAviso(tamanho ? cor + " · " + tamanho : cor);
   });
 
