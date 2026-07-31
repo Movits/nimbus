@@ -102,7 +102,18 @@ P0-1 (lints no deploy), P0-3 parcial (Trocas e Envios no ar; CNPJ segue
 bloqueador), P0-4 (página /loja/impacto/ com a fórmula do dono e Diário de
 Repasses), P0-5 (Instagram e TikTok no footer) e o preparo do P0-2
 (/loja/privacidade/ no ar; snippet GA4 inerte à espera do ID que o dono vai
-gerar). Restam os P1 e o ID do GA4.
+gerar).
+
+**Leva P1 completa NO AR (31/07, PR #25, go do dono "vai")**: bloco devocional
+por arte nos 8 destaques (`scripts/vitrine/devocional.json`; escalar aos 44
+exige gate do dono), breadcrumb, relacionados "Complete o conjunto", caimento
+por peça, disclaimer de fotos só na galeria da PDP (saiu do footer), régua do
+frete grátis estática (PDP, Ecobag como completa-pedido) e dinâmica (toast com
+valor da sacola em localStorage), gate novo `lint-claims.mjs` no build e no
+deploy (frete grátis sem condição, overclaims, CDN acima de -640-0.webp,
+JSON-LD divergente do catálogo), `sitemap.xml` (53 páginas públicas) e
+`robots.txt` gerados no build. Da pauta restam só: ID do GA4 (dono) e Search
+Console (precisa do Google do dono).
 
 **Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
