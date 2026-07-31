@@ -56,7 +56,7 @@ const ga4 = () => GA4_ID ? `
 
 // header/footer são funções do medium para o UTM sair certo por tipo de página
 const header = (medium) => `
-<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis acima de R$199</div>
+<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis e Ecobag de brinde a partir de R$399,90</div>
 <header class="header">
   <a class="header__logo" href="${PREFIXO}/"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"></a>
   <nav class="header__nav">
@@ -212,8 +212,6 @@ const CAIMENTO = {
   "Camiseta Oversized Premium": "Modelagem ampla de propósito. Entre dois tamanhos, o menor preserva o caimento.",
   "Moletom Canguru": "Veste confortável, com espaço. Na dúvida, fique no seu tamanho usual.",
 };
-const ECOBAG = cat.produtos.find((x) => x.peca === "Ecobag");
-
 const relacionados = (p) => {
   // Feedback do dono (31/07): ninguém compra a mesma arte em duas peças; a
   // seção mostra OUTRAS artes da mesma coleção, com a mesma peça primeiro
@@ -235,6 +233,7 @@ const produto = (p) => {
   const dados = {
     url_loja: urlLoja, url_carrinho: SACOLA("pdp"), imagens: p.imagens,
     opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
+    slug: p.slug, nome: p.nome,
   };
   // galeria com a cor padrão primeiro (costas = arte, depois frente), para os
   // thumbs abrirem coerentes com a capa
@@ -295,11 +294,7 @@ ${header("pdp")}
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho>Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        ${p.preco >= 199
-          ? `<span class="note">Frete grátis para esta peça (pedidos acima de R$199). Pix, boleto e cartão em até 12x.</span>`
-          : ECOBAG && p.slug !== ECOBAG.slug
-            ? `<span class="note">Frete grátis a partir de R$199: complete com a <a href="${PREFIXO}/p/${ECOBAG.slug}/">Ecobag (${esc(ECOBAG.preco_formatado)})</a>. Pix, boleto e cartão em até 12x.</span>`
-            : `<span class="note">Frete grátis acima de R$199. Pix, boleto e cartão em até 12x.</span>`}
+        <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece na sacola. Pix, boleto e cartão em até 12x.</span>
         <span class="note">Feita no Brasil, para você.</span>
       </div>
 
@@ -388,8 +383,10 @@ const INSTITUCIONAIS = {
     <p class="note">O prazo exato para o seu CEP aparece no checkout e prevalece sobre as faixas acima.</p>
     <h2>Rastreio</h2>
     <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega.</p>
-    <h2>Frete grátis</h2>
-    <p>Pedidos acima de R$199 têm frete grátis para todo o Brasil.</p>`],
+    <h2>Frete grátis e Ecobag de brinde</h2>
+    <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil e levam uma Ecobag de brinde. Você escolhe a arte da Ecobag na mensagem do pedido, no checkout, junto com o projeto social.</p>
+    <h2>Quanto custa o frete</h2>
+    <p>Abaixo de R$399,90, o frete é calculado pelo peso do pedido e pelo seu CEP, direto na sacola. O valor exato aparece antes do pagamento.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>O que coletamos aqui na vitrine</h2>
