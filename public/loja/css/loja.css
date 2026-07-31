@@ -20,7 +20,9 @@
 .announcement a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 
 /* páginas institucionais (impacto, trocas, envios, privacidade) */
-.institucional { max-width: 46em; }
+/* especificidade 0,2,0 para vencer .secao__inner (--maxw-loja); 40em ~ 68
+   caracteres por linha, a faixa confortável de leitura */
+.secao__inner.institucional { max-width: 40em; }
 .institucional h1 { margin-bottom: 0.6em; }
 .institucional h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--deep); margin: 1.8em 0 0.5em; }
 .institucional p, .institucional li { line-height: 1.7; margin: 0.6em 0; }
@@ -55,6 +57,9 @@
 }
 .header__nav { display: flex; gap: 1.6em; }
 .header__nav a, .header__tools a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-size: 11px;
   letter-spacing: 0.045em;
   text-transform: uppercase;
@@ -79,6 +84,7 @@
 .header__cta {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   white-space: nowrap;
   border: 1.5px solid var(--ink);
   border-radius: 999px;
@@ -235,7 +241,7 @@
 }
 .card__meta { display: flex; justify-content: space-between; gap: 1em; align-items: baseline; padding: 0.9em 0.2em 0; }
 .card__nome { font-weight: 600; font-size: 13.5px; color: var(--deep); }
-.card__peca { font-size: 11px; color: #7a8495; margin-top: 2px; }
+.card__peca { font-size: 11px; color: #5b6779; margin-top: 2px; }
 .card__preco { font-family: var(--font-display); font-weight: 400; font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 
 /* --- bandas editoriais ----------------------------------------------------- */
@@ -266,7 +272,7 @@
 }
 .cabecalho-colecao[data-colecao="nuvem"] { color: var(--deep); }
 .cabecalho-colecao__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.cabecalho-colecao::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 60%); }
+.cabecalho-colecao::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.45) 45%, transparent 78%); }
 .cabecalho-colecao[data-colecao="nuvem"]::after { background: linear-gradient(to top, rgba(247, 251, 255, 0.9), transparent 65%); }
 /* ouro sobre céu claro some; no banner NUVEM o kicker vira navy (dono, 31/07) */
 .cabecalho-colecao[data-colecao="nuvem"] .kicker--gold { color: var(--deep); opacity: 0.75; }
@@ -274,21 +280,22 @@
 /* auditoria de visibilidade (31/07): sobre superfície CLARA o ouro #e9c46a não
    tem contraste; nesses contextos o kicker usa um ouro queimado. Banners e
    fundos navy continuam com o ouro vivo da paleta. */
-.hero .kicker--gold, .pdp__info .kicker--gold, .pdp__devocao .kicker--gold { color: #96731d; opacity: 1; }
+.hero .kicker--gold, .pdp__info .kicker--gold, .pdp__devocao .kicker--gold { color: #735614; opacity: 1; }
 .cabecalho-colecao__copy { position: relative; z-index: 1; max-width: var(--maxw-listagem); width: 100%; margin: 0 auto; padding: 2.2em var(--pad); }
 
 .filtros { display: flex; gap: 0.6em; flex-wrap: wrap; align-items: center; margin: 2em 0; }
 .chip {
+  display: inline-flex; align-items: center; min-height: 44px;
   border: 1px solid var(--line); background: #fff; color: var(--deep);
   font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
   padding: 8px 16px; border-radius: 999px;
 }
 .chip[aria-pressed="true"] { background: var(--deep); color: var(--cloud); border-color: var(--deep); }
-.filtros select { margin-left: auto; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 12px; background: #fff; color: var(--deep); }
+.filtros select { margin-left: auto; min-height: 44px; border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 12px; background: #fff; color: var(--deep); }
 
 /* --- página de produto ------------------------------------------------------ */
-.migalhas { font-size: 0.82rem; color: #7a8495; padding-top: 1.4em; }
-.migalhas a { color: inherit; text-decoration: none; }
+.migalhas { font-size: 0.82rem; color: #5b6779; padding-top: 1.4em; }
+.migalhas a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; margin-block: -14px; }
 .migalhas a:hover { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .migalhas span { color: var(--deep); }
 
@@ -332,14 +339,14 @@
 
 .pdp__info { position: sticky; top: 110px; }
 .pdp__info h1 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.02em; line-height: 1.02; font-size: clamp(2.1rem, 4vw, 3.2rem); margin: 0.2em 0 0.1em; color: var(--deep); }
-.pdp__peca { color: #7a8495; font-size: 0.95rem; }
+.pdp__peca { color: #5b6779; font-size: 0.95rem; }
 .pdp__preco { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; font-variant-numeric: tabular-nums; margin: 0.5em 0; }
 .pdp__resumo { margin: 0.6em 0 1.2em; }
 
 .opcao { margin: 1.1em 0; }
 .opcao__rotulo { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #415061; margin-bottom: 0.6em; }
 .swatches { display: flex; gap: 10px; }
-.swatch { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--line); padding: 0; }
+.swatch { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--line); padding: 0; }
 .swatch[aria-pressed="true"] { border-color: var(--gold); box-shadow: 0 0 0 2px #fff inset; }
 .tamanhos { display: flex; gap: 8px; flex-wrap: wrap; }
 .tamanho { min-width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--line); background: #fff; font-weight: 600; font-size: 13px; color: var(--deep); }
@@ -377,6 +384,13 @@
   max-width: min(92vw, 460px);
 }
 .sacola-aviso.on { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+/* no celular a caixa encolhia para o max-content (197px de 358 disponíveis) e
+   quebrava a confirmação em três linhas: aqui ela ocupa a largura da tela */
+@media (max-width: 640px) {
+  .sacola-aviso { left: 12px; right: 12px; max-width: none; width: auto; transform: translateY(16px); }
+  .sacola-aviso.on { transform: none; }
+  .sacola-aviso a, .sacola-aviso button { display: inline-flex; align-items: center; min-height: 44px; }
+}
 
 /* gaveta lateral da sacola: espelho local + régua do frete/brinde + checkout */
 .gaveta { position: fixed; inset: 0; z-index: 120; pointer-events: none; }
@@ -417,7 +431,7 @@
 .gaveta__conta { min-width: 2.2em; text-align: center; font-variant-numeric: tabular-nums; font-size: 0.9rem !important; color: var(--deep) !important; }
 .gaveta__tira {
   width: 34px; height: 34px; display: grid; place-items: center; padding: 0;
-  border: 0; border-radius: 9px; background: none; color: #8b97a8;
+  border: 0; border-radius: 9px; background: none; color: #5f6b7d;
   font-size: 1.25rem; line-height: 1; cursor: pointer;
   transition: color 0.15s ease, background 0.15s ease;
 }
@@ -435,12 +449,19 @@
 .gaveta__meta { font-size: 0.84rem; color: var(--ink); margin: 0.6em 0 0; }
 .gaveta__meta b { color: var(--deep); }
 .gaveta__pe { padding: 1em 1.3em 1.3em; }
+/* fechamento: o cliente precisa ver o quanto vai gastar antes de sair daqui */
+.gaveta__soma { display: flex; align-items: baseline; justify-content: space-between; gap: 1em; padding-top: 0.2em; }
+.gaveta__soma span { font-size: 0.86rem; color: var(--ink); }
+.gaveta__soma b { font-family: var(--font-display); font-size: 1.3rem; color: var(--deep); font-variant-numeric: tabular-nums; }
+.gaveta__frete { font-size: 0.78rem; color: #5b6779; margin: 0.1em 0 0.9em; }
+.gaveta__pendente { font-size: 0.78rem; line-height: 1.5; color: var(--deep); background: var(--sky-light, #dcebfa); border-radius: 10px; padding: 0.7em 0.9em; margin: 0.8em 0 0; }
+.gaveta__pendente[hidden] { display: none; }
 .gaveta__checkout { width: 100%; text-align: center; }
 .gaveta__nota { font-size: 0.74rem; color: #66748a; margin: 0.8em 0 0; }
 .gaveta__esvazia { background: none; border: 0; padding: 0; color: #66748a; text-decoration: underline; cursor: pointer; font-size: 0.74rem; }
 /* festa ao cruzar o teto: confetes discretos nas cores da casa */
 .gaveta__festa { position: relative; margin: 1em 1.3em 0; background: #fff; border: 1px solid var(--gold); border-radius: 14px; padding: 1em 1.2em; overflow: hidden; }
-.gaveta__festa p { margin: 0; font-size: 0.88rem; color: var(--deep); }
+.gaveta__festa p { position: relative; z-index: 1; margin: 0; font-size: 0.88rem; color: var(--deep); }
 .gaveta__confete {
   position: absolute; top: -10px; width: 7px; height: 7px; border-radius: 2px;
   animation: confete 1.8s ease-in forwards;
@@ -462,7 +483,7 @@
   0% { transform: translateY(0) rotate(0); opacity: 1; }
   100% { transform: translateY(110px) rotate(340deg); opacity: 0; }
 }
-.sacola-aviso a { grid-row: 1; grid-column: 2; color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
+.sacola-aviso a, .sacola-aviso button { grid-row: 1; grid-column: 2; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 .sacola-aviso__frete { grid-column: 1 / -1; font-size: 0.8rem; opacity: 0.85; }
 .opcao__valor { font-weight: 400; text-transform: none; letter-spacing: 0.02em; color: var(--ink); margin-left: 0.5em; }
 
@@ -499,7 +520,7 @@
 .footer__logo img { height: 52px; width: auto; max-width: 100%; object-fit: contain; }
 .footer__tagline { font-size: 0.88rem; line-height: 1.6; color: var(--ink); margin-top: 1em; max-width: 26em; }
 .footer h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--deep); margin-bottom: 0.9em; }
-.footer a { display: block; color: var(--deep); opacity: 0.85; text-decoration: none; font-size: 0.88rem; padding: 0.25em 0; }
+.footer a { display: flex; align-items: center; min-height: 44px; color: var(--deep); opacity: 0.85; text-decoration: none; font-size: 0.88rem; }
 .footer a:hover { opacity: 1; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
 .footer__legal {
   background: var(--deep);

@@ -3,8 +3,8 @@
 // Fluxo da sacola (decisão do dono, 30/07): o formulário replica o POST do
 // formulário oficial da loja (add_to_cart + variation[] + quantity). Com JS, o
 // envio vai para um iframe oculto e o cliente segue na vitrine; a Sacola do
-// header leva ao carrinho da loja, onde vive a verdade. Sem JS, o form abre o
-// carrinho da loja em aba nova, já com o item.
+// header abre a gaveta (o carrinho da loja é a verdade do que será cobrado).
+// Sem JS, o form abre o carrinho da loja em aba nova, já com o item.
 // Regra de imagem (curadoria 29/07): ao trocar de cor, o quadro mostra as
 // COSTAS daquela cor (onde vive a arte); frente fica nos thumbs.
 (function () {
@@ -107,10 +107,20 @@
         : "Faltam " + reais(FRETE_GRATIS - prog) + " para frete grátis e Ecobag de brinde.";
       aviso.append(regua);
     }
-    const link = document.createElement("a");
-    link.href = p.url_carrinho;
-    link.textContent = "Ver sacola";
-    aviso.append(link);
+    // "Ver a sacola" abre a gaveta aqui mesmo. Antes era um link para a loja:
+    // no pico da intenção, mandava o cliente para fora da vitrine.
+    if (window.NIMBUS && NIMBUS.gaveta) {
+      const bt = document.createElement("button");
+      bt.type = "button";
+      bt.textContent = "Ver a sacola";
+      bt.addEventListener("click", () => { aviso.classList.remove("on"); NIMBUS.gaveta.abre(); });
+      aviso.append(bt);
+    } else {
+      const link = document.createElement("a");
+      link.href = p.url_carrinho;
+      link.textContent = "Ver a sacola";
+      aviso.append(link);
+    }
     aviso.classList.add("on");
     clearTimeout(avisoTimer);
     avisoTimer = setTimeout(() => aviso.classList.remove("on"), 6000);

@@ -111,6 +111,7 @@ NIMBUS.sacola = (function () {
     temEcobag() { return le().itens.some(ehEcobag); },
     soma(item) {
       const s = le();
+      desfazer = null;
       const antes = progressoDe(s.itens);
       const igual = s.itens.find((i) => i.slug === item.slug && i.cor === item.cor && i.tamanho === item.tamanho);
       if (igual) igual.qtd += 1;
@@ -126,6 +127,7 @@ NIMBUS.sacola = (function () {
     // edição vai pelo cookie de alvo, que o cart.tpl aplica lá.
     ajusta(ch, delta) {
       const s = le();
+      desfazer = null;
       const i = s.itens.find((x) => chave(x) === ch);
       if (!i) return null;
       const nova = i.qtd + delta;
@@ -158,6 +160,7 @@ NIMBUS.sacola = (function () {
       return true;
     },
     temDesfazer() { return !!desfazer; },
+    pendencias() { return alvoAtual().filter((a) => a.qtd === 0).length; },
     esvazia() {
       const s = le();
       if (s.itens.length) desfazer = { itens: JSON.parse(JSON.stringify(s.itens)), quando: Date.now() };
@@ -169,7 +172,7 @@ NIMBUS.sacola = (function () {
       const n = this.n();
       document.querySelectorAll("[data-sacola-n]").forEach((el) => {
         el.hidden = n === 0;
-        el.textContent = n > 9 ? "9+" : String(n);
+        el.textContent = n > 99 ? "99+" : String(n);
       });
       if (NIMBUS.gaveta) NIMBUS.gaveta.renderiza();
     },
@@ -179,6 +182,10 @@ NIMBUS.sacola = (function () {
 // --- gaveta lateral da sacola ------------------------------------------------
 NIMBUS.gaveta = (function () {
   let raiz = null;
+  let ultimoFoco = null;
+  // existe UMA ecobag no catálogo; prometer "a arte que você quiser" seria
+  // oferecer escolha que não existe
+  const ECOBAG = { nome: "Ecobag NIMBUS Wildstyle", url: "/loja/p/wildstyle/" };
 
   function ga4(nome, params) {
     if (typeof window.gtag !== "function") return;
@@ -206,21 +213,36 @@ NIMBUS.gaveta = (function () {
     raiz.className = "gaveta";
     raiz.innerHTML =
       '<div class="gaveta__veu" data-gaveta-fecha></div>' +
-      '<aside class="gaveta__painel" role="dialog" aria-label="Sua sacola">' +
+      '<aside class="gaveta__painel" role="dialog" aria-modal="true" aria-label="Sua sacola" tabindex="-1">' +
       '<div class="gaveta__cabeca"><h2>Sua sacola</h2><button class="gaveta__fecha" data-gaveta-fecha aria-label="Fechar">&times;</button></div>' +
       '<div class="gaveta__festa" hidden></div>' +
       '<p class="gaveta__vivo" role="status" aria-live="polite"></p>' +
       '<div class="gaveta__itens"></div>' +
       '<div class="gaveta__regua"><div class="gaveta__trilho"><div class="gaveta__barra"></div></div><p class="gaveta__meta"></p></div>' +
       '<div class="gaveta__pe">' +
+      '<div class="gaveta__soma"><span>Subtotal</span><b class="gaveta__subtotal"></b></div>' +
+      '<p class="gaveta__frete"></p>' +
       '<a class="btn btn--primary gaveta__checkout" href="#" target="_blank" rel="noopener">Fechar pedido na loja</a>' +
-      '<p class="gaveta__nota">Espelho do que você adicionou por aqui. Quantidades e valores finais aparecem na loja. <button type="button" class="gaveta__esvazia">Esvaziar</button></p>' +
+      '<p class="gaveta__pendente" hidden></p>' +
+      '<p class="gaveta__nota">Espelho do que você adicionou por aqui. Os valores finais aparecem na loja. <button type="button" class="gaveta__esvazia">Esvaziar</button></p>' +
       "</div></aside>";
     document.body.appendChild(raiz);
+    raiz.inert = true; // fechada não deixa botão fantasma no caminho do Tab
     raiz.querySelectorAll("[data-gaveta-fecha]").forEach((el) => el.addEventListener("click", fecha));
-    raiz.querySelector(".gaveta__esvazia").addEventListener("click", () => { NIMBUS.sacola.esvazia(); });
+    raiz.querySelector(".gaveta__esvazia").addEventListener("click", () => { NIMBUS.sacola.esvazia(); anuncia("Sacola esvaziada."); });
     raiz.querySelector(".gaveta__checkout").addEventListener("click", () => ga4("begin_checkout"));
-    document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") fecha(); });
+    // Escape só fecha quando a gaveta está aberta, e Tab não escapa do painel
+    document.addEventListener("keydown", (ev) => {
+      if (!raiz.classList.contains("on")) return;
+      if (ev.key === "Escape") { fecha(); return; }
+      if (ev.key !== "Tab") return;
+      const focaveis = raiz.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+      if (!focaveis.length) return;
+      const primeiro = focaveis[0];
+      const ultimo = focaveis[focaveis.length - 1];
+      if (ev.shiftKey && document.activeElement === primeiro) { ev.preventDefault(); ultimo.focus(); }
+      else if (!ev.shiftKey && document.activeElement === ultimo) { ev.preventDefault(); primeiro.focus(); }
+    });
   }
 
   function renderiza() {
@@ -309,18 +331,46 @@ NIMBUS.gaveta = (function () {
     if (!itens.length) meta.textContent = "Frete grátis e uma Ecobag de brinde a partir de " + NIMBUS.reais(META) + " (a Ecobag do brinde não conta na soma).";
     else if (prog >= META) meta.innerHTML = temEco
       ? "<b>Frete grátis garantido.</b> Use o cupom <b>ECOBAG</b> no checkout: uma das suas Ecobags sai de graça."
-      : "<b>Frete grátis garantido.</b> Adicione a Ecobag com a arte que você quiser e use o cupom <b>ECOBAG</b> no checkout: ela sai de graça.";
+      : '<b>Frete grátis garantido.</b> Falta levar a Ecobag: <a href="' + ECOBAG.url + '">' + ECOBAG.nome + "</a>. No checkout, o cupom <b>ECOBAG</b> tira o valor dela do pedido.";
     else meta.textContent = "Faltam " + NIMBUS.reais(META - prog) + " para frete grátis e uma Ecobag de brinde.";
+    // a festa comemora em uma frase; a instrução do cupom mora só na régua
     const festa = raiz.querySelector(".gaveta__festa");
     festa.hidden = !(itens.length && prog >= META);
     if (!festa.hidden && !festa.innerHTML) {
-      festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) + "<p>Seu pedido ganhou frete grátis e uma Ecobag de presente. Garanta a Ecobag com a arte que preferir na sacola e use o cupom ECOBAG no checkout: o valor dela sai do pedido.</p>";
+      festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) + "<p>Seu pedido ganhou frete grátis e uma Ecobag de presente.</p>";
     }
+    // fechamento: subtotal e o que acontece com o frete
+    raiz.querySelector(".gaveta__subtotal").textContent = NIMBUS.reais(total);
+    const frete = raiz.querySelector(".gaveta__frete");
+    frete.textContent = !itens.length ? "" : prog >= META ? "Frete grátis." : "Frete calculado no checkout pelo seu CEP.";
+    // Honestidade: a loja é quem cobra. Enquanto uma remoção feita aqui não
+    // tiver sido aplicada lá, o cliente precisa saber disso antes de pagar.
+    const pend = raiz.querySelector(".gaveta__pendente");
+    const nPend = NIMBUS.sacola.pendencias();
+    pend.hidden = nPend === 0;
+    if (nPend) pend.innerHTML = "Você editou a sacola por aqui. O carrinho da loja se ajusta quando você abrir o checkout: <b>confira a lista lá antes de pagar</b>.";
     raiz.querySelector(".gaveta__checkout").href = urlCarrinho();
   }
 
-  function abre() { monta(); renderiza(); raiz.classList.add("on"); document.body.style.overflow = "hidden"; ga4("view_cart"); }
-  function fecha() { if (raiz) { raiz.classList.remove("on"); document.body.style.overflow = ""; } }
+  function abre() {
+    monta();
+    renderiza();
+    ultimoFoco = document.activeElement;
+    raiz.inert = false;
+    raiz.classList.add("on");
+    document.body.style.overflow = "hidden";
+    raiz.querySelector(".gaveta__painel").focus();
+    ga4("view_cart");
+  }
+  function fecha() {
+    if (!raiz) return;
+    raiz.classList.remove("on");
+    raiz.inert = true;
+    document.body.style.overflow = "";
+    const volta = ultimoFoco && document.contains(ultimoFoco) ? ultimoFoco : document.querySelector(".header__cta");
+    if (volta) volta.focus();
+    ultimoFoco = null;
+  }
 
   return { abre, fecha, renderiza };
 })();
