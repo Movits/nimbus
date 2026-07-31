@@ -133,8 +133,9 @@ ${header("home")}
   <section class="secao" style="padding-top:0"><div class="secao__inner">
     <div class="secao__head">
       <div><div class="kicker">Essenciais</div><h2 class="display--md display">O começo de tudo</h2></div>
+      <a class="btn btn--ghost" href="${PREFIXO}/c/street/">Ver tudo por coleção</a>
     </div>
-    <div class="grade">${cat.produtos.map(card).join("")}</div>
+    <div class="grade">${cat.produtos.filter((p) => p.destaque).map(card).join("")}</div>
   </div></section>
 
   <section class="secao banda--manifesto"><div class="secao__inner banda">

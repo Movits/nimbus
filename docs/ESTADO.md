@@ -36,6 +36,14 @@ Dia 3 (feedback do dono de 30/07, decisão em
   1100px). Escolha do dono no mesmo dia em que o protótipo foi ao ar; a página
   `prototipo-grid/` e as variantes B e C saíram do código.
 - **Curadoria de fotos por cor: adiada por ordem do dono (30/07).**
+- **Catálogo completo na vitrine (ordem do dono, 30/07 à noite): 44 produtos.**
+  Entra todo produto com copy PRONTO (17 STREET, 25 RELÍQUIA, 2 NUVEM); os 5
+  Blusão Moletom continuam fora (BLOQUEADO POR DADO YOUDRAW, sem tabela de
+  medidas). Os 8 heroes viram `destaque: true` e são o grid da home; as coleções
+  listam tudo. Sem curadoria por cor, a foto da cor é a `colorImages` do
+  products.json (a mesma capa que a loja usa) e o card fica sem hover para não
+  piscar cor errada. Lints verdes: lint-copy nos 44, link-check com 50 páginas
+  e 152 URLs externas.
 - **Sacola aprovada no teste do dono (30/07)**: 2 itens chegaram ao carrinho com
   tamanho e cor certos, sem desafio, contador batendo. Pendência que sobrou do
   teste: navegar pelo menu da loja Nuvemshop não volta para a vitrine.
