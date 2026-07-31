@@ -240,7 +240,7 @@ const produto = (p) => {
   const dados = {
     url_loja: urlLoja, url_carrinho: SACOLA("pdp"), imagens: p.imagens,
     opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
-    slug: p.slug, nome: p.nome, peca: p.peca,
+    slug: p.slug, nome: p.nome, peca: p.peca, id: p.id,
   };
   // galeria com a cor padrão primeiro (costas = arte, depois frente), para os
   // thumbs abrirem coerentes com a capa

@@ -140,7 +140,7 @@
       const pc = p.imagens.por_cor[cor] || {};
       resultado = NIMBUS.sacola.soma({
         slug: p.slug, nome: p.nome, cor, tamanho: tamanho || null, peca: p.peca || "",
-        preco: p.preco || 0, img: pc.costas || pc.frente || p.imagens.capa,
+        pid: p.id || null, preco: p.preco || 0, img: pc.costas || pc.frente || p.imagens.capa,
       });
     }
     evento("add_to_cart", {

@@ -4,6 +4,10 @@
 // O espelho é um retrato do que foi adicionado POR AQUI; a verdade é o carrinho
 // da loja (o cliente pode mudar por lá). Por isso: validade de 48h, botão de
 // esvaziar e aviso na gaveta. Sem dependências.
+// Edição na gaveta (31/07): quantidade e remoção mexem no espelho E deixam o
+// alvo num cookie do domínio pai; o cart.tpl do tema aplica na loja com a API
+// dela (LS.removeItem), que é a única que remove de verdade. Enquanto a loja
+// não aplica, ela segue sendo a verdade do que será cobrado.
 window.NIMBUS = window.NIMBUS || {};
 
 NIMBUS.reais = function (v) {
@@ -61,6 +65,7 @@ NIMBUS.sacola = (function () {
       return {
         slug: par ? par.slug : null, nome: i.nome,
         cor: par ? par.cor : "", tamanho: par ? par.tamanho : null,
+        peca: par ? par.peca : "", pid: par ? par.pid : null,
         preco: i.qtd ? (i.sub || 0) / i.qtd : 0,
         img: par ? par.img : null, qtd: i.qtd,
       };
@@ -69,9 +74,36 @@ NIMBUS.sacola = (function () {
     return true;
   }
 
+  // Alvo para a loja: o cart.tpl do tema lê este cookie na página do carrinho e
+  // aplica o que o cliente editou aqui (qtd 0 = remover, via LS.removeItem).
+  // Sem o cart.tpl no ar, o cookie é inerte e a loja segue mandando.
+  function gravaAlvo(edicoes) {
+    if (!edicoes.length) return;
+    const dominio = /(^|\.)nimbuswear\.com\.br$/.test(location.hostname) ? "; domain=.nimbuswear.com.br" : "";
+    try {
+      const prévias = alvoAtual().filter((a) => !edicoes.some((e) => chaveAlvo(e) === chaveAlvo(a)));
+      const valor = encodeURIComponent(JSON.stringify({ t: Date.now(), itens: prévias.concat(edicoes).slice(-30) }));
+      document.cookie = "nimbus_sacola_alvo=" + valor + dominio + "; path=/; max-age=172800; SameSite=Lax" + (location.protocol === "https:" ? "; Secure" : "");
+    } catch (e) { /* cookie bloqueado: a loja segue como verdade */ }
+  }
+  function alvoAtual() {
+    const m = document.cookie.match(/(?:^|; )nimbus_sacola_alvo=([^;]*)/);
+    if (!m) return [];
+    try {
+      const a = JSON.parse(decodeURIComponent(m[1]));
+      return a && Array.isArray(a.itens) ? a.itens : [];
+    } catch (e) { return []; }
+  }
+  const chaveAlvo = (i) => [i.pid || "", i.nome || "", i.cor || "", i.tamanho || ""].join("|");
+  const alvoDe = (i, qtd) => ({ pid: i.pid || null, nome: i.nome, cor: i.cor || "", tamanho: i.tamanho || null, qtd });
+
+  const chave = (i) => [i.slug || i.nome, i.cor || "", i.tamanho || ""].join("|");
+  let desfazer = null; // último estado antes de uma remoção, para o "Desfazer"
+
   return {
     sincroniza() { if (sincroniza()) this.pinta(); },
     META,
+    chave,
     itens() { return le().itens; },
     n() { return le().itens.reduce((a, i) => a + i.qtd, 0); },
     total() { return somaDe(le().itens); },
@@ -82,13 +114,57 @@ NIMBUS.sacola = (function () {
       const antes = progressoDe(s.itens);
       const igual = s.itens.find((i) => i.slug === item.slug && i.cor === item.cor && i.tamanho === item.tamanho);
       if (igual) igual.qtd += 1;
-      else s.itens.push({ slug: item.slug, nome: item.nome, cor: item.cor, tamanho: item.tamanho, peca: item.peca || "", preco: item.preco || 0, img: item.img || null, qtd: 1 });
+      else s.itens.push({ slug: item.slug, nome: item.nome, cor: item.cor, tamanho: item.tamanho, peca: item.peca || "", pid: item.pid || null, preco: item.preco || 0, img: item.img || null, qtd: 1 });
       grava(s);
+      // cancela uma remoção pendente do mesmo item: quem readiciona quer o item
+      gravaAlvo([alvoDe(igual || s.itens[s.itens.length - 1], igual ? igual.qtd : 1)]);
       this.pinta();
       const depois = progressoDe(s.itens);
       return { total: somaDe(s.itens), cruzou: antes < META && depois >= META };
     },
-    esvazia() { grava({ itens: [] }); this.pinta(); },
+    // Quantidade e remoção: o POST de adicionar não tem volta na loja, então a
+    // edição vai pelo cookie de alvo, que o cart.tpl aplica lá.
+    ajusta(ch, delta) {
+      const s = le();
+      const i = s.itens.find((x) => chave(x) === ch);
+      if (!i) return null;
+      const nova = i.qtd + delta;
+      if (nova < 1) return this.remove(ch);
+      i.qtd = nova;
+      grava(s);
+      gravaAlvo([alvoDe(i, nova)]);
+      this.pinta();
+      return { removido: null };
+    },
+    remove(ch) {
+      const s = le();
+      const i = s.itens.find((x) => chave(x) === ch);
+      if (!i) return null;
+      desfazer = { itens: JSON.parse(JSON.stringify(s.itens)), quando: Date.now() };
+      const fora = alvoDe(i, 0);
+      const itens = s.itens.filter((x) => chave(x) !== ch);
+      grava({ itens });
+      gravaAlvo([fora]);
+      this.pinta();
+      return { removido: i };
+    },
+    desfaz() {
+      if (!desfazer) return false;
+      const itens = desfazer.itens;
+      desfazer = null;
+      grava({ itens });
+      gravaAlvo(itens.map((i) => alvoDe(i, i.qtd)));
+      this.pinta();
+      return true;
+    },
+    temDesfazer() { return !!desfazer; },
+    esvazia() {
+      const s = le();
+      if (s.itens.length) desfazer = { itens: JSON.parse(JSON.stringify(s.itens)), quando: Date.now() };
+      gravaAlvo(s.itens.map((i) => alvoDe(i, 0)));
+      grava({ itens: [] });
+      this.pinta();
+    },
     pinta() {
       const n = this.n();
       document.querySelectorAll("[data-sacola-n]").forEach((el) => {
@@ -115,6 +191,15 @@ NIMBUS.gaveta = (function () {
     return cta ? cta.href : "https://loja.nimbuswear.com.br/comprar/";
   }
 
+  // Leitor de tela: a edição da sacola precisa ser falada, senão o cliente cego
+  // clica em remover e não recebe resposta nenhuma.
+  function anuncia(texto) {
+    const vivo = raiz && raiz.querySelector(".gaveta__vivo");
+    if (!vivo) return;
+    vivo.textContent = "";
+    setTimeout(() => { vivo.textContent = texto; }, 60);
+  }
+
   function monta() {
     if (raiz) return;
     raiz = document.createElement("div");
@@ -124,6 +209,7 @@ NIMBUS.gaveta = (function () {
       '<aside class="gaveta__painel" role="dialog" aria-label="Sua sacola">' +
       '<div class="gaveta__cabeca"><h2>Sua sacola</h2><button class="gaveta__fecha" data-gaveta-fecha aria-label="Fechar">&times;</button></div>' +
       '<div class="gaveta__festa" hidden></div>' +
+      '<p class="gaveta__vivo" role="status" aria-live="polite"></p>' +
       '<div class="gaveta__itens"></div>' +
       '<div class="gaveta__regua"><div class="gaveta__trilho"><div class="gaveta__barra"></div></div><p class="gaveta__meta"></p></div>' +
       '<div class="gaveta__pe">' +
@@ -151,22 +237,69 @@ NIMBUS.gaveta = (function () {
       lista.appendChild(vazio);
     }
     for (const i of itens) {
+      const ch = NIMBUS.sacola.chave(i);
+      const descricao = [i.nome, i.cor, i.tamanho].filter(Boolean).join(" ");
       const li = document.createElement("div");
       li.className = "gaveta__item";
       const img = document.createElement("img");
       if (i.img) img.src = i.img;
       img.alt = "";
       const info = document.createElement("div");
+      info.className = "gaveta__info";
       const nome = document.createElement("strong");
       nome.textContent = i.nome;
       const det = document.createElement("span");
-      det.textContent = [i.cor, i.tamanho, i.qtd + "x"].filter(Boolean).join(" · ");
-      info.append(nome, det);
+      det.textContent = [i.cor, i.tamanho].filter(Boolean).join(" · ");
+      const passo = document.createElement("div");
+      passo.className = "gaveta__passo";
+      const menos = document.createElement("button");
+      menos.type = "button";
+      menos.className = "gaveta__qtd";
+      menos.textContent = "−";
+      menos.disabled = i.qtd <= 1;
+      menos.setAttribute("aria-label", "Diminuir a quantidade de " + descricao);
+      menos.addEventListener("click", () => { NIMBUS.sacola.ajusta(ch, -1); anuncia(descricao + ", quantidade " + (i.qtd - 1)); });
+      const conta = document.createElement("span");
+      conta.className = "gaveta__conta";
+      conta.textContent = i.qtd;
+      const mais = document.createElement("button");
+      mais.type = "button";
+      mais.className = "gaveta__qtd";
+      mais.textContent = "+";
+      mais.setAttribute("aria-label", "Aumentar a quantidade de " + descricao);
+      mais.addEventListener("click", () => { NIMBUS.sacola.ajusta(ch, 1); anuncia(descricao + ", quantidade " + (i.qtd + 1)); });
+      passo.append(menos, conta, mais);
+      info.append(nome, det, passo);
+      const lado = document.createElement("div");
+      lado.className = "gaveta__lado";
       const preco = document.createElement("span");
       preco.className = "gaveta__preco";
       preco.textContent = NIMBUS.reais(i.preco * i.qtd);
-      li.append(img, info, preco);
+      const tira = document.createElement("button");
+      tira.type = "button";
+      tira.className = "gaveta__tira";
+      tira.innerHTML = "&times;";
+      tira.setAttribute("aria-label", "Remover " + descricao + " da sacola");
+      tira.addEventListener("click", () => {
+        const r = NIMBUS.sacola.remove(ch);
+        if (r && r.removido) { ga4("remove_from_cart", { items: [{ item_id: r.removido.slug, item_name: r.removido.nome, price: r.removido.preco, quantity: r.removido.qtd }], value: r.removido.preco * r.removido.qtd });
+          anuncia(descricao + " saiu da sacola."); }
+      });
+      lado.append(preco, tira);
+      li.append(img, info, lado);
       lista.appendChild(li);
+    }
+    if (NIMBUS.sacola.temDesfazer()) {
+      const volta = document.createElement("div");
+      volta.className = "gaveta__desfazer";
+      const txt = document.createElement("span");
+      txt.textContent = itens.length ? "Item removido." : "Sacola esvaziada.";
+      const bt = document.createElement("button");
+      bt.type = "button";
+      bt.textContent = "Desfazer";
+      bt.addEventListener("click", () => { NIMBUS.sacola.desfaz(); anuncia("Sacola restaurada."); });
+      volta.append(txt, bt);
+      lista.appendChild(volta);
     }
     const prog = NIMBUS.sacola.progresso();
     const temEco = NIMBUS.sacola.temEcobag();
