@@ -54,8 +54,11 @@ Dia 3 (feedback do dono de 30/07, decisão em
     consolidado `nuvemshop/css-nimbus-publicacao-compacta-2026-07-20.css`
     (regenerado, 50,7 KB), conferido por screenshot. **Falta o dono colar** no
     painel (Edição de CSS avançada).
-  - **Menu da loja → vitrine**: painel aceita URL externa; tabela em
-    `docs/decisoes/nuvemshop-continuidade.md` Parte 1. **Execução: dono, no painel.**
+  - **Menu da loja → vitrine: FEITO pelo dono no painel e verificado no ar em
+    30/07** (os 5 itens com as URLs e UTMs da tabela; Sobre, Projetos Sociais e
+    Contato mantidos internos). Com logo e "Seguir comprando" já no ar, o funil
+    está 100% fechado. Retoque opcional sugerido: menu do rodapé da loja ainda
+    aponta Trocas/Envios para /contato/; URLs das páginas novas entregues ao dono.
   - **Logo e "Seguir comprando" → vitrine: NO AR em 30/07.** O dono aceitou o
     pedágio do FTP, baixou o tema pelo WinSCP (FTP com TLS explícito, hotspot,
     porque a rede do trabalho bloqueia a porta) e subiu os 4 arquivos que eu
