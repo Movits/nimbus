@@ -386,7 +386,7 @@ const INSTITUCIONAIS = {
     <h2>Frete grátis e Ecobag de brinde</h2>
     <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil e levam uma Ecobag de brinde. Você escolhe a arte da Ecobag na mensagem do pedido, no checkout, junto com o projeto social.</p>
     <h2>Quanto custa o frete</h2>
-    <p>Abaixo de R$399,90, o frete é calculado pelo peso do pedido e pelo seu CEP, direto na sacola. O valor exato aparece antes do pagamento.</p>`],
+    <p>Abaixo de R$399,90, o valor do frete aparece na sacola assim que você informa o seu CEP, antes do pagamento.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>O que coletamos aqui na vitrine</h2>
