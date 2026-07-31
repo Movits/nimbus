@@ -325,16 +325,18 @@ const INSTITUCIONAIS = {
     <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
     <h2>Diário de Repasses</h2>
     <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>`],
-  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por lei e troca de tamanho tratada com a gente.", `
-    <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. Por isso a nossa política é simples e segue a lei, sem pegadinha.</p>
-    <h2>Arrependimento: 7 dias</h2>
-    <p>Você pode desistir da compra em até 7 dias corridos após receber a peça, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor. Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido e devolvemos o valor integral.</p>
-    <h2>Defeito</h2>
-    <p>Peça com defeito de fabricação tem cobertura de 90 dias, conforme o artigo 26 do CDC. Mande uma foto do problema com o número do pedido e resolvemos: nova peça ou reembolso, você escolhe.</p>
+  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por 90 dias e troca de tamanho tratada com a gente.", `
+    <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. A nossa política é simples, segue a lei e cobre os três casos possíveis, sem pegadinha.</p>
+    <h2>Mudou de ideia? Você tem 7 dias</h2>
+    <p>A peça chegou perfeita, mas não era o que você imaginava. Você pode desistir da compra em até 7 dias corridos após o recebimento, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor. Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido e devolvemos o valor integral.</p>
+    <h2>Chegou com problema? Avise assim que receber</h2>
+    <p>Estampa falhada, mancha, costura aberta, peça errada: isso é defeito, não arrependimento, e a cobertura legal é de 90 dias para roupa (artigo 26 do CDC). Nos avise de preferência nos primeiros dias, com fotos e o número do pedido: quanto antes você escrever, mais rápido a nova peça sai. Você escolhe entre peça nova sem custo ou reembolso.</p>
+    <h2>O problema apareceu depois?</h2>
+    <p>Estampa que solta ou tecido que falha nas primeiras lavagens, seguindo os cuidados da etiqueta, também é defeito de fabricação. Nesse caso os 90 dias contam a partir do dia em que o problema apareceu. Mesmo caminho: foto e número do pedido por e-mail.</p>
     <h2>Errou o tamanho?</h2>
     <p>Escreva para a gente em até 7 dias do recebimento, com o número do pedido e o tamanho certo. Como cada peça é feita para você, tratamos caso a caso, e a gente resolve junto. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
     <h2>Como pedir</h2>
-    <p>Um e-mail resolve: <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto. Respondemos rápido.</p>`],
+    <p>Um e-mail resolve tudo: <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto. Respondemos rápido.</p>`],
   envios: ["Envios e prazos", "Prazos de entrega da NIMBUS por região do Brasil, com produção incluída e rastreio.", `
     <p class="lede">Cada peça é feita no Brasil, para você. Os prazos abaixo já incluem a produção, contados a partir da confirmação do pagamento.</p>
     <h2>Prazos por região</h2>
