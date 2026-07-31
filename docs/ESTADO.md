@@ -84,6 +84,19 @@ Dia 3 (feedback do dono de 30/07, decisão em
     de CDN de terceiros (rawcdn.githack.com) a cada visita, e derrubava o app
     offline. Verificado local: recarga offline monta a landing completa.
 
+**Conselho, 3ª rodada (30/07, convocada pelo dono)**: 14 análises independentes
+sobre o site no ar, pauta consolidada por Helena Vasquez, 10 aprovar + 4
+ressalvas (todas de ordem de execução, incorporadas). **Pauta final: 12 itens**
+(5 P0: gates no build antes de deploy novo, GA4 com privacidade e tracking
+plan, páginas legais + CNPJ, página dos 10% com prova, consertos de jornada;
+7 P1: disclaimer único, bloco devocional por arte, relacionados no build, régua
+de frete grátis, medidas + caimento, gates completos, sitemap + Search
+Console). Ata completa em
+`nuvemshop/auditoria/2026-07-30-conselho-vitrine-r3/ata-conselho-vitrine-r3.md`.
+**Aguarda o go do dono item a item, e as 5 respostas que só ele tem** (ID GA4,
+status MEI/CNPJ, fórmula dos 10%, política de troca YouDraw, recortes de arte e
+data da sessão de fotos).
+
 **Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
 Manifesto: beco em sombra, no ar na banda da home. Hero: **remix B** com casting
