@@ -20,9 +20,11 @@ Registradas na conversa, com o que foi executado em seguida.
    arrependimento de 7 dias (CDC art. 49), defeito em 90 dias (art. 26), e
    tamanho errado tratado caso a caso por e-mail, sem promessa de reprodução
    gratuita.
-4. **Recortes parciais da arte**: o dono pediu explicação (dada no chat). Sem
-   decisão ainda; o piloto está no backlog (era P2). A regra vigente já limita
-   qualquer recorte público a 900 px, achatado, sem alpha.
+4. **Recortes parciais da arte**: DESCARTADO pelo dono em 30/07, depois da
+   explicação técnica ("não existe ver sem poder baixar"; a proteção real é o
+   teto de 900 px). Decisão: sem zoom de arte; as PDPs usam só as imagens de
+   produto da fornecedora e, no futuro, as fotos com modelos. O item sai do
+   backlog.
 5. **Sessão de fotos reais**: quando houver caixa para contratar. O dono
    **aceita ser o rosto da marca**: quer entrar no roster junto aos modelos do
    casting e posar nas fotos criadas com IA vestindo as peças. Complementa a
