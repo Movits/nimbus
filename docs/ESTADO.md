@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-30
+atualizado: 2026-07-31
 ---
 
 # Estado do projeto
@@ -155,8 +155,25 @@ sem pessoas ficam em espera na sala. Originais em
 antes do ok, gate a gate.
 
 **Bloqueado até nova ordem**: ticket Nuvemshop do script onload (retirado em 29/07).
-**Bloqueador de lançamento oficial da vitrine como loja**: dono ainda não tem empresa
-registrada; o bloco de identificação do rodapé (CDC) fica pendente até existir CNPJ/MEI.
+
+**Ciclo de 31/07 (tarde e noite), tudo NO AR**: o dono TEM um MEI (CNPJ
+53.977.834/0001-18, ATIVA, CNAE alterado para vestuário) e ele está no rodapé
+de todas as páginas: **bloqueador legal do lançamento FECHADO** (PR #36).
+Frete fixo da loja: R$19,90. Brinde virou mecânica real: **cupom `ECOBAG`
+criado e validado no painel** (R$49,90 fixos, mínimo R$449,80, restrito ao
+produto Ecobag, testado nos dois lados do limite). Sacola ganhou **gaveta
+lateral** (itens, régua de progresso, festa ao cruzar a meta, checkout) e
+**sync com o carrinho real** via cookie `nimbus_sacola_loja` gravado pelo
+`templates/cart.tpl` do tema (lado da vitrine no ar; **pendente do dono: subir
+o cart.tpl por FTP**, arquivo em
+`nimbus-assets/nuvemshop/tema-baires/2026-07-30-funil-editado/`). Cache
+busting `?v=hash` nos ativos. **Correção da régua do brinde (31/07 à noite,
+bug achado pelo dono)**: a barra contava só peças e ignorava ecobags; a regra
+certa, tradução exata do cupom, é **total da sacola menos UMA ecobag >=
+R$399,90** (ecobags extras contam). `ui.js`/`produto.js`/`envios` trocados
+juntos; teste Playwright com 4 sacolas (incluindo a do print do dono) 4/4.
+MEI: e-CAC verificado, sem Termo de Exclusão, dívida constituída R$1.202,33,
+PGFN limpa; dossiê da advogada no chat. Detalhe vivo no brain (`estado.md`).
 
 ## Capas
 
