@@ -47,10 +47,9 @@ ${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : "
 </head>
 <body>`;
 
-// GA4: cole aqui o ID de métricas (formato G-XXXXXXXXXX) quando o dono criar a
-// propriedade no Google Analytics. A página de privacidade já está no ar
-// (condição do conselho r3: privacidade antes do snippet). Vazio = sem GA4.
-const GA4_ID = "";
+// GA4: ID de métricas da propriedade Nimbus, criada pelo dono em 31/07. A
+// página de privacidade entrou no ar antes (condição do conselho r3).
+const GA4_ID = "G-E041S3ZHWB";
 const ga4 = () => GA4_ID ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA4_ID}');</script>` : "";
@@ -216,14 +215,16 @@ const CAIMENTO = {
 const ECOBAG = cat.produtos.find((x) => x.peca === "Ecobag");
 
 const relacionados = (p) => {
-  const mesmos = cat.produtos.filter((x) => x.slug !== p.slug && x.arte === p.arte);
-  const colecao = cat.produtos.filter((x) => x.slug !== p.slug && x.arte !== p.arte && x.colecao === p.colecao);
-  const lista = [...mesmos, ...colecao].slice(0, 4);
+  // Feedback do dono (31/07): ninguém compra a mesma arte em duas peças; a
+  // seção mostra OUTRAS artes da mesma coleção, com a mesma peça primeiro
+  // (similar de verdade: quem olha camiseta vê outras camisetas antes).
+  const outras = cat.produtos.filter((x) => x.slug !== p.slug && x.colecao === p.colecao && x.arte !== p.arte);
+  const lista = [...outras.filter((x) => x.peca === p.peca), ...outras.filter((x) => x.peca !== p.peca)].slice(0, 4);
   if (!lista.length) return "";
   return `
   <section class="secao" style="padding-top:0"><div class="secao__inner">
     <div class="secao__head">
-      <div><div class="kicker">Da mesma coleção</div><h2 class="display display--md">Complete o conjunto</h2></div>
+      <div><div class="kicker">Da mesma coleção</div><h2 class="display display--md">Você também pode gostar</h2></div>
     </div>
     <div class="grade">${lista.map(card).join("")}</div>
   </div></section>`;
@@ -256,7 +257,7 @@ ${header("pdp")}
       ${galeria.length > 1 ? `<div class="pdp__thumbs">
         ${galeria.map((g, i) => `<button data-src="${esc(g)}" aria-pressed="${i === 0}"><img src="${esc(g)}" alt="" loading="lazy"></button>`).join("")}
       </div>` : ""}
-      <p class="note pdp__nota-fotos">Fotos de campanha. Medidas e materiais exatos na ficha desta página.</p>
+      <p class="note pdp__nota-fotos">Fotos de campanha.${p.opcoes.tamanhos.length > 1 ? " Nas fotos, as pessoas vestem tamanho G." : ""} Medidas e materiais exatos na ficha desta página.</p>
       <figure class="pdp__cenario">
         <img src="${PREFIXO}/media/cenario-${p.colecao}-1600.webp" alt="Cenário da coleção ${esc(p.colecao_rotulo)}" loading="lazy">
         <figcaption>O território da coleção ${esc(p.colecao_rotulo)}</figcaption>
