@@ -34,26 +34,55 @@ for (const p of cat.produtos) {
   if ((p.descricao_html.match(/Confirmar no painel/i) || []).length) erros.push(`${p.id}: marcador interno vazou para a copy`);
 }
 
-// termos banidos da copy pública (decisão do dono, 29/07): a vitrine vende a
+// Termos banidos da copy pública (decisão do dono, 29/07): a vitrine vende a
 // peça, não o método de produção; "loja oficial" é muleta de marca alheia.
-const BANIDOS = [/sob demanda/i, /print[ -]?on[ -]?demand/i, /loja oficial/i];
-const DIR_HTML = path.join(RAIZ, "public/loja");
-(function anda(dir) {
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    const p = path.join(dir, e.name);
-    if (e.isDirectory()) anda(p);
-    else if (e.name.endsWith(".html")) {
-      const html = fs.readFileSync(p, "utf-8");
-      for (const re of BANIDOS)
-        if (re.test(html)) erros.push(`${path.relative(RAIZ, p)}: contém "${html.match(re)[0]}"`);
+// Ampliado em 31/07 depois da auditoria: o nome do fornecedor e os marcadores
+// de ficha incompleta estavam no ar na PDP da Ecobag, e a landing carregava
+// travessão e "sob demanda" no title e na descrição do Google.
+const BANIDOS = [
+  /sob demanda/i,
+  /print[ -]?on[ -]?demand/i,
+  /loja oficial/i,
+  /youdraw/i,
+  /aguardam? confirmação/i,
+  /confirmar no painel/i,
+  /troca fácil/i,
+  /—/,
+];
+// A landing mora fora de public/loja e ficou de fora do lint por 2 dias: os
+// dois erros acima só apareceram na auditoria. Agora ela entra.
+const ALVOS = [path.join(RAIZ, "public/loja"), path.join(RAIZ, "index.html")];
+function confere(arquivo) {
+  const html = fs.readFileSync(arquivo, "utf-8");
+  for (const re of BANIDOS)
+    if (re.test(html)) erros.push(`${path.relative(RAIZ, arquivo)}: contém "${html.match(re)[0]}"`);
+}
+for (const alvo of ALVOS) {
+  if (!fs.existsSync(alvo)) continue;
+  if (fs.statSync(alvo).isFile()) { confere(alvo); continue; }
+  (function anda(dir) {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const p = path.join(dir, e.name);
+      if (e.isDirectory()) anda(p);
+      else if (e.name.endsWith(".html")) confere(p);
     }
-  }
-})(DIR_HTML);
+  })(alvo);
+}
 for (const re of BANIDOS)
   if (re.test(texto)) erros.push(`catálogo contém "${texto.match(re)[0]}"`);
+
+// A copy da landing vive em TypeScript, não em HTML: sem esta varredura o
+// termo volta no próximo build do Vite. Comentários de código ficam de fora.
+const CONTENT = path.join(RAIZ, "src/data/content.ts");
+if (fs.existsSync(CONTENT)) {
+  const linhas = fs.readFileSync(CONTENT, "utf-8").split("\n").filter((l) => !/^\s*(\/\/|\*|\/\*)/.test(l));
+  const corpo = linhas.join("\n");
+  for (const re of BANIDOS)
+    if (re.test(corpo)) erros.push(`src/data/content.ts: contém "${corpo.match(re)[0]}"`);
+}
 
 if (erros.length) {
   console.error("LINT FALHOU:\n" + erros.map((e) => "  - " + e).join("\n"));
   process.exit(1);
 }
-console.log(`lint OK: ${cat.produtos.length} produtos limpos, HTML sem termos banidos`);
+console.log(`lint OK: ${cat.produtos.length} produtos limpos, HTML e landing sem termos banidos`);

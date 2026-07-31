@@ -175,6 +175,22 @@ juntos; teste Playwright com 4 sacolas (incluindo a do print do dono) 4/4.
 MEI: e-CAC verificado, sem Termo de Exclusão, dívida constituída R$1.202,33,
 PGFN limpa; dossiê da advogada no chat. Detalhe vivo no brain (`estado.md`).
 
+**Gaveta editável e fim do corte das fotos (31/07 à noite, PRs #41 e #42, no
+ar)**. Sacola: cada linha ganhou passo de quantidade e botão de remover, com
+**Desfazer** no lugar de `confirm()` e região `aria-live`; a régua, o badge e a
+festa recalculam a cada edição. Como o POST de adicionar não tem volta na loja,
+a edição é gravada no cookie de alvo `nimbus_sacola_alvo` (domínio pai) e o
+`cart.tpl` aplica no carrinho real com `LS.removeItem` (nimbus-assets#23),
+consumindo a ordem ao aplicar; **vale a partir do upload por FTP**. Fotos: o
+card forçava retrato 4/5 numa foto quadrada e comia 20% da largura, e na PDP o
+`aspect-ratio: 1/1` nunca valia porque faltava `height: auto` contra o atributo
+`height="500"` (cortava 24% no desktop e 39% no celular). Card, PDP, thumbs e
+miniatura da gaveta passaram a 1:1 com `contain`; logo do rodapé com `contain`
+(distorcia 2,2%). Varredura de todas as imagens de todas as páginas em 390 e
+1440: zero corte em foto de produto. **Auditorias de UX e de UI em 6 e 5
+frentes com verificação adversarial rodaram em 31/07**; o plano de execução
+delas orienta a próxima leva.
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito

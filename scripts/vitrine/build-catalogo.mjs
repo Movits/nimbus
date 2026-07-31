@@ -72,6 +72,11 @@ function urlImagem(u) {
   return s;
 }
 
+// Marcador de trabalho interno ("Confirmar no painel ...") não pode viajar para
+// o catálogo público: ele é servido em /loja/catalogo.json e entrega processo e
+// fornecedor para quem lê. Campo vazio é melhor que campo mentiroso.
+const semMarcador = (v) => (/confirmar no painel|aguardam? confirmação/i.test(v || "") ? "" : v || "");
+
 const CURADORIA = JSON.parse(fs.readFileSync(path.join(RAIZ, "scripts/vitrine/curadoria-fotos.json"), "utf-8"));
 // capa padronizada = COSTAS (dono, 31/07): curadoria gerada por análise de
 // pixel + revisão visual para os produtos fora da curadoria manual.
@@ -172,7 +177,7 @@ for (const pid of ENTRAM) {
     meta_description: c.meta_description,
     ficha: {
       material: t.material || "", modelagem: t.fit || "", gola: t.collar || "",
-      estampa: t.print || "", cuidados: t.care || "", medidas: t.measurements || "",
+      estampa: semMarcador(t.print), cuidados: semMarcador(t.care), medidas: semMarcador(t.measurements),
     },
     imagens: { capa, hover, galeria: fotos, por_cor: porCor, fonte_px: 500, caixa_max_css: 400 },
     opcoes: { tamanhos, cores },

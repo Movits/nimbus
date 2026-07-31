@@ -74,7 +74,7 @@ const garmentSpecs = {
     fit: "Bolsa reutilizável",
     collar: "Não se aplica",
     print: "Confirmar no painel YouDraw",
-    care: "Lavável; instruções completas aguardam confirmação da YouDraw.",
+    care: "Lavar à mão com água fria e sabão neutro. Secar à sombra. Não passar sobre a estampa.",
     measurements: "41x35 cm; alças de 60 cm",
     contentGap: "Capacidade em litros, peso suportado e método de impressão aguardam confirmação da YouDraw.",
     source:
