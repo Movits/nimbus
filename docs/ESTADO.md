@@ -120,12 +120,31 @@ sugerir a mesma arte em outra peça e virou "Você também pode gostar" (outras
 artes da mesma coleção, mesma peça primeiro); nota da galeria informa que as
 pessoas das fotos vestem tamanho G (só peças com numeração); **GA4 ATIVO** com
 o ID `G-E041S3ZHWB` gerado pelo dono (vitrine via `GA4_ID` no build-paginas e
-landing via index.html). **Decisões em aberto com o dono**: subir o teto do
-frete grátis de R$199 para R$399,90 com Ecobag de brinde (exige configurar a
-regra no painel da Nuvemshop ANTES de trocar a promessa no site, mais
-announcement, PDPs, toast, /envios/ e lint-claims no mesmo dia) e o valor do
-frete abaixo do teto (recomendação: repassar o cálculo do checkout, sem
-subsídio). Senha do FTP rotacionada pelo dono em 31/07; tema segue congelado.
+landing via index.html). Senha do FTP rotacionada pelo dono em 31/07; tema
+segue congelado.
+
+**Frete grátis NOVO no ar (31/07, PR #29, decisão do dono)**: teto de
+**R$399,90 com Ecobag de brinde** (arte escolhida na mensagem do checkout).
+Announcement, notas da PDP (avisam que o frete do CEP aparece na sacola), toast
+("Faltam R$X para frete grátis e Ecobag de brinde"), /envios/ (nova seção
+"Quanto custa o frete": peso + CEP na sacola) e lint-claims (exige a condição
+dos R$399,90) trocados juntos; zero sobras de R$199 no site. **PENDENTE DO
+DONO: configurar a regra de frete grátis a partir de R$399,90 no painel da
+Nuvemshop e alinhar a barra de anúncio da loja** (instruções entregues no
+chat); o brinde é operacional, adicionado por ele em cada pedido elegível.
+Frete abaixo do teto: repassar o cálculo do checkout, sem subsídio (decidido).
+GA4 ganhou os eventos `view_item` e `add_to_cart` na PDP (mesmo PR).
+
+**Busca prévia INPI feita em 31/07** (pePI, classe 25, exata + radical):
+"NIMBUS" nominativa tem histórico hostil na classe 25: pedidos de 2009 e 2023
+INDEFERIDOS, um "NIMBUS" de 2020 (GS3 Ind. e Atacado do Vestuário) sub judice,
+e a ASICS mantém GEL-NIMBUS (2010) e NIMBUS MIRAI (2024, Madri) EM VIGOR.
+Recomendação registrada: não depositar "NIMBUS" palavra sozinha; tentar marca
+MISTA "NIMBUSWEAR" com o logotipo nuvem+auréola, ciente do risco moderado, ou
+consultar agente de PI antes da taxa. Detalhe no brain
+(`wiki/concepts/dominio-e-marca.md`). Planilha de gastos criada em
+`nimbus-brain/financeiro/gastos.xlsx` (R$6.150 estimados até 31/07; YouDraw,
+domínio e Canva a preencher pelo dono).
 
 **Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
