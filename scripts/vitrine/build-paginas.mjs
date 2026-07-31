@@ -90,7 +90,7 @@ const footer = (medium) => `
     </div>
   </div>
   <div class="footer__legal">
-    <span>© 2026 NIMBUS · nimbuswear.com.br</span>
+    <span>© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF · nimbuswear.com.br</span>
   </div>
 </footer>`;
 

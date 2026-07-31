@@ -81,10 +81,10 @@
   evento("view_item");
 
   // --- envio sem sair da página -------------------------------------------
-  const FRETE_GRATIS = 399.9; // mesmo teto anunciado nas PDPs; régua espelho, a verdade é o carrinho
-  function reais(v) {
+  const FRETE_GRATIS = (window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.META) || 399.9;
+  const reais = (window.NIMBUS && NIMBUS.reais) || function (v) {
     return "R$ " + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",").replace(",00", "");
-  }
+  };
   let aviso = null;
   let avisoTimer = 0;
   function mostraAviso(nome) {
@@ -135,11 +135,20 @@
     }
     form.target = "sacola-sink";
     form.submit();
-    if (window.NIMBUS && NIMBUS.sacola) NIMBUS.sacola.soma(1, p.preco || 0);
+    let resultado = null;
+    if (window.NIMBUS && NIMBUS.sacola) {
+      const pc = p.imagens.por_cor[cor] || {};
+      resultado = NIMBUS.sacola.soma({
+        slug: p.slug, nome: p.nome, cor, tamanho: tamanho || null,
+        preco: p.preco || 0, img: pc.costas || pc.frente || p.imagens.capa,
+      });
+    }
     evento("add_to_cart", {
       items: [{ item_id: p.slug, item_name: p.nome, item_variant: tamanho ? cor + "/" + tamanho : cor, price: p.preco, quantity: 1 }],
     });
-    mostraAviso(tamanho ? cor + " · " + tamanho : cor);
+    // cruzou o teto: a gaveta abre em festa no lugar do toast
+    if (resultado && resultado.cruzou && NIMBUS.gaveta) NIMBUS.gaveta.abre();
+    else mostraAviso(tamanho ? cor + " · " + tamanho : cor);
   });
 
   atualiza();
