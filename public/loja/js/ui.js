@@ -30,7 +30,39 @@ NIMBUS.sacola = (function () {
   }
   const somaDe = (itens) => itens.reduce((a, i) => a + (i.preco || 0) * i.qtd, 0);
 
+  // Sincronia com o carrinho REAL: a página do carrinho da loja (tema Baires,
+  // templates/cart.tpl) grava um cookie no domínio pai com o retrato do
+  // carrinho. Se o cookie for mais novo que o espelho, ele vence: quem removeu
+  // item na loja volta para a vitrine com badge e gaveta certos.
+  function cookieLoja() {
+    const m = document.cookie.match(/(?:^|; )nimbus_sacola_loja=([^;]*)/);
+    if (!m) return null;
+    try {
+      const c = JSON.parse(decodeURIComponent(m[1]));
+      return c && Array.isArray(c.itens) && typeof c.t === "number" ? c : null;
+    } catch (e) { return null; }
+  }
+  function sincroniza() {
+    const c = cookieLoja();
+    if (!c) return false;
+    const s = le();
+    if ((s.t || 0) >= c.t) return false;
+    const antigos = s.itens;
+    const itens = c.itens.filter((i) => i.qtd > 0).map((i) => {
+      const par = antigos.find((a) => a.nome === i.nome);
+      return {
+        slug: par ? par.slug : null, nome: i.nome,
+        cor: par ? par.cor : "", tamanho: par ? par.tamanho : null,
+        preco: i.qtd ? (i.sub || 0) / i.qtd : 0,
+        img: par ? par.img : null, qtd: i.qtd,
+      };
+    });
+    grava({ itens });
+    return true;
+  }
+
   return {
+    sincroniza() { if (sincroniza()) this.pinta(); },
     META,
     itens() { return le().itens; },
     n() { return le().itens.reduce((a, i) => a + i.qtd, 0); },
@@ -118,7 +150,7 @@ NIMBUS.gaveta = (function () {
       const nome = document.createElement("strong");
       nome.textContent = i.nome;
       const det = document.createElement("span");
-      det.textContent = (i.tamanho ? i.cor + " · " + i.tamanho : i.cor) + " · " + i.qtd + "x";
+      det.textContent = [i.cor, i.tamanho, i.qtd + "x"].filter(Boolean).join(" · ");
       info.append(nome, det);
       const preco = document.createElement("span");
       preco.className = "gaveta__preco";
@@ -146,7 +178,13 @@ NIMBUS.gaveta = (function () {
   return { abre, fecha, renderiza };
 })();
 
+NIMBUS.sacola.sincroniza();
 NIMBUS.sacola.pinta();
+// voltas da loja (botão voltar, troca de aba) reconciliam com o carrinho real
+window.addEventListener("pageshow", () => NIMBUS.sacola.sincroniza());
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") NIMBUS.sacola.sincroniza();
+});
 
 // Sacola do header abre a gaveta; sem JS o link segue direto para a loja.
 document.querySelectorAll(".header__cta").forEach((cta) => {
