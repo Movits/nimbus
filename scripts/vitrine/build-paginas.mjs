@@ -43,13 +43,21 @@ ${opts.canonical ? `<link rel="canonical" href="${esc(opts.canonical)}">` : ""}
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${PREFIXO}/css/tokens.css">
 <link rel="stylesheet" href="${PREFIXO}/css/loja.css">
-${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}
+${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}${ga4()}
 </head>
 <body>`;
 
+// GA4: cole aqui o ID de métricas (formato G-XXXXXXXXXX) quando o dono criar a
+// propriedade no Google Analytics. A página de privacidade já está no ar
+// (condição do conselho r3: privacidade antes do snippet). Vazio = sem GA4.
+const GA4_ID = "";
+const ga4 = () => GA4_ID ? `
+<script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA4_ID}');</script>` : "";
+
 // header/footer são funções do medium para o UTM sair certo por tipo de página
 const header = (medium) => `
-<div class="announcement"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher &nbsp;·&nbsp; frete grátis acima de R$199</div>
+<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis acima de R$199</div>
 <header class="header">
   <a class="header__logo" href="${PREFIXO}/"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"></a>
   <nav class="header__nav">
@@ -71,8 +79,8 @@ const footer = (medium) => `
     <div class="footer__grid">
       <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
       <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA(medium))}">Sacola</a></div>
-      <div><h4>Nimbus</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="${esc(utm("https://loja.nimbuswear.com.br/projetos-sociais/", medium))}">Projetos Sociais</a></div>
-      <div><h4>Ajuda</h4><a href="${esc(utm("https://loja.nimbuswear.com.br/contato/", medium))}">Trocas e devoluções</a><a href="${esc(utm("https://loja.nimbuswear.com.br/contato/", medium))}">Envios e prazos</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
+      <div><h4>Nimbus</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
+      <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
     </div>
   </div>
   <div class="footer__legal">
@@ -154,7 +162,7 @@ ${header("home")}
     <ol class="passos">
       <li class="reveal"><b>Você escolhe.</b><p>A arte, a peça, a cor e o tamanho, aqui na vitrine. O pagamento fecha na loja, com Pix, boleto ou cartão em até 12x.</p></li>
       <li class="reveal"><b>Ela é feita no Brasil, para você.</b><p>Estampa posicionada com medida, não no olho, e acabamento premium, peça a peça.</p></li>
-      <li class="reveal"><b>Chega com rastreio.</b><p>E 10% do lucro do pedido vai para o projeto social que você escolher no checkout, com repasse mensal e comprovação.</p></li>
+      <li class="reveal"><b>Chega com rastreio.</b><p>E 10% do lucro do pedido vai para o projeto social que você escolher no checkout, com repasse mensal e comprovação. <a href="${PREFIXO}/impacto/">Veja como funciona</a>.</p></li>
     </ol>
   </div></section>
 </main>
@@ -271,7 +279,7 @@ ${header("pdp")}
         <details><summary>Prazo e envio</summary><p class="note">Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
       </div>
 
-      <div class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social da sua escolha, no checkout.</div>
+      <div class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social da sua escolha, no checkout. <a href="${PREFIXO}/impacto/">Como funciona</a>.</div>
     </div>
   </div></section>
 </main>
@@ -280,6 +288,76 @@ ${footer("pdp")}
 <script src="${PREFIXO}/js/ui.js" defer></script>
 <script src="${PREFIXO}/js/produto.js" defer></script>
 </body></html>`;
+};
+
+/* ------------------------------------------------- páginas institucionais */
+// P0 do conselho r3 (30/07), com as respostas do dono: fórmula dos 10%
+// confirmada (lucro = o que sobra depois de todos os custos, inclusive
+// divulgação); troca de tamanho é responsabilidade da NIMBUS, tratada caso a
+// caso; CNPJ segue pendente (bloqueador de lançamento registrado no ESTADO).
+const institucional = (slug, titulo, descricao, corpo) => `${head(`${titulo} | NIMBUS`, descricao, { canonical: `${URL_BASE}/${slug}/` })}
+${header("institucional")}
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    <h1 class="display display--md">${esc(titulo)}</h1>
+    ${corpo}
+  </div></section>
+</main>
+${footer("institucional")}
+<script src="${PREFIXO}/js/ui.js" defer></script>
+</body></html>`;
+
+const INSTITUCIONAIS = {
+  impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
+    <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe no checkout. Esta página explica o que isso significa, sem letra miúda.</p>
+    <h2>O que chamamos de lucro</h2>
+    <p>Lucro é o que sobra do seu pedido depois de todos os custos: a produção da peça, a embalagem, o frete, as taxas de pagamento e a divulgação da marca. Sobre esse valor que sobra, separamos 10%.</p>
+    <h2>Como funciona</h2>
+    <ol>
+      <li>No checkout, você escreve qual projeto recebe: Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo, ou outro que você indicar.</li>
+      <li>Esperamos o prazo de arrependimento de 7 dias previsto em lei. Se o pedido ficar, o repasse dele entra na conta do mês.</li>
+      <li>O repasse é mensal, somando os pedidos do período.</li>
+      <li>O comprovante de cada repasse aparece nesta página, no Diário de Repasses abaixo.</li>
+    </ol>
+    <h2>Os projetos</h2>
+    <p><b>Fazenda da Esperança</b>: recuperação de dependentes químicos pelo trabalho, espiritualidade e vida em comunidade.</p>
+    <p><b>Cáritas Brasileira</b>: rede da Igreja no Brasil de combate à fome e à pobreza.</p>
+    <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
+    <h2>Diário de Repasses</h2>
+    <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>`],
+  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por lei e troca de tamanho tratada com a gente.", `
+    <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. Por isso a nossa política é simples e segue a lei, sem pegadinha.</p>
+    <h2>Arrependimento: 7 dias</h2>
+    <p>Você pode desistir da compra em até 7 dias corridos após receber a peça, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor. Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido e devolvemos o valor integral.</p>
+    <h2>Defeito</h2>
+    <p>Peça com defeito de fabricação tem cobertura de 90 dias, conforme o artigo 26 do CDC. Mande uma foto do problema com o número do pedido e resolvemos: nova peça ou reembolso, você escolhe.</p>
+    <h2>Errou o tamanho?</h2>
+    <p>Escreva para a gente em até 7 dias do recebimento, com o número do pedido e o tamanho certo. Como cada peça é feita para você, tratamos caso a caso, e a gente resolve junto. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
+    <h2>Como pedir</h2>
+    <p>Um e-mail resolve: <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto. Respondemos rápido.</p>`],
+  envios: ["Envios e prazos", "Prazos de entrega da NIMBUS por região do Brasil, com produção incluída e rastreio.", `
+    <p class="lede">Cada peça é feita no Brasil, para você. Os prazos abaixo já incluem a produção, contados a partir da confirmação do pagamento.</p>
+    <h2>Prazos por região</h2>
+    <ul>
+      <li>São Paulo: 3 a 5 dias úteis</li>
+      <li>Sudeste: 4 a 6 dias úteis</li>
+      <li>Sul e Centro-Oeste: 5 a 7 dias úteis</li>
+      <li>Norte e Nordeste: 6 a 12 dias úteis</li>
+    </ul>
+    <p class="note">O prazo exato para o seu CEP aparece no checkout e prevalece sobre as faixas acima.</p>
+    <h2>Rastreio</h2>
+    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega.</p>
+    <h2>Frete grátis</h2>
+    <p>Pedidos acima de R$199 têm frete grátis para todo o Brasil.</p>`],
+  privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
+    <p class="lede">O essencial, em português claro.</p>
+    <h2>O que coletamos aqui na vitrine</h2>
+    <p>A vitrine guarda no seu navegador apenas o contador local da sacola (para mostrar quantos itens você adicionou) e o cache das páginas, que deixa as visitas seguintes mais rápidas. Nada disso sai do seu aparelho.</p>
+    <p>Usamos estatísticas de navegação do Google Analytics para entender quais páginas funcionam: números agregados, sem venda de dados e sem anúncio personalizado da nossa parte.</p>
+    <h2>O que fica com a loja</h2>
+    <p>Pagamento, endereço e dados do pedido são tratados no ambiente da loja (Nuvemshop), que tem política de privacidade e segurança próprias. A NIMBUS não armazena dados de cartão.</p>
+    <h2>Seus direitos</h2>
+    <p>Quer saber o que temos sobre você, corrigir ou apagar? Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> e resolvemos, como manda a LGPD.</p>`],
 };
 
 /* ------------------------------------------------------------------- gates */
@@ -339,6 +417,11 @@ for (const rel of relForStub) {
 }
 
 fs.writeFileSync(path.join(BASE, "index.html"), home());
+for (const [slug, [titulo, descricao, corpo]] of Object.entries(INSTITUCIONAIS)) {
+  const dir = path.join(BASE, slug);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, "index.html"), institucional(slug, titulo, descricao, corpo));
+}
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
 for (const c of cat.colecoes) {

@@ -93,9 +93,13 @@ plan, páginas legais + CNPJ, página dos 10% com prova, consertos de jornada;
 de frete grátis, medidas + caimento, gates completos, sitemap + Search
 Console). Ata completa em
 `nuvemshop/auditoria/2026-07-30-conselho-vitrine-r3/ata-conselho-vitrine-r3.md`.
-**Aguarda o go do dono item a item, e as 5 respostas que só ele tem** (ID GA4,
-status MEI/CNPJ, fórmula dos 10%, política de troca YouDraw, recortes de arte e
-data da sessão de fotos).
+**Go do dono dado em 30/07 ("legal pode corrigir") e respostas registradas em
+`docs/decisoes/2026-07-30-respostas-do-dono-r3.md`.** Executado na sequência:
+P0-1 (lints no deploy), P0-3 parcial (Trocas e Envios no ar; CNPJ segue
+bloqueador), P0-4 (página /loja/impacto/ com a fórmula do dono e Diário de
+Repasses), P0-5 (Instagram e TikTok no footer) e o preparo do P0-2
+(/loja/privacidade/ no ar; snippet GA4 inerte à espera do ID que o dono vai
+gerar). Restam os P1 e o ID do GA4.
 
 **Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
