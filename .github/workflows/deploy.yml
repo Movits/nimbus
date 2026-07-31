@@ -28,6 +28,7 @@ jobs:
       # derrubam o deploy. SKIP_REDE evita flutuação de rede no CI; a varredura
       # completa de URLs externas roda localmente antes de cada merge.
       - run: node scripts/vitrine/lint-copy.mjs
+      - run: node scripts/vitrine/lint-claims.mjs
       - run: SKIP_REDE=1 node scripts/vitrine/link-check.mjs
       - run: node scripts/vitrine/parity-tokens.mjs
       - run: npm run build

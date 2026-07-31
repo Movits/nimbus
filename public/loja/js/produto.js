@@ -70,6 +70,10 @@
   thumbs.forEach((b) => b.addEventListener("click", () => mostra(b.dataset.src)));
 
   // --- envio sem sair da página -------------------------------------------
+  const FRETE_GRATIS = 199; // mesmo teto anunciado nas PDPs; régua espelho, a verdade é o carrinho
+  function reais(v) {
+    return "R$ " + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",").replace(",00", "");
+  }
   let aviso = null;
   let avisoTimer = 0;
   function mostraAviso(nome) {
@@ -82,10 +86,20 @@
     aviso.innerHTML = "";
     const txt = document.createElement("span");
     txt.textContent = nome + " na sacola.";
+    aviso.append(txt);
+    const total = window.NIMBUS && NIMBUS.sacola ? NIMBUS.sacola.total() : 0;
+    if (total > 0) {
+      const regua = document.createElement("span");
+      regua.className = "sacola-aviso__frete";
+      regua.textContent = total >= FRETE_GRATIS
+        ? "Sua sacola ganhou frete grátis."
+        : "Faltam " + reais(FRETE_GRATIS - total) + " para o frete grátis.";
+      aviso.append(regua);
+    }
     const link = document.createElement("a");
     link.href = p.url_carrinho;
     link.textContent = "Ver sacola";
-    aviso.append(txt, link);
+    aviso.append(link);
     aviso.classList.add("on");
     clearTimeout(avisoTimer);
     avisoTimer = setTimeout(() => aviso.classList.remove("on"), 6000);
@@ -110,7 +124,7 @@
     }
     form.target = "sacola-sink";
     form.submit();
-    if (window.NIMBUS && NIMBUS.sacola) NIMBUS.sacola.soma(1);
+    if (window.NIMBUS && NIMBUS.sacola) NIMBUS.sacola.soma(1, p.preco || 0);
     mostraAviso(tamanho ? cor + " · " + tamanho : cor);
   });
 

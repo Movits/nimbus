@@ -85,7 +85,6 @@ const footer = (medium) => `
   </div>
   <div class="footer__legal">
     <span>© 2026 NIMBUS · nimbuswear.com.br</span>
-    <span>Imagens de campanha. As fotos definitivas de produto estão em produção.</span>
   </div>
 </footer>`;
 
@@ -205,11 +204,36 @@ ${footer("colecao")}
 };
 
 /* ----------------------------------------------------------------- produto */
+// P1 do conselho r3 (go do dono em 30/07): bloco devocional por arte (piloto nos
+// destaques), breadcrumb, relacionados da mesma coleção, régua do frete grátis
+// com a Ecobag como completa-pedido, disclaimer único na galeria e caimento.
+const DEVOCIONAL = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "devocional.json"), "utf-8"));
+const CAIMENTO = {
+  "Camiseta Premium": "Corte reto clássico, veste fiel ao tamanho.",
+  "Camiseta Oversized Premium": "Modelagem ampla de propósito. Entre dois tamanhos, o menor preserva o caimento.",
+  "Moletom Canguru": "Veste confortável, com espaço. Na dúvida, fique no seu tamanho usual.",
+};
+const ECOBAG = cat.produtos.find((x) => x.peca === "Ecobag");
+
+const relacionados = (p) => {
+  const mesmos = cat.produtos.filter((x) => x.slug !== p.slug && x.arte === p.arte);
+  const colecao = cat.produtos.filter((x) => x.slug !== p.slug && x.arte !== p.arte && x.colecao === p.colecao);
+  const lista = [...mesmos, ...colecao].slice(0, 4);
+  if (!lista.length) return "";
+  return `
+  <section class="secao" style="padding-top:0"><div class="secao__inner">
+    <div class="secao__head">
+      <div><div class="kicker">Da mesma coleção</div><h2 class="display display--md">Complete o conjunto</h2></div>
+    </div>
+    <div class="grade">${lista.map(card).join("")}</div>
+  </div></section>`;
+};
+
 const produto = (p) => {
   const urlLoja = utm(p.url_loja, "pdp", p.slug);
   const dados = {
     url_loja: urlLoja, url_carrinho: SACOLA("pdp"), imagens: p.imagens,
-    opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor,
+    opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
   };
   // galeria com a cor padrão primeiro (costas = arte, depois frente), para os
   // thumbs abrirem coerentes com a capa
@@ -225,12 +249,14 @@ const produto = (p) => {
   return `${head(p.meta_title, p.meta_description, { ogImage: p.imagens.capa, canonical: `${URL_BASE}/p/${p.slug}/`, jsonld })}
 ${header("pdp")}
 <main>
-  <section class="secao" style="padding-top:2em"><div class="secao__inner pdp">
+  <nav class="migalhas"><div class="secao__inner"><a href="${PREFIXO}/">Início</a> · <a href="${PREFIXO}/c/${p.colecao}/">${esc(p.colecao_rotulo)}</a> · <span>${esc(p.arte)}</span></div></nav>
+  <section class="secao" style="padding-top:1em"><div class="secao__inner pdp">
     <div class="pdp__palco" data-colecao="${p.colecao}">
       <div class="pdp__quadro"><img src="${esc(p.imagens.capa)}" alt="${esc(p.nome)}" width="500" height="500" fetchpriority="high"></div>
       ${galeria.length > 1 ? `<div class="pdp__thumbs">
         ${galeria.map((g, i) => `<button data-src="${esc(g)}" aria-pressed="${i === 0}"><img src="${esc(g)}" alt="" loading="lazy"></button>`).join("")}
       </div>` : ""}
+      <p class="note pdp__nota-fotos">Fotos de campanha. Medidas e materiais exatos na ficha desta página.</p>
       <figure class="pdp__cenario">
         <img src="${PREFIXO}/media/cenario-${p.colecao}-1600.webp" alt="Cenário da coleção ${esc(p.colecao_rotulo)}" loading="lazy">
         <figcaption>O território da coleção ${esc(p.colecao_rotulo)}</figcaption>
@@ -268,20 +294,32 @@ ${header("pdp")}
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho>Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        <span class="note">Frete grátis acima de R$199. Pix, boleto e cartão em até 12x.</span>
+        ${p.preco >= 199
+          ? `<span class="note">Frete grátis para esta peça (pedidos acima de R$199). Pix, boleto e cartão em até 12x.</span>`
+          : ECOBAG && p.slug !== ECOBAG.slug
+            ? `<span class="note">Frete grátis a partir de R$199: complete com a <a href="${PREFIXO}/p/${ECOBAG.slug}/">Ecobag (${esc(ECOBAG.preco_formatado)})</a>. Pix, boleto e cartão em até 12x.</span>`
+            : `<span class="note">Frete grátis acima de R$199. Pix, boleto e cartão em até 12x.</span>`}
         <span class="note">Feita no Brasil, para você.</span>
       </div>
 
       <div class="pdp__detalhes">
         ${p.ficha.material ? `<details open><summary>A peça</summary><p class="note">${esc(p.ficha.material)}. ${esc(p.ficha.modelagem)}. ${esc(p.ficha.gola)}.</p></details>` : ""}
-        ${p.ficha.medidas ? `<details><summary>Medidas</summary><p class="note">${esc(p.ficha.medidas)}</p></details>` : ""}
+        ${p.ficha.medidas || CAIMENTO[p.peca] ? `<details><summary>Medidas e caimento</summary>${CAIMENTO[p.peca] ? `<p class="note"><b>Caimento:</b> ${esc(CAIMENTO[p.peca])}</p>` : ""}${p.ficha.medidas ? `<p class="note">${esc(p.ficha.medidas)}</p>` : ""}</details>` : ""}
         ${p.ficha.cuidados ? `<details><summary>Cuidados</summary><p class="note">${esc(p.ficha.cuidados)}</p></details>` : ""}
         <details><summary>Prazo e envio</summary><p class="note">Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
       </div>
 
+      ${p.destaque && DEVOCIONAL[p.arte] ? `
+      <div class="pdp__devocao">
+        <div class="kicker kicker--gold">A devoção</div>
+        <h2>${esc(DEVOCIONAL[p.arte].santo)}</h2>
+        <p>${esc(DEVOCIONAL[p.arte].historia)}</p>
+        <p class="note">${DEVOCIONAL[p.arte].festa ? `Festa: ${esc(DEVOCIONAL[p.arte].festa)} · ` : ""}${esc(DEVOCIONAL[p.arte].estetica)}</p>
+      </div>` : ""}
       <div class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social da sua escolha, no checkout. <a href="${PREFIXO}/impacto/">Como funciona</a>.</div>
     </div>
   </div></section>
+  ${relacionados(p)}
 </main>
 ${footer("pdp")}
 <script type="application/json" id="produto-dados">${JSON.stringify(dados)}</script>
@@ -436,4 +474,19 @@ for (const p of cat.produtos) {
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), produto(p));
 }
-console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/`);
+
+// sitemap + robots (P1-7): só as páginas públicas. Gates, teste-carrinho e os
+// stubs de /loja-preview/ ficam de fora (todos já levam noindex no próprio HTML).
+const lastmod = cat.gerado_em.slice(0, 10);
+const publicas = [
+  "https://nimbuswear.com.br/",
+  `${URL_BASE}/`,
+  ...Object.keys(INSTITUCIONAIS).map((s) => `${URL_BASE}/${s}/`),
+  ...cat.colecoes.map((c) => `${URL_BASE}/c/${c.id}/`),
+  ...cat.produtos.map((p) => `${URL_BASE}/p/${p.slug}/`),
+];
+fs.writeFileSync(path.join(RAIZ, "public/sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
+fs.writeFileSync(path.join(RAIZ, "public/robots.txt"),
+  `User-agent: *\nAllow: /\nDisallow: /loja/gates/\nDisallow: /loja/teste-carrinho/\nDisallow: /loja-preview/\n\nSitemap: https://nimbuswear.com.br/sitemap.xml\n`);
+console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/ · sitemap com ${publicas.length} URLs`);

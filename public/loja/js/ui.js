@@ -6,8 +6,12 @@
 window.NIMBUS = window.NIMBUS || {};
 NIMBUS.sacola = {
   n() { return parseInt(localStorage.getItem("nimbus-sacola") || "0", 10) || 0; },
-  soma(k) {
-    try { localStorage.setItem("nimbus-sacola", String(this.n() + k)); } catch (e) { /* modo privado */ }
+  total() { return parseFloat(localStorage.getItem("nimbus-sacola-total") || "0") || 0; },
+  soma(k, valor) {
+    try {
+      localStorage.setItem("nimbus-sacola", String(this.n() + k));
+      if (valor) localStorage.setItem("nimbus-sacola-total", String(this.total() + valor));
+    } catch (e) { /* modo privado */ }
     this.pinta();
   },
   pinta() {

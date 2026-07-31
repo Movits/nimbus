@@ -1,0 +1,33 @@
+{
+  "_comentario": "Bloco devocional por ARTE (P1-2 do conselho r3). Piloto: só os heroes (destaque). Escalar aos 44 exige gate do dono. Datas litúrgicas do calendário romano; texto reverente, sem travessão.",
+  "São Jorge Neobarroco": {
+    "santo": "São Jorge",
+    "festa": "23 de abril",
+    "historia": "Soldado do exército romano no século III, Jorge da Capadócia preferiu morrer a negar a fé em Cristo. A imagem do cavaleiro que vence o dragão atravessou os séculos como símbolo da vitória do bem sobre o mal, e fez dele o santo de quem enfrenta batalhas todos os dias.",
+    "estetica": "O traço neobarroco traz o drama e o ouro das igrejas brasileiras para a linguagem de rua."
+  },
+  "São Jorge Vintage": {
+    "santo": "São Jorge",
+    "festa": "23 de abril",
+    "historia": "Soldado do exército romano no século III, Jorge da Capadócia preferiu morrer a negar a fé em Cristo. A imagem do cavaleiro que vence o dragão atravessou os séculos como símbolo da vitória do bem sobre o mal, e fez dele o santo de quem enfrenta batalhas todos os dias.",
+    "estetica": "O tratamento vintage cita as band-tees clássicas: a devoção com a energia de um show."
+  },
+  "São Miguel Celeste": {
+    "santo": "São Miguel Arcanjo",
+    "festa": "29 de setembro",
+    "historia": "Príncipe da milícia celeste, Miguel é o arcanjo que a Escritura mostra vencendo a serpente. O próprio nome é um grito de batalha: Quem como Deus? É o protetor invocado nas lutas que ninguém vê.",
+    "estetica": "O traço celeste, leve como o céu da coleção NUVEM, mostra o guerreiro na sua face mais serena."
+  },
+  "Aparecida Spray": {
+    "santo": "Nossa Senhora Aparecida",
+    "festa": "12 de outubro",
+    "historia": "Em 1717, pescadores do rio Paraíba recolheram nas redes uma pequena imagem escura de Nossa Senhora da Conceição. Das mãos daqueles pescadores ao coração do país inteiro: Aparecida é a Padroeira do Brasil, a mãe que acolhe o povo como ele é.",
+    "estetica": "O spray leva a Padroeira para o muro da cidade, onde o Brasil de verdade passa todo dia."
+  },
+  "NIMBUS Wildstyle": {
+    "santo": "A assinatura da casa",
+    "festa": null,
+    "historia": "Nimbus é a nuvem que carrega a chuva e também o nome da auréola dos santos na arte sacra. O wildstyle, letra clássica do graffiti, é a caligrafia da rua. Juntos, são a assinatura da NIMBUS: fé que assina o próprio nome sem pedir licença.",
+    "estetica": "Lettering autoral da marca, coroado pela auréola do logotipo."
+  }
+}
