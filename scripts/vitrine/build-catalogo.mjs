@@ -73,6 +73,9 @@ function urlImagem(u) {
 }
 
 const CURADORIA = JSON.parse(fs.readFileSync(path.join(RAIZ, "scripts/vitrine/curadoria-fotos.json"), "utf-8"));
+// capa padronizada = COSTAS (dono, 31/07): curadoria gerada por análise de
+// pixel + revisão visual para os produtos fora da curadoria manual.
+const CAPAS = JSON.parse(fs.readFileSync(path.join(RAIZ, "scripts/vitrine/capas-costas.json"), "utf-8"));
 const variantes = lerCsv(path.join(IMPL, "matriz-variantes-nuvemshop-parcial.csv"));
 const copy = new Map(lerCsv(path.join(IMPL, "descricoes-e-seo-draft.csv")).map((r) => [r.product_id, r]));
 const tecnico = new Map(lerCsv(path.join(IMPL, "matriz-produtos-conteudo-tecnico.csv")).map((r) => [r.product_id, r]));
@@ -120,7 +123,7 @@ for (const pid of ENTRAM) {
   // Sem curadoria (curadoria por cor está adiada por ordem do dono, 30/07):
   // a foto da cor é a colorImages do products.json, a MESMA que a loja usa como
   // capa daquela cor; sem hover, para não piscar foto de outra cor no card.
-  const cur = CURADORIA[pid] || {};
+  const cur = CURADORIA[pid] || CAPAS[pid] || {};
   const temCuradoria = Object.keys(cur).length > 0;
   const corImg = g.colorImages || {};
   const porCor = {};

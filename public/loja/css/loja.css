@@ -45,12 +45,12 @@
   border-bottom: 1px solid var(--line);
 }
 .header__logo { display: flex; align-items: center; }
-/* a auréola ocupa o topo do arquivo do wordmark; o nudge alinha a BASE do
-   wordmark com a base do texto do menu (pedido do dono, 31/07) */
+/* a auréola ocupa o topo do arquivo do wordmark; o nudge deixa o CENTRO do
+   wordmark no centro do texto do menu (dono, 31/07, segunda rodada) */
 .header__logo img {
   height: clamp(34px, 5vw, 42px);
   width: auto;
-  transform: translateY(-18px);
+  transform: translateY(-8px);
   filter: drop-shadow(0 2px 6px rgba(27, 39, 51, 0.12));
 }
 .header__nav { display: flex; gap: 1.6em; }
@@ -107,7 +107,7 @@
   .header__nav { gap: 0.85em; }
   .header__tools { gap: 0.85em; }
   .header__nav a, .header__tools a { font-size: 10px; letter-spacing: 0.06em; }
-  .header__logo img { height: auto; width: clamp(84px, 24vw, 110px); transform: translateY(-9px); }
+  .header__logo img { height: auto; width: clamp(84px, 24vw, 110px); transform: translateY(-4px); }
   .header__cta { padding: 0.4rem 0.8rem; }
   .header__tools a[data-manifesto] { display: none; }
 }
