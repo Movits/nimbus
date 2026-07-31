@@ -45,9 +45,12 @@
   border-bottom: 1px solid var(--line);
 }
 .header__logo { display: flex; align-items: center; }
+/* a auréola ocupa o topo do arquivo do wordmark; o nudge alinha a BASE do
+   wordmark com a base do texto do menu (pedido do dono, 31/07) */
 .header__logo img {
-  height: clamp(34px, 5vw, 46px);
+  height: clamp(34px, 5vw, 42px);
   width: auto;
+  transform: translateY(-18px);
   filter: drop-shadow(0 2px 6px rgba(27, 39, 51, 0.12));
 }
 .header__nav { display: flex; gap: 1.6em; }
@@ -104,7 +107,7 @@
   .header__nav { gap: 0.85em; }
   .header__tools { gap: 0.85em; }
   .header__nav a, .header__tools a { font-size: 10px; letter-spacing: 0.06em; }
-  .header__logo img { height: auto; width: clamp(84px, 24vw, 110px); }
+  .header__logo img { height: auto; width: clamp(84px, 24vw, 110px); transform: translateY(-9px); }
   .header__cta { padding: 0.4rem 0.8rem; }
   .header__tools a[data-manifesto] { display: none; }
 }
@@ -260,7 +263,14 @@
 .cabecalho-colecao[data-colecao="nuvem"] { color: var(--deep); }
 .cabecalho-colecao__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .cabecalho-colecao::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 60%); }
-.cabecalho-colecao[data-colecao="nuvem"]::after { background: linear-gradient(to top, rgba(247, 251, 255, 0.8), transparent 60%); }
+.cabecalho-colecao[data-colecao="nuvem"]::after { background: linear-gradient(to top, rgba(247, 251, 255, 0.9), transparent 65%); }
+/* ouro sobre céu claro some; no banner NUVEM o kicker vira navy (dono, 31/07) */
+.cabecalho-colecao[data-colecao="nuvem"] .kicker--gold { color: var(--deep); opacity: 0.75; }
+
+/* auditoria de visibilidade (31/07): sobre superfície CLARA o ouro #e9c46a não
+   tem contraste; nesses contextos o kicker usa um ouro queimado. Banners e
+   fundos navy continuam com o ouro vivo da paleta. */
+.hero .kicker--gold, .pdp__info .kicker--gold, .pdp__devocao .kicker--gold { color: #96731d; opacity: 1; }
 .cabecalho-colecao__copy { position: relative; z-index: 1; max-width: var(--maxw-listagem); width: 100%; margin: 0 auto; padding: 2.2em var(--pad); }
 
 .filtros { display: flex; gap: 0.6em; flex-wrap: wrap; align-items: center; margin: 2em 0; }
@@ -295,7 +305,8 @@
   box-shadow: 0 40px 80px -30px rgba(11, 35, 96, 0.35);
   position: relative;
 }
-.pdp__quadro img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+/* fotos da CDN são quadradas; 1:1 mostra a peça INTEIRA, sem crop (dono, 31/07) */
+.pdp__quadro img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 .pdp__quadro::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(120% 90% at 50% 12%, transparent 55%, rgba(11, 35, 96, 0.08) 100%);
