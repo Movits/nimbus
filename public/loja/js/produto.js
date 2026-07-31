@@ -98,13 +98,13 @@
     const txt = document.createElement("span");
     txt.textContent = nome + " na sacola.";
     aviso.append(txt);
-    const total = window.NIMBUS && NIMBUS.sacola ? NIMBUS.sacola.total() : 0;
-    if (total > 0) {
+    const pecas = window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.totalPecas ? NIMBUS.sacola.totalPecas() : 0;
+    if (pecas > 0) {
       const regua = document.createElement("span");
       regua.className = "sacola-aviso__frete";
-      regua.textContent = total >= FRETE_GRATIS
-        ? "Sua sacola ganhou frete grátis e uma Ecobag de brinde."
-        : "Faltam " + reais(FRETE_GRATIS - total) + " para frete grátis e Ecobag de brinde.";
+      regua.textContent = pecas >= FRETE_GRATIS
+        ? "Frete grátis garantido. Cupom ECOBAG no checkout = Ecobag de graça."
+        : "Faltam " + reais(FRETE_GRATIS - pecas) + " em peças para frete grátis e Ecobag de brinde.";
       aviso.append(regua);
     }
     const link = document.createElement("a");
@@ -139,7 +139,7 @@
     if (window.NIMBUS && NIMBUS.sacola) {
       const pc = p.imagens.por_cor[cor] || {};
       resultado = NIMBUS.sacola.soma({
-        slug: p.slug, nome: p.nome, cor, tamanho: tamanho || null,
+        slug: p.slug, nome: p.nome, cor, tamanho: tamanho || null, peca: p.peca || "",
         preco: p.preco || 0, img: pc.costas || pc.frente || p.imagens.capa,
       });
     }

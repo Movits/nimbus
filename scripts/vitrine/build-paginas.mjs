@@ -240,7 +240,7 @@ const produto = (p) => {
   const dados = {
     url_loja: urlLoja, url_carrinho: SACOLA("pdp"), imagens: p.imagens,
     opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
-    slug: p.slug, nome: p.nome,
+    slug: p.slug, nome: p.nome, peca: p.peca,
   };
   // galeria com a cor padrão primeiro (costas = arte, depois frente), para os
   // thumbs abrirem coerentes com a capa
@@ -391,7 +391,7 @@ const INSTITUCIONAIS = {
     <h2>Rastreio</h2>
     <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega.</p>
     <h2>Frete grátis e Ecobag de brinde</h2>
-    <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil e levam uma Ecobag de brinde. Você escolhe a arte da Ecobag na mensagem do pedido, no checkout, junto com o projeto social.</p>
+    <p>Pedidos com R$399,90 ou mais em peças têm frete grátis para todo o Brasil e ganham uma Ecobag. Funciona assim: adicione a Ecobag com a arte que você quiser e use o cupom <b>ECOBAG</b> no checkout, que o valor dela sai do pedido. A mensagem do pedido segue sendo o lugar de escolher o projeto social dos 10%.</p>
     <h2>Quanto custa o frete</h2>
     <p>Abaixo de R$399,90, o valor do frete aparece na sacola assim que você informa o seu CEP, antes do pagamento.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `

@@ -29,6 +29,10 @@ NIMBUS.sacola = (function () {
     try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { /* modo privado */ }
   }
   const somaDe = (itens) => itens.reduce((a, i) => a + (i.preco || 0) * i.qtd, 0);
+  // a régua do brinde conta só as PEÇAS: a mecânica do cupom ECOBAG (mín.
+  // R$449,80) equivale a "peças sem a ecobag >= R$399,90", regra do dono.
+  const ehEcobag = (i) => i.peca === "Ecobag" || /\|\s*Ecobag/.test(i.nome || "");
+  const pecasDe = (itens) => somaDe(itens.filter((i) => !ehEcobag(i)));
 
   // Sincronia com o carrinho REAL: a página do carrinho da loja (tema Baires,
   // templates/cart.tpl) grava um cookie no domínio pai com o retrato do
@@ -67,16 +71,17 @@ NIMBUS.sacola = (function () {
     itens() { return le().itens; },
     n() { return le().itens.reduce((a, i) => a + i.qtd, 0); },
     total() { return somaDe(le().itens); },
+    totalPecas() { return pecasDe(le().itens); },
     soma(item) {
       const s = le();
-      const antes = somaDe(s.itens);
+      const antes = pecasDe(s.itens);
       const igual = s.itens.find((i) => i.slug === item.slug && i.cor === item.cor && i.tamanho === item.tamanho);
       if (igual) igual.qtd += 1;
-      else s.itens.push({ slug: item.slug, nome: item.nome, cor: item.cor, tamanho: item.tamanho, preco: item.preco || 0, img: item.img || null, qtd: 1 });
+      else s.itens.push({ slug: item.slug, nome: item.nome, cor: item.cor, tamanho: item.tamanho, peca: item.peca || "", preco: item.preco || 0, img: item.img || null, qtd: 1 });
       grava(s);
       this.pinta();
-      const depois = somaDe(s.itens);
-      return { total: depois, cruzou: antes < META && depois >= META };
+      const depois = pecasDe(s.itens);
+      return { total: somaDe(s.itens), cruzou: antes < META && depois >= META };
     },
     esvazia() { grava({ itens: [] }); this.pinta(); },
     pinta() {
@@ -158,16 +163,17 @@ NIMBUS.gaveta = (function () {
       li.append(img, info, preco);
       lista.appendChild(li);
     }
-    const pct = Math.min(100, (total / META) * 100);
+    const pecas = NIMBUS.sacola.totalPecas();
+    const pct = Math.min(100, (pecas / META) * 100);
     raiz.querySelector(".gaveta__barra").style.width = pct + "%";
     const meta = raiz.querySelector(".gaveta__meta");
-    if (!itens.length) meta.textContent = "Frete grátis e uma Ecobag de brinde a partir de " + NIMBUS.reais(META) + ".";
-    else if (total >= META) meta.innerHTML = "<b>Frete grátis e Ecobag de brinde garantidos.</b> Escolha a arte da Ecobag na mensagem do pedido, no checkout.";
-    else meta.textContent = "Faltam " + NIMBUS.reais(META - total) + " para frete grátis e uma Ecobag de brinde.";
+    if (!itens.length) meta.textContent = "Frete grátis e uma Ecobag de brinde a partir de " + NIMBUS.reais(META) + " em peças.";
+    else if (pecas >= META) meta.innerHTML = "<b>Frete grátis garantido.</b> Adicione a Ecobag com a arte que você quiser e use o cupom <b>ECOBAG</b> no checkout: ela sai de graça.";
+    else meta.textContent = "Faltam " + NIMBUS.reais(META - pecas) + " em peças para frete grátis e uma Ecobag de brinde.";
     const festa = raiz.querySelector(".gaveta__festa");
-    festa.hidden = !(itens.length && total >= META);
+    festa.hidden = !(itens.length && pecas >= META);
     if (!festa.hidden && !festa.innerHTML) {
-      festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) + "<p>Seu pedido ganhou frete grátis e uma Ecobag de presente. Veja as artes pelo site e escreva a escolhida na mensagem do checkout.</p>";
+      festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) + "<p>Seu pedido ganhou frete grátis e uma Ecobag de presente. Adicione a Ecobag com a arte que preferir e use o cupom ECOBAG no checkout: o valor dela sai do pedido.</p>";
     }
     raiz.querySelector(".gaveta__checkout").href = urlCarrinho();
   }
