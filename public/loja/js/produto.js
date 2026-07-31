@@ -98,13 +98,13 @@
     const txt = document.createElement("span");
     txt.textContent = nome + " na sacola.";
     aviso.append(txt);
-    const pecas = window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.totalPecas ? NIMBUS.sacola.totalPecas() : 0;
-    if (pecas > 0) {
+    const prog = window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.progresso ? NIMBUS.sacola.progresso() : 0;
+    if (prog > 0) {
       const regua = document.createElement("span");
       regua.className = "sacola-aviso__frete";
-      regua.textContent = pecas >= FRETE_GRATIS
+      regua.textContent = prog >= FRETE_GRATIS
         ? "Frete grátis garantido. Cupom ECOBAG no checkout = Ecobag de graça."
-        : "Faltam " + reais(FRETE_GRATIS - pecas) + " em peças para frete grátis e Ecobag de brinde.";
+        : "Faltam " + reais(FRETE_GRATIS - prog) + " para frete grátis e Ecobag de brinde.";
       aviso.append(regua);
     }
     const link = document.createElement("a");
