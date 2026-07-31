@@ -4,8 +4,15 @@
 // Uso: node scripts/vitrine/build-paginas.mjs
 import fs from "node:fs";
 import path from "node:path";
+import crypto from "node:crypto";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
+
+// Versão dos ativos: todo deploy com CSS/JS mudado troca a URL e fura o cache
+// de 10 min do GitHub Pages e o cache do navegador (dono viu CSS velho, 31/07).
+const ATIVOS = ["css/tokens.css", "css/loja.css", "js/ui.js", "js/vitrine.js", "js/produto.js"]
+  .map((f) => path.resolve(import.meta.dirname, "..", "..", "public/loja", f));
+const V = crypto.createHash("md5").update(Buffer.concat(ATIVOS.map((f) => fs.readFileSync(f)))).digest("hex").slice(0, 8);
 const BASE = path.join(RAIZ, "public/loja");
 const cat = JSON.parse(fs.readFileSync(path.join(BASE, "catalogo.json"), "utf-8"));
 
@@ -41,8 +48,8 @@ ${opts.canonical ? `<link rel="canonical" href="${esc(opts.canonical)}">` : ""}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="${PREFIXO}/css/tokens.css">
-<link rel="stylesheet" href="${PREFIXO}/css/loja.css">
+<link rel="stylesheet" href="${PREFIXO}/css/tokens.css?v=${V}">
+<link rel="stylesheet" href="${PREFIXO}/css/loja.css?v=${V}">
 ${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}${ga4()}
 </head>
 <body>`;
@@ -165,7 +172,7 @@ ${header("home")}
   </div></section>
 </main>
 ${footer("home")}
-<script src="${PREFIXO}/js/ui.js" defer></script>
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 
 /* ----------------------------------------------------------------- colecao */
@@ -197,8 +204,8 @@ ${header("colecao")}
   </div></section>
 </main>
 ${footer("colecao")}
-<script src="${PREFIXO}/js/ui.js" defer></script>
-<script src="${PREFIXO}/js/vitrine.js" defer></script>
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+<script src="${PREFIXO}/js/vitrine.js?v=${V}" defer></script>
 </body></html>`;
 };
 
@@ -319,8 +326,8 @@ ${header("pdp")}
 </main>
 ${footer("pdp")}
 <script type="application/json" id="produto-dados">${JSON.stringify(dados)}</script>
-<script src="${PREFIXO}/js/ui.js" defer></script>
-<script src="${PREFIXO}/js/produto.js" defer></script>
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+<script src="${PREFIXO}/js/produto.js?v=${V}" defer></script>
 </body></html>`;
 };
 
@@ -338,7 +345,7 @@ ${header("institucional")}
   </div></section>
 </main>
 ${footer("institucional")}
-<script src="${PREFIXO}/js/ui.js" defer></script>
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 
 const INSTITUCIONAIS = {
@@ -425,7 +432,7 @@ ${header("gates")}
   </div></section>
 </main>
 ${footer("gates")}
-<script src="${PREFIXO}/js/ui.js" defer></script>
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 };
 
