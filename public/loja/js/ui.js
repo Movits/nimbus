@@ -396,6 +396,50 @@ if ("serviceWorker" in navigator && location.protocol === "https:") {
   });
 }
 
+// --- segunda foto do card ----------------------------------------------------
+// No desktop, hover. No celular não existe hover (e o toque abre o produto),
+// então a foto de trás entra em ciclo sozinha, só nos cards que estão na tela.
+// A imagem só é baixada quando o card aparece: antes ela vinha sempre, inclusive
+// no celular, onde não tinha como ser exibida (198 KB numa página de coleção).
+(function () {
+  const versos = document.querySelectorAll(".card__hover[data-verso]");
+  if (!versos.length) return;
+  const toque = window.matchMedia("(hover: none)").matches;
+  const parado = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const naTela = new Set();
+
+  const olho = new IntersectionObserver((entradas) => {
+    for (const e of entradas) {
+      const img = e.target.querySelector(".card__hover[data-verso]");
+      if (e.isIntersecting) {
+        if (img && !img.src) img.src = img.dataset.verso; // carrega ao aparecer
+        naTela.add(e.target);
+      } else {
+        naTela.delete(e.target);
+        e.target.classList.remove("card--verso");
+      }
+    }
+  }, { rootMargin: "200px 0px" });
+  document.querySelectorAll(".card").forEach((c) => { if (c.querySelector(".card__hover[data-verso]")) olho.observe(c); });
+
+  if (!toque || parado) return; // no desktop o hover já resolve
+
+  // Um timer só para a página toda, com os cards em 3 grupos defasados: a grade
+  // ganha vida sem virar pisca-pisca.
+  const PASSO = 1200, CICLO = 6; // cada card fica ~3,6s de cada lado
+  let tique = 0;
+  setInterval(() => {
+    if (document.hidden || !naTela.size) return;
+    tique++;
+    let i = 0;
+    for (const card of naTela) {
+      const fase = (tique + (i % 3) * 2) % CICLO;
+      card.classList.toggle("card--verso", fase >= CICLO / 2);
+      i++;
+    }
+  }, PASSO);
+})();
+
 (function () {
   const io = new IntersectionObserver(
     (entradas) => entradas.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
