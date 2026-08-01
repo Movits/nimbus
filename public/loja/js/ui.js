@@ -10,8 +10,11 @@
 // não aplica, ela segue sendo a verdade do que será cobrado.
 window.NIMBUS = window.NIMBUS || {};
 
+// Antes escrevia "R$ 1049,60" sem ponto de milhar e comia centavos redondos
+// ("R$ 1200", "R$ 0"). O frete grátis é a R$ 399,90 e a sacola passa dos mil
+// com facilidade, então o milhar aparece de verdade.
 NIMBUS.reais = function (v) {
-  return "R$ " + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",").replace(",00", "");
+  return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v || 0).replace(/\u00a0/g, " ");
 };
 
 NIMBUS.sacola = (function () {

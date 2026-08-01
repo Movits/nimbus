@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-08-01T14:21:42.289Z",
+ "gerado_em": "2026-08-01T22:51:36.625Z",
  "loja": {
   "base": "https://loja.nimbuswear.com.br",
   "frete_gratis_acima_de": 199
@@ -41,7 +41,7 @@
    "ficha": {
     "material": "100% algodão",
     "modelagem": "Bolsa reutilizável",
-    "gola": "Não se aplica",
+    "gola": "",
     "estampa": "",
     "cuidados": "Lavar à mão com água fria e sabão neutro. Secar à sombra. Não passar sobre a estampa.",
     "medidas": "41x35 cm; alças de 60 cm"

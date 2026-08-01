@@ -18,6 +18,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// Campos de planilha vêm com "Não se aplica" quando a peça não tem aquele
+// atributo (a Ecobag não tem gola). Isso é marcador de tabela, não copy.
+const MARCADORES_FICHA = /^\s*(n[aã]o se aplica|n\/a|-|—)\s*\.?\s*$/i;
+const limpaFicha = (v) => (MARCADORES_FICHA.test(String(v || "")) ? "" : v);
+
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const IMPL = path.join(RAIZ, "nuvemshop/auditoria/2026-07-21/implementacao");
 const SAIDA = path.join(RAIZ, "public/loja/catalogo.json");
@@ -176,7 +181,7 @@ for (const pid of ENTRAM) {
     meta_title: c.meta_title,
     meta_description: c.meta_description,
     ficha: {
-      material: t.material || "", modelagem: t.fit || "", gola: t.collar || "",
+      material: limpaFicha(t.material) || "", modelagem: limpaFicha(t.fit) || "", gola: limpaFicha(t.collar) || "",
       estampa: semMarcador(t.print), cuidados: semMarcador(t.care), medidas: semMarcador(t.measurements),
     },
     imagens: { capa, hover, galeria: fotos, por_cor: porCor, fonte_px: 500, caixa_max_css: 400 },

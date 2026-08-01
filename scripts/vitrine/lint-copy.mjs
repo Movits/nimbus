@@ -47,6 +47,7 @@ const BANIDOS = [
   /aguardam? confirmação/i,
   /confirmar no painel/i,
   /troca fácil/i,
+  /n[aã]o se aplica/i,
   /—/,
 ];
 // A landing mora fora de public/loja e ficou de fora do lint por 2 dias: os
@@ -73,12 +74,28 @@ for (const re of BANIDOS)
 
 // A copy da landing vive em TypeScript, não em HTML: sem esta varredura o
 // termo volta no próximo build do Vite. Comentários de código ficam de fora.
-const CONTENT = path.join(RAIZ, "src/data/content.ts");
-if (fs.existsSync(CONTENT)) {
-  const linhas = fs.readFileSync(CONTENT, "utf-8").split("\n").filter((l) => !/^\s*(\/\/|\*|\/\*)/.test(l));
-  const corpo = linhas.join("\n");
-  for (const re of BANIDOS)
-    if (re.test(corpo)) erros.push(`src/data/content.ts: contém "${corpo.match(re)[0]}"`);
+// Varre src/ INTEIRO, não só content.ts: o travessão do aria-label do Topbar
+// passou por dois builds porque o lint só olhava um arquivo. Comentários de
+// linha e de bloco ficam de fora, inclusive os de JSX.
+function fontes(dir) {
+  const saida = [];
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const cheio = path.join(dir, e.name);
+    if (e.isDirectory()) saida.push(...fontes(cheio));
+    else if (/\.(ts|tsx|js|jsx)$/.test(e.name)) saida.push(cheio);
+  }
+  return saida;
+}
+const SRC = path.join(RAIZ, "src");
+if (fs.existsSync(SRC)) {
+  for (const arq of fontes(SRC)) {
+    const corpo = fs.readFileSync(arq, "utf-8")
+      .replace(/\{\s*\/\*[\s\S]*?\*\/\s*\}/g, "")   // comentário JSX
+      .replace(/\/\*[\s\S]*?\*\//g, "")                 // comentário de bloco
+      .split("\n").filter((l) => !/^\s*\/\//.test(l)).join("\n");
+    for (const re of BANIDOS)
+      if (re.test(corpo)) erros.push(`${path.relative(RAIZ, arq)}: contém "${corpo.match(re)[0]}"`);
+  }
 }
 
 if (erros.length) {

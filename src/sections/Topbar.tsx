@@ -14,7 +14,7 @@ export default function Topbar() {
 
   return (
     <header className={`topbar ${scrolled ? 'is-scrolled' : ''}`}>
-      <button className="topbar__logo" onClick={() => scrollToSection(SECTION.hero)} aria-label="NIMBUS — início">
+      <button className="topbar__logo" onClick={() => scrollToSection(SECTION.hero)} aria-label="NIMBUS, ir para o início">
         <img src={ASSETS.wordmark} alt="NIMBUS" />
       </button>
       <nav className="topbar__nav">

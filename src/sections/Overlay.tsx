@@ -121,7 +121,12 @@ export default function Overlay() {
           </ul>
           <div className="footer__meta">
             <span>{COPY.footer.madein}</span>
-            <span>Instagram · TikTok</span>
+            <span className="footer__social">
+              {COPY.footer.social}{' '}
+              <a href="https://www.instagram.com/nimbuswear.br/" target="_blank" rel="noopener noreferrer me">Instagram</a>
+              {' · '}
+              <a href="https://www.tiktok.com/@nimbuswear.br" target="_blank" rel="noopener noreferrer me">TikTok</a>
+            </span>
             <span>{COPY.footer.rights}</span>
           </div>
         </div>
