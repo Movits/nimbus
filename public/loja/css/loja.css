@@ -118,13 +118,6 @@
   .header__tools a[data-manifesto] { display: none; }
 }
 
-/* no celular a coluna do nome fica com 84px se o preço divide a linha: em
-   coluna própria, todo nome do catálogo cabe em duas linhas */
-@media (max-width: 640px) {
-  .card__meta { display: block; padding: 0.7em 0.2em 0; }
-  .card__preco { display: block; margin-top: 0.35em; }
-}
-
 /* --- hero ------------------------------------------------------------------ */
 .hero {
   position: relative;
@@ -277,6 +270,15 @@
 .card__nome { font-weight: 600; font-size: 14px; color: var(--deep); text-wrap: balance; }
 .card__peca { font-size: 11px; color: #5b6779; margin-top: 2px; }
 .card__preco { font-family: var(--font-display); font-weight: 400; font-size: 14px; color: var(--deep); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* No celular o nome divide a linha com o preço e sobra menos de 90px, o que
+   quebra 6 dos 17 nomes em três linhas a 390px. Em coluna própria, todo nome do
+   catálogo cabe em duas. Precisa vir DEPOIS da regra base: mesma
+   especificidade, quem vem por último ganha. */
+@media (max-width: 640px) {
+  .card__meta { display: block; padding: 0.7em 0.2em 0; }
+  .card__preco { display: block; margin-top: 0.35em; }
+}
 
 /* --- bandas editoriais ----------------------------------------------------- */
 .banda { display: grid; grid-template-columns: 55fr 45fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
