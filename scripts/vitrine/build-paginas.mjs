@@ -61,6 +61,11 @@ const ga4 = () => GA4_ID ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA4_ID}');</script>` : "";
 
+// O cabeçalho de coleção é uma faixa larga sobre foto panorâmica: sem foco por
+// coleção, o cover de tela larga corta o assunto (a igreja da RELÍQUIA virava
+// laje de parede a 1920). Cada valor mira o assunto da respectiva arte.
+const FOCO_COLECAO = { street: "50% 62%", reliquia: "50% 40%", nuvem: "50% 70%" };
+
 // header/footer são funções do medium para o UTM sair certo por tipo de página
 const header = (medium) => `
 <div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis e Ecobag de brinde a partir de R$399,90</div>
@@ -183,7 +188,7 @@ const colecao = (c) => {
 ${header("colecao")}
 <main>
   <section class="cabecalho-colecao" data-colecao="${c.id}">
-    <img class="cabecalho-colecao__bg" src="${PREFIXO}/media/cenario-${c.id}-1600.webp" alt="">
+    <img class="cabecalho-colecao__bg" style="object-position:${FOCO_COLECAO[c.id] || "50% 50%"}" src="${PREFIXO}/media/cenario-${c.id}-1600.webp" alt="">
     <div class="cabecalho-colecao__copy">
       <div class="kicker kicker--gold">Coleção</div>
       <h1 class="display">${esc(c.rotulo)}</h1>
