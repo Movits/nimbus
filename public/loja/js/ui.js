@@ -54,6 +54,16 @@ NIMBUS.sacola = (function () {
       return c && Array.isArray(c.itens) && typeof c.t === "number" ? c : null;
     } catch (e) { return null; }
   }
+  // O nome que vem da loja é o texto da linha do carrinho: variante colada e
+  // cortado em 48. O do espelho é o do catálogo: comparar literal nunca casava,
+  // o item voltava sem pid e a ordem de remoção ficava inaplicável no cart.tpl.
+  const nrmNome = (x) => String(x || "").replace(/\s+/g, " ").trim().toLowerCase();
+  const casaNome = (n, alvo) => n === alvo || n.indexOf(alvo) === 0 || alvo.indexOf(n) === 0;
+  function parDe(antigos, nome) {
+    const alvo = nrmNome(nome);
+    const c = antigos.filter((a) => casaNome(nrmNome(a.nome), alvo));
+    return c.length === 1 ? c[0] : null;
+  }
   function sincroniza() {
     const c = cookieLoja();
     if (!c) return false;
@@ -61,9 +71,9 @@ NIMBUS.sacola = (function () {
     if ((s.t || 0) >= c.t) return false;
     const antigos = s.itens;
     const itens = c.itens.filter((i) => i.qtd > 0).map((i) => {
-      const par = antigos.find((a) => a.nome === i.nome);
+      const par = parDe(antigos, i.nome);
       return {
-        slug: par ? par.slug : null, nome: i.nome,
+        slug: par ? par.slug : null, nome: par ? par.nome : i.nome,
         cor: par ? par.cor : "", tamanho: par ? par.tamanho : null,
         peca: par ? par.peca : "", pid: par ? par.pid : null,
         preco: i.qtd ? (i.sub || 0) / i.qtd : 0,
