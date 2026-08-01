@@ -93,11 +93,15 @@ button { font: inherit; cursor: pointer; }
 .btn--ghost { border-color: var(--line); color: var(--deep); background: transparent; }
 .btn--ghost:hover { border-color: var(--deep); }
 
-/* --- reveal (IntersectionObserver põe .in) -------------------------------- */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.in { opacity: 1; transform: none; }
-.reveal:nth-child(2) { transition-delay: 0.08s; }
-.reveal:nth-child(3) { transition-delay: 0.16s; }
+/* --- reveal (IntersectionObserver põe .in) --------------------------------
+   O estado invisível depende da classe .js, que só existe se o script do head
+   rodou. Sem JS, ou com o script bloqueado, o conteúdo simplesmente aparece.
+   Antes disso, uma falha de JS deixava a grade inteira em branco, sem erro
+   nenhum no console (auditoria de 31/07, e a prova de uso do dono flagrou). */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.js .reveal.in { opacity: 1; transform: none; }
+.js .reveal:nth-child(2) { transition-delay: 0.08s; }
+.js .reveal:nth-child(3) { transition-delay: 0.16s; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
 }
