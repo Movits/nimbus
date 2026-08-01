@@ -1,33 +1,129 @@
 {
-  "_comentario": "Bloco devocional por ARTE (P1-2 do conselho r3). Piloto: só os heroes (destaque). Escalar aos 44 exige gate do dono. Datas litúrgicas do calendário romano; texto reverente, sem travessão.",
-  "São Jorge Neobarroco": {
-    "santo": "São Jorge",
-    "festa": "23 de abril",
-    "historia": "Soldado do exército romano no século III, Jorge da Capadócia preferiu morrer a negar a fé em Cristo. A imagem do cavaleiro que vence o dragão atravessou os séculos como símbolo da vitória do bem sobre o mal, e fez dele o santo de quem enfrenta batalhas todos os dias.",
-    "estetica": "O traço neobarroco traz o drama e o ouro das igrejas brasileiras para a linguagem de rua."
-  },
-  "São Jorge Vintage": {
-    "santo": "São Jorge",
-    "festa": "23 de abril",
-    "historia": "Soldado do exército romano no século III, Jorge da Capadócia preferiu morrer a negar a fé em Cristo. A imagem do cavaleiro que vence o dragão atravessou os séculos como símbolo da vitória do bem sobre o mal, e fez dele o santo de quem enfrenta batalhas todos os dias.",
-    "estetica": "O tratamento vintage cita as band-tees clássicas: a devoção com a energia de um show."
-  },
-  "São Miguel Celeste": {
-    "santo": "São Miguel Arcanjo",
-    "festa": "29 de setembro",
-    "historia": "Príncipe da milícia celeste, Miguel é o arcanjo que a Escritura mostra vencendo a serpente. O próprio nome é um grito de batalha: Quem como Deus? É o protetor invocado nas lutas que ninguém vê.",
-    "estetica": "O traço celeste, leve como o céu da coleção NUVEM, mostra o guerreiro na sua face mais serena."
-  },
-  "Aparecida Spray": {
-    "santo": "Nossa Senhora Aparecida",
-    "festa": "12 de outubro",
-    "historia": "Em 1717, pescadores do rio Paraíba recolheram nas redes uma pequena imagem escura de Nossa Senhora da Conceição. Das mãos daqueles pescadores ao coração do país inteiro: Aparecida é a Padroeira do Brasil, a mãe que acolhe o povo como ele é.",
-    "estetica": "O spray leva a Padroeira para o muro da cidade, onde o Brasil de verdade passa todo dia."
-  },
-  "NIMBUS Wildstyle": {
-    "santo": "A assinatura da casa",
-    "festa": null,
-    "historia": "Nimbus é a nuvem que carrega a chuva e também o nome da auréola dos santos na arte sacra. O wildstyle, letra clássica do graffiti, é a caligrafia da rua. Juntos, são a assinatura da NIMBUS: fé que assina o próprio nome sem pedir licença.",
-    "estetica": "Lettering autoral da marca, coroado pela auréola do logotipo."
-  }
+ "_comentario": "Bloco devocional por ARTE. Escalado para as 21 artes dos 44 produtos em 2026-08-01, com gate do dono. Datas do calendário romano; festas moveis ficam descritas em texto, sem data fixa. Texto reverente, sem travessao. Arte que nao e santo (lettering, monograma, salmo) usa o campo santo para nomear o tema.",
+ "São Jorge Neobarroco": {
+  "santo": "São Jorge",
+  "festa": "23 de abril",
+  "historia": "Soldado do exército romano no século III, Jorge da Capadócia preferiu morrer a negar a fé em Cristo. A imagem do cavaleiro que vence o dragão atravessou os séculos como símbolo da vitória do bem sobre o mal, e fez dele o santo de quem enfrenta batalhas todos os dias.",
+  "estetica": "O traço neobarroco traz o drama e o ouro das igrejas brasileiras para a linguagem de rua."
+ },
+ "São Jorge Vintage": {
+  "santo": "São Jorge",
+  "festa": "23 de abril",
+  "historia": "Soldado do exército romano no século III, Jorge da Capadócia preferiu morrer a negar a fé em Cristo. A imagem do cavaleiro que vence o dragão atravessou os séculos como símbolo da vitória do bem sobre o mal, e fez dele o santo de quem enfrenta batalhas todos os dias.",
+  "estetica": "O tratamento vintage cita as band-tees clássicas: a devoção com a energia de um show."
+ },
+ "São Miguel Celeste": {
+  "santo": "São Miguel Arcanjo",
+  "festa": "29 de setembro",
+  "historia": "Príncipe da milícia celeste, Miguel é o arcanjo que a Escritura mostra vencendo a serpente. O próprio nome é um grito de batalha: Quem como Deus? É o protetor invocado nas lutas que ninguém vê.",
+  "estetica": "O traço celeste, leve como o céu da coleção NUVEM, mostra o guerreiro na sua face mais serena."
+ },
+ "Aparecida Spray": {
+  "santo": "Nossa Senhora Aparecida",
+  "festa": "12 de outubro",
+  "historia": "Em 1717, pescadores do rio Paraíba recolheram nas redes uma pequena imagem escura de Nossa Senhora da Conceição. Das mãos daqueles pescadores ao coração do país inteiro: Aparecida é a Padroeira do Brasil, a mãe que acolhe o povo como ele é.",
+  "estetica": "O spray leva a Padroeira para o muro da cidade, onde o Brasil de verdade passa todo dia."
+ },
+ "NIMBUS Wildstyle": {
+  "santo": "A assinatura da casa",
+  "festa": null,
+  "historia": "Nimbus é a nuvem que carrega a chuva e também o nome da auréola dos santos na arte sacra. O wildstyle, letra clássica do graffiti, é a caligrafia da rua. Juntos, são a assinatura da NIMBUS: fé que assina o próprio nome sem pedir licença.",
+  "estetica": "Lettering autoral da marca, coroado pela auréola do logotipo."
+ },
+ "São Miguel Vintage": {
+  "santo": "São Miguel Arcanjo",
+  "festa": "29 de setembro",
+  "historia": "Príncipe da milícia celeste, Miguel é o arcanjo que a Escritura mostra vencendo a serpente. O próprio nome é uma pergunta que virou grito de guerra: Quem como Deus? É o protetor invocado nas lutas que ninguém vê.",
+  "estetica": "O tratamento vintage gasta a imagem como quem carrega a devoção há anos, no formato das band-tees que a rua reconhece."
+ },
+ "São Miguel Vitorioso": {
+  "santo": "São Miguel Arcanjo",
+  "festa": "29 de setembro",
+  "historia": "Príncipe da milícia celeste, Miguel é o arcanjo que a Escritura mostra vencendo a serpente. O próprio nome é uma pergunta que virou grito de guerra: Quem como Deus? É o protetor invocado nas lutas que ninguém vê.",
+  "estetica": "Aqui ele aparece no instante da vitória, com a espada erguida e o peso do triunfo no traço."
+ },
+ "Aparecida Barroca": {
+  "santo": "Nossa Senhora Aparecida",
+  "festa": "12 de outubro",
+  "historia": "Em 1717, pescadores do rio Paraíba recolheram nas redes uma pequena imagem escura de Nossa Senhora da Conceição. Das mãos daqueles pescadores ao coração do país inteiro: Aparecida é a Padroeira do Brasil, a mãe que acolhe o povo como ele é.",
+  "estetica": "O barroco devolve à Padroeira o ouro e o drama das igrejas coloniais brasileiras, onde a fé daqui aprendeu a ser vista."
+ },
+ "Anjo da Guarda Stencil": {
+  "santo": "Santos Anjos da Guarda",
+  "festa": "2 de outubro",
+  "historia": "A tradição da Igreja ensina que cada pessoa recebe um anjo que a acompanha desde o primeiro dia. É a devoção mais antiga que muita gente tem: a oração de criança que continua sendo dita de madrugada, quando a estrada é longa e o medo aperta.",
+  "estetica": "O stencil é a técnica de quem escreve no muro o que precisa ser lembrado. Guarda simples, traço direto."
+ },
+ "Querubim Spray": {
+  "santo": "Os querubins",
+  "festa": null,
+  "historia": "Os querubins aparecem na Escritura guardando o jardim e cobrindo a arca da aliança com as asas. Não são os anjos de rosto doce da imaginação moderna: são presença, guarda e reverência diante do que é santo.",
+  "estetica": "O spray traz essa guarda antiga para a parede da cidade, com a energia de quem pinta rápido e sem pedir licença."
+ },
+ "Espírito Santo Spray": {
+  "santo": "O Espírito Santo",
+  "festa": "Pentecostes, cinquenta dias depois da Páscoa",
+  "historia": "No dia de Pentecostes, o Espírito desceu sobre os apóstolos como línguas de fogo, e gente com medo saiu falando a quem quisesse ouvir. A pomba é o sinal do batismo de Cristo no Jordão, quando o céu se abriu.",
+  "estetica": "O spray dá movimento ao sopro: a tinta corre na parede como o vento que a Escritura descreve."
+ },
+ "Sagrado Coração Spray": {
+  "santo": "Sagrado Coração de Jesus",
+  "festa": "Solenidade móvel, na sexta-feira seguinte à oitava de Corpus Christi",
+  "historia": "O coração exposto, coroado de espinhos e em chamas, é a imagem de um amor que não se guarda. A devoção se espalhou pelo mundo a partir do século XVII e se tornou uma das mais presentes nas casas brasileiras.",
+  "estetica": "O spray tira o Sagrado Coração da parede da sala e o coloca na parede da rua, com o mesmo fogo."
+ },
+ "Azulejo Sagrado": {
+  "santo": "A azulejaria devocional",
+  "festa": null,
+  "historia": "O azulejo azul e branco atravessou o Atlântico com os portugueses e cobriu igrejas, conventos e casas de todo o Brasil. Cada painel contava uma história sagrada para quem não sabia ler: era catequese na parede, e virou paisagem nossa.",
+  "estetica": "O padrão de azulejo vira estampa inteira, com a cor que a NIMBUS já tinha no céu."
+ },
+ "Salmo 19": {
+  "santo": "Salmo 19",
+  "festa": null,
+  "historia": "Os céus proclamam a glória de Deus, e o firmamento anuncia a obra das suas mãos. O salmo diz que a criação fala sem palavras, e que não existe lugar onde a voz dela não chegue. É o versículo que explica a marca inteira.",
+  "estetica": "Tipografia e céu: o texto sagrado tratado com o cuidado que se dá a um pôster."
+ },
+ "Deus é Fiel": {
+  "santo": "Uma afirmação da Escritura",
+  "festa": null,
+  "historia": "A fidelidade de Deus atravessa a Bíblia inteira, de Deuteronômio a Paulo: ele permanece fiel mesmo quando falta força do outro lado. É a frase que se diz depois da tempestade, quando ainda não dá para explicar como se chegou aqui.",
+  "estetica": "Lettering direto, sem ornamento. A frase não precisa de ajuda."
+ },
+ "Fé Acima de Tudo": {
+  "santo": "O lema da casa",
+  "festa": null,
+  "historia": "Acima de tudo é a maneira NIMBUS de dizer o que vem primeiro. Não é slogan de camiseta: é a ordem das coisas, escrita para ser lembrada no dia em que tudo o mais quiser passar na frente.",
+  "estetica": "O lema da marca em tipografia de rua, coroado pela auréola do logotipo."
+ },
+ "Fé Wildstyle": {
+  "santo": "O lema da casa",
+  "festa": null,
+  "historia": "Fé escrita na letra mais difícil do graffiti. O wildstyle exige tempo para ser lido, e quem lê descobre que valeu: é a devoção que não se anuncia de longe, mas está inteira ali.",
+  "estetica": "Lettering wildstyle autoral, com contorno, spray e a auréola da casa."
+ },
+ "Acima de Tudo Grafite": {
+  "santo": "O lema da casa",
+  "festa": null,
+  "historia": "Acima de tudo é a maneira NIMBUS de dizer o que vem primeiro. Escrito em grafite, o lema assume o lugar onde a cidade escreve o que importa: a parede.",
+  "estetica": "Grafite clássico, contorno fechado e a auréola no lugar do acento."
+ },
+ "Acima de Tudo Gótico": {
+  "santo": "O lema da casa",
+  "festa": null,
+  "historia": "Acima de tudo é a maneira NIMBUS de dizer o que vem primeiro. Na letra gótica, o lema encontra a tipografia dos manuscritos de mosteiro, feita para durar séculos.",
+  "estetica": "Blackletter, a letra das catedrais e também a das ruas, com o peso de quem não tem pressa."
+ },
+ "Brasão NIMBUS": {
+  "santo": "A assinatura da casa",
+  "festa": null,
+  "historia": "Um brasão é o que uma casa mostra quando precisa dizer quem é sem falar. O da NIMBUS junta o que a marca acredita: a nuvem, a auréola e o nome, no lugar onde antes iam as armas de família.",
+  "estetica": "Composição heráldica com a nuvem e a auréola do logotipo, em ouro sobre navy."
+ },
+ "Monograma NIMBUS": {
+  "santo": "A assinatura da casa",
+  "festa": null,
+  "historia": "O monograma é a assinatura reduzida ao essencial. Como os monogramas de Cristo que a Igreja usa há dois mil anos, ele diz tudo com poucas letras, para quem sabe ler.",
+  "estetica": "As iniciais da casa em construção geométrica limpa, com a auréola integrada ao traço."
+ }
 }

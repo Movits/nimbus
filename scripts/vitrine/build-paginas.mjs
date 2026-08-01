@@ -103,7 +103,7 @@ const card = (p) => `
 <a class="card reveal" href="${PREFIXO}/p/${p.slug}/" data-peca="${esc(p.peca)}" data-preco="${p.preco}">
   <div class="card__midia">
     <img src="${esc(p.imagens.capa)}" alt="${esc(p.nome)}" width="500" height="500" loading="lazy" decoding="async">
-    ${p.imagens.hover ? `<img class="card__hover" src="${esc(p.imagens.hover)}" alt="" width="500" height="500" loading="lazy" decoding="async">` : ""}
+    ${p.imagens.hover ? `<img class="card__hover" data-verso="${esc(p.imagens.hover)}" alt="" width="500" height="500" decoding="async">` : ""}
     <span class="card__pill">${esc(p.colecao_rotulo)}</span>
   </div>
   <div class="card__meta">
@@ -215,8 +215,10 @@ ${footer("colecao")}
 };
 
 /* ----------------------------------------------------------------- produto */
-// P1 do conselho r3 (go do dono em 30/07): bloco devocional por arte (piloto nos
-// destaques), breadcrumb, relacionados da mesma coleção, régua do frete grátis
+// P1 do conselho r3 (go do dono em 30/07): bloco devocional por arte. Nasceu
+// como piloto nos 8 destaques e foi escalado para as 21 artes em 01/08, por
+// ordem do dono: "se tiver em alguns produtos, tem que ter em todos".
+// Breadcrumb, relacionados da mesma coleção, régua do frete grátis
 // com a Ecobag como completa-pedido, disclaimer único na galeria e caimento.
 const DEVOCIONAL = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "devocional.json"), "utf-8"));
 const CAIMENTO = {
@@ -317,7 +319,7 @@ ${header("pdp")}
         <details><summary>Prazo e envio</summary><p class="note">Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
       </div>
 
-      ${p.destaque && DEVOCIONAL[p.arte] ? `
+      ${DEVOCIONAL[p.arte] ? `
       <div class="pdp__devocao">
         <div class="kicker kicker--gold">A devoção</div>
         <h2>${esc(DEVOCIONAL[p.arte].santo)}</h2>
