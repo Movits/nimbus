@@ -145,6 +145,15 @@
   position: absolute; inset: 0;
   background: linear-gradient(100deg, rgba(247, 251, 255, 0.94) 0%, rgba(247, 251, 255, 0.55) 38%, transparent 68%);
 }
+/* No celular o véu diagonal acabava em 265px de uma tela de 390, enquanto a
+   faixa de texto mede 350: o fim de cada linha do título caía no cabelo do
+   modelo, com contraste medido de 1,00:1 a 360px. Aqui ele é vertical e cobre
+   a largura toda (decisão do dono, 01/08: véu mais forte, foto no lugar). */
+@media (max-width: 900px) {
+  .hero::after {
+    background: linear-gradient(180deg, rgba(247, 251, 255, 0.9) 0%, rgba(247, 251, 255, 0.82) 62%, rgba(247, 251, 255, 0.42) 100%);
+  }
+}
 .hero__copy {
   position: relative;
   z-index: 1;
