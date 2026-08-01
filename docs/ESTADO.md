@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-31
+atualizado: 2026-08-01
 ---
 
 # Estado do projeto
@@ -187,9 +187,25 @@ card forçava retrato 4/5 numa foto quadrada e comia 20% da largura, e na PDP o
 `height="500"` (cortava 24% no desktop e 39% no celular). Card, PDP, thumbs e
 miniatura da gaveta passaram a 1:1 com `contain`; logo do rodapé com `contain`
 (distorcia 2,2%). Varredura de todas as imagens de todas as páginas em 390 e
-1440: zero corte em foto de produto. **Auditorias de UX e de UI em 6 e 5
-frentes com verificação adversarial rodaram em 31/07**; o plano de execução
-delas orienta a próxima leva.
+1440: zero corte em foto de produto. **Auditorias de UX (6 frentes) e de UI (5 frentes) com verificação
+adversarial rodadas em 31/07: 52 e 28 achados confirmados.** As duas levas 1
+foram ao ar em 01/08 (PRs #43 e #44). UX: gaveta virou diálogo de verdade
+(aria-modal, inert, foco preso e devolvido; fechada, ela deixava 9 botões
+focáveis invisíveis, um deles o Esvaziar), contraste corrigido (#7a8495 a
+3,63:1 em 44 cards, #8b97a8 a 2,85:1 no botão de remover, kicker dourado
+parado em 3,63:1), subtotal e linha de frete na sacola, badge até 99, alvos de
+toque a 44px, institucionais a 40em (rodavam a 166-197 caracteres por linha),
+toast do celular na largura da tela e abrindo a gaveta em vez de mandar o
+cliente para a loja, bug do Desfazer que apagava o que entrou depois da
+remoção, e copy proibida que estava no ar (a PDP da Ecobag citava a YouDraw; a
+landing tinha travessão no title e "sob demanda" na descrição do Google). O
+lint-copy passou a varrer a landing e o content.ts. UI: régua de escala por
+peça na grade (bbox medido: Oversized ocupava 493px de 500 contra 409 da
+Premium), pílula Sacola em navy, cabeçalho de coleção com altura em clamp e
+foco por coleção (a 1920 a igreja virava laje de parede), select na fonte do
+site, hover do tile sem fresta, preço da gaveta sem colisão de especificidade,
+grid do tablet a partir de 700px e card do celular com preço em linha própria.
+Planos completos das duas levas 2 no scratchpad da sessão e resumidos ao dono.
 
 ## Capas
 
