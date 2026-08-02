@@ -16,7 +16,11 @@
     "vitrine:paginas": "node scripts/vitrine/build-paginas.mjs",
     "vitrine:lint": "node scripts/vitrine/lint-copy.mjs",
     "vitrine:claims": "node scripts/vitrine/lint-claims.mjs",
-    "vitrine": "npm run vitrine:catalogo && npm run vitrine:lint && npm run vitrine:paginas && npm run vitrine:claims"
+    "vitrine": "npm run vitrine:catalogo && npm run vitrine:lint && npm run vitrine:paginas && npm run vitrine:claims",
+    "vitrine:tokens": "node scripts/vitrine/parity-tokens.mjs",
+    "vitrine:links": "node scripts/vitrine/link-check.mjs",
+    "vitrine:variantes": "node scripts/vitrine/parity-variantes.mjs",
+    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",

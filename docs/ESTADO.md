@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-01
+atualizado: 2026-08-02
 ---
 
 # Estado do projeto
@@ -206,6 +206,34 @@ foco por coleção (a 1920 a igreja virava laje de parede), select na fonte do
 site, hover do tile sem fresta, preço da gaveta sem colisão de especificidade,
 grid do tablet a partir de 700px e card do celular com preço em linha própria.
 Planos completos das duas levas 2 no scratchpad da sessão e resumidos ao dono.
+
+### Teste de carrinho em produção (01/08) e o portão que nasceu dele (02/08)
+
+**O primeiro teste de verdade do funil aconteceu em 01/08**, no navegador, com o
+Cowork operando a máquina do dono. Resultado: **43 dos 44 produtos entram no
+carrinho com a variante certa**, e a Ecobag não entrava.
+
+- **A URL do carrinho é `/comprar/`, não `/cart`.** O `/cart` responde 200 e
+  devolve outra página. Foi lendo a página errada que eu concluí, errado, que o
+  tema publicado tinha divergido do backup.
+- **O rótulo da variante é `(GG, Preta)`**: parênteses, tamanho antes da cor,
+  vírgula. O `cart.tpl` esperava `Preta / G` e fazia `split("/")`.
+- **A Ecobag:** a vitrine mandava dois eixos (`Único` e `Crua`) e a loja só tem
+  um (`Bege`). O POST ia, a loja recusava a combinação e o cliente voltava para
+  uma sacola vazia, **sem erro na tela**. Como a Ecobag é o brinde do frete
+  grátis e o produto restrito do cupom ECOBAG, era o pior lugar para isso.
+- **O teste da remoção que atravessa os dois sites ficou pendente**, porque
+  depende do upload do `cart.tpl` novo por FTP.
+
+**Portão novo: `scripts/vitrine/parity-variantes.mjs`** (`npm run
+vitrine:variantes`). O teste manual só alcançou 2 produtos; este alcança os 44.
+Ele lê o `LS.variants` que o tema imprime em toda página de produto (a lista de
+variantes reais, com `option0`, `option1`, preço, SKU e disponibilidade) e
+compara com o que o formulário da vitrine realmente POSTa: número de eixos,
+valores aceitos, **ordem** (`option0` é tamanho, `option1` é cor, a mesma ordem
+do rótulo do carrinho), id do produto, preço e estoque. Rodado em 02/08:
+**44 de 44 casam**. Aceita `SKIP_REDE=1` para pular offline, como o
+`link-check`. Todos os portões juntos: `npm run vitrine:portoes`.
 
 ## Capas
 
