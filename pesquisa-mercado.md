@@ -102,9 +102,13 @@ modernista (Niemeyer/Aparecida/Brasília) + estética céu.** Combinação não 
 - [Heaven by Marc Jacobs x Online Ceramics — Hypebeast](https://hypebeast.com/2022/11/heaven-by-marc-jacobs-online-ceramics-collaboration-collection-release-information-unisex)
 - [Madhappy — Wikipedia](https://en.wikipedia.org/wiki/Madhappy) · [Madhappy oficial](https://www.madhappy.com/)
 - [Christian Apparel Market Size Trends 2025 — Accio](https://www.accio.com/business/christian-apparel-market-size-trend-2025)
-- [Faith-based apparel & accessories Market — AskPot](https://askpot.com/directory/markets/faith%20based%20apparel%20and%20accessories)
+- Faith-based apparel & accessories Market, AskPot: **página removida da web**
+  (o site responde, a página devolve HTTP 410 Gone; conferido em 02/08/2026). O
+  número que veio dela não tem mais lastro verificável.
 - [North America Religious & Spiritual Products Market — GMInsights](https://www.gminsights.com/industry-analysis/north-america-religious-and-spiritual-products-market)
 - [Mercado evangélico gera R$ 21,5 bi/ano — Exame](https://exame.com/marketing/mercado-evangelico-ja-gera-r-215-bilhoes-por-ano-no-brasil/)
 - [Quando a estética gospel vira linguagem no streetwear — ISMO](https://www.ismo.mov/quando-a-estetica-gospel-vira-linguagem-no-streetwear/)
 - [Moda evangélica e o mercado de R$ 21 bilhões — Comunhão](https://comunhao.com.br/moda-evangelica-e-o-mercado-de-r-21-bilhoes/)
-- [Hace — Moda Cristã](https://usehace.com.br/) · [Code Collection](https://www.instagram.com/codecollectionbrasil/) · [Saint Store](https://storesaint.com.br/) · [God In Heaven](https://www.godinheaven.com.br/)
+- [Hace — Moda Cristã](https://usehace.com.br/) · [Code Collection](https://www.instagram.com/codecollectionbrasil/) · [Saint Store](https://storesaint.com.br/) · God In Heaven (**site fora do ar**:
+o domínio `godinheaven.com.br` não resolve, conferido em 02/08/2026; a marca
+pode ter fechado ou trocado de endereço, a confirmar)

@@ -167,4 +167,7 @@ Essa lista é editorial. A seleção comercial final depende de margem e amostra
 - YouDraw, frete: https://youdraw.tawk.help/article/como-funciona-o-frete-na-youdraw
 - YouDraw, rastreio: https://youdraw.tawk.help/article/como-funciona-o-rastreio
 - YouDraw, embalagens e etiquetas: https://youdraw.tawk.help/article/como-funcionam-as-embalagens-e-etiquetas
-- YouDraw, guia POD: https://blog.youdraw.com.br/post/print-on-demand-guia-empreendedores-brasil
+- YouDraw, guia POD: **fonte retirada em 02/08/2026.** Apontava para
+  `blog.youdraw.com.br`, host que **não existe** (o DNS não resolve). Era citação
+  inventada, não link que quebrou. As outras fontes desta lista foram conferidas
+  e respondem.

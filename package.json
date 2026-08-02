@@ -20,7 +20,8 @@
     "vitrine:tokens": "node scripts/vitrine/parity-tokens.mjs",
     "vitrine:links": "node scripts/vitrine/link-check.mjs",
     "vitrine:variantes": "node scripts/vitrine/parity-variantes.mjs",
-    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes"
+    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes && npm run docs:links",
+    "docs:links": "node scripts/link-check-docs.mjs ../nimbus-assets ../nimbus-brain"
   },
   "dependencies": {
     "@react-three/drei": "^9.114.3",

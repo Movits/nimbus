@@ -235,6 +235,31 @@ do rótulo do carrinho), id do produto, preço e estoque. Rodado em 02/08:
 **44 de 44 casam**. Aceita `SKIP_REDE=1` para pular offline, como o
 `link-check`. Todos os portões juntos: `npm run vitrine:portoes`.
 
+### Endereços escritos nos documentos (02/08)
+
+**O painel da Nuvemshop fica em <https://loja.nimbuswear.com.br/admin>**, no
+domínio da própria loja. **Não existe `dashboard.nuvemshop.com.br`**; eu escrevi
+esse host de memória num roteiro versionado e o dono bateu num
+ERR_CONNECTION_TIMED_OUT.
+
+Daí nasceu **`scripts/link-check-docs.mjs`** (`npm run docs:links`), que bate em
+todo endereço escrito em markdown nos três repositórios. O `link-check.mjs`
+cobria só as páginas geradas da vitrine, e é no markdown que moram as instruções
+que uma pessoa vai seguir. Classificação: **erro** quando não responde nada (DNS,
+recusa, tempo esgotado) ou 404/410; **aviso** em 401, 403 e 429, porque aí o host
+existe e o que barrou foi login ou proteção antirrobô; **OK** em 2xx e 3xx.
+Exceções ficam em `link-check-docs.allow.json`, uma por vez e com motivo escrito.
+
+Primeira rodada, 160 documentos e 102 endereços. Achou 8 mortos, entre eles
+**duas fontes inventadas**: as duas citações de `blog.youdraw.com.br`, host cujo
+DNS não resolve, uma delas em `loja-plataforma.md` e outra no plano de
+implementação. Não eram links que quebraram, eram links que nunca existiram.
+Também caíram a página da AskPot (410 Gone) e o site da God In Heaven (domínio
+fora do ar). As quatro exceções legítimas: o clone do repositório privado (o
+GitHub responde 404 para quem não está autenticado), a URL do CSS que é citada
+justamente por dar 404, e dois documentos históricos onde a URL errada é o
+próprio registro do erro da época.
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito
