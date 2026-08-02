@@ -55,6 +55,9 @@ se a marca crescer e valer a pena.
 - Peito/costas: [Printify](https://printify.com/blog/t-shirt-design-placement-guide/) ·
   [Fourthwall](https://fourthwall.com/blog/design-and-logo-placement-on-t-shirts) ·
   [Bonfire](https://www.bonfire.com/blog/logo-placement-guide/)
-- YouDraw: [blog/Nuvemshop](https://blog.youdraw.com.br/post/integrar-produtos-personalizados-nuvemshop-2026)
+- YouDraw: **fonte retirada em 02/08/2026** (era um link para
+  `blog.youdraw.com.br`, host que **não existe**: o DNS não resolve. Foi citação
+  inventada, não link que quebrou. O que a YouDraw publica de verdade está em
+  `youdraw.tawk.help` e em `youdraw.com.br`.)
   · [app Nuvemshop](https://www.nuvemshop.com.br/loja-aplicativos-nuvem/youdraw)
   · [app Shopify](https://apps.shopify.com/youdraw) · [youdraw.com.br](https://youdraw.com.br/)

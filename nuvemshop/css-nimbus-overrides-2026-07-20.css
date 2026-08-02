@@ -161,7 +161,7 @@ html body footer.js-footer .js-footer-col-sticky::before {
 html body footer.js-footer .js-footer-col-sticky::after {
   display: block !important;
   color: #294776 !important;
-  content: "Trocas e devoluções\A Envios e prazos\A Fale com a NIMBUS" !important;
+  content: "Trocas e devoluções\00000AEnvios e prazos\00000AFale com a NIMBUS" !important;
   font-size: 15px !important;
   line-height: 1.85 !important;
   white-space: pre-line !important;

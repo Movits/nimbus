@@ -1,0 +1,25 @@
+{
+  "_leia": [
+    "Endereços que NÃO respondem e mesmo assim continuam nos documentos, cada um com o motivo.",
+    "Só entra aqui o que é intencional. Link que ficou errado por descuido se conserta, não se",
+    "cadastra. Se o motivo não couber numa linha honesta, provavelmente é conserto, não exceção."
+  ],
+  "permitidos": [
+    {
+      "url": "https://github.com/Movits/nimbus-assets.git",
+      "motivo": "Repositório PRIVADO. O GitHub responde 404 para quem não está autenticado, então o 404 aqui é o comportamento certo, não link morto. É o comando de clone do handoff."
+    },
+    {
+      "url": "https://nimbuswear.com.br/loja/nimbus-loja.css",
+      "motivo": "O 404 É A PROVA. A página cita essa URL justamente para mostrar que o CSS do app privado nunca foi publicado, o que derruba a justificativa do ticket de onload na Nuvemshop."
+    },
+    {
+      "url": "https://loja.nimbuswear.com.br/carrinho/",
+      "motivo": "Documento histórico (prompt de execução de 29/07). A URL aparece como o valor ERRADO que o próprio prompt manda substituir por /comprar/. Corrigir falsificaria o registro."
+    },
+    {
+      "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vitorioso1/",
+      "motivo": "Documento histórico (prompt de 21/07). O slug foi inventado a partir do nome do produto; o real é arcanjo-spray1. Fica registrado como erro de época, não corrigido."
+    }
+  ]
+}
