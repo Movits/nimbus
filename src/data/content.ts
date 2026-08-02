@@ -49,7 +49,7 @@ export const COPY = {
   faith: {
     kicker: 'Fé',
     title: 'Fé que se veste bem.',
-    body: "O Cristo de braços abertos, a Senhora Aparecida, São Miguel. Símbolos assim pedem respeito, e é com respeito que os desenhamos: sem caricatura, sem modinha, com a seriedade de quem também acredita.",
+    body: "O Cristo de braços abertos, Nossa Senhora Aparecida, São Miguel. Símbolos assim pedem respeito, e é com respeito que os desenhamos: sem caricatura, sem modinha, com a seriedade de quem também acredita.",
   },
   design: {
     kicker: 'Design',

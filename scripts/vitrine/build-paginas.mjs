@@ -31,6 +31,14 @@ const utm = (url, medium, campanha = "vitrine") => {
 };
 const SACOLA = (medium) => utm("https://loja.nimbuswear.com.br/comprar/", medium);
 
+/* A vitrine fica FORA do índice do Google enquanto a loja não vende: o dono só
+   abre quando tiver fotos com modelo. Esta chave governa as duas pontas ao mesmo
+   tempo, o <meta robots> de cada página e o que entra no sitemap. Antes elas
+   eram independentes e se contradiziam: o sitemap convidava o Google para 52
+   páginas que respondiam noindex, o que renderia 52 erros no Search Console.
+   Para abrir a loja ao Google, basta virar esta linha para true. */
+const VITRINE_INDEXAVEL = false;
+
 /* ---------------------------------------------------------------- parciais */
 const head = (titulo, descricao, opts = {}) => `<!DOCTYPE html>
 <html lang="pt-BR">
@@ -39,10 +47,14 @@ const head = (titulo, descricao, opts = {}) => `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titulo)}</title>
 <meta name="description" content="${esc(descricao)}">
-<meta name="robots" content="noindex">
-<meta property="og:title" content="${esc(titulo)}">
+${VITRINE_INDEXAVEL && !opts.semIndice ? "" : '<meta name="robots" content="noindex">\n'}<meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(descricao)}">
-${opts.ogImage ? `<meta property="og:image" content="${esc(opts.ogImage)}">` : ""}
+<meta property="og:type" content="${opts.ogType || "website"}">
+<meta property="og:site_name" content="NIMBUS">
+<meta property="og:locale" content="pt_BR">
+${opts.canonical ? `<meta property="og:url" content="${esc(opts.canonical)}">` : ""}
+<meta property="og:image" content="${esc(opts.ogImage || "https://nimbuswear.com.br/img/hero-desktop.webp")}">
+<meta name="twitter:card" content="summary_large_image">
 ${opts.canonical ? `<link rel="canonical" href="${esc(opts.canonical)}">` : ""}
 <link rel="icon" href="/img/favicon-48.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,7 +126,7 @@ const card = (p) => `
 </a>`;
 
 /* -------------------------------------------------------------------- home */
-const home = () => `${head("NIMBUS | Streetwear católico premium", "Fé reverente, design autoral e acabamento premium. STREET, RELÍQUIA e NUVEM. 10% do lucro vai para o projeto social que você escolher.")}
+const home = () => `${head("NIMBUS | Streetwear católico premium", "Fé reverente, design autoral e acabamento premium. STREET, RELÍQUIA e NUVEM. 10% do lucro vai para o projeto social que você escolher.", { canonical: `${URL_BASE}/` })}
 ${header("home")}
 <main>
   <section class="hero">
@@ -284,45 +296,53 @@ ${header("pdp")}
       <div class="pdp__preco">${esc(p.preco_formatado)}</div>
       <p class="pdp__resumo note" style="font-size:0.95rem">${esc(p.resumo)}</p>
 
-      ${p.opcoes.cores.length > 1 || p.opcoes.cores[0] !== "Crua" ? `
+      ${p.opcoes.cores.length ? `
       <div class="opcao"><div class="opcao__rotulo">Cor<span class="opcao__valor" data-cor-nome>${esc(p.opcoes.cores[0])}</span></div>
         <div class="swatches">
           ${p.opcoes.cores.map((c, i) => `<button class="swatch" data-cor="${esc(c)}" aria-pressed="${i === 0}" aria-label="${esc(c)}" title="${esc(c)}" style="background:${CORES_HEX[c] || "#ccc"}"></button>`).join("")}
         </div>
       </div>` : ""}
 
+      ${p.opcoes.tamanhos.length ? `
       <div class="opcao"><div class="opcao__rotulo">Tamanho</div>
         <div class="tamanhos">
           ${p.opcoes.tamanhos.map((t) => `<button class="tamanho" data-tamanho="${esc(t)}" aria-pressed="false">${esc(t)}</button>`).join("")}
         </div>
-      </div>
+      </div>` : ""}
 
       <!-- mesmo POST do formulário oficial da loja (fluxo do dono, 30/07):
            adiciona à sacola sem sair da vitrine; o handoff acontece na Sacola.
            Sem JS, o POST abre o carrinho da loja em aba nova, já com o item. -->
       <form class="pdp__form" method="post" action="${esc(utm("https://loja.nimbuswear.com.br/comprar/", "pdp", p.slug))}" target="_blank" data-sacola-form>
         <input type="hidden" name="add_to_cart" value="${esc(p.id)}">
-        <input type="hidden" name="variation[0]" value="${esc(p.opcoes.tamanhos[0])}" data-var-tamanho>
-        <input type="hidden" name="variation[1]" value="${esc(p.opcoes.cores[0])}" data-var-cor>
+        ${/* Um campo por EIXO QUE EXISTE, na ordem tamanho, cor. A Ecobag tem
+             um eixo só e recebia dois: o item não entrava no carrinho e a loja
+             não dizia nada. Ver build-catalogo.mjs. */""}
+        ${(() => {
+          const eixos = [];
+          if (p.opcoes.tamanhos.length) eixos.push([esc(p.opcoes.tamanhos[0]), "data-var-tamanho"]);
+          if (p.opcoes.cores.length) eixos.push([esc(p.opcoes.cores[0]), "data-var-cor"]);
+          return eixos.map(([v, attr], i) => `<input type="hidden" name="variation[${i}]" value="${v}" ${attr}>`).join("\n        ");
+        })()}
         <input type="hidden" name="quantity" value="1">
         <button type="submit" class="btn btn--primary pdp__comprar">Adicionar à sacola</button>
       </form>
-      <span class="avisa-tamanho" data-avisa-tamanho>Escolha um tamanho para adicionar.</span>
+      <span class="avisa-tamanho" data-avisa-tamanho role="alert">Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
         <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece na sacola. Pix, boleto e cartão em até 12x.</span>
-        <span class="note">Feita no Brasil, para você.</span>
+        <span class="note">Peça feita no Brasil, para você.</span>
       </div>
 
       <div class="pdp__detalhes">
-        ${p.ficha.material ? `<details open><summary>A peça</summary><p class="note">${esc(p.ficha.material)}. ${esc(p.ficha.modelagem)}. ${esc(p.ficha.gola)}.</p></details>` : ""}
+        ${p.ficha.material ? `<details open><summary>A peça</summary><p class="note">${esc([p.ficha.material, p.ficha.modelagem, p.ficha.gola].filter(Boolean).join(". "))}.</p></details>` : ""}
         ${p.ficha.medidas || CAIMENTO[p.peca] ? `<details><summary>Medidas e caimento</summary>${CAIMENTO[p.peca] ? `<p class="note"><b>Caimento:</b> ${esc(CAIMENTO[p.peca])}</p>` : ""}${p.ficha.medidas ? `<p class="note">${esc(p.ficha.medidas)}</p>` : ""}</details>` : ""}
         ${p.ficha.cuidados ? `<details><summary>Cuidados</summary><p class="note">${esc(p.ficha.cuidados)}</p></details>` : ""}
-        <details><summary>Prazo e envio</summary><p class="note">Feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
+        <details><summary>Prazo e envio</summary><p class="note">Peça feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
       </div>
 
       ${DEVOCIONAL[p.arte] ? `
       <div class="pdp__devocao">
-        <div class="kicker kicker--gold">A devoção</div>
+        <div class="kicker kicker--gold">${esc(DEVOCIONAL[p.arte].rotulo || "A devoção")}</div>
         <h2>${esc(DEVOCIONAL[p.arte].santo)}</h2>
         <p>${esc(DEVOCIONAL[p.arte].historia)}</p>
         <p class="note">${DEVOCIONAL[p.arte].festa ? `Festa: ${esc(DEVOCIONAL[p.arte].festa)} · ` : ""}${esc(DEVOCIONAL[p.arte].estetica)}</p>
@@ -491,15 +511,16 @@ for (const p of cat.produtos) {
 // sitemap + robots (P1-7): só as páginas públicas. Gates, teste-carrinho e os
 // stubs de /loja-preview/ ficam de fora (todos já levam noindex no próprio HTML).
 const lastmod = cat.gerado_em.slice(0, 10);
-const publicas = [
-  "https://nimbuswear.com.br/",
+const daVitrine = [
   `${URL_BASE}/`,
   ...Object.keys(INSTITUCIONAIS).map((s) => `${URL_BASE}/${s}/`),
   ...cat.colecoes.map((c) => `${URL_BASE}/c/${c.id}/`),
   ...cat.produtos.map((p) => `${URL_BASE}/p/${p.slug}/`),
 ];
+// Só entra no sitemap o que o robots deixa indexar. Ver VITRINE_INDEXAVEL.
+const publicas = ["https://nimbuswear.com.br/", ...(VITRINE_INDEXAVEL ? daVitrine : [])];
 fs.writeFileSync(path.join(RAIZ, "public/sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
 fs.writeFileSync(path.join(RAIZ, "public/robots.txt"),
-  `User-agent: *\nAllow: /\nDisallow: /loja/gates/\nDisallow: /loja/teste-carrinho/\nDisallow: /loja-preview/\n\nSitemap: https://nimbuswear.com.br/sitemap.xml\n`);
+  `User-agent: *\nAllow: /\nDisallow: /loja/gates/\nDisallow: /loja/teste-carrinho/\nDisallow: /loja-preview/\n${VITRINE_INDEXAVEL ? "" : "Disallow: /loja/\n"}\nSitemap: https://nimbuswear.com.br/sitemap.xml\n`);
 console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/ · sitemap com ${publicas.length} URLs`);

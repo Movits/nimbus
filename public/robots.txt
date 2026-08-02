@@ -3,5 +3,6 @@ Allow: /
 Disallow: /loja/gates/
 Disallow: /loja/teste-carrinho/
 Disallow: /loja-preview/
+Disallow: /loja/
 
 Sitemap: https://nimbuswear.com.br/sitemap.xml

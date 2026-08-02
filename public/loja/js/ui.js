@@ -10,8 +10,11 @@
 // não aplica, ela segue sendo a verdade do que será cobrado.
 window.NIMBUS = window.NIMBUS || {};
 
+// Antes escrevia "R$ 1049,60" sem ponto de milhar e comia centavos redondos
+// ("R$ 1200", "R$ 0"). O frete grátis é a R$ 399,90 e a sacola passa dos mil
+// com facilidade, então o milhar aparece de verdade.
 NIMBUS.reais = function (v) {
-  return "R$ " + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",").replace(",00", "");
+  return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v || 0).replace(/\u00a0/g, " ");
 };
 
 NIMBUS.sacola = (function () {
@@ -60,12 +63,26 @@ NIMBUS.sacola = (function () {
     const s = le();
     if ((s.t || 0) >= c.t) return false;
     const antigos = s.itens;
+    // Casar por nome não funciona: o cart.tpl lê o nome de um <a> que embrulha
+    // também a variante, então o texto vem com quebra de linha no meio e cortado
+    // em 48 caracteres. Casa por pid mais as partes da variante (cor e tamanho),
+    // que é o mesmo desempate que o cart.tpl usa para remover a linha certa.
+    const pedaco = (v) => (v || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    const casa = (a, i) => {
+      if (!i.pid || !a.pid || String(a.pid) !== String(i.pid)) return false;
+      const partes = (i.partes || []).map(pedaco);
+      if (!partes.length) return true; // produto sem variante, o pid basta
+      return [a.cor, a.tamanho].map(pedaco).filter(Boolean).every((v) => partes.indexOf(v) >= 0);
+    };
     const itens = c.itens.filter((i) => i.qtd > 0).map((i) => {
-      const par = antigos.find((a) => a.nome === i.nome);
+      const par = antigos.find((a) => casa(a, i)) || (i.pid ? null : antigos.find((a) => a.nome === i.nome));
+      // o nome vem do <a> que embrulha a variante: fica só a primeira linha
+      const nome = String(i.nome || "").split("\n")[0].trim();
+      const partes = i.partes || [];
       return {
-        slug: par ? par.slug : null, nome: i.nome,
-        cor: par ? par.cor : "", tamanho: par ? par.tamanho : null,
-        peca: par ? par.peca : "", pid: par ? par.pid : null,
+        slug: par ? par.slug : null, nome: par ? par.nome : nome,
+        cor: par ? par.cor : (partes[0] || ""), tamanho: par ? par.tamanho : (partes[1] || null),
+        peca: par ? par.peca : "", pid: par ? par.pid : (i.pid || null),
         preco: i.qtd ? (i.sub || 0) / i.qtd : 0,
         img: par ? par.img : null, qtd: i.qtd,
       };
@@ -97,7 +114,7 @@ NIMBUS.sacola = (function () {
   const chaveAlvo = (i) => [i.pid || "", i.nome || "", i.cor || "", i.tamanho || ""].join("|");
   const alvoDe = (i, qtd) => ({ pid: i.pid || null, nome: i.nome, cor: i.cor || "", tamanho: i.tamanho || null, qtd });
 
-  const chave = (i) => [i.slug || i.nome, i.cor || "", i.tamanho || ""].join("|");
+  const chave = (i) => [i.pid || i.slug || i.nome, i.cor || "", i.tamanho || ""].join("|");
   let desfazer = null; // último estado antes de uma remoção, para o "Desfazer"
 
   return {

@@ -1,5 +1,5 @@
 {
- "gerado_em": "2026-08-01T14:21:42.289Z",
+ "gerado_em": "2026-08-02T01:01:13.075Z",
  "loja": {
   "base": "https://loja.nimbuswear.com.br",
   "frete_gratis_acima_de": 199
@@ -41,7 +41,7 @@
    "ficha": {
     "material": "100% algodão",
     "modelagem": "Bolsa reutilizável",
-    "gola": "Não se aplica",
+    "gola": "",
     "estampa": "",
     "cuidados": "Lavar à mão com água fria e sabão neutro. Secar à sombra. Não passar sobre a estampa.",
     "medidas": "41x35 cm; alças de 60 cm"
@@ -53,7 +53,7 @@
      "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8c6586eaa6a700371617840585774123-640-0.webp"
     ],
     "por_cor": {
-     "Crua": {
+     "Bege": {
       "frente": "https://dcdn-us.mitiendanube.com/stores/007/889/827/products/file_name-8c6586eaa6a700371617840585774123-640-0.webp",
       "costas": null
      }
@@ -62,15 +62,13 @@
     "caixa_max_css": 400
    },
    "opcoes": {
-    "tamanhos": [
-     "Único"
-    ],
+    "tamanhos": [],
     "cores": [
-     "Crua"
+     "Bege"
     ]
    },
    "variantes_por_cor": {
-    "Crua": [
+    "Bege": [
      {
       "variant_id": "1558907602",
       "sku": "Clv1RGbc",

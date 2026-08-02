@@ -689,3 +689,8 @@ button {
     transform: none;
   }
 }
+
+/* Os perfis no rodapé são o único ponto de conversão da landing enquanto a loja
+   não vende. Antes eram texto puro. */
+.footer__social a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer__social a:hover { color: var(--gold, #e9c46a); }

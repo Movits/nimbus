@@ -28,7 +28,8 @@
   "santo": "A assinatura da casa",
   "festa": null,
   "historia": "Nimbus é a nuvem que carrega a chuva e também o nome da auréola dos santos na arte sacra. O wildstyle, letra clássica do graffiti, é a caligrafia da rua. Juntos, são a assinatura da NIMBUS: fé que assina o próprio nome sem pedir licença.",
-  "estetica": "Lettering autoral da marca, coroado pela auréola do logotipo."
+  "estetica": "Lettering autoral da marca, coroado pela auréola do logotipo.",
+  "rotulo": "A assinatura"
  },
  "São Miguel Vintage": {
   "santo": "São Miguel Arcanjo",
@@ -57,7 +58,7 @@
  "Querubim Spray": {
   "santo": "Os querubins",
   "festa": null,
-  "historia": "Os querubins aparecem na Escritura guardando o jardim e cobrindo a arca da aliança com as asas. Não são os anjos de rosto doce da imaginação moderna: são presença, guarda e reverência diante do que é santo.",
+  "historia": "Os querubins aparecem na Escritura guardando o jardim e cobrindo a arca da aliança com as asas. A arte sacra do barroco os desenhou como crianças aladas, de rosto sereno, e é dessa tradição que esta estampa vem: doçura no rosto, guarda no ofício.",
   "estetica": "O spray traz essa guarda antiga para a parede da cidade, com a energia de quem pinta rápido e sem pedir licença."
  },
  "Espírito Santo Spray": {
@@ -88,42 +89,49 @@
   "santo": "Uma afirmação da Escritura",
   "festa": null,
   "historia": "A fidelidade de Deus atravessa a Bíblia inteira, de Deuteronômio a Paulo: ele permanece fiel mesmo quando falta força do outro lado. É a frase que se diz depois da tempestade, quando ainda não dá para explicar como se chegou aqui.",
-  "estetica": "Lettering direto, sem ornamento. A frase não precisa de ajuda."
+  "estetica": "Lettering direto, sem ornamento. A frase não precisa de ajuda.",
+  "rotulo": "A assinatura"
  },
  "Fé Acima de Tudo": {
   "santo": "O lema da casa",
   "festa": null,
   "historia": "Acima de tudo é a maneira NIMBUS de dizer o que vem primeiro. Não é slogan de camiseta: é a ordem das coisas, escrita para ser lembrada no dia em que tudo o mais quiser passar na frente.",
-  "estetica": "O lema da marca em tipografia de rua, coroado pela auréola do logotipo."
+  "estetica": "O lema da marca em tipografia de rua, coroado pela auréola do logotipo.",
+  "rotulo": "A assinatura"
  },
  "Fé Wildstyle": {
   "santo": "O lema da casa",
   "festa": null,
   "historia": "Fé escrita na letra mais difícil do graffiti. O wildstyle exige tempo para ser lido, e quem lê descobre que valeu: é a devoção que não se anuncia de longe, mas está inteira ali.",
-  "estetica": "Lettering wildstyle autoral, com contorno, spray e a auréola da casa."
+  "estetica": "Lettering wildstyle autoral, com contorno, spray e a auréola da casa.",
+  "rotulo": "A assinatura"
  },
  "Acima de Tudo Grafite": {
   "santo": "O lema da casa",
   "festa": null,
   "historia": "Acima de tudo é a maneira NIMBUS de dizer o que vem primeiro. Escrito em grafite, o lema assume o lugar onde a cidade escreve o que importa: a parede.",
-  "estetica": "Grafite clássico, contorno fechado e a auréola no lugar do acento."
+  "estetica": "Grafite clássico, contorno fechado e a auréola no lugar do acento.",
+  "rotulo": "A assinatura"
  },
  "Acima de Tudo Gótico": {
   "santo": "O lema da casa",
   "festa": null,
   "historia": "Acima de tudo é a maneira NIMBUS de dizer o que vem primeiro. Na letra gótica, o lema encontra a tipografia dos manuscritos de mosteiro, feita para durar séculos.",
-  "estetica": "Blackletter, a letra das catedrais e também a das ruas, com o peso de quem não tem pressa."
+  "estetica": "Blackletter, a letra das catedrais e também a das ruas, com o peso de quem não tem pressa.",
+  "rotulo": "A assinatura"
  },
  "Brasão NIMBUS": {
   "santo": "A assinatura da casa",
   "festa": null,
   "historia": "Um brasão é o que uma casa mostra quando precisa dizer quem é sem falar. O da NIMBUS junta o que a marca acredita: a nuvem, a auréola e o nome, no lugar onde antes iam as armas de família.",
-  "estetica": "Composição heráldica com a nuvem e a auréola do logotipo, em ouro sobre navy."
+  "estetica": "Composição heráldica com a nuvem e a auréola do logotipo, em ouro sobre navy.",
+  "rotulo": "A assinatura"
  },
  "Monograma NIMBUS": {
   "santo": "A assinatura da casa",
   "festa": null,
   "historia": "O monograma é a assinatura reduzida ao essencial. Como os monogramas de Cristo que a Igreja usa há dois mil anos, ele diz tudo com poucas letras, para quem sabe ler.",
-  "estetica": "As iniciais da casa em construção geométrica limpa, com a auréola integrada ao traço."
+  "estetica": "As iniciais da casa em construção geométrica limpa, com a auréola integrada ao traço.",
+  "rotulo": "A assinatura"
  }
 }

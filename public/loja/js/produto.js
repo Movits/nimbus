@@ -64,6 +64,8 @@
     tamanho = t.dataset.tamanho;
     tamanhos.forEach((x) => x.setAttribute("aria-pressed", String(x === t)));
     if (avisaTamanho) avisaTamanho.classList.remove("on");
+    const grupoOk = document.querySelector(".tamanhos");
+    if (grupoOk) grupoOk.removeAttribute("data-erro");
     atualiza();
   }));
 
@@ -82,9 +84,8 @@
 
   // --- envio sem sair da página -------------------------------------------
   const FRETE_GRATIS = (window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.META) || 399.9;
-  const reais = (window.NIMBUS && NIMBUS.reais) || function (v) {
-    return "R$ " + (Math.round(v * 100) / 100).toFixed(2).replace(".", ",").replace(",00", "");
-  };
+  const reais = (window.NIMBUS && NIMBUS.reais) ||
+    ((v) => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v || 0).replace(/\u00a0/g, " "));
   let aviso = null;
   let avisoTimer = 0;
   function mostraAviso(nome) {
@@ -132,6 +133,9 @@
     if (!tamanho && p.opcoes.tamanhos.length > 1) {
       ev.preventDefault();
       if (avisaTamanho) avisaTamanho.classList.add("on");
+      // o grupo inteiro ganha estado de erro, não só o texto solto abaixo
+      const grupo = document.querySelector(".tamanhos");
+      if (grupo) grupo.setAttribute("data-erro", "");
       return;
     }
     ev.preventDefault();

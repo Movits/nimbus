@@ -18,6 +18,11 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// Campos de planilha vêm com "Não se aplica" quando a peça não tem aquele
+// atributo (a Ecobag não tem gola). Isso é marcador de tabela, não copy.
+const MARCADORES_FICHA = /^\s*(n[aã]o se aplica|n\/a|-|—)\s*\.?\s*$/i;
+const limpaFicha = (v) => (MARCADORES_FICHA.test(String(v || "")) ? "" : v);
+
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const IMPL = path.join(RAIZ, "nuvemshop/auditoria/2026-07-21/implementacao");
 const SAIDA = path.join(RAIZ, "public/loja/catalogo.json");
@@ -116,9 +121,14 @@ for (const pid of ENTRAM) {
 
   const v0 = vs[0];
   const ehEcobag = v0.garment === "Ecobag";
-  // Ecobag quebra o esquema: a única linha tem size="Bege" e color=""
-  const cores = ehEcobag ? ["Crua"] : [...new Set(vs.map((v) => v.color).filter(Boolean))];
-  const tamanhos = ehEcobag ? ["Único"]
+  // A Ecobag tem UM eixo só na loja, chamado Cor, com o valor "Bege". O CSV
+  // registra isso como size="Bege" e color="". Antes eu sintetizava "Único" e
+  // "Crua", rótulos que não existem em lugar nenhum: o POST mandava dois eixos
+  // para um produto de um eixo e o item NÃO ENTRAVA no carrinho, sem erro
+  // nenhum na tela (conferido no carrinho real em 01/08/2026). Era o único dos
+  // 44 quebrado, e justamente o brinde do frete grátis.
+  const cores = ehEcobag ? ["Bege"] : [...new Set(vs.map((v) => v.color).filter(Boolean))];
+  const tamanhos = ehEcobag ? []   // um eixo só: o de Cor
     : [...new Set(vs.map((v) => v.size).filter(Boolean))].sort((a, b) => ORDEM_TAM.indexOf(a) - ORDEM_TAM.indexOf(b));
 
   // imagens: só família file_name-* (a -vitrine-nimbus- é o lote reprovado)
@@ -176,7 +186,7 @@ for (const pid of ENTRAM) {
     meta_title: c.meta_title,
     meta_description: c.meta_description,
     ficha: {
-      material: t.material || "", modelagem: t.fit || "", gola: t.collar || "",
+      material: limpaFicha(t.material) || "", modelagem: limpaFicha(t.fit) || "", gola: limpaFicha(t.collar) || "",
       estampa: semMarcador(t.print), cuidados: semMarcador(t.care), medidas: semMarcador(t.measurements),
     },
     imagens: { capa, hover, galeria: fotos, por_cor: porCor, fonte_px: 500, caixa_max_css: 400 },
