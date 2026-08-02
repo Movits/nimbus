@@ -121,9 +121,14 @@ for (const pid of ENTRAM) {
 
   const v0 = vs[0];
   const ehEcobag = v0.garment === "Ecobag";
-  // Ecobag quebra o esquema: a única linha tem size="Bege" e color=""
-  const cores = ehEcobag ? ["Crua"] : [...new Set(vs.map((v) => v.color).filter(Boolean))];
-  const tamanhos = ehEcobag ? ["Único"]
+  // A Ecobag tem UM eixo só na loja, chamado Cor, com o valor "Bege". O CSV
+  // registra isso como size="Bege" e color="". Antes eu sintetizava "Único" e
+  // "Crua", rótulos que não existem em lugar nenhum: o POST mandava dois eixos
+  // para um produto de um eixo e o item NÃO ENTRAVA no carrinho, sem erro
+  // nenhum na tela (conferido no carrinho real em 01/08/2026). Era o único dos
+  // 44 quebrado, e justamente o brinde do frete grátis.
+  const cores = ehEcobag ? ["Bege"] : [...new Set(vs.map((v) => v.color).filter(Boolean))];
+  const tamanhos = ehEcobag ? []   // um eixo só: o de Cor
     : [...new Set(vs.map((v) => v.size).filter(Boolean))].sort((a, b) => ORDEM_TAM.indexOf(a) - ORDEM_TAM.indexOf(b));
 
   // imagens: só família file_name-* (a -vitrine-nimbus- é o lote reprovado)

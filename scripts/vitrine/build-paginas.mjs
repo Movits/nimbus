@@ -296,26 +296,34 @@ ${header("pdp")}
       <div class="pdp__preco">${esc(p.preco_formatado)}</div>
       <p class="pdp__resumo note" style="font-size:0.95rem">${esc(p.resumo)}</p>
 
-      ${p.opcoes.cores.length > 1 || p.opcoes.cores[0] !== "Crua" ? `
+      ${p.opcoes.cores.length ? `
       <div class="opcao"><div class="opcao__rotulo">Cor<span class="opcao__valor" data-cor-nome>${esc(p.opcoes.cores[0])}</span></div>
         <div class="swatches">
           ${p.opcoes.cores.map((c, i) => `<button class="swatch" data-cor="${esc(c)}" aria-pressed="${i === 0}" aria-label="${esc(c)}" title="${esc(c)}" style="background:${CORES_HEX[c] || "#ccc"}"></button>`).join("")}
         </div>
       </div>` : ""}
 
+      ${p.opcoes.tamanhos.length ? `
       <div class="opcao"><div class="opcao__rotulo">Tamanho</div>
         <div class="tamanhos">
           ${p.opcoes.tamanhos.map((t) => `<button class="tamanho" data-tamanho="${esc(t)}" aria-pressed="false">${esc(t)}</button>`).join("")}
         </div>
-      </div>
+      </div>` : ""}
 
       <!-- mesmo POST do formulário oficial da loja (fluxo do dono, 30/07):
            adiciona à sacola sem sair da vitrine; o handoff acontece na Sacola.
            Sem JS, o POST abre o carrinho da loja em aba nova, já com o item. -->
       <form class="pdp__form" method="post" action="${esc(utm("https://loja.nimbuswear.com.br/comprar/", "pdp", p.slug))}" target="_blank" data-sacola-form>
         <input type="hidden" name="add_to_cart" value="${esc(p.id)}">
-        <input type="hidden" name="variation[0]" value="${esc(p.opcoes.tamanhos[0])}" data-var-tamanho>
-        <input type="hidden" name="variation[1]" value="${esc(p.opcoes.cores[0])}" data-var-cor>
+        ${/* Um campo por EIXO QUE EXISTE, na ordem tamanho, cor. A Ecobag tem
+             um eixo só e recebia dois: o item não entrava no carrinho e a loja
+             não dizia nada. Ver build-catalogo.mjs. */""}
+        ${(() => {
+          const eixos = [];
+          if (p.opcoes.tamanhos.length) eixos.push([esc(p.opcoes.tamanhos[0]), "data-var-tamanho"]);
+          if (p.opcoes.cores.length) eixos.push([esc(p.opcoes.cores[0]), "data-var-cor"]);
+          return eixos.map(([v, attr], i) => `<input type="hidden" name="variation[${i}]" value="${v}" ${attr}>`).join("\n        ");
+        })()}
         <input type="hidden" name="quantity" value="1">
         <button type="submit" class="btn btn--primary pdp__comprar">Adicionar à sacola</button>
       </form>

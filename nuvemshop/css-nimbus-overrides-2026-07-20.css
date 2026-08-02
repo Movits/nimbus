@@ -76,7 +76,7 @@ html body footer.js-footer > .row {
 
 html body footer.js-footer > .row::before {
   display: block !important;
-  content: "FÉ COM PROPÓSITO. DESIGN COM PRESENÇA.\A 10% do lucro é destinado ao projeto social escolhido por você." !important;
+  content: "FÉ COM PROPÓSITO. DESIGN COM PRESENÇA. 10% do lucro é destinado ao projeto social escolhido por você." !important;
   grid-column: 1 !important;
   grid-row: 1 !important;
   width: 100% !important;
