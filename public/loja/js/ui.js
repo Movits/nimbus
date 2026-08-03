@@ -400,8 +400,10 @@ document.addEventListener("visibilitychange", () => {
   if (document.visibilityState === "visible") NIMBUS.sacola.sincroniza();
 });
 
-// Sacola do header abre a gaveta; sem JS o link segue direto para a loja.
-document.querySelectorAll(".header__cta").forEach((cta) => {
+// Sacola do header E do rodapé abrem a gaveta (P0-1 passo 4, conselho r4:
+// o link do rodapé mandava direto para a loja e subregistrava begin_checkout).
+// Sem JS, o href segue intacto direto para a loja.
+document.querySelectorAll("[data-abre-sacola]").forEach((cta) => {
   cta.addEventListener("click", (ev) => { ev.preventDefault(); NIMBUS.gaveta.abre(); });
 });
 
