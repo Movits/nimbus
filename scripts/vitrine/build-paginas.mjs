@@ -434,8 +434,11 @@ const INSTITUCIONAIS = {
     <p>Abaixo de R$399,90, o valor do frete aparece na sacola assim que você informa o seu CEP, antes do pagamento.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
+    <h2>Quem responde pelos seus dados</h2>
+    <p>O controlador dos dados tratados neste site é a NIMBUS (CNPJ 53.977.834/0001-18). Qualquer pedido sobre os seus dados chega pelo e-mail do fim desta página.</p>
     <h2>O que coletamos aqui na vitrine</h2>
-    <p>A vitrine guarda no seu navegador apenas o contador local da sacola (para mostrar quantos itens você adicionou) e o cache das páginas, que deixa as visitas seguintes mais rápidas. Nada disso sai do seu aparelho.</p>
+    <p>A sacola vive no seu navegador: guardamos ali os itens que você adicionou e o cache das páginas, que deixa as visitas seguintes mais rápidas.</p>
+    <p>Para a sacola da vitrine e o carrinho da loja mostrarem a mesma coisa, gravamos os cookies <b>nimbus_sacola_alvo</b> e <b>nimbus_sacola_loja</b> no domínio nimbuswear.com.br. Eles guardam só o retrato da sacola (itens, quantidades e a hora da última mudança), expiram em 48 horas e não identificam você.</p>
     <p>Usamos estatísticas de navegação do Google Analytics para entender quais páginas funcionam: números agregados, sem venda de dados e sem anúncio personalizado da nossa parte.</p>
     <h2>O que fica com a loja</h2>
     <p>Pagamento, endereço e dados do pedido são tratados no ambiente da loja (Nuvemshop), que tem política de privacidade e segurança próprias. A NIMBUS não armazena dados de cartão.</p>
