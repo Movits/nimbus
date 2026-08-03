@@ -12,7 +12,13 @@ const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 // de 10 min do GitHub Pages e o cache do navegador (dono viu CSS velho, 31/07).
 const ATIVOS = ["css/tokens.css", "css/loja.css", "js/ui.js", "js/vitrine.js", "js/produto.js"]
   .map((f) => path.resolve(import.meta.dirname, "..", "..", "public/loja", f));
-const V = crypto.createHash("md5").update(Buffer.concat(ATIVOS.map((f) => fs.readFileSync(f)))).digest("hex").slice(0, 8);
+// Hash sobre o conteúdo com fim de linha normalizado: o checkout Windows
+// materializa CRLF (autocrlf) e o do CI materializa LF; hashear os bytes crus
+// dava um ?v= diferente por plataforma e derrubava o portão de
+// reprodutibilidade do deploy.
+const V = crypto.createHash("md5")
+  .update(ATIVOS.map((f) => fs.readFileSync(f, "utf8").replace(/\r\n/g, "\n")).join("\n"), "utf8")
+  .digest("hex").slice(0, 8);
 const BASE = path.join(RAIZ, "public/loja");
 const cat = JSON.parse(fs.readFileSync(path.join(BASE, "catalogo.json"), "utf-8"));
 

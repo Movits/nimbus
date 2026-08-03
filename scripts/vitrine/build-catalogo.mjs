@@ -201,7 +201,10 @@ for (const pid of ENTRAM) {
 
 const catalogo = {
   gerado_em: new Date().toISOString(),
-  loja: { base: "https://loja.nimbuswear.com.br", frete_gratis_acima_de: 199 },
+  // 399.90 é a regra vigente desde 31/07 (teto com Ecobag de brinde); o 199
+  // antigo ficou fossilizado aqui até 03/08 sem consumidor no código, mas
+  // número errado em JSON público é convite a virar fonte.
+  loja: { base: "https://loja.nimbuswear.com.br", frete_gratis_acima_de: 399.9 },
   colecoes: [
     { id: "street", rotulo: "STREET", resumo: "Grafite, spray e stencil. Fé com energia de rua." },
     { id: "reliquia", rotulo: "RELÍQUIA", resumo: "Band-tee devocional: halftone, barroco e ouro." },
