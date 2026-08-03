@@ -607,13 +607,23 @@ invalidada que estava sem aviso nenhum. `docs/` passou a ser roteado por tarefa.
 
 ## Suspeitas abertas
 
+- **CHECKOUT SEM O CAMPO DOS 10% (03/08, conferido a olho no checkout real).**
+  A primeira tela pede só e-mail e CEP; não existe campo de escolha do projeto
+  social nem observações no carrinho. As páginas prometem uma escolha que o
+  cliente não tem onde fazer. Conserto é configuração de painel/checkout
+  (proibido sem o dono): entra na sessão de painel do P0-2 com destaque.
 - **352727892 (Aparecida Spray | Moletom Canguru) — CONFIRMADA em 03/08, pior
   que a suspeita.** Conferido a olho nas fotos servidas pela CDN
   (`/produtos/aparecida-spray1/`): a capa é o moletom canguru correto, mas as
   OUTRAS TRÊS fotos da galeria são camiseta oversized (duas pretas, uma
   off-white) — peça errada, provavelmente herdadas do irmão 352728019
-  (Aparecida Spray | Camiseta Oversized). Correção da galeria aguarda
-  autorização do dono (mexe em produto publicado).
+  (Aparecida Spray | Camiseta Oversized). O dono autorizou em 03/08 remover a
+  foto duplicada (mantendo o resto, já que a Oversized existe como produto
+  próprio com Preta e Off-White); a remoção esbarrou no admin congelando sob
+  automação e fica para uma sessão de painel estável. Agravante descoberto no
+  admin: o TÍTULO e a DESCRIÇÃO do produto dizem "Blusão moletom sem capuz",
+  mas a capa é um canguru com capuz; a reclassificação de 26/07 nunca chegou ao
+  texto do produto (P1-7).
 - ~~O medidor de eixo automático (`scripts/geometry/eixo-costas.mjs`)~~
   **RESOLVIDO em 03/08: aposentado.** Zero scripts o importavam; ganhou banner
   de aposentado no cabeçalho. O eixo segue medido por leitura visual dos
