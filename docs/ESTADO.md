@@ -333,6 +333,50 @@ minificador comeu o escape e **gravou o caractere**. É a prova de que o
 Falta um clique: o do dono, ou o do Cowork com permissão para aquele domínio.
 Roteiro em `nuvemshop/cowork-publicar-css.md`.
 
+### A sessão que quase se perdeu, e os portões no Windows (03/08)
+
+**O PR #52 estava em RASCUNHO e nunca tinha sido mesclado.** O handoff da sessão
+de 03/08 prometia `docs/HANDOFF-SESSAO.md` e `nuvemshop/cowork-publicar-css.md`
+"na main", mas eles só existiam no branch do PR. A sessão local de 03/08 achou o
+PR, revisou o diff inteiro e mesclou. Lição repetida do projeto: **push sem merge
+não entrega**; conferir o estado do PR antes de encerrar a sessão.
+
+**Os sete portões passam no Windows** (a máquina do dono), depois de dois
+consertos de portabilidade que não mudam critério nenhum:
+
+- `verifica-css-loja.mjs` importava o Playwright por caminho absoluto de Linux.
+  Agora tenta o pacote local (`playwright` virou devDependency) e cai para o
+  caminho da nuvem; o `executablePath` só é forçado se `/opt/pw-browsers`
+  existir. Mesmo veredito da nuvem: 14 escapes, zero divergem.
+- `link-check-docs.mjs` mandava o corpo do curl para `/dev/null`, que não existe
+  no Windows: o curl saía com erro 23 e **todo endereço parecia morto** (101
+  falsos mortos numa rodada). Agora usa o `devNull` do Node. Rodada limpa: 94
+  OK, 6 exceções com motivo, e **2 mortos de verdade** que o portão pegou: o
+  `dashboard.nuvemshop.com.br` sobrevivendo no roteiro FTP do `nimbus-assets`
+  (corrigido; roteiro marcado `status: concluido`, missão cumprida em 03/08) e o
+  endpoint MCP da Nuvemshop numa página histórica do brain (exceção cadastrada:
+  não responde a GET sem sessão OAuth, mas foi usado de verdade em 24/07).
+
+**Branch `fix/sacola-sync-preserva-pid`: SUPERADO, não mesclar.** Ele casava o
+espelho com a loja por nome normalizado; a main casa por **pid + partes da
+variante** (o mesmo desempate do `cart.tpl`) desde o conserto de 01/08, e foi
+com o código da main que o teste 4 passou em 03/08. Proposto ao dono: apagar o
+branch. O PR #1 ("Varredura das receitas"), também antigo, segue aberto — a
+varredura já está registrada como feita em 28/07.
+
+**`nimbusloja.js` saiu do limbo**: a única cópia do loader do ticket de onload
+(retirado em 29/07) estava untracked na raiz do checkout do dono. Versionado em
+`nuvemshop/nimbusloja.js` com anotação de status: o alvo
+`public/loja/nimbus-loja.css` não existe DE PROPÓSITO (o 404 é a prova cadastrada
+no allowlist) e criá-lo sem decisão explícita ativaria o override em silêncio.
+
+**Máquina do dono sincronizada e ligada aos três repos**: o checkout estava 112
+commits atrás (o brain, 131, com curadoria de 23-24/07 nunca commitada — 
+reintegrada e empurrada, ver o log do brain). `C:\Users\rober\nimbus-brain` é
+uma **junction** para o vault aninhado `Nimbus\Nimbus brain` (o Obsidian do dono
+mora lá); não clonar por cima. `setup-assets` mesclou as 16 artes NUVEM 4K de
+02/08 na árvore local.
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito

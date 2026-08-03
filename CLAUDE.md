@@ -20,11 +20,12 @@ Todo documento tem `status:` no topo; sem status, trate como suspeito.
 A versão anterior deste arquivo, com o histórico longo, está em
 `docs/historico/CLAUDE-2026-07-25.md`.
 
-## Os dois repositórios
+## Os três repositórios
 
 ```
 nimbus/          PÚBLICO   código, documentação, medições, receitas
 nimbus-assets/   PRIVADO   artes, blanks e capas
+nimbus-brain/    PRIVADO   segundo cérebro do negócio
 ```
 
 Clone lado a lado. Detalhe em [`docs/REPOSITORIOS.md`](docs/REPOSITORIOS.md).

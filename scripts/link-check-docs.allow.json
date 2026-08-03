@@ -24,6 +24,10 @@
     {
       "url": "https://loja.nimbuswear.com.br/produtos/sao-miguel-vitorioso1/",
       "motivo": "Documento histórico (prompt de 21/07). O slug foi inventado a partir do nome do produto; o real é arcanjo-spray1. Fica registrado como erro de época, não corrigido."
+    },
+    {
+      "url": "https://admin-mcp.nuvemshop.com.br/mcp",
+      "motivo": "Endpoint MCP do conector oficial da Nuvemshop, usado de verdade na publicação de 24/07 (OAuth PKCE). Não responde a GET sem sessão: derruba a conexão em vez de dar 401. Citado só na página histórica geracao-capas-lifestyle do brain (status: invalidado)."
     }
   ]
 }
