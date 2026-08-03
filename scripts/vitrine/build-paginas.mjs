@@ -20,16 +20,17 @@ const URL_BASE = "https://nimbuswear.com.br/loja";
 const PREFIXO = "/loja";
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-// Todo link para a loja carrega UTM (condição do conselho, 29/07), preservando
-// o que a URL já tiver (?variant= etc.). medium = de onde partiu o clique.
-const utm = (url, medium, campanha = "vitrine") => {
+// Todo link interno para a loja leva ref=vitrine, parâmetro NEUTRO para o GA4
+// (P0-1 do conselho r4, 03/08). Era utm_* desde 29/07; com a tag entrando no
+// domínio da loja, utm interno reatribuiria a "vitrine" cada compra vinda de
+// campanha, no exato clique do checkout. utm_* fica reservado a campanha
+// externa. Preserva o que a URL já tiver (?variant= etc.).
+const refInterno = (url) => {
   const u = new URL(url);
-  u.searchParams.set("utm_source", "vitrine");
-  u.searchParams.set("utm_medium", medium);
-  u.searchParams.set("utm_campaign", campanha);
+  u.searchParams.set("ref", "vitrine");
   return u.toString();
 };
-const SACOLA = (medium) => utm("https://loja.nimbuswear.com.br/comprar/", medium);
+const SACOLA = refInterno("https://loja.nimbuswear.com.br/comprar/");
 
 /* A vitrine fica FORA do índice do Google enquanto a loja não vende: o dono só
    abre quando tiver fotos com modelo. Esta chave governa as duas pontas ao mesmo
@@ -79,8 +80,7 @@ const ga4 = () => GA4_ID ? `
 // laje de parede a 1920). Cada valor mira o assunto da respectiva arte.
 const FOCO_COLECAO = { street: "50% 62%", reliquia: "50% 40%", nuvem: "50% 70%" };
 
-// header/footer são funções do medium para o UTM sair certo por tipo de página
-const header = (medium) => `
+const header = () => `
 <div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis e Ecobag de brinde a partir de R$399,90</div>
 <header class="header">
   <a class="header__logo" href="${PREFIXO}/"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"></a>
@@ -91,18 +91,18 @@ const header = (medium) => `
   </nav>
   <div class="header__tools">
     <a href="https://nimbuswear.com.br/" data-manifesto>Manifesto</a>
-    <a class="header__cta" href="${esc(SACOLA(medium))}">Sacola<span class="sacola-n" data-sacola-n hidden></span></a>
+    <a class="header__cta" href="${esc(SACOLA)}">Sacola<span class="sacola-n" data-sacola-n hidden></span></a>
   </div>
 </header>`;
 
 // réplica do rodapé da loja publicada: corpo claro com borda dourada, colunas
 // com título serif, faixa legal navy. Tagline idêntica à da loja.
-const footer = (medium) => `
+const footer = () => `
 <footer class="footer">
   <div class="footer__inner">
     <div class="footer__grid">
       <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
-      <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA(medium))}">Sacola</a></div>
+      <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA)}">Sacola</a></div>
       <div><h4>Nimbus</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
       <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
     </div>
@@ -127,7 +127,7 @@ const card = (p) => `
 
 /* -------------------------------------------------------------------- home */
 const home = () => `${head("NIMBUS | Streetwear católico premium", "Fé reverente, design autoral e acabamento premium. STREET, RELÍQUIA e NUVEM. 10% do lucro vai para o projeto social que você escolher.", { canonical: `${URL_BASE}/` })}
-${header("home")}
+${header()}
 <main>
   <section class="hero">
     <img class="hero__bg" src="${PREFIXO}/media/hero-editorial-1600.webp" alt="" fetchpriority="high">
@@ -189,7 +189,7 @@ ${header("home")}
     </ol>
   </div></section>
 </main>
-${footer("home")}
+${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 
@@ -198,7 +198,7 @@ const colecao = (c) => {
   const produtos = cat.produtos.filter((p) => p.colecao === c.id);
   const pecas = [...new Set(produtos.map((p) => p.peca))];
   return `${head(`${c.rotulo} | NIMBUS`, c.resumo, { canonical: `${URL_BASE}/c/${c.id}/` })}
-${header("colecao")}
+${header()}
 <main>
   <section class="cabecalho-colecao" data-colecao="${c.id}">
     <img class="cabecalho-colecao__bg" style="object-position:${FOCO_COLECAO[c.id] || "50% 50%"}" src="${PREFIXO}/media/cenario-${c.id}-1600.webp" alt="">
@@ -221,7 +221,7 @@ ${header("colecao")}
     <div class="grade" data-grade>${produtos.map(card).join("")}</div>
   </div></section>
 </main>
-${footer("colecao")}
+${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 <script src="${PREFIXO}/js/vitrine.js?v=${V}" defer></script>
 </body></html>`;
@@ -256,9 +256,9 @@ const relacionados = (p) => {
 };
 
 const produto = (p) => {
-  const urlLoja = utm(p.url_loja, "pdp", p.slug);
+  const urlLoja = refInterno(p.url_loja);
   const dados = {
-    url_loja: urlLoja, url_carrinho: SACOLA("pdp"), imagens: p.imagens,
+    url_loja: urlLoja, url_carrinho: SACOLA, imagens: p.imagens,
     opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
     slug: p.slug, nome: p.nome, peca: p.peca, id: p.id,
   };
@@ -274,7 +274,7 @@ const produto = (p) => {
   });
   const CORES_HEX = { Preta: "#16181d", Branca: "#f4f4f2", "Off-White": "#ece5d8", Bege: "#d9c9a8", Crua: "#e6dcc4" };
   return `${head(p.meta_title, p.meta_description, { ogImage: p.imagens.capa, canonical: `${URL_BASE}/p/${p.slug}/`, jsonld })}
-${header("pdp")}
+${header()}
 <main>
   <nav class="migalhas"><div class="secao__inner"><a href="${PREFIXO}/">Início</a> · <a href="${PREFIXO}/c/${p.colecao}/">${esc(p.colecao_rotulo)}</a> · <span>${esc(p.arte)}</span></div></nav>
   <section class="secao" style="padding-top:1em"><div class="secao__inner pdp">
@@ -313,7 +313,7 @@ ${header("pdp")}
       <!-- mesmo POST do formulário oficial da loja (fluxo do dono, 30/07):
            adiciona à sacola sem sair da vitrine; o handoff acontece na Sacola.
            Sem JS, o POST abre o carrinho da loja em aba nova, já com o item. -->
-      <form class="pdp__form" method="post" action="${esc(utm("https://loja.nimbuswear.com.br/comprar/", "pdp", p.slug))}" target="_blank" data-sacola-form>
+      <form class="pdp__form" method="post" action="${esc(SACOLA)}" target="_blank" data-sacola-form>
         <input type="hidden" name="add_to_cart" value="${esc(p.id)}">
         ${/* Um campo por EIXO QUE EXISTE, na ordem tamanho, cor. A Ecobag tem
              um eixo só e recebia dois: o item não entrava no carrinho e a loja
@@ -352,7 +352,7 @@ ${header("pdp")}
   </div></section>
   ${relacionados(p)}
 </main>
-${footer("pdp")}
+${footer()}
 <script type="application/json" id="produto-dados">${JSON.stringify(dados)}</script>
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 <script src="${PREFIXO}/js/produto.js?v=${V}" defer></script>
@@ -365,14 +365,14 @@ ${footer("pdp")}
 // divulgação); troca de tamanho é responsabilidade da NIMBUS, tratada caso a
 // caso; CNPJ segue pendente (bloqueador de lançamento registrado no ESTADO).
 const institucional = (slug, titulo, descricao, corpo) => `${head(`${titulo} | NIMBUS`, descricao, { canonical: `${URL_BASE}/${slug}/` })}
-${header("institucional")}
+${header()}
 <main>
   <section class="secao"><div class="secao__inner institucional">
     <h1 class="display display--md">${esc(titulo)}</h1>
     ${corpo}
   </div></section>
 </main>
-${footer("institucional")}
+${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 
@@ -440,7 +440,7 @@ const INSTITUCIONAIS = {
 const gates = () => {
   const g = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gates.json"), "utf-8"));
   return `${head("Gates | NIMBUS (interno)", "Lote de imagens da rodada, para aprovação.")}
-${header("gates")}
+${header()}
 <main>
   <section class="secao"><div class="secao__inner">
     <div class="secao__head">
@@ -459,7 +459,7 @@ ${header("gates")}
     </div>
   </div></section>
 </main>
-${footer("gates")}
+${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 };

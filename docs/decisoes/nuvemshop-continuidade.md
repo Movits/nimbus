@@ -29,17 +29,21 @@ para sites e páginas externos", pelo campo "Leva a" na opção "URL".
 
 | Item atual | Novo destino |
 |---|---|
-| Início | `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=menu` |
-| Produtos | `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=menu#colecoes` |
-| STREET | `https://nimbuswear.com.br/loja/c/street/?utm_source=loja&utm_medium=menu` |
-| RELÍQUIA | `https://nimbuswear.com.br/loja/c/reliquia/?utm_source=loja&utm_medium=menu` |
-| NUVEM | `https://nimbuswear.com.br/loja/c/nuvem/?utm_source=loja&utm_medium=menu` |
+| Início | `https://nimbuswear.com.br/loja/?ref=loja` |
+| Produtos | `https://nimbuswear.com.br/loja/?ref=loja#colecoes` |
+| STREET | `https://nimbuswear.com.br/loja/c/street/?ref=loja` |
+| RELÍQUIA | `https://nimbuswear.com.br/loja/c/reliquia/?ref=loja` |
+| NUVEM | `https://nimbuswear.com.br/loja/c/nuvem/?ref=loja` |
 | Sobre | manter, ou apontar para `https://nimbuswear.com.br/` (manifesto) |
 | Projetos Sociais | manter interno (a página vive na loja) |
 | Contato | manter interno (Ajuda da vitrine aponta para cá) |
 
-O UTM `utm_source=loja` separa, no analytics, quem voltou da loja para a
-vitrine. Reordenar é arrastar e soltar; salvar no fim da página.
+O `ref=loja` separa, nos logs, quem voltou da loja para a vitrine. **Não usar
+utm_\* em link interno entre os dois domínios** (P0-1 do conselho r4, 03/08):
+com o GA4 ativo na loja, utm interno rouba a atribuição das campanhas. Os itens
+que hoje estiverem no painel com `utm_source=loja` devem ser trocados para
+`ref=loja` na próxima sessão de painel. Reordenar é arrastar e soltar; salvar
+no fim da página.
 
 **A confirmar no primeiro teste**: se o clique abre na mesma aba (provável no
 cabeçalho do Baires) ou em nova aba (no rodapé, o tema base usa nova aba para
@@ -48,7 +52,8 @@ URL externa). Testar com um item antes de trocar todos.
 ## Parte 2 · Rede de segurança persistente (recomendado, painel)
 
 - **Barra de anúncio** (Loja online > Layout > Editar layout > Cabeçalho):
-  aceita até 3 mensagens com texto e link; a própria doc recomenda UTM. Sugestão
+  aceita até 3 mensagens com texto e link; a doc da Nuvemshop recomenda UTM, mas
+  aqui vale a regra acima: link interno leva `ref=loja`, nunca utm_\*. Sugestão
   de mensagem: "Conheça as coleções na vitrine NIMBUS" com o link da vitrine.
 - **Banner rotativo da home** (Layout > Página inicial): aceita link no banner;
   um banner "Voltar à vitrine" cobre quem cair na home da loja pelo Google (a
@@ -96,12 +101,12 @@ landing.
   - **Logo** → no template do cabeçalho o logo é um `<a href="{{ store.url }}">`
     (tema clássico) ou está dentro de `{{ component('logos/logo', ...) }}` (tema
     novo). Trocar o destino por
-    `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=logo`. No
+    `https://nimbuswear.com.br/loja/?ref=loja`. No
     tema novo, envolver o logo com um `<a href="...">` próprio, porque `store.url`
     nem aparece ali.
   - **"Seguir comprando"** → em `snipplets/cart-totals.tpl` (e `cart-panel.tpl`),
     trocar `{{ store.products_url }}` por
-    `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=carrinho`;
+    `https://nimbuswear.com.br/loja/?ref=loja`;
     `templates/cart.tpl` inclui esses snipplets.
   - Renomear o rótulo "Carrinho" do botão para "Sacola" de forma definitiva
     também é template (o CSS da Parte 2b já faz a troca visual).
