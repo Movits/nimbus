@@ -500,10 +500,11 @@ Decisões do dia:
 
 ## Pendências do projeto
 
-0. **Avaliar a IzzyPrint**: produtos-teste na conta do dono, compra de
-   amostras, tabela de custos POD, integração Nuvemshop, área máxima de
-   estampa e white label. Se aprovada: refazer artes a 300 DPI, novos blanks
-   com o casting e integração.
+0. **Avaliar a IzzyPrint**: **amostras COMPRADAS pelo dono (informado em
+   03/08), aguardando chegada.** Quando chegarem: julgar qualidade, fechar
+   tabela de custos POD, integração Nuvemshop, área máxima de estampa e white
+   label. Se aprovada: refazer artes a 300 DPI, novos blanks com o casting e
+   integração.
 1. Reconstruir o catálogo com o compositor novo (aguarda a decisão de
    plataforma).
 2. Publicar, com autorização produto a produto.
@@ -532,8 +533,13 @@ invalidada que estava sem aviso nenhum. `docs/` passou a ser roteado por tarefa.
 
 ## Suspeitas abertas
 
-- A capa publicada do **352727892** pode estar com a peça errada: uma das duas
-  fotos no ar não mostra capuz, e o produto é Moletom Canguru. Confirmar na loja.
+- **352727892 (Aparecida Spray | Moletom Canguru) — CONFIRMADA em 03/08, pior
+  que a suspeita.** Conferido a olho nas fotos servidas pela CDN
+  (`/produtos/aparecida-spray1/`): a capa é o moletom canguru correto, mas as
+  OUTRAS TRÊS fotos da galeria são camiseta oversized (duas pretas, uma
+  off-white) — peça errada, provavelmente herdadas do irmão 352728019
+  (Aparecida Spray | Camiseta Oversized). Correção da galeria aguarda
+  autorização do dono (mexe em produto publicado).
 - ~~O medidor de eixo automático (`scripts/geometry/eixo-costas.mjs`)~~
   **RESOLVIDO em 03/08: aposentado.** Zero scripts o importavam; ganhou banner
   de aposentado no cabeçalho. O eixo segue medido por leitura visual dos
