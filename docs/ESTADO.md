@@ -607,11 +607,24 @@ invalidada que estava sem aviso nenhum. `docs/` passou a ser roteado por tarefa.
 
 ## Suspeitas abertas
 
-- **CHECKOUT SEM O CAMPO DOS 10% (03/08, conferido a olho no checkout real).**
-  A primeira tela pede só e-mail e CEP; não existe campo de escolha do projeto
-  social nem observações no carrinho. As páginas prometem uma escolha que o
-  cliente não tem onde fazer. Conserto é configuração de painel/checkout
-  (proibido sem o dono): entra na sessão de painel do P0-2 com destaque.
+- **Campo dos 10% no checkout: RESOLVIDO como falso alarme (03/08, à noite).**
+  A sessão tinha registrado "não existe campo" olhando só a 1ª tela do
+  checkout. Conferido depois nas Opções do checkout do painel: o campo
+  "Mensagem do cliente" EXISTE e está LIGADO, com o texto pedindo o projeto
+  social e, acima de R$399,90, a arte da Ecobag; ele aparece em etapa
+  posterior à que a sessão alcançou sem preencher dados. Nada a mudar no
+  painel; só a página Projetos Sociais da loja segue prometendo "campo com
+  três opções" (recolagem já no lote de painel do P0-2).
+- **cart.tpl com o lembrete do cupom ECOBAG: NO AR (03/08, à noite).** Upload
+  por FTP pela sessão salva do WinSCP (senha armazenada pelo dono; nenhuma
+  credencial manuseada), com backup do arquivo anterior antes da escrita e
+  re-download conferindo hash byte a byte. O `nimbus-aviso-ecobag` já aparece
+  no HTML servido do `/comprar/`.
+- **352727892 (Aparecida Spray | Moletom): FORA DO AR por ordem do dono
+  (03/08, à noite).** "Não quero esse tipo de inconsistência": visibilidade
+  Oculto salva no painel. O texto dizia "sem capuz" com capa de capuz e a
+  galeria misturava peças; volta ao ar quando for reconciliado (P1-7). O
+  produto não está na vitrine (Blusão fora dos 44), então nenhum portão muda.
 - **352727892 (Aparecida Spray | Moletom Canguru) — CONFIRMADA em 03/08, pior
   que a suspeita.** Conferido a olho nas fotos servidas pela CDN
   (`/produtos/aparecida-spray1/`): a capa é o moletom canguru correto, mas as
