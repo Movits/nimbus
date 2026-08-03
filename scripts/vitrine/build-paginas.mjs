@@ -154,7 +154,7 @@ ${header()}
 
   <div class="trust"><div class="trust__inner">
     <span>Feita no Brasil, para você</span>
-    <span>Pagamento seguro: Pix, boleto e cartão em até 12x</span>
+    <span>Pagamento seguro: à vista no Pix e no boleto, ou cartão em até 12x com juros</span>
     <span>10% do lucro doado ao projeto que você escolher</span>
   </div></div>
 
@@ -193,7 +193,7 @@ ${header()}
       <div><div class="kicker">Do pedido à porta</div><h2 class="display display--md">Como a sua peça nasce</h2></div>
     </div>
     <ol class="passos">
-      <li class="reveal"><b>Você escolhe.</b><p>A arte, a peça, a cor e o tamanho, aqui na vitrine. O pagamento fecha na loja, com Pix, boleto ou cartão em até 12x.</p></li>
+      <li class="reveal"><b>Você escolhe.</b><p>A arte, a peça, a cor e o tamanho, aqui na vitrine. O pagamento fecha na loja: à vista no Pix ou no boleto, ou no cartão em até 12x com juros.</p></li>
       <li class="reveal"><b>Ela é feita no Brasil, para você.</b><p>Estampa posicionada com medida, não no olho, e acabamento premium, peça a peça.</p></li>
       <li class="reveal"><b>Chega com rastreio.</b><p>E 10% do lucro do pedido vai para o projeto social que você escolher no checkout, com repasse mensal e comprovação. <a href="${PREFIXO}/impacto/">Veja como funciona</a>.</p></li>
     </ol>
@@ -339,7 +339,7 @@ ${header()}
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho role="alert">Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece na sacola. Pix, boleto e cartão em até 12x.</span>
+        <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece na sacola. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
         <span class="note">Peça feita no Brasil, para você.</span>
       </div>
 

@@ -42,6 +42,14 @@ for (const arq of htmls) {
   if (/frete gr[aá]tis/i.test(html) && !html.includes("399"))
     erros.push(`${rel}: promete frete grátis sem a condição dos R$399,90`);
 
+  // Parcelamento honesto (P0-3 do conselho r4, 03/08): o gateway cobra juros
+  // da 2ª parcela em diante. "em até Nx" só passa qualificado com "com juros"
+  // na mesma frase, e parcela sem juros acima de 1x não passa nunca.
+  for (const m of html.matchAll(/em at[eé] \d+x(?! com juros)/gi))
+    erros.push(`${rel}: parcelamento sem qualificação: "${m[0]}" (falta "com juros")`);
+  if (/\b(?:[2-9]|1[0-8])x sem juros/i.test(html))
+    erros.push(`${rel}: promete parcela sem juros que o gateway não dá`);
+
   for (const re of OVERCLAIMS)
     if (re.test(html)) erros.push(`${rel}: overclaim "${html.match(re)[0]}"`);
 
