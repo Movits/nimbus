@@ -29,10 +29,18 @@
  *   node scripts/verifica-css-loja.mjs
  */
 
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
-import { chromium } from "/opt/node22/lib/node_modules/playwright/index.mjs";
+
+// O playwright local (node_modules) vale em qualquer máquina; o caminho
+// absoluto é o da sessão na nuvem, que não tem o pacote instalado no projeto.
+let chromium;
+try {
+  ({ chromium } = await import("playwright"));
+} catch {
+  ({ chromium } = await import("/opt/node22/lib/node_modules/playwright/index.mjs"));
+}
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "nuvemshop");
 const ARQUIVOS = /^css-nimbus-.*-2026-07-20\.css$/;
@@ -41,8 +49,9 @@ const ARQUIVOS = /^css-nimbus-.*-2026-07-20\.css$/;
  *  escape. Escape de 6 dígitos não tem espaço, então passa intacto. */
 const comoOPainelEntrega = (css) => css.replace(/\\([0-9A-Fa-f]{1,5}) /g, "\\$1");
 
+const chromiumDaNuvem = "/opt/pw-browsers/chromium";
 const navegador = await chromium.launch({
-  executablePath: "/opt/pw-browsers/chromium",
+  ...(existsSync(chromiumDaNuvem) ? { executablePath: chromiumDaNuvem } : {}),
   args: ["--no-sandbox"],
 });
 const pagina = await navegador.newPage();

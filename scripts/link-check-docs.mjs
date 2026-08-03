@@ -31,6 +31,7 @@
 
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
 import { execFileSync } from "node:child_process";
+import { devNull } from "node:os";
 import { fileURLToPath } from "node:url";
 import { dirname, join, relative, resolve } from "node:path";
 
@@ -106,7 +107,9 @@ for (const { arquivo, base } of arquivos) {
 /** Devolve o código HTTP, ou 0 quando não houve resposta nenhuma.
  *  Tenta HEAD e cai para GET: muito servidor recusa HEAD e responde 405. */
 function bate(url) {
-  const comum = ["-s", "-o", "/dev/null", "-L", "--max-time", "25", "-w", "%{http_code}",
+  // devNull, não "/dev/null": o curl nativo do Windows não sabe escrever lá e
+  // sai com erro 23, o que fazia TODO endereço parecer morto nesta máquina.
+  const comum = ["-s", "-o", devNull, "-L", "--max-time", "25", "-w", "%{http_code}",
     "-A", "Mozilla/5.0 (compatible; NimbusLinkCheck/1.0)"];
   for (const metodo of [["-I"], ["-X", "GET"]]) {
     try {
