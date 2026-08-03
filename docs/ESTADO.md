@@ -339,6 +339,19 @@ minificador comeu o escape e **gravou o caractere**. É a prova de que o
 Falta um clique: o do dono, ou o do Cowork com permissão para aquele domínio.
 Roteiro em `nuvemshop/cowork-publicar-css.md`.
 
+### O clique saiu: CSS PUBLICADO no painel (03/08, fim do dia)
+
+A sessão local publicou pelo Claude in Chrome, no navegador logado do dono e
+com a autorização dele, seguindo o roteiro: backup conferido por hash (o campo
+era byte-idêntico ao `backup-css-painel-2026-08-02.txt`; cópia de 03/08
+gravada), o arquivo canônico buscado do raw da main e validado por SHA-256
+dentro da própria página, colado no campo, **Testar CSS** e clique real em
+**Publicar alterações**. Prova de que salvou: recarregando o editor do zero, o
+CSS GRAVADO tem 50.736 caracteres, contém `\00000A10% do lucro` e **zero**
+`ਐ`. O que resta é o cache de página da plataforma drenar (em 30/07 levou
+horas); enquanto ele não drena, o HTML servido ainda mostra o caractere velho.
+Conferir depois: home, `/produtos/wildstyle/` e `/comprar/` com Ctrl+F5.
+
 ### A sessão que quase se perdeu, e os portões no Windows (03/08)
 
 **O PR #52 estava em RASCUNHO e nunca tinha sido mesclado.** O handoff da sessão
@@ -413,11 +426,16 @@ mudam comportamento:
   tema Baires no lugar de Morelia, asa escolhida no lugar de "não presuma",
   ticket onload como retirado, contadores do índice recontados, overview
   destravado de 01/07.
-- Limpeza de branches: PR #1 fechado; `fix/sacola-sync-preserva-pid` (superado
-  pela main) e os dois branches 100% mesclados apagados. Ficam para decisão do
-  dono: `review` (39 commits, links raw citados por docs históricos),
-  `nimbus-streetwear-setup-hoq2eb` (43 commits do pivô de 28/07; dois consertos
-  resgatados por cherry-pick), e os três de junho/julho com poucos commits.
+- Limpeza de branches, concluída por delegação do dono ("seja o juiz"): PR #1
+  fechado; TODOS os branches antigos viraram **tags de arquivo** e foram
+  apagados — os commits ficam alcançáveis para sempre e a lista de branches
+  ficou só com a `main`. Tags: `review` (mesmo nome do branch, de propósito:
+  preserva as URLs `raw.../review/...` citadas em docs históricos — conferido
+  respondendo 200 após a troca), `arquivo/2026-06-18-hotprinti`,
+  `arquivo/2026-07-01-impulso-docs`, `arquivo/2026-07-02-loja-v3`,
+  `arquivo/2026-07-28-pivo-capas` (a história do pivô, com o script de
+  publicação por API que pode voltar a servir) e
+  `arquivo/2026-08-01-sacola-nome-normalizado`.
 
 ## Capas
 
