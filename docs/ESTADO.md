@@ -465,7 +465,7 @@ print do campo dos 10%, Acutis até 12/10, carta do fundador, roteiro do pedido
 pago). Ata completa em
 `nuvemshop/auditoria/2026-08-03-conselho-vitrine-r4/ata-conselho-vitrine-r4.md`.
 
-### P1-1 executado (03/08, à noite): portões de nascimento da NUVEM
+### P1-1 e P1-5 executados (03/08, à noite): portões da NUVEM e tracking plan
 
 **Os portões a, b e c do P1-1 estão ATIVOS** (as três condições de lint do
 portão de nascimento; faltam ainda P1-2 e P1-4 para a primeira arte):
@@ -496,6 +496,20 @@ portão de nascimento; faltam ainda P1-2 e P1-4 para a primeira arte):
   são becos sem saída). Exige editar `build-paginas.mjs`, em edição por outra
   frente em 03/08; quando existir, o check de >= 3 relacionados entra no
   lint-nuvem (antes disso ele falharia sempre, e portão não vira informativo).
+
+**P1-5 entregue no repo**: `docs/fluxos/tracking-plan.md` (status: vigente) com
+os 5 eventos vivos + `page_view` automático + `purchase` planejado (P0-1),
+decisões por escrito sobre view_item_list/select_item/select_size e eventos
+dos 10% e da régua (todos FORA por ora, com motivo), e a estrutura de metas de
+29/09 e 12/10 **a preencher pelo dono**. Portão novo `npm run vitrine:tracking`
+(`lint-tracking.mjs`, no `vitrine:portoes` e no deploy): evento no código fora
+do plano, linha `ativo` sem código ou decisão atropelada quebram o build.
+**Registro formal: o gate de baseline de 7 dias da r3 morreu sem dano e fica
+substituído por instrumentação completa e validada (tag na loja + cross-domain
++ UTMs neutralizados + pedido-teste) antes do primeiro real de mídia.**
+Pendências de painel/admin do P1-5 (sessão do P0-1/P0-2): filtro de IP do
+dono, annotation do período pré-lançamento e evidência arquivada em
+`nuvemshop/auditoria/`.
 
 ## Capas
 

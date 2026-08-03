@@ -15,6 +15,7 @@ este mapa e o banner no topo de cada script superado.
 |---|---|
 | Portões e builds da vitrine (`npm run vitrine`, `vitrine:portoes`) | `vitrine/` (build-catalogo, build-media, build-paginas, lint-copy, lint-claims, parity-tokens, parity-variantes, link-check) |
 | Portões de nascimento da NUVEM (`vitrine:nuvem`): devocional em toda arte, escala por peça, par frente/costas por cor | `vitrine/lint-nuvem.mjs` + tabelas `vitrine/escala-grade.json` e `vitrine/par-fotos.excecoes.json` (P1-1 r4) |
+| Contrato de eventos GA4 (`vitrine:tracking`; o plano é `docs/fluxos/tracking-plan.md`) | `vitrine/lint-tracking.mjs` (P1-5 r4) |
 | Receita de export a 300 DPI (`producao:dpi300`; precisa dos assets mesclados, `SKIP_ASSETS=1` só em ambiente sem eles) | `producao/lint-export-300dpi.mjs` + baseline datada `producao/export-300dpi.baseline.json` (P1-1c r4; regra em `docs/verdades/receita-export-300dpi.md`) |
 | Monitor diário contra o ar (Actions, agendado; abre issue ao falhar) | `.github/workflows/monitor-diario.yml` (P1-1g r4) |
 | Reteste local do desempate sacola↔carrinho | `vitrine/teste-sincroniza.mjs` |

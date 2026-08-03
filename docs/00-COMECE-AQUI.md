@@ -24,6 +24,7 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Mexer no **CSS, hover ou layout** da loja | [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md) |
 | Escrever **página de produto**, medidas, prazo, política | [`fluxos/paginas-de-produto.md`](fluxos/paginas-de-produto.md) |
 | Criar **conteúdo social**, post, roteiro, campanha | [`fluxos/conteudo-social.md`](fluxos/conteudo-social.md) |
+| Mexer em **evento GA4**, medição, meta das datas | [`fluxos/tracking-plan.md`](fluxos/tracking-plan.md) |
 
 ## Preciso de um número, não de um processo
 

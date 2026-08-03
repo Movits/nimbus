@@ -21,8 +21,9 @@
     "vitrine:links": "node scripts/vitrine/link-check.mjs",
     "vitrine:variantes": "node scripts/vitrine/parity-variantes.mjs",
     "vitrine:nuvem": "node scripts/vitrine/lint-nuvem.mjs",
+    "vitrine:tracking": "node scripts/vitrine/lint-tracking.mjs",
     "producao:dpi300": "node scripts/producao/lint-export-300dpi.mjs",
-    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes && npm run vitrine:nuvem && npm run producao:dpi300 && npm run docs:links && npm run loja:css",
+    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes && npm run vitrine:nuvem && npm run vitrine:tracking && npm run producao:dpi300 && npm run docs:links && npm run loja:css",
     "docs:links": "node scripts/link-check-docs.mjs ../nimbus-assets ../nimbus-brain",
     "loja:css": "node scripts/verifica-css-loja.mjs"
   },
