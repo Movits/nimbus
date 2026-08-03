@@ -1,3 +1,18 @@
+---
+status: obsoleto
+substituido-por: docs/HANDOFF-SESSAO.md
+atualizado: 2026-08-03
+---
+
+> [!warning] NÃO COLE ESTE BLOCO. O handoff vigente é
+> [`docs/HANDOFF-SESSAO.md`](../HANDOFF-SESSAO.md).
+>
+> Este arquivo é de 26/07/2026, de antes da reprovação do lote das 77 capas
+> naquele mesmo dia e do pivô de 28/07. Ele manda produzir e publicar capas
+> pelo método superado e afirma que as artes vivem no /tmp da nuvem; hoje as
+> artes vivem versionadas no `nimbus-assets` (`designs/prontos/`). Colar isto
+> repetiria exatamente o modo de falha que o CLAUDE.md descreve.
+
 # Handoff para a sessão LOCAL — produção e publicação das capas NIMBUS
 
 Escrito em 26/07/2026 por uma sessão na nuvem, que **não** alcança o computador do

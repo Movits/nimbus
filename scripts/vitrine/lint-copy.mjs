@@ -52,7 +52,16 @@ const BANIDOS = [
 ];
 // A landing mora fora de public/loja e ficou de fora do lint por 2 dias: os
 // dois erros acima só apareceram na auditoria. Agora ela entra.
-const ALVOS = [path.join(RAIZ, "public/loja"), path.join(RAIZ, "index.html")];
+// As páginas do kit da loja (nuvemshop/pagina-*.html) também são copy pública:
+// o dono cola no painel. "sob demanda" ficou 5 dias fora do alcance do lint lá.
+const NUVEMSHOP = path.join(RAIZ, "nuvemshop");
+const ALVOS = [
+  path.join(RAIZ, "public/loja"),
+  path.join(RAIZ, "index.html"),
+  ...(fs.existsSync(NUVEMSHOP)
+    ? fs.readdirSync(NUVEMSHOP).filter((f) => /^pagina-.*\.html$/.test(f)).map((f) => path.join(NUVEMSHOP, f))
+    : []),
+];
 function confere(arquivo) {
   const html = fs.readFileSync(arquivo, "utf-8");
   for (const re of BANIDOS)

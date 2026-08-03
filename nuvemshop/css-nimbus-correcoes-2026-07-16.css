@@ -365,7 +365,7 @@ footer.js-footer .powered-by-logo {
   }
 
   .template-account-login .account-page > .container > .row::after {
-    content: "Acompanhe seus pedidos, retome pagamentos pendentes e consulte o rastreio em um só lugar.\A\A Com a Conta Nuvem, seus dados de entrega podem ser preenchidos com segurança nas próximas compras." !important;
+    content: "Acompanhe seus pedidos, retome pagamentos pendentes e consulte o rastreio em um só lugar.\A\00000ACom a Conta Nuvem, seus dados de entrega podem ser preenchidos com segurança nas próximas compras." !important;
     grid-column: 2 !important;
     grid-row: 2 !important;
     max-width: 38ch !important;
@@ -418,7 +418,7 @@ footer.js-footer .powered-by-logo {
   }
 
   .template-contact .contact-page > .container > .row::after {
-    content: "Dúvidas sobre tamanhos, produtos, pedidos ou projetos sociais? Envie sua mensagem e responderemos pelo e-mail informado.\A\A Se você já comprou, inclua o número do pedido para facilitar o atendimento." !important;
+    content: "Dúvidas sobre tamanhos, produtos, pedidos ou projetos sociais? Envie sua mensagem e responderemos pelo e-mail informado.\A\00000ASe você já comprou, inclua o número do pedido para facilitar o atendimento." !important;
     grid-column: 2 !important;
     grid-row: 2 !important;
     max-width: 38ch !important;
@@ -1621,7 +1621,7 @@ html body footer.js-footer .js-footer-col-sticky::before {
 html body footer.js-footer .js-footer-col-sticky::after {
   display: block !important;
   color: #294776 !important;
-  content: "Trocas e devoluções\A Envios e prazos\A Fale com a NIMBUS" !important;
+  content: "Trocas e devoluções\00000AEnvios e prazos\00000AFale com a NIMBUS" !important;
   font-family: var(--body-font, "Inter", Arial, sans-serif) !important;
   font-size: 13px !important;
   font-weight: 400 !important;
@@ -1857,7 +1857,7 @@ html body footer.js-footer > .row > .col-md-6:last-child {
 
 html body footer.js-footer .js-footer-col-sticky::after {
   color: #294776 !important;
-  content: "Trocas e devoluções\A Envios e prazos\A Fale com a NIMBUS" !important;
+  content: "Trocas e devoluções\00000AEnvios e prazos\00000AFale com a NIMBUS" !important;
   font-size: 15px !important;
   line-height: 1.85 !important;
 }

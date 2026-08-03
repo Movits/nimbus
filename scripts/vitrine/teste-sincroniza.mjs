@@ -1,8 +1,17 @@
 // O espelho da loja volta para a vitrine casando por pid + variante, não por
 // nome. O nome vem de um <a> que embrulha a variante, então chega com quebra de
 // linha e cortado em 48 caracteres: casar por ele falha nos 44 produtos.
-import { chromium } from "/opt/node22/lib/node_modules/playwright/index.mjs";
-const b = await chromium.launch({ executablePath: "/opt/pw-browsers/chromium" });
+import { existsSync } from "node:fs";
+// O playwright local (node_modules) vale em qualquer máquina; o caminho
+// absoluto é o da sessão na nuvem, que não tem o pacote instalado no projeto.
+let chromium;
+try {
+  ({ chromium } = await import("playwright"));
+} catch {
+  ({ chromium } = await import("/opt/node22/lib/node_modules/playwright/index.mjs"));
+}
+const chromiumDaNuvem = "/opt/pw-browsers/chromium";
+const b = await chromium.launch(existsSync(chromiumDaNuvem) ? { executablePath: chromiumDaNuvem } : {});
 const ctx = await b.newContext({ baseURL: "http://127.0.0.1:8123" });
 const page = await ctx.newPage();
 let falhas = 0;

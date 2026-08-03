@@ -43,7 +43,9 @@ try {
 }
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "nuvemshop");
-const ARQUIVOS = /^css-nimbus-.*-2026-07-20\.css$/;
+// Cobre também as FONTES do build (16/07 e 17/07): regenerar o consolidado a
+// partir de fonte com escape curto reintroduziria o bug que este portão mata.
+const ARQUIVOS = /^css-nimbus-.*-2026-07-(16|17|20)\.css$/;
 
 /** O que o painel faz com o CSS colado: minifica e come o espaço que delimita o
  *  escape. Escape de 6 dígitos não tem espaço, então passa intacto. */
