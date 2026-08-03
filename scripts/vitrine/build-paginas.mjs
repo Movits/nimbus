@@ -249,6 +249,27 @@ const CAIMENTO = {
   "Camiseta Oversized Premium": "Modelagem ampla de propósito. Entre dois tamanhos, o menor preserva o caimento.",
   "Moletom Canguru": "Veste confortável, com espaço. Na dúvida, fique no seu tamanho usual.",
 };
+// P1-4 do conselho r4 (03/08): as medidas por tamanho viram tabela HTML de
+// verdade (colunas Tamanho, Largura, Altura), geradas do MESMO dado da ficha.
+// Formato canônico: "P 62x78; M 64x80; ... cm (largura x altura)". Medida de
+// peça sem grade (a Ecobag) segue como texto. Medida por tamanho que não
+// parsear DERRUBA o build: rebaixar silenciosamente a texto corrido foi
+// exatamente como este item escorregou da r3.
+const tabelaMedidas = (medidas) => {
+  const s = String(medidas).trim();
+  const m = s.match(/^([A-Z]{1,3} [\d,]+x[\d,]+(?:; [A-Z]{1,3} [\d,]+x[\d,]+)*) cm \(largura x altura\)\.?$/);
+  if (!m) {
+    if (/^[A-Z]{1,3} [\d,]+x/.test(s))
+      throw new Error(`medidas por tamanho fora do formato canônico, tabela impossível: "${s}"`);
+    return null;
+  }
+  const linhas = m[1].split("; ").map((parte) => {
+    const [tam, dims] = parte.split(" ");
+    const [largura, altura] = dims.split("x");
+    return `<tr><th scope="row">${esc(tam)}</th><td>${esc(largura)} cm</td><td>${esc(altura)} cm</td></tr>`;
+  });
+  return `<table class="medidas"><thead><tr><th scope="col">Tamanho</th><th scope="col">Largura</th><th scope="col">Altura</th></tr></thead><tbody>${linhas.join("")}</tbody></table>`;
+};
 const relacionados = (p) => {
   // Feedback do dono (31/07): ninguém compra a mesma arte em duas peças; a
   // seção mostra OUTRAS artes da mesma coleção, com a mesma peça primeiro
@@ -345,7 +366,11 @@ ${header()}
 
       <div class="pdp__detalhes">
         ${p.ficha.material ? `<details open><summary>A peça</summary><p class="note">${esc([p.ficha.material, p.ficha.modelagem, p.ficha.gola].filter(Boolean).join(". "))}.</p></details>` : ""}
-        ${p.ficha.medidas || CAIMENTO[p.peca] ? `<details><summary>Medidas e caimento</summary>${CAIMENTO[p.peca] ? `<p class="note"><b>Caimento:</b> ${esc(CAIMENTO[p.peca])}</p>` : ""}${p.ficha.medidas ? `<p class="note">${esc(p.ficha.medidas)}</p>` : ""}</details>` : ""}
+        ${p.ficha.medidas || CAIMENTO[p.peca] ? (() => {
+          const tabela = p.ficha.medidas ? tabelaMedidas(p.ficha.medidas) : null;
+          const medidas = tabela || (p.ficha.medidas ? `<p class="note">${esc(p.ficha.medidas)}</p>` : "");
+          return `<details><summary>Medidas e caimento</summary>${CAIMENTO[p.peca] ? `<p class="note"><b>Caimento:</b> ${esc(CAIMENTO[p.peca])}</p>` : ""}${medidas}</details>`;
+        })() : ""}
         ${p.ficha.cuidados ? `<details><summary>Cuidados</summary><p class="note">${esc(p.ficha.cuidados)}</p></details>` : ""}
         <details><summary>Prazo e envio</summary><p class="note">Peça feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
       </div>

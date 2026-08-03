@@ -561,6 +561,13 @@
 .pdp__detalhes summary::after { content: "+"; font-family: var(--font-display); }
 .pdp__detalhes details[open] summary::after { content: "−"; }
 .pdp__detalhes .note { padding: 0 0.2em 1.1em; }
+/* tabela de medidas (P1-4 do conselho r4): colunas Tamanho, Largura, Altura,
+   números tabulares para as linhas alinharem como régua */
+.pdp__detalhes .medidas { width: 100%; border-collapse: collapse; margin: 0.2em 0 1.1em; font-size: 0.88rem; }
+.pdp__detalhes .medidas th, .pdp__detalhes .medidas td { padding: 0.5em 0.6em; border-bottom: 1px solid var(--line); text-align: left; }
+.pdp__detalhes .medidas thead th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5b6779; }
+.pdp__detalhes .medidas tbody th { font-weight: 600; color: var(--deep); }
+.pdp__detalhes .medidas td { font-variant-numeric: tabular-nums; color: #415061; }
 .pdp__impacto { margin-top: 1.6em; background: var(--sky); border-radius: 14px; padding: 1.1em 1.3em; font-size: 0.9rem; }
 .pdp__devocao { margin-top: 1.6em; background: #fff; border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 14px; padding: 1.3em 1.5em; }
 .pdp__devocao h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.35rem; color: var(--deep); margin: 0.15em 0 0.4em; }
