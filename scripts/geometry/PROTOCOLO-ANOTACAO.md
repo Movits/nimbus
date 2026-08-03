@@ -1,3 +1,8 @@
+---
+status: vigente
+atualizado: 2026-08-03
+---
+
 # Protocolo de anotação de landmarks
 
 Quem anota devolve **coordenadas**, não vereditos. Não opine sobre qualidade da peça: marque

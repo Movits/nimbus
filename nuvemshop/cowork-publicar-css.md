@@ -1,3 +1,8 @@
+---
+status: vigente
+atualizado: 2026-08-03
+---
+
 # Prompt para o Cowork: publicar o CSS corrigido no painel
 
 Cole o texto abaixo da linha numa sessão do Cowork, na máquina do Roberto.

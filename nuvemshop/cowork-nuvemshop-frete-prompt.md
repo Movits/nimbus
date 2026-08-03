@@ -1,6 +1,11 @@
 ---
-status: ativo
+status: concluido
 ---
+
+> [!warning] Missão CUMPRIDA em 31/07/2026: a regra de frete grátis a
+> partir de R$399,90 foi configurada e testada no painel com CEPs reais
+> (Brasília e São Paulo). Não recolar. Fica como registro do procedimento.
+
 # Prompt Cowork: frete grátis R$399,90 no painel da Nuvemshop
 
 Copiar e colar o bloco abaixo numa sessão do Claude Cowork no desktop, com o

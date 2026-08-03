@@ -1,3 +1,4 @@
+// SUPERADO em 26/07/2026: pedir a IA desenhar a estampa falhou; capa hoje e blank + composicao (docs/fluxos/capa-lifestyle.md). Nao usar; historico em docs/historico/.
 // Monta as listas de tarefas do gerador v2 a partir de:
 //  - review/plano-fotos-v2.1-2026-07-17.json  (decisoes e geracoes por produto)
 //  - catalog/gallery-classification-2026-07-17.json  (qual imagem e frente/costas de cada cor)

@@ -1,3 +1,4 @@
+// SUPERADO em 23/07/2026: diagnostico one-off do hover de julho, encerrado. Nao usar; historico em docs/historico/.
 const url = process.argv[2];
 
 if (!url) {

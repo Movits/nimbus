@@ -1,5 +1,8 @@
 // Checkup completo da loja publica NIMBUS.
-// Confere, produto a produto, contra o plano de publicacao de 17/07:
+// E a base do "verify-store-full estendido" do item P1-6 da ata de 30/07
+// (nuvemshop/auditoria/2026-07-30-conselho-vitrine-r3/ata-conselho-vitrine-r3.md):
+// contagem de cards por colecao, HTTP 200 nas PDPs, tags og/title e sacola.
+// Hoje ainda confere, produto a produto, contra o plano de publicacao de 17/07:
 //  - capa (og:image) e a foto lifestyle esperada
 //  - o par de cor esta na posicao 2 da galeria (hover troca de cor)
 //  - nenhuma variante Azul Marinho / Rosa Bebe sobrou

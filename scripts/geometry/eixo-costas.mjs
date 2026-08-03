@@ -1,3 +1,8 @@
+// APOSENTADO em 03/08/2026. O ESTADO registrava a suspeita "consertar ou
+// aposentar": este medidor leu o tronco pela metade em peça preta e nenhum
+// script o importa. O eixo se mede por leitura visual dos vincos de cava
+// (docs/verdades/limites-conhecidos.md). Guardado como referência do método.
+//
 // ONDE FICA O EIXO DO PAINEL DAS COSTAS.
 //
 // A estampa tem que ficar centrada NO PAINEL, nao no meio da imagem nem no

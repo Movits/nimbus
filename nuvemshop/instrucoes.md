@@ -1,4 +1,15 @@
+---
+status: vigente
+atualizado: 2026-08-03
+---
+
 # Loja Nuvemshop — estado e guia de aplicação
+
+> [!info] Atualizado em 03/08/2026. O estado ATUAL da loja vive em
+> [`docs/ESTADO.md`](../docs/ESTADO.md); este arquivo guarda o operacional
+> (como colar CSS, alertas do painel). Para recolar o CSS, o roteiro vigente é
+> [`cowork-publicar-css.md`](cowork-publicar-css.md), e `npm run loja:css`
+> roda antes de qualquer colagem.
 
 **Plano Impulso · tema Baires · baseline revisado em 24/07/2026.**
 

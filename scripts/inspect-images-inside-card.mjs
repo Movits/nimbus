@@ -1,3 +1,4 @@
+// SUPERADO em 23/07/2026: diagnostico one-off do hover de julho, encerrado. Nao usar; historico em docs/historico/.
 async function inspectImagesInsideCard() {
   const url = 'https://loja.nimbuswear.com.br/street';
   try {

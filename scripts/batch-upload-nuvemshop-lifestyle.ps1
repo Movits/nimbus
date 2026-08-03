@@ -1,3 +1,4 @@
+# SUPERADO em 03/08/2026: automacao de clique no painel nao salva (docs/ESTADO.md 03/08) e o pipeline lifestyle v1-v3 foi superado. Nao usar; historico em docs/historico/.
 param(
     [int[]]$OnlyProductId = @(),
     [int]$MaxCount = 0

@@ -131,3 +131,6 @@ scripts/__pycache__/
 nuvemshop/assets/producao-capas/**/*.png
 nuvemshop/assets/producao-capas/**/*.webp
 nuvemshop/assets/producao-capas/**/*.prompt.txt
+# .jpg idem: eram 94 capturas de diagnostico (zoom de gola/barra/torso) que
+# passaram despercebidas na regra acima e ficaram versionadas ate 03/08.
+nuvemshop/assets/producao-capas/**/*.jpg

@@ -1,3 +1,4 @@
+// SUPERADO em 23/07/2026: diagnostico one-off do hover de julho, encerrado. Nao usar; historico em docs/historico/.
 async function inspectThemeCSS() {
   const url = 'https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/baires/dart-style-critical-a77e00ffb8e86da7dd683d0c76dbfdbd.css';
   try {

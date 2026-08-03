@@ -1,3 +1,8 @@
+---
+status: superado
+nota: superado para capas (pedir à IA que desenhe a estampa falhou; vigente é o compositor, docs/fluxos/capa-lifestyle.md). O canal Nano Banana e o generate.mjs seguem válidos para conteúdo social (docs/fluxos/conteudo-social.md).
+---
+
 # Geração de capas lifestyle (Nano Banana 2)
 
 Pipeline para gerar/recriar as capas de produto (foto de modelo vestindo a peça) com a arte fiel e no tamanho certo. Método completo e armadilhas ficam no segundo cérebro: `Nimbus brain/wiki/concepts/geracao-capas-lifestyle.md`.

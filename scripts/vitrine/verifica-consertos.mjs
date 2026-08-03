@@ -1,3 +1,6 @@
+// HISTORICO: verificador one-off da auditoria de 01/08, preso a um snapshot de
+// CDN no scratchpad de uma sessao de nuvem extinta. Nao roda em maquina nenhuma;
+// os checks duradouros viraram os portoes versionados de scripts/vitrine/.
 // Confere no navegador os consertos da auditoria de 01/08.
 import { chromium } from "/opt/node22/lib/node_modules/playwright/index.mjs";
 import fs from "fs";

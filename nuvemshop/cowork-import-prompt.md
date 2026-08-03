@@ -1,3 +1,6 @@
+---
+status: historico
+---
 # NIMBUS — Prompt pro Claude Cowork: importar produtos YouDraw → Nuvemshop
 
 > [!warning] **Documento histórico. NÃO EXECUTAR.**

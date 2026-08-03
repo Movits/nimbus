@@ -1,3 +1,4 @@
+// SUPERADO em 26/07/2026: pedir a IA desenhar a estampa falhou; capa hoje e blank + composicao (docs/fluxos/capa-lifestyle.md). Nao usar; historico em docs/historico/.
 import fs from "node:fs/promises";
 import path from "node:path";
 

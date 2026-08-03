@@ -111,9 +111,14 @@ por peça, disclaimer de fotos só na galeria da PDP (saiu do footer), régua do
 frete grátis estática (PDP, Ecobag como completa-pedido) e dinâmica (toast com
 valor da sacola em localStorage), gate novo `lint-claims.mjs` no build e no
 deploy (frete grátis sem condição, overclaims, CDN acima de -640-0.webp,
-JSON-LD divergente do catálogo), `sitemap.xml` (53 páginas públicas) e
-`robots.txt` gerados no build. Da pauta resta só o Search Console (precisa do
-Google do dono; o sitemap já está pronto para envio).
+JSON-LD divergente do catálogo), `sitemap.xml` e
+`robots.txt` gerados no build. **Atualização de 03/08**: desde 01/08 (commit
+`3866da3`) a vitrine está FORA do índice do Google por decisão
+(`VITRINE_INDEXAVEL = false` no `build-paginas.mjs`, até haver fotos com
+modelo): o sitemap gerado tem **1 URL** (a landing) e o `robots.txt` tem
+`Disallow: /loja/`. As "53 páginas" valeram só até essa chave virar. Reabrir ao
+Google = virar a chave e regerar com `npm run vitrine`; o Search Console segue
+esperando o Google do dono.
 
 **Feedback do dono aplicado em 31/07 (PR #27, no ar)**: relacionados deixou de
 sugerir a mesma arte em outra peça e virou "Você também pode gostar" (outras
@@ -128,10 +133,11 @@ segue congelado.
 Announcement, notas da PDP (avisam que o frete do CEP aparece na sacola), toast
 ("Faltam R$X para frete grátis e Ecobag de brinde"), /envios/ (nova seção
 "Quanto custa o frete": peso + CEP na sacola) e lint-claims (exige a condição
-dos R$399,90) trocados juntos; zero sobras de R$199 no site. **PENDENTE DO
-DONO: configurar a regra de frete grátis a partir de R$399,90 no painel da
-Nuvemshop e alinhar a barra de anúncio da loja** (instruções entregues no
-chat); o brinde é operacional, adicionado por ele em cada pedido elegível.
+dos R$399,90) trocados juntos; zero sobras de R$199 no site. **CUMPRIDO em
+31/07 pela sessão Cowork do painel**: regra de frete grátis a partir de
+R$399,90 configurada e testada com CEPs reais (Brasília 71620-045 e São Paulo,
+R$449,80 = frete R$0) e barra de anúncio alinhada. O brinde é operacional,
+adicionado pelo dono em cada pedido elegível.
 Frete abaixo do teto: repassar o cálculo do checkout, sem subsídio (decidido).
 GA4 ganhou os eventos `view_item` e `add_to_cart` na PDP (mesmo PR).
 
@@ -143,8 +149,8 @@ Recomendação registrada: não depositar "NIMBUS" palavra sozinha; tentar marca
 MISTA "NIMBUSWEAR" com o logotipo nuvem+auréola, ciente do risco moderado, ou
 consultar agente de PI antes da taxa. Detalhe no brain
 (`wiki/concepts/dominio-e-marca.md`). Planilha de gastos criada em
-`nimbus-brain/financeiro/gastos.xlsx` (R$6.150 estimados até 31/07; YouDraw,
-domínio e Canva a preencher pelo dono).
+`nimbus-brain/financeiro/gastos.xlsx` (**R$6.800 até 31/07**, com YouDraw,
+domínio e Canva preenchidos pelo dono em 31/07).
 
 **Sala de aprovação em `/loja/gates/`**: GATES B e C **fechados em
 29/07**. STREET definitiva: beco de São Paulo (Brasília SCS em espera).
@@ -377,6 +383,42 @@ uma **junction** para o vault aninhado `Nimbus\Nimbus brain` (o Obsidian do dono
 mora lá); não clonar por cima. `setup-assets` mesclou as 16 artes NUVEM 4K de
 02/08 na árvore local.
 
+### Doctor de 03/08: revisão geral dos três repositórios
+
+A pedido do dono, varredura de saúde completa (7 frentes + verificação
+adversarial): **65 achados confirmados e aplicados** no mesmo dia. Os que
+mudam comportamento:
+
+- **As FONTES do build do CSS (16/07 e 17/07) ainda tinham os escapes `\A `
+  curtos** — regenerar o consolidado reintroduziria o `ਐ`. Convertidas para
+  `\00000A` e o portão `loja:css` ampliado para cobri-las (22 escapes
+  conferidos, zero divergem).
+- **`lint-copy` agora varre `nuvemshop/pagina-*.html`**; a `pagina-sobre.html`
+  tinha "sob demanda" duas vezes e foi reescrita (recolar no painel só com
+  autorização).
+- A régua de docs valeu para tudo: handoffs e prompts executados ganharam
+  `status:` e banner (5 prompts Cowork moveram da raiz para `nuvemshop/`;
+  `HANDOFF-SESSAO-LOCAL` foi para `docs/historico/`), 24 scripts de métodos
+  superados ganharam banner de uma linha + `scripts/LEIA-ME.md` com o mapa
+  vivo/superado, `precificacao.md` marcado superado (frete R$199 e cupom de
+  estreia morreram em 31/07), `eixo-costas.mjs` aposentado.
+- **Correções de fato neste ESTADO** (cada uma no seu lugar acima): sitemap
+  hoje tem 1 URL (`VITRINE_INDEXAVEL=false` desde 01/08), a regra dos
+  R$399,90 foi configurada em 31/07 (não estava pendente), gastos fecharam em
+  R$6.800.
+- **94 JPGs de diagnóstico** saíram do índice do repo público (gitignore
+  ampliado); no assets, wordmark duplicado removido e diagnósticos de mockup
+  fora do índice.
+- Brain atualizado em peso: frete R$399,90 nas 11 páginas que ensinavam R$199,
+  tema Baires no lugar de Morelia, asa escolhida no lugar de "não presuma",
+  ticket onload como retirado, contadores do índice recontados, overview
+  destravado de 01/07.
+- Limpeza de branches: PR #1 fechado; `fix/sacola-sync-preserva-pid` (superado
+  pela main) e os dois branches 100% mesclados apagados. Ficam para decisão do
+  dono: `review` (39 commits, links raw citados por docs históricos),
+  `nimbus-streetwear-setup-hoq2eb` (43 commits do pivô de 28/07; dois consertos
+  resgatados por cherry-pick), e os três de junho/julho com poucos commits.
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito
@@ -474,6 +516,7 @@ invalidada que estava sem aviso nenhum. `docs/` passou a ser roteado por tarefa.
 
 - A capa publicada do **352727892** pode estar com a peça errada: uma das duas
   fotos no ar não mostra capuz, e o produto é Moletom Canguru. Confirmar na loja.
-- O medidor de eixo automático (`scripts/geometry/eixo-costas.mjs`) **não é
-  confiável**: mediu o tronco pela metade em peça preta. O eixo hoje se mede por
-  leitura visual dos vincos de cava. Consertar ou aposentar.
+- ~~O medidor de eixo automático (`scripts/geometry/eixo-costas.mjs`)~~
+  **RESOLVIDO em 03/08: aposentado.** Zero scripts o importavam; ganhou banner
+  de aposentado no cabeçalho. O eixo segue medido por leitura visual dos
+  vincos de cava (`docs/verdades/limites-conhecidos.md`).

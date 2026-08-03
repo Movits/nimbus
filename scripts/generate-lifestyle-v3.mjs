@@ -1,3 +1,4 @@
+// SUPERADO em 26/07/2026: pedir a IA desenhar a estampa falhou; capa hoje e blank + composicao (docs/fluxos/capa-lifestyle.md). Nao usar; historico em docs/historico/.
 // Gerador v3 das fotos lifestyle NIMBUS (Higgsfield nano_banana_pro).
 //
 // O que muda em relacao ao v2, e por que:

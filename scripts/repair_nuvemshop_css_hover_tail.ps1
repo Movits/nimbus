@@ -1,3 +1,4 @@
+# SUPERADO em 03/08/2026: clique por script no painel nao salva (docs/ESTADO.md 03/08); publicar CSS segue nuvemshop/cowork-publicar-css.md. Nao usar; historico em docs/historico/.
 param(
     [string]$TailCssPath = "C:\Users\rober\Nimbus\nuvemshop\css-hover-tail-2026-07-17.css",
     [int]$WaitMs = 500

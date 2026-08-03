@@ -1,4 +1,14 @@
-﻿## Relatório de revisão por arte (resumo)
+﻿---
+status: historico
+atualizado: 2026-08-03
+---
+
+## Relatório de revisão por arte (resumo)
+
+> [!warning] Documento histórico da campanha de 16/07, com método invalidado
+> (banner de 03/08). Nada desta fila é pendência atual: ver o
+> [`../README.md`](../README.md) da campanha e o veredito vigente em
+> `nuvemshop/auditoria/2026-07-25-geometria/ACHADOS.md`.
 
 ### Falhas por gravidade
 - alta: 15

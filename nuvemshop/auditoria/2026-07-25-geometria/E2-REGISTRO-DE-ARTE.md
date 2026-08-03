@@ -1,3 +1,8 @@
+---
+status: vigente
+atualizado: 2026-08-03
+---
+
 # E2 — registro da arte contra anotação humana
 
 Rodado em 25/07/2026 sobre 270 cenas de verdade conhecida.

@@ -1,3 +1,16 @@
+---
+status: superado
+atualizado: 2026-08-03
+---
+
+> [!warning] Documento de junho/2026, parcialmente SUPERADO. A régua de preços
+> segue como referência de origem, mas os preços valem os do painel da
+> Nuvemshop. O checklist do fim NÃO deve ser executado: frete grátis acima de
+> R$199 e cupom de estreia de 15% foram substituídos em 31/07 pela regra
+> vigente (teto R$399,90 com Ecobag de brinde, cupom ECOBAG, frete fixo
+> R$19,90; ver [`docs/ESTADO.md`](docs/ESTADO.md)). O lint-claims da vitrine
+> existe para impedir exatamente a regra antiga.
+
 # NIMBUS — Precificação (régua Premium, entrada suavizada)
 
 Posicionamento: **católico premium** — justificar o preço com design, materiais e narrativa,

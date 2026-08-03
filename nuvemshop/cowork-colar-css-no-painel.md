@@ -1,4 +1,20 @@
-# Prompt para o Cowork: colar o CSS da loja no painel da Nuvemshop
+---
+status: superado
+atualizado: 2026-08-03
+substituido-por: cowork-publicar-css.md
+---
+
+# Prompt para o Cowork: colar o CSS da loja no painel da Nuvemshop (SUPERADO)
+
+> [!warning] Não cole este bloco. Use
+> [`cowork-publicar-css.md`](cowork-publicar-css.md).
+>
+> Esta rodada já rodou em 02-03/08 e parou no último clique: **Publicar
+> alterações não salva quando o clique é feito por script**, e a extensão não
+> tem permissão para `nimbus40.lojavirtualnuvem.com.br`. O roteiro vigente
+> incorpora esses aprendizados (não forçar POST, backup de 02/08 já existe,
+> caminho pela aba aberta); este aqui mandaria repetir a falha. Fica como
+> histórico.
 
 Cole o texto abaixo da linha numa sessão do Cowork, na máquina do Roberto.
 

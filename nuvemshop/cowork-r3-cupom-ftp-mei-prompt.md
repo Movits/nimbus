@@ -1,6 +1,12 @@
 ---
-status: ativo
+status: concluido
 ---
+
+> [!warning] Missão CUMPRIDA: cupom ECOBAG criado e validado no painel em
+> 31/07 (testado nos dois lados do mínimo), cart.tpl subiu por FTP e o
+> teste 4 do funil passou em 03/08, DASN-SIMEI 2025 transmitida em 01/08.
+> Recolar este bloco tentaria refazer tudo isso. Fica como registro.
+
 # Prompt Cowork r3: cupom da Ecobag, FTP do cart.tpl e MEI (PGMEI + DASN)
 
 Sessão no PC de casa, dono presente para captcha, senha do FTP e confirmações.

@@ -1,4 +1,19 @@
-# E1 ficou BLOQUEADO: o mockup plano não é obtenível sem login
+---
+status: refutado
+atualizado: 2026-08-03
+---
+
+# E1 ficou BLOQUEADO: o mockup plano não é obtenível sem login (REFUTADO)
+
+> [!warning] Refutado em 26/07/2026 (banner de 03/08). Os mockups planos
+> EXISTEM, para os 49 produtos, em
+> `nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/`.
+>
+> A varredura abaixo falhou porque a heurística de borda BRANCA não reconhece
+> mockup de fundo escuro; e a "correção" do `CLAUDE.md` reivindicada aqui era
+> o erro (a frase original do main estava certa). Ver o "ACHADO MAIOR de
+> 26/07" em `../../assets/producao-capas/REGISTRO.md` e
+> `../2026-07-26-datum-mockups/CONCLUSOES.md`.
 
 Registrado em 25/07/2026, logo depois do plano de portabilidade ser aprovado.
 Corrige uma premissa desse plano, então vem antes de qualquer código construído

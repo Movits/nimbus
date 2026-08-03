@@ -1,7 +1,7 @@
 ---
 status: vigente
 atualizado: 2026-07-26
-decisao: docs/decisoes/2026-07-26-hover-troca-so-a-cor.md
+decisao: docs/decisoes/2026-07-26-decisoes-do-dono.md  # seção "Hover troca só a cor"
 ---
 
 # Fluxo: par de cor para o hover

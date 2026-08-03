@@ -1,6 +1,11 @@
 ---
-status: ativo
+status: concluido
 ---
+
+> [!warning] Missão CUMPRIDA em 31/07/2026: frete fixo ajustado para
+> R$19,90, regra dos R$399,90 confirmada valendo e varredura do MEI feita
+> (dossiê de 01/08 no brain). Não recolar. Fica como registro.
+
 # Prompt Cowork: ajustes do painel Nuvemshop + varredura do MEI
 
 Segunda rodada, 31/07/2026, depois do relatório da primeira sessão. Colar numa

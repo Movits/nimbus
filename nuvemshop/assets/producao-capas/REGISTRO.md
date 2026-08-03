@@ -1,4 +1,21 @@
+---
+status: historico
+atualizado: 2026-08-03
+---
+
 # Registro de produção de capas — pipeline v5 (peça em branco + composição)
+
+> [!warning] Lote reprovado pelo dono em 26/07/2026 (banner de 03/08).
+> Os vereditos "PRONTA" abaixo valem só como histórico do pipeline v5: depois
+> de olhar em resolução real, o dono reprovou as 77 capas, e a reconstrução do
+> catálogo aguarda a decisão de plataforma (YouDraw vs IzzyPrint). O estado
+> vigente é `docs/ESTADO.md`, seção Capas. **Nada desta pasta vai para
+> publicação.**
+
+> [!info] O que segue valendo como conhecimento: a seção "ACHADO MAIOR de
+> 26/07" (mockups planos dos 49 produtos) e decisões de técnica como a do
+> capuz continuam citadas por docs vigentes (`docs/REPOSITORIOS.md`,
+> `docs/fluxos/capa-lifestyle.md`).
 
 ## LOTE DE 26/07 CONCLUÍDO: fila desbloqueada 100% produzida
 

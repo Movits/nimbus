@@ -1,3 +1,4 @@
+# SUPERADO em 03/08/2026: clique por script no painel nao salva (docs/ESTADO.md 03/08); publicar CSS segue nuvemshop/cowork-publicar-css.md. Nao usar; historico em docs/historico/.
 param(
     [string]$CssPath = "C:\Users\rober\Nimbus\nuvemshop\css-nimbus-publicacao-compacta-2026-07-20.css",
     [string]$StoreUrl = "https://loja.nimbuswear.com.br",

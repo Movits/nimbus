@@ -1,3 +1,8 @@
+---
+status: vigente
+atualizado: 2026-08-03
+---
+
 # Auditoria geométrica das capas lifestyle — 25/07
 
 Método e precisão: `scripts/geometry/README.md`. Protocolo de anotação:

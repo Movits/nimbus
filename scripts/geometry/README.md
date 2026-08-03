@@ -1,8 +1,13 @@
+---
+status: vigente
+atualizado: 2026-08-03
+---
+
 # Medidor geométrico de estampas
 
 Mede **escala** e **posição** da estampa em fotos de peça vestida, contra as
 dimensões oficiais em cm da YouDraw. Substitui as duas auditorias anteriores,
-ambas invalidadas (ver `CLAUDE.md`, seção "Medição de escala suspensa").
+ambas invalidadas (ver `docs/verdades/limites-conhecidos.md` e `docs/ESTADO.md`).
 
 ## O princípio
 
@@ -281,6 +286,7 @@ com a direção acima registrada.
 | `measure.mjs` | A medição: α, ρ_v, comprimento implícito, δ por tamanho, posição, cross-checks, confiança e vereditos. |
 | `synth.mjs` | Gerador de verdade conhecida (cilindro + câmera pinhole + contraposto). |
 | `validate.mjs` | Roda a grade de validação e emite `validation-report.json`. Sai com código 1 se qualquer critério falhar. |
+| `provider/` | Adaptadores de catálogo (`from-folder.mjs`, `from-store.mjs`): o caminho da eventual migração de fornecedor (ex.: IzzyPrint) — o dono exporta o catálogo para uma pasta e o medidor lê dali. |
 
 ## Regras que o medidor nunca quebra
 
