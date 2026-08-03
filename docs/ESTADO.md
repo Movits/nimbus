@@ -465,6 +465,38 @@ print do campo dos 10%, Acutis até 12/10, carta do fundador, roteiro do pedido
 pago). Ata completa em
 `nuvemshop/auditoria/2026-08-03-conselho-vitrine-r4/ata-conselho-vitrine-r4.md`.
 
+### P1-1 executado (03/08, à noite): portões de nascimento da NUVEM
+
+**Os portões a, b e c do P1-1 estão ATIVOS** (as três condições de lint do
+portão de nascimento; faltam ainda P1-2 e P1-4 para a primeira arte):
+
+- **(a+b+d) `npm run vitrine:nuvem`** (`scripts/vitrine/lint-nuvem.mjs`, no
+  `npm run vitrine`, no `vitrine:portoes` e no deploy.yml): arte do catálogo
+  sem entrada completa no `devocional.json` ou PDP gerada sem o bloco
+  devocional QUEBRA o build (o fallback silencioso do build-paginas agora é
+  falha); peça sem escala declarada em `escala-grade.json` (tabela nova,
+  fonte de verdade conferida contra o loja.css nos dois sentidos) quebra;
+  produto+cor sem par frente/costas quebra, com 7 exceções DATADAS de 03/08
+  congeladas em `par-fotos.excecoes.json` (lista que só encolhe).
+- **(c) `npm run producao:dpi300`** (`scripts/producao/lint-export-300dpi.mjs`,
+  no `vitrine:portoes`): receita de export pinada em
+  `docs/verdades/receita-export-300dpi.md` (300 DPI no maior uso; costas =
+  4724 px de altura para 40 cm); 86 artes conferidas, 64 legadas de ~222 DPI
+  numa baseline datada que só encolhe (re-export segue pendência 0). Roda
+  local (precisa dos assets privados); `SKIP_ASSETS=1` só para ambiente sem eles.
+- **(f) deploy.yml regenera as páginas** (`build-paginas.mjs` sobre o catálogo
+  commitado) **e falha em diff sujo**: HTML velho commitado deixou de passar.
+  Prova real na primeira execução do Actions após o push.
+- **(g) `.github/workflows/monitor-diario.yml`**: agendado diário rodando
+  parity-variantes e link-check CONTRA O AR, abrindo issue única ao falhar
+  (drift de painel não dispara push). Falta a primeira rodada verde no
+  Actions, que só existe depois do push.
+- **PENDÊNCIA (e), não bloqueia o nascimento (ata)**: fallback de relacionados
+  cross-coleção quando a mesma coleção rende menos de 3 (as 2 PDPs da NUVEM
+  são becos sem saída). Exige editar `build-paginas.mjs`, em edição por outra
+  frente em 03/08; quando existir, o check de >= 3 relacionados entra no
+  lint-nuvem (antes disso ele falharia sempre, e portão não vira informativo).
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito

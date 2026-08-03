@@ -1,0 +1,47 @@
+# Monitor diário contra o AR (P1-1g do conselho r4, 03/08/2026).
+# Drift de painel não dispara push: a loja pode mudar variante, preço ou foto
+# no painel da Nuvemshop e nenhum workflow de push perceberia. Este agendado
+# roda os dois portões que batem no site publicado (parity-variantes compara o
+# formulário da vitrine com o LS.variants real da loja nos 44 produtos;
+# link-check confere caminhos internos e as URLs externas da marca e da CDN)
+# e abre UMA issue quando falhar, sem duplicar enquanto houver issue aberta.
+name: Monitor diario da vitrine
+
+on:
+  schedule:
+    - cron: "23 9 * * *" # ~06:23 em Brasília, antes do expediente
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      # SEM SKIP_REDE, de propósito: o valor deste workflow é exatamente a rede.
+      - run: node scripts/vitrine/parity-variantes.mjs
+      - run: node scripts/vitrine/link-check.mjs
+      - name: Abre issue se a rodada falhou
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          abertas=$(gh issue list --repo "$GITHUB_REPOSITORY" --state open \
+            --search "Monitor diário falhou contra o ar in:title" --json number --jq length)
+          if [ "$abertas" = "0" ]; then
+            gh issue create --repo "$GITHUB_REPOSITORY" \
+              --title "Monitor diário falhou contra o ar ($(date -u +%Y-%m-%d))" \
+              --body "A rodada agendada de parity-variantes/link-check falhou contra o site publicado.
+
+          Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+
+          Lembrete do projeto: drift de painel não dispara push. Antes de mexer no código, conferir o painel da Nuvemshop e a CDN (variante, preço, foto, página fora do ar). Instrumento cego não vira veredito: ou se conserta o instrumento, ou se prova que o alarme é falso (00-COMECE-AQUI, regra 2)."
+          fi

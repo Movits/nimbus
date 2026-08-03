@@ -33,6 +33,7 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Onde a estampa fica em cada produto | [`verdades/placement.md`](verdades/placement.md) |
 | Qual arte é de qual produto e cor de tinta | [`verdades/artes-e-mapeamento.md`](verdades/artes-e-mapeamento.md) |
 | Quais são os 49 produtos e 78 variantes | [`verdades/catalogo.md`](verdades/catalogo.md) |
+| Tamanho mínimo de export de uma arte (300 DPI) | [`verdades/receita-export-300dpi.md`](verdades/receita-export-300dpi.md) |
 | **O que os instrumentos NÃO enxergam** | [`verdades/limites-conhecidos.md`](verdades/limites-conhecidos.md) |
 
 `decisoes/` guarda as decisões do dono, datadas. Elas valem até nova decisão dele.

@@ -17,6 +17,11 @@ prontos/
 Organizar/recortar: `node scripts/organize-designs.mjs` — lê `originais/`, auto-detecta o fundo
 (**verde** `#00B140` / **magenta** `#FF00FF` / xadrez), recorta, 300 DPI e separa por coleção.
 
+> ⚠️ **Tamanho de export PINADO (03/08/2026, P1-1c r4)**: arte nova nasce da fonte
+> com pixel para 300 DPI no maior uso (costas em pé = **4724 px de altura**);
+> régua completa em `docs/verdades/receita-export-300dpi.md`. O portão
+> `npm run producao:dpi300` devolve arquivo abaixo disso.
+
 ## Coleções ↔ código
 **G** STREET (graffiti) · **B/H** RELÍQUIA (blackletter + halftone) · **S** RELÍQUIA (barroco Brasil
 sacro, gerado no MAGENTA) · nomes "…-nuvem" = NUVEM · "logo-…" = _marca.
