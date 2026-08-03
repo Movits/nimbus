@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-02
+atualizado: 2026-08-03
 ---
 
 # Estado do projeto
@@ -286,6 +286,52 @@ CSS da loja, simula o que o painel faz (apagar o espaço depois do escape) e
 compara a string calculada pelo navegador nos dois casos. 14 escapes conferidos,
 zero divergem. **Este CSS não sobe por Git**: a Nuvemshop não faz deploy por
 repositório, e o dono cola em Loja online → Layout → Edição de CSS avançada.
+
+### O funil provado de ponta a ponta (03/08)
+
+**O teste 4 passou.** É a primeira prova real de que a sacola da vitrine e o
+carrinho da loja são o mesmo carrinho. Rodado pelo Cowork no navegador do dono,
+depois que o `cart.tpl` novo subiu por FTP:
+
+- Duas linhas no carrinho da loja, `(P, Preta)` e `(GG, Preta)`.
+- Removeu **só o P** pela gaveta da vitrine.
+- No carrinho da loja sobrou **só o GG**.
+
+O espelho mandou `pid` e `partes: ["gg","preta"]`, ou seja, o parser leu o
+`(GG, Preta)` direito. É exatamente onde a versão anterior falhava: sem as
+partes, a P e a GG do mesmo modelo colapsavam numa chave só e remover uma
+removia as duas.
+
+> [!warning] A remoção leva cerca de **15 segundos** depois de o carrinho
+> carregar. Quem conferir rápido demais conclui que falhou. O caminho é longo de
+> propósito: a vitrine grava o cookie `nimbus_sacola_alvo`, a loja carrega, o
+> `MutationObserver` do `cart.tpl` dispara com 600 ms de folga, o `aplicaAlvo`
+> chama `LS.removeItem`, e a loja redesenha a lista.
+
+**O que fecha o funil:** adicionar funciona nos 44 produtos (com portão
+automático desde 02/08) e remover atravessa os dois sites. Nada mais depende do
+FTP.
+
+### O CSS do rodapé, parado no último clique (03/08)
+
+O `ਐ` continua no ar. O Cowork chegou até o fim da colagem e parou no B4: achou
+o campo em **Layout → Editar layout atual → Edição de css avançada**, guardou o
+backup do conteúdo antigo (54.029 bytes) e carregou o CSS novo no campo, mas
+**o clique em "Publicar alterações" não salva quando feito por script**. No
+clique saem só chamadas de analytics, nenhuma com `css_code`. O painel roda em
+`nimbus40.lojavirtualnuvem.com.br`, domínio para o qual a extensão do navegador
+não tem permissão, então clique de verdade e screenshot são negados ali.
+
+Ele **não forçou um POST na mão**, e essa foi a decisão certa: seria mexer por
+baixo do aplicativo numa loja ativa sem enxergar o resultado. A regra fica.
+
+De quebra, ele confirmou a causa raiz que eu tinha deduzido: **o CSS guardado no
+painel não tem `\A10%`, tem o caractere gurmukhi já resolvido, cru.** O
+minificador comeu o escape e **gravou o caractere**. É a prova de que o
+`\00000A` de seis dígitos resolve, e de que recolar é mesmo o único caminho.
+
+Falta um clique: o do dono, ou o do Cowork com permissão para aquele domínio.
+Roteiro em `nuvemshop/cowork-publicar-css.md`.
 
 ## Capas
 

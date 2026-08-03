@@ -10,6 +10,10 @@
       "motivo": "Repositório PRIVADO. O GitHub responde 404 para quem não está autenticado, então o 404 aqui é o comportamento certo, não link morto. É o comando de clone do handoff."
     },
     {
+      "url": "https://github.com/Movits/nimbus-brain.git",
+      "motivo": "Repositório PRIVADO, mesmo caso do nimbus-assets: 404 sem autenticação é o comportamento certo. É o comando de clone do handoff, e foi este portão que pegou a URL quando ela entrou."
+    },
+    {
       "url": "https://nimbuswear.com.br/loja/nimbus-loja.css",
       "motivo": "O 404 É A PROVA. A página cita essa URL justamente para mostrar que o CSS do app privado nunca foi publicado, o que derruba a justificativa do ticket de onload na Nuvemshop."
     },
