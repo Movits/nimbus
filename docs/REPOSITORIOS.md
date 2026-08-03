@@ -1,23 +1,36 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-08-03
 ---
 
-# Os dois repositórios
+# Os três repositórios
 
 ```
 nimbus/          PÚBLICO   github.com/Movits/nimbus
 nimbus-assets/   PRIVADO   github.com/Movits/nimbus-assets
+nimbus-brain/    PRIVADO   github.com/Movits/nimbus-brain
 ```
 
-Clone os dois **lado a lado**. Os scripts procuram os assets em `../nimbus-assets`
-ou no caminho da variável `NIMBUS_ASSETS`.
+Clone os três **lado a lado**. Os scripts procuram os assets em `../nimbus-assets`
+ou no caminho da variável `NIMBUS_ASSETS`, e o `npm run docs:links` varre os três.
+
+> [!info] Atualizado em 2026-08-03: o `nimbus-brain` passou a ser citado aqui.
+> Ele existe desde julho, mas esta página só falava de dois repositórios, então
+> uma sessão nova que seguisse o roteiro de leitura não descobria que o segundo
+> cérebro do negócio existe.
 
 ## O que fica em cada um
 
 **Público** — código, documentação, medições, auditorias, receitas de composição
 (`*.receita.json`) e vereditos do gate (`qa-*.json`). Tudo que é texto e permite
 reproduzir.
+
+**`nimbus-brain`** — o segundo cérebro do **negócio**, não do código: wiki em
+markdown com calendário comercial e devocional, personas, precificação,
+concorrentes, decisões arquivadas e a pasta `financeiro/` com o dossiê do MEI.
+Ele tem schema próprio e obrigatório no `CLAUDE.md` da raiz dele; leia antes de
+escrever qualquer coisa lá. A divisão de trabalho é simples: **como se faz** mora
+no `nimbus/docs/`, **por que se faz e quando** mora no brain.
 
 **Privado** — o que é imagem e é a propriedade da marca:
 

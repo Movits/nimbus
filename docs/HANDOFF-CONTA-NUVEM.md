@@ -1,9 +1,19 @@
 ---
-status: vigente
-atualizado: 2026-07-26
+status: obsoleto
+atualizado: 2026-08-03
+substituido-por: HANDOFF-SESSAO.md
 ---
 
-# Handoff para a sessão na nuvem
+# Handoff para a sessão na nuvem (SUPERADO)
+
+> [!warning] Não cole este bloco. Use
+> [`HANDOFF-SESSAO.md`](HANDOFF-SESSAO.md).
+>
+> Este arquivo é de 26/07/2026 e o "estado em três frases" dele descreve um
+> projeto que mudou de eixo: desde então nasceram a vitrine própria, o funil com
+> a Nuvemshop, sete portões automáticos e um terceiro repositório. Colar isto
+> hoje entrega uma sessão desatualizada, que é exatamente o modo de falha que o
+> `CLAUDE.md` avisa. Fica como histórico.
 
 Cole o bloco abaixo como **primeira mensagem** da sessão nova. Ele é escrito para
 o agente, não para você.

@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-08-03
 ---
 
 # Comece aqui
@@ -79,3 +79,17 @@ foi aprovado por gate e reprovado pelo dono.
 
 Em [`ESTADO.md`](ESTADO.md), atualizado a cada sessão. Leia antes de agir: o
 estado é a única parte que envelhece rápido.
+
+---
+
+## Começando uma sessão do zero
+
+[`HANDOFF-SESSAO.md`](HANDOFF-SESSAO.md) é o bloco para colar como primeira
+mensagem de uma sessão nova: bootstrap dos três repositórios, roteiro de
+leitura, os portões, o estado em cinco frases, o rumo e a lista do que já foi
+aprendido na marra. Se você é a sessão nova e ninguém colou esse bloco, leia-o.
+
+## Área de impressão
+
+Quanto espaço a arte ocupa na peça, e por que isso muda a leitura de um gate,
+está em [`verdades/economia-do-espaco.md`](verdades/economia-do-espaco.md).
