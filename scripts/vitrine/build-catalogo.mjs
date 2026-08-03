@@ -46,7 +46,10 @@ const ROTULO = { STREET: "STREET", RELIQUIA: "RELÍQUIA", NUVEM: "NUVEM" };
 const ORDEM_TAM = ["Único", "P", "M", "G", "GG", "EG"];
 
 function lerCsv(arquivo) {
-  const texto = fs.readFileSync(arquivo, "utf-8");
+  // \r\n vira \n também DENTRO de campo entre aspas: no Windows o git entrega
+  // os CSV com CRLF e, sem isto, o \r vazava para descricao_html e o catálogo
+  // gerado divergia por plataforma (visto em 03/08).
+  const texto = fs.readFileSync(arquivo, "utf-8").replace(/\r\n/g, "\n");
   const linhas = [];
   let campo = "", linha = [], dentro = false;
   for (let i = 0; i < texto.length; i++) {
