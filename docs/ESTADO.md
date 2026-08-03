@@ -607,6 +607,13 @@ invalidada que estava sem aviso nenhum. `docs/` passou a ser roteado por tarefa.
 
 ## Suspeitas abertas
 
+- **GA4 NA LOJA: NO AR (03/08, à noite).** Com a vitrine nova publicada (UTMs
+  internos neutralizados em produção, deploy verde após o conserto do hash
+  reprodutível), o `G-E041S3ZHWB` foi colado no campo nativo de Códigos
+  externos do painel e confirmado 3x no HTML servido da home da loja e do
+  `/comprar/`. O funil inteiro mede na mesma propriedade. Restam do P0-1: o
+  cross-domain + exclusão de referral no admin do GA4 (Google do dono) e o
+  pedido-teste (só o dono executa pedido).
 - **Campo dos 10% no checkout: RESOLVIDO como falso alarme (03/08, à noite).**
   A sessão tinha registrado "não existe campo" olhando só a 1ª tela do
   checkout. Conferido depois nas Opções do checkout do painel: o campo
