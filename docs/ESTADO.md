@@ -437,6 +437,34 @@ mudam comportamento:
   publicação por API que pode voltar a servir) e
   `arquivo/2026-08-01-sacola-nome-normalizado`.
 
+### Conselho, 4ª rodada (03/08): consenso pleno em duas votações
+
+Convocado pelo dono com regra nova: rodadas de votação até consenso pleno.
+Mesma bancada da r3 (14 membros + presidência de Helena Vasquez), todos com
+visita real ao site no ar. Pergunta da rodada: o que fechar ANTES de (a) abrir
+a frente de estampas da NUVEM e (b) mandar tráfego em 29/09 e 12/10. Primeira
+votação: 11 aprovar + 3 ressalvas (Falcão, Clara, Renata); os três ajustes
+foram incorporados integralmente e a segunda votação fechou **14 a 0**.
+
+**Pauta: 14 itens — 4 P0 bloqueadores de tráfego, 7 P1 amarrados à frente
+NUVEM, 3 P2 condicionados.** Os P0: (1) GA4 na loja com cross-domain e UTMs
+internos neutralizados, na ordem certa — hoje o funil morre sem medição no
+domínio pagante; (2) lote único de painel: nome empresarial + CNPJ no rodapé
+da loja, banner sem termo banido, Projetos Sociais em voz única com o
+/loja/impacto/, e o furo do índice (a loja indexável enquanto a vitrine tem
+noindex); (3) verdade nas promessas do ponto de decisão: nota da galeria
+condicionada a foto real, parcelamento "12x" qualificado (o gateway cobra
+16,65% a 23,44% da 2ª parcela em diante), lembrete do cupom ECOBAG no
+/comprar/ via cart.tpl, e três linhas de conformidade (controlador na
+privacidade, "devolvemos tudo o que você pagou" nas trocas); (4) margem de
+contribuição por peça, teto de CAC e orçamento de mídia por escrito. A frente
+NUVEM segue LIBERADA, mas nasce com portão de três condições (P1-1 a+b+c:
+lints da NUVEM ativos, escopo do piloto commitado, tabela de medidas nas PDPs
+quitada). **Sete perguntas aguardam o dono** (painel, data das fotos, margem,
+print do campo dos 10%, Acutis até 12/10, carta do fundador, roteiro do pedido
+pago). Ata completa em
+`nuvemshop/auditoria/2026-08-03-conselho-vitrine-r4/ata-conselho-vitrine-r4.md`.
+
 ## Capas
 
 **77 das 78 variantes existem em disco.** A 78ª é a Ecobag, mantida de propósito
