@@ -200,9 +200,19 @@ NIMBUS.sacola = (function () {
 NIMBUS.gaveta = (function () {
   let raiz = null;
   let ultimoFoco = null;
-  // existe UMA ecobag no catálogo; prometer "a arte que você quiser" seria
-  // oferecer escolha que não existe
-  const ECOBAG = { nome: "Ecobag NIMBUS Wildstyle", url: "/loja/p/wildstyle/" };
+  // Ecobags do catálogo, embutidas pelo build no rodapé (#ecobags-dados): a
+  // celebração mostra as opções reais, com id, preço e foto do catalogo.json,
+  // nada duplicado aqui. Hoje existe UMA; prometer "a arte que você quiser"
+  // seria oferecer escolha que não existe.
+  const ECOBAGS = (function () {
+    try {
+      const el = document.getElementById("ecobags-dados");
+      const lista = el ? JSON.parse(el.textContent) : [];
+      return Array.isArray(lista) ? lista : [];
+    } catch (e) { return []; }
+  })();
+  // fallback para página sem o embed (ex.: HTML antigo em cache)
+  const ECOBAG = ECOBAGS[0] || { nome: "Ecobag NIMBUS Wildstyle", url: "/loja/p/wildstyle/" };
 
   function ga4(nome, params) {
     if (typeof window.gtag !== "function") return;
@@ -222,6 +232,101 @@ NIMBUS.gaveta = (function () {
     if (!vivo) return;
     vivo.textContent = "";
     setTimeout(() => { vivo.textContent = texto; }, 60);
+  }
+
+  // --- celebração da meta -----------------------------------------------
+  // A "festa" pedida pelo dono em 31/07, ampliada no P0-3 do conselho r4
+  // (decisão do dono, 03/08): ao cruzar a meta, parabeniza citando o frete
+  // grátis E a Ecobag de brinde, e mostra as Ecobags do catálogo com foto e
+  // botão de adicionar dali mesmo. A instrução do cupom segue também na régua.
+  function adicionaEcobag(eco) {
+    // Mesmo POST do formulário oficial da PDP (add_to_cart + variation[] +
+    // quantity), para um iframe oculto: o carrinho da loja segue sendo a
+    // verdade do que será cobrado; o espelho local só acompanha.
+    let sink = document.getElementById("sacola-sink");
+    if (!sink) {
+      sink = document.createElement("iframe");
+      sink.id = "sacola-sink";
+      sink.name = "sacola-sink";
+      sink.hidden = true;
+      document.body.appendChild(sink);
+    }
+    const form = document.createElement("form");
+    form.method = "post";
+    form.action = urlCarrinho();
+    form.target = "sacola-sink";
+    form.hidden = true;
+    [["add_to_cart", eco.id], ["variation[0]", eco.cor], ["quantity", "1"]].forEach(function (par) {
+      const inp = document.createElement("input");
+      inp.type = "hidden";
+      inp.name = par[0];
+      inp.value = par[1];
+      form.appendChild(inp);
+    });
+    document.body.appendChild(form);
+    form.submit();
+    form.remove();
+    NIMBUS.sacola.soma({ slug: eco.slug, nome: eco.nome, cor: eco.cor, tamanho: null, peca: "Ecobag", pid: eco.id, preco: eco.preco || 0, img: eco.img || null });
+    ga4("add_to_cart", { value: eco.preco || 0, items: [{ item_id: eco.slug, item_name: eco.nome, item_variant: eco.cor, price: eco.preco, quantity: 1 }] });
+    anuncia(eco.nome + " na sacola. No checkout, o cupom ECOBAG tira o valor dela do pedido.");
+    // o botão clicado saiu do DOM na re-renderização: o foco volta ao painel
+    if (!raiz.contains(document.activeElement)) raiz.querySelector(".gaveta__painel").focus();
+  }
+  function cardEcobag(eco) {
+    const card = document.createElement("div");
+    card.className = "gaveta__brinde";
+    const foto = document.createElement("a");
+    foto.className = "gaveta__brinde-foto";
+    foto.href = eco.url;
+    foto.tabIndex = -1; // o link do nome já leva à PDP; a foto não duplica o Tab
+    foto.setAttribute("aria-hidden", "true");
+    const img = document.createElement("img");
+    img.src = eco.img;
+    img.alt = "";
+    img.width = 48;
+    img.height = 48;
+    img.loading = "lazy";
+    foto.appendChild(img);
+    const info = document.createElement("div");
+    info.className = "gaveta__brinde-info";
+    const nome = document.createElement("a");
+    nome.href = eco.url;
+    nome.textContent = eco.nome;
+    const preco = document.createElement("span");
+    preco.textContent = eco.preco_formatado;
+    info.append(nome, preco);
+    const bt = document.createElement("button");
+    bt.type = "button";
+    bt.className = "gaveta__brinde-add";
+    bt.textContent = "Adicionar";
+    bt.setAttribute("aria-label", "Adicionar " + eco.nome + " à sacola");
+    bt.addEventListener("click", function () { adicionaEcobag(eco); });
+    card.append(foto, info, bt);
+    return card;
+  }
+  function renderizaFesta(celebra, temEco) {
+    const festa = raiz.querySelector(".gaveta__festa");
+    const estado = !celebra ? "" : temEco ? "com-ecobag" : "oferta";
+    if ((festa.dataset.estado || "") === estado) return;
+    const antes = festa.dataset.estado || "";
+    festa.dataset.estado = estado;
+    festa.hidden = !celebra;
+    festa.innerHTML = "";
+    if (!celebra) return;
+    festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) +
+      "<p><b>Parabéns!</b> Seu pedido ganhou frete grátis e uma Ecobag de brinde.</p>";
+    if (estado === "oferta" && ECOBAGS.length) {
+      const como = document.createElement("p");
+      como.className = "gaveta__brinde-como";
+      como.textContent = "Adicione a sua por aqui mesmo. No checkout, o cupom ECOBAG tira o valor dela do pedido.";
+      festa.appendChild(como);
+      for (const eco of ECOBAGS) festa.appendChild(cardEcobag(eco));
+    }
+    // leitor de tela recebe a mesma festa (padrão aria-live da gaveta)
+    if (antes === "") {
+      anuncia("Parabéns! Seu pedido ganhou frete grátis e uma Ecobag de brinde." +
+        (estado === "oferta" && ECOBAGS.length ? " Dá para adicionar a Ecobag pela própria sacola." : ""));
+    }
   }
 
   function monta() {
@@ -350,12 +455,8 @@ NIMBUS.gaveta = (function () {
       ? "<b>Frete grátis garantido.</b> Use o cupom <b>ECOBAG</b> no checkout: uma das suas Ecobags sai de graça."
       : '<b>Frete grátis garantido.</b> Falta levar a Ecobag: <a href="' + ECOBAG.url + '">' + ECOBAG.nome + "</a>. No checkout, o cupom <b>ECOBAG</b> tira o valor dela do pedido.";
     else meta.textContent = "Faltam " + NIMBUS.reais(META - prog) + " para frete grátis e uma Ecobag de brinde.";
-    // a festa comemora em uma frase; a instrução do cupom mora só na régua
-    const festa = raiz.querySelector(".gaveta__festa");
-    festa.hidden = !(itens.length && prog >= META);
-    if (!festa.hidden && !festa.innerHTML) {
-      festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) + "<p>Seu pedido ganhou frete grátis e uma Ecobag de presente.</p>";
-    }
+    // a celebração da meta: parabéns + oferta da Ecobag (ver renderizaFesta)
+    renderizaFesta(!!itens.length && prog >= META, temEco);
     // fechamento: subtotal e o que acontece com o frete
     raiz.querySelector(".gaveta__subtotal").textContent = NIMBUS.reais(total);
     const frete = raiz.querySelector(".gaveta__frete");

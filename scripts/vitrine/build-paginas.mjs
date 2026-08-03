@@ -95,6 +95,15 @@ const header = () => `
   </div>
 </header>`;
 
+// A celebração da gaveta (ui.js) oferece as Ecobags do catálogo com foto e
+// botão de adicionar (P0-3 do conselho r4, decisão do dono em 03/08). Os dados
+// saem daqui, do catalogo.json, para o ui.js não duplicar id, preço nem foto.
+const ECOBAGS = cat.produtos.filter((p) => p.peca === "Ecobag").map((p) => ({
+  slug: p.slug, id: p.id, nome: p.nome, cor: p.opcoes.cores[0] || "",
+  preco: p.preco, preco_formatado: p.preco_formatado,
+  img: p.imagens.capa, url: `${PREFIXO}/p/${p.slug}/`,
+}));
+
 // réplica do rodapé da loja publicada: corpo claro com borda dourada, colunas
 // com título serif, faixa legal navy. Tagline idêntica à da loja.
 const footer = () => `
@@ -110,7 +119,8 @@ const footer = () => `
   <div class="footer__legal">
     <span>© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF · nimbuswear.com.br</span>
   </div>
-</footer>`;
+</footer>
+<script type="application/json" id="ecobags-dados">${JSON.stringify(ECOBAGS)}</script>`;
 
 const card = (p) => `
 <a class="card reveal" href="${PREFIXO}/p/${p.slug}/" data-peca="${esc(p.peca)}" data-preco="${p.preco}">

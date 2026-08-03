@@ -503,7 +503,9 @@
 .gaveta__nota { font-size: 0.74rem; color: #66748a; margin: 0.8em 0 0; }
 .gaveta__esvazia { background: none; border: 0; padding: 0; color: #66748a; text-decoration: underline; cursor: pointer; font-size: 0.74rem; }
 /* festa ao cruzar o teto: confetes discretos nas cores da casa */
-.gaveta__festa { position: relative; margin: 1em 1.3em 0; background: #fff; border: 1px solid var(--gold); border-radius: 14px; padding: 1em 1.2em; overflow: hidden; }
+/* flex-shrink 0: com o card da Ecobag dentro, o painel encolhia a festa em
+   tela baixa e o overflow:hidden cortava o botão de adicionar (visto 03/08) */
+.gaveta__festa { position: relative; flex-shrink: 0; margin: 1em 1.3em 0; background: #fff; border: 1px solid var(--gold); border-radius: 14px; padding: 1em 1.2em; overflow: hidden; }
 .gaveta__festa p { position: relative; z-index: 1; margin: 0; font-size: 0.88rem; color: var(--deep); }
 .gaveta__confete {
   position: absolute; top: -10px; width: 7px; height: 7px; border-radius: 2px;
@@ -526,6 +528,29 @@
   0% { transform: translateY(0) rotate(0); opacity: 1; }
   100% { transform: translateY(110px) rotate(340deg); opacity: 0; }
 }
+@media (prefers-reduced-motion: reduce) {
+  .gaveta__confete { animation: none; opacity: 0; }
+}
+/* a celebração oferece as Ecobags do catálogo: card com foto + adicionar
+   (P0-3 do conselho r4, decisão do dono em 03/08) */
+.gaveta__festa .gaveta__brinde-como { position: relative; z-index: 1; margin: 0.5em 0 0; font-size: 0.8rem; color: #5b6779; }
+.gaveta__brinde {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 48px 1fr auto; gap: 0.7em; align-items: center;
+  margin-top: 0.7em; padding: 0.55em 0.6em;
+  border: 1px solid var(--line); border-radius: 11px; background: var(--cloud);
+}
+.gaveta__brinde-foto img { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; border: 1px solid var(--line); }
+.gaveta__brinde-info { display: grid; gap: 0.1em; min-width: 0; }
+.gaveta__brinde-info a { font-size: 0.84rem; font-weight: 600; color: var(--deep); text-decoration: none; }
+.gaveta__brinde-info a:hover { text-decoration: underline; }
+.gaveta__brinde-info span { font-size: 0.78rem; color: #5b6779; font-variant-numeric: tabular-nums; }
+.gaveta__brinde-add {
+  min-height: 34px; padding: 0.45em 1em; border: 0; border-radius: 999px;
+  background: var(--deep); color: #fff; font-weight: 600; font-size: 0.8rem; cursor: pointer;
+  transition: box-shadow 0.18s ease, transform 0.18s ease;
+}
+.gaveta__brinde-add:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(11, 35, 96, 0.28); }
 .sacola-aviso a, .sacola-aviso button { grid-row: 1; grid-column: 2; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
 .sacola-aviso__frete { grid-column: 1 / -1; font-size: 0.8rem; opacity: 0.85; }
 .opcao__valor { font-weight: 400; text-transform: none; letter-spacing: 0.02em; color: var(--ink); margin-left: 0.5em; }
