@@ -374,11 +374,20 @@ com espaço, como a vitrine (a referência) sempre exibiu; e **o CSS se cola por
 último** em qualquer sessão de tema. Colagem final verificada persistida no
 editor; vigia esperando o cache drenar.
 
-**Fora do alcance por login (fica com o dono)**: o GA4 da NIMBUS vive no Google
-da `nimbuswearbr@gmail.com` (o Chrome atual só tem o Google pessoal, com outra
-propriedade que não foi tocada) — cross-domain espera esse login; e o
-Peticionamento Eletrônico do INPI voltou ao ar e parou no formulário de login
-(e-INPI/gov.br), pronto para a GRU do 389 assim que o dono logar.
+**GA4 cross-domain: FEITO (04/08, manhã).** O dono conectou um segundo Chrome
+logado no Google da `nimbuswearbr@gmail.com` ("Home - Nimbus"); na propriedade
+Nimbus (fluxo `G-E041S3ZHWB`, coleta ativa nas últimas 48h), a vinculação de
+vários domínios foi configurada e verificada persistida: `nimbuswear.com.br`
+(exata) + `loja.nimbuswear.com.br` (contém). Referral entre os dois já é
+ignorado por padrão (mesmo domínio raiz). Do P0-1 resta só o pedido-teste no
+DebugView, que é do dono por regra (a sessão não executa pedido). Pendência
+menor de P1-5: filtro de IP interno (Definir o tráfego interno, 1 minuto,
+precisa do IP do dono).
+
+**INPI: parou no degrau do cadastro.** O dono logou via GOV.BR, mas o sistema
+acusou "Usuário não cadastrado no e-INPI" — o cadastro é conta dele (a sessão
+não cria contas por regra). Assim que ele se cadastrar (de preferência pelo
+CNPJ do MEI, que dá o desconto de 50%), a GRU do 389 sai na hora.
 
 ### A sessão que quase se perdeu, e os portões no Windows (03/08)
 
