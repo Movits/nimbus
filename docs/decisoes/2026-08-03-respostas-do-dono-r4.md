@@ -63,3 +63,24 @@ está no site** SE as duas camisetas oversized (preta e off-white) também
 existirem como produtos próprios na loja — **mas remover a foto duplicada** da
 galeria (há duas fotos da mesma camiseta preta). Verificação e remoção
 autorizadas.
+
+## Adendo de 04/08, madrugada: decisões tomadas pela sessão por delegação
+
+O dono ordenou: "não precisa ficar me perguntando... faça tudo o que você achar
+que tem que fazer". As três decisões de calendário que estavam com ele foram
+tomadas pela sessão, revisáveis por ele a qualquer momento:
+
+1. **Acutis em 12/10: CONTEÚDO, sem arte nova.** Fundamento: a ordem vigente do
+   próprio dono (01/08) é terminar as coleções existentes antes de desenhar
+   coisa nova, começando pela NUVEM; a arte do Acutis seria STREET nova e
+   furaria a fila. Se o dono quiser furar, precisa decidir até ~28/08.
+2. **Linha infantil em 2026: NÃO.** Não há peça infantil no catálogo nem
+   confirmação de que a produção POD atual faz infantil. O Dia das Crianças
+   entra como ângulo de conteúdo ("presenteie quem você ama" na campanha de
+   12/10), não como oferta. Avaliar linha infantil para 2027.
+3. **Janelas de 29/09 e 12/10: venda ORGÂNICA + conteúdo, sem tráfego pago.**
+   Os P0 do conselho já travam mídia paga até medição e margem fechadas, e as
+   fotos com modelo não têm data (aguardam amostras IzzyPrint). A campanha da
+   Quaresma de São Miguel (15/08 a 29/09) roda com os produtos existentes e o
+   dono como rosto; se as fotos saírem até ~28/08, o tráfego pago de 12/10
+   reabre como decisão.
