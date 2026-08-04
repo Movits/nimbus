@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-03
+atualizado: 2026-08-04
 ---
 
 # Estado do projeto
@@ -510,6 +510,30 @@ substituído por instrumentação completa e validada (tag na loja + cross-domai
 Pendências de painel/admin do P1-5 (sessão do P0-1/P0-2): filtro de IP do
 dono, annotation do período pré-lançamento e evidência arquivada em
 `nuvemshop/auditoria/`.
+
+### Carta do fundador no repo e Projetos Sociais em voz única (04/08, madrugada)
+
+- **P2-1 executado na parte que não depende de material**: a carta do fundador,
+  escrita a pedido do dono (pergunta 6 da r4) e **APROVADA por ele em 03/08**,
+  virou a institucional `/loja/manifesto/` no `INSTITUCIONAIS` do
+  `build-paginas.mjs` (texto verbatim; sem foto e sem Instagram pessoal por
+  ora, decisão do dono). CTA "O manifesto" do hero, link do header e do footer
+  deixaram de gastar o clique na landing e apontam para a página; o
+  `nuvemshop/pagina-sobre.html` do kit ganhou o link de volta (com `ref=loja`).
+  A página respeita `VITRINE_INDEXAVEL`: entra no sitemap só quando a vitrine
+  abrir ao índice. Restam do item: a foto, se o dono quiser, e a recolagem do
+  Sobre no painel (lote do P0-2).
+- **P0-2c pronto para recolar**: `nuvemshop/pagina-projetos-sociais.html`
+  reescrita na voz do `/loja/impacto/`: o que chamamos de lucro, repasse
+  mensal, comprovante no Diário de Repasses (2 links para a página do impacto,
+  com `ref=loja`) e a mecânica REAL conferida no painel em 03/08: o cliente
+  escreve o projeto no campo "Mensagem do cliente" do checkout. Zero
+  "Divulgaremos periodicamente", zero "campo com três opções". Os três projetos
+  e o "outro que você indicar" continuam; grid e modais preservados (as classes
+  vivem no CSS do painel). A recolagem é do lote de painel do P0-2.
+- Portões completos verdes no Windows: typecheck, `vitrine` e
+  `vitrine:portoes` inteiro (lint-copy, claims, tokens, links, variantes 44/44,
+  nuvem, tracking, dpi300, docs:links, loja:css), exit 0.
 
 ## Capas
 
