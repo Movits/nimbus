@@ -352,6 +352,34 @@ CSS GRAVADO tem 50.736 caracteres, contém `\00000A10% do lucro` e **zero**
 horas); enquanto ele não drena, o HTML servido ainda mostra o caractere velho.
 Conferir depois: home, `/produtos/wildstyle/` e `/comprar/` com Ctrl+F5.
 
+### O lote de painel executado, e a terceira mordida do pipeline (04/08, madrugada)
+
+Com o Chrome conectado, a sessão executou o lote de painel completo: **menus**
+(10 URLs de `utm_source` para `ref=loja`, principal e rodapé), **página
+Projetos Sociais recolada** em voz única (mecânica real do campo "Mensagem do
+cliente", Diário de Repasses linkado; verificado no HTML servido), **página
+Sobre recolada** (com a regra nova do dono: nada de conversa de estoque/POD —
+"Feita no Brasil" e prazo na página do produto; carta do fundador linkada),
+**banner** "Produção sob demanda" trocado por "Acabamento premium, do desenho à
+entrega" (no ar), e **CSS do rodapé recolado**.
+
+**Descoberta que muda a doutrina do CSS**: mesmo com a fonte correta
+(` 00A`), a loja serviu `ਐ` e `¬`. O pipeline do painel, além de comer o
+espaço delimitador, REMOVE OS ZEROS À ESQUERDA do escape, e a publicação de
+QUALQUER seção do editor de tema regrava o formulário inteiro (a publicação do
+banner reverteu a colagem de CSS da véspera). Conclusões gravadas no
+`verifica-css-loja.mjs` (simulação com as duas mordidas): **escape seguido de
+caractere hexadecimal é inusável**; a tagline do rodapé virou frase corrida
+com espaço, como a vitrine (a referência) sempre exibiu; e **o CSS se cola por
+último** em qualquer sessão de tema. Colagem final verificada persistida no
+editor; vigia esperando o cache drenar.
+
+**Fora do alcance por login (fica com o dono)**: o GA4 da NIMBUS vive no Google
+da `nimbuswearbr@gmail.com` (o Chrome atual só tem o Google pessoal, com outra
+propriedade que não foi tocada) — cross-domain espera esse login; e o
+Peticionamento Eletrônico do INPI voltou ao ar e parou no formulário de login
+(e-INPI/gov.br), pronto para a GRU do 389 assim que o dono logar.
+
 ### A sessão que quase se perdeu, e os portões no Windows (03/08)
 
 **O PR #52 estava em RASCUNHO e nunca tinha sido mesclado.** O handoff da sessão
