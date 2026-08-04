@@ -47,9 +47,15 @@ const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "nuvemshop");
 // partir de fonte com escape curto reintroduziria o bug que este portão mata.
 const ARQUIVOS = /^css-nimbus-.*-2026-07-(16|17|20)\.css$/;
 
-/** O que o painel faz com o CSS colado: minifica e come o espaço que delimita o
- *  escape. Escape de 6 dígitos não tem espaço, então passa intacto. */
-const comoOPainelEntrega = (css) => css.replace(/\\([0-9A-Fa-f]{1,5}) /g, "\\$1");
+/** O que o painel faz com o CSS colado, MEDIDO em produção (03-04/08): além de
+ *  comer o espaço que delimita o escape, ele TAMBÉM remove os zeros à esquerda
+ *  (\00000A vira \A), então até o escape de 6 dígitos gruda no que vem depois
+ *  quando o próximo caractere é hexadecimal (\00000A10 servido como ਐ, e
+ *  \00000AC como ¬). Conclusão gravada aqui: escape seguido de hex é inusável
+ *  neste pipeline; quebra de linha antes de dígito vira espaço e texto corrido. */
+const comoOPainelEntrega = (css) => css
+  .replace(/\\([0-9A-Fa-f]{1,5}) /g, "\\$1")
+  .replace(/\\0+([0-9A-Fa-f])/g, "\\$1");
 
 const chromiumDaNuvem = "/opt/pw-browsers/chromium";
 const navegador = await chromium.launch({

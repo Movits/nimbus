@@ -1,3 +1,4 @@
+/* NIMBUS 04/08: quebras de linha por escape sao inusaveis no pipeline do painel (ver scripts/verifica-css-loja.mjs); camada aposentada, lista em linha unica. */
 /* Ajustes de identidade visual + limpeza de branding Nuvemshop (2026-07-20) */
 
 /* Header: garantir paleta azul clara e alinhamentos */
@@ -161,7 +162,7 @@ html body footer.js-footer .js-footer-col-sticky::before {
 html body footer.js-footer .js-footer-col-sticky::after {
   display: block !important;
   color: #294776 !important;
-  content: "Trocas e devoluções\00000AEnvios e prazos\00000AFale com a NIMBUS" !important;
+  content: "Trocas e devoluções Envios e prazos Fale com a NIMBUS" !important;
   font-size: 15px !important;
   line-height: 1.85 !important;
   white-space: pre-line !important;
