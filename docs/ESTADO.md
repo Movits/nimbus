@@ -384,10 +384,15 @@ DebugView, que é do dono por regra (a sessão não executa pedido). Pendência
 menor de P1-5: filtro de IP interno (Definir o tráfego interno, 1 minuto,
 precisa do IP do dono).
 
-**INPI: parou no degrau do cadastro.** O dono logou via GOV.BR, mas o sistema
-acusou "Usuário não cadastrado no e-INPI" — o cadastro é conta dele (a sessão
-não cria contas por regra). Assim que ele se cadastrar (de preferência pelo
-CNPJ do MEI, que dá o desconto de 50%), a GRU do 389 sai na hora.
+**INPI: GRU EMITIDA (04/08).** O dono completou o cadastro e-INPI pelo CNPJ do
+MEI (razão social `53.977.834 ROBERTO FRANCA ALAGEMOVITS`, conferida na
+Receita) e gerou a guia guiado pela sessão: serviço **389** (pedido de
+registro de marca com especificação pré-aprovada), **1 classe** (a 25),
+**Nosso Número `29409172362116399`**. Aguarda o pagamento do dono (conferir
+R$440 no boleto antes de pagar; sem reembolso em caso de indeferimento,
+decisão NIMBUS-primeiro ciente do risco). Depois de paga e compensada, o
+protocolo do pedido em si é feito no Peticionamento com esse Nosso Número:
+marca NOMINATIVA "NIMBUS", classe 25, especificação pré-aprovada de vestuário.
 
 ### A sessão que quase se perdeu, e os portões no Windows (03/08)
 
