@@ -96,7 +96,7 @@ const header = () => `
     <a href="${PREFIXO}/c/nuvem/">Nuvem</a>
   </nav>
   <div class="header__tools">
-    <a href="https://nimbuswear.com.br/" data-manifesto>Manifesto</a>
+    <a href="${PREFIXO}/manifesto/" data-manifesto>Manifesto</a>
     <a class="header__cta" href="${esc(SACOLA)}" data-abre-sacola>Sacola<span class="sacola-n" data-sacola-n hidden></span></a>
   </div>
 </header>`;
@@ -118,7 +118,7 @@ const footer = () => `
     <div class="footer__grid">
       <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
       <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA)}" data-abre-sacola>Sacola</a></div>
-      <div><h4>Nimbus</h4><a href="https://nimbuswear.com.br/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
+      <div><h4>Nimbus</h4><a href="${PREFIXO}/manifesto/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
       <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
     </div>
   </div>
@@ -153,7 +153,7 @@ ${header()}
       <p class="lede reveal in" style="margin-top:1em">Streetwear católico premium, desenhado e produzido no Brasil. Fé que se veste bem.</p>
       <div class="hero__cta reveal in">
         <a class="btn btn--primary" href="#colecoes">Ver as coleções</a>
-        <a class="btn btn--ghost" href="https://nimbuswear.com.br/">O manifesto</a>
+        <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">O manifesto</a>
       </div>
     </div>
   </section>
@@ -418,6 +418,19 @@ ${footer()}
 </body></html>`;
 
 const INSTITUCIONAIS = {
+  // P2-1 do conselho r4: a carta do fundador, escrita a pedido do dono
+  // (pergunta 6) e APROVADA por ele em 03/08. Texto verbatim: não editar sem
+  // nova aprovação. Sem foto por ora (decisão do dono); o link do impacto só
+  // envolve palavras que já estavam na carta. CTA do hero, header e footer
+  // apontam para cá desde a mesma data (antes gastavam o clique na landing).
+  manifesto: ["O manifesto", "A carta do fundador da NIMBUS: por que a marca existe, no nome de quem a faz.", `
+    <p class="lede">Eu me chamo Roberto. A NIMBUS nasceu de uma vontade simples: vestir a fé com a mesma dignidade com que ela me veste.</p>
+    <p>Cresci vendo fé por todo lado neste país: nas igrejas, nos muros, nas pessoas. A NIMBUS junta esses mundos: santos e símbolos da nossa devoção, desenhados com estudo e feitos no Brasil, com acabamento que respeita o que eles significam.</p>
+    <p>Reverência não é sussurro. Dá para amar a tradição e vestir a rua.</p>
+    <p>E porque fé que não serve ao próximo é só pano, <a href="${PREFIXO}/impacto/">10% do lucro</a> de cada pedido vai para um projeto social que você escolhe. Com repasse mensal e comprovante publicado, porque promessa sem prova não entra nesta casa.</p>
+    <p>A NIMBUS é pequena. Sou eu e quem caminha comigo. Se você chegou até aqui, já faz parte.</p>
+    <p>Acima de tudo, obrigado.</p>
+    <p><b>Roberto, fundador da NIMBUS</b></p>`],
   impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
     <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe no checkout. Esta página explica o que isso significa, sem letra miúda.</p>
     <h2>O que chamamos de lucro</h2>
