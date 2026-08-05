@@ -395,7 +395,7 @@ CORREÇÃO IMPORTANTE: marca NÃO se protocola no Peticionamento Eletrônico (el
 rejeita a GRU com "não corresponde a um serviço disponível") — o módulo certo
 é o **e-Marcas**, em `gru.inpi.gov.br/emarcas/`. Ver seção da noite abaixo.
 
-### A quarta e a quinta camada da cebola do rodapé, e o e-Marcas (04/08, noite)
+### A cebola do rodapé descascada até o fim, e o e-Marcas (04/08, noite)
 
 **INPI: formulário preenchido até a tela final de conferência, aguardando o
 "protocola" do dono.** No e-Marcas (sessão logada do dono; login é sempre
@@ -413,28 +413,30 @@ persiste no servidor amarrado à GRU (sobreviveu a reinício da máquina), mas
 largura sozinho, então clique por coordenada erra — clique por ref
 (find/form_input) acerta.
 
-**A colagem "verificada" da madrugada NÃO estava mais no painel à noite.** O
+**RODAPÉ CONSERTADO NO AR (05/08, ~01:10 UTC), e a causa raiz de verdade.** O
 dono desconfiou do "é cache" (a mudança era da véspera) e mandou checar de
-novo — com razão. Cadeia de evidência: o `Age` do Cloudflare mostrou a home
-renderizada pela ORIGEM às 14:28 já quebrada (bem depois da colagem); o
-textarea do painel, interrogado por checksum (sem exfiltrar texto, o DLP
-morde), guardava **54.008 caracteres em formato embelezado com `ਐ` LITERAL**
-— uma publicação de formulário velho regravou a seção depois da madrugada (a
-QUARTA mordida: qualquer aba/sessão antiga do editor de tema que publique
-depois ressuscita o CSS velho dela). Recolagem pelo caminho novo: arquivo
-canônico → `Set-Clipboard` → **Ctrl+V real** no textarea → checksum do campo
-idêntico ao arquivo módulo CRLF→LF (`48be956e`) → Publicar alterações →
-**releitura após reload frio confirmou persistido**. Doutrina nova:
-verificação de colagem só vale **após reload completo do editor**, e qualquer
-publicação de tema posterior exige re-verificar o CSS.
-
-**A QUINTA camada**: mesmo com o painel certo e re-verificado, uma página
-DYNAMIC (busca com termo aleatório, `cf-cache-status: DYNAMIC`, que não passa
-pelo cache de borda) ainda saiu com o bloco velho — **a origem memoiza a
-configuração do tema com TTL próprio**. Vigia de 2 em 2 min no ar esperando a
-origem virar. A home tem `s-maxage=86400`: o Cloudflare pode segurar a cópia
-velha até ~14:28 de 05/08 mesmo com a origem já certa. **Prova pública de CSS
-se colhe em página DYNAMIC (`/search/?q=aleatorio`), nunca na home.**
+novo — com razão: NÃO era cache. Cadeia de evidência: o `Age` do Cloudflare
+mostrou a home renderizada pela ORIGEM às 14:28 já quebrada; o textarea do
+painel, interrogado por checksum (sem exfiltrar texto, o DLP morde), guardava
+**54.008 caracteres em formato embelezado com `ਐ` LITERAL** — o CSS velho.
+**Causa raiz, provada pela rede**: o botão "Publicar alterações" do editor de
+tema **é um no-op quando o formulário não está sujo** — sem `form-dirty`, o
+clique dispara só analytics, nenhum POST de gravação (o Cowork tinha visto
+isso em 03/08 e a doutrina se perdeu). Pior: **o textarea guarda rascunho
+local que sobrevive a reload na MESMA aba**, então "recarreguei e o valor
+persistiu" é MIRAGEM — foi assim que a colagem da madrugada passou por
+verificada sem nunca ter sido publicada, e a regravação velha atribuída a uma
+"quarta mordida" era simplesmente o publicado real, intocado desde a mordida
+do banner. O fluxo que grava de verdade, medido hoje: colar (Ctrl+V real, via
+`Set-Clipboard`; checksum do campo = arquivo módulo CRLF→LF, `48be956e`) →
+**Testar CSS** (suja o formulário) → **Publicar alterações** → conferir na
+rede o **`POST /admin/themes/settings/active/` com 200**. Minutos depois a
+página DYNAMIC (`/search/?q=aleatorio`, não passa pela borda) serviu
+"Brasil. 10% do lucro" sem `ਐ`, e a home foi re-renderizada limpa
+(`cf-cache-status: MISS`) — a publicação real invalida o cache. **Doutrina
+consolidada: colagem só está entregue com o POST 200 visto na rede E a
+página DYNAMIC servindo o conteúdo novo; verificação dentro do editor não
+prova nada.**
 
 **Meta-mordida**: este próprio ESTADO continha um byte NUL onde se lia
 `\00000A` — alguma escrita anterior interpretou `\000` como octal e gravou o
