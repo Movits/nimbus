@@ -364,7 +364,7 @@ Sobre recolada** (com a regra nova do dono: nada de conversa de estoque/POD —
 entrega" (no ar), e **CSS do rodapé recolado**.
 
 **Descoberta que muda a doutrina do CSS**: mesmo com a fonte correta
-(` 00A`), a loja serviu `ਐ` e `¬`. O pipeline do painel, além de comer o
+(`\00000A`), a loja serviu `ਐ` e `¬`. O pipeline do painel, além de comer o
 espaço delimitador, REMOVE OS ZEROS À ESQUERDA do escape, e a publicação de
 QUALQUER seção do editor de tema regrava o formulário inteiro (a publicação do
 banner reverteu a colagem de CSS da véspera). Conclusões gravadas no
@@ -390,9 +390,56 @@ Receita) e gerou a guia guiado pela sessão: serviço **389** (pedido de
 registro de marca com especificação pré-aprovada), **1 classe** (a 25),
 **Nosso Número `29409172362116399`**. Aguarda o pagamento do dono (conferir
 R$440 no boleto antes de pagar; sem reembolso em caso de indeferimento,
-decisão NIMBUS-primeiro ciente do risco). Depois de paga e compensada, o
-protocolo do pedido em si é feito no Peticionamento com esse Nosso Número:
-marca NOMINATIVA "NIMBUS", classe 25, especificação pré-aprovada de vestuário.
+decisão NIMBUS-primeiro ciente do risco). PAGA E COMPENSADA no mesmo dia.
+CORREÇÃO IMPORTANTE: marca NÃO se protocola no Peticionamento Eletrônico (ele
+rejeita a GRU com "não corresponde a um serviço disponível") — o módulo certo
+é o **e-Marcas**, em `gru.inpi.gov.br/emarcas/`. Ver seção da noite abaixo.
+
+### A quarta e a quinta camada da cebola do rodapé, e o e-Marcas (04/08, noite)
+
+**INPI: formulário preenchido até a tela final de conferência, aguardando o
+"protocola" do dono.** No e-Marcas (sessão logada do dono; login é sempre
+dele), o formulário foi preenchido pela sessão: apresentação NOMINATIVA,
+natureza produto, elemento `NIMBUS`, idioma estrangeiro declarado com tradução
+("do latim: nuvem; também a auréola/halo da arte sacra"), classe NCL 25 com
+**7 itens pré-aprovados** — Camisetas, Suéteres, Casacos [jaquetas], Artigos
+de malha [vestuário], Vestuário *, Bonés e Escapulários [vestuário] (existe na
+lista pré-aprovada e é futuro plausível da marca; a Ecobag fica fora, classe
+18) — e as duas declarações legais (art. 128 e veracidade). "Moletom" NÃO
+existe na nomenclatura pré-aprovada; a cobertura vem de Suéteres + Casacos
+[jaquetas] + Artigos de malha + Vestuário *. Lições do módulo: o rascunho
+persiste no servidor amarrado à GRU (sobreviveu a reinício da máquina), mas
+**as caixas de declaração desmarcam a cada sessão nova**; e o layout muda de
+largura sozinho, então clique por coordenada erra — clique por ref
+(find/form_input) acerta.
+
+**A colagem "verificada" da madrugada NÃO estava mais no painel à noite.** O
+dono desconfiou do "é cache" (a mudança era da véspera) e mandou checar de
+novo — com razão. Cadeia de evidência: o `Age` do Cloudflare mostrou a home
+renderizada pela ORIGEM às 14:28 já quebrada (bem depois da colagem); o
+textarea do painel, interrogado por checksum (sem exfiltrar texto, o DLP
+morde), guardava **54.008 caracteres em formato embelezado com `ਐ` LITERAL**
+— uma publicação de formulário velho regravou a seção depois da madrugada (a
+QUARTA mordida: qualquer aba/sessão antiga do editor de tema que publique
+depois ressuscita o CSS velho dela). Recolagem pelo caminho novo: arquivo
+canônico → `Set-Clipboard` → **Ctrl+V real** no textarea → checksum do campo
+idêntico ao arquivo módulo CRLF→LF (`48be956e`) → Publicar alterações →
+**releitura após reload frio confirmou persistido**. Doutrina nova:
+verificação de colagem só vale **após reload completo do editor**, e qualquer
+publicação de tema posterior exige re-verificar o CSS.
+
+**A QUINTA camada**: mesmo com o painel certo e re-verificado, uma página
+DYNAMIC (busca com termo aleatório, `cf-cache-status: DYNAMIC`, que não passa
+pelo cache de borda) ainda saiu com o bloco velho — **a origem memoiza a
+configuração do tema com TTL próprio**. Vigia de 2 em 2 min no ar esperando a
+origem virar. A home tem `s-maxage=86400`: o Cloudflare pode segurar a cópia
+velha até ~14:28 de 05/08 mesmo com a origem já certa. **Prova pública de CSS
+se colhe em página DYNAMIC (`/search/?q=aleatorio`), nunca na home.**
+
+**Meta-mordida**: este próprio ESTADO continha um byte NUL onde se lia
+`\00000A` — alguma escrita anterior interpretou `\000` como octal e gravou o
+byte cru, o que fazia ferramentas de texto tratarem o arquivo como binário.
+Consertado byte a byte. A doença que o documento descreve mordeu o documento.
 
 ### A sessão que quase se perdeu, e os portões no Windows (03/08)
 
