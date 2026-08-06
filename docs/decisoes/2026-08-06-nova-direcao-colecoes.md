@@ -72,3 +72,12 @@ da loja sobre a base atual.
   uma versão com a **foto real dos três pastorinhos**, mais ilustrativa, com
   símbolos. A página tratada fica como exemplo/referência.
 - **FOCO ÚNICO AGORA: coleção RELÍQUIA.** As outras ficam para depois.
+
+## Adendo 2 — RELÍQUIA: só material original puro (06/08)
+
+"Os Pastorinhos v1" (foto real + auréolas + lettering) REPROVADA: o dono não
+quer elementos adicionados — **nem auréolas, nem lettering composto**. A
+RELÍQUIA usa a **imagem original mesmo, como é**. Encomendada pesquisa
+profunda por ~20 imagens históricas originais da internet (não-IA, domínio
+público, alta resolução): milagres eucarísticos, aparições marianas, Jesus em
+jornais/gravuras antigas, Brasil católico de época.
