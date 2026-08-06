@@ -58,3 +58,17 @@ salva em `nimbus-assets/designs/conceitos/2026-08-06-novas-direcoes/` (fora de
 `prontos/`, sem tocar o portão dpi300). Dono aprova/reprova o estilo; só então
 começa a produção em série, a recriação na plataforma de POD e a reconstrução
 da loja sobre a base atual.
+
+## Adendo — vereditos das estampas-teste (06/08, madrugada)
+
+- **STREET costas (São Miguel stencil sem texto): APROVADA COM RESSALVAS.**
+  "Ficou legal... salve em algum lugar. Talvez com algumas correções, mas não
+  agora." Guardada em `designs/conceitos/2026-08-06-novas-direcoes/`.
+- **STREET peito ("Quem como Deus?"): REPROVADA.**
+- **NUVEM ichthys mínimo: reprovada como está** ("muito fininho"), mas o
+  símbolo vira **semente de uma possível coleção futura "Pescadores de
+  Homens"** — fica para depois.
+- **RELÍQUIA material real 1917: APROVADA como direção.** O dono quer também
+  uma versão com a **foto real dos três pastorinhos**, mais ilustrativa, com
+  símbolos. A página tratada fica como exemplo/referência.
+- **FOCO ÚNICO AGORA: coleção RELÍQUIA.** As outras ficam para depois.
