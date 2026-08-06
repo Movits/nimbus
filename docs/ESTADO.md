@@ -397,8 +397,12 @@ rejeita a GRU com "não corresponde a um serviço disponível") — o módulo ce
 
 ### A cebola do rodapé descascada até o fim, e o e-Marcas (04/08, noite)
 
-**INPI: formulário preenchido até a tela final de conferência, aguardando o
-"protocola" do dono.** No e-Marcas (sessão logada do dono; login é sempre
+**INPI: PROTOCOLADO em 06/08/2026, 00:02 — Pedido nº 944711901, protocolo
+850260395359.** O dono conferiu o documento e autorizou; a sessão clicou
+Protocolar e confirmou no diálogo do INPI (GRU paga previamente). Daqui em
+diante: acompanhar a RPI semanalmente (exame formal → publicação → 60 dias de
+oposição → exame de mérito); eventual exigência formal tem prazo de **5 dias**
+a contar da publicação na RPI. Histórico do preenchimento abaixo. No e-Marcas (sessão logada do dono; login é sempre
 dele), o formulário foi preenchido pela sessão: apresentação NOMINATIVA,
 natureza produto, elemento `NIMBUS`, idioma estrangeiro declarado com tradução
 ("do latim: nuvem; também a auréola/halo da arte sacra"), classe NCL 25 com
