@@ -81,3 +81,24 @@ RELÍQUIA usa a **imagem original mesmo, como é**. Encomendada pesquisa
 profunda por ~20 imagens históricas originais da internet (não-IA, domínio
 público, alta resolução): milagres eucarísticos, aparições marianas, Jesus em
 jornais/gravuras antigas, Brasil católico de época.
+
+## Adendo 3 — amostras chegaram; processo do fundo verde CONDENADO (06/08)
+
+As amostras da IzzyPrint chegaram e revelaram o defeito: **o recorte do chroma
+verde deixou verde visível e pixelado no dourado** (visto nas peças STREET de
+Nossa Senhora e São Miguel originais). Decisões do dono:
+
+1. **Toda arte gerada com o processo de fundo verde será RECRIADA** — geração
+   já em PNG com fundo transparente nativo, sem chroma, 300 DPI no tamanho de
+   impressão. Vale para a STREET inteira (revisão em artefato) e para o que
+   mais usar o processo antigo.
+2. **Emblema da RELÍQUIA = B1-nimbus-blackletter** (arte existente). As 3
+   opções geradas (carimbo, ficha, selo) foram REPROVADAS como emblema.
+   Versão branca do B1 criada localmente para peças escuras
+   (`designs/conceitos/2026-08-06-novas-direcoes/B1-nimbus-blackletter-branco.png`).
+   Regra: a coleção assina o peito, a marca (logo nuvem) assina a nuca.
+3. **Etiqueta de nuca por coleção**: sistema aprovado em princípio; IzzyPrint
+   faz de fábrica (pedido de amostras já foi com o logo nuvem na gola).
+4. Comparação de custos IzzyPrint (tabela real de 29/07) × YouDraw (custo real
+   de 06/08) registrada em `financeiro/margem-contribuicao-2026-08.md` §6:
+   camiseta/oversized empata ou IzzyPrint ganha; moletons YouDraw ganha.
