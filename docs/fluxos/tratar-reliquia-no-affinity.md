@@ -10,6 +10,13 @@ passada automática (`tratadas-v1`) recortou demais algumas peças (n25, n33 e
 n70 entre as apontadas por ele em 07/08), e o conserto certo parte **sempre do
 original**, nunca da tratada.
 
+No caso da n33, a "página que falta" está **dentro do original**: o scan de
+4.228×3.196 px é a dupla página completa das Horas de Catarina de Cleves (Boca
+do Inferno à esquerda, Absolvição Final com o texto à direita, fols. 168v–169r).
+A tratada é que cortou fora a página direita. Conferido em 07/08: essa é a maior
+resolução pública que existe (Google Art Project via Wikimedia); cada página
+sozinha rende ~17,8 cm a 300 DPI, a dupla inteira ~35,8 cm de largura.
+
 ## A ferramenta
 
 **Affinity (Canva, versão unificada, gratuita).** Um aplicativo, três estúdios:
