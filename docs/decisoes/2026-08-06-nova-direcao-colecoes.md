@@ -102,3 +102,15 @@ Nossa Senhora e São Miguel originais). Decisões do dono:
 4. Comparação de custos IzzyPrint (tabela real de 29/07) × YouDraw (custo real
    de 06/08) registrada em `financeiro/margem-contribuicao-2026-08.md` §6:
    camiseta/oversized empata ou IzzyPrint ganha; moletons YouDraw ganha.
+
+## Adendo 4 — STREET mantida inteira; política de tamanhos (06/08)
+
+- **Revisão STREET: as 11 artes MANTIDAS** (todas as fotos e emblemas), para
+  recriação sem fundo verde.
+- **Política de tamanho de estampa**: as amostras mostraram que o tamanho
+  máximo ficou grande demais. Regra nova: **tamanho padrão (~25–30 cm) para
+  tudo**; tamanho máximo só quando a arte pedir (ex.: asas da NUVEM nas
+  costas). Cada degrau de faixa na IzzyPrint custa ~R$4–5.
+- Comparação de custos refeita CASADA POR TAMANHO real de cada arte
+  (`margem-contribuicao-2026-08.md` §6): camiseta empata, oversized IzzyPrint
+  ganha ~R$15, moletons YouDraw ganha ~R$30–40.
