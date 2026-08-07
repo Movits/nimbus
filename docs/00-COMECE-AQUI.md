@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-03
+atualizado: 2026-08-07
 ---
 
 # Comece aqui
@@ -46,15 +46,17 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 
 ## Layout dos repositórios
 
-O projeto vive em **dois** repositórios irmãos, clonados lado a lado:
+O projeto vive em **três** repositórios irmãos, clonados lado a lado:
 
 ```
 nimbus/          PÚBLICO  — código, documentação, medições, auditorias
 nimbus-assets/   PRIVADO  — as artes, os blanks e as capas
+nimbus-brain/    PRIVADO  — o segundo cérebro do negócio (wiki, calendário, fiscal)
 ```
 
 O de assets é privado porque as artes são a propriedade da marca. Os scripts
-esperam encontrá-lo em `../nimbus-assets` ou no caminho de `NIMBUS_ASSETS`.
+esperam encontrá-lo em `../nimbus-assets` ou no caminho de `NIMBUS_ASSETS`. O
+brain tem schema próprio e obrigatório no `CLAUDE.md` da raiz dele.
 
 Detalhe em [`REPOSITORIOS.md`](REPOSITORIOS.md).
 
