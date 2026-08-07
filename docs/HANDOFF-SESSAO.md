@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-03
+atualizado: 2026-08-07
 substitui: HANDOFF-CONTA-NUVEM.md
 ---
 
@@ -128,18 +128,21 @@ funciona nos 44 produtos, com portão automático conferindo, e remover um item
 pela gaveta da vitrine some do carrinho da loja. A remoção leva ~15 segundos;
 quem conferir rápido demais conclui que falhou.
 
-**A NUVEM é o buraco.** É a coleção que carrega a identidade declarada da marca
-e tem 2 SKUs e 1 arte. As 8 artes de costas que existiam foram **reprovadas pelo
-dono em 01/08** ("são fofas antes de serem streetwear"). A direção nova mantém a
-paleta celeste e troca o tratamento por gráfico de streetwear, com a asa de anjo
-`asas-livro-65-4k.png` como padrão aprovado.
+**As coleções mudaram de eixo em 06/08:** a direção do dono é "roupa bonita,
+Cristo no centro, estampa por produto". A triagem dele cortou 75 estampas para
+**24 curadas**, a RELÍQUIA passou a aceitar só material original de época, e a
+linha gótica saiu para uma coleção futura. O detalhe vivo está em
+`docs/decisoes/` (entradas de 06/08) e na fila de estampas do brain.
 
-**Uma coisa está parada esperando um clique:** o CSS corrigido do rodapé da loja,
-que precisa ser colado no painel da Nuvemshop. Enquanto isso não acontece, todas
-as páginas da loja mostram "feito no Brasil.**ਐ**% do lucro".
+**A marca foi depositada no INPI em 06/08**: NIMBUS nominativa, classe 25,
+pedido 944711901. Os prazos que valem a partir daí estão em
+`nimbus-brain/wiki/concepts/dominio-e-marca.md`.
 
 **O MEI está regularizado**, com R$ 2.520,88 em aberto e caminho de parcelamento
 definido. Detalhe em `nimbus-brain/financeiro/`.
+
+Estas frases envelhecem. Se algo aqui contradisser o `ESTADO.md` ou o
+`estado.md` do brain, **eles vencem**: são as páginas que toda sessão atualiza.
 
 ## 6. Para onde vamos
 
@@ -152,12 +155,14 @@ estar prontas em setembro.**
   arte nova**: são 3 artes já publicadas.
 - **12/10** acumula Aparecida, a morte de Carlo Acutis e o Dia das Crianças.
   Some numa campanha só. 2 artes de Aparecida já existem.
-- O caminho crítico é: estampas novas da NUVEM → fotos com modelo → abrir venda.
+- O caminho crítico é: estampas na direção nova → fotos com modelo → abrir venda.
 
-A fila de estampas está em `nimbus-brain/wiki/concepts/fila-de-estampas.md`,
-ordenada por critério objetivo e não por gosto. **Ordem do dono de 01/08:
-terminar as coleções que já existem antes de desenhar coisa nova, começando pela
-NUVEM.**
+A direção vigente das coleções é a de **06/08**
+(`docs/decisoes/2026-08-06-nova-direcao-colecoes.md`), que **supersede a ordem
+de 01/08**: o foco é roupa bonita com Cristo no centro, estampa única por
+produto, RELÍQUIA como "documento sagrado" com material real de época, NUVEM na
+chave celeste com o ichthys, STREET mantida. A fila operacional está em
+`nimbus-brain/wiki/concepts/fila-de-estampas.md`.
 
 ## 7. Limites que não se negociam
 
@@ -193,6 +198,14 @@ Isto existe para você não repetir erro que já custou tempo:
 - **O minificador do painel come o espaço que delimita um escape de CSS.** Por
   isso `\A 10%` virou `ਐ%`. O conserto é escrever `\00000A`, seis dígitos, que
   dispensa delimitador.
+- **O botão "Publicar alterações" do editor de tema é um no-op quando o
+  formulário não está sujo.** Sem `form-dirty`, o clique dispara só analytics e
+  nenhum POST de gravação; pior, o textarea guarda rascunho local que sobrevive
+  a reload na mesma aba, então "recarreguei e o valor persistiu" é miragem. O
+  fluxo que grava de verdade: colar → **Testar CSS** (suja o formulário) →
+  Publicar → conferir na rede o `POST /admin/themes/settings/active/` com 200.
+  Foi isso, e não cache, que segurou o rodapé quebrado até 05/08. Registro
+  completo no `ESTADO.md`.
 
 A lição geral, que o dono cobrou com razão: **confira antes de afirmar.** Se
 você vai mandar alguém abrir um endereço, abra primeiro.
@@ -222,14 +235,11 @@ de parada explícito e um relatório final com o que anotar.
 
 1. Rode o bootstrap e o roteiro de leitura acima.
 2. Rode `npm run vitrine:portoes` para saber se a base está sã.
-3. Confira no ar se o rodapé da loja ainda traz o `ਐ`:
-   `curl -s https://loja.nimbuswear.com.br/ | grep -o '.\{16\}do lucro'`
-4. **Entregue ao dono, no chat, o prompt do Cowork para publicar o CSS.** Ele
-   está pronto em `nuvemshop/cowork-publicar-css.md`; leia, confira se ainda
-   descreve a realidade e cole o conteúdo no chat, ajustando o que tiver mudado.
-
-Se o rodapé já estiver consertado, diga isso e pule para o caminho crítico: as
-estampas novas da NUVEM.
+3. Vá à seção **Pendências** do `docs/ESTADO.md` e à fila de estampas do brain,
+   e continue do caminho crítico dali: estampas das coleções na direção de
+   06/08 → fotos com modelo → abrir venda a tempo de 29/09 e 12/10. Se algo
+   nas pendências contradisser o que você viu no ar, o ar vence: confira e
+   corrija o documento antes de trabalhar.
 
 ## 11. Ritual de saída
 
