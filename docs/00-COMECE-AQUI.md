@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-03
+atualizado: 2026-08-07
 ---
 
 # Comece aqui
@@ -24,6 +24,7 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Mexer no **CSS, hover ou layout** da loja | [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md) |
 | Escrever **página de produto**, medidas, prazo, política | [`fluxos/paginas-de-produto.md`](fluxos/paginas-de-produto.md) |
 | Criar **conteúdo social**, post, roteiro, campanha | [`fluxos/conteudo-social.md`](fluxos/conteudo-social.md) |
+| Tratar **imagem da RELÍQUIA** no Affinity (recorte, export, qualidade) | [`fluxos/tratar-reliquia-no-affinity.md`](fluxos/tratar-reliquia-no-affinity.md) |
 | Mexer em **evento GA4**, medição, meta das datas | [`fluxos/tracking-plan.md`](fluxos/tracking-plan.md) |
 
 ## Preciso de um número, não de um processo
@@ -45,15 +46,17 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 
 ## Layout dos repositórios
 
-O projeto vive em **dois** repositórios irmãos, clonados lado a lado:
+O projeto vive em **três** repositórios irmãos, clonados lado a lado:
 
 ```
 nimbus/          PÚBLICO  — código, documentação, medições, auditorias
 nimbus-assets/   PRIVADO  — as artes, os blanks e as capas
+nimbus-brain/    PRIVADO  — o segundo cérebro do negócio (wiki, calendário, fiscal)
 ```
 
 O de assets é privado porque as artes são a propriedade da marca. Os scripts
-esperam encontrá-lo em `../nimbus-assets` ou no caminho de `NIMBUS_ASSETS`.
+esperam encontrá-lo em `../nimbus-assets` ou no caminho de `NIMBUS_ASSETS`. O
+brain tem schema próprio e obrigatório no `CLAUDE.md` da raiz dele.
 
 Detalhe em [`REPOSITORIOS.md`](REPOSITORIOS.md).
 
