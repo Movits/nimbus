@@ -114,3 +114,17 @@ Nossa Senhora e São Miguel originais). Decisões do dono:
 - Comparação de custos refeita CASADA POR TAMANHO real de cada arte
   (`margem-contribuicao-2026-08.md` §6): camiseta empata, oversized IzzyPrint
   ganha ~R$15, moletons YouDraw ganha ~R$30–40.
+
+## Adendo 5 — linha gótica separada; qualidade das 40 conferida (06/08)
+
+- **Linha gótica/blackletter movida para fora da RELÍQUIA** (não misturar
+  band-tee gótica com documento de época): B2, B3, B7×2, B8×2, H2×2 e
+  são-jorge-halftone agora em `nimbus-assets/designs/acervo/gotica-blackletter/`,
+  candidatas a coleção futura. Na RELÍQUIA ficaram só o emblema
+  B1-nimbus-blackletter e o B9-monograma-nmb. Portão dpi300 verde após o move.
+- **Qualidade das 40 escolhidas @300 DPI**: 16 aguentam 50 cm (toda a série
+  Épinal imprime até ~62–64 cm!), 28 aguentam 40 cm, 35 aguentam 30 cm.
+  Abaixo do padrão: n78 Posada (17 cm), n63 Cor Iesu folha (23 cm), n73
+  Guadalupe Debray (27 cm), v07 Sudário (28 cm), v08 Doré (30 cm) — imprimem
+  menores (política nova = padrão 25–30 cm) ou passam por upscale/scan melhor
+  se precisarem de tamanho grande.
