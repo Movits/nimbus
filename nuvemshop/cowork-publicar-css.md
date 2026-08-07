@@ -1,9 +1,18 @@
 ---
-status: vigente
-atualizado: 2026-08-03
+status: concluido
+atualizado: 2026-08-07
 ---
 
 # Prompt para o Cowork: publicar o CSS corrigido no painel
+
+> [!info] Missão cumprida em 05/08/2026, por outro caminho.
+> O rodapé está consertado no ar. E a causa raiz não era a que este roteiro
+> supunha: o clique em "Publicar alterações" é um **no-op quando o formulário
+> não está sujo** (sem `form-dirty`, sai só analytics, nenhum POST). O fluxo que
+> gravou de verdade foi colar → **Testar CSS** → Publicar → conferir o
+> `POST /admin/themes/settings/active/` com 200 na rede. Registro completo em
+> `docs/ESTADO.md` (seção de 05/08). Este arquivo fica como histórico e como
+> modelo de roteiro; não precisa ser executado de novo.
 
 Cole o texto abaixo da linha numa sessão do Cowork, na máquina do Roberto.
 
