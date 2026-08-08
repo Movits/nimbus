@@ -1,7 +1,15 @@
 ---
-status: vigente
+status: superado
 atualizado: 2026-08-08
 ---
+
+> [!warning] SUPERADO no mesmo dia por `consertos-loja-2026-08-08.md`.
+> Os itens 1, 2 e 3 deste roteiro eram **falso alarme**: as strings de escassez
+> e de promoção estão no HTML com `display:none` e nunca aparecem ao cliente
+> (estoque `null`, zero promoção configurada). O item 8 pede um editor de textos
+> de tema que **não existe** na Nuvemshop. O item 14 pede uma div que **já
+> existe**. Fica como histórico do que foi diagnosticado lendo o código-fonte em
+> vez da página renderizada.
 
 # Prompt: consertos do painel e do tema (rodada de 08/08)
 
