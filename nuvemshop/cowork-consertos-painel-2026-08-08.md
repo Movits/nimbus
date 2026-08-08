@@ -88,13 +88,22 @@ do backup (`nimbus-assets/nuvemshop/tema-baires/`), e backup do arquivo antes.
     (se não, acrescentar "CNPJ 53.977.834/0001-18 · Brasília DF" no bloco de
     dados de contato do painel).
 
-## NÃO mexer (aguardam decisão do dono)
+## Parte 3: decisões do dono já tomadas (08/08)
 
-- Os 4 produtos legados compráveis pela busca (`sao-jorge-vintage`,
-  `aparecida-barroca`, `azulejo`, `sao-miguel-celeste` sem sufixo): despublicar
-  ou renomear é decisão dele, produto a produto.
-- O telefone (61) 9 9222-1022 no rodapé: assumir como canal oficial ou remover.
-- O selo "powered by" oculto no CSS: conferir os termos do plano Impulso antes.
+18. **Despublicar os 4 produtos legados** do catálogo antigo, por ordem
+    explícita do dono (a produção vai migrar para a IzzyPrint; eles não voltam):
+    `/produtos/sao-jorge-vintage/` (São Jorge Vintage | Blusão Moletom),
+    `/produtos/aparecida-barroca/`, `/produtos/azulejo/` e
+    `/produtos/sao-miguel-celeste/` (os SEM sufixo numérico; os com sufixo,
+    tipo `sao-jorge-vintage1`, são os atuais e FICAM). Despublicar/ocultar,
+    NÃO apagar: o histórico fica. Confira depois que a busca da loja não os
+    devolve mais.
+19. **Remover o telefone** dos dados de contato do painel (rodapé e página
+    /contato/). Decisão do dono: o canal é e-mail e a página de contato; um
+    chat de atendimento será avaliado à parte.
+20. **Selo "powered by" volta a aparecer**: remover do CSS custom a regra
+    `.powered-by-logo { display: none !important }`. Ocultar o selo pode ferir
+    os termos do plano Impulso, e sobre a faixa navy ele fica discreto.
 
 Ao final, me traga: o que conseguiu fazer, o que o tema não permitiu, e um
 print de cada mudança visível (home, PDP, carrinho).
