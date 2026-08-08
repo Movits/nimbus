@@ -40,7 +40,8 @@ export const SECTION_COUNT = 6
 export const COPY = {
   hero: {
     subtitle: "Streetwear católico premium. Acima de tudo.",
-    cta: 'Entrar na loja',
+    offer: "Camisetas a partir de R$149,90, feitas no Brasil. Três coleções: STREET, RELÍQUIA e NUVEM.",
+    cta: 'Escolher a sua peça',
   },
   manifesto: {
     title: 'Entre o concreto e o céu.',
@@ -59,7 +60,7 @@ export const COPY = {
   impact: {
     kicker: 'Impacto',
     title: "Acima de tudo, o próximo.",
-    body: "10% do lucro de cada pedido vai para um projeto social. Quem escolhe é você, no checkout.",
+    body: "10% do lucro de cada pedido vai para um projeto social. Quem escolhe é você, no checkout. O repasse é mensal e o comprovante fica publicado.",
     outroNote: "Se preferir outro projeto, escreva o nome no checkout: a NIMBUS verifica se a obra é real e apoia.",
     cta: 'Comprar e apoiar',
   },
@@ -67,7 +68,7 @@ export const COPY = {
     trust: ["Feito no Brasil, para você", "Pagamento seguro: Pix, cartão e boleto", "10% do lucro doado ao projeto que você escolhe"],
     social: 'Acompanhe o lançamento',
     madein: 'Feito no Brasil',
-    rights: '© 2026 NIMBUS',
+    rights: '© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF',
   },
 }
 

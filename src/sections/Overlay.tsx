@@ -49,6 +49,7 @@ export default function Overlay() {
       <Section index={SECTION.hero} className="hero" align="center">
         <img className="reveal hero__logo" src={ASSETS.wordmark} alt="NIMBUS" />
         <p className="reveal hero__subtitle">{COPY.hero.subtitle}</p>
+        <p className="reveal hero__offer">{COPY.hero.offer}</p>
         <a className="reveal btn btn--primary" href={STORE_URL}>
           {COPY.hero.cta}
         </a>

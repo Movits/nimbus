@@ -344,9 +344,10 @@ NIMBUS.gaveta = (function () {
       '<div class="gaveta__pe">' +
       '<div class="gaveta__soma"><span>Subtotal</span><b class="gaveta__subtotal"></b></div>' +
       '<p class="gaveta__frete"></p>' +
-      '<a class="btn btn--primary gaveta__checkout" href="#" target="_blank" rel="noopener">Fechar pedido na loja</a>' +
+      '<p class="gaveta__impacto">Este pedido destina <b>10% do lucro</b> ao projeto que você escolher. No checkout, escreva o nome no campo mensagem do pedido.</p>' +
+      '<a class="btn btn--primary gaveta__checkout" href="#" target="_blank" rel="noopener">Ir para o pagamento seguro</a>' +
       '<p class="gaveta__pendente" hidden></p>' +
-      '<p class="gaveta__nota">Espelho do que você adicionou por aqui. Os valores finais aparecem na loja. <button type="button" class="gaveta__esvazia">Esvaziar</button></p>' +
+      '<p class="gaveta__nota">Você confere tudo de novo antes de pagar, com o frete do seu CEP calculado. Pix, boleto ou cartão em até 12x com juros. <button type="button" class="gaveta__esvazia">Esvaziar</button></p>' +
       "</div></aside>";
     document.body.appendChild(raiz);
     raiz.inert = true; // fechada não deixa botão fantasma no caminho do Tab
@@ -377,7 +378,7 @@ NIMBUS.gaveta = (function () {
     if (!itens.length) {
       const vazio = document.createElement("p");
       vazio.className = "gaveta__vazia";
-      vazio.textContent = "Sua sacola está vazia. As coleções esperam por você.";
+      vazio.innerHTML = 'Sua sacola está vazia. <a href="/loja/#colecoes">As coleções esperam por você</a>.';
       lista.appendChild(vazio);
     }
     for (const i of itens) {
@@ -460,7 +461,7 @@ NIMBUS.gaveta = (function () {
     // fechamento: subtotal e o que acontece com o frete
     raiz.querySelector(".gaveta__subtotal").textContent = NIMBUS.reais(total);
     const frete = raiz.querySelector(".gaveta__frete");
-    frete.textContent = !itens.length ? "" : prog >= META ? "Frete grátis." : "Frete calculado no checkout pelo seu CEP.";
+    frete.textContent = !itens.length ? "" : prog >= META ? "Frete grátis." : "O frete do seu CEP aparece no carrinho da loja, antes de pagar.";
     // Honestidade: a loja é quem cobra. Enquanto uma remoção feita aqui não
     // tiver sido aplicada lá, o cliente precisa saber disso antes de pagar.
     const pend = raiz.querySelector(".gaveta__pendente");

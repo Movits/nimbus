@@ -214,17 +214,19 @@ button {
   will-change: transform;
 }
 .btn--primary {
-  background: var(--ink);
+  /* régua do dono (30/07): botão primário é NAVY, a mesma dos tokens da
+     vitrine; era o único botão do funil fora dela (auditoria de 08/08) */
+  background: var(--deep);
   color: var(--cloud);
-  box-shadow: 0 10px 30px rgba(27, 39, 51, 0.22);
+  box-shadow: 0 10px 30px rgba(11, 35, 96, 0.22);
 }
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(27, 39, 51, 0.3);
+  box-shadow: 0 16px 40px rgba(11, 35, 96, 0.3);
 }
 .btn--gold {
   background: var(--gold);
-  color: #3a2c08;
+  color: var(--deep);
   box-shadow: 0 10px 30px rgba(233, 196, 106, 0.35);
 }
 .btn--gold:hover {
@@ -263,6 +265,13 @@ button {
   font-weight: 600;
   color: var(--ink);
   opacity: 0.82;
+}
+.hero__offer {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(0.82rem, 1.5vw, 1rem);
+  color: var(--ink);
+  opacity: 0.85;
+  max-width: 30em;
 }
 
 /* ───────────────────────── Impacto (projetos sociais) ───────────────────────── */
