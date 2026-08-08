@@ -15,8 +15,16 @@ O app é em inglês; os nomes aparecem como ele mostra.
 
 ## Quanto cada tratada perdeu
 
-Medição de 08/08: área da tratada contra a área do original, e a largura de
-impressão a 300 DPI que cada uma entrega hoje contra o que o original permite.
+Medição de 08/08 sobre os arquivos de `tratadas-v1/` **como estão hoje**, ou
+seja, já depois da segunda passada de 07/08 ("recortes exatos na moldura"), que
+sobrescreveu os arquivos da primeira em vez de criar pasta nova. Compara a área
+da tratada com a do original, e mostra a largura de impressão a 300 DPI que cada
+uma entrega hoje contra o que o original permite.
+
+**Este número é triagem, não veredito.** Recortar moldura vazia é ganho, e
+aparece aqui como "perda". Quem decide é o olho, pela terceira regra do
+projeto: se a medição diz que está certo e o olho diz que está errado, o olho
+está certo.
 
 **Refazer (perdeu mais de 20% da imagem):**
 
@@ -34,8 +42,7 @@ impressão a 300 DPI que cada uma entrega hoje contra o que o original permite.
 **Conferir (perdeu de 10% a 20%):** n51, n63, n49, n37, 07 (Sudário de Turim),
 n65. **As outras 26 perderam menos de 10%**, quase sempre borda, não conteúdo.
 
-Duas ressalvas honestas: perda de área não é sempre defeito (recortar moldura
-vazia é ganho), e duas dessas artes têm original pequeno de nascença, então
+Ressalva de tamanho: duas dessas artes têm original pequeno de nascença, então
 refazer não as salva do tamanho menor — **n78** (1.411 px, no máximo 11,9 cm) e
 **n63** (1.735 px, 14,7 cm). No **07** o corte foi só na altura, a largura já
 era 20,8 cm.
