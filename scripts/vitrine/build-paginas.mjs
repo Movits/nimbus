@@ -66,7 +66,7 @@ ${opts.canonical ? `<link rel="canonical" href="${esc(opts.canonical)}">` : ""}
 <link rel="icon" href="/img/favicon-48.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 <script>document.documentElement.className+=" js";setTimeout(function(){document.querySelectorAll(".reveal:not(.in)").forEach(function(e){e.classList.add("in")})},2000)</script>
 <link rel="stylesheet" href="${PREFIXO}/css/tokens.css?v=${V}">
 <link rel="stylesheet" href="${PREFIXO}/css/loja.css?v=${V}">
@@ -119,7 +119,7 @@ const footer = () => `
       <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
       <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA)}" data-abre-sacola>Sacola</a></div>
       <div><h4>Nimbus</h4><a href="${PREFIXO}/manifesto/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
-      <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="mailto:nimbuswearbr@gmail.com">Fale com a NIMBUS</a></div>
+      <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="https://loja.nimbuswear.com.br/contato/?ref=vitrine" rel="noopener">Fale com a NIMBUS</a></div>
     </div>
   </div>
   <div class="footer__legal">
@@ -148,9 +148,9 @@ ${header()}
   <section class="hero">
     <img class="hero__bg" src="${PREFIXO}/media/hero-editorial-1600.webp" alt="" fetchpriority="high">
     <div class="hero__copy">
-      <div class="kicker kicker--gold reveal in">Acima de tudo</div>
-      <h1 class="display reveal in">Entre o concreto e o céu.</h1>
-      <p class="lede reveal in" style="margin-top:1em">Streetwear católico premium, desenhado e produzido no Brasil. Fé que se veste bem.</p>
+      <div class="kicker kicker--gold reveal in">Entre o concreto e o céu</div>
+      <h1 class="display reveal in">Streetwear católico premium, feito no Brasil para você.</h1>
+      <p class="lede reveal in" style="margin-top:1em">Fé que se veste bem: camisetas a partir de R$149,90, em três coleções. Acima de tudo.</p>
       <div class="hero__cta reveal in">
         <a class="btn btn--primary" href="#colecoes">Ver as coleções</a>
         <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">O manifesto</a>
@@ -179,7 +179,7 @@ ${header()}
 
   <section class="secao" style="padding-top:0"><div class="secao__inner">
     <div class="secao__head">
-      <div><div class="kicker">Essenciais</div><h2 class="display--md display">O começo de tudo</h2></div>
+      <div><div class="kicker">Essenciais</div><h2 class="display--md display">A primeira leva da NIMBUS</h2><p class="note" style="margin-top:0.4em">Oito peças abrem a marca. Quem pede agora veste antes de todo mundo.</p></div>
       <a class="btn btn--ghost" href="${PREFIXO}/c/street/">Ver tudo por coleção</a>
     </div>
     <div class="grade">${cat.produtos.filter((p) => p.destaque).map(card).join("")}</div>
@@ -210,10 +210,21 @@ ${footer()}
 </body></html>`;
 
 /* ----------------------------------------------------------------- colecao */
+// SEO por coleção: title com categoria e benefício em vez do rótulo seco, e
+// description com preço e diferencial reais (auditoria de copy de 08/08).
+const SEO_COLECAO = {
+  street: ["Coleção STREET | Camisetas católicas com arte de rua | NIMBUS",
+    "Grafite, spray e stencil sobre peças premium feitas no Brasil. Camisetas de R$149,90 a R$179,90, moletom R$299,90. 10% do lucro vai para um projeto social."],
+  reliquia: ["Coleção RELÍQUIA | Estampas devocionais vintage e barrocas | NIMBUS",
+    "Halftone, letra gótica e barroco dourado sobre peças premium feitas no Brasil. Camisetas a partir de R$149,90. 10% do lucro vai para um projeto social."],
+  nuvem: ["Coleção NUVEM | O traço celeste da NIMBUS | NIMBUS",
+    "Céu, nuvens e auréolas em traço leve, sobre peças premium feitas no Brasil. Camisetas a partir de R$149,90. 10% do lucro vai para um projeto social."],
+};
 const colecao = (c) => {
   const produtos = cat.produtos.filter((p) => p.colecao === c.id);
   const pecas = [...new Set(produtos.map((p) => p.peca))];
-  return `${head(`${c.rotulo} | NIMBUS`, c.resumo, { canonical: `${URL_BASE}/c/${c.id}/` })}
+  const [seoTitulo, seoDesc] = SEO_COLECAO[c.id] || [`${c.rotulo} | NIMBUS`, c.resumo];
+  return `${head(seoTitulo, seoDesc, { canonical: `${URL_BASE}/c/${c.id}/` })}
 ${header()}
 <main>
   <section class="cabecalho-colecao" data-colecao="${c.id}">
@@ -366,9 +377,18 @@ ${header()}
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho role="alert">Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece na sacola. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
+        <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece no carrinho da loja, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
+        <span class="note">7 dias para mudar de ideia: se devolver, <a href="${PREFIXO}/trocas/">devolvemos tudo o que você pagou, incluindo o frete</a>.</span>
         <span class="note">Peça feita no Brasil, para você.</span>
       </div>
+
+      ${DEVOCIONAL[p.arte] ? `
+      <div class="pdp__devocao">
+        <div class="kicker kicker--gold">${esc(DEVOCIONAL[p.arte].rotulo || "A devoção")}</div>
+        <h2>${esc(DEVOCIONAL[p.arte].santo)}</h2>
+        <p>${esc(DEVOCIONAL[p.arte].historia)}</p>
+        <p class="note">${DEVOCIONAL[p.arte].festa ? `Festa: ${esc(DEVOCIONAL[p.arte].festa)} · ` : ""}${esc(DEVOCIONAL[p.arte].estetica)}</p>
+      </div>` : ""}
 
       <div class="pdp__detalhes">
         ${p.ficha.material ? `<details open><summary>A peça</summary><p class="note">${esc([p.ficha.material, p.ficha.modelagem, p.ficha.gola].filter(Boolean).join(". "))}.</p></details>` : ""}
@@ -381,13 +401,6 @@ ${header()}
         <details><summary>Prazo e envio</summary><p class="note">Peça feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
       </div>
 
-      ${DEVOCIONAL[p.arte] ? `
-      <div class="pdp__devocao">
-        <div class="kicker kicker--gold">${esc(DEVOCIONAL[p.arte].rotulo || "A devoção")}</div>
-        <h2>${esc(DEVOCIONAL[p.arte].santo)}</h2>
-        <p>${esc(DEVOCIONAL[p.arte].historia)}</p>
-        <p class="note">${DEVOCIONAL[p.arte].festa ? `Festa: ${esc(DEVOCIONAL[p.arte].festa)} · ` : ""}${esc(DEVOCIONAL[p.arte].estetica)}</p>
-      </div>` : ""}
       <div class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social da sua escolha, no checkout. <a href="${PREFIXO}/impacto/">Como funciona</a>.</div>
     </div>
   </div></section>
@@ -405,12 +418,16 @@ ${footer()}
 // confirmada (lucro = o que sobra depois de todos os custos, inclusive
 // divulgação); troca de tamanho é responsabilidade da NIMBUS, tratada caso a
 // caso; CNPJ segue pendente (bloqueador de lançamento registrado no ESTADO).
-const institucional = (slug, titulo, descricao, corpo) => `${head(`${titulo} | NIMBUS`, descricao, { canonical: `${URL_BASE}/${slug}/` })}
+// Quando a página tem mídia (o manifesto, desde 08/08), o desktop vira duas
+// colunas: texto à esquerda, imagem à direita. Pedido do dono; o texto central
+// sozinho deixava espaço branco demais nas laterais.
+const institucional = (slug, titulo, descricao, corpo, midia) => `${head(`${titulo} | NIMBUS`, descricao, { canonical: `${URL_BASE}/${slug}/` })}
 ${header()}
 <main>
-  <section class="secao"><div class="secao__inner institucional">
+  <section class="secao"><div class="secao__inner institucional${midia ? " institucional--com-imagem" : ""}">
     <h1 class="display display--md">${esc(titulo)}</h1>
-    ${corpo}
+    ${midia ? `<div class="institucional__texto">${corpo}</div>
+    <figure class="institucional__midia"><img src="${PREFIXO}/media/${esc(midia.arquivo)}" alt="${esc(midia.alt)}" width="${midia.w}" height="${midia.h}" loading="lazy">${midia.legenda ? `<figcaption>${esc(midia.legenda)}</figcaption>` : ""}</figure>` : corpo}
   </div></section>
 </main>
 ${footer()}
@@ -430,14 +447,17 @@ const INSTITUCIONAIS = {
     <p>E porque fé que não serve ao próximo é só pano, <a href="${PREFIXO}/impacto/">10% do lucro</a> de cada pedido vai para um projeto social que você escolhe. Com repasse mensal e comprovante publicado, porque promessa sem prova não entra nesta casa.</p>
     <p>A NIMBUS é pequena. Sou eu e quem caminha comigo. Se você chegou até aqui, já faz parte.</p>
     <p>Acima de tudo, obrigado.</p>
-    <p><b>Roberto, fundador da NIMBUS</b></p>`],
+    <p><b>Roberto, fundador da NIMBUS</b></p>
+    <p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>`,
+    { arquivo: "manifesto-ceu-1200.webp", alt: "Curva de concreto branco modernista apontando para um céu azul com nuvens", w: 1200, h: 1600, legenda: "Entre o concreto e o céu." }],
   impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
     <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe no checkout. Esta página explica o que isso significa, sem letra miúda.</p>
     <h2>O que chamamos de lucro</h2>
     <p>Lucro é o que sobra do seu pedido depois de todos os custos: a produção da peça, a embalagem, o frete, as taxas de pagamento e a divulgação da marca. Sobre esse valor que sobra, separamos 10%.</p>
     <h2>Como funciona</h2>
     <ol>
-      <li>No checkout, você escreve qual projeto recebe: Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo, ou outro que você indicar.</li>
+      <li>No checkout, no campo mensagem do pedido, você escreve qual projeto recebe: Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo, ou outro que você indicar.</li>
       <li>Esperamos o prazo de arrependimento de 7 dias previsto em lei. Se o pedido ficar, o repasse dele entra na conta do mês.</li>
       <li>O repasse é mensal, somando os pedidos do período.</li>
       <li>O comprovante de cada repasse aparece nesta página, no Diário de Repasses abaixo.</li>
@@ -447,7 +467,9 @@ const INSTITUCIONAIS = {
     <p><b>Cáritas Brasileira</b>: rede da Igreja no Brasil de combate à fome e à pobreza.</p>
     <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
     <h2>Diário de Repasses</h2>
-    <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>`],
+    <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
+    <p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>`],
   trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por 90 dias e troca de tamanho tratada com a gente.", `
     <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. A nossa política é simples, segue a lei e cobre os três casos possíveis, sem pegadinha.</p>
     <h2>Mudou de ideia? Você tem 7 dias</h2>
@@ -471,11 +493,11 @@ const INSTITUCIONAIS = {
     </ul>
     <p class="note">O prazo exato para o seu CEP aparece no checkout e prevalece sobre as faixas acima.</p>
     <h2>Rastreio</h2>
-    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega.</p>
+    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. O pedido também fica na sua conta da loja: <a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a>.</p>
     <h2>Frete grátis e Ecobag de brinde</h2>
-    <p>Pedidos que chegam a R$399,90, sem contar a Ecobag do brinde, têm frete grátis para todo o Brasil e ganham uma Ecobag. Funciona assim: adicione a Ecobag com a arte que você quiser e use o cupom <b>ECOBAG</b> no checkout, que o valor dela sai do pedido. A mensagem do pedido segue sendo o lugar de escolher o projeto social dos 10%.</p>
+    <p>Pedidos que chegam a R$399,90, sem contar a Ecobag do brinde, têm frete grátis para todo o Brasil e ganham uma Ecobag. Funciona assim: adicione a Ecobag com a arte que você quiser e use o cupom <b>ECOBAG</b> no checkout, que o valor dela sai do pedido. No checkout, no campo mensagem do pedido, escreva qual projeto recebe os 10%.</p>
     <h2>Quanto custa o frete</h2>
-    <p>Abaixo de R$399,90, o valor do frete aparece na sacola assim que você informa o seu CEP, antes do pagamento.</p>`],
+    <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90 na maior parte do Brasil. O valor exato do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>Quem responde pelos seus dados</h2>
@@ -547,10 +569,10 @@ for (const rel of relForStub) {
 }
 
 fs.writeFileSync(path.join(BASE, "index.html"), home());
-for (const [slug, [titulo, descricao, corpo]] of Object.entries(INSTITUCIONAIS)) {
+for (const [slug, [titulo, descricao, corpo, midia]] of Object.entries(INSTITUCIONAIS)) {
   const dir = path.join(BASE, slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), institucional(slug, titulo, descricao, corpo));
+  fs.writeFileSync(path.join(dir, "index.html"), institucional(slug, titulo, descricao, corpo, midia));
 }
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());

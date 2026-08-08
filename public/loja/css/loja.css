@@ -29,6 +29,21 @@
 .institucional ol, .institucional ul { padding-left: 1.3em; }
 .institucional a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .pdp__impacto a, .passos a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.institucional a.btn { text-decoration: none; }
+
+/* institucional com imagem (manifesto): no desktop o texto encosta à esquerda
+   e a imagem preenche a direita, pedido do dono em 08/08 (o texto central
+   deixava espaço branco demais). No mobile empilha, texto primeiro. */
+.secao__inner.institucional--com-imagem { max-width: var(--maxw-loja); }
+.institucional--com-imagem .institucional__texto { max-width: 40em; }
+.institucional__midia { margin-top: 1.5em; }
+.institucional__midia img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.institucional__midia figcaption { font-size: 0.8rem; color: var(--muted, #5b6b7a); margin-top: 0.6em; }
+@media (min-width: 900px) {
+  .secao__inner.institucional--com-imagem { display: grid; grid-template-columns: minmax(0, 40em) minmax(280px, 1fr); gap: 3.5em; align-items: start; }
+  .institucional--com-imagem h1 { grid-column: 1 / -1; }
+  .institucional__midia { position: sticky; top: 2em; margin-top: 0; }
+}
 
 /* mesma régua da landing (.topbar): logo à ESQUERDA com clamp(34px,5vw,46px),
    navegação na sequência, ferramentas à direita e Sacola como pill de borda */
@@ -115,7 +130,9 @@
   .header__nav a, .header__tools a { font-size: 10px; letter-spacing: 0.06em; }
   .header__logo img { height: auto; width: clamp(84px, 24vw, 110px); transform: translateY(-4px); }
   .header__cta { padding: 0.4rem 0.8rem; }
-  .header__tools a[data-manifesto] { display: none; }
+  /* Manifesto continua visível no mobile: escondê-lo deixava a página mais
+     editorial da marca sem caminho no header justamente onde o tráfego de
+     Instagram e TikTok chega (auditoria de UX de 08/08). Aos 10px, cabe. */
 }
 
 /* --- hero ------------------------------------------------------------------ */
@@ -501,6 +518,8 @@
 .gaveta__pendente[hidden] { display: none; }
 .gaveta__checkout { width: 100%; text-align: center; }
 .gaveta__nota { font-size: 0.74rem; color: #66748a; margin: 0.8em 0 0; }
+.gaveta__impacto { font-size: 0.78rem; color: var(--deep); background: var(--sky, #dcebfa); border-radius: 8px; padding: 0.55em 0.8em; margin: 0 0 0.7em; }
+.gaveta__vazio a, .gaveta__itens a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .gaveta__esvazia { background: none; border: 0; padding: 0; color: #66748a; text-decoration: underline; cursor: pointer; font-size: 0.74rem; }
 /* festa ao cruzar o teto: confetes discretos nas cores da casa */
 /* flex-shrink 0: com o card da Ecobag dentro, o painel encolhia a festa em
