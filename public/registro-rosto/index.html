@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>NIMBUS · Registro de rosto</title>
+<style>
+  :root{
+    --fundo:#0c1017; --superficie:#151b26; --borda:#232c3d;
+    --texto:#f7fbff; --apoio:#8fa3b8; --ouro:#e9c46a; --ouro-escuro:#c9a24a;
+    --navy:#0b2360; --ceu:#8fc1ea; --erro:#e07a6a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{
+    background:var(--fundo); color:var(--texto);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Inter,sans-serif;
+    -webkit-font-smoothing:antialiased; overflow:hidden;
+  }
+  .tela{position:fixed; inset:0; display:none; flex-direction:column}
+  .tela.ativa{display:flex}
+
+  /* ---------- intro ---------- */
+  #intro{padding:max(24px,env(safe-area-inset-top)) 24px max(24px,env(safe-area-inset-bottom)); overflow-y:auto; overflow-x:hidden; display:none}
+  #intro.ativa{display:block}
+  .marca{font-family:Georgia,'Times New Roman',serif; font-size:15px; letter-spacing:.35em; color:var(--ouro); text-transform:uppercase; margin-bottom:28px}
+  #intro h1{font-family:Georgia,serif; font-weight:400; font-size:clamp(28px,7vw,40px); line-height:1.15; text-wrap:balance; margin-bottom:14px}
+  #intro p{color:var(--apoio); font-size:15.5px; line-height:1.55; max-width:34em; margin-bottom:12px}
+  #intro p strong{color:var(--texto); font-weight:600}
+  .passos-resumo{margin:20px 0 24px; display:flex; flex-direction:column; gap:10px}
+  .passos-resumo div{display:flex; gap:12px; align-items:baseline; font-size:14.5px; color:var(--apoio)}
+  .passos-resumo b{font-family:Georgia,serif; color:var(--ouro); font-weight:400; font-size:17px; min-width:1.2em; text-align:right}
+  .dicas{background:var(--superficie); border:1px solid var(--borda); border-radius:14px; padding:16px 18px; margin-bottom:26px}
+  .dicas h2{font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--ceu); margin-bottom:10px; font-weight:600}
+  .dicas ul{list-style:none; display:flex; flex-direction:column; gap:8px}
+  .dicas li{font-size:14.5px; color:var(--apoio); line-height:1.45; padding-left:18px; position:relative}
+  .dicas li::before{content:''; position:absolute; left:2px; top:.55em; width:6px; height:6px; border-radius:50%; background:var(--ouro)}
+
+  /* ---------- botões ---------- */
+  .btn{
+    display:block; width:100%; border:none; border-radius:999px;
+    padding:16px 24px; font-size:16.5px; font-weight:600; cursor:pointer;
+    font-family:inherit; text-align:center;
+  }
+  .btn:focus-visible{outline:3px solid var(--ceu); outline-offset:3px}
+  .btn-ouro{background:var(--ouro); color:#231a05}
+  .btn-ouro:active{background:var(--ouro-escuro)}
+  .btn-fantasma{background:transparent; color:var(--apoio); border:1px solid var(--borda); margin-top:10px}
+  .btn-fantasma:active{color:var(--texto)}
+
+  /* ---------- câmera ---------- */
+  #camera{background:#000}
+  .palco{position:relative; flex:1; min-height:0; overflow:hidden}
+  #video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transform:scaleX(-1)}
+  .oval{
+    position:absolute; left:50%; top:46%; transform:translate(-50%,-50%);
+    width:min(68vw,46vh); aspect-ratio:3/4; border-radius:50%;
+    border:2.5px dashed rgba(233,196,106,.85);
+    box-shadow:0 0 0 200vmax rgba(6,9,14,.45); pointer-events:none;
+  }
+  .oval.longe{width:min(88vw,64vh)}
+  .contagem{
+    position:absolute; inset:0; display:none; align-items:center; justify-content:center;
+    font-family:Georgia,serif; font-size:clamp(90px,30vw,160px); color:var(--ouro);
+    text-shadow:0 2px 30px rgba(0,0,0,.6); pointer-events:none;
+  }
+  .flash{position:absolute; inset:0; background:#fff; opacity:0; pointer-events:none; transition:opacity .25s}
+  .topo{
+    position:absolute; top:0; left:0; right:0; z-index:3;
+    padding:max(14px,env(safe-area-inset-top)) 18px 12px;
+    background:linear-gradient(180deg,rgba(6,9,14,.85),rgba(6,9,14,0));
+    display:flex; align-items:center; gap:14px;
+  }
+  .etapa-num{font-family:Georgia,serif; font-size:15px; color:var(--ouro); white-space:nowrap}
+  .trilho{flex:1; height:4px; background:rgba(255,255,255,.18); border-radius:2px; overflow:hidden}
+  .trilho i{display:block; height:100%; width:0%; background:var(--ouro); border-radius:2px; transition:width .35s}
+  .cartao{
+    background:var(--superficie); border-top:1px solid var(--borda);
+    padding:18px 20px max(18px,env(safe-area-inset-bottom));
+  }
+  .cartao h2{font-family:Georgia,serif; font-weight:400; font-size:clamp(20px,5.6vw,26px); line-height:1.2; text-wrap:balance; margin-bottom:6px}
+  .cartao p{color:var(--apoio); font-size:14.5px; line-height:1.5; min-height:2.9em; margin-bottom:14px}
+
+  /* ---------- conferir captura ---------- */
+  #confere .palco{display:flex; align-items:center; justify-content:center; background:#000}
+  #confere img{max-width:100%; max-height:100%; object-fit:contain}
+  .par{display:flex; gap:10px}
+  .par .btn{flex:1}
+
+  /* ---------- revisão ---------- */
+  #revisao{padding:max(20px,env(safe-area-inset-top)) 20px max(20px,env(safe-area-inset-bottom)); overflow-y:auto; display:none}
+  #revisao.ativa{display:block}
+  #revisao h1{font-family:Georgia,serif; font-weight:400; font-size:clamp(24px,6.5vw,34px); margin-bottom:6px}
+  #revisao>p{color:var(--apoio); font-size:15px; line-height:1.5; margin-bottom:18px; max-width:36em}
+  .grade{display:grid; grid-template-columns:repeat(auto-fill,minmax(96px,1fr)); gap:10px; margin-bottom:22px}
+  .grade figure{position:relative; border-radius:10px; overflow:hidden; background:var(--superficie); border:1px solid var(--borda)}
+  .grade img{display:block; width:100%; aspect-ratio:3/4; object-fit:cover}
+  .grade figcaption{position:absolute; left:0; right:0; bottom:0; font-size:10px; padding:3px 6px; background:rgba(6,9,14,.72); color:var(--apoio); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+  .grade button{
+    position:absolute; top:5px; right:5px; border:none; border-radius:999px;
+    background:rgba(6,9,14,.72); color:var(--texto); font-size:11px; padding:4px 9px; cursor:pointer; font-family:inherit;
+  }
+  #baixar-area{position:sticky; bottom:0; padding-top:10px; background:linear-gradient(0deg,var(--fundo) 65%,transparent)}
+  .pos-baixar{color:var(--ceu)!important; font-size:14.5px!important; margin-top:12px}
+
+  /* ---------- erro ---------- */
+  #erro{padding:32px 24px; justify-content:center; gap:14px}
+  #erro h1{font-family:Georgia,serif; font-weight:400; font-size:26px; color:var(--erro)}
+  #erro p{color:var(--apoio); font-size:15px; line-height:1.55; max-width:34em}
+  #erro .btn{max-width:340px}
+
+  @media (prefers-reduced-motion:reduce){
+    .flash{transition:none}
+    .trilho i{transition:none}
+  }
+</style>
+
+<!-- INTRO -->
+<section class="tela ativa" id="intro">
+  <div class="marca">Nimbus</div>
+  <h1>Registro de rosto para o seu modelo</h1>
+  <p>São <strong>14 fotos guiadas</strong>, uma de cada vez. A tela mostra a posição, conta 3, 2, 1 e fotografa sozinha. No final você confere tudo e baixa um arquivo único para mandar no chat.</p>
+  <div class="passos-resumo">
+    <div><b>1</b><span>Encontre luz de dia: de frente para uma janela é perfeito.</span></div>
+    <div><b>2</b><span>Siga a instrução de cada etapa e encaixe o rosto no oval.</span></div>
+    <div><b>3</b><span>Confira, refaça o que quiser e baixe o arquivo no final.</span></div>
+  </div>
+  <div class="dicas">
+    <h2>Antes de começar</h2>
+    <ul>
+      <li>Sem boné e sem óculos. Testa e orelhas aparecendo ajudam muito.</li>
+      <li>Rosto natural, sem forçar expressão. Sorriso só quando a etapa pedir.</li>
+      <li>Segure o celular na altura dos olhos, braço esticado ou apoiado.</li>
+      <li>Leva uns 3 minutos. A tela fica acesa durante a sessão.</li>
+    </ul>
+  </div>
+  <button class="btn btn-ouro" id="comecar">Ligar a câmera</button>
+</section>
+
+<!-- CÂMERA -->
+<section class="tela" id="camera">
+  <div class="palco">
+    <video id="video" autoplay playsinline muted></video>
+    <div class="oval" id="oval"></div>
+    <div class="contagem" id="contagem"></div>
+    <div class="flash" id="flash"></div>
+    <div class="topo">
+      <span class="etapa-num" id="etapa-num">1 de 14</span>
+      <div class="trilho"><i id="trilho-fill"></i></div>
+    </div>
+  </div>
+  <div class="cartao">
+    <h2 id="instrucao-titulo"></h2>
+    <p id="instrucao-dica"></p>
+    <button class="btn btn-ouro" id="pronto">Estou pronto · fotografar</button>
+  </div>
+</section>
+
+<!-- CONFERE CAPTURA -->
+<section class="tela" id="confere">
+  <div class="palco"><img id="confere-img" alt="Foto capturada"></div>
+  <div class="cartao">
+    <h2 id="confere-titulo">Ficou boa?</h2>
+    <p>Rosto nítido e dentro do quadro? Se tremeu ou cortou, repita.</p>
+    <div class="par">
+      <button class="btn btn-fantasma" id="repetir" style="margin-top:0">Repetir</button>
+      <button class="btn btn-ouro" id="continuar">Continuar</button>
+    </div>
+  </div>
+</section>
+
+<!-- REVISÃO -->
+<section class="tela" id="revisao">
+  <h1>As suas 14 fotos</h1>
+  <p>Toque em <strong>refazer</strong> na que não gostar. Quando estiver satisfeito, baixe o arquivo e <strong>mande ele aqui no chat da conversa</strong> para o treino do modelo.</p>
+  <div class="grade" id="grade"></div>
+  <div id="baixar-area">
+    <button class="btn btn-ouro" id="baixar">Baixar as 14 fotos (.zip)</button>
+    <p class="pos-baixar" id="pos-baixar" hidden>Arquivo salvo. Agora é só anexar o zip na conversa.</p>
+  </div>
+</section>
+
+<!-- ERRO -->
+<section class="tela" id="erro">
+  <h1>A câmera não abriu</h1>
+  <p id="erro-msg"></p>
+  <button class="btn btn-ouro" id="tentar">Tentar de novo</button>
+</section>
+
+<script>
+(function(){
+  'use strict';
+  var ETAPAS=[
+    {a:'frente-perto',      t:'De frente, bem perto',            d:'Rosto enchendo o oval, expressão neutra, olhos na câmera.', longe:false},
+    {a:'frente-media',      t:'De frente, meio passo atrás',     d:'Afaste um pouco: do peito para cima dentro do quadro.', longe:true},
+    {a:'tres-quartos-dir',  t:'Vire um pouco para a direita',    d:'Só o rosto, uns 45 graus. Olhos podem seguir a câmera.', longe:false},
+    {a:'tres-quartos-esq',  t:'Agora um pouco para a esquerda',  d:'Mesma coisa para o outro lado, uns 45 graus.', longe:false},
+    {a:'perfil-dir',        t:'Perfil direito completo',         d:'Vire o rosto todo: a orelha direita fica de frente para a câmera.', longe:false},
+    {a:'perfil-esq',        t:'Perfil esquerdo completo',        d:'Agora o perfil inteiro do outro lado.', longe:false},
+    {a:'queixo-cima',       t:'Queixo um pouco para cima',       d:'Levante de leve o queixo, como se olhasse algo alto.', longe:false},
+    {a:'queixo-baixo',      t:'Queixo um pouco para baixo',      d:'Abaixe de leve o queixo, mantendo os olhos na câmera.', longe:false},
+    {a:'sorriso',           t:'De frente, sorriso leve',         d:'Um sorriso natural, sem forçar.', longe:false},
+    {a:'inclinada',         t:'Cabeça levemente inclinada',      d:'Incline a cabeça para um ombro e olhe para o lado.', longe:false},
+    {a:'corpo',             t:'Bem mais longe: tronco inteiro',  d:'Afaste o braço todo ou apoie o celular: cabeça e tronco no quadro.', longe:true},
+    {a:'testa',             t:'De frente, testa à mostra',       d:'Afaste o cabelo da testa com a mão, se precisar.', longe:false},
+    {a:'janela-frente',     t:'Perto da janela: de frente',      d:'Mude de lugar: fique de frente para uma janela com luz de dia.', longe:false},
+    {a:'janela-tres-quartos',t:'Na janela: vire um pouco',       d:'Ainda na janela, rosto uns 45 graus para o lado que preferir.', longe:false}
+  ];
+  var fotos=new Array(ETAPAS.length).fill(null);
+  var atual=0, refazendo=-1, stream=null, wakeLock=null;
+
+  var $=function(id){return document.getElementById(id)};
+  var telas={intro:$('intro'),camera:$('camera'),confere:$('confere'),revisao:$('revisao'),erro:$('erro')};
+  function mostra(nome){
+    Object.keys(telas).forEach(function(k){telas[k].classList.toggle('ativa',k===nome)});
+  }
+
+  function pedeWake(){
+    try{ if(navigator.wakeLock){ navigator.wakeLock.request('screen').then(function(w){wakeLock=w}).catch(function(){}) } }catch(e){}
+  }
+
+  function ligaCamera(){
+    var pedido={video:{facingMode:'user',width:{ideal:1440},height:{ideal:1920}},audio:false};
+    return navigator.mediaDevices.getUserMedia(pedido).then(function(s){
+      stream=s; $('video').srcObject=s; pedeWake();
+    });
+  }
+
+  function falha(err){
+    var m='O navegador não liberou a câmera.';
+    if(err && (err.name==='NotAllowedError'||err.name==='SecurityError')){
+      m='A permissão foi negada ou bloqueada. Toque no cadeado ao lado do endereço e permita a câmera. Se estiver vendo esta página dentro do aplicativo, abra o endereço direto no Chrome ou no Safari, em uma aba própria, e tente de novo.';
+    }else if(err && err.name==='NotFoundError'){
+      m='Nenhuma câmera foi encontrada neste aparelho.';
+    }else if(err && err.name==='NotReadableError'){
+      m='Outro aplicativo está usando a câmera. Feche-o e tente de novo.';
+    }
+    $('erro-msg').textContent=m;
+    mostra('erro');
+  }
+
+  function preparaEtapa(){
+    var i=(refazendo>=0)?refazendo:atual;
+    var e=ETAPAS[i];
+    $('etapa-num').textContent=(i+1)+' de '+ETAPAS.length;
+    $('trilho-fill').style.width=Math.round(100*contagemFeitas()/ETAPAS.length)+'%';
+    $('instrucao-titulo').textContent=e.t;
+    $('instrucao-dica').textContent=e.d;
+    $('oval').classList.toggle('longe',!!e.longe);
+    $('pronto').disabled=false;
+    mostra('camera');
+  }
+  function contagemFeitas(){return fotos.filter(Boolean).length}
+
+  function contaEFotografa(){
+    $('pronto').disabled=true;
+    var c=$('contagem'), n=3;
+    c.style.display='flex'; c.textContent=n;
+    var iv=setInterval(function(){
+      n--;
+      if(n>0){ c.textContent=n; return; }
+      clearInterval(iv); c.style.display='none';
+      captura();
+    },800);
+  }
+
+  function captura(){
+    var v=$('video');
+    var cv=document.createElement('canvas');
+    cv.width=v.videoWidth||1080; cv.height=v.videoHeight||1440;
+    var ctx=cv.getContext('2d');
+    ctx.drawImage(v,0,0,cv.width,cv.height);
+    var fl=$('flash'); fl.style.opacity='.85';
+    setTimeout(function(){fl.style.opacity='0'},120);
+    cv.toBlob(function(blob){
+      var i=(refazendo>=0)?refazendo:atual;
+      if(fotos[i] && fotos[i].url) URL.revokeObjectURL(fotos[i].url);
+      fotos[i]={blob:blob,url:URL.createObjectURL(blob)};
+      $('confere-img').src=fotos[i].url;
+      $('confere-titulo').textContent='Etapa '+(i+1)+': ficou boa?';
+      mostra('confere');
+    },'image/jpeg',0.92);
+  }
+
+  function avanca(){
+    if(refazendo>=0){ refazendo=-1; montaRevisao(); mostra('revisao'); return; }
+    atual++;
+    if(atual>=ETAPAS.length){ montaRevisao(); mostra('revisao'); desligaCamera(); }
+    else preparaEtapa();
+  }
+
+  function desligaCamera(){
+    if(stream){ stream.getTracks().forEach(function(t){t.stop()}); stream=null; }
+    if(wakeLock){ try{wakeLock.release()}catch(e){} wakeLock=null; }
+  }
+
+  function montaRevisao(){
+    var g=$('grade'); g.innerHTML='';
+    ETAPAS.forEach(function(e,i){
+      var f=document.createElement('figure');
+      var img=document.createElement('img');
+      img.src=fotos[i]?fotos[i].url:''; img.alt='Foto '+(i+1)+': '+e.t;
+      var cap=document.createElement('figcaption'); cap.textContent=(i+1)+' · '+e.t;
+      var b=document.createElement('button'); b.type='button'; b.textContent='refazer';
+      b.addEventListener('click',function(){
+        refazendo=i;
+        (stream?Promise.resolve():ligaCamera()).then(preparaEtapa).catch(falha);
+      });
+      f.appendChild(img); f.appendChild(cap); f.appendChild(b); g.appendChild(f);
+    });
+  }
+
+  /* ---------- ZIP (store, sem compressão) ---------- */
+  var CRC=(function(){var t=[],c,n,k;for(n=0;n<256;n++){c=n;for(k=0;k<8;k++)c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);t[n]=c>>>0}return t})();
+  function crc32(u8){var c=0xFFFFFFFF;for(var i=0;i<u8.length;i++)c=CRC[(c^u8[i])&0xFF]^(c>>>8);return (c^0xFFFFFFFF)>>>0}
+  function zipar(arquivos){ /* arquivos: [{nome, dados:Uint8Array}] */
+    var partes=[], central=[], off=0;
+    arquivos.forEach(function(a){
+      var nome=new TextEncoder().encode(a.nome), d=a.dados, crc=crc32(d);
+      var lh=new DataView(new ArrayBuffer(30));
+      lh.setUint32(0,0x04034b50,true); lh.setUint16(4,20,true); lh.setUint16(6,0x0800,true);
+      lh.setUint16(8,0,true); lh.setUint16(10,0,true); lh.setUint16(12,0,true);
+      lh.setUint32(14,crc,true); lh.setUint32(18,d.length,true); lh.setUint32(22,d.length,true);
+      lh.setUint16(26,nome.length,true); lh.setUint16(28,0,true);
+      partes.push(lh.buffer,nome,d);
+      var ch=new DataView(new ArrayBuffer(46));
+      ch.setUint32(0,0x02014b50,true); ch.setUint16(4,20,true); ch.setUint16(6,20,true); ch.setUint16(8,0x0800,true);
+      ch.setUint16(10,0,true); ch.setUint16(12,0,true); ch.setUint16(14,0,true);
+      ch.setUint32(16,crc,true); ch.setUint32(20,d.length,true); ch.setUint32(24,d.length,true);
+      ch.setUint16(28,nome.length,true);
+      ch.setUint32(42,off,true);
+      central.push({h:ch.buffer,n:nome});
+      off+=30+nome.length+d.length;
+    });
+    var cdStart=off, cdLen=0;
+    central.forEach(function(c){partes.push(c.h,c.n); cdLen+=46+c.n.length});
+    var eo=new DataView(new ArrayBuffer(22));
+    eo.setUint32(0,0x06054b50,true);
+    eo.setUint16(8,arquivos.length,true); eo.setUint16(10,arquivos.length,true);
+    eo.setUint32(12,cdLen,true); eo.setUint32(16,cdStart,true);
+    partes.push(eo.buffer);
+    return new Blob(partes,{type:'application/zip'});
+  }
+
+  function baixar(){
+    var faltam=fotos.some(function(f){return !f});
+    if(faltam){ alert('Ainda falta foto em alguma etapa. Refaça as vazias antes de baixar.'); return; }
+    $('baixar').disabled=true; $('baixar').textContent='Preparando o arquivo...';
+    Promise.all(fotos.map(function(f){return f.blob.arrayBuffer()})).then(function(bufs){
+      var arquivos=bufs.map(function(b,i){
+        var n='roberto-soul-'+String(i+1).padStart(2,'0')+'-'+ETAPAS[i].a+'.jpg';
+        return {nome:n,dados:new Uint8Array(b)};
+      });
+      var blob=zipar(arquivos);
+      var a=document.createElement('a');
+      a.href=URL.createObjectURL(blob);
+      a.download='nimbus-registro-rosto.zip';
+      document.body.appendChild(a); a.click(); a.remove();
+      $('baixar').disabled=false; $('baixar').textContent='Baixar de novo (.zip)';
+      $('pos-baixar').hidden=false;
+    });
+  }
+
+  $('comecar').addEventListener('click',function(){
+    if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){ falha({name:'SecurityError'}); return; }
+    ligaCamera().then(preparaEtapa).catch(falha);
+  });
+  $('tentar').addEventListener('click',function(){ ligaCamera().then(preparaEtapa).catch(falha); });
+  $('pronto').addEventListener('click',contaEFotografa);
+  $('repetir').addEventListener('click',preparaEtapa);
+  $('continuar').addEventListener('click',avanca);
+  $('baixar').addEventListener('click',baixar);
+})();
+</script>
+
+</html>
