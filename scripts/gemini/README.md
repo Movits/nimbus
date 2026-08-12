@@ -1,5 +1,6 @@
 ---
 status: superado
+atualizado: 2026-08-12
 nota: superado para capas (pedir à IA que desenhe a estampa falhou; vigente é o compositor, docs/fluxos/capa-lifestyle.md). O canal Nano Banana e o generate.mjs seguem válidos para conteúdo social (docs/fluxos/conteudo-social.md).
 ---
 

@@ -5,51 +5,5 @@
     "Semeada em 2026-08-11 na criacao do portao com as violacoes da epoca;",
     "cada lote da remediacao remove as suas."
   ],
-  "permitidos": [
-    {
-      "arquivo": "nuvemshop/auditoria/2026-07-25-geometria/E1-ACESSO-A-MOCKUPS.md",
-      "motivo": "pendente de triagem (status \"refutado\" fora do vocabulario (vigente | superado | concluido | historico))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "scripts/gemini/README.md",
-      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-assets/casting/2026-07-16/LEIA-ME.md",
-      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-assets/designs/acervo/gotica-blackletter/LEIA-ME.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-assets/designs/prontos/TRIAGEM-2026-08-06.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/ESCOLHA-DO-DONO-2026-08-06.md",
-      "motivo": "pendente de triagem (ilegivel)",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-assets/nuvemshop/tema-baires/LEIA-ME.md",
-      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-assets/nuvemshop/tema-baires/cowork-ftp-e-teste-carrinho.md",
-      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-brain/log.md",
-      "motivo": "pendente de triagem (frontmatter sem chave status:)",
-      "desde": "2026-08-11"
-    }
-  ]
+  "permitidos": []
 }

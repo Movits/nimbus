@@ -1,6 +1,7 @@
 ---
-status: refutado
-atualizado: 2026-08-03
+status: historico
+veredito: refutado
+atualizado: 2026-08-12
 ---
 
 # E1 ficou BLOQUEADO: o mockup plano não é obtenível sem login (REFUTADO)
