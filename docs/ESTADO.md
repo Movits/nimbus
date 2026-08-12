@@ -64,6 +64,11 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   única por produto**; RELÍQUIA como "documento sagrado" só com material
   original de época; NUVEM celeste com o ichthys; STREET mantida; linha gótica
   sai para coleção futura.
+- **Triagem visual de 12/08 (761 imagens do assets, 100% decididas)**: 557
+  reprovadas removidas, 107 aprovadas, **96 na mesa de retrabalho**
+  (nimbus-assets `designs/_retrabalho-2026-08/`, organizada por frente:
+  emblemas com fundo a remover à mão, fotos de modelo com defeito de cena,
+  mockups; resize 4K para a IzzyPrint é etapa posterior). Assets caíram ~1,5 GB.
 - **Triagem do dono (06/08): 75 estampas → 24 curadas**
   ([`../designs/prontos/TRIAGEM-2026-08-06.md`](../designs/prontos/TRIAGEM-2026-08-06.md));
   tratamento v1 das 40 referências da RELÍQUIA concluído (07/08). A fila
