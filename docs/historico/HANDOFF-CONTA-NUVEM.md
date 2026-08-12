@@ -1,7 +1,7 @@
 ---
-status: obsoleto
-atualizado: 2026-08-03
-substituido-por: HANDOFF-SESSAO.md
+status: historico
+atualizado: 2026-08-11
+substituido-por: ../HANDOFF-SESSAO.md
 ---
 
 # Handoff para a sessão na nuvem (SUPERADO)

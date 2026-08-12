@@ -1,7 +1,7 @@
 ---
 status: vigente
 atualizado: 2026-08-07
-substitui: HANDOFF-CONTA-NUVEM.md
+substitui: historico/HANDOFF-CONTA-NUVEM.md
 ---
 
 # Handoff para uma sessão nova

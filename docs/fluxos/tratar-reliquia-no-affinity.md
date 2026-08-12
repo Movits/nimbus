@@ -186,5 +186,6 @@ máscara; a remoção de fundo por IA do app é recurso pago (Canva Pro).
 ## Relacionados
 
 - Decisão e política: `../decisoes/2026-08-06-nova-direcao-colecoes.md`
-- Ata da escolha: `nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/ESCOLHA-DO-DONO-2026-08-06.md`
+- Ata da escolha: `nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/arquivos/ESCOLHA-DO-DONO-2026-08-06.md`
+  (movida para `arquivos/` na reorganização de 09/08)
 - Régua de export: `../verdades/receita-export-300dpi.md`

@@ -1,9 +1,16 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-11
 ---
 # Respostas do dono às perguntas da 3ª rodada do conselho (2026-07-30)
 
 Registradas na conversa, com o que foi executado em seguida.
+
+> [!info] 11/08: registro de época, pauta executada. O que envelheceu: o GA4
+> tem ID (`G-E041S3ZHWB`) e está no ar com cross-domain desde 03-04/08; o CNPJ
+> deixou de ser bloqueador em 31/07 (MEI regularizado, no rodapé); e qualquer
+> menção a frete grátis de R$199 morreu em 31/07 (regra vigente: R$399,90 com
+> Ecobag). Estado vivo em `docs/ESTADO.md`.
 
 1. **GA4**: o dono não sabia qual ID gerar; instruções entregues no chat (criar
    propriedade GA4 e copiar o ID de métricas G-XXXXXXXXXX). O snippet já está

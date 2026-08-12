@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-07
+atualizado: 2026-08-11
 ---
 
 # Comece aqui
@@ -19,7 +19,6 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 |---|---|
 | Produzir ou refazer uma **capa de produto** | [`fluxos/capa-lifestyle.md`](fluxos/capa-lifestyle.md) |
 | **Auditar** uma capa, ou entender por que o gate aprovou algo errado | [`fluxos/auditoria-capa.md`](fluxos/auditoria-capa.md) |
-| Garantir que o **hover** troque só a cor | [`fluxos/par-de-cor.md`](fluxos/par-de-cor.md) |
 | **Publicar** capas na Nuvemshop | [`fluxos/publicar-na-loja.md`](fluxos/publicar-na-loja.md) |
 | Mexer no **CSS, hover ou layout** da loja | [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md) |
 | Escrever **página de produto**, medidas, prazo, política | [`fluxos/paginas-de-produto.md`](fluxos/paginas-de-produto.md) |

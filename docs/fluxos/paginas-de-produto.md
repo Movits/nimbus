@@ -1,9 +1,14 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-08-11
 ---
 
 # Fluxo: páginas de produto
+
+> [!info] Muito do que era pendência aqui já foi entregue na vitrine entre
+> 30/07 e 08/08 (medidas, caimento, devocional, relacionados, frete, garantia
+> no CTA). Antes de escrever página nova, confira o que o
+> `scripts/vitrine/build-paginas.mjs` já gera e o `docs/ESTADO.md`.
 
 Pendência aberta do projeto. Cada página precisa de material, modelagem, tabela
 de medidas, prazo POD, política e impacto social.

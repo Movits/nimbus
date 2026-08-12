@@ -1,10 +1,16 @@
 ---
-status: vigente
-atualizado: 2026-07-26
+status: superado
+atualizado: 2026-08-11
 decisao: docs/decisoes/2026-07-26-decisoes-do-dono.md  # seção "Hover troca só a cor"
 ---
 
 # Fluxo: par de cor para o hover
+
+> [!warning] SUPERADO em 28/07: o mecanismo de hover por par de cores foi
+> REMOVIDO da loja e da vitrine (ver `site-css-e-hover.md`, que é vigente).
+> Este fluxo fica como registro da técnica de transplante de cor — se um dia a
+> curadoria por cor voltar, a técnica serve, mas o enquadramento "para o hover"
+> morreu. Nada aqui deve ser executado hoje.
 
 No card da loja o hover alterna entre as cores. A troca tem que ler como
 **mudança de cor**, não como outra foto: mesmo modelo, mesma pose, mesmo

@@ -61,15 +61,19 @@ P2"); qualquer linha pode ser revertida por decisão dele.
   primeiro nesta tabela, senão o portão quebra o build — que é exatamente o
   comportamento desejado.
 
-## Fronteira de domínio (contexto do P0-1)
+## Fronteira de domínio (P0-1 — EXECUTADO até o pedido-teste)
 
-O funil medido hoje morre em `begin_checkout`: o domínio da loja não serve
-nenhuma tag. Ordem fechada pelo conselho e pelo dono: **neutralizar os UTMs
-internos vitrine↔loja ANTES de a tag entrar no painel** (senão cada compra de
-campanha é reatribuída a `vitrine/pdp`), depois colar o `G-E041S3ZHWB` no campo
-nativo do painel, configurar cross-domain e exclusão de referral no admin, e
-validar um pedido-teste no DebugView. O `purchase` desta tabela só vira
-`ativo` (na superfície da loja) depois desse aceite.
+Estado de 04/08: os UTMs internos vitrine↔loja foram neutralizados (03/08), o
+`G-E041S3ZHWB` está colado no campo nativo do painel e **confirmado no HTML
+servido da loja** (03/08, à noite), e o cross-domain + exclusão de referral
+foram configurados e verificados no admin do GA4 (04/08). O funil inteiro mede
+na mesma propriedade.
+
+O que resta do P0-1: **o pedido-teste no DebugView, que é do dono por regra**
+(a sessão não executa pedido), e o filtro de IP interno. O `purchase` desta
+tabela continua `planejado` DE PROPÓSITO: o disparo viria da integração nativa
+da Nuvemshop, fora deste repositório — não promova a linha sem o pedido-teste
+aceito.
 
 ## Higiene antes da estreia (pendências de painel/admin)
 

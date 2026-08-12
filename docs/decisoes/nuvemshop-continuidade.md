@@ -1,7 +1,14 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-11
 ---
 # Continuidade Nuvemshop → vitrine (especificação para o painel)
+
+> [!info] 11/08: EXECUTADO. O menu da loja apontando para a vitrine foi feito
+> pelo dono no painel e verificado no ar em 30/07; logo e "Seguir comprando"
+> subiram por FTP no mesmo dia; o CSS foi colado e recolado até a publicação
+> real de 05/08. Para recolar CSS hoje, o protocolo vigente está em
+> `../fluxos/site-css-e-hover.md` (NÃO siga o passo a passo antigo daqui).
 
 Escrita em 30/07 a pedido do dono, depois do teste da sacola: os itens chegam ao
 carrinho, mas quem navega pelas páginas da Nuvemshop fica preso lá, sem caminho

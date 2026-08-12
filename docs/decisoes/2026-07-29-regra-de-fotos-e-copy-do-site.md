@@ -1,7 +1,14 @@
 ---
-status: ativo
+status: vigente
+atualizado: 2026-08-11
 ---
 # Regra de fotos e copy do site (vitrine e landing)
+
+> [!info] 11/08: as regras de COPY continuam valendo palavra por palavra. A
+> seção **Ferramentas** foi revogada em 06/08
+> (`2026-08-06-nova-direcao-colecoes.md`): estampa-teste sai pelo MCP do
+> Higgsfield por ordem expressa do dono, e o processo de fundo verde/chroma foi
+> CONDENADO (arte nova nasce em PNG de fundo transparente, 300 DPI).
 
 Decisões do dono (29/07) e do conselho da 2ª rodada (ata em
 `nuvemshop/auditoria/2026-07-29-conselho-vitrine/`). Nenhuma imagem nova do site é

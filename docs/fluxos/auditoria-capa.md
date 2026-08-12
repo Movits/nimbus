@@ -1,9 +1,15 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-08-11
 ---
 
 # Fluxo: auditar uma capa
+
+> [!info] A produção de capas está CONGELADA aguardando a remontagem na
+> IzzyPrint (`docs/ESTADO.md`); este fluxo vale para auditar o que existir.
+> Atenção à história do check de `centro`: ele estar "informativo" foi
+> exatamente o furo por onde a estampa torta passou em 77 capas. Nunca rebaixe
+> check; conserte o instrumento ou prove o falso alarme.
 
 Duas metades, e **as duas são obrigatórias**. O gate mede o que é numérico; o
 olho julga o que ele não vê. Confiar só no gate foi como 77 capas passaram e

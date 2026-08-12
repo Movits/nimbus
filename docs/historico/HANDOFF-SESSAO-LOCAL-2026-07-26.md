@@ -1,7 +1,7 @@
 ---
-status: obsoleto
+status: historico
 substituido-por: docs/HANDOFF-SESSAO.md
-atualizado: 2026-08-03
+atualizado: 2026-08-11
 ---
 
 > [!warning] NÃO COLE ESTE BLOCO. O handoff vigente é

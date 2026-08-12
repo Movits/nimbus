@@ -1,11 +1,18 @@
 ---
-status: vigente
-atualizado: 2026-07-26
+status: historico
+atualizado: 2026-08-11
 ---
 
 # Histórico: o que caiu, e por quê
 
 **Nada aqui deve ser seguido.** Está preservado porque o método que falha ensina.
+
+Quedas registradas depois de 26/07: o **lote de 77 capas foi REPROVADO pelo
+dono em 26/07** (aprovado por gate com o check de centro rebaixado — a origem
+da regra "instrumento cego não vira veredito") e o pivô de 28/07 congelou a
+produção de capas até a decisão de plataforma, decidida em 07/08 (IzzyPrint).
+A crônica completa de julho a 08/08 está em
+[`ESTADO-cronica-2026-07-a-2026-08-08.md`](ESTADO-cronica-2026-07-a-2026-08-08.md).
 
 ## Três auditorias de escala invalidadas
 
@@ -21,8 +28,11 @@ defeito oposto — estampa pequena demais.
 | 23/07, reauditoria visual | `nuvemshop/auditoria/2026-07-23-reauditoria-visual/` | Fila `6/27/16`. Ficou **sem aviso de invalidação até 26/07** — era o conflito mais perigoso do projeto. |
 | 24-25/07, re-derivação física | citada no histórico | Usou comprimentos de peça errados, em direções opostas conforme a peça. |
 
-A medição vigente é `nuvemshop/auditoria/2026-07-25-geometria/`, e o datum foi
-resolvido em `nuvemshop/auditoria/2026-07-26-datum-mockups/`.
+Registro de época (26/07): a medição que substituiu as três era
+`nuvemshop/auditoria/2026-07-25-geometria/`, com o datum resolvido em
+`nuvemshop/auditoria/2026-07-26-datum-mockups/`. O que vale HOJE se confere em
+`docs/verdades/` e no fluxo vigente `docs/fluxos/auditoria-capa.md` — nunca
+por este índice.
 
 ## Métodos de geração superados
 

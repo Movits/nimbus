@@ -5,6 +5,15 @@ atualizado: 2026-08-03
 
 # Respostas do dono à 4ª rodada do conselho (03/08/2026, à noite)
 
+> [!info] 11/08: duas premissas deste registro caíram depois. (1) As amostras
+> da IzzyPrint CHEGARAM e o dono APROVOU: migração decidida em 07/08, catálogo
+> será remontado lá (`docs/ESTADO.md`, seção Produção) — a espera da pergunta 2
+> acabou, o que destrava a discussão das fotos. (2) A "ordem de 01/08"
+> (terminar as coleções antes de desenhar coisa nova), usada como fundamento no
+> adendo, foi SUPERADA pela direção de 06/08
+> (`2026-08-06-nova-direcao-colecoes.md`). As decisões de calendário continuam
+> revisáveis pelo dono.
+
 Respostas dadas no chat, item a item da pauta e das sete perguntas. Valem como
 decisão até nova ordem.
 

@@ -1,10 +1,17 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-08-11
 substitui: Nimbus brain/wiki/concepts/geracao-capas-lifestyle.md
 ---
 
 # Fluxo: produzir uma capa de produto
+
+> [!warning] Frente CONGELADA (desde 28/07, reafirmado em 11/08): a produção
+> migra para a IzzyPrint e o catálogo será REMONTADO lá — não produza capa nova
+> sobre base YouDraw. Os 149 blanks antigos saíram dos assets em 28/07; a base
+> de cena passa a ser o casting de 16/07 quando a remontagem começar. O método
+> deste fluxo (blank + arte + receita, compositor novo) continua sendo o
+> caminho. Ver `docs/ESTADO.md`, seção Produção.
 
 A capa é a foto de modelo vestindo a peça, com a estampa oficial aplicada.
 
@@ -71,7 +78,8 @@ O `placement` vem de [`../verdades/placement.md`](../verdades/placement.md) e é
 **por produto**, nunca padrão de família.
 
 A arte é deformada e sombreada pelas **dobras do próprio tecido** (`--relevo`,
-padrão 3). Sem isso ela sai como retângulo de bordas retas sobre pano amassado, e
+padrão **2.2** — o padrão real da CLI; escrever 3 aqui foi exatamente a mentira
+de receita que quebrou a recomposição, ver `scripts/produce-cover.mjs`). Sem isso ela sai como retângulo de bordas retas sobre pano amassado, e
 lê como adesivo — foi por isso que o lote de 77 foi reprovado. Texto pode
 distorcer um pouco numa dobra real: é aceitável, e é o que faz parecer roupa.
 

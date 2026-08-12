@@ -1,11 +1,17 @@
 ---
 status: vigente
-atualizado: 2026-07-26
+atualizado: 2026-08-11
 ---
 
 # Fluxo: publicar capas na Nuvemshop
 
 **Nada é publicado sem autorização explícita do dono, produto a produto.**
+
+> [!warning] ⛔ O lote de 77 capas segue REPROVADO (26/07) e os PNG saíram do
+> disco versionado em 09/08 (`_arquivo-2026-08-09/`). Hoje só os 3 pilotos
+> aprovados existiriam para publicar (352718999 branca, 352889132 preta,
+> 352618878 preta). O resto depende da remontagem na IzzyPrint — ver
+> `docs/ESTADO.md`.
 
 ## Preparar
 

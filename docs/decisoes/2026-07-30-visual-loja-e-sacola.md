@@ -1,7 +1,14 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-11
 ---
 # Visual pela loja publicada e sacola na vitrine (dono, 30/07)
+
+> [!info] 11/08: as três decisões foram executadas. O teste de funil em
+> produção que a Parte 2 deixa como pendente PASSOU: 43/44 produtos em 01/08
+> (o 44º, a Ecobag, consertado e coberto pelo portão `vitrine:variantes`) e a
+> remoção atravessando os dois sites em 03/08. Registro na crônica
+> (`../historico/ESTADO-cronica-2026-07-a-2026-08-08.md`).
 
 Três decisões do dono em 30/07, depois de ver a v2 dia 2 no ar. Onde esta página
 conflitar com a régua de navy de 29/07 (ata da 2ª rodada), esta vence.

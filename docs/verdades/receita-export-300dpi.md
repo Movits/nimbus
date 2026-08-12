@@ -46,9 +46,11 @@ Abaixo de 300, o portão falha e diz o tamanho exato que falta.
   (`SKIP_ASSETS=1` só para ambiente declaradamente sem assets).
 - **Baseline datada de 03/08** (`scripts/producao/export-300dpi.baseline.json`):
   as 64 artes legadas do padrão de 3500 px ficam toleradas com dimensões
-  congeladas, como pendência de re-export (aguarda a decisão de plataforma,
-  ESTADO pendência 0). A lista só encolhe; entrada nova para arte nova é
-  rebaixar o portão, e portão não vira informativo.
+  congeladas, como pendência de re-export. A decisão de plataforma SAIU em
+  07/08 (IzzyPrint): o re-export a 300 DPI virou pré-requisito ativo da
+  remontagem do catálogo (`docs/ESTADO.md`, Pendências 2). A lista só encolhe;
+  entrada nova para arte nova é rebaixar o portão, e portão não vira
+  informativo.
 
 ## O que isso muda para a frente NUVEM
 

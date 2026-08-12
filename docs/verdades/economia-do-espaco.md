@@ -1,9 +1,14 @@
 ---
 status: vigente
-atualizado: 2026-07-28
+atualizado: 2026-08-11
 ---
 
 # Economia do espaço de estampa
+
+> [!info] 11/08: a premissa desta página (caixa de 30×40 cm do editor da
+> IzzyPrint) deixou de ser hipótese — a migração para a IzzyPrint foi DECIDIDA
+> em 07/08. Confirmar na conta se o fluxo POD contratado mantém o limite do
+> editor público (temos costas de até 35,2 cm).
 
 A área de impressão é finita e cara: **30 × 40 cm** no editor da IzzyPrint. Uma
 arte não compete pelo tamanho do arquivo, compete pela **presença** dentro
