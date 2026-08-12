@@ -203,16 +203,17 @@ mecânica do Yuri Almeida; prazo 19/08)
 - Pronto quando: grep de "as pessoas vestem" nas páginas geradas devolvendo
   zero, e `/loja/impacto/` sem a promessa do campo.
 
-**12. Frase-promessa única** (condição 13, Clara Nunes) — ⚠️ AGUARDA ESCOLHA
-DO DONO
-- Preparar o diff que aplica a frase escolhida, palavra por palavra, em
+**12. Frase-promessa única** (condição 13, Clara Nunes) — ✅ DESTRAVADA: o
+dono ESCOLHEU em 12/08 (`docs/decisoes/2026-08-12-frase-promessa.md`)
+- A promessa é **"Acima de tudo"**, com as declinações oficiais "Acima de
+  tudo, Deus" e "Acima de tudo, o próximo". Aplicar palavra por palavra em
   `src/data/content.ts`, no hero de `/loja/` (via
   `scripts/vitrine/build-paginas.mjs`) e como exigência no
   `scripts/vitrine/lint-copy.mjs` (mesmo mecanismo da frase dos 10%).
-- **Não escolha a frase.** A sugestão do conselho ("Roupa que você usaria
-  mesmo sem o santo. Com o santo.") vai como opção; a escolha é do dono, e as
-  bios de Instagram e TikTok também são dele. Enquanto não houver escolha,
-  registre a tarefa como bloqueada.
+- "Streetwear católico premium, feito no Brasil para você" vira DESCRITOR
+  (subtítulo/meta); "Fé que se veste bem", "Entre o concreto e o céu" e
+  "Reverência não é sussurro" saem do posto de promessa no hero.
+- Bios de Instagram e TikTok seguem sendo aplicação do dono.
 
 **13. Captura de e-mail na vitrine e na landing** (condições 6 da Marina e 15
 da Clara; prazo da Clara 20/08)
