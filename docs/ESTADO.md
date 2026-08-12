@@ -114,6 +114,13 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 
 ## Pendências, em ordem
 
+> [!info] **Conselho, 5ª rodada (12/08): consenso pleno 14 a 0 na 2ª votação**,
+> com 39 condições incorporadas como pauta obrigatória. Ata, síntese da
+> presidente, plano de negócio e prompt de execução em
+> [`nuvemshop/auditoria/2026-08-12-conselho-r5/`](../nuvemshop/auditoria/2026-08-12-conselho-r5/).
+> O plano de 7/30/90 dias de lá ABSORVE e detalha as pendências abaixo; meta de
+> 29/09 definida como prova: 10 pedidos pagos medidos na janela 15–29/09.
+
 1. **Frente IzzyPrint** (a que destrava tudo): respostas das 10 perguntas,
    produtos-teste, integração, limites de área na conta.
 2. **Artes a 300 DPI na direção de 06/08** — pré-requisito da remontagem.
