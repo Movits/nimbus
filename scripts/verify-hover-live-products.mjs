@@ -1,3 +1,4 @@
+// SUPERADO: diagnostico do hover por par de cores, REMOVIDO da loja em 28/07/2026. One-off de julho; historico em docs/historico/. Nao usar.
 import fs from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";

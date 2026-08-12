@@ -1,3 +1,4 @@
+# SUPERADO (03/08/2026): familia de automacao de clique no painel MORTA — clique por script nao salva (o botao Publicar e no-op sem form-dirty). Publicar CSS: docs/fluxos/site-css-e-hover.md. Nao usar.
 param(
     [Parameter(Mandatory = $true)]
     [ValidateSet('focus', 'capture', 'click', 'drag', 'move', 'send')]

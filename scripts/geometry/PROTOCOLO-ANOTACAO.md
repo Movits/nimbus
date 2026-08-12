@@ -14,7 +14,9 @@ Tudo em **porcentagem da imagem original**, 0 a 100, `x` da esquerda para a dire
 para baixo. A folha de anotação já vem com grade: linhas finas a cada 2%, linhas grossas rotuladas
 a cada 10%. Os rótulos continuam em % da imagem original mesmo nos recortes ampliados.
 
-Para ampliar qualquer região, de `/home/user/nimbus`:
+Para ampliar qualquer região, da raiz do repositório (na máquina do dono,
+`C:\Users\rober\Nimbus`; o caminho antigo `/home/user/nimbus` era da sessão na
+nuvem):
 
 ```
 node scripts/geometry/annotate.mjs <foto.jpg> <saida.jpg> --zoom x0,x1,y0,y1

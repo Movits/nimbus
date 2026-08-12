@@ -53,8 +53,12 @@ passar.**
 
 | Anotação | Viés | Desvio | Margem publicada |
 |---|---|---|---|
-| **8 pontos** | +0,6 pp | 1,24 pp | **±3 pp** |
-| 4 pontos | +2,86 pp | 1,65 pp | ±6 pp |
+| **8 pontos** | −0,79 pp | 1,51 pp | **±4 pp** |
+| 4 pontos (bbox) | −3,04 pp | 1,79 pp | ±8 pp |
+
+(Números da validação de 12/08/2026; a fonte viva é o
+`validation-report.json` gerado por cada `validate.mjs` — confira lá antes de
+citar, esta tabela é um retrato.)
 
 **Anote os 8 pontos.** Medir a altura da arte pelas bordas laterais introduz
 viés de ~3 pontos: as bordas ficam na parte curva do dorso, mais **longe** da
@@ -88,8 +92,9 @@ somando na mesma direção:
 3. **Tamanho vestido.** A faixa P..EG entra como faixa, mas aqui pesa pouco
    (o número é da ordem de 1 cm).
 
-Resultado: cobertura de **98,9%** (a faixa contém a verdade) e **zero vereditos
-decisivos errados** em 19.440 casos. O preço é decidir em só **12%** deles.
+Resultado (validação de 12/08/2026): cobertura de **96,4%** (a faixa contém a
+verdade) e **zero vereditos decisivos errados** em 19.440 casos. O preço é
+decidir em só **35,8%** deles (46,3% nos frontais).
 Traduzindo em prática: o medidor confirma centralização abaixo de ~2 cm e
 reprova deslocamento acima de ~7 cm. **Entre os dois ele não sabe, e diz que
 não sabe.** Centralização fina não é mensurável numa foto de peça vestida.

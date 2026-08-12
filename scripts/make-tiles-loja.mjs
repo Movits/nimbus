@@ -1,3 +1,4 @@
+// ATENCAO (12/08/2026): escrito para o tema MORELIA, morto em 15/07 (vigente: Baires CONGELADO). Regenerar tiles exige conferir os modulos do Baires antes. Nao rodar por rotina.
 // Tiles das 3 coleções pra home da loja (módulo de banners lado a lado do Morelia).
 // Imagem retrato + gradiente navy embaixo (legibilidade do título que o tema põe por cima).
 // Uso: node scripts/make-tiles-loja.mjs

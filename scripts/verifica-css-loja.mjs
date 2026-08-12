@@ -45,7 +45,9 @@ try {
 const DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "nuvemshop");
 // Cobre também as FONTES do build (16/07 e 17/07): regenerar o consolidado a
 // partir de fonte com escape curto reintroduziria o bug que este portão mata.
-const ARQUIVOS = /^css-nimbus-.*-2026-07-(16|17|20)\.css$/;
+// Janela ampliada em 12/08: QUALQUER css-nimbus-*.css no nível de nuvemshop/
+// entra no portão — CSS novo com data nova entrava cego na regra antiga.
+const ARQUIVOS = /^css-nimbus-.*\.css$/;
 
 /** O que o painel faz com o CSS colado, MEDIDO em produção (03-04/08): além de
  *  comer o espaço que delimita o escape, ele TAMBÉM remove os zeros à esquerda

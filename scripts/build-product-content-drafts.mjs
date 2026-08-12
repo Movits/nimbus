@@ -126,14 +126,14 @@ function makeDescription(row) {
     `<h2>Cuidados</h2>`,
     `<p>${row.care}</p>`,
     `<h2>Produção e envio</h2>`,
-    `<p>Produzida sob demanda no Brasil. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>`,
+    `<p>Feita no Brasil, para você. Prazos médios totais após a confirmação do pagamento: São Paulo, 1 a 3 dias úteis; Sudeste, 2 a 4; Sul e Centro-Oeste, 3 a 5; Norte e Nordeste, 4 a 10. O prazo do checkout para o seu CEP prevalece. O rastreio é enviado após a postagem.</p>`,
     technicalBlock,
     `<p>Esta peça destina 10% do lucro ao projeto social da sua escolha, no checkout.</p>`,
   ].filter(Boolean).join("\n");
 }
 
 function makeMetaDescription(row) {
-  const copy = `${row.art} em ${row.garment.toLowerCase()} NIMBUS. ${row.fit}. Produção sob demanda no Brasil.`;
+  const copy = `${row.art} em ${row.garment.toLowerCase()} NIMBUS. ${row.fit}. Feita no Brasil, para você.`;
   return copy.length <= 155 ? copy : `${copy.slice(0, 152).trimEnd()}...`;
 }
 

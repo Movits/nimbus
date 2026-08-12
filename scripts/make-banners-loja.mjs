@@ -1,3 +1,4 @@
+// ATENCAO (12/08/2026): comentarios citam o tema MORELIA, morto em 15/07 (vigente: Baires CONGELADO). Conferir os campos do Baires antes de regenerar qualquer banner.
 // Gera o logo + banners da loja Nuvemshop a partir dos assets JA PUBLICOS de public/img.
 // (Nenhuma arte de produto entra aqui — só o mundo céu/catedral/Cristo/Pampulha do site.)
 // Uso: node scripts/make-banners-loja.mjs
