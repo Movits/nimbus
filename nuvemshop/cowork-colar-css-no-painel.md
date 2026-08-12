@@ -6,8 +6,11 @@ substituido-por: cowork-publicar-css.md
 
 # Prompt para o Cowork: colar o CSS da loja no painel da Nuvemshop (SUPERADO)
 
-> [!warning] Não cole este bloco. Use
-> [`cowork-publicar-css.md`](cowork-publicar-css.md).
+> [!warning] Não cole este bloco. O protocolo VIGENTE para publicar CSS está
+> em [`docs/fluxos/site-css-e-hover.md`](../docs/fluxos/site-css-e-hover.md)
+> (o `cowork-publicar-css.md` também é registro concluído). E a doutrina do
+> escape `\00000A` que este corpo ensina foi REVOGADA em 04/08: o painel come
+> os zeros à esquerda, escape seguido de hexadecimal é inusável.
 >
 > Esta rodada já rodou em 02-03/08 e parou no último clique: **Publicar
 > alterações não salva quando o clique é feito por script**, e a extensão não

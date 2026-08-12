@@ -45,17 +45,21 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 
 ## Layout dos repositórios
 
-O projeto vive em **três** repositórios irmãos, clonados lado a lado:
+Três repositórios. **Na máquina do dono o brain NÃO é um clone irmão**: é o
+vault Obsidian aninhado em `Nimbus\Nimbus brain` (gitignorado do público;
+`C:\Users\rober\nimbus-brain` é uma junction para ele). ⚠️ Nunca `git clean
+-fdx` no público — apagaria o vault.
 
 ```
-nimbus/          PÚBLICO  — código, documentação, medições, auditorias
-nimbus-assets/   PRIVADO  — as artes, os blanks e as capas
-nimbus-brain/    PRIVADO  — o segundo cérebro do negócio (wiki, calendário, fiscal)
+nimbus/                    PÚBLICO  — código, documentação, medições, auditorias
+nimbus-assets/             PRIVADO  — as artes, os blanks e as capas
+nimbus/Nimbus brain/       PRIVADO  — o segundo cérebro (repo próprio, aninhado)
 ```
 
 O de assets é privado porque as artes são a propriedade da marca. Os scripts
 esperam encontrá-lo em `../nimbus-assets` ou no caminho de `NIMBUS_ASSETS`. O
-brain tem schema próprio e obrigatório no `CLAUDE.md` da raiz dele.
+brain tem schema próprio e obrigatório no `CLAUDE.md` da raiz dele. Máquina
+nova sem nada: clone os três lado a lado (`REPOSITORIOS.md`).
 
 Detalhe em [`REPOSITORIOS.md`](REPOSITORIOS.md).
 

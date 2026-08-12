@@ -127,6 +127,16 @@ if (existsSync(ALLOW)) {
   try { permitidos = JSON.parse(readFileSync(ALLOW, "utf8")).permitidos || []; }
   catch { console.error("  ERRO: status-docs.allow.json ilegivel."); process.exit(1); }
 }
+// Raizes privadas que NAO foram varridas nesta rodada (ex.: o CI so tem o repo
+// publico): excecoes delas ficam de fora da conta — nem validam, nem vencem.
+// Sem isto, o deploy quebrava com "excecao vencida" para arquivo que ele nao
+// enxerga (aconteceu em 12/08, dois deploys vermelhos).
+const RAIZES_PRIVADAS = ["nimbus-brain/", "nimbus-assets/"];
+const raizesVarridas = new Set(arquivos.map((a) => a.rotulo.split("/")[0] + "/"));
+permitidos = permitidos.filter((p) => {
+  const prefixo = RAIZES_PRIVADAS.find((r) => p.arquivo.replace(/\\/g, "/").startsWith(r));
+  return !prefixo || raizesVarridas.has(prefixo);
+});
 const permitidoPor = new Map(permitidos.map((p) => [p.arquivo.replace(/\\/g, "/"), p]));
 const violadoPor = new Map(violacoes.map((v) => [v.rotulo.replace(/\\/g, "/"), v]));
 
