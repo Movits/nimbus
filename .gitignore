@@ -134,3 +134,6 @@ nuvemshop/assets/producao-capas/**/*.prompt.txt
 # .jpg idem: eram 94 capturas de diagnostico (zoom de gola/barra/torso) que
 # passaram despercebidas na regra acima e ficaram versionadas ate 03/08.
 nuvemshop/assets/producao-capas/**/*.jpg
+
+# Config local do Claude Code e por maquina, nao por projeto
+.claude/settings.local.json
