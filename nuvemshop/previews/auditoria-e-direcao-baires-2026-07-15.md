@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Prévia de 15/07; contradiz decisões posteriores (o selo powered-by voltou por ordem do dono em 08/08; hover morto em 28/07).
+
 # NIMBUS — Auditoria do catálogo e direção da loja Baires
 
 Data da conferência: 15/07/2026

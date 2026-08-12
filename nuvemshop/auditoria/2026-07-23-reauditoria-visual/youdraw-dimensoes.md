@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Arquivo de pasta INVALIDADA que se declarava fonte de verdade. NÃO é: medidas e placement vigentes moram em docs/verdades/.
+
 # Dimensões das artes por produto (YouDraw, coletado 23/07/2026)
 
 Fonte de verdade: aba Detalhes de cada produto em dashboard.youdraw.com.br.

@@ -1,7 +1,10 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-12
 ---
 # Ata do conselho, 3ª rodada: site chamativo e premium para o nicho (2026-07-30)
+
+> [!info] Registro do conselho r3; P0/P1 executados até 04/08. O item P1-4 (régua de frete) descreve o teto MORTO de R$199; a regra vigente é R$399,90 + Ecobag. Estado vivo em docs/ESTADO.md.
 
 Reunião convocada pelo dono ('rodem os agentes do conselho para debaterem até consenso melhorias no site'). 12 conselheiros + 2 convidadas, presidência de Helena Vasquez. Todos visitaram o site publicado (home, coleção RELÍQUIA, PDP São Jorge Neobarroco, landing) antes de opinar. Resultado: **10 aprovar, 4 ressalvas (todas de ordem de execução), 0 rejeitar**; as ressalvas foram incorporadas na pauta final pela presidente.
 

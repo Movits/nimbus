@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Reauditoria de 23/07 INVALIDADA (ficou sem aviso até 26/07 — era o conflito mais perigoso do projeto). Ver docs/historico/README.md.
+
 # Classificação de FUNDO das 49 capas lifestyle (2026-07-23)
 
 Varredura independente do fundo/cenário de cada capa (só o fundo, não a estampa nem a escala), feita por 8 leitores em paralelo. Critério: estética da marca = céu dominante + concreto branco modernista (Niemeyer) + luz editorial + ar. Objetivo: separar fundo genuinamente ruim ("cara de IA", incoerente, claustrofóbico) de fundo apenas "não céu-dominante".

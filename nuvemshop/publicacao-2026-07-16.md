@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Registro da publicação de 16/07; cita o painel pelo domínio interno de época. O protocolo vigente de CSS está em docs/fluxos/site-css-e-hover.md.
+
 # Registro da publicação de 16/07/2026
 
 **Isto é um registro do que já foi feito, não uma ordem de publicação.** A loja está no ar e conferida.

@@ -1,3 +1,10 @@
+---
+status: concluido
+atualizado: 2026-08-12
+---
+
+> [!info] Medição CONCLUÍDA: o resultado (datum gola→barra) está incorporado em docs/verdades/placement.md; este arquivo é o registro.
+
 # Datum da tabela YouDraw — investigação nos mockups locais (26/07/2026)
 
 A questão aberta que valia 3-5% ("a altura da tabela sai do OMBRO ou da BASE

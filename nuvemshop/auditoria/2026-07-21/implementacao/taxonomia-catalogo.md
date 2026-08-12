@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Taxonomia de época: define 'variante' por SKU (386), divergente da régua vigente de 78 variantes em docs/verdades/catalogo.md.
+
 # Taxonomia do catálogo NIMBUS
 
 Para evitar confusão entre criação e cadastro comercial, a NIMBUS passa a usar quatro níveis:

@@ -1,9 +1,15 @@
 ---
-status: vigente
-atualizado: 2026-08-03
+status: concluido
+atualizado: 2026-08-12
 ---
 
 # Auditoria geométrica das capas lifestyle — 25/07
+
+> [!info] 12/08: medição CONCLUÍDA e válida como registro; a "fila de
+> correção" abaixo foi SUPERADA duas vezes (o lote inteiro de 77 capas foi
+> reprovado pelo dono em 26/07, e a reconstrução agora é parte da remontagem
+> IzzyPrint — `docs/ESTADO.md`). A régua das colunas `*_cm` continua oficial.
+> Não execute a fila.
 
 Método e precisão: `scripts/geometry/README.md`. Protocolo de anotação:
 `scripts/geometry/PROTOCOLO-ANOTACAO.md`. Tabela completa: `medicoes.csv`, gerada por

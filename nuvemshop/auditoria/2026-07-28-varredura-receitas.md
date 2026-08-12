@@ -68,6 +68,13 @@ razão acima da tabela é fisicamente impossível sem vício de medição.
 
 ## Próximo passo
 
+> [!warning] 12/08: NÃO execute esta ordem. A reconstrução ficou condicionada
+> à decisão de plataforma, e a decisão saiu em 07/08: o catálogo será
+> REMONTADO na IzzyPrint (`docs/ESTADO.md`, seção Produção) — reconstruir
+> sobre blanks YouDraw seria trabalho jogado fora. A ordem abaixo fica como
+> registro do método (uma capa por vez, centro pelos vincos, olho antes de
+> seguir), que continua correto.
+
 Reconstruir uma capa por vez com o compositor novo, começando pelos 6
 suspeitos + 4 sem torso (medição do zero), depois os 7 da borda, depois o
 resto. Em toda capa: centro pelos vincos de cava, `measure-torso` só como

@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. TERCEIRA auditoria INVALIDADA (compara mockup plano com foto vestida e fabrica 'estampa grande'). Ver docs/historico/README.md.
+
 # Auditoria final de imagens — NIMBUS
 
 > [!warning] **Documento histórico (22/07), com método invalidado.**

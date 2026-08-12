@@ -1,5 +1,6 @@
 ---
 status: concluido
+atualizado: 2026-08-12
 ---
 
 > [!warning] Missão CUMPRIDA: cupom ECOBAG criado e validado no painel em

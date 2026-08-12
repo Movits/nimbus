@@ -1,7 +1,10 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-12
 ---
 # Ata do conselho, 4ª rodada: o que fechar antes da NUVEM e do tráfego de setembro/outubro (2026-08-03)
+
+> [!info] Registro do conselho r4 (consenso 14-0). O que segue aberto da pauta está em docs/ESTADO.md, Pendências; a espera das amostras acabou (IzzyPrint DECIDIDA em 07/08).
 
 Reunião convocada pelo dono, com a regra desta rodada: votações sucessivas sobre a pauta até consenso pleno. 14 membros (12 conselheiros + 2 convidadas), presidência de Helena Vasquez. Todos visitaram o site publicado antes de opinar. Resultado: **1ª votação com 11 aprovar e 3 ressalvas (André Falcão, Clara Nunes, Dra. Renata Lins)**; a presidente revisou a pauta incorporando os 3 ajustes integralmente; **2ª votação com 14 aprovar: consenso pleno**.
 

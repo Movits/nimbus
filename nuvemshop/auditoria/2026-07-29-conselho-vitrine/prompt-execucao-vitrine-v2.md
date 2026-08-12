@@ -1,7 +1,10 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-12
 ---
 # Prompt de execução: NIMBUS vitrine v2 (saída da 2ª rodada do conselho, 2026-07-29)
+
+> [!info] Plano CUMPRIDO (29-31/07). Endereços de época: /loja-preview morreu (vitrine é /loja/ desde 31/07), caminhos /home/user/ eram da nuvem, upsell de R$199 morto. NADA executável aqui.
 
 Executar com o agente implementador (Claude). Fonte: ata em `ata-conselho-vitrine-v2.md`.
 

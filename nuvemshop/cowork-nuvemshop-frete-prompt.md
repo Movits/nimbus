@@ -1,5 +1,6 @@
 ---
 status: concluido
+atualizado: 2026-08-12
 ---
 
 > [!warning] Missão CUMPRIDA em 31/07/2026: a regra de frete grátis a

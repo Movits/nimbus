@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-11
+atualizado: 2026-08-12
 ---
 
 # Estado do projeto
@@ -38,8 +38,10 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   [`nuvemshop/consertos-loja-2026-08-08.md`](../nuvemshop/consertos-loja-2026-08-08.md)**
   (o cowork-consertos-painel-2026-08-08 saiu com 3 itens fantasma; a v2 provou
   que eram placeholders `display:none` — PR #60).
-- **Decisões ABERTAS do dono (08/08)**: 4 produtos legados compráveis na busca
-  da Nuvemshop (despublicar?), telefone no rodapé, selo powered-by.
+- **Ordens do dono de 08/08, no roteiro, aguardando execução no painel**:
+  despublicar os 4 legados, remover o telefone dos dados de contato, selo
+  powered-by de volta. (O brain de 08/08 as listava como "abertas"; os itens 7
+  e 8 do roteiro e o commit #59 registram a decisão.)
 
 ## Vitrine e landing (GitHub Pages)
 

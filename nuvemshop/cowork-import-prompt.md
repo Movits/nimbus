@@ -1,5 +1,6 @@
 ---
 status: historico
+atualizado: 2026-08-12
 ---
 # NIMBUS — Prompt pro Claude Cowork: importar produtos YouDraw → Nuvemshop
 

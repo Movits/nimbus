@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Plano/registro de 21-22/07, executado ou superado; premissas de época morreram (frete grátis R$199, copy com 'sob demanda', MEI por abrir, YouDraw como plataforma). Estado vivo: docs/ESTADO.md.
+
 # Implementação pré-lançamento NIMBUS
 
 Atualizado em 21/07/2026.

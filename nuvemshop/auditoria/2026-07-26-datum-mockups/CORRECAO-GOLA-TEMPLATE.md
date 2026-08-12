@@ -1,3 +1,10 @@
+---
+status: concluido
+atualizado: 2026-08-12
+---
+
+> [!info] Medição CONCLUÍDA: o resultado (datum gola→barra) está incorporado em docs/verdades/placement.md; este arquivo é o registro.
+
 # Correção da gola do template — 26/07/2026
 
 ## O que estava errado

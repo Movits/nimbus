@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Auditoria PARCIALMENTE invalidada: as colunas *_cm do CSV são a régua em uso; o veredito, o DOCX e o PDF são históricos.
+
 # O que vale e o que nao vale nesta pasta
 
 Escrito em 25/07/2026, depois que o metodo de escala desta auditoria foi

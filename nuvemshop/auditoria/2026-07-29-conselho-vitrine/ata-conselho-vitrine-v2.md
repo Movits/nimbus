@@ -1,7 +1,10 @@
 ---
-status: ativo
+status: concluido
+atualizado: 2026-08-12
 ---
 # Ata do conselho, 2ª rodada: revisão de design da vitrine (2026-07-29)
+
+> [!info] Registro do conselho r2; pauta executada em 29-31/07. Itens com frete R$199 morreram em 31/07 (vigente: R$399,90 + Ecobag). Nada daqui se executa; estado vivo em docs/ESTADO.md.
 
 Reunião conduzida com 12 conselheiros + 2 convidadas (Isadora Prado, Direção de Arte de
 Campanha; Dani Okada, Engenharia de Design System), presidida por Helena Vasquez.

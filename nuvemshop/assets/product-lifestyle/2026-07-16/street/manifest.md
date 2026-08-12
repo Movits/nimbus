@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Material de época do método de julho; a régua de placement vigente são os mockups de referência + docs/verdades/. Colunas de status internas são de época.
+
 # Campanha lifestyle — STREET
 
 Levantamento da loja pública em 16/07/2026:

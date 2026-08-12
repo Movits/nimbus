@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Plano/registro de 21-22/07, executado ou superado; premissas de época morreram (frete grátis R$199, copy com 'sob demanda', MEI por abrir, YouDraw como plataforma). Estado vivo: docs/ESTADO.md.
+
 # Decisão sobre identificação e formalização
 
 Atualizado em 22/07/2026. Orientação operacional preliminar, não substitui advogado ou contador.

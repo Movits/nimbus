@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-12
+---
+
+> [!warning] HISTÓRICO — não seguir. Reauditoria de 23/07 INVALIDADA (ficou sem aviso até 26/07 — era o conflito mais perigoso do projeto). Ver docs/historico/README.md.
+
 > [!CAUTION]
 > # ⛔ AUDITORIA INVALIDADA — NÃO USE ESTA FILA
 >
