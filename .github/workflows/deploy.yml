@@ -38,6 +38,8 @@ jobs:
       # assets privados, que este repo público não tem.
       - run: node scripts/vitrine/lint-nuvem.mjs
       - run: node scripts/vitrine/lint-tracking.mjs
+      # docs:status sem os repos privados: o script pula raiz ausente sozinho.
+      - run: node scripts/verifica-status-docs.mjs
       # P1-1f (r4): HTML commitado velho passa nos lints; o CI regenera as
       # páginas a partir do catálogo commitado e falha se o diff não sair
       # limpo. Quem mudar build-paginas/catálogo roda `npm run vitrine` e

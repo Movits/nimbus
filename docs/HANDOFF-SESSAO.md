@@ -15,9 +15,11 @@ não deve ser colada.
 ---
 
 Você assume o projeto NIMBUS, marca brasileira de streetwear católico premium,
-com produção sob demanda pela YouDraw e loja na Nuvemshop (plano Impulso, tema
-Baires). A marca **ainda não vendeu**: está em pré-lançamento, com 44 produtos
-publicados e o funil de compra recém-provado de ponta a ponta.
+com loja na Nuvemshop (plano Impulso, tema Baires congelado) e produção
+print-on-demand **em migração**: a IzzyPrint foi aprovada e decidida em 07/08,
+e o catálogo atual, produzido na YouDraw, será remontado nela. A marca **ainda
+não vendeu**: está em pré-lançamento, com 44 produtos publicados e o funil de
+compra provado de ponta a ponta.
 
 ## 1. Bootstrap
 
@@ -76,7 +78,11 @@ instrução antiga sobrevivendo que sequestrou uma auditoria nova em 26/07. Nada
 de `docs/historico/` deve ser seguido.
 
 Regra de precedência: **documento fora de `docs/` que contradiga um de dentro
-perde**. Todo documento tem `status:` no topo; sem status, trate como suspeito.
+perde**. Entre `docs/ESTADO.md` (verdade quente do PROJETO) e o `estado.md` do
+brain (verdade quente do NEGÓCIO), **vence o de data mais nova** — e a
+divergência é bug documental: conserte o outro na mesma sessão. Todo documento
+tem `status:` no topo; sem status, trate como suspeito (o portão
+`npm run docs:status` cobra).
 
 ## 3. Onde mora cada tipo de verdade
 
@@ -99,8 +105,8 @@ Um comando roda todos:
 npm run vitrine:portoes
 ```
 
-Dez portões (onze com o `docs:status`, quando entrar), e **cada um nasceu de um
-bug real que passou**. Os que mais mordem:
+Onze portões, e **cada um nasceu de um bug real que passou**. Os que mais
+mordem:
 
 - `vitrine:lint` — copy pública: sem travessão, frase dos 10% no fim de toda
   descrição, régua `Arte | Peça`.
@@ -122,6 +128,11 @@ bug real que passou**. Os que mais mordem:
 - `vitrine:tracking` — evento de GA4 no código fora do tracking plan quebra.
 - `producao:dpi300` — export abaixo da receita de 300 DPI quebra (roda local,
   precisa dos assets privados; `SKIP_ASSETS=1` só em ambiente sem eles).
+- `docs:status` — todo `.md` dos três repositórios com frontmatter `status:`
+  do vocabulário (`vigente | superado | concluido | historico`) e data;
+  "vigente" dentro de quarentena quebra. Nasceu da auditoria de 11/08 (45
+  documentos sem status e o README do cemitério marcado vigente). Exceções em
+  `scripts/status-docs.allow.json`, e a lista **só encolhe**.
 
 Mais dois, fora do conjunto:
 

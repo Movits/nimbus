@@ -1,0 +1,700 @@
+{
+  "_leia": [
+    "Excecoes do portao docs:status, uma por arquivo e com motivo. A lista SO ENCOLHE:",
+    "excecao cujo arquivo ja esta conforme derruba o portao pedindo remocao.",
+    "Semeada em 2026-08-11 na criacao do portao com as violacoes da epoca;",
+    "cada lote da remediacao remove as suas."
+  ],
+  "permitidos": [
+    {
+      "arquivo": "README.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "designs/README.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/HANDOFF-CONTA-NUVEM.md",
+      "motivo": "pendente de triagem (status \"obsoleto\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/decisoes/2026-07-29-regra-de-fotos-e-copy-do-site.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/decisoes/2026-07-30-respostas-do-dono-r3.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/decisoes/2026-07-30-visual-loja-e-sacola.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/decisoes/nuvemshop-continuidade.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/historico/HANDOFF-SESSAO-LOCAL-2026-07-26.md",
+      "motivo": "pendente de triagem (status \"obsoleto\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "docs/historico/README.md",
+      "motivo": "pendente de triagem (status \"vigente\" dentro de quarentena (docs/historico, _superados ou _arquivo-*))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "lancamento-conteudo.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "loja-plataforma.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "marca-kit.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "marketing/social/lancamento-2026-07-22/decisao-ferramentas-criativas.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "marketing/social/lancamento-2026-07-22/perfis-e-biografias.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "marketing/social/lancamento-2026-07-22/protocolo-imagens-nimbus.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "marketing/social/protocolo-higgsfield-3-passos.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-designs-roupas-higgsfield.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-higgsfield-prompts.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-landing-storyboard.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-lifestyle-higgsfield.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/assets/collections/2026-07-15/README.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/assets/collections/2026-07-16/README.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/assets/product-lifestyle/2026-07-16/README.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/assets/product-lifestyle/2026-07-16/street/manifest.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/ata-conselho-e-auditoria-pre-lancamento.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/contexto-nimbus-para-conselho.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/auditoria-imagens-2026-07-22/relatorio-final-2026-07-22.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/decisao-formalizacao-e-lancamento.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/estrutura-planilha-impacto-mensal.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/plano-implementacao-e-pendencias-do-dono.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/plano-social-ads-soft-launch.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/runbook-operacional-draft.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/implementacao/taxonomia-catalogo.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/plano-de-negocio-nimbus.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/prompt-conselho-auditoria-pre-lancamento.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-21/prompt-execucao-pos-conselho.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-22-dimensoes-arte/LEIA-ME.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-23-reauditoria-visual/RELATORIO.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-23-reauditoria-visual/classificacao-fundos-2026-07-23.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-23-reauditoria-visual/youdraw-dimensoes.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-25-geometria/E1-ACESSO-A-MOCKUPS.md",
+      "motivo": "pendente de triagem (status \"refutado\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-26-datum-mockups/CONCLUSOES.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-26-datum-mockups/CORRECAO-GOLA-TEMPLATE.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-29-conselho-vitrine/ata-conselho-vitrine-v2.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-29-conselho-vitrine/prompt-execucao-vitrine-v2.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-07-30-conselho-vitrine-r3/ata-conselho-vitrine-r3.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/auditoria/2026-08-03-conselho-vitrine-r4/ata-conselho-vitrine-r4.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/cowork-import-prompt.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/cowork-nuvemshop-frete-prompt.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/cowork-painel-e-mei-prompt.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/cowork-r3-cupom-ftp-mei-prompt.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/previews/auditoria-e-direcao-baires-2026-07-15.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nuvemshop/publicacao-2026-07-16.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "pesquisa-mercado.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "produtos-nomes.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "proximos-passos.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "scripts/gemini/README.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-assets/casting/2026-07-16/LEIA-ME.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-assets/designs/acervo/gotica-blackletter/LEIA-ME.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-assets/designs/prontos/TRIAGEM-2026-08-06.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/ESCOLHA-DO-DONO-2026-08-06.md",
+      "motivo": "pendente de triagem (ilegivel)",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-assets/nuvemshop/tema-baires/LEIA-ME.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-assets/nuvemshop/tema-baires/cowork-ftp-e-teste-carrinho.md",
+      "motivo": "pendente de triagem (frontmatter sem data (atualizado: ou updated: em YYYY-MM-DD))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/CLAUDE.md",
+      "motivo": "pendente de triagem (frontmatter sem chave status:)",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/README.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/estado.md",
+      "motivo": "pendente de triagem (frontmatter sem chave status:)",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/financeiro/dossie-mei-2026-08-01.md",
+      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/financeiro/margem-contribuicao-2026-08.md",
+      "motivo": "pendente de triagem (status \"rascunho-para-validacao\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/index.md",
+      "motivo": "pendente de triagem (frontmatter sem chave status:)",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/log.md",
+      "motivo": "pendente de triagem (frontmatter sem chave status:)",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/painel.md",
+      "motivo": "pendente de triagem (frontmatter sem chave status:)",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/arquitetura-site.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/calendario.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/canais-e-redes.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/convencao-de-nomes.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/copywriting.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/curadoria-arte-peca.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/dominio-e-marca.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/estrategia-de-preco.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/fila-de-estampas.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/frete.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/geracao-capas-lifestyle.md",
+      "motivo": "pendente de triagem (status \"invalidado\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/golpes-e-cobrancas-mei.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/identidade-visual.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/integracao-pod.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/placement-peito-costas.md",
+      "motivo": "pendente de triagem (status \"invalidado\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/projeto-social.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/promocoes.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/prompts-higgsfield.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/publico-alvo.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/roadmap-lancamento.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/concepts/tom-de-voz.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/bosslife.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/claude-cowork.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/github-pages.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/higgsfield.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/inpi.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/izzyprint.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/marketplace-youdraw.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/nuvem.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/nuvemshop.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/oscar-niemeyer.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/persona-claudia.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/persona-marina.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/persona-rafael.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/persona-wallace.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/registro-br.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/reliquia.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/shopify.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/street.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/entities/youdraw.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/overview.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/cashvertising.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/cowork-import-prompt.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/lancamento-conteudo.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/loja-plataforma.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/marca-kit.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/nimbus-designs-roupas-higgsfield.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/nimbus-higgsfield-prompts.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/nimbus-landing-storyboard.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/nimbus-lifestyle-higgsfield.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/pesquisa-mercado.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/precificacao.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/produtos-nomes.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/proximos-passos.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/readme.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/video-35-licoes-cashvertising.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/sources/youdraw-dimensoes.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/auditoria-copy-site-2026-08.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/briefing-ad-estatico.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/calendario-campanhas-2026-2027.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/catalogo-curado-2026-07.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/comparativo-de-precos.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/decisoes-chave.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/estado-do-lancamento.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/padrao-ads-estaticos.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/posts-e-ads-que-funcionam.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    },
+    {
+      "arquivo": "nimbus-brain/wiki/syntheses/publico-e-fila-de-estampas.md",
+      "motivo": "pendente de triagem (status \"ativo\" fora do vocabulario (vigente | superado | concluido | historico))",
+      "desde": "2026-08-11"
+    }
+  ]
+}

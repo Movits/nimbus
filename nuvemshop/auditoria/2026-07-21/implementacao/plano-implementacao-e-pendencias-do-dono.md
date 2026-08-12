@@ -163,7 +163,12 @@ Essa lista é editorial. A seleção comercial final depende de margem e amostra
 ## Fontes técnicas consultadas
 
 - YouDraw, Tecidos e Qualidade: https://youdraw.tawk.help/article/peso-e-material-de-cada
-- YouDraw, Ecobag: https://marketplace.youdraw.com.br/collections/ecobag
+- YouDraw, Ecobag: **fonte retirada em 09/08/2026.** Apontava para
+  `marketplace.youdraw.com.br/collections/ecobag`, que respondia em 02/08 e hoje
+  não resolve mais no DNS. Diferente do caso do `blog.` abaixo, esta fonte
+  existia: o subdomínio saiu do ar entre 02/08 e 09/08. No mesmo dia o
+  `dashboard.youdraw.com.br` responde 200 redirecionando para `/em_manuten__o` e
+  o `youdraw.com.br` devolve 421.
 - YouDraw, frete: https://youdraw.tawk.help/article/como-funciona-o-frete-na-youdraw
 - YouDraw, rastreio: https://youdraw.tawk.help/article/como-funciona-o-rastreio
 - YouDraw, embalagens e etiquetas: https://youdraw.tawk.help/article/como-funcionam-as-embalagens-e-etiquetas
