@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Prompts do metodo SUPERADO de IA desenhando estampa (proibido desde 26/07).
+
 # NIMBUS — Estampas por coleção
 
 > ⚠️ **Biblioteca histórica de prompts de estampas. O canal vigente de geração é a API do Google AI Studio (Nano Banana / Nano Banana Pro). Regras de chroma (verde #00B140 / magenta #FF00FF) e códigos de coleção seguem válidos.**

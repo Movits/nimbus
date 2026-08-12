@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Metodo PROIBIDO desde 26/07 (IA desenhando a estampa falhou duas vezes sem mover a escala).
+
 > [!CAUTION]
 > # ⛔ MÉTODO PROIBIDO — status: invalidado
 >

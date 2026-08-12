@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Decisao de plataforma executada ha meses; o checklist ensina o frete R$199 morto. Estado vivo: docs/ESTADO.md.
+
 # NIMBUS — Plataforma da loja (decisão + roteiro)
 
 > ⚠️ **Documento histórico (jun/2026). A decisão foi executada: Nuvemshop (Impulso, tema Baires) + YouDraw integrada + landing no GitHub Pages. O estado real vive no `CLAUDE.md`.**

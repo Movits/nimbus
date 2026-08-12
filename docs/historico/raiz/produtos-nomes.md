@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Convencao de epoca com travessao no titulo publico (proibido hoje). Regua vigente: Arte | Peca, cobrada pelo lint-copy.
+
 # NIMBUS — Nomes de produtos, descrições e estratégia de peças
 
 > ⚠️ **Documento histórico (jun-jul/2026). A régua `Arte | Peça` segue válida, mas vários nomes evoluíram (ex.: Arcanjo Spray→São Miguel Vitorioso, Padroeira→Aparecida Barroca). O catálogo real é a Nuvemshop (49 produtos).**

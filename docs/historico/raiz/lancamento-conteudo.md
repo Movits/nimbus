@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Copy de epoca com cupom ESTREIA15 e frete gratis R$199, regras MORTAS em 31/07 (vigente: R$399,90 + Ecobag). Nada daqui se posta.
+
 # NIMBUS — Conteúdo de lançamento
 
 > ⚠️ **Documento histórico (jun/2026). Handles reais: Instagram/TikTok `@nimbuswear.br` (não os sugeridos aqui). Perfis e bios vigentes em `marketing/social/lancamento-2026-07-22/perfis-e-biografias.md`.**

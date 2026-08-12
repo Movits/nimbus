@@ -20,7 +20,8 @@ Tom: curto, humano, específico e reverente. **Sem travessão em copy pública.*
 Canal principal: **API do Google AI Studio** (Nano Banana e Nano Banana Pro).
 Higgsfield só quando o custo se justificar.
 
-⚠️ O `marketing/social/protocolo-higgsfield-3-passos.md` está **invalidado**:
+⚠️ O `docs/historico/protocolo-higgsfield-3-passos.md` (movido da marketing/
+em 11/08) está **invalidado**:
 manda a IA desenhar a estampa, o que é proibido. Para peça que mostre produto
 vestido, use o fluxo de [`capa-lifestyle.md`](capa-lifestyle.md).
 

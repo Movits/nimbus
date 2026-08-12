@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Roadmap de junho, executado ou superado ponto a ponto. Estado vivo: docs/ESTADO.md.
+
 # NIMBUS — Próximos passos (do "designs prontos" até "vendendo")
 
 > ⚠️ **Documento histórico (jun/2026). O roadmap foi executado: loja no ar com 49 produtos, domínio nimbuswear.com.br, plano Impulso, tema Baires. O estado real vive no `CLAUDE.md`; o checklist abaixo NÃO reflete o que falta hoje.**

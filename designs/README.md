@@ -1,9 +1,19 @@
+---
+status: vigente
+atualizado: 2026-08-11
+---
+
 # designs/ — artes das estampas (POD)
 
-> ⚠️ **Nota (24/07/2026): o canal vigente de geração é a API do Google AI Studio (Nano Banana / Nano Banana Pro), não mais o Higgsfield. O restante do fluxo (chroma, organize-designs, 300 DPI) segue válido.**
+> [!warning] Duas notas de época CORRIGIDAS em 11/08: (1) a decisão de 06/08
+> (`docs/decisoes/2026-08-06-nova-direcao-colecoes.md`) manda a estampa-teste
+> sair pelo MCP do Higgsfield, prevalecendo sobre a nota de 24/07 do canal
+> Gemini; (2) **o processo de chroma/fundo verde foi CONDENADO em 06/08** —
+> arte nova nasce em PNG de fundo transparente nativo, 300 DPI. O
+> `organize-designs.mjs` (que auto-detecta fundo verde/magenta) vale só para
+> material legado. Os prompts antigos foram para `docs/historico/raiz/`.
 
-Prompts em `../nimbus-designs-roupas-higgsfield.md`. As **imagens não vão pro GitHub** (repo
-público) — ficam local + Drive.
+As **imagens não vão pro GitHub** (repo público) — ficam local + Drive.
 
 ## Estrutura (por COLEÇÃO)
 ```

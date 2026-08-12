@@ -1,3 +1,10 @@
+---
+status: vigente
+atualizado: 2026-08-11
+---
+
+> [!info] Handles e bios oficiais (NimbusWear.br); conferido em 11/08.
+
 # Perfis sociais NIMBUS
 
 ## Identidade

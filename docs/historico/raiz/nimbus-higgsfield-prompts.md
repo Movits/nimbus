@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Prompts do metodo SUPERADO de IA desenhando estampa (proibido desde 26/07).
+
 # NIMBUS — Biblioteca de Prompts Higgsfield (Fase 0)
 
 > ⚠️ **Biblioteca histórica de prompts (Fase 0, assets do site já gerados). O roteamento vigente de ferramentas é a API do Google AI Studio (Nano Banana / Nano Banana Pro); Higgsfield só quando o custo se justificar. Ver `CLAUDE.md`.**

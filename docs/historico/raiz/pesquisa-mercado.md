@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Pesquisa de mercado de junho; retrato de epoca.
+
 # NIMBUS — Pesquisa de mercado (streetwear católico/cristão premium)
 
 > ⚠️ **Pesquisa pontual de jun/2026. Números de mercado e preços de concorrentes podem estar defasados; usar como contexto, não como dado atual.**

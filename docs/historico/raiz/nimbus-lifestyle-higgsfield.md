@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Prompts de lifestyle de epoca; o fluxo vigente de capa e docs/fluxos/capa-lifestyle.md.
+
 # NIMBUS — Prompts lifestyle / try-on (Higgsfield)
 
 > ⚠️ **Biblioteca histórica. Estes prompts genéricos são ANTERIORES à auditoria de dimensões (22-23/07) e não bastam para correções: a regra vigente é arte como camada rígida, escala por cm e o protocolo um-produto-por-vez no `CLAUDE.md`. Canal vigente: API do Google AI Studio.**

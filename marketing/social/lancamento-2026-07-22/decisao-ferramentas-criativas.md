@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Decisao de ferramentas de 22/07, superada em 24/07 (canal Gemini) e de novo em 06/08 (estampa-teste pelo MCP Higgsfield; chroma condenado).
+
 # Decisão de ferramentas criativas NIMBUS
 
 Data da análise: 22/07/2026.

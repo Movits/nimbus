@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Kit de epoca; o bloco de CSS usa custom properties que o painel da Nuvemshop REMOVE (fica inerte). Paleta oficial no CLAUDE.md.
+
 # NIMBUS — Kit de marca pra loja (Nuvemshop)
 
 > ⚠️ **Documento histórico (jun/2026). Paleta e tipografia seguem válidas, mas o tema recomendado (Trend/Simple/Bahia) e o plano Essencial foram superados: a loja usa tema Baires no plano Impulso. Ver `nuvemshop/instrucoes.md`.**

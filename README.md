@@ -1,3 +1,8 @@
+---
+status: vigente
+atualizado: 2026-08-11
+---
+
 # NIMBUS
 
 Streetwear católico premium. Este repo tem **três coisas**:
@@ -8,7 +13,10 @@ Streetwear católico premium. Este repo tem **três coisas**:
 | **Vitrine** | páginas estáticas geradas em `public/loja/` por `scripts/vitrine/`, deploy junto com a landing | https://nimbuswear.com.br/loja/ |
 | **Loja** | Nuvemshop (plataforma externa). O repo guarda o *kit* de CSS e páginas, colado à mão no painel | https://loja.nimbuswear.com.br |
 
-Documentação: comece por [`docs/00-COMECE-AQUI.md`](docs/00-COMECE-AQUI.md).
+Documentação: comece por [`docs/00-COMECE-AQUI.md`](docs/00-COMECE-AQUI.md) —
+é o ÚNICO ponto de entrada. Os documentos soltos que moravam nesta raiz
+(precificação, roadmap, prompts, kit de marca) eram históricos e foram para
+[`docs/historico/raiz/`](docs/historico/raiz/) em 11/08.
 
 **Mexendo na loja? Leia [`nuvemshop/instrucoes.md`](nuvemshop/instrucoes.md) primeiro.** Ele diz qual CSS
 está em produção. A Nuvemshop remove custom properties silenciosamente, então CSS com `var()` fica inerte

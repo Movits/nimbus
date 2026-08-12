@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Protocolo de epoca sem a trava de piso de 25/07 (ver o aviso abaixo); nao usar como regua.
+
 > ⚠️ **TOLERÂNCIA INCOMPLETA — falta a TRAVA DE PISO.** Este documento manda
 > "dentro de 5%" e omite a trava mecânica decidida em 25/07: o limiar efetivo
 > de cada foto nunca fica abaixo da margem MEDIDA do método (4 pp com moldura

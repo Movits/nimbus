@@ -7,71 +7,6 @@
   ],
   "permitidos": [
     {
-      "arquivo": "README.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "designs/README.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "lancamento-conteudo.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "loja-plataforma.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "marca-kit.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "marketing/social/lancamento-2026-07-22/decisao-ferramentas-criativas.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "marketing/social/lancamento-2026-07-22/perfis-e-biografias.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "marketing/social/lancamento-2026-07-22/protocolo-imagens-nimbus.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "marketing/social/protocolo-higgsfield-3-passos.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-designs-roupas-higgsfield.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-higgsfield-prompts.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-landing-storyboard.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "nimbus-lifestyle-higgsfield.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
       "arquivo": "nuvemshop/assets/collections/2026-07-15/README.md",
       "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
       "desde": "2026-08-11"
@@ -233,21 +168,6 @@
     },
     {
       "arquivo": "nuvemshop/publicacao-2026-07-16.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "pesquisa-mercado.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "produtos-nomes.md",
-      "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
-      "desde": "2026-08-11"
-    },
-    {
-      "arquivo": "proximos-passos.md",
       "motivo": "pendente de triagem (sem frontmatter (a primeira linha nao e ---))",
       "desde": "2026-08-11"
     },

@@ -1,3 +1,10 @@
+---
+status: historico
+atualizado: 2026-08-11
+---
+
+> [!warning] HISTORICO — nao seguir. Storyboard de epoca da landing; a landing publicada divergiu dele.
+
 # NIMBUS — Storyboard da Landing (mock pré-código)
 
 > ⚠️ **Storyboard pré-código (histórico). A landing implementada difere: Vite (não Next.js), 6 seções (Impacto no lugar de Drop/Coleção), scroll nativo com store próprio e nuvens procedurais. A fonte é `src/`.**
