@@ -269,9 +269,17 @@ Marina, unificando as 12 peças do Paulo e os 12 posts da Sofia; prazo 15/08)
 - UM arquivo novo, por exemplo `docs/fluxos/grade-editorial-2026-quaresma.md`
   (ao lado de `docs/fluxos/conteudo-social.md`), com uma linha por dia de
   15/08 a 29/09: data, formato (formatos 1, 2, 6 e 12 da pesquisa do brain,
-  `wiki/syntheses/posts-e-ads-que-funcionam.md`), ativo (as 64 fotos
-  aprovadas em `nimbus-assets/casting/2026-08-08-roberto-soul/gerados/v12-lote-60/`
-  e o vídeo de 28 s) e legenda mini-homilia no tom da marca, sem travessão.
+  `wiki/syntheses/posts-e-ads-que-funcionam.md`), ativo e legenda mini-homilia
+  no tom da marca, sem travessão.
+- **Banco de imagem vigente (pós-triagem do dono em 12/08, use estes números):**
+  `nimbus-assets/casting/2026-08-08-roberto-soul/gerados/v12-lote-60/` tem
+  **62 fotos, todas aprovadas** (NUVEM 18, RELÍQUIA 28, STREET 16) e **não
+  existe mais subpasta `reprovadas/`**; mais 14 fotos aprovadas nas outras
+  rodadas (`comunidade-v1`, `v4`, `v5`, `v10`, `v11`) e o vídeo de 28 s. As 11
+  fotos com defeito de cena estão em
+  `nimbus-assets/designs/_retrabalho-2026-08/fotos-modelo/` e **não entram na
+  grade** até serem refeitas. Qualquer número diferente disso em documento
+  antigo está superado.
 - A espinha litúrgica vem do brain
   (`wiki/syntheses/calendario-campanhas-2026-2027.md`) **já corrigida pela
   tarefa 18**. Publicar o post é do dono.
