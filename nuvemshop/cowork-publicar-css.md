@@ -14,6 +14,13 @@ atualizado: 2026-08-07
 > `docs/ESTADO.md` (seção de 05/08). Este arquivo fica como histórico e como
 > modelo de roteiro; não precisa ser executado de novo.
 
+> [!warning] Doutrina do corpo abaixo REVOGADA em 04/08: o escape `\00000A` de
+> seis dígitos NÃO resolve (o painel também remove os zeros à esquerda; escape
+> seguido de hexadecimal é inusável — a saída foi frase corrida, sem quebra).
+> Os números do portão de verificação (50.754 bytes, MD5 `f67d…`) são de época
+> e não batem com o arquivo atual. **O protocolo vigente está em
+> `docs/fluxos/site-css-e-hover.md`.** Nada abaixo deve ser seguido.
+
 Cole o texto abaixo da linha numa sessão do Cowork, na máquina do Roberto.
 
 **Onde isto parou.** Na rodada de 03/08 o Cowork fez tudo, menos o último

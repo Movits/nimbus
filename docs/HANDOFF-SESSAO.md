@@ -21,7 +21,17 @@ publicados e o funil de compra recém-provado de ponta a ponta.
 
 ## 1. Bootstrap
 
-São **três** repositórios, clonados lado a lado:
+São **três** repositórios. O layout depende da máquina:
+
+**Na máquina do dono (o caso normal): NADA a clonar.** O público está em
+`C:\Users\rober\Nimbus`, os assets em `C:\Users\rober\nimbus-assets`, e o brain
+é o vault Obsidian **aninhado** em `C:\Users\rober\Nimbus\Nimbus brain`
+(repo git próprio, gitignorado do público; `C:\Users\rober\nimbus-brain` é uma
+junction para ele). ⚠️ **Nunca `git clean -fdx` no público** — apagaria o
+vault — e não clone por cima da junction. Um hook de sessão confere a
+sincronia dos três ao abrir; se algo estiver atrás, `git pull --ff-only`.
+
+**Numa máquina nova, sem os repositórios:**
 
 ```bash
 git clone https://github.com/Movits/nimbus.git
@@ -89,7 +99,8 @@ Um comando roda todos:
 npm run vitrine:portoes
 ```
 
-Sete portões, e **cada um nasceu de um bug real que passou**:
+Dez portões (onze com o `docs:status`, quando entrar), e **cada um nasceu de um
+bug real que passou**. Os que mais mordem:
 
 - `vitrine:lint` — copy pública: sem travessão, frase dos 10% no fim de toda
   descrição, régua `Arte | Peça`.
@@ -106,6 +117,11 @@ Sete portões, e **cada um nasceu de um bug real que passou**:
   `scripts/link-check-docs.allow.json`, uma por vez e com motivo escrito.
 - `loja:css` — todo `content:` dos CSS da loja **sobrevive ao minificador do
   painel**. Nasceu do `ਐ` do rodapé.
+- `vitrine:nuvem` — arte sem devocional completo, peça sem escala declarada ou
+  produto sem par frente/costas quebra o build.
+- `vitrine:tracking` — evento de GA4 no código fora do tracking plan quebra.
+- `producao:dpi300` — export abaixo da receita de 300 DPI quebra (roda local,
+  precisa dos assets privados; `SKIP_ASSETS=1` só em ambiente sem eles).
 
 Mais dois, fora do conjunto:
 
@@ -195,9 +211,15 @@ Isto existe para você não repetir erro que já custou tempo:
   suprime confirmações, não credenciais.
 - **`core.autocrlf = true` no Windows** faz o `cart.tpl` do clone dar 10.496
   bytes e um MD5 diferente sem que a versão esteja errada. Extraia do git.
-- **O minificador do painel come o espaço que delimita um escape de CSS.** Por
-  isso `\A 10%` virou `ਐ%`. O conserto é escrever `\00000A`, seis dígitos, que
-  dispensa delimitador.
+- **Escape de CSS seguido de caractere hexadecimal é INUSÁVEL no painel.** O
+  minificador come o espaço delimitador E os zeros à esquerda: `\A 10%` virou
+  `ਐ%`, e o suposto conserto `\00000A` também virou `ਐ` (medido em 04/08 —
+  `\00000A` vira `\A` e gruda no `10`). A saída real foi tirar a quebra de
+  linha (frase corrida). Se um dia precisar de escape, garanta caractere
+  NÃO-hexadecimal logo depois. O portão `npm run loja:css` simula o painel.
+- **Publicar QUALQUER seção do editor de tema regrava o formulário inteiro** —
+  a publicação de um banner reverteu uma colagem de CSS da véspera. Por isso o
+  CSS se cola POR ÚLTIMO em qualquer sessão de tema.
 - **O botão "Publicar alterações" do editor de tema é um no-op quando o
   formulário não está sujo.** Sem `form-dirty`, o clique dispara só analytics e
   nenhum POST de gravação; pior, o textarea guarda rascunho local que sobrevive
@@ -246,10 +268,34 @@ de parada explícito e um relatório final com o que anotar.
 Toda sessão relevante termina assim:
 
 1. `npm run vitrine:portoes`, `npm run typecheck` e a validação de geometria.
-2. `docs/ESTADO.md` atualizado, porque é a página que a próxima sessão vai ler.
+2. Atualize `docs/ESTADO.md` (data `atualizado:` de hoje), porque é a página que
+   a próxima sessão vai ler.
 3. No brain: `estado.md` se algum fato vivo mudou, e **append** no `log.md` com
    `## [YYYY-MM-DD] <op> | <título>`.
-4. Commit e PR em rascunho nos repositórios tocados.
+4. Commit, push e PR nos repositórios tocados.
+5. **`npm run sessao:fim`** — o portão do ritual. Enquanto imprimir `[FALTA]`,
+   a sessão não terminou. Se algo vai ficar de fora de propósito, escreva o
+   motivo na última resposta, para a próxima sessão ler.
+
+## 12. Disciplina de sessão (contra a maratona)
+
+Uma sessão de 70 MB misturando loja + INPI + arte + pesquisa foi compactada no
+meio e passou a inventar. As regras abaixo existem por causa disso.
+
+1. **Uma frente por sessão.** Declare o assunto na primeira resposta e fique
+   nele. Loja, fiscal/INPI, geração de arte e pesquisa não coabitam.
+2. **Encerre e abra sessão nova quando:** (a) o assunto mudou; (b) o contexto
+   passou de ~60% ou apareceu aviso de compactação; (c) vai começar geração de
+   arte, auditoria de docs ou pesquisa longa; (d) você percebeu que releu algo
+   que já tinha lido nesta sessão e não lembrava.
+3. **Antes de compactar (ou ao cruzar ~60%): pare e grave.** Decisões novas vão
+   para `docs/ESTADO.md` e para o `estado.md` do brain; aprendizado vai para o
+   `log.md`. O que não está gravado morre na compactação, o roteiro de leitura
+   inclusive.
+4. **Painel/browser (Cowork, FTP, cliques no admin) é sessão separada** da
+   sessão de código: uma escreve o prompt, a outra executa.
+5. **Encerrar não é falhar.** `npm run sessao:fim`, zere as FALTAs, e a próxima
+   sessão parte do ESTADO, não da sua memória compactada.
 
 ---
 

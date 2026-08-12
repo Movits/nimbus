@@ -32,6 +32,14 @@
     {
       "url": "https://admin-mcp.nuvemshop.com.br/mcp",
       "motivo": "Endpoint MCP do conector oficial da Nuvemshop, usado de verdade na publicação de 24/07 (OAuth PKCE). Não responde a GET sem sessão: derruba a conexão em vez de dar 401. Citado só na página histórica geracao-capas-lifestyle do brain (status: invalidado)."
+    },
+    {
+      "url": "https://www.tiktok.com/community-guidelines/pt-br/integrity-authenticity",
+      "motivo": "O TikTok devolve 404 para HEAD com user-agent de robô; GET de navegador responde 200 (conferido em 11/08). Página existe; é o portão que o TikTok engana."
+    },
+    {
+      "url": "https://newsroom.tiktok.com/pt-br/tiktok-shop-cresce-102-vezes-em-seu-primeiro-ano-no-brasil",
+      "motivo": "Mesmo caso da community-guidelines: o newsroom do TikTok devolve 404 para HEAD/robô e 200 para GET de navegador (conferido em 11/08)."
     }
   ]
 }

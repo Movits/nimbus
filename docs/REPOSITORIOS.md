@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-03
+atualizado: 2026-08-11
 ---
 
 # Os três repositórios
@@ -11,8 +11,16 @@ nimbus-assets/   PRIVADO   github.com/Movits/nimbus-assets
 nimbus-brain/    PRIVADO   github.com/Movits/nimbus-brain
 ```
 
-Clone os três **lado a lado**. Os scripts procuram os assets em `../nimbus-assets`
-ou no caminho da variável `NIMBUS_ASSETS`, e o `npm run docs:links` varre os três.
+**Na máquina do dono o brain NÃO é um clone irmão**: é o vault Obsidian
+aninhado em `C:\Users\rober\Nimbus\Nimbus brain` (nome com espaço, gitignorado
+do repo público), e `C:\Users\rober\nimbus-brain` é uma **junction** criada em
+03/08 apontando para ele, para os scripts que esperam repos lado a lado.
+⚠️ **Nunca rode `git clean -fdx` no repo público** — apagaria o vault — e não
+clone por cima da junction.
+
+Numa máquina nova, clone os três **lado a lado**. Os scripts procuram os assets
+em `../nimbus-assets` ou no caminho da variável `NIMBUS_ASSETS`, e o
+`npm run docs:links` varre os três.
 
 > [!info] Atualizado em 2026-08-03: o `nimbus-brain` passou a ser citado aqui.
 > Ele existe desde julho, mas esta página só falava de dois repositórios, então

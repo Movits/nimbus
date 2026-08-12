@@ -5,11 +5,15 @@ atualizado: 2026-08-03
 
 # Loja Nuvemshop — estado e guia de aplicação
 
-> [!info] Atualizado em 03/08/2026. O estado ATUAL da loja vive em
+> [!info] Atualizado em 11/08/2026. O estado ATUAL da loja vive em
 > [`docs/ESTADO.md`](../docs/ESTADO.md); este arquivo guarda o operacional
-> (como colar CSS, alertas do painel). Para recolar o CSS, o roteiro vigente é
-> [`cowork-publicar-css.md`](cowork-publicar-css.md), e `npm run loja:css`
-> roda antes de qualquer colagem.
+> (como colar CSS, alertas do painel). **O protocolo vigente para recolar CSS
+> está em [`docs/fluxos/site-css-e-hover.md`](../docs/fluxos/site-css-e-hover.md)**
+> (resumo: `npm run loja:css` antes; colar → **Testar CSS** → Publicar →
+> conferir `POST /admin/themes/settings/active/` 200 na rede → provar em página
+> DYNAMIC tipo `/search/?q=x`; CSS por último na sessão de tema). O
+> [`cowork-publicar-css.md`](cowork-publicar-css.md) é registro concluído de
+> 03/08, não roteiro a executar.
 
 **Plano Impulso · tema Baires · baseline revisado em 24/07/2026.**
 

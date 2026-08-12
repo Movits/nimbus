@@ -90,7 +90,10 @@ for (const arq of readdirSync(DIR).filter((f) => ARQUIVOS.test(f))) {
     if (antes !== depois) {
       falhas.push(
         `${arq}, escape #${i}\n     versionado: ${antes}\n     publicado:  ${depois}\n` +
-          `     conserto: troque \\A por \\00000A (seis dígitos dispensam o espaço)`,
+          `     conserto: escape seguido de caractere hexadecimal é INUSÁVEL no painel\n` +
+          `     (ele come o espaço delimitador E os zeros à esquerda — \\00000A NÃO resolve).\n` +
+          `     Reescreva o content: sem a quebra de linha (frase corrida), ou garanta que\n` +
+          `     depois do escape venha caractere NÃO-hexadecimal. Doutrina de 04-05/08 no ESTADO.`,
       );
     }
   }
