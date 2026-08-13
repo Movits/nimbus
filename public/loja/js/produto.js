@@ -72,13 +72,22 @@
   thumbs.forEach((b) => b.addEventListener("click", () => mostra(b.dataset.src)));
 
   // --- GA4: eventos de funil (o gtag só existe com GA4_ID no build) ----------
+  // item_id é o ID do produto na Nuvemshop, não mais o slug (condição 29 do
+  // conselho r5, 12/08): a loja envia o ID dela no `purchase`, e com slug de um
+  // lado e ID do outro `view_item` e `purchase` nunca casavam no relatório de
+  // itens — não dava para saber QUAL estampa vendeu, que é a decisão da
+  // remontagem na IzzyPrint. O slug continua legível em item_name.
+  const ITEM_ID = String(p.id || p.slug);
   function evento(nome, params) {
-    if (typeof window.gtag !== "function") return;
-    window.gtag("event", nome, Object.assign({
+    const dados = Object.assign({
       currency: "BRL",
       value: p.preco,
-      items: [{ item_id: p.slug, item_name: p.nome, price: p.preco, quantity: 1 }],
-    }, params || {}));
+      items: [{ item_id: ITEM_ID, item_name: p.slug, price: p.preco, quantity: 1 }],
+    }, params || {});
+    if (typeof window.gtag === "function") window.gtag("event", nome, dados);
+    // Meta e TikTok recebem o MESMO item_id (condição 4 + 29): sem os IDs dos
+    // pixels no build, NIMBUS.pixel não encontra fbq/ttq e não faz nada.
+    if (window.NIMBUS && NIMBUS.pixel) NIMBUS.pixel(nome, dados);
   }
   evento("view_item");
 
@@ -158,7 +167,7 @@
       });
     }
     evento("add_to_cart", {
-      items: [{ item_id: p.slug, item_name: p.nome, item_variant: tamanho ? cor + "/" + tamanho : cor, price: p.preco, quantity: 1 }],
+      items: [{ item_id: ITEM_ID, item_name: p.slug, item_variant: tamanho ? cor + "/" + tamanho : cor, price: p.preco, quantity: 1 }],
     });
     // cruzou o teto: a gaveta abre em festa no lugar do toast
     if (resultado && resultado.cruzou && NIMBUS.gaveta) NIMBUS.gaveta.abre();

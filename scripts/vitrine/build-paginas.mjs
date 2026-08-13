@@ -70,7 +70,7 @@ ${opts.canonical ? `<link rel="canonical" href="${esc(opts.canonical)}">` : ""}
 <script>document.documentElement.className+=" js";setTimeout(function(){document.querySelectorAll(".reveal:not(.in)").forEach(function(e){e.classList.add("in")})},2000)</script>
 <link rel="stylesheet" href="${PREFIXO}/css/tokens.css?v=${V}">
 <link rel="stylesheet" href="${PREFIXO}/css/loja.css?v=${V}">
-${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}${ga4()}
+${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}${ga4()}${pixels()}
 </head>
 <body>`;
 
@@ -80,6 +80,22 @@ const GA4_ID = "G-E041S3ZHWB";
 const ga4 = () => GA4_ID ? `
 <script async src="https://www.googletagmanager.com/gtag/js?id=${GA4_ID}"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA4_ID}');</script>` : "";
+
+// Meta Pixel e TikTok Pixel (condição 4 do conselho r5, 12/08, Marina Duarte).
+// Os IDs vivem nas contas do dono (Gerenciador de Eventos da Meta e TikTok Ads
+// Manager) e ainda não chegaram: com a constante VAZIA nada é injetado, `fbq` e
+// `ttq` não existem na página e os disparos de ui.js viram no-op. Preencher a
+// constante é o único passo que falta do lado do código; a partir daí o portão
+// vitrine:tracking passa a exigir as linhas dos eventos de pixel como `ativo`
+// no tracking-plan, no mesmo commit (scripts/vitrine/lint-tracking.mjs).
+// Os eventos de conversão saem de ui.js (NIMBUS.pixel), com o MESMO item_id do
+// GA4 (condição 29). O pixel da LOJA e a API de Conversões são do dono:
+// docs/fluxos/pixels-meta-tiktok.md.
+const META_PIXEL_ID = "";
+const TIKTOK_PIXEL_ID = "";
+const pixels = () => `${META_PIXEL_ID ? `
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${META_PIXEL_ID}');fbq('track','PageView');</script>` : ""}${TIKTOK_PIXEL_ID ? `
+<script>!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];ttq.setAndDefer=function(o,m){o[m]=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push([m].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(e){var o=ttq._i[e]||[];for(var n=0;n<ttq.methods.length;n++)ttq.setAndDefer(o,ttq.methods[n]);return o};ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=i;ttq._t=ttq._t||{};ttq._t[e]=+new Date;ttq._o=ttq._o||{};ttq._o[e]=n||{};var o=d.createElement("script");o.type="text/javascript";o.async=!0;o.src=i+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};ttq.load('${TIKTOK_PIXEL_ID}');ttq.page()}(window,document,'ttq');</script>` : ""}`;
 
 // O cabeçalho de coleção é uma faixa larga sobre foto panorâmica: sem foco por
 // coleção, o cover de tela larga corta o assunto (a igreja da RELÍQUIA virava

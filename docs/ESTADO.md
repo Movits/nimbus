@@ -109,13 +109,30 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   **12/10 (Aparecida + Acutis + Crianças)**. Para vender em outubro, estampa e
   fotos prontas em setembro.
 
-## Medição (GA4)
+## Medição (GA4, Meta e TikTok)
 
 - `G-E041S3ZHWB` ativo na landing, vitrine e loja, **cross-domain configurado**
   (04/08). Plano de eventos: [`fluxos/tracking-plan.md`](fluxos/tracking-plan.md)
   (portão `vitrine:tracking`).
+- **12/08: `item_id` é o ID da Nuvemshop, não mais o slug** (condição 29 do
+  conselho r5). Os cinco disparos da vitrine passaram a mandar o mesmo
+  identificador que a loja usa no `purchase`; o slug ficou em `item_name`.
+  Sem isso não dava para saber QUAL estampa vendeu — a decisão da remontagem na
+  IzzyPrint. **Falta a prova**: o formato exato do `google_item_id` da loja só
+  se confirma no DebugView do pedido-teste (do dono), comparando `view_item` e
+  `purchase`. Se divergir, o ajuste é de uma linha.
+- **Pixels Meta e TikTok armados e DESLIGADOS** (condição 4): snippet, eventos
+  e portão prontos, esperando os dois IDs, que vivem nas contas do dono
+  ([`fluxos/pixels-meta-tiktok.md`](fluxos/pixels-meta-tiktok.md)). Constantes
+  vazias = nada injetado. Ao colar um ID, `vitrine:tracking` fica VERMELHO até
+  as linhas do plano virarem `ativo` — o portão arma sozinho, de propósito.
+- **Metas de 29/09 e 12/10 preenchidas como PROPOSTA do conselho r5**
+  (condições 28 e 12), com CAC teto R$50, ticket mínimo R$260, ROAS breakeven
+  3,5x e a régua go/no-go da abertura de venda (só Pix pago conta como demanda).
+  **Aguardam assinatura do dono**; não autorizam gasto.
 - Pende: pedido-teste no DebugView (**só o dono executa pedido**), filtro de IP
-  interno (1 min, precisa do IP do dono) e metas de 29/09 e 12/10 a preencher.
+  interno (1 min, precisa do IP do dono), os dois IDs de pixel e a assinatura
+  das metas.
 
 ## Pendências, em ordem
 
@@ -132,7 +149,9 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 3. **Fotos (Soul/modelo) → abrir venda** a tempo de 29/09 e 12/10.
 4. Decisões abertas do dono: 4 legados compráveis, telefone no rodapé, selo
    powered-by.
-5. Pedido-teste GA4 no DebugView (dono) + filtro de IP.
+5. Pedido-teste GA4 no DebugView (dono) + filtro de IP. **Um pedido real serve
+   quatro provas** (9 passos do Jorge, cronometragem do Paulo, `purchase` do
+   Ricardo, `item_id` da Larissa): não repita compra-teste.
 6. Reconciliar o 352727892 (Aparecida Spray | Moletom Canguru): título e fotos
    ainda de "Blusão sem capuz"; produto Oculto no painel desde 03/08.
 7. Reabrir a vitrine ao índice (`VITRINE_INDEXAVEL`) quando houver fotos com

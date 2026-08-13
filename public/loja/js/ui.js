@@ -17,6 +17,64 @@ NIMBUS.reais = function (v) {
   return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v || 0).replace(/\u00a0/g, " ");
 };
 
+// Um item da sacola no formato do GA4. O item_id é o ID do produto na
+// Nuvemshop (`pid`), não o slug (condição 29 do conselho r5, 12/08): a loja
+// manda o ID dela no `purchase` e, com slug de um lado e ID do outro, o funil
+// nunca fechava no relatório de itens. Item vindo do cookie da loja pode não
+// ter slug; o pid é justamente o que ele sempre traz. O slug segue em
+// item_name, onde é mais legível que o nome longo com a peça.
+NIMBUS.itemGA4 = function (i) {
+  return {
+    item_id: String(i.pid || i.slug || i.nome || ""),
+    item_name: i.slug || i.nome,
+    item_variant: i.tamanho ? i.cor + "/" + i.tamanho : i.cor,
+    price: i.preco,
+    quantity: i.qtd || 1,
+  };
+};
+
+// --- Meta Pixel e TikTok Pixel ----------------------------------------------
+// Os mesmos eventos de funil do GA4, com o MESMO item_id (condição 4 da Marina
+// Duarte + condição 29 da Larissa Fontes, conselho r5): se Meta, TikTok e GA4
+// contarem produtos diferentes, a atribuição nasce quebrada e a primeira
+// campanha mede fantasma. Os snippets base são injetados pelo build só quando
+// os IDs dos pixels existem (scripts/vitrine/build-paginas.mjs); sem eles,
+// `fbq`/`ttq` não existem na página e cada chamada daqui é no-op.
+// `view_cart` e `remove_from_cart` ficam fora: não têm evento padrão
+// equivalente nos dois, e evento inventado não entra sem linha no tracking-plan.
+(function () {
+  const EQUIVALE = {
+    view_item: "ViewContent",
+    add_to_cart: "AddToCart",
+    begin_checkout: "InitiateCheckout",
+  };
+  NIMBUS.pixel = function (nome, dados) {
+    const evento = EQUIVALE[nome];
+    if (!evento) return;
+    const itens = (dados && dados.items) || [];
+    const valor = dados && typeof dados.value === "number" ? dados.value : 0;
+    if (typeof window.fbq === "function") {
+      window.fbq("track", evento, {
+        content_type: "product",
+        content_ids: itens.map((i) => String(i.item_id)),
+        contents: itens.map((i) => ({ id: String(i.item_id), quantity: i.quantity || 1 })),
+        value: valor,
+        currency: "BRL",
+      });
+    }
+    if (window.ttq && typeof window.ttq.track === "function") {
+      window.ttq.track(evento, {
+        contents: itens.map((i) => ({
+          content_id: String(i.item_id), content_type: "product",
+          content_name: i.item_name, price: i.price, quantity: i.quantity || 1,
+        })),
+        value: valor,
+        currency: "BRL",
+      });
+    }
+  };
+})();
+
 NIMBUS.sacola = (function () {
   const KEY = "nimbus-sacola-v2";
   const VALIDADE = 48 * 60 * 60 * 1000;
@@ -215,9 +273,10 @@ NIMBUS.gaveta = (function () {
   const ECOBAG = ECOBAGS[0] || { nome: "Ecobag NIMBUS Wildstyle", url: "/loja/p/wildstyle/" };
 
   function ga4(nome, params) {
-    if (typeof window.gtag !== "function") return;
-    const itens = NIMBUS.sacola.itens().map((i) => ({ item_id: i.slug, item_name: i.nome, item_variant: i.tamanho ? i.cor + "/" + i.tamanho : i.cor, price: i.preco, quantity: i.qtd }));
-    window.gtag("event", nome, Object.assign({ currency: "BRL", value: NIMBUS.sacola.total(), items: itens }, params || {}));
+    const itens = NIMBUS.sacola.itens().map(NIMBUS.itemGA4);
+    const dados = Object.assign({ currency: "BRL", value: NIMBUS.sacola.total(), items: itens }, params || {});
+    if (typeof window.gtag === "function") window.gtag("event", nome, dados);
+    NIMBUS.pixel(nome, dados);
   }
 
   function urlCarrinho() {
@@ -267,7 +326,7 @@ NIMBUS.gaveta = (function () {
     form.submit();
     form.remove();
     NIMBUS.sacola.soma({ slug: eco.slug, nome: eco.nome, cor: eco.cor, tamanho: null, peca: "Ecobag", pid: eco.id, preco: eco.preco || 0, img: eco.img || null });
-    ga4("add_to_cart", { value: eco.preco || 0, items: [{ item_id: eco.slug, item_name: eco.nome, item_variant: eco.cor, price: eco.preco, quantity: 1 }] });
+    ga4("add_to_cart", { value: eco.preco || 0, items: [NIMBUS.itemGA4({ pid: eco.id, slug: eco.slug, nome: eco.nome, cor: eco.cor, preco: eco.preco, qtd: 1 })] });
     anuncia(eco.nome + " na sacola. No checkout, o cupom ECOBAG tira o valor dela do pedido.");
     // o botão clicado saiu do DOM na re-renderização: o foco volta ao painel
     if (!raiz.contains(document.activeElement)) raiz.querySelector(".gaveta__painel").focus();
@@ -427,7 +486,7 @@ NIMBUS.gaveta = (function () {
       tira.setAttribute("aria-label", "Remover " + descricao + " da sacola");
       tira.addEventListener("click", () => {
         const r = NIMBUS.sacola.remove(ch);
-        if (r && r.removido) { ga4("remove_from_cart", { items: [{ item_id: r.removido.slug, item_name: r.removido.nome, price: r.removido.preco, quantity: r.removido.qtd }], value: r.removido.preco * r.removido.qtd });
+        if (r && r.removido) { ga4("remove_from_cart", { items: [NIMBUS.itemGA4(r.removido)], value: r.removido.preco * r.removido.qtd });
           anuncia(descricao + " saiu da sacola."); }
       });
       lado.append(preco, tira);

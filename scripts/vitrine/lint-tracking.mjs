@@ -1,31 +1,53 @@
 // Portão do tracking plan (P1-5 do conselho r4, 03/08/2026). O plano
-// docs/fluxos/tracking-plan.md é a única fonte de verdade dos eventos GA4;
-// este portão sai com código != 0 quando código e plano divergem, em
-// QUALQUER direção:
+// docs/fluxos/tracking-plan.md é a única fonte de verdade dos eventos de
+// medição do site; este portão sai com código != 0 quando código e plano
+// divergem, em QUALQUER direção:
 //   - evento disparado no código sem linha no plano (evento clandestino);
 //   - linha `ativo` do plano sem disparo no código (plano mentindo);
 //   - linha `planejado` ou `fora` com disparo no código (decisão atropelada);
 //   - `page_view` automático sem o gtag('config') nas páginas (medição caiu).
 //
-// O que ele lê como disparo: gtag('event', "nome"), ga4("nome") (helper do
-// ui.js) e evento("nome") (helper do produto.js). Helper novo de disparo
+// O que ele lê como disparo do GA4: gtag('event', "nome"), ga4("nome") (helper
+// do ui.js) e evento("nome") (helper do produto.js). Helper novo de disparo
 // precisa entrar aqui no mesmo commit (regra 4 do próprio plano).
+//
+// Meta e TikTok (condição 4 do conselho r5, 12/08) entram no mesmo contrato,
+// na seção "Pixels" do plano, com duas diferenças que o código impõe:
+//   - os disparos de ui.js são dinâmicos (fbq("track", evento)), então a fonte
+//     de verdade do código é o mapa EQUIVALE de ui.js, que traduz evento do GA4
+//     em evento de pixel;
+//   - enquanto META_PIXEL_ID e TIKTOK_PIXEL_ID estiverem vazios no build, nada
+//     é injetado na página e os disparos são no-op: o plano tem que dizer
+//     `planejado`. No dia em que o dono colar um ID, este portão fica VERMELHO
+//     até as linhas virarem `ativo` — que é como o plano e o ar continuam
+//     iguais sem depender de alguém lembrar.
 import fs from "node:fs";
 import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 const PLANO = path.join(RAIZ, "docs/fluxos/tracking-plan.md");
+const UI = path.join(RAIZ, "public/loja/js/ui.js");
+const BUILD = path.join(RAIZ, "scripts/vitrine/build-paginas.mjs");
 const erros = [];
 
-/* --- lado do plano: linhas de tabela com evento em crase + status --------- */
+/* --- lado do plano: linhas de tabela com evento em crase + status ---------- */
+// A seção manda: o que estiver sob "## Pixels..." é evento de Meta/TikTok; o
+// resto é GA4. Sem isso, `ViewContent` seria cobrado como evento do gtag.
 const md = fs.readFileSync(PLANO, "utf-8");
-const plano = new Map(); // nome -> status
-for (const m of md.matchAll(/^\|\s*`([a-z0-9_]+)`\s*\|\s*(ativo|automatico|automático|planejado|fora)\s*\|/gim)) {
+const plano = new Map(); // GA4: nome -> status
+const pixelPlano = new Map(); // Meta/TikTok: nome -> status
+let secao = "";
+for (const linha of md.split(/\r?\n/)) {
+  const cabeca = linha.match(/^##\s+(.*)$/);
+  if (cabeca) { secao = cabeca[1].trim().toLowerCase(); continue; }
+  const m = linha.match(/^\|\s*`([A-Za-z0-9_]+)`\s*\|\s*(ativo|automatico|automático|planejado|fora)\s*\|/i);
+  if (!m) continue;
   const nome = m[1];
   const status = m[2].toLowerCase().replace("automático", "automatico");
-  if (plano.has(nome) && plano.get(nome) !== status)
-    erros.push(`plano: evento "${nome}" com dois status diferentes (${plano.get(nome)} e ${status})`);
-  plano.set(nome, status);
+  const alvo = secao.startsWith("pixels") ? pixelPlano : plano;
+  if (alvo.has(nome) && alvo.get(nome) !== status)
+    erros.push(`plano: evento "${nome}" com dois status diferentes (${alvo.get(nome)} e ${status})`);
+  alvo.set(nome, status);
 }
 if (![...plano.values()].includes("ativo"))
   erros.push("plano: nenhuma linha `ativo` encontrada; a tabela do tracking-plan.md mudou de formato ou foi esvaziada");
@@ -82,9 +104,49 @@ for (const [rotulo, arq] of [["vitrine (home)", "public/loja/index.html"], ["lan
     erros.push(`config: gtag('config','G-E041S3ZHWB') ausente em ${arq} (${rotulo}); o page_view automático do plano caiu`);
 }
 
+/* --- Meta e TikTok -------------------------------------------------------- */
+const ui = fs.readFileSync(UI, "utf-8");
+const build = fs.readFileSync(BUILD, "utf-8");
+const idMeta = (build.match(/const\s+META_PIXEL_ID\s*=\s*"([^"]*)"/) || ["", ""])[1];
+const idTikTok = (build.match(/const\s+TIKTOK_PIXEL_ID\s*=\s*"([^"]*)"/) || ["", ""])[1];
+const pixelNoAr = Boolean(idMeta || idTikTok);
+
+const pixelCodigo = new Map(); // nome do evento de pixel -> de onde veio
+const mapa = ui.match(/const EQUIVALE = \{([\s\S]*?)\}/);
+if (!mapa) {
+  erros.push("código: o mapa EQUIVALE (evento do GA4 -> evento de pixel) sumiu de public/loja/js/ui.js; sem ele não dá para saber o que Meta e TikTok recebem");
+} else {
+  for (const m of mapa[1].matchAll(/([a-z0-9_]+)\s*:\s*"([A-Za-z]+)"/g)) {
+    // a chave é um evento do GA4: mapear o que o plano não tem como ativo
+    // significaria mandar aos pixels um evento que o GA4 não mede
+    if (plano.get(m[1]) !== "ativo")
+      erros.push(`código: ui.js manda "${m[1]}" para os pixels, mas esse evento não está "ativo" no plano do GA4; Meta e TikTok não podem medir o que o GA4 não mede`);
+    pixelCodigo.set(m[2], `ui.js (equivale a ${m[1]})`);
+  }
+}
+// o snippet base do Meta dispara PageView sozinho; o do TikTok, ttq.page()
+for (const m of build.matchAll(/fbq\(\s*['"]track['"]\s*,\s*['"]([A-Za-z]+)['"]/g))
+  pixelCodigo.set(m[1], "build-paginas.mjs (snippet base)");
+
+for (const [nome, onde] of pixelCodigo) {
+  const status = pixelPlano.get(nome);
+  if (!status)
+    erros.push(`pixels: evento "${nome}" existe no código (${onde}) SEM linha na seção Pixels do tracking-plan.md`);
+  else if (pixelNoAr && status !== "ativo" && status !== "automatico")
+    erros.push(`pixels: ID de pixel preenchido no build, então "${nome}" (${onde}) está NO AR, mas o plano diz "${status}"; promova a linha no mesmo commit`);
+  else if (!pixelNoAr && (status === "ativo" || status === "automatico"))
+    erros.push(`pixels: o plano diz "${status}" para "${nome}", mas META_PIXEL_ID e TIKTOK_PIXEL_ID estão vazios no build: nada é injetado e nada dispara. Preencha o ID ou volte a linha para "planejado"`);
+}
+for (const [nome] of pixelPlano)
+  if (!pixelCodigo.has(nome))
+    erros.push(`pixels: o plano lista "${nome}" mas nada no código dispara esse evento; tire a linha ou implemente no mesmo commit`);
+
 if (erros.length) {
   console.error("LINT-TRACKING FALHOU:\n" + erros.map((e) => "  - " + e).join("\n"));
   process.exit(1);
 }
 const ativos = [...plano.entries()].filter(([, s]) => s === "ativo").map(([n]) => n);
-console.log(`lint-tracking OK: ${ativos.length} eventos ativos (${ativos.join(", ")}) batem com o código, ${[...plano.values()].filter((s) => s === "planejado").length} planejado(s), ${[...plano.values()].filter((s) => s === "fora").length} fora por decisão; config vivo na vitrine e na landing`);
+const pixelRotulo = pixelNoAr
+  ? `pixels NO AR (Meta ${idMeta || "-"}, TikTok ${idTikTok || "-"}) com ${pixelCodigo.size} evento(s)`
+  : `pixels armados e desligados (${pixelCodigo.size} evento(s) esperando o ID do dono)`;
+console.log(`lint-tracking OK: ${ativos.length} eventos ativos (${ativos.join(", ")}) batem com o código, ${[...plano.values()].filter((s) => s === "planejado").length} planejado(s), ${[...plano.values()].filter((s) => s === "fora").length} fora por decisão; config vivo na vitrine e na landing; ${pixelRotulo}`);
