@@ -373,7 +373,7 @@ NIMBUS.gaveta = (function () {
     festa.innerHTML = "";
     if (!celebra) return;
     festa.innerHTML = '<span class="gaveta__confete"></span>'.repeat(10) +
-      "<p><b>Parabéns!</b> Seu pedido ganhou frete grátis e uma Ecobag de brinde.</p>";
+      "<p><b>Parabéns!</b> Seu pedido ganhou frete grátis.</p>";
     if (estado === "oferta" && ECOBAGS.length) {
       const como = document.createElement("p");
       como.className = "gaveta__brinde-como";
@@ -383,7 +383,7 @@ NIMBUS.gaveta = (function () {
     }
     // leitor de tela recebe a mesma festa (padrão aria-live da gaveta)
     if (antes === "") {
-      anuncia("Parabéns! Seu pedido ganhou frete grátis e uma Ecobag de brinde." +
+      anuncia("Parabéns! Seu pedido ganhou frete grátis." +
         (estado === "oferta" && ECOBAGS.length ? " Dá para adicionar a Ecobag pela própria sacola." : ""));
     }
   }
@@ -510,11 +510,11 @@ NIMBUS.gaveta = (function () {
     const pct = Math.min(100, (prog / META) * 100);
     raiz.querySelector(".gaveta__barra").style.width = pct + "%";
     const meta = raiz.querySelector(".gaveta__meta");
-    if (!itens.length) meta.textContent = "Frete grátis e uma Ecobag de brinde a partir de " + NIMBUS.reais(META) + " (a Ecobag do brinde não conta na soma).";
+    if (!itens.length) meta.textContent = "Frete grátis a partir de " + NIMBUS.reais(META) + ".";
     else if (prog >= META) meta.innerHTML = temEco
       ? "<b>Frete grátis garantido.</b> Use o cupom <b>ECOBAG</b> no checkout: uma das suas Ecobags sai de graça."
       : '<b>Frete grátis garantido.</b> Falta levar a Ecobag: <a href="' + ECOBAG.url + '">' + ECOBAG.nome + "</a>. No checkout, o cupom <b>ECOBAG</b> tira o valor dela do pedido.";
-    else meta.textContent = "Faltam " + NIMBUS.reais(META - prog) + " para frete grátis e uma Ecobag de brinde.";
+    else meta.textContent = "Faltam " + NIMBUS.reais(META - prog) + " para frete grátis.";
     // a celebração da meta: parabéns + oferta da Ecobag (ver renderizaFesta)
     renderizaFesta(!!itens.length && prog >= META, temEco);
     // fechamento: subtotal e o que acontece com o frete

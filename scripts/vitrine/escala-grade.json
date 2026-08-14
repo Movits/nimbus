@@ -1,7 +1,3 @@
 {
- "_comentario": "Tabela de escala visual da grade, por peça (P1-1b do conselho r4, 03/08/2026). Escala 1 = referência: a foto ocupa a caixa do card como a CDN entrega. Valores menores encolhem a foto das peças que o fornecedor fotografa maiores (bbox medido em 01/08: a Oversized ocupava 493 px de 500, contra 409 da Premium). Regra dupla, conferida pelo portão lint-nuvem.mjs: toda peça do catálogo precisa de entrada AQUI, e todo valor diferente de 1 precisa da regra correspondente em public/loja/css/loja.css (.card[data-peca=\"...\"] .card__midia img { transform: scale(...); }). Peça nova sem entrada QUEBRA o build de propósito: sem escala medida, ela entraria na grade cerca de 20% maior que as vizinhas. Para cadastrar uma peça: medir o bbox da foto real (como em 01/08), escrever o valor aqui e a regra no CSS no mesmo commit.",
- "Camiseta Premium": 1,
- "Camiseta Oversized Premium": 0.83,
- "Moletom Canguru": 0.89,
- "Ecobag": 0.88
+ "_comentario": "VITRINE FECHADA em 14/08/2026: catalogo vazio durante a remontagem IzzyPrint, entao a tabela esvazia junto (lint-nuvem exige tabela = CSS nos dois sentidos). A tabela medida da era YouDraw esta no git em qualquer commit anterior a 14/08; a remontagem MEDE de novo peca a peca antes de reabrir."
 }

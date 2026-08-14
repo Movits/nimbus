@@ -45,6 +45,11 @@ const SACOLA = refInterno("https://loja.nimbuswear.com.br/comprar/");
    páginas que respondiam noindex, o que renderia 52 erros no Search Console.
    Para abrir a loja ao Google, basta virar esta linha para true. */
 const VITRINE_INDEXAVEL = false;
+// VITRINE FECHADA (ordem do dono, 14/08/2026): catálogo YouDraw fora do ar
+// durante a remontagem IzzyPrint. Home vira página de remontagem; header e
+// footer perdem coleções e Sacola; institucionais continuam no ar. Reabrir =
+// true aqui + restaurar ENTRAM no build-catalogo.mjs + npm run vitrine.
+const VITRINE_ABERTA = false;
 
 /* ---------------------------------------------------------------- parciais */
 const head = (titulo, descricao, opts = {}) => `<!DOCTYPE html>
@@ -103,17 +108,17 @@ const pixels = () => `${META_PIXEL_ID ? `
 const FOCO_COLECAO = { street: "50% 62%", reliquia: "50% 40%", nuvem: "50% 70%" };
 
 const header = () => `
-<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis e Ecobag de brinde a partir de R$399,90</div>
+<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a>${VITRINE_ABERTA ? ` &nbsp;·&nbsp; frete grátis a partir de R$399,90` : ""}</div>
 <header class="header">
   <a class="header__logo" href="${PREFIXO}/"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"></a>
-  <nav class="header__nav">
+  ${VITRINE_ABERTA ? `<nav class="header__nav">
     <a href="${PREFIXO}/c/street/">Street</a>
     <a href="${PREFIXO}/c/reliquia/">Relíquia</a>
     <a href="${PREFIXO}/c/nuvem/">Nuvem</a>
-  </nav>
+  </nav>` : ""}
   <div class="header__tools">
     <a href="${PREFIXO}/manifesto/" data-manifesto>Manifesto</a>
-    <a class="header__cta" href="${esc(SACOLA)}" data-abre-sacola>Sacola<span class="sacola-n" data-sacola-n hidden></span></a>
+    ${VITRINE_ABERTA ? `<a class="header__cta" href="${esc(SACOLA)}" data-abre-sacola>Sacola<span class="sacola-n" data-sacola-n hidden></span></a>` : ""}
   </div>
 </header>`;
 
@@ -133,7 +138,7 @@ const footer = () => `
   <div class="footer__inner">
     <div class="footer__grid">
       <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
-      <div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA)}" data-abre-sacola>Sacola</a></div>
+      ${VITRINE_ABERTA ? `<div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA)}" data-abre-sacola>Sacola</a></div>` : ""}
       <div><h4>Nimbus</h4><a href="${PREFIXO}/manifesto/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
       <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="https://loja.nimbuswear.com.br/contato/?ref=vitrine" rel="noopener">Fale com a NIMBUS</a></div>
     </div>
@@ -164,13 +169,18 @@ ${header()}
   <section class="hero">
     <img class="hero__bg" src="${PREFIXO}/media/hero-editorial-1600.webp" alt="" fetchpriority="high">
     <div class="hero__copy">
-      <div class="kicker kicker--gold reveal in">Entre o concreto e o céu</div>
-      <h1 class="display reveal in">Streetwear católico premium, feito no Brasil para você.</h1>
-      <p class="lede reveal in" style="margin-top:1em">Fé que se veste bem: camisetas a partir de R$149,90, em três coleções. Acima de tudo.</p>
+      <h1 class="display reveal in">Acima de tudo.</h1>
+      ${VITRINE_ABERTA
+        ? `<p class="lede reveal in" style="margin-top:1em">Streetwear católico premium, feito no Brasil para você.</p>
       <div class="hero__cta reveal in">
         <a class="btn btn--primary" href="#colecoes">Ver as coleções</a>
         <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">O manifesto</a>
-      </div>
+      </div>`
+        : `<p class="lede reveal in" style="margin-top:1em">Estamos remontando a coleção, peça por peça, com um novo padrão de produção e acabamento. As primeiras peças voltam em breve, feitas no Brasil, para você.</p>
+      <div class="hero__cta reveal in">
+        <a class="btn btn--primary" href="${PREFIXO}/manifesto/">O manifesto</a>
+        <a class="btn btn--ghost" href="${PREFIXO}/impacto/">Os 10% do lucro</a>
+      </div>`}
     </div>
   </section>
 
@@ -180,7 +190,7 @@ ${header()}
     <span>10% do lucro doado ao projeto que você escolher</span>
   </div></div>
 
-  <section class="secao" id="colecoes"><div class="secao__inner">
+  ${VITRINE_ABERTA ? `<section class="secao" id="colecoes"><div class="secao__inner">
     <div class="secao__head">
       <div><div class="kicker">Três coleções, um mesmo horizonte</div><h2 class="display--md display">Coleções</h2></div>
     </div>
@@ -199,7 +209,7 @@ ${header()}
       <a class="btn btn--ghost" href="${PREFIXO}/c/street/">Ver tudo por coleção</a>
     </div>
     <div class="grade">${cat.produtos.filter((p) => p.destaque).map(card).join("")}</div>
-  </div></section>
+  </div></section>` : ""}
 
   <section class="secao banda--manifesto"><div class="secao__inner banda">
     <div class="reveal" style="max-width:44em">
@@ -210,7 +220,7 @@ ${header()}
     <div class="banda__midia reveal"><img src="${PREFIXO}/media/manifesto-1600.webp" alt="Camiseta preta oversized num beco de concreto em São Paulo" loading="lazy"></div>
   </div></section>
 
-  <section class="secao"><div class="secao__inner">
+  ${VITRINE_ABERTA ? `<section class="secao"><div class="secao__inner">
     <div class="secao__head reveal">
       <div><div class="kicker">Do pedido à porta</div><h2 class="display display--md">Como a sua peça nasce</h2></div>
     </div>
@@ -219,7 +229,7 @@ ${header()}
       <li class="reveal"><b>Ela é feita no Brasil, para você.</b><p>Estampa posicionada com medida, não no olho, e acabamento premium, peça a peça.</p></li>
       <li class="reveal"><b>Chega com rastreio.</b><p>E 10% do lucro do pedido vai para o projeto social que você escolher no checkout, com repasse mensal e comprovação. <a href="${PREFIXO}/impacto/">Veja como funciona</a>.</p></li>
     </ol>
-  </div></section>
+  </div></section>` : ""}
 </main>
 ${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
@@ -393,7 +403,7 @@ ${header()}
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho role="alert">Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        <span class="note">A partir de R$399,90: frete grátis e uma Ecobag de brinde. O frete do seu CEP aparece no carrinho da loja, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
+        <span class="note">A partir de R$399,90: frete grátis. O frete do seu CEP aparece no carrinho da loja, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
         <span class="note">7 dias para mudar de ideia: se devolver, <a href="${PREFIXO}/trocas/">devolvemos tudo o que você pagou, incluindo o frete</a>.</span>
         <span class="note">Peça feita no Brasil, para você.</span>
       </div>
@@ -510,8 +520,8 @@ const INSTITUCIONAIS = {
     <p class="note">O prazo exato para o seu CEP aparece no checkout e prevalece sobre as faixas acima.</p>
     <h2>Rastreio</h2>
     <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. O pedido também fica na sua conta da loja: <a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a>.</p>
-    <h2>Frete grátis e Ecobag de brinde</h2>
-    <p>Pedidos que chegam a R$399,90, sem contar a Ecobag do brinde, têm frete grátis para todo o Brasil e ganham uma Ecobag. Funciona assim: adicione a Ecobag com a arte que você quiser e use o cupom <b>ECOBAG</b> no checkout, que o valor dela sai do pedido. No checkout, no campo mensagem do pedido, escreva qual projeto recebe os 10%.</p>
+    <h2>Frete grátis</h2>
+    <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil. No checkout, no campo mensagem do pedido, escreva qual projeto recebe os 10%.</p>
     <h2>Quanto custa o frete</h2>
     <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90 na maior parte do Brasil. O valor exato do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `

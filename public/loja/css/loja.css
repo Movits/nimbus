@@ -247,13 +247,11 @@
   object-fit: contain;
   transform-origin: 50% 50%;
 }
-/* Os mockups não vêm na mesma régua: medido no bbox dos arquivos da CDN, a
-   Oversized ocupa 493px de 500 e a Camiseta Premium 409, ou seja a vizinha
-   parece 20% maior na mesma grade. Escala por peça até a altura da Premium,
-   que vira a régua. Só reduz, então não perde nitidez. */
-.card[data-peca="Camiseta Oversized Premium"] .card__midia img { transform: scale(0.83); }
-.card[data-peca="Moletom Canguru"] .card__midia img { transform: scale(0.89); }
-.card[data-peca="Ecobag"] .card__midia img { transform: scale(0.88); }
+/* Escala por peça na grade: VITRINE FECHADA em 14/08/2026 (remontagem
+   IzzyPrint), regras removidas junto com a tabela escala-grade.json porque o
+   lint-nuvem exige tabela = CSS nos dois sentidos e o catálogo está vazio.
+   Régua da era YouDraw preservada no git (commits anteriores a 14/08); a
+   remontagem MEDE de novo o bbox dos mockups novos antes de reabrir. */
 .card__midia::after {
   content: "";
   position: absolute; inset: 0;

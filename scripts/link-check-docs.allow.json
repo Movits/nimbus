@@ -40,6 +40,10 @@
     {
       "url": "https://newsroom.tiktok.com/pt-br/tiktok-shop-cresce-102-vezes-em-seu-primeiro-ano-no-brasil",
       "motivo": "Mesmo caso da community-guidelines: o newsroom do TikTok devolve 404 para HEAD/robô e 200 para GET de navegador (conferido em 11/08)."
+    },
+    {
+      "url": "https://insights.ttsvibes.com/tiktok-first-3-seconds-hook-retention-rate/",
+      "motivo": "Mesmo padrão dos hosts TikTok: devolve erro para HEAD com user-agent de robô e 200 para GET direto (conferido em 14/08). Fonte da síntese de ads do brain."
     }
   ]
 }

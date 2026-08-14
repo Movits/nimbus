@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-13
+atualizado: 2026-08-14
 ---
 
 # Estado do projeto
@@ -44,6 +44,17 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   e 8 do roteiro e o commit #59 registram a decisão.)
 
 ## Vitrine e landing (GitHub Pages)
+
+- **VITRINE FECHADA em 14/08 (ordem do dono)**: catálogo YouDraw fora do ar
+  durante a remontagem IzzyPrint. Home virou página de remontagem com a
+  frase-promessa ("Acima de tudo."); header e footer sem coleções e sem
+  Sacola; manifesto, impacto, envios, trocas e privacidade CONTINUAM no ar.
+  Reabrir = `VITRINE_ABERTA = true` (build-paginas) + restaurar `ENTRAM`
+  (build-catalogo) + `npm run vitrine`. escala-grade e par-fotos esvaziados
+  junto (régua da era YouDraw preservada no git; a remontagem mede de novo).
+  Textos de Ecobag saíram da vitrine e da gaveta. **Falta o painel**: roteiro
+  `nuvemshop/cowork-fechar-catalogo-youdraw.md` (ocultar produtos, desativar
+  cupom ECOBAG, texto do checkout).
 
 - Vitrine em `nimbuswear.com.br/loja/` é **a referência de design**; a
   Nuvemshop é só o funil (carrinho + checkout). Landing R3F na raiz.

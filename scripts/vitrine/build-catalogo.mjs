@@ -110,7 +110,11 @@ const RESTANTES = [...copy.keys()]
     const ka = `${ga?.collection || ""} ${ga?.title || ""}`, kb = `${gb?.collection || ""} ${gb?.title || ""}`;
     return ka.localeCompare(kb, "pt");
   });
-const ENTRAM = [...HEROES, ...RESTANTES];
+// VITRINE FECHADA (ordem do dono, 14/08/2026): o catálogo YouDraw sai do ar
+// inteiro enquanto a coleção é remontada na IzzyPrint. Para reabrir, restaurar
+// a linha original abaixo e VITRINE_ABERTA no build-paginas.mjs.
+// const ENTRAM = [...HEROES, ...RESTANTES];   // <- linha original, congelada
+const ENTRAM = [];
 
 for (const pid of ENTRAM) {
   const vs = variantes.filter((v) => v.product_id === pid);

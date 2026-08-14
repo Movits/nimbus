@@ -1,38 +1,3 @@
 {
- "_comentario": "Exceções DATADAS do portão de par frente/costas por cor (P1-1d do conselho r4). Baseline congelada em 03/08/2026: são os únicos produto+cor do catálogo publicado sem o par completo, todos anteriores à regra. Produto NOVO não entra aqui: nasce com frente e costas por cor ou o portão lint-nuvem.mjs quebra o build. Quando o par de um destes for completado no painel, o próprio portão manda remover a entrada (entrada que sobra também quebra o build, para a lista só encolher). Formato: \"id|cor\": { faltando, motivo }.",
- "355581274|Bege": {
-  "produto": "NIMBUS Wildstyle | Ecobag",
-  "faltando": "costas",
-  "motivo": "Ecobag é painel plano com arte na frente; o fornecedor não fotografa costas (baseline 03/08)"
- },
- "352720257|Preta": {
-  "produto": "Acima de Tudo Gótico | Camiseta Oversized Premium",
-  "faltando": "frente",
-  "motivo": "arte de peito com mockup 'só frente' do fornecedor; a foto útil vive no campo costas da curadoria (baseline 03/08)"
- },
- "352720257|Off-White": {
-  "produto": "Acima de Tudo Gótico | Camiseta Oversized Premium",
-  "faltando": "frente",
-  "motivo": "arte de peito com mockup 'só frente' do fornecedor; a foto útil vive no campo costas da curadoria (baseline 03/08)"
- },
- "352702753|Preta": {
-  "produto": "Monograma NIMBUS | Camiseta Oversized Premium",
-  "faltando": "frente",
-  "motivo": "arte de peito com mockup 'só frente' do fornecedor; a foto útil vive no campo costas da curadoria (baseline 03/08)"
- },
- "352702753|Off-White": {
-  "produto": "Monograma NIMBUS | Camiseta Oversized Premium",
-  "faltando": "frente",
-  "motivo": "arte de peito com mockup 'só frente' do fornecedor; a foto útil vive no campo costas da curadoria (baseline 03/08)"
- },
- "352702796|Preta": {
-  "produto": "Monograma NIMBUS | Camiseta Premium",
-  "faltando": "frente",
-  "motivo": "arte de peito com mockup 'só frente' do fornecedor; a foto útil vive no campo costas da curadoria (baseline 03/08)"
- },
- "352702796|Branca": {
-  "produto": "Monograma NIMBUS | Camiseta Premium",
-  "faltando": "frente",
-  "motivo": "arte de peito com mockup 'só frente' do fornecedor; a foto útil vive no campo costas da curadoria (baseline 03/08)"
- }
+ "_comentario": "Exceções DATADAS do portão de par frente/costas por cor (P1-1d do conselho r4). Baseline congelada em 03/08/2026: são os únicos produto+cor do catálogo publicado sem o par completo, todos anteriores à regra. Produto NOVO não entra aqui: nasce com frente e costas por cor ou o portão lint-nuvem.mjs quebra o build. Quando o par de um destes for completado no painel, o próprio portão manda remover a entrada (entrada que sobra também quebra o build, para a lista só encolher). Formato: \"id|cor\": { faltando, motivo }. | VITRINE FECHADA 14/08: catalogo vazio, entradas removidas (a lista so encolhe; historico no git)."
 }
