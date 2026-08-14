@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-12
+atualizado: 2026-08-13
 ---
 
 # Estado do projeto
@@ -133,6 +133,27 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - Pende: pedido-teste no DebugView (**só o dono executa pedido**), filtro de IP
   interno (1 min, precisa do IP do dono), os dois IDs de pixel e a assinatura
   das metas.
+
+## Decisões do dono de 13/08 (mudam o plano r5)
+
+- **A Ecobag SAI**, e as promoções presas a ela junto (cupom ECOBAG, régua de
+  frete que desconta uma ecobag, lembrete no cart.tpl, texto do campo do
+  checkout). O frete grátis continua, com mecânica nova a definir. Nada disso
+  se desfaz sem ordem dele, item a item.
+- **O cliente não vê status de produção**: "Preparando seu pedido" e depois
+  enviado, com rastreio. Nunca "em produção".
+- **Prazo IzzyPrint: 4 dias úteis, confirmado por escrito** — destrava a
+  proibição de falar de prazo. Frete real de 1 peça fica para depois, junto de
+  outras perguntas.
+- **Ordem do lançamento: PRODUTO PRIMEIRO.** Artes → produtos na IzzyPrint →
+  fotos COM estampa → site → só então conteúdo e venda. **Os prazos de 14/08 e
+  15/08 do r5 caíram** (pixels, grade editorial, primeiro post) e 29/09 deixa
+  de ser meta de venda.
+- ⚠️ **As 62 fotos do Soul são o dono vestindo peça LISA, sem estampa**: base
+  de cena e prova de caimento, NÃO foto de produto. Corrigido em 13/08 no
+  prompt r5, que as tratava como material de campanha.
+
+Detalhe: [](decisoes/2026-08-13-ecobag-status-e-ordem-do-lancamento.md).
 
 ## Pendências, em ordem
 

@@ -128,8 +128,7 @@ Tomás Andrade; prazo 29/08)
 - Pronto quando: marcar um produto de teste como remontado com medida YouDraw
   deixa o build vermelho; desfazer deixa verde.
 
-**6. Meta Pixel + TikTok Pixel na vitrine** (condição 4, Marina Duarte; prazo
-14/08; casa com a exigência da Larissa de mesmo item_id)
+**6. Meta Pixel + TikTok Pixel na vitrine** (condição 4, Marina Duarte; ⚠️ prazo de 14/08 CAIU com a decisão de 13/08 — pixels entram quando houver conteúdo no ar; casa com a exigência da Larissa de mesmo item_id)
 - Injetar o snippet `fbq` (Meta) e o do TikTok em
   `scripts/vitrine/build-paginas.mjs`, no mesmo ponto de injeção do gtag, com
   os eventos disparando com o MESMO item_id da tarefa 2. Os IDs dos pixels
@@ -264,8 +263,14 @@ Falcão; prazo 19/08)
   `wiki/entities/izzyprint.md` (diz 16 de 26). Um número só nos dois.
 - Pronto quando: rodar o script e o número bater nos dois documentos.
 
-**17. Grade editorial 15/08→29/09 versionada em `docs/`** (condição 5 da
-Marina, unificando as 12 peças do Paulo e os 12 posts da Sofia; prazo 15/08)
+**17. Grade editorial** — ⛔ **SUSPENSA por decisão do dono em 13/08**
+(`docs/decisoes/2026-08-13-ecobag-status-e-ordem-do-lancamento.md`): conteúdo
+só começa depois de arte + produtos montados na IzzyPrint + fotos COM estampa
++ site atualizado. **Não execute agora.** O texto abaixo fica para quando
+destravar, e o prazo de 15/08 caiu junto.
+
+**17-quando-destravar. Grade editorial versionada em `docs/`** (condição 5 da
+Marina, unificando as 12 peças do Paulo e os 12 posts da Sofia)
 - UM arquivo novo, por exemplo `docs/fluxos/grade-editorial-2026-quaresma.md`
   (ao lado de `docs/fluxos/conteudo-social.md`), com uma linha por dia de
   15/08 a 29/09: data, formato (formatos 1, 2, 6 e 12 da pesquisa do brain,
@@ -273,7 +278,7 @@ Marina, unificando as 12 peças do Paulo e os 12 posts da Sofia; prazo 15/08)
   no tom da marca, sem travessão.
 - **Banco de imagem vigente (pós-triagem do dono em 12/08, use estes números):**
   `nimbus-assets/casting/2026-08-08-roberto-soul/gerados/v12-lote-60/` tem
-  **62 fotos, todas aprovadas** (NUVEM 18, RELÍQUIA 28, STREET 16) e **não
+  **62 fotos, todas aprovadas** (NUVEM 18, RELÍQUIA 28, STREET 16) — ⚠️ ATENÇÃO: são fotos do DONO vestindo peça LISA, **sem estampa nenhuma**. São base de cena e prova de caimento, NÃO foto de produto. Não monte grade de venda sobre elas e **não
   existe mais subpasta `reprovadas/`**; mais 14 fotos aprovadas nas outras
   rodadas (`comunidade-v1`, `v4`, `v5`, `v10`, `v11`) e o vídeo de 28 s. As 11
   fotos com defeito de cena estão em
