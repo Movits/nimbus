@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-14
+atualizado: 2026-08-15
 ---
 
 # Estado do projeto
@@ -24,13 +24,15 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 
 ## Loja e funil (Nuvemshop)
 
-- **A marca ainda não vendeu.** 44 produtos publicados (17 STREET, 25 RELÍQUIA,
-  2 NUVEM); os 5 Blusão Moletom fora por falta de tabela de medidas.
-- **Funil provado de ponta a ponta desde 03/08**: adicionar funciona nos 44
-  (portão `vitrine:variantes` confere), remover pela gaveta da vitrine some do
-  carrinho da loja (~15 s de propósito; não conclua falha antes disso).
-- Frete: fixo R$19,90; **grátis a partir de R$399,90 com Ecobag de brinde**
-  (cupom `ECOBAG`; a régua é total menos UMA ecobag ≥ R$399,90).
+- **A marca ainda não vendeu, e a loja está FECHADA**: os 49 produtos da era
+  YouDraw foram ocultados em 14/08 e o catálogo será remontado na IzzyPrint.
+  Zero produto comprável hoje, por decisão.
+- **O funil foi provado de ponta a ponta em 03/08** (adicionar nos 44 então
+  publicados, remoção atravessando os dois sites). O mecanismo continua de pé;
+  falta produto nele.
+- Frete: fixo R$19,90; **grátis a partir de R$399,90, sem brinde** — a Ecobag
+  saiu do catálogo em 13/08 e o cupom `ECOBAG` está desativado. A mecânica nova
+  do frete grátis ainda vai ser decidida pelo dono.
 - Rodapé consertado no ar em 05/08. **Publicação de CSS/tema tem protocolo
   próprio** (Testar CSS → Publicar → `POST /admin/themes/settings/active/` 200
   → provar em página DYNAMIC): [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md).
@@ -38,6 +40,13 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   [`nuvemshop/consertos-loja-2026-08-08.md`](../nuvemshop/consertos-loja-2026-08-08.md)**
   (o cowork-consertos-painel-2026-08-08 saiu com 3 itens fantasma; a v2 provou
   que eram placeholders `display:none` — PR #60).
+- **PAINEL LIMPO em 14/08 (o Cowork executou)**: os **49 produtos estão
+  OCULTOS** (eram 48 visíveis, não 44: os 4 legados ainda estavam publicados),
+  o cupom `ECOBAG` foi DESATIVADO (não excluído) e o campo do checkout perdeu a
+  menção à Ecobag. Nada foi excluído; tudo reversível. **O dono pediu em 15/08
+  a EXCLUSÃO de verdade**, na Nuvemshop e também na YouDraw: roteiro em
+  [`nuvemshop/cowork-excluir-catalogo-youdraw.md`](../nuvemshop/cowork-excluir-catalogo-youdraw.md),
+  que exige exportar a lista antes e avisa o que se perde (IDs, histórico, SKU).
 - **Ordens do dono de 08/08, no roteiro, aguardando execução no painel**:
   despublicar os 4 legados, remover o telefone dos dados de contato, selo
   powered-by de volta. (O brain de 08/08 as listava como "abertas"; os itens 7
