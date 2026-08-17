@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-15
+atualizado: 2026-08-17
 ---
 
 # Estado do projeto
@@ -47,6 +47,9 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   a EXCLUSÃO de verdade**, na Nuvemshop e também na YouDraw: roteiro em
   [`nuvemshop/cowork-excluir-catalogo-youdraw.md`](../nuvemshop/cowork-excluir-catalogo-youdraw.md),
   que exige exportar a lista antes e avisa o que se perde (IDs, histórico, SKU).
+- **YouDraw: o dono excluiu os produtos lá ele mesmo (17/08)**. Na **Nuvemshop
+  os 49 seguem OCULTOS, não excluídos** — o backup existe, e a exclusão
+  definitiva é clique do dono (a sessão não executa exclusão permanente).
 - **Ordens do dono de 08/08, no roteiro, aguardando execução no painel**:
   despublicar os 4 legados, remover o telefone dos dados de contato, selo
   powered-by de volta. (O brain de 08/08 as listava como "abertas"; os itens 7
@@ -61,9 +64,9 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   Reabrir = `VITRINE_ABERTA = true` (build-paginas) + restaurar `ENTRAM`
   (build-catalogo) + `npm run vitrine`. escala-grade e par-fotos esvaziados
   junto (régua da era YouDraw preservada no git; a remontagem mede de novo).
-  Textos de Ecobag saíram da vitrine e da gaveta. **Falta o painel**: roteiro
-  `nuvemshop/cowork-fechar-catalogo-youdraw.md` (ocultar produtos, desativar
-  cupom ECOBAG, texto do checkout).
+  Textos de Ecobag saíram da vitrine e da gaveta. O painel foi fechado junto,
+  no mesmo dia (roteiro `nuvemshop/cowork-fechar-catalogo-youdraw.md`
+  executado: produtos ocultos, cupom ECOBAG desativado, texto do checkout).
 
 - Vitrine em `nimbuswear.com.br/loja/` é **a referência de design**; a
   Nuvemshop é só o funil (carrinho + checkout). Landing R3F na raiz.
@@ -121,10 +124,11 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   25). Acompanhar a RPI semanalmente; exigência formal tem prazo de **5 dias**.
   Detalhe: brain `wiki/concepts/dominio-e-marca.md`.
 - **MEI regularizado**, CNPJ 53.977.834/0001-18 no rodapé de todas as páginas.
-- **Soul do Roberto treinado (v2)**: o dono é o rosto da marca. Campanha de ads
-  em produção na outra máquina (10-11/08): 40 ads v2 + ciclo 3 com 20
-  estáticos lookbook e vídeo de 28 s — brain `marketing/2026-08-11-ads-v2/` e
-  sínteses de copywriting/ads.
+- **Soul do Roberto treinado (v2)**: o dono é o rosto da marca. Material de ads
+  produzido em 10-11/08 (40 ads v2 + ciclo 3 com 20 estáticos lookbook e vídeo
+  de 28 s) — brain `marketing/2026-08-11-ads-v2/` e sínteses de
+  copywriting/ads. **Não roda campanha hoje**: a ordem de 15/08 é produto
+  antes de conteúdo, e não há produto comprável.
 - Calendário que governa tudo: **29/09 (São Miguel, 3 artes já publicadas)** e
   **12/10 (Aparecida + Acutis + Crianças)**. Para vender em outubro, estampa e
   fotos prontas em setembro.
