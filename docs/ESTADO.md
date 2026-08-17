@@ -117,6 +117,19 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   13 das 78 variantes atuais não existem na IzzyPrint (moletom só preto, sem
   Ecobag) e 48 artes passam dos 30 cm do editor público — confirmar limites na
   conta antes de remontar.
+- **ACERVO DE ESTAMPAS, conferido em 17/08**: 16 prontas, 4 com ressalva,
+  **7 reprovadas**. O LEIA-ME anterior dizia "17 prontas" e era falso — o dono
+  achou os dois primeiros defeitos só olhando a galeria. Placar por rota:
+  **cor corrigida (despill) 2 de 2; regeração 4 prontas em 15**. Ordem daqui
+  pra frente: arte transparente se AMPLIA, verde no dourado se corrige por
+  CÁLCULO, regerar é último recurso e nada vira oficial sem conferência contra
+  a fonte nos dois fundos. Tabela, defeito por defeito, e as 17 folhas de prova
+  em nimbus-assets `designs/_retrabalho-2026-08/emblemas/refeitas-transparentes/`.
+  Seguem sem arquivo bom: São Jorge halftone, B5 Aparecida halftone, H2 São
+  Miguel v1 e B7 fé branca (as quatro com original preso em chroma).
+- **Medir verde é por MATIZ, não por razão G/R** (a razão confunde brilho com
+  cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
+  ~50° puxa verde, e o detector precisa de piso de saturação.
 
 ## Marca, conteúdo e legal
 
