@@ -117,7 +117,7 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   13 das 78 variantes atuais não existem na IzzyPrint (moletom só preto, sem
   Ecobag) e 48 artes passam dos 30 cm do editor público — confirmar limites na
   conta antes de remontar.
-- **ACERVO DE ESTAMPAS FECHADO em 17/08: 23 prontas**, 4 delas pedindo um
+- **ACERVO DE ESTAMPAS FECHADO em 17/08: 24 prontas**, 4 delas pedindo um
   ajuste no Affinity (o dono abre todas lá de qualquer jeito). Das 17 refeitas,
   **8 reprovaram** e foram para `_reprovadas/`; o LEIA-ME anterior dizia "17
   prontas" e era falso — o dono achou os dois primeiros defeitos só olhando a
@@ -146,13 +146,17 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   se corrige por **proximidade do fundo**, porque o ouro desta arte é 46,2° no
   interior e 49,6° na borda — o alvo era achatar o gradiente, não recolorir para
   o ouro da marca.
-- ⚠️ **SÃO MIGUEL SPRAY VOLTOU PARA A MESA**: eu havia dado como limpa e estava
+- **SÃO MIGUEL SPRAY CORRIGIDO em 17/08**: eu havia dado como limpa e estava
   errado; o dono viu o dourado OLIVA a olho. Real: 19,9% do ouro oliva na
-  contaminada, **10,6% depois do despill** — não zero. Causa: o verde comeu a
+  contaminada, 10,6% depois do despill — não zero. Causa: o verde comeu a
   **saturação** (0,561 contra 0,743 da marca), e girar matiz não devolve
-  saturação. Candidato reentintado (oliva 2,0%, saturação 0,702, textura
-  intacta) em `_alternativas/`, aguardando decisão do dono, porque repinta o
-  ouro dele.
+  saturação. Corrigido reescrevendo matiz e saturação para o ouro da marca
+  **mantendo a luminância** (textura de spray intacta): oliva **2,0%**,
+  saturação **0,702**, rosa de 41.581 para 4.880 px.
+- **G5 NUVEM PRETO E OURO CORRIGIDA**: o dono viu que as duas nuvens pareciam
+  artes diferentes, e eram — anel da auréola 91–110 px na preta contra 63–81 na
+  branca, silhuetas com 85,8% de sobreposição. A preta passou a sair da spray
+  branco (mesma silhueta, mesma auréola, fio dourado fino). O par virou família.
 - **Medir cor de estampa é medir MATIZ E SATURAÇÃO**, em todas as faixas de
   luminância, com recorte 1:1 na tela. A conferência de 15/08 falhou por medir
   matiz só em pixel de cor forte e só no ouro claro (`r > 140`), deixando de
