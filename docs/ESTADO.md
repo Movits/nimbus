@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-17
+atualizado: 2026-08-18
 ---
 
 # Estado do projeto
@@ -117,7 +117,15 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   13 das 78 variantes atuais não existem na IzzyPrint (moletom só preto, sem
   Ecobag) e 48 artes passam dos 30 cm do editor público — confirmar limites na
   conta antes de remontar.
-- **ACERVO DE ESTAMPAS FECHADO em 17/08: 24 prontas**, 4 delas pedindo um
+- **ACERVO DE ESTAMPAS FECHADO: 24 prontas, e desde 18/08 num LUGAR SÓ** —
+  nimbus-assets `designs/acervo/`, uma pasta por coleção (STREET 11, gótica 8,
+  RELÍQUIA 3, NUVEM 1, _marca 1), com nome limpo, sem o sufixo de rota de
+  tratamento. Antes estavam espalhadas em `_retrabalho-2026-08/`, separadas por
+  rota e não por coleção. A classificação veio da triagem do dono de 06/08 e da
+  decisão de 12/08 (a linha gótica saiu da RELÍQUIA, que ficou só com
+  `nimbus-blackletter` e `monograma-nmb`). `_retrabalho-2026-08/` segue como
+  **histórico**: fontes, as 5 ampliações ainda contaminadas, as 8 reprovadas,
+  alternativas e as 17 folhas de conferência. 4 delas pedem um
   ajuste no Affinity (o dono abre todas lá de qualquer jeito). Das 17 refeitas,
   **8 reprovaram** e foram para `_reprovadas/`; o LEIA-ME anterior dizia "17
   prontas" e era falso — o dono achou os dois primeiros defeitos só olhando a
