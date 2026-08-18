@@ -139,6 +139,25 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   vazado, halftone aberto), a regeração devolveu massa sólida. Antes de mandar
   arte para o modelo, perguntar se o valor dela está na delicadeza — se estiver,
   não mandar.
+- **B5 Aparecida halftone RESOLVIDA em 17/08 pelo despill** (o último buraco).
+  A fonte era JPEG com chroma, então foi recorte + despill — e o recorte certo é
+  **desfazer a mistura** (`F = (P − (1−a)·FUNDO)/a`), não apagar o fundo: era
+  isso que faltava no recorte de 13/08 que estragou as amostras. O spill restante
+  se corrige por **proximidade do fundo**, porque o ouro desta arte é 46,2° no
+  interior e 49,6° na borda — o alvo era achatar o gradiente, não recolorir para
+  o ouro da marca.
+- ⚠️ **SÃO MIGUEL SPRAY VOLTOU PARA A MESA**: eu havia dado como limpa e estava
+  errado; o dono viu o dourado OLIVA a olho. Real: 19,9% do ouro oliva na
+  contaminada, **10,6% depois do despill** — não zero. Causa: o verde comeu a
+  **saturação** (0,561 contra 0,743 da marca), e girar matiz não devolve
+  saturação. Candidato reentintado (oliva 2,0%, saturação 0,702, textura
+  intacta) em `_alternativas/`, aguardando decisão do dono, porque repinta o
+  ouro dele.
+- **Medir cor de estampa é medir MATIZ E SATURAÇÃO**, em todas as faixas de
+  luminância, com recorte 1:1 na tela. A conferência de 15/08 falhou por medir
+  matiz só em pixel de cor forte e só no ouro claro (`r > 140`), deixando de
+  fora o ouro escuro e o oliva dessaturado. **Média de imagem inteira esconde
+  defeito.**
 - **Transferência de máscara entre fonte e resultado só funciona em par
   ALINHADO** — se o modelo redesenhou, a geometria mudou e a máscara da fonte
   destrói a arte (provado na B5, que perdeu o letreiro na tentativa).
