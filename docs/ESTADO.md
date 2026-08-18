@@ -117,21 +117,28 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   13 das 78 variantes atuais não existem na IzzyPrint (moletom só preto, sem
   Ecobag) e 48 artes passam dos 30 cm do editor público — confirmar limites na
   conta antes de remontar.
-- **ACERVO DE ESTAMPAS, conferido e fechado em 17/08: 17 prontas + 5 a
-  conferir.** Das 17 refeitas, 7 reprovaram e foram para `_reprovadas/`; o
-  LEIA-ME anterior dizia "17 prontas" e era falso — o dono achou os dois
-  primeiros defeitos só olhando a galeria. **Nenhuma reprovada custou rodada
-  nova**: 4 já tinham equivalente aprovado, a B7 fé branca foi CONSERTADA por
-  recolorização da B7 escura aprovada (mesmo desenho, só a cor da tinta, zero
-  crédito), o São Jorge espera 2 minutos de Affinity (NIMBUS e arco eram creme e
-  voltaram pretos: preencher com `250,236,219`) e só a B5 Aparecida halftone
-  precisa de rodada nova.
+- **ACERVO DE ESTAMPAS FECHADO em 17/08: 23 prontas**, 4 delas pedindo um
+  ajuste no Affinity (o dono abre todas lá de qualquer jeito). Das 17 refeitas,
+  **8 reprovaram** e foram para `_reprovadas/`; o LEIA-ME anterior dizia "17
+  prontas" e era falso — o dono achou os dois primeiros defeitos só olhando a
+  galeria, e depois pegou a G5 preto e ouro. **Zero crédito gasto nos
+  consertos**: 5 reprovadas foram trocadas pela arte ORIGINAL do dono (ampliada
+  quando precisava de tamanho), a B7 fé branca foi derivada da B7 escura
+  aprovada, o São Jorge virou ajuste de Affinity e só a B5 Aparecida halftone
+  segue sem arquivo bom.
 - **Ordem das rotas de arte, por acerto medido**: cor corrigida/despill **2 de
-  2**, derivada de aprovada **1 de 1**, regeração **4 prontas em 15**. Arte
-  transparente se AMPLIA; verde no dourado se corrige por CÁLCULO; regerar é
-  último recurso, e nada vira oficial sem conferência contra a fonte nos dois
-  fundos. Tabela, defeito por defeito, e as 17 folhas de prova em nimbus-assets
+  2**, derivada de aprovada **1 de 1**, ampliação da original **12 de 12**,
+  regeração **3 prontas em 15, com 8 reprovadas**. Tudo que NÃO é regeração
+  acertou 100%. Arte que já existe transparente se AMPLIA; verde no dourado se
+  corrige por CÁLCULO; existindo irmã aprovada, DERIVA-SE dela; regerar é último
+  recurso e nada vira oficial sem conferência contra o original nos dois fundos.
+  Tabela, defeito por defeito, e as 17 folhas de prova em nimbus-assets
   `designs/_retrabalho-2026-08/emblemas/refeitas-transparentes/`.
+- **O padrão das 8 reprovadas**: o modelo **engrossa traço fino, chapa textura e
+  inventa contorno**. Onde a arte tinha delicadeza (fio aerografado, craquelado
+  vazado, halftone aberto), a regeração devolveu massa sólida. Antes de mandar
+  arte para o modelo, perguntar se o valor dela está na delicadeza — se estiver,
+  não mandar.
 - **Transferência de máscara entre fonte e resultado só funciona em par
   ALINHADO** — se o modelo redesenhou, a geometria mudou e a máscara da fonte
   destrói a arte (provado na B5, que perdeu o letreiro na tentativa).
