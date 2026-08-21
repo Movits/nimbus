@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-18
+atualizado: 2026-08-21
 ---
 
 # Estado do projeto
@@ -180,8 +180,16 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 ## Marca, conteúdo e legal
 
 - **INPI: pedido 944711901 protocolado em 06/08** (NIMBUS nominativa, classe
-  25). Acompanhar a RPI semanalmente; exigência formal tem prazo de **5 dias**.
-  Detalhe: brain `wiki/concepts/dominio-e-marca.md`.
+  25). **Consultado em 21/08: EM ANÁLISE — nem aprovado nem negado, e ainda não
+  publicado para oposição.** Consta na base sem nenhum despacho; base do INPI
+  atualizada até 18/08 (RPI 2902). Acompanhar a RPI semanalmente; exigência
+  formal tem prazo de **5 dias**. Detalhe: brain `wiki/concepts/dominio-e-marca.md`.
+- **Obstáculo levantado na consulta de 21/08, para o dono decidir se leva a quem
+  fez o depósito**: existe registro EM VIGOR `903106558` GEL-NIMBUS (ASICS) na
+  classe 25, e o INPI já indeferiu outro pedido NIMBUS para vestuário nessa
+  classe citando exatamente ele (processo `920112668`, indeferido em 23/02/2021
+  por art. 124 XIX da LPI, recurso não provido em 2022, hoje sub judice).
+  Registro de fato, sem juízo jurídico — a sessão não opina sobre marca.
 - **MEI regularizado**, CNPJ 53.977.834/0001-18 no rodapé de todas as páginas.
 - **Soul do Roberto treinado (v2)**: o dono é o rosto da marca. Material de ads
   produzido em 10-11/08 (40 ads v2 + ciclo 3 com 20 estáticos lookbook e vídeo
