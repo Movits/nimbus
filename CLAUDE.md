@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-11
+atualizado: 2026-08-21
 ---
 
 # NIMBUS
@@ -29,7 +29,7 @@ cobra isso.
 A versão anterior deste arquivo, com o histórico longo, está em
 `docs/historico/CLAUDE-2026-07-25.md`.
 
-## Os três repositórios — layout REAL desta máquina
+## Os três repositórios — layout REAL da máquina do dono
 
 ```
 C:\Users\rober\Nimbus\               PÚBLICO   código, docs, medições, receitas
@@ -42,6 +42,11 @@ C:\Users\rober\nimbus-brain          junction → o vault aninhado (para scripts
 **Nunca rode `git clean -fdx` no público** (apagaria o segundo cérebro) e não
 clone por cima da junction. Máquina nova sem o vault: aí sim, clone os três
 lado a lado (`docs/REPOSITORIOS.md`).
+
+Em **sessão remota** (Claude Code na web / Cowork), os três chegam como clones
+irmãos — `nimbus/`, `nimbus-assets/`, `nimbus-brain/` — e o aviso da junction
+não se aplica; os scripts acham os vizinhos em `../nimbus-assets` e
+`../nimbus-brain` (ou no caminho de `NIMBUS_ASSETS`) sem ajuste.
 
 ## Marca
 
@@ -81,6 +86,14 @@ Não execute pedido pago.
 
 Este repositório é **público**: nunca exponha CPF, endereço, senha, cookie, token
 ou dado de cliente.
+
+## O código, em uma frase por frente
+
+Landing React + R3F em `src/` (`npm run dev`, `npm run build`); vitrine
+estática gerada por `scripts/vitrine/` em `public/loja/` (`npm run vitrine`
+regenera catálogo, mídia e páginas e passa os linters); kit da Nuvemshop em
+`nuvemshop/` — cola-se à mão no painel, leia `nuvemshop/instrucoes.md` antes.
+Detalhe no `README.md`.
 
 ## Verificações iniciais
 
