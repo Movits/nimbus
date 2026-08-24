@@ -17,11 +17,15 @@ const args = process.argv.slice(2).filter((a) => a !== '--force');
 const force = process.argv.includes('--force');
 const dir = dirRodada(args[0]);
 const { caminho, dados } = leRodada(dir);
-const { largura = 1080, altura = 1920, fps = 30 } = dados.timeline ?? {};
+const { largura = 1080, altura = 1920, fps = 30 } = dados.config ?? dados.timeline ?? {};
 
-// Janela de uso por fonte, derivada dos cortes.
+// Janela de uso por fonte, derivada dos cortes de TODAS as timelines (v2)
+// ou do bloco raiz (formato antigo).
+const todosCortes = dados.timelines
+  ? dados.timelines.flatMap((tl) => tl.cortes ?? [])
+  : (dados.cortes ?? []);
 const uso = new Map();
-for (const corte of dados.cortes ?? []) {
+for (const corte of todosCortes) {
   if (corte.transicao) continue;
   const fim = corte.in + corte.dur * (corte.velocidade ?? 1);
   const u = uso.get(corte.fonte) ?? { ini: Infinity, fim: 0 };

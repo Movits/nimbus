@@ -31,6 +31,7 @@ if not rv then
   return
 end
 local pm = rv:GetProjectManager()
+pcall(function() pm:SaveProject() end)
 local proj = pm:LoadProject(cfg.projeto)
 if not proj then
   proj = pm:CreateProject(cfg.projeto)
@@ -46,37 +47,29 @@ proj:SetSetting("timelineFrameRate", tostring(cfg.fps))
 
 local mp = proj:GetMediaPool()
 
-local jaExiste = false
+-- v2: a rodada pode ter varias timelines; importa cada uma que ainda nao existir.
+local existentes = {}
 for i = 1, proj:GetTimelineCount() do
   local tl = proj:GetTimelineByIndex(i)
-  if tl and tl:GetName() == cfg.timeline then
-    jaExiste = true
-    break
-  end
+  if tl then existentes[tl:GetName()] = true end
 end
 
-if jaExiste then
-  print("[NIMBUS] timeline '" .. cfg.timeline .. "' ja existe; nada reimportado (apague-a ou renomeie antes).")
-else
-  local okTl, tl = pcall(function()
-    return mp:ImportTimelineFromFile(cfg.fcpxml, { timelineName = cfg.timeline })
-  end)
-  if okTl and tl then
-    -- o proprio FCPXML traz a midia; importar de novo duplicaria o media pool
-    print("[NIMBUS] timeline importada: " .. tl:GetName())
+local lista = cfg.timelines or { { nome = cfg.timeline, fcpxml = cfg.fcpxml, srt = cfg.srt } }
+local importadas = 0
+for _, item in ipairs(lista) do
+  if existentes[item.nome] then
+    print("[NIMBUS] timeline '" .. item.nome .. "' ja existe; pulada.")
   else
-    print("[NIMBUS] ImportTimelineFromFile falhou nesta edicao.")
-    print("[NIMBUS] fallback: File > Import > Timeline (Ctrl+Shift+I) em " .. cfg.fcpxml)
-    local itens = mp:ImportMedia(cfg.midias)
-    print(string.format("[NIMBUS] midia importada avulsa para o fallback: %d item(ns)", itens and #itens or 0))
+    local okTl, tl = pcall(function()
+      return mp:ImportTimelineFromFile(item.fcpxml, { timelineName = item.nome })
+    end)
+    if okTl and tl then
+      importadas = importadas + 1
+      print("[NIMBUS] timeline importada: " .. tl:GetName())
+    else
+      print("[NIMBUS] FALHOU importar '" .. item.nome .. "'; fallback Ctrl+Shift+I em " .. item.fcpxml)
+    end
   end
 end
 
-local fs = io.open(cfg.srt, "r")
-if fs then
-  fs:close()
-  pcall(function() mp:ImportMedia({ cfg.srt }) end)
-  print("[NIMBUS] SRT no media pool; se nao entrar na timeline: Timeline > Import > Subtitle em " .. cfg.srt)
-end
-
-print("[NIMBUS] pronto: projeto " .. cfg.projeto)
+print(string.format("[NIMBUS] pronto: projeto %s, %d timeline(s) importada(s) de %d.", cfg.projeto, importadas, #lista))

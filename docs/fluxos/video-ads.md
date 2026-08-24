@@ -68,10 +68,20 @@ detalhe no brain, `Nimbus brain/wiki/concepts/edicao-de-video-com-claude.md`.
 ## Armadilhas conhecidas (medidas ou verificadas em fonte)
 
 - **Título grande demais não cabe nem se lê** (piloto de 23/08, 96 px estourou):
-  padrão agora é 64 px, máx. 22 caracteres, dentro da faixa central. Todo vídeo
-  tem trilha leve conforme a vibe (áudio único e chiado reprova na auditoria), e
-  o encerramento de marca é **cena própria** com estética premium, nunca um
-  cartão colado no fim do take anterior.
+  padrão agora é 64 px, máx. 22 caracteres (acima de 16, corpo 48), dentro da
+  faixa central. Todo vídeo tem trilha leve conforme a vibe (áudio único e
+  chiado reprova na auditoria), e o encerramento de marca é **cena própria**
+  com estética premium, nunca um cartão colado no fim do take anterior.
+- **Cena-fonte com QUALQUER texto/cartela queimada não entra** (dono, 24/08 —
+  sem exceção para cartela "bonita"): o catálogo de cenas marca `texto_queimado`
+  e a janela é descartada. Texto é sempre camada nossa no Resolve.
+- **Áudio diegético contínuo nunca é picotado** (dono, 24/08, treino t09):
+  música/oração da própria cena ou corre INTEIRA por baixo dos cortes de vídeo
+  (`audio_base` na receita) ou os clipes entram mudos (`mudo: true`) e só a
+  trilha toca.
+- **Cena com pessoa = Soul ID do dono por padrão** (dono, 24/08): anti-cara-de-IA;
+  o Soul "Roberto NIMBUS v2" está treinado e é o rosto da marca. Soul trava 1
+  pessoa por geração; cena de dupla vira solo ou usa reference elements.
 
 - **Retime (`velocidade`) estraga o round-trip**: o import cria compound clip
   no media pool e o export FCPXML do Resolve pode derrubar o segundo de dois
