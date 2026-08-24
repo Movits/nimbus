@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-23
+atualizado: 2026-08-24
 ---
 
 # Estado do projeto
@@ -222,6 +222,28 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   (~315 créditos planejados; saldo em 23/08: 911).
 - **Não roda campanha**: ordem de 15/08 (produto antes de conteúdo) intacta;
   mídia paga travada até `purchase` medido.
+
+## Photoshoot de capas com Soul ID (24/08 — PAUSADO a pedido do dono)
+
+- **Mockups oficiais**: 6 vistas (frente+costas dos 3 designs) exportadas do
+  editor IzzyPrint em alta com a arte na resolução ORIGINAL (o canvas exibe
+  miniatura; o design guarda o original em `full_src`). Aprovadas pelo dono;
+  são fotos de produto para site/insta/ads + referência do photoshoot — **não**
+  portão obrigatório de geração (correção do dono, 24/08).
+  `nimbus-assets/marketing/mockups-izzyprint/editor-*.png`.
+- **Photoshoot ordenado pelo dono (24/08)**: 2 fotos por produto (frente+verso)
+  como capa. Receita: soul_2 2k (peça lisa) → gpt_image_2 2k/high aplica a
+  estampa usando o mockup como referência. Lote inicial 42,7 cr (saldo 875→832)
+  + 2 refações. Fotos e estado do painel em
+  `nimbus-assets/marketing/2026-08-24-photoshoot-capas/` (LEIA-ME tem o mapa).
+- **Painel de auditoria (obrigatório) rodou**: Asa frente/costas e Aparecida
+  frente APROVADAS pelas 3 lentes; Aparecida costas bloqueada 2x (estampa
+  recriada; depois querubim virou caveira), v3 gerada e **verificação
+  interrompida na pausa**; São Miguel par com ressalva de cor confirmada no
+  pixel (peça marinho lavado H~215 vs mockup royal H240).
+- **Retomada**: (1) verificar v3 da Aparecida costas; (2) decisão do dono:
+  cor verdadeira do blank boxy azul (foto ou mockup?); (3) entregar só pares
+  verdes. **Nenhuma foto foi entregue ainda.**
 
 ## Medição (GA4, Meta e TikTok)
 
