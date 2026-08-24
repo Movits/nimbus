@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-21
+atualizado: 2026-08-23
 ---
 
 # Estado do projeto
@@ -199,6 +199,29 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - Calendário que governa tudo: **29/09 (São Miguel, 3 artes já publicadas)** e
   **12/10 (Aparecida + Acutis + Crianças)**. Para vender em outubro, estampa e
   fotos prontas em setembro.
+
+## Vídeo para ads (frente preparatória, aberta em 23/08)
+
+- **Decisão do dono (23/08)**: Claude edita vídeo no **DaVinci Resolve 21
+  gratuito** da máquina dele — monta a timeline por código, o dono revisa e
+  corrige no programa ([`decisoes/2026-08-23-video-no-resolve-e-orcamento-higgsfield.md`](decisoes/2026-08-23-video-no-resolve-e-orcamento-higgsfield.md)).
+  Para peça ESTÁTICA a regra de 12/08 (dono monta no Canva) segue intacta.
+- **Pipeline provado em 23/08 sem gastar crédito**: rodada-piloto
+  `nimbus-assets/marketing/2026-08-23-piloto-resolve/` com mídia real da
+  IzzyPrint — receita → mezanine → FCPXML → import por script interno →
+  edição → export → `video:diff`. Fluxo: [`fluxos/video-ads.md`](fluxos/video-ads.md);
+  números: [`verdades/specs-video-ads.md`](verdades/specs-video-ads.md);
+  scripts: `scripts/video/` (npm `video:*`).
+- **Pesquisa P1 concluída (23/08)**: rota free confirmada; MCP com bridge para
+  a free existe (samuelgursky) e fica como camada 2 sob ordem. Conhecimento no
+  brain: `wiki/entities/davinci-resolve.md` e
+  `wiki/concepts/edicao-de-video-com-claude.md`.
+- **Falta (sessão B)**: pesquisa P2 (ads do nicho) → síntese + shotlist no
+  brain; biblioteca de clipes modulares em `nimbus-assets/marketing/biblioteca-clipes/`.
+  Só depois, e sob aprovação clipe a clipe, o primeiro lote Higgsfield
+  (~315 créditos planejados; saldo em 23/08: 911).
+- **Não roda campanha**: ordem de 15/08 (produto antes de conteúdo) intacta;
+  mídia paga travada até `purchase` medido.
 
 ## Medição (GA4, Meta e TikTok)
 

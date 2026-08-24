@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-11
+atualizado: 2026-08-23
 ---
 
 # Comece aqui
@@ -23,6 +23,7 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Mexer no **CSS, hover ou layout** da loja | [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md) |
 | Escrever **página de produto**, medidas, prazo, política | [`fluxos/paginas-de-produto.md`](fluxos/paginas-de-produto.md) |
 | Criar **conteúdo social**, post, roteiro, campanha | [`fluxos/conteudo-social.md`](fluxos/conteudo-social.md) |
+| Produzir **vídeo para ads** (receita, Resolve, export 9:16) | [`fluxos/video-ads.md`](fluxos/video-ads.md) |
 | Tratar **imagem da RELÍQUIA** no Affinity (recorte, export, qualidade) | [`fluxos/tratar-reliquia-no-affinity.md`](fluxos/tratar-reliquia-no-affinity.md) |
 | Mexer em **evento GA4**, medição, meta das datas | [`fluxos/tracking-plan.md`](fluxos/tracking-plan.md) |
 

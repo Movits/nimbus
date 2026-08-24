@@ -28,6 +28,7 @@ este mapa e o banner no topo de cada script superado.
 | Produção e inventário de capas | `producao/` (mapa em `producao/README.md`) |
 | Compositor de capas vigente | `produce-cover.mjs`, `compose-art.mjs` e afins (fluxo em `docs/fluxos/capa-lifestyle.md`) |
 | Hook de sessão e ritual de saída (`npm run sessao:inicio` / `sessao:fim`) | `sessao/` (checagem-inicial roda sozinha ao abrir a sessão) |
+| Pipeline de vídeo dos ads no Resolve gratuito (`video:normaliza`, `video:timeline`, `video:srt`, `video:diff`; fluxo em `docs/fluxos/video-ads.md`) | `video/` (mapa em `video/README.md`) |
 | Frontmatter de status em todo .md (`npm run docs:status`) | `verifica-status-docs.mjs` + `status-docs.allow.json` (lista que só encolhe) |
 | Recorte/organização de artes (`npm run assets`, `finalize`, `cutout:inbox`) | `cutout.mjs`, `finalize-prints.mjs`, `transparentize.mjs`, `organize-designs.mjs` (atenção: chroma CONDENADO em 06/08 — o organize vale para legado) |
 
