@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-23
+atualizado: 2026-08-24
 ---
 # Vídeo para ads — edição no DaVinci Resolve (gratuito)
 
@@ -44,7 +44,14 @@ rodada-piloto (mídia real da IzzyPrint, zero créditos).
 7. **Fechar o ciclo**: `npm run video:diff` mostra o que mudou, clipe a clipe.
    Mudança que virou regra → atualizar `rodada.json` e regenerar. **A receita
    nunca fica atrás da timeline.**
-8. **Entregar**: Deliver em H.264 8-bit (o teto da free é UHD; 1080x1920 passa
+8. **Auditoria multi-agente (OBRIGATÓRIA, ordem do dono de 24/08)**: antes de
+   apresentar qualquer vídeo como pronto, extrair frames do render de review
+   (ffmpeg) e rodar um painel de agentes com no mínimo as lentes de
+   **marketing** (o hook prende? o CTA converte?), **direção de arte** (estética
+   premium da marca? título legível? encerramento é cena própria?) e **edição**
+   (ritmo, cortes, áudio). Agente reprovou → refaz a parte apontada e re-audita.
+   Vídeo só chega ao dono com o painel verde.
+9. **Entregar**: Deliver em H.264 8-bit (o teto da free é UHD; 1080x1920 passa
    folgado). Para Reels/TikTok, legenda queimada ("Burn into video"); áudio
    normalizado a -14 LUFS (specs em `../verdades/specs-video-ads.md`).
 
@@ -59,6 +66,12 @@ founder talk), auto-editor (corte de silêncio com `--export resolve`) —
 detalhe no brain, `Nimbus brain/wiki/concepts/edicao-de-video-com-claude.md`.
 
 ## Armadilhas conhecidas (medidas ou verificadas em fonte)
+
+- **Título grande demais não cabe nem se lê** (piloto de 23/08, 96 px estourou):
+  padrão agora é 64 px, máx. 22 caracteres, dentro da faixa central. Todo vídeo
+  tem trilha leve conforme a vibe (áudio único e chiado reprova na auditoria), e
+  o encerramento de marca é **cena própria** com estética premium, nunca um
+  cartão colado no fim do take anterior.
 
 - **Retime (`velocidade`) estraga o round-trip**: o import cria compound clip
   no media pool e o export FCPXML do Resolve pode derrubar o segundo de dois

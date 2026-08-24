@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-23
+atualizado: 2026-08-24
 ---
 # Specs de vídeo para ads (números estáveis)
 
@@ -13,6 +13,7 @@ atualizado: 2026-08-23
 | Crop 4:5 do mesmo máster | sujeito principal dentro da faixa central ~1080x1180 |
 | Loudness | -14 LUFS integrado, true peak -1,5 dBTP (prática de mercado; plataforma nenhuma publica spec) |
 | Legenda | Reels/TikTok: queimada no Deliver ("Burn into video"); SRT sidecar fica no git |
+| Título em vídeo | Fraunces bold **64 px** (máx. 72), **máx. 22 caracteres** por título, na faixa central segura; 96 px estourou no piloto de 23/08 |
 | Mezanine de edição | 1080x1920, 30 fps CFR, H.264 all-intra (`-g 1`) CRF 16 |
 | Intercâmbio | FCPXML **1.10** (teto do export via API do Resolve 21; a UI vai além, mas o pipeline usa 1.10 nas duas pontas) |
 

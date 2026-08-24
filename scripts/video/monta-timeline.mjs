@@ -74,7 +74,11 @@ for (let corte of dados.cortes) {
 
 // Títulos: viram <title> conectado (lane 1) ao clipe do spine que contém o início,
 // com offset em coordenadas de mídia do pai (convenção do FCPXML para conectados).
+// Regra de legibilidade (defeito do piloto de 23/08): máx. 22 caracteres por título.
 for (const titulo of dados.titulos ?? []) {
+  if (titulo.texto.length > 22) {
+    console.warn(`aviso: título "${titulo.texto}" tem ${titulo.texto.length} caracteres (máx. 22 para caber legível em 1080x1920); encurte na receita ou quebre em dois.`);
+  }
   const pai = [...clipesTl].reverse().find((c) => c.tlInicio <= titulo.inicio + 1e-6);
   if (!pai) continue;
   const offsetFonte = pai.in + (titulo.inicio - pai.tlInicio) * pai.vel;
@@ -84,7 +88,7 @@ for (const titulo of dados.titulos ?? []) {
               <text-style ref="${idEstilo}">${escapaXml(titulo.texto)}</text-style>
             </text>
             <text-style-def id="${idEstilo}">
-              <text-style font="${escapaXml(titulo.fonte ?? 'Fraunces')}" fontSize="${titulo.tamanho ?? 96}" fontColor="1 1 1 1" bold="1" alignment="center"/>
+              <text-style font="${escapaXml(titulo.fonte ?? 'Fraunces')}" fontSize="${titulo.tamanho ?? 64}" fontColor="1 1 1 1" bold="1" alignment="center"/>
             </text-style-def>
           </title>`);
 }
