@@ -223,7 +223,7 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **Não roda campanha**: ordem de 15/08 (produto antes de conteúdo) intacta;
   mídia paga travada até `purchase` medido.
 
-## Photoshoot de capas com Soul ID (24/08 — PAUSADO a pedido do dono)
+## Photoshoot de capas com Soul ID (24/08 — CONCLUÍDO)
 
 - **Mockups oficiais**: 6 vistas (frente+costas dos 3 designs) exportadas do
   editor IzzyPrint em alta com a arte na resolução ORIGINAL (o canvas exibe
@@ -236,14 +236,14 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   estampa usando o mockup como referência. Lote inicial 42,7 cr (saldo 875→832)
   + 2 refações. Fotos e estado do painel em
   `nimbus-assets/marketing/2026-08-24-photoshoot-capas/` (LEIA-ME tem o mapa).
-- **Painel de auditoria (obrigatório) rodou**: Asa frente/costas e Aparecida
-  frente APROVADAS pelas 3 lentes; Aparecida costas bloqueada 2x (estampa
-  recriada; depois querubim virou caveira), v3 gerada e **verificação
-  interrompida na pausa**; São Miguel par com ressalva de cor confirmada no
-  pixel (peça marinho lavado H~215 vs mockup royal H240).
-- **Retomada**: (1) verificar v3 da Aparecida costas; (2) decisão do dono:
-  cor verdadeira do blank boxy azul (foto ou mockup?); (3) entregar só pares
-  verdes. **Nenhuma foto foi entregue ainda.**
+- **Painel de auditoria verde nas 6 e ENTREGUE ao dono em 24/08.** Aparecida
+  costas levou 4 refações contra recriação de elemento religioso; fechou com
+  edição dirigida + transplante local da faixa dos olhos (lição no LEIA-ME da
+  pasta). São Miguel: dono decidiu manter o marinho da foto (mockup royal é
+  que satura); comparação salva na pasta. Custo total ~75 cr; saldo 804.
+- **Próximo passo natural da frente**: subir capas na Nuvemshop quando o dono
+  ordenar (nada publicado sem ordem produto a produto); animar stills
+  aprovados só sob ordem com custo à vista.
 
 ## Medição (GA4, Meta e TikTok)
 
