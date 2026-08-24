@@ -1,7 +1,11 @@
 ---
 status: vigente
-atualizado: 2026-08-11
+atualizado: 2026-08-21
 ---
+
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 # NIMBUS
 
@@ -43,18 +47,67 @@ C:\Users\rober\nimbus-brain          junction → o vault aninhado (para scripts
 clone por cima da junction. Máquina nova sem o vault: aí sim, clone os três
 lado a lado (`docs/REPOSITORIOS.md`).
 
+Os scripts acham o privado em `../nimbus-assets` ou em `NIMBUS_ASSETS`.
+`SKIP_ASSETS=1` (portão 300 DPI) e `SKIP_REDE=1` (link-check) existem só para
+ambiente sem os privados ou sem rede, como o CI; localmente rode sem eles.
+
+## Comandos
+
+Não há test runner: cada portão é um script Node que sai com código ≠ 0, e a
+"suíte" é `vitrine:portoes`. Para rodar um portão só: `node scripts/vitrine/<portao>.mjs`.
+
+```bash
+npm run typecheck                    # tsc --noEmit (landing)
+node scripts/geometry/validate.mjs   # 38.880 cenas sintéticas; nenhum veredito de medição sem ele passar
+npm run vitrine:portoes              # os 11 portões: copy, claims, tokens, links, variantes, nuvem, tracking, dpi300, docs:links, docs:status, loja:css
+npm run vitrine                      # REGERA public/loja/ (catalogo → lint → paginas → claims → nuvem); commitar a saída junto
+npm run dev | build | preview        # landing Vite (localhost:5173)
+npm run sessao:fim                   # ritual de saída (docs/HANDOFF-SESSAO.md, seções 11 e 12)
+```
+
+`docs:status` usa a lista de exceções `scripts/status-docs.allow.json`, que só
+encolhe — nunca acrescente um .md nela para passar no portão.
+
+## Arquitetura — o que só se entende lendo vários arquivos
+
+Um repositório, **três entregáveis** (tabela no `README.md`): landing em `src/`;
+vitrine em `public/loja/`, **gerada, nunca editar `index.html`, `c/`, `p/` à
+mão**; loja em `nuvemshop/`, kit colado à mão no painel (leia
+`nuvemshop/instrucoes.md` antes: o painel apaga custom properties, CSS com
+`var()` fica inerte).
+
+**Pipeline da vitrine** (`scripts/vitrine/`): `build-catalogo.mjs` funde as
+planilhas auditadas (matriz de variantes = verdade comercial; `nuvemshop-products.json`
+= só slug e URL de imagem; CSV de descrições = copy e quem entra) em
+`public/loja/catalogo.json`, o hub de tudo. `build-paginas.mjs` é o template
+que gera o HTML a partir dele; `build-media.mjs` deriva as imagens editoriais
+do repo privado. Os `lint-*.mjs` e `parity-*.mjs` leem o `catalogo.json`.
+
+**O deploy é um portão de reprodutibilidade**: o CI roda os lints, regenera as
+páginas a partir do catálogo commitado e falha se `git diff -- public` não
+sair limpo. Quem mexe em `build-paginas.mjs`, no catálogo ou em `public/loja/{css,js}`
+roda `npm run vitrine` e commita o resultado no mesmo commit. O `?v=` dos
+ativos é hash do conteúdo com CRLF normalizado (Windows × CI).
+
+**`scripts/` mistura vivo e superado** sem nada ter sido movido: o mapa é
+`scripts/LEIA-ME.md` e todo script superado tem banner no topo. Na dúvida,
+confira o mapa antes de rodar. `scripts/geometry/` (medidor de escala/posição
+da estampa, README explica o princípio físico) e `scripts/producao/` (capas,
+inventário, portão 300 DPI) têm README próprio.
+
+`tmp_*` na raiz e `_arquivo-*/` são rascunho local gitignorado; `dist/` é
+saída de build.
+
 ## Marca
 
 Fé reverente, design autoral, brasilidade e acabamento premium. Céu, nuvens,
 concreto branco modernista, luz e atmosfera editorial.
 
-Paleta: navy `#0b2360`, ouro `#e9c46a`, azul-céu `#8fc1ea`, céu claro `#dcebfa`,
-branco-nuvem `#f7fbff`, texto `#1b2733`. Títulos Fraunces/Georgia, corpo Inter.
-
 Tom curto, humano, específico e reverente. **Copy pública proibida** (decisão de
 29/07, `docs/decisoes/2026-07-29-regra-de-fotos-e-copy-do-site.md`): travessão;
 "sob demanda", "print on demand", "produzida após o pedido" e variações; "troca
 fácil"; "loja oficial". Linguagem aprovada: "feita no Brasil, para você".
+`scripts/vitrine/lint-copy.mjs` e `lint-claims.mjs` cobram isso no catálogo.
 
 10% do lucro de cada pedido vai para um projeto social escolhido pelo cliente,
 após custos e o prazo de arrependimento, com repasse mensal e comprovação.
@@ -85,13 +138,8 @@ ou dado de cliente.
 ## Verificações iniciais
 
 Um hook de sessão (`scripts/sessao/checagem-inicial.mjs`) roda sozinho ao abrir
-e imprime a sincronia dos 3 repos e a idade do ESTADO. Depois dele:
-
-```bash
-npm run typecheck
-node scripts/geometry/validate.mjs      # 38.880 casos, tem que passar
-npm run vitrine:portoes                 # a corrente completa de portões
-```
+e imprime a sincronia dos 3 repos e a idade do ESTADO. Depois dele, rode os
+três primeiros comandos da seção Comandos (typecheck, validate, portões).
 
 Saída de sessão: `npm run sessao:fim` (o ritual completo está no
 `docs/HANDOFF-SESSAO.md`, seções 11 e 12).
