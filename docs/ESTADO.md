@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-24
+atualizado: 2026-08-25
 ---
 
 # Estado do projeto
@@ -223,7 +223,24 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **Não roda campanha**: ordem de 15/08 (produto antes de conteúdo) intacta;
   mídia paga travada até `purchase` medido.
 
-## Photoshoot de capas com Soul ID (24/08 — CONCLUÍDO)
+## Photoshoot de capas com Soul ID (25/08 — capas por coleção)
+
+- **Método vigente (ordem do dono, 25/08)**: capa nova NÃO gera cena. Base = as
+  54 fotos dele aprovadas em 10/08 (`nimbus-assets/casting/2026-08-08-roberto-soul/gerados/v12-lote-60/`,
+  separadas por `nuvem/ street/ reliquia/`); cada capa é UMA edição
+  `gpt_image_2` **1k/medium** (~2 cr) sobre a base, com o mockup IzzyPrint como
+  referência: troca cor da peça, aplica estampa e corrige defeito de cena
+  (grafite falso com pseudo-letras). Rodada de 6 capas: **~20 cr**.
+- **Cada coleção no seu mundo** (decisão de 23/07, recobrada): NUVEM = céu +
+  concreto Niemeyer; STREET = beco/muro; RELÍQUIA = claustro/azulejos. Conferir
+  a coleção do design ANTES de escolher a cena.
+- Conjunto vigente: `nimbus-assets/marketing/2026-08-25-capas-por-colecao/`
+  (NUVEM Asa frente+costas; STREET Aparecida e São Miguel frente+costas).
+  RELÍQUIA pendente de arte montada na IzzyPrint.
+- Conserto de capa se faz **refazendo da foto-base**: editar a saída já gerada
+  carimba textura ornamental na imagem inteira, inclusive na pele (medido 2x).
+
+## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
 - **Mockups oficiais**: 6 vistas (frente+costas dos 3 designs) exportadas do
   editor IzzyPrint em alta com a arte na resolução ORIGINAL (o canvas exibe
