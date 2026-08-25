@@ -236,14 +236,17 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   estampa usando o mockup como referência. Lote inicial 42,7 cr (saldo 875→832)
   + 2 refações. Fotos e estado do painel em
   `nimbus-assets/marketing/2026-08-24-photoshoot-capas/` (LEIA-ME tem o mapa).
-- **Painel de auditoria verde nas 6 e ENTREGUE ao dono em 24/08.** Aparecida
-  costas levou 4 refações contra recriação de elemento religioso; fechou com
-  edição dirigida + transplante local da faixa dos olhos (lição no LEIA-ME da
-  pasta). São Miguel: dono decidiu manter o marinho da foto (mockup royal é
-  que satura); comparação salva na pasta. Custo total ~75 cr; saldo 804.
+- **v1 REJEITADA pelo dono em 24/08** (fundo chapado sem vida, rosto
+  sério/uncanny, cor fora do mockup) → regras novas na memória
+  `photoshoot-regras-do-dono`. **v2 no cenário terraço-céu aprovado: painel
+  verde nas 6 e ENTREGUE em 25/08.** Biblioteca de CENAS-BASE dele (frente+
+  costas × 3 peças, terraço) criada em `nimbus-assets/casting/cenas-base/` —
+  photoshoot futuro = trocar cor de peça (na cena-base) + aplicar estampa
+  (edição com mockup). Custo total da frente ~149 cr (875→727).
 - **Próximo passo natural da frente**: subir capas na Nuvemshop quando o dono
   ordenar (nada publicado sem ordem produto a produto); animar stills
-  aprovados só sob ordem com custo à vista.
+  aprovados só sob ordem com custo à vista; cenários novos de cena-base sob
+  ordem (~8 cr o par).
 
 ## Medição (GA4, Meta e TikTok)
 
