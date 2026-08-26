@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-25
+atualizado: 2026-08-26
 ---
 
 # Estado do projeto
@@ -239,6 +239,26 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   RELÍQUIA pendente de arte montada na IzzyPrint.
 - Conserto de capa se faz **refazendo da foto-base**: editar a saída já gerada
   carimba textura ornamental na imagem inteira, inclusive na pele (medido 2x).
+
+## Cenas-base em lugares reais de Brasília (25–26/08)
+
+- Frente inteira documentada em
+  `nimbus-assets/casting/2026-08-25-cenarios-reais/RETOMADA.md` (ponto de
+  entrada obrigatório; tabela por cena). 8 pares; 2 prontos (Três Poderes,
+  Praça do Cruzeiro), o resto aguardava prova de lugar.
+- **26/08 (tarde): os 5 dossiês de enquadramento pedidos pelo dono estão
+  PRONTOS** em `nimbus-assets/casting/ancoras-locacoes/dossies/` (Ermida,
+  Pontão, Rodoviária, Superquadra, Planaltina) — fotos-prova independentes,
+  LEIA-ME item por item, o que NÃO existe, créditos. Custo de crédito: zero
+  (pesquisa no lugar de geração).
+- Vereditos que mudam cena: piso da Ermida e pilar cilíndrico da Rodoviária
+  eram invenção; enquadramento do Pontão (deck de madeira + Ponte JK) foi
+  REFUTADO; torre de Planaltina veio da OUTRA igreja São Sebastião (matriz
+  1960 — contraexemplo no dossiê).
+- **Aguardam decisão do dono antes de regenerar**: rota do Pontão (píer da
+  marina sem JK × borda leste de pedra com JK) e bloco da superquadra
+  (SQS 308-E retangular/piso preto × SQN 406-O colunas cilíndricas). As demais
+  três cenas já têm receita de refação nos LEIA-ME dos dossiês.
 
 ## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
