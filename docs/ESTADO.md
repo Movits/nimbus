@@ -255,10 +255,11 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   eram invenção; enquadramento do Pontão (deck de madeira + Ponte JK) foi
   REFUTADO; torre de Planaltina veio da OUTRA igreja São Sebastião (matriz
   1960 — contraexemplo no dossiê).
-- **Aguardam decisão do dono antes de regenerar**: rota do Pontão (píer da
-  marina sem JK × borda leste de pedra com JK) e bloco da superquadra
-  (SQS 308-E retangular/piso preto × SQN 406-O colunas cilíndricas). As demais
-  três cenas já têm receita de refação nos LEIA-ME dos dossiês.
+- **Decisões do dono (26/08, mesma sessão)**: Pontão = **píer de madeira da
+  marina, sem JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas;
+  conferir estado atual — prova é de 2015). Com isso as 5 cenas têm receita de
+  refação nos LEIA-ME dos dossiês; regenerar é a próxima frente (custa
+  crédito, ~2 cr por iteração 1k, sob ordem).
 
 ## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
