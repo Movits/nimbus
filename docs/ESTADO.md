@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-26
+atualizado: 2026-08-27
 ---
 
 # Estado do projeto
@@ -255,11 +255,15 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   eram invenção; enquadramento do Pontão (deck de madeira + Ponte JK) foi
   REFUTADO; torre de Planaltina veio da OUTRA igreja São Sebastião (matriz
   1960 — contraexemplo no dossiê).
-- **Decisões do dono (26/08, mesma sessão)**: Pontão = **píer de madeira da
-  marina, sem JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas;
-  conferir estado atual — prova é de 2015). Com isso as 5 cenas têm receita de
-  refação nos LEIA-ME dos dossiês; regenerar é a próxima frente (custa
-  crédito, ~2 cr por iteração 1k, sob ordem).
+- **Decisões do dono (26/08)**: Pontão = **píer de madeira da marina, sem
+  JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas).
+- **27/08: RODADA 4 GERADA E CHECADA** (ordem do dono). Os 5 pares refeitos
+  sobre os dossiês, encadeados, 1k/medium; cada imagem conferida item por item
+  contra as fotos-prova antes de aceitar — zero refação. Inclui as duas vistas
+  que FALTAVAM (Rodoviária costas, Superquadra frente). **Custo 20 cr
+  (613,52→593,52).** Receita, uploads e pegadinhas do CLI documentados na
+  seção "Rodada 4" do RETOMADA. **Aguarda veredito do dono nas 10 imagens**;
+  2k/high (~8 cr/imagem) só nas aprovadas.
 
 ## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
