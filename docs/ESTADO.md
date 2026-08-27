@@ -257,13 +257,15 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   1960 — contraexemplo no dossiê).
 - **Decisões do dono (26/08)**: Pontão = **píer de madeira da marina, sem
   JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas).
-- **27/08: RODADA 4 GERADA E CHECADA** (ordem do dono). Os 5 pares refeitos
-  sobre os dossiês, encadeados, 1k/medium; cada imagem conferida item por item
-  contra as fotos-prova antes de aceitar — zero refação. Inclui as duas vistas
-  que FALTAVAM (Rodoviária costas, Superquadra frente). **Custo 20 cr
-  (613,52→593,52).** Receita, uploads e pegadinhas do CLI documentados na
-  seção "Rodada 4" do RETOMADA. **Aguarda veredito do dono nas 10 imagens**;
-  2k/high (~8 cr/imagem) só nas aprovadas.
+- **27/08: r4 gerada, veredito do dono no painel-artefato, r5 executada.**
+  Placar: **Pontão (par) e Rodoviária frente APROVADOS e em 2k/high**;
+  **Ermida DESCARTADA** (regra do dono: dossiê não prova a plataforma do lado
+  do poente — par em `_sem-prova/`); Rodoviária costas, Superquadra (corredor
+  encurtado para a profundidade REAL medida) e Planaltina (sino provado é
+  mantido + palmeiras que faltavam) refeitas em r5, checadas, **aguardando
+  veredito no painel**. Custos 27/08: 20 cr (r4) + 31 cr (r5+2k), saldo
+  562,52. Duas regras novas no RETOMADA: profundidade de corredor declarada
+  em número de vãos; checagem cobre também elemento AUSENTE vs a foto real.
 
 ## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
