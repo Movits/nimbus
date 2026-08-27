@@ -257,15 +257,17 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   1960 — contraexemplo no dossiê).
 - **Decisões do dono (26/08)**: Pontão = **píer de madeira da marina, sem
   JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas).
-- **27/08: r4→r6 com dois vereditos do dono no painel-artefato.** Placar
-  final do dia: **3 pares PRONTOS em 2k/high (Pontão, Rodoviária,
-  Superquadra)**; **Ermida DESCARTADA** (regra do dono — par em
-  `_sem-prova/`); **Planaltina em r6** aguardando veredito (segundo ajuste
-  dele procedia: 3 palmeiras + placa, sino atrás separado — não colado na
-  palmeira). Custos 27/08: 20+31+27 = 78 cr, saldo 535,52. Regras novas no
-  RETOMADA: profundidade de corredor declarada em número de vãos; checagem
-  cobre também elemento AUSENTE vs a foto real. O PC do dono reiniciou no
-  meio — nada perdido (tudo commitado; scratchpad sobreviveu).
+- **27/08: r4→r7 com três rodadas de veredito do dono.** Placar: **3 pares
+  PRONTOS em 2k/high** (Pontão, Rodoviária, Superquadra); **Ermida
+  DESCARTADA**; **MÉTODO v3 decretado pelo dono** após a r6 de Planaltina
+  divergir da ref (placa, árvores, fundo): UMA ref por locação (preferência:
+  pessoa posando), crop 3:4, a geração COPIA a foto, auditoria lado a lado
+  com zoom nos pés. Com o v3 saíram: **Planaltina r7 + as 3 locações que
+  faltavam da lista (Torre de TV Digital, Eixão do Lazer, Catedral
+  Militar)** — 4 pares novos auditados aguardando veredito no painel (a
+  auditoria reprovou e refez a 1ª Torre por pé sem sombra). Âncoras 41/42/43
+  novas; crops em `ancoras-locacoes/refs-enquadramento/`. Custos 27/08:
+  20+31+27+18 = 96 cr, saldo 517,52.
 
 ## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
