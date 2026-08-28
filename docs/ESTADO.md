@@ -257,6 +257,22 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   1960 — contraexemplo no dossiê).
 - **Decisões do dono (26/08)**: Pontão = **píer de madeira da marina, sem
   JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas).
+- **28/08 (veredito das 09:13 executado): 24 vistas APROVADAS e em 2k/high**
+  — Pontão, Rodoviária, Superquadra, Torre Digital, Eixão, Catedral Militar
+  frente, Planaltina (par), Museu (par), Cruzeiro (par, 1k), Três Poderes
+  (par, 1k, Instagram), Memorial JK (par), Catedral Metropolitana costas.
+  **Mergulho do Eixão REPROVADO** (par em `_reprovado-pelo-dono/`).
+  **Faltam 3 cartões de veredito**, já refeitos e auditados: Catedral
+  Metropolitana frente r2, Ponte JK par r2 e Catedral Militar costas (ficou
+  sem clique). Regras novas no RETOMADA: cláusula anti-photoshop (luz única +
+  oclusão do primeiro plano + sem halo + mesmo grão); postura herdada da
+  foto-base agachada → encadear da vista em pé; geometria pesquisada e
+  declarada em número quando a ref não mostra o chão; **ref de cópia tem de
+  ser livre para uso comercial — NC só serve para aprender geometria**.
+  ⚠️ **O CLI do Higgsfield está bloqueado nesta máquina** por política de
+  Application Control do Windows (pós-reparo): a geração passou a ser feita
+  pelo **MCP**, que ainda evita re-upload (job_id anterior vira referência).
+  Saldo: ~412 cr.
 - **27–28/08: frente fechada em TODAS as locações da lista grande de 25/08.**
   MÉTODO v3 vigente (decretado pelo dono): UMA ref por locação, crop 3:4, a
   geração COPIA a foto, auditoria lado a lado com zoom nos pés; regra nova:
