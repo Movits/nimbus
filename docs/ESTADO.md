@@ -257,6 +257,18 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   1960 — contraexemplo no dossiê).
 - **Decisões do dono (26/08)**: Pontão = **píer de madeira da marina, sem
   JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas).
+- **28/08 (tarde): AUDITORIA ADVERSARIAL vira o método.** O dono cobrou que a
+  checagem pegasse o que ele estava achando a olho. A antiga era uma lista
+  escrita pelo próprio gerador; a nova são **agentes independentes por
+  (cena × lente), sem checklist**, obrigados a ampliar e medir — inventário,
+  geometria, continuidade de par e física da luz
+  (`ancoras-locacoes/PROCEDIMENTO-AUDITORIA.md`). Na estreia (12 auditores)
+  achou o poste apontado por ele **e mais uma dúzia de erros**: torre estaiada
+  inventada na Ponte JK, lago e pista trocados de lado, luz de softbox em cena
+  de sol duro, entrega em 1/4 da resolução. As 3 cenas pendentes foram
+  refeitas e verificadas por medição (contraste do rosto 15→81; luz zenital
+  topo 211 × tronco 38; nitidez igual à aprovada). **Regra: nada vai ao painel
+  do dono sem passar por ela.**
 - **28/08 (veredito das 09:13 executado): 24 vistas APROVADAS e em 2k/high**
   — Pontão, Rodoviária, Superquadra, Torre Digital, Eixão, Catedral Militar
   frente, Planaltina (par), Museu (par), Cruzeiro (par, 1k), Três Poderes
