@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-27
+atualizado: 2026-08-28
 ---
 
 # Estado do projeto
@@ -257,17 +257,19 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   1960 — contraexemplo no dossiê).
 - **Decisões do dono (26/08)**: Pontão = **píer de madeira da marina, sem
   JK**; Superquadra = **SQN 406 Bloco O** (colunas cilíndricas).
-- **27/08: r4→r7 com três rodadas de veredito do dono.** Placar: **3 pares
-  PRONTOS em 2k/high** (Pontão, Rodoviária, Superquadra); **Ermida
-  DESCARTADA**; **MÉTODO v3 decretado pelo dono** após a r6 de Planaltina
-  divergir da ref (placa, árvores, fundo): UMA ref por locação (preferência:
-  pessoa posando), crop 3:4, a geração COPIA a foto, auditoria lado a lado
-  com zoom nos pés. Com o v3 saíram: **Planaltina r7 + as 3 locações que
-  faltavam da lista (Torre de TV Digital, Eixão do Lazer, Catedral
-  Militar)** — 4 pares novos auditados aguardando veredito no painel (a
-  auditoria reprovou e refez a 1ª Torre por pé sem sombra). Âncoras 41/42/43
-  novas; crops em `ancoras-locacoes/refs-enquadramento/`. Custos 27/08:
-  20+31+27+18 = 96 cr, saldo 517,52.
+- **27–28/08: frente fechada em TODAS as locações da lista grande de 25/08.**
+  MÉTODO v3 vigente (decretado pelo dono): UMA ref por locação, crop 3:4, a
+  geração COPIA a foto, auditoria lado a lado com zoom nos pés; regra nova:
+  entre frente e costas a GENTE do fundo também se move, não só nuvem.
+  Placar no painel-artefato (15 locações): **7 pares PRONTOS em 2k/high**
+  (Pontão, Rodoviária, Superquadra, Torre Digital, Eixão do Lazer, Catedral
+  Militar frente, Planaltina costas); **8 pares/vistas aguardando veredito**
+  (Planaltina frente r8, Catedral costas r2, Museu v3, Cruzeiro e Três
+  Poderes para confirmação, Memorial JK, Catedral Metropolitana ext., Ponte
+  JK em P&B, Mergulho do Eixão); **Ermida descartada**; **3 sem ref
+  utilizável** (Santuário ext. — a âncora era o totem!, Torre de TV antiga,
+  Galeria dos Estados). A auditoria reprovou e refez 5 gerações antes do dono
+  ver. Custo total da frente: 613,52→421,52 cr. Detalhe no RETOMADA.
 
 ## Photoshoot de capas terraço-céu (24/08 — SUPERADO em 25/08)
 
