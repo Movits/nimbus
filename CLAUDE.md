@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-21
+atualizado: 2026-08-28
 ---
 
 # CLAUDE.md
@@ -33,7 +33,7 @@ cobra isso.
 A versão anterior deste arquivo, com o histórico longo, está em
 `docs/historico/CLAUDE-2026-07-25.md`.
 
-## Os três repositórios — layout REAL desta máquina
+## Os três repositórios — layout REAL da máquina do dono
 
 ```
 C:\Users\rober\Nimbus\               PÚBLICO   código, docs, medições, receitas
@@ -42,7 +42,10 @@ C:\Users\rober\nimbus-assets\        PRIVADO   artes, blanks e capas
 C:\Users\rober\nimbus-brain          junction → o vault aninhado (para scripts que esperam repos irmãos)
 ```
 
-⚠️ O brain **não é um clone irmão** nesta máquina: mora DENTRO do repo público.
+Esse é o layout do Windows do dono. **Numa sessão de nuvem só existe o
+público** — veja "Sessão de nuvem" abaixo antes de rodar qualquer coisa.
+
+⚠️ O brain **não é um clone irmão** nessa máquina: mora DENTRO do repo público.
 **Nunca rode `git clean -fdx` no público** (apagaria o segundo cérebro) e não
 clone por cima da junction. Máquina nova sem o vault: aí sim, clone os três
 lado a lado (`docs/REPOSITORIOS.md`).
@@ -67,6 +70,49 @@ npm run sessao:fim                   # ritual de saída (docs/HANDOFF-SESSAO.md,
 
 `docs:status` usa a lista de exceções `scripts/status-docs.allow.json`, que só
 encolhe — nunca acrescente um .md nela para passar no portão.
+
+## Sessão de nuvem (Claude Code na web, ou outra máquina sem os privados)
+
+Aqui **só existe o repo público, em Linux**. Os dois privados não estão, e não
+dá para cloná-los de dentro da sessão sem o dono conectar a conta. O que isso
+custa e o que ainda funciona, medido em 28/08 neste ambiente:
+
+**Funciona igual:** `npm install`, `typecheck`, `build`, `geometry/validate.mjs`
+(38.880 casos), o pipeline `npm run vitrine` inteiro e **9 dos 11 portões** —
+inclusive os de rede (`vitrine:links`, `vitrine:variantes`, `docs:links` com a
+rede aberta). O portão de reprodutibilidade do CI também fecha limpo.
+
+**Não funciona, e o porquê:**
+
+| Portão | Aqui | Motivo |
+|---|---|---|
+| `producao:dpi300` | `SKIP_ASSETS=1 npm run producao:dpi300` | mede PNG em `designs/prontos/`, que é do assets |
+| `docs:links` / `docs:status` | rode o script **sem os argumentos** | o npm script passa `../nimbus-assets ../nimbus-brain`, e caminho ausente é erro |
+
+```bash
+# a suíte inteira numa máquina sem os privados
+npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens \
+  && npm run vitrine:links && npm run vitrine:variantes && npm run vitrine:nuvem \
+  && npm run vitrine:tracking && SKIP_ASSETS=1 npm run producao:dpi300 \
+  && node scripts/link-check-docs.mjs && node scripts/verifica-status-docs.mjs \
+  && npm run loja:css
+```
+
+`SKIP_REDE=1` só se a rede estiver fechada; aqui ela está aberta e o valor do
+portão é justamente bater no ar.
+
+**Não decida nada de imagem por aqui.** Sem o assets não há arte, blank nem
+capa: composição, auditoria de capa, photoshoot e a fila de estampas são
+trabalho da máquina do dono. Sem o brain falta a verdade de negócio — e a regra
+de precedência entre os dois estados não dá para conferir. Cloud serve para
+código, documentação, portões e planejamento.
+
+**Não commite o churn do `package-lock.json`.** O npm 10.x deste ambiente tira
+os campos `libc` dos pacotes do rollup no primeiro `install` (87 linhas, zero
+mudança de dependência). Entra em conflito com a máquina do dono a cada ida e
+volta: `git checkout -- package-lock.json` antes de commitar.
+`scripts/geometry/validation-report.json` também suja a árvore a cada
+`validate.mjs` — só o carimbo de data; commite apenas se o veredito mudou.
 
 ## Arquitetura — o que só se entende lendo vários arquivos
 
@@ -139,7 +185,9 @@ ou dado de cliente.
 
 Um hook de sessão (`scripts/sessao/checagem-inicial.mjs`) roda sozinho ao abrir
 e imprime a sincronia dos 3 repos e a idade do ESTADO. Depois dele, rode os
-três primeiros comandos da seção Comandos (typecheck, validate, portões).
+três primeiros comandos da seção Comandos (typecheck, validate, portões). Se o
+hook disser que assets e brain NÃO FORAM ENCONTRADOS, você está numa sessão de
+nuvem: use a suíte daquela seção, não `vitrine:portoes`.
 
 Saída de sessão: `npm run sessao:fim` (o ritual completo está no
 `docs/HANDOFF-SESSAO.md`, seções 11 e 12).
