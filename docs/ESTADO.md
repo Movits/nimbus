@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-09-01
+atualizado: 2026-09-02
 ---
 
 # Estado do projeto
@@ -270,7 +270,26 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
 - Conserto de capa se faz **refazendo da foto-base**: editar a saída já gerada
   carimba textura ornamental na imagem inteira, inclusive na pele (medido 2x).
 
-## Cenas-base em lugares reais de Brasília (25–26/08)
+## Cenas-base em lugares reais de Brasília (25/08–02/09)
+
+- **02/09: o acervo FECHOU em 14 pares** (28 imagens, 24 delas em 2k), em
+  `nimbus-assets/casting/2026-08-25-cenarios-reais/`. O dono julgou par a par
+  e o veredito foi executado no mesmo dia: **Ponte JK apagada**, oito imagens
+  refeitas contra o defeito exato que ele apontou. Tabela do antes/depois na
+  RETOMADA da pasta.
+- **O padrão-ouro de referência mudou**: quando existe foto do PRÓPRIO dono no
+  lugar, ela vence dossiê e Commons — é ao mesmo tempo prova de locação e de
+  identidade. Duas cenas nasceram assim (Praça do Cruzeiro e Museu Nacional na
+  mureta); a foto frontal dele virou a primeira referência de rosto nas
+  regerações, porque o Soul ID entregava um rosto "parecido mas diferente".
+- **Lição de método da rodada**: consertar uma vista quebra o par. A placa de
+  Planaltina só ficou igual nas duas fotos porque a costas foi regerada A
+  PARTIR da frente corrigida. Corrigir elemento estático obriga a refazer a
+  outra vista.
+- Nenhuma estampa foi aplicada ainda — ordem do dono de 26/08: primeiro fechar
+  o acervo de cenas.
+
+### Como chegou aqui (25–28/08)
 
 - Frente inteira documentada em
   `nimbus-assets/casting/2026-08-25-cenarios-reais/RETOMADA.md` (ponto de
