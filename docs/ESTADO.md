@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-28
+atualizado: 2026-09-01
 ---
 
 # Estado do projeto
@@ -176,6 +176,36 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **Medir verde é por MATIZ, não por razão G/R** (a razão confunde brilho com
   cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
   ~50° puxa verde, e o detector precisa de piso de saturação.
+
+## Estampas da RELÍQUIA e organização das pastas (01/09)
+
+**As 40 gravuras da RELÍQUIA foram tratadas** e estão em
+`nimbus-assets/designs/referencias/reliquia_final/estampas-v3/` (numeradas
+`01-` a `40-`, de-para em `MAPA.txt`): região pictórica opaca com o papel de
+época, texto em volta com transparência real, 300 DPI. O método é o mesmo
+validado na La Salette em 28/08 — modelo local de papel, *a fonte decide*
+(escuro é tinta e fica, claro é papel e sai), miolo sólido, borda de 1 px,
+vãos abertos — generalizado por demarcação de região feita por visão.
+
+**Estado honesto**: três rodadas de conferência automática (26 revisores)
+deixaram 14 peças sem pendência e 26 com pendência fina, quase sempre uma
+marca de acervo na margem. **O dono está revisando à mão no Affinity** — a
+conferência automática não alcança o padrão do olho dele, comprovado quando
+ele achou farelo de papel nas junções dos glifos que três rodadas não pegaram.
+
+Duas lições de método, para não repetir:
+- Recorte de arte por silhueta de densidade **corta o topo** das estampas
+  (céu e resplendor claro não têm densidade). Use aparo de bordas vazias.
+- As caixas que revisores medem a olho servem para **apontar** sujeira, não
+  para redefinir corte: aplicá-las como limite cortou texto em quatro peças.
+
+**Organização das pastas (01/09)**: toda arte vive agora no repositório
+privado, com índice único em `nimbus-assets/designs/LEIA-ME.md`. O ciclo
+YouDraw inteiro (artes, mockups por produto, capas, fontes em chroma) foi
+recolhido para `designs/_historico/catalogo-youdraw/` — 56 arquivos existiam
+só no espelho local do repo público, que é gerado e descartável. Efeito
+colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
+25**, porque as 12 que sobravam eram arte já descartada pela curadoria.
 
 ## Marca, conteúdo e legal
 
