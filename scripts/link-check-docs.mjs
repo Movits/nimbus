@@ -24,9 +24,16 @@
  * legítimo atrás de login responde 403. Tratar os dois igual encheria a saída
  * de ruído e a gente pararia de ler.
  *
+ * Desde 12/09/2026 ele também confere CAMINHO RELATIVO: todo alvo de link
+ * markdown `[texto](caminho)` que não é URL tem de existir em disco. A
+ * reorganização dos assets daquele dia mostrou o buraco — nada no projeto
+ * validava as ~200 citações de caminho espalhadas pelos três repositórios, e
+ * documento apontando para pasta que mudou de nome envelhece em silêncio.
+ * Esse cheque não usa rede, então roda mesmo com SKIP_REDE=1.
+ *
  *   node scripts/link-check-docs.mjs               # este repo
  *   node scripts/link-check-docs.mjs ../nimbus-assets ../nimbus-brain
- *   SKIP_REDE=1 node scripts/link-check-docs.mjs   # pula (offline/CI)
+ *   SKIP_REDE=1 node scripts/link-check-docs.mjs   # só os caminhos (offline/CI)
  */
 
 import { readFileSync, readdirSync, statSync, existsSync } from "node:fs";
@@ -37,10 +44,6 @@ import { dirname, join, relative, resolve } from "node:path";
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-if (process.env.SKIP_REDE === "1") {
-  console.log("link-check-docs: SKIP_REDE=1, pulando.");
-  process.exit(0);
-}
 
 const IGNORA_PASTA = new Set(["node_modules", ".git", "dist", "historico", "raw"]);
 
@@ -87,6 +90,42 @@ for (const r of [RAIZ, ...raizes]) {
     process.exit(1);
   }
   arquivos.push(...marcados(r).map((a) => ({ arquivo: a, base: r })));
+}
+
+// ---------------------------------------------------------------------------
+// CAMINHOS RELATIVOS (sem rede)
+//
+// Só alvo de link markdown `[texto](caminho)`: é o que uma pessoa clica. Texto
+// corrido citando pasta fica de fora de propósito — é descrição, não navegação,
+// e boa parte cita onde a coisa ESTAVA, o que é registro legítimo.
+const ehEndereco = (c) => /^(https?:|mailto:|tel:|#|data:)/i.test(c);
+const caminhosQuebrados = [];
+for (const { arquivo, base } of arquivos) {
+  const linhas = readFileSync(arquivo, "utf8").split("\n");
+  linhas.forEach((linha, i) => {
+    for (const m of linha.matchAll(/\[[^\]]*\]\(([^)\s]+)\)/g)) {
+      const alvo = m[1].replace(/[#?].*$/, "");
+      if (!alvo || ehEndereco(alvo)) continue;
+      const destino = resolve(dirname(arquivo), decodeURIComponent(alvo));
+      if (existsSync(destino)) continue;
+      caminhosQuebrados.push(`${relative(dirname(base), arquivo)}:${i + 1} -> ${alvo}`);
+    }
+  });
+}
+if (caminhosQuebrados.length) {
+  console.error(
+    `LINK-CHECK-DOCS FALHOU: ${caminhosQuebrados.length} caminho(s) de link que não existem em disco\n`
+    + caminhosQuebrados.map((c) => "  - " + c).join("\n")
+    + "\n\n  Conserte o caminho ou tire o link. Se o destino saiu do repositório de"
+    + "\n  propósito, cite em texto corrido em vez de linkar.",
+  );
+  process.exit(1);
+}
+const caminhosOk = arquivos.length;
+
+if (process.env.SKIP_REDE === "1") {
+  console.log(`link-check-docs: ${caminhosOk} documento(s) com caminhos de link válidos; SKIP_REDE=1, pulando os endereços http.`);
+  process.exit(0);
 }
 
 // endereço -> lista de "arquivo:linha" onde ele aparece

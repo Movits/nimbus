@@ -44,8 +44,11 @@ no `nimbus/docs/`, **por que se faz e quando** mora no brain.
 
 | Caminho | O que é |
 |---|---|
-| `designs/prontos/**` | as artes oficiais, prontas para composição |
-| `designs/originais/**` | os arquivos de origem |
+| `01-estampas/**` | as 24 artes oficiais, por coleção e posição |
+| `02-fotos/**` | cenas-base, Soul, capas e prova de locação |
+| `03-mockups/**` | referência de peça: editor e amostras da IzzyPrint |
+| `04-marketing/**` | vitrine, ads, clipes e rodadas de vídeo |
+| `_historico/**` | o ciclo YouDraw e o retrabalho, congelados |
 | `nuvemshop/assets/producao-capas/**/*.png` | blanks e capas compostas |
 | `nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/**` | os 49 mockups planos, que são a régua de placement |
 

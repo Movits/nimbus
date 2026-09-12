@@ -75,7 +75,7 @@ Testar CSS quando for CSS → Publicar → conferir o POST 200 na aba Network.
 ## Parte 2: FTP (tema Baires, mesmos cuidados do cart.tpl de 02/08)
 
 Transferência sempre **binária**, arquivo extraído por `git show` quando vier
-do backup (`nimbus-assets/nuvemshop/tema-baires/`), e backup do arquivo antes.
+do backup (`nimbus-assets/05-loja/tema-baires/`), e backup do arquivo antes.
 
 13. **cart.tpl, estado vazio.** Adicionar botão "Ver as coleções" →
     `https://nimbuswear.com.br/loja/?utm_source=loja&utm_medium=carrinho`, e

@@ -12,7 +12,9 @@ levantado por conferência **visual** de conteúdo, não por nome de arquivo.
 Isso importa: casar por proporção de imagem errou feio (ligou o Brasão ao São
 Jorge e o Espírito Santo ao azulejo).
 
-As artes ficam no repositório privado, em `designs/prontos/<COLEÇÃO>/<vista>/`.
+As artes ficam no repositório privado, em `01-estampas/<colecao>/<posicao>/`.
+As da era YouDraw, que esta página mapeia, viraram histórico em
+`_historico/catalogo-youdraw/` na reorganização de 12/09/2026.
 
 ## A armadilha do sufixo
 

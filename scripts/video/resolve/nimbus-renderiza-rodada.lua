@@ -3,7 +3,7 @@
 -- interpretador interno (edicao gratuita ok). Copia canonica:
 -- Nimbus/scripts/video/resolve/; executavel em
 -- %APPDATA%/Blackmagic Design/DaVinci Resolve/Support/Fusion/Scripts/Edit/.
-local PONTEIRO = "C:/Users/rober/nimbus-assets/marketing/_rodada-atual.txt"
+local PONTEIRO = "C:/Users/rober/nimbus-assets/04-marketing/video/_rodada-atual.txt"
 
 local f = io.open(PONTEIRO, "r")
 if not f then

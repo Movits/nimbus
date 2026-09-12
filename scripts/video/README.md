@@ -10,7 +10,7 @@ decisão que abriu a frente é `docs/decisoes/2026-08-23-video-no-resolve-e-orca
 
 A unidade de trabalho é a **rodada**: `nimbus-assets/marketing/<data>-<assunto>/video/`
 com `rodada.json` (a receita versionada) dentro. O ponteiro
-`nimbus-assets/marketing/_rodada-atual.txt` diz qual é a rodada corrente; todos
+`nimbus-assets/04-marketing/video/_rodada-atual.txt` diz qual é a rodada corrente; todos
 os comandos aceitam o diretório como argumento para trabalhar outra.
 
 - **lib.mjs** — utilidades: resolução da rodada, ffprobe, tempo racional do

@@ -1,3 +1,14 @@
+// ⛔ SUPERADO em 12/09/2026. NAO RODE.
+//
+// Duas razoes independentes: (1) o processo de chroma (fundo verde/magenta) foi
+// CONDENADO em 06/08 com prova fisica nas amostras — arte nova nasce PNG
+// transparente a 300 DPI; (2) a origem `designs/originais` nao existe mais desde
+// a reorganizacao de 01/09, e o destino `designs/prontos` virou historico em
+// 12/09 (nimbus-assets/_historico/catalogo-youdraw/).
+//
+// Fica no repositorio como registro do metodo antigo. A arte viva mora em
+// nimbus-assets/01-estampas/.
+//
 // Recorta o fundo (auto-detecta VERDE=chroma key ou XADREZ=flood-fill+componentes),
 // redimensiona pra 300 DPI (long edge ~3500px) e organiza as artes POR COLEÇÃO em
 // designs/prontos/<COLECAO>/{costas,peito}. Lê de designs/originais/ (renomeadas).
