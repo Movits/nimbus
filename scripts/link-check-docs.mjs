@@ -59,6 +59,14 @@ const NAO_CONFERE = [
   /^https?:\/\/(localhost|127\.0\.0\.1)/i,
   /^https?:\/\/(example|exemplo)\./i,
   /\{|\}|<|>|\$\{/, // template com variável dentro
+  // Hosts de ARQUIVO, não de documento: as 40 gravuras de domínio público
+  // listadas em `nimbus-assets/designs/referencias/FONTES.md`. Batidas em
+  // rajada elas devolvem 429 e enchiam a saída com 23 avisos que não diziam
+  // nada. Quem confere essas URLs é `npm run producao:fontes`, que espera
+  // entre as tentativas e ainda compara o pixel com o arquivo local — cheque
+  // melhor que este, e no lugar certo. Isto NÃO é afrouxar portão: é tirar do
+  // portão errado uma conferência que ganhou portão próprio.
+  /^https?:\/\/(upload\.wikimedia\.org|images\.metmuseum\.org)\//i,
 ];
 
 function marcados(dir, achados = []) {

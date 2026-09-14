@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-08
+atualizado: 2026-09-14
 ---
 
 # Tratar as imagens da RELÍQUIA no Affinity
@@ -91,12 +91,32 @@ máquina com `git pull`, e é a nossa fonte de verdade.
 
 ## Onde estão os originais
 
-- **Máquina com o clone:** `nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/`
-  (dar `git pull` antes). JPG e PNG são binários, o `autocrlf` não os toca.
-- **Qualquer outra máquina:** o catálogo-artefato das 40 tem, em cada carta, o
-  link "Baixar original" apontando para o arquivo cheio na fonte (Wikimedia,
-  Rijksmuseum, Gallica). As URLs também estão no `FONTES.json` da pasta acima.
-  Salvar o link, não a miniatura da página do acervo, e nunca print de tela.
+> [!warning] Atualizado em 2026-09-14: os 40 originais **saíram do git**. Eram
+> 260 MB de material de origem em domínio público, e material de origem que a
+> internet serve de graça não precisa morar num repositório. `git pull` já não
+> traz nada: em máquina nenhuma eles aparecem sozinhos.
+
+Rebaixe os 40 de uma vez, para uma pasta **fora** dos repositórios:
+
+```bash
+node scripts/producao/rehidratar-fontes.mjs                 # baixa o que falta
+node scripts/producao/rehidratar-fontes.mjs --destino D:/fontes
+npm run producao:fontes                                     # só confere as URLs
+```
+
+Ele pula o que já está lá, então rodar de novo é barato. O `--conferir` compara
+o byte com a origem e, quando o byte diverge sem a imagem mudar (acontece: o Met
+serve o mesmo JPEG com metadado diferente), desce para comparação de pixel.
+
+- **Índice legível:** `nimbus-assets/designs/referencias/FONTES.md` — título,
+  ano, resolução, licença e link do original de cada uma das 40.
+- **Fonte da verdade:** o `FONTES.json` em
+  `reliquia-escolhidas-2026-08/arquivos/`, que continua versionado. O `.md` é
+  gerado dele; mexa no JSON e rode `--indice`.
+- **O que NÃO saiu:** `reliquia_final/`, o teu trabalho no Affinity. Fica no
+  git, porque dele não existe cópia em lugar nenhum.
+  Ao buscar manualmente: salvar o link, não a miniatura da página do acervo, e
+  nunca print de tela.
 
 Caso especial já resolvido: na **n33**, a "página que falta" está dentro do
 próprio original. O scan de 4.228×3.196 px é a dupla página completa das Horas

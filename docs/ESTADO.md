@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-09-02
+atualizado: 2026-09-14
 ---
 
 # Estado do projeto
@@ -199,13 +199,32 @@ Duas lições de método, para não repetir:
 - As caixas que revisores medem a olho servem para **apontar** sujeira, não
   para redefinir corte: aplicá-las como limite cortou texto em quatro peças.
 
-**Organização das pastas (01/09)**: toda arte vive agora no repositório
-privado, com índice único em `nimbus-assets/designs/LEIA-ME.md`. O ciclo
-YouDraw inteiro (artes, mockups por produto, capas, fontes em chroma) foi
-recolhido para `_historico/catalogo-youdraw/` — 56 arquivos existiam
-só no espelho local do repo público, que é gerado e descartável. Efeito
-colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
-25**, porque as 12 que sobravam eram arte já descartada pela curadoria.
+**Organização das pastas (01/09, refeita em 12/09 e podada em 14/09)**: toda
+arte vive no repositório privado, com índice único em
+[`nimbus-assets/LEIA-ME.md`](../../nimbus-assets/LEIA-ME.md) — na raiz, não mais
+em `designs/`. O ciclo YouDraw inteiro foi recolhido para
+`_historico/catalogo-youdraw/`. O portão `producao:dpi300` confere hoje **38
+artes**, todas a 300 DPI ou mais, com a baseline vazia.
+
+**A poda de 14/09** levou o privado de 4,2 GB para **3,1 GB** de árvore:
+
+- as **128 imagens de `_historico/`** (926 MB) saíram do disco; os 74
+  documentos que explicam cada morte ficaram. Elas **não** foram expurgadas do
+  histórico: voltam do commit `55fe730`, por decisão do dono — apagar arquivo é
+  reversível, expurgar não é.
+- as **40 gravuras de domínio público** da RELÍQUIA (260 MB) saíram do git e do
+  histórico. São material de origem: índice em
+  `designs/referencias/FONTES.md`, volta por
+  `node scripts/producao/rehidratar-fontes.mjs`. As 40 foram conferidas contra a
+  origem antes de sair, uma delas por comparação de pixel.
+- **`designs/referencias/reliquia_final/` FICOU**, 1,5 GB. Não é gravura de
+  domínio público: é o tratamento manual do dono no Affinity, e o git é o único
+  backup que existe dele. Essa distinção custou 1,5 GB e é o motivo de a poda
+  ter sido menor do que o previsto.
+
+O `.git` local encolhe com `git gc --prune=now`. A cópia do GitHub só encolhe
+quando o Suporte deles rodar gc: 57 `refs/pull/*` prendem o histórico antigo e
+não são apagáveis por nós.
 
 ## Marca, conteúdo e legal
 
