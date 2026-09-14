@@ -11,13 +11,10 @@ yarn-error.log*
 
 # Design assets — não versionar a ARTE (imagens) no repo público; fica no Drive.
 # Só as imagens são ignoradas; os nomes das pastas de produto e os descrição.txt sobem.
-designs/originais/
-designs/_inbox/
-designs/_mestres/
-designs/**/*.png
-designs/**/*.webp
-designs/**/*.jpg
-designs/**/*.jpeg
+# 01-estampas/ é espelho local gerado por scripts/setup-assets.mjs a partir do
+# repositório privado. Nada aqui é fonte: só o LEIA-ME sobe.
+01-estampas/*
+!01-estampas/LEIA-ME.md
 
 # Segundo cérebro (LLM Wiki) — privado, tem seu próprio repo git; nunca vai pro GitHub público.
 # A regra `brain/` sozinha NÃO pega a pasta real, que se chama "Nimbus brain" (prefixo + espaço).

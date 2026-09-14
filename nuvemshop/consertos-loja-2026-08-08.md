@@ -169,4 +169,4 @@ importância dos itens 5 e 6 desta lista.
 
 - Auditoria de copy: `nimbus-brain/wiki/syntheses/auditoria-copy-site-2026-08.md`
 - Doutrina do painel: `../docs/HANDOFF-SESSAO.md` seções 8 e 9
-- FTP: `nimbus-assets/nuvemshop/tema-baires/INSTRUCOES-FTP.md`
+- FTP: `nimbus-assets/05-loja/tema-baires/INSTRUCOES-FTP.md`

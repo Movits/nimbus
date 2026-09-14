@@ -51,7 +51,7 @@ node scripts/setup-assets.mjs
   com calendário, personas, precificação, decisões e a pasta fiscal.
 
 O `setup-assets.mjs` mescla as árvores do público e do privado (copia só o que
-falta, é idempotente). Sem ele os caminhos `designs/prontos/...` não existem.
+falta, é idempotente). Sem ele os caminhos `01-estampas/...` não existem.
 
 Se o clone de um privado falhar por autenticação, peça ao dono para conectar a
 conta GitHub `Movits` nesta sessão. **Não peça, não receba e não guarde token em
@@ -260,7 +260,7 @@ Medido, não suposto:
 Quando a tarefa depende da máquina ou do navegador logado do dono, o entregável
 certo é **um prompt para o Cowork**, não uma tentativa sua. Os prompts já
 escritos ficam em `nuvemshop/cowork-*.md` e
-`../nimbus-assets/nuvemshop/tema-baires/cowork-*.md`, e servem de modelo: eles
+`../nimbus-assets/05-loja/tema-baires/cowork-*.md`, e servem de modelo: eles
 sempre trazem regras que não se negociam, backup antes de sobrescrever, um ponto
 de parada explícito e um relatório final com o que anotar.
 

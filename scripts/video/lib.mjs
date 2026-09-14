@@ -1,11 +1,15 @@
 // Utilidades compartilhadas do pipeline de vídeo (fluxo: docs/fluxos/video-ads.md).
-// A "rodada" é a unidade de trabalho: uma pasta em nimbus-assets/marketing/<data>-<assunto>/video/
+// A "rodada" é a unidade de trabalho: uma pasta em nimbus-assets/04-marketing/video/<data>-<assunto>/
 // com rodada.json (a receita versionada) dentro.
 import { readFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { resolve, join } from 'node:path';
 
-export const PONTEIRO_RODADA = 'C:/Users/rober/nimbus-assets/marketing/_rodada-atual.txt';
+// Resolve pelo repo irmao (ou NIMBUS_ASSETS) em vez de caminho absoluto do Windows:
+// o caminho fixo so funcionava na maquina do dono.
+export const PONTEIRO_RODADA = (
+  process.env.NIMBUS_ASSETS || resolve(import.meta.dirname, '..', '..', '..', 'nimbus-assets')
+).replaceAll('\\', '/') + '/04-marketing/video/_rodada-atual.txt';
 
 // Diretório da rodada: argumento da CLI ou o ponteiro _rodada-atual.txt.
 export function dirRodada(arg) {

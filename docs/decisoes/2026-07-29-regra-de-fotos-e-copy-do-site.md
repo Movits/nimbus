@@ -17,7 +17,7 @@ gerada, e nenhuma copy pública é escrita, fora destas regras.
 ## Fotos com pessoas
 
 1. **Rosto visível: só o casting oficial** (Caio, Clara, Gabriel, Helena), gerado com as
-   pranchas de `nimbus-assets/casting/2026-07-16/` como referência de identidade.
+   pranchas de `nimbus-assets/_historico/casting-modelos-2026-07/` como referência de identidade.
 2. **Modelo genérico: só sem rosto** (de costas ou corte abaixo do queixo), sempre dentro
    do cenário e da luz canônicos da coleção.
 3. Toda geração com rosto passa por descarte de semelhança com pessoa real.

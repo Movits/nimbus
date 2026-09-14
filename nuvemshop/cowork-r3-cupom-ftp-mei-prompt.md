@@ -40,7 +40,7 @@ R$49,90. Desfaça o carrinho de teste ao final.
 
 TAREFA 2: subir templates/cart.tpl para o tema por FTP.
 1. No GitHub, abra o repositório privado Movits/nimbus-assets, caminho
-   nuvemshop/tema-baires/2026-07-30-funil-editado/templates/cart.tpl, e baixe o
+   05-loja/tema-baires/2026-07-30-funil-editado/templates/cart.tpl, e baixe o
    arquivo cru (botão Raw > salvar).
 2. Abra o WinSCP (se não estiver instalado, baixe de winscp.net e instale).
    Conexão: protocolo FTP, criptografia "TLS/SSL Explícita", host

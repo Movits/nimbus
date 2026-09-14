@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-09-02
+atualizado: 2026-09-14
 ---
 
 # Estado do projeto
@@ -89,11 +89,11 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   sai para coleção futura.
 - **Triagem visual de 12/08 (761 imagens do assets, 100% decididas)**: 557
   reprovadas removidas, 107 aprovadas, **96 na mesa de retrabalho**
-  (nimbus-assets `designs/_retrabalho-2026-08/`, organizada por frente:
+  (nimbus-assets `_historico/retrabalho-2026-08/`, organizada por frente:
   emblemas com fundo a remover à mão, fotos de modelo com defeito de cena,
   mockups; resize 4K para a IzzyPrint é etapa posterior). Assets caíram ~1,5 GB.
 - **Triagem do dono (06/08): 75 estampas → 24 curadas**
-  ([`../designs/prontos/TRIAGEM-2026-08-06.md`](../designs/prontos/TRIAGEM-2026-08-06.md));
+  (`nimbus-assets/_historico/prontos-youdraw/TRIAGEM-2026-08-06.md`);
   tratamento v1 das 40 referências da RELÍQUIA concluído (07/08). A fila
   operacional vive no brain (`wiki/concepts/fila-de-estampas.md`).
 - **Capas: o lote de 77 segue REPROVADO (26/07)** e os 77 PNG foram movidos em
@@ -118,7 +118,7 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   Ecobag) e 48 artes passam dos 30 cm do editor público — confirmar limites na
   conta antes de remontar.
 - **ACERVO DE ESTAMPAS FECHADO: 24 prontas, e desde 18/08 num LUGAR SÓ** —
-  nimbus-assets `designs/acervo/`, uma pasta por coleção (STREET 11, gótica 8,
+  nimbus-assets `01-estampas/`, uma pasta por coleção (STREET 11, gótica 8,
   RELÍQUIA 3, NUVEM 1, _marca 1), com nome limpo, sem o sufixo de rota de
   tratamento. Antes estavam espalhadas em `_retrabalho-2026-08/`, separadas por
   rota e não por coleção. A classificação veio da triagem do dono de 06/08 e da
@@ -141,7 +141,7 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   corrige por CÁLCULO; existindo irmã aprovada, DERIVA-SE dela; regerar é último
   recurso e nada vira oficial sem conferência contra o original nos dois fundos.
   Tabela, defeito por defeito, e as 17 folhas de prova em nimbus-assets
-  `designs/_retrabalho-2026-08/emblemas/refeitas-transparentes/`.
+  `_historico/retrabalho-2026-08/emblemas/refeitas-transparentes/`.
 - **O padrão das 8 reprovadas**: o modelo **engrossa traço fino, chapa textura e
   inventa contorno**. Onde a arte tinha delicadeza (fio aerografado, craquelado
   vazado, halftone aberto), a regeração devolveu massa sólida. Antes de mandar
@@ -199,13 +199,32 @@ Duas lições de método, para não repetir:
 - As caixas que revisores medem a olho servem para **apontar** sujeira, não
   para redefinir corte: aplicá-las como limite cortou texto em quatro peças.
 
-**Organização das pastas (01/09)**: toda arte vive agora no repositório
-privado, com índice único em `nimbus-assets/designs/LEIA-ME.md`. O ciclo
-YouDraw inteiro (artes, mockups por produto, capas, fontes em chroma) foi
-recolhido para `designs/_historico/catalogo-youdraw/` — 56 arquivos existiam
-só no espelho local do repo público, que é gerado e descartável. Efeito
-colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
-25**, porque as 12 que sobravam eram arte já descartada pela curadoria.
+**Organização das pastas (01/09, refeita em 12/09 e podada em 14/09)**: toda
+arte vive no repositório privado, com índice único em
+[`nimbus-assets/LEIA-ME.md`](../../nimbus-assets/LEIA-ME.md) — na raiz, não mais
+em `designs/`. O ciclo YouDraw inteiro foi recolhido para
+`_historico/catalogo-youdraw/`. O portão `producao:dpi300` confere hoje **38
+artes**, todas a 300 DPI ou mais, com a baseline vazia.
+
+**A poda de 14/09** levou o privado de 4,2 GB para **3,1 GB** de árvore:
+
+- as **128 imagens de `_historico/`** (926 MB) saíram do disco; os 74
+  documentos que explicam cada morte ficaram. Elas **não** foram expurgadas do
+  histórico: voltam do commit `55fe730`, por decisão do dono — apagar arquivo é
+  reversível, expurgar não é.
+- as **40 gravuras de domínio público** da RELÍQUIA (260 MB) saíram do git e do
+  histórico. São material de origem: índice em
+  `designs/referencias/FONTES.md`, volta por
+  `node scripts/producao/rehidratar-fontes.mjs`. As 40 foram conferidas contra a
+  origem antes de sair, uma delas por comparação de pixel.
+- **`designs/referencias/reliquia_final/` FICOU**, 1,5 GB. Não é gravura de
+  domínio público: é o tratamento manual do dono no Affinity, e o git é o único
+  backup que existe dele. Essa distinção custou 1,5 GB e é o motivo de a poda
+  ter sido menor do que o previsto.
+
+O `.git` local encolhe com `git gc --prune=now`. A cópia do GitHub só encolhe
+quando o Suporte deles rodar gc: 57 `refs/pull/*` prendem o histórico antigo e
+não são apagáveis por nós.
 
 ## Marca, conteúdo e legal
 
@@ -223,7 +242,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
 - **MEI regularizado**, CNPJ 53.977.834/0001-18 no rodapé de todas as páginas.
 - **Soul do Roberto treinado (v2)**: o dono é o rosto da marca. Material de ads
   produzido em 10-11/08 (40 ads v2 + ciclo 3 com 20 estáticos lookbook e vídeo
-  de 28 s) — brain `marketing/2026-08-11-ads-v2/` e sínteses de
+  de 28 s) — brain `04-marketing/ads/` e sínteses de
   copywriting/ads. **Não roda campanha hoje**: a ordem de 15/08 é produto
   antes de conteúdo, e não há produto comprável.
 - Calendário que governa tudo: **29/09 (São Miguel, 3 artes já publicadas)** e
@@ -237,7 +256,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
   corrige no programa ([`decisoes/2026-08-23-video-no-resolve-e-orcamento-higgsfield.md`](decisoes/2026-08-23-video-no-resolve-e-orcamento-higgsfield.md)).
   Para peça ESTÁTICA a regra de 12/08 (dono monta no Canva) segue intacta.
 - **Pipeline provado em 23/08 sem gastar crédito**: rodada-piloto
-  `nimbus-assets/marketing/2026-08-23-piloto-resolve/` com mídia real da
+  `nimbus-assets/04-marketing/video/2026-08-23-piloto-resolve/` com mídia real da
   IzzyPrint — receita → mezanine → FCPXML → import por script interno →
   edição → export → `video:diff`. Fluxo: [`fluxos/video-ads.md`](fluxos/video-ads.md);
   números: [`verdades/specs-video-ads.md`](verdades/specs-video-ads.md);
@@ -247,7 +266,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
   brain: `wiki/entities/davinci-resolve.md` e
   `wiki/concepts/edicao-de-video-com-claude.md`.
 - **Falta (sessão B)**: pesquisa P2 (ads do nicho) → síntese + shotlist no
-  brain; biblioteca de clipes modulares em `nimbus-assets/marketing/biblioteca-clipes/`.
+  brain; biblioteca de clipes modulares em `nimbus-assets/04-marketing/clipes/`.
   Só depois, e sob aprovação clipe a clipe, o primeiro lote Higgsfield
   (~315 créditos planejados; saldo em 23/08: 911).
 - **Não roda campanha**: ordem de 15/08 (produto antes de conteúdo) intacta;
@@ -256,7 +275,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
 ## Photoshoot de capas com Soul ID (25/08 — capas por coleção)
 
 - **Método vigente (ordem do dono, 25/08)**: capa nova NÃO gera cena. Base = as
-  54 fotos dele aprovadas em 10/08 (`nimbus-assets/casting/2026-08-08-roberto-soul/gerados/v12-lote-60/`,
+  54 fotos dele aprovadas em 10/08 (`nimbus-assets/02-fotos/soul/gerados/v12-lote-60/`,
   separadas por `nuvem/ street/ reliquia/`); cada capa é UMA edição
   `gpt_image_2` **1k/medium** (~2 cr) sobre a base, com o mockup IzzyPrint como
   referência: troca cor da peça, aplica estampa e corrige defeito de cena
@@ -264,7 +283,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
 - **Cada coleção no seu mundo** (decisão de 23/07, recobrada): NUVEM = céu +
   concreto Niemeyer; STREET = beco/muro; RELÍQUIA = claustro/azulejos. Conferir
   a coleção do design ANTES de escolher a cena.
-- Conjunto vigente: `nimbus-assets/marketing/2026-08-25-capas-por-colecao/`
+- Conjunto vigente: `nimbus-assets/02-fotos/capas/`
   (NUVEM Asa frente+costas; STREET Aparecida e São Miguel frente+costas).
   RELÍQUIA pendente de arte montada na IzzyPrint.
 - Conserto de capa se faz **refazendo da foto-base**: editar a saída já gerada
@@ -273,7 +292,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
 ## Cenas-base em lugares reais de Brasília (25/08–02/09)
 
 - **02/09: o acervo FECHOU em 14 pares** (28 imagens, 24 delas em 2k), em
-  `nimbus-assets/casting/2026-08-25-cenarios-reais/`. O dono julgou par a par
+  `nimbus-assets/02-fotos/cenas-base/brasilia/`. O dono julgou par a par
   e o veredito foi executado no mesmo dia: **Ponte JK apagada**, oito imagens
   refeitas contra o defeito exato que ele apontou. Tabela do antes/depois na
   RETOMADA da pasta.
@@ -292,11 +311,11 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
 ### Como chegou aqui (25–28/08)
 
 - Frente inteira documentada em
-  `nimbus-assets/casting/2026-08-25-cenarios-reais/RETOMADA.md` (ponto de
+  `nimbus-assets/02-fotos/cenas-base/brasilia/RETOMADA.md` (ponto de
   entrada obrigatório; tabela por cena). 8 pares; 2 prontos (Três Poderes,
   Praça do Cruzeiro), o resto aguardava prova de lugar.
 - **26/08 (tarde): os 5 dossiês de enquadramento pedidos pelo dono estão
-  PRONTOS** em `nimbus-assets/casting/ancoras-locacoes/dossies/` (Ermida,
+  PRONTOS** em `nimbus-assets/02-fotos/locacoes/dossies/` (Ermida,
   Pontão, Rodoviária, Superquadra, Planaltina) — fotos-prova independentes,
   LEIA-ME item por item, o que NÃO existe, créditos. Custo de crédito: zero
   (pesquisa no lugar de geração).
@@ -355,17 +374,17 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
   miniatura; o design guarda o original em `full_src`). Aprovadas pelo dono;
   são fotos de produto para site/insta/ads + referência do photoshoot — **não**
   portão obrigatório de geração (correção do dono, 24/08).
-  `nimbus-assets/marketing/mockups-izzyprint/editor-*.png`.
+  `nimbus-assets/03-mockups/izzyprint/editor/editor-*.png`.
 - **Photoshoot ordenado pelo dono (24/08)**: 2 fotos por produto (frente+verso)
   como capa. Receita: soul_2 2k (peça lisa) → gpt_image_2 2k/high aplica a
   estampa usando o mockup como referência. Lote inicial 42,7 cr (saldo 875→832)
   + 2 refações. Fotos e estado do painel em
-  `nimbus-assets/marketing/2026-08-24-photoshoot-capas/` (LEIA-ME tem o mapa).
+  `nimbus-assets/_historico/capas-terraco-2026-08-24/` (LEIA-ME tem o mapa).
 - **v1 REJEITADA pelo dono em 24/08** (fundo chapado sem vida, rosto
   sério/uncanny, cor fora do mockup) → regras novas na memória
   `photoshoot-regras-do-dono`. **v2 no cenário terraço-céu aprovado: painel
   verde nas 6 e ENTREGUE em 25/08.** Biblioteca de CENAS-BASE dele (frente+
-  costas × 3 peças, terraço) criada em `nimbus-assets/casting/cenas-base/` —
+  costas × 3 peças, terraço) criada em `nimbus-assets/02-fotos/cenas-base/terraco/` —
   photoshoot futuro = trocar cor de peça (na cena-base) + aplicar estampa
   (edição com mockup). Custo total da frente ~149 cr (875→727).
 - **Próximo passo natural da frente**: subir capas na Nuvemshop quando o dono
