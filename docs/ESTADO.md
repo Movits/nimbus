@@ -214,6 +214,8 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
   publicado para oposição.** Consta na base sem nenhum despacho; base do INPI
   atualizada até 18/08 (RPI 2902). Acompanhar a RPI semanalmente; exigência
   formal tem prazo de **5 dias**. Detalhe: brain `wiki/concepts/dominio-e-marca.md`.
+  - **30/09: RPI 2908 (29/09) publicou o pedido para oposição** (exame formal
+    concluído). Janela de 60 dias para terceiros, até ~30/11/2026; nada a fazer, só vigiar.
 - **Obstáculo levantado na consulta de 21/08, para o dono decidir se leva a quem
   fez o depósito**: existe registro EM VIGOR `903106558` GEL-NIMBUS (ASICS) na
   classe 25, e o INPI já indeferiu outro pedido NIMBUS para vestuário nessa
