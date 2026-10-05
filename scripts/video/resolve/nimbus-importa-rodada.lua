@@ -4,7 +4,7 @@
 -- scripts/video/monta-timeline.mjs (repo publico). Copia canonica deste arquivo:
 -- Nimbus/scripts/video/resolve/; a copia executavel vive em
 -- %APPDATA%/Blackmagic Design/DaVinci Resolve/Support/Fusion/Scripts/Edit/.
-local PONTEIRO = "C:/Users/rober/nimbus-assets/marketing/_rodada-atual.txt"
+local PONTEIRO = "C:/Users/rober/nimbus-assets/04-marketing/video/_rodada-atual.txt"
 
 local function falha(msg)
   print("[NIMBUS] ERRO: " .. msg)

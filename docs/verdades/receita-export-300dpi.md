@@ -37,7 +37,8 @@ recorte é que entrega o PNG transparente).
 ## O portão
 
 `npm run producao:dpi300` (`scripts/producao/lint-export-300dpi.mjs`, dentro
-do `vitrine:portoes`): varre `designs/prontos/<COLECAO>/<posicao>/`, encaixa a
+do `vitrine:portoes`): varre `01-estampas/<colecao>/<posicao>/` e as subpastas
+dentro dela (inclusive `40x50/`), encaixa a
 proporção de cada PNG na caixa da posição e mede o DPI nesse pior caso.
 Abaixo de 300, o portão falha e diz o tamanho exato que falta.
 

@@ -5,27 +5,28 @@
 // 3543x4724 px). Serve YouDraw e IzzyPrint. Ampliar depois NÃO cria detalhe:
 // o finalize-prints só declara a densidade e evita reamostragem do RIP.
 //
-// O que ele faz: varre os PNGs de designs/prontos/<COLECAO>/<posicao>/,
-// encaixa a proporção de cada arte na caixa máxima de impressão da posição
-// (teto real do catálogo, auditoria 2026-07-22, a mesma tabela do
-// finalize-prints) e calcula o DPI nesse pior caso. Abaixo de 300, falha.
+// O que ele faz: varre os PNGs de 01-estampas/<colecao>/<posicao>/ (inclusive a
+// subpasta 40x50/), encaixa a proporção de cada arte na caixa máxima de
+// impressão da posição (teto real do catálogo, auditoria 2026-07-22, a mesma
+// tabela do finalize-prints) e calcula o DPI nesse pior caso. Abaixo de 300,
+// falha. Pasta de posição fora do mapa também falha.
 //
-// Baseline datada (export-300dpi.baseline.json): as artes que JÁ EXISTIAM em
-// 03/08, exportadas no padrão antigo de 3500 px (~222 DPI), ficam listadas com
-// as dimensões congeladas como pendência de re-export (ESTADO, pendência 0:
-// aguarda a decisão de plataforma). A lista só encolhe: arquivo que passou a
-// cumprir 300 DPI derruba o build até sair da baseline, e arquivo novo ou
-// redimensionado nunca entra por ela.
+// Baseline (export-300dpi.baseline.json): VAZIA desde 12/09/2026. Ela existia
+// para tolerar as 64 artes da era YouDraw exportadas no padrão antigo de
+// 3500 px (~222 DPI). Essas artes viraram histórico na reorganização de 12/09
+// e o acervo que as substitui nasceu todo a 300 DPI, então a lista chegou a
+// zero — que sempre foi o fim desejado, não um afrouxamento. A regra continua
+// de pé: a lista só encolhe, e arte nova nunca entra por ela.
 //
 // Este portão precisa dos assets privados mesclados (node scripts/setup-assets.mjs);
-// os PNGs de designs/prontos não vivem no repo público, então ele roda na
+// os PNGs de 01-estampas não vivem no repo público, então ele roda na
 // máquina local (npm run vitrine:portoes), não no deploy.yml. SKIP_ASSETS=1
 // pula em ambiente declaradamente sem assets, como SKIP_REDE no link-check.
 import fs from "node:fs";
 import path from "node:path";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
-const DIR = path.join(RAIZ, "designs", "prontos");
+const DIR = path.join(RAIZ, "01-estampas");
 const BASELINE = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "export-300dpi.baseline.json"), "utf-8"));
 const DPI_MIN = 300;
 
@@ -51,21 +52,46 @@ if (process.env.SKIP_ASSETS) {
   process.exit(0);
 }
 
+// varre TUDO abaixo de <colecao>/<posicao>/, inclusive a subpasta 40x50/. Antes
+// só olhava o primeiro nível, então uma arte guardada num subdiretório ficava
+// invisível para o portão — instrumento cego é exatamente o que este projeto
+// não tolera.
+function pngsRecursivos(dir, prefixo) {
+  const saida = [];
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) saida.push(...pngsRecursivos(path.join(dir, e.name), `${prefixo}/${e.name}`));
+    else if (e.name.toLowerCase().endsWith(".png")) saida.push(`${prefixo}/${e.name}`);
+  }
+  return saida;
+}
+
 const alvos = [];
+const posDesconhecidas = [];
 if (fs.existsSync(DIR))
   for (const colecao of fs.readdirSync(DIR, { withFileTypes: true })) {
     if (!colecao.isDirectory()) continue;
     for (const pos of fs.readdirSync(path.join(DIR, colecao.name), { withFileTypes: true })) {
-      if (!pos.isDirectory() || IGNORAR.has(pos.name) || !CAIXA_CM[pos.name]) continue;
-      for (const f of fs.readdirSync(path.join(DIR, colecao.name, pos.name)))
-        if (f.toLowerCase().endsWith(".png"))
-          alvos.push({ rel: `designs/prontos/${colecao.name}/${pos.name}/${f}`, caixa: CAIXA_CM[pos.name] });
+      if (!pos.isDirectory() || IGNORAR.has(pos.name)) continue;
+      // pasta de posição que o mapa não conhece é ERRO, não item pulado: era
+      // por aí que arte entrava sem nunca ser medida.
+      if (!CAIXA_CM[pos.name]) { posDesconhecidas.push(`${colecao.name}/${pos.name}`); continue; }
+      for (const rel of pngsRecursivos(path.join(DIR, colecao.name, pos.name), `01-estampas/${colecao.name}/${pos.name}`))
+        alvos.push({ rel, caixa: CAIXA_CM[pos.name] });
     }
   }
 
+if (posDesconhecidas.length) {
+  console.error(
+    "LINT-EXPORT-300DPI FALHOU:\n" +
+    posDesconhecidas.map((p) => `  - 01-estampas/${p}/: posição fora do mapa de caixas (${Object.keys(CAIXA_CM).join(", ")}).`).join("\n") +
+    "\n    Renomeie a pasta ou acrescente a caixa em cm a CAIXA_CM. Pasta que o portão não conhece não pode passar despercebida."
+  );
+  process.exit(1);
+}
+
 if (!alvos.length) {
   console.error(
-    "LINT-EXPORT-300DPI FALHOU:\n  - nenhum PNG em designs/prontos/*/(costas|frente|peito|manga)/.\n" +
+    "LINT-EXPORT-300DPI FALHOU:\n  - nenhum PNG em 01-estampas/*/(costas|frente|peito|manga)/.\n" +
     "    Os assets privados não estão mesclados: rode `node scripts/setup-assets.mjs`.\n" +
     "    Em ambiente sem os assets (CI do repo público), use SKIP_ASSETS=1 explicitamente."
   );
@@ -109,4 +135,4 @@ if (erros.length) {
   console.error("LINT-EXPORT-300DPI FALHOU:\n" + erros.map((e) => "  - " + e).join("\n"));
   process.exit(1);
 }
-console.log(`lint-export-300dpi OK: ${alvos.length} artes conferidas, ${ok} a 300 DPI ou mais, ${legado} legadas na baseline de 03/08 (re-export pendente, ESTADO pendência 0); arte nova só nasce a 300 DPI`);
+console.log(`lint-export-300dpi OK: ${alvos.length} artes conferidas, ${ok} a 300 DPI ou mais, ${legado} legadas na baseline (hoje vazia); arte nova só nasce a 300 DPI`);

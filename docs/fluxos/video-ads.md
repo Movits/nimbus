@@ -28,7 +28,7 @@ rodada-piloto (mídia real da IzzyPrint, zero créditos).
 1. **Criar a rodada**: pasta `nimbus-assets/marketing/<AAAA-MM-DD>-<assunto>/video/`
    com `rodada.json` (fontes, cortes, títulos, legendas — modelo na rodada
    `2026-08-23-piloto-resolve`). Apontar o ponteiro:
-   `nimbus-assets/marketing/_rodada-atual.txt`.
+   `nimbus-assets/04-marketing/video/_rodada-atual.txt`.
 2. **Normalizar**: `npm run video:normaliza` — mezanine 1080x1920 30 fps CFR em
    `_mezanine/` (gitignorado), só a janela usada pelos cortes.
 3. **Gerar timeline e legendas**: `npm run video:timeline` e `npm run video:srt`.

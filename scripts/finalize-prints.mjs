@@ -1,5 +1,5 @@
 // Deixa as estampas prontas pra impressão: faz upscale (se preciso) pro tamanho de
-// impressão e marca 300 DPI. Roda em cima dos PNGs em designs/<item>/<posição>/.
+// impressão e marca 300 DPI. Roda em cima dos PNGs em 01-estampas/<colecao>/<posição>/.
 //
 // O Higgsfield só exporta por aspect ratio + qualidade (sem px/DPI). Este passo
 // resolve o resto. Uso: npm run finalize
@@ -7,7 +7,7 @@ import sharp from 'sharp'
 import { readdirSync, statSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 
-const ROOT = 'designs'
+const ROOT = '01-estampas'
 const DPI = 300
 const cm = (v) => Math.round((v / 2.54) * DPI) // cm -> px @300dpi
 
@@ -80,7 +80,8 @@ function matchByAspect(aspect, folder) {
   // 2% de folga: o ruido medido da proporcao oficial e ~1%
   return best && best.dev <= 0.02 ? best : null
 }
-const SKIP = new Set(['mockups', '_mestres'])
+// 40x50/ ja nasce no tamanho final: nao reprocessar.
+const SKIP = new Set(['mockups', '_mestres', '40x50'])
 
 function* pngs(dir) {
   for (const entry of readdirSync(dir)) {

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Gera miniaturas WebP leves de TODAS as estampas de designs/prontos/
- * (NUVEM, RELIQUIA, STREET × costas, peito) para o artefato de triagem
+ * Gera miniaturas WebP leves de TODAS as estampas de 01-estampas/
+ * (por colecao × costas, peito) para o artefato de triagem
  * do dono (Manter/Remover). Molde: scripts/vitrine/build-media.mjs.
  *
  * - ~720 px de aresta longa, WebP q70, SEM flatten (alpha preservado).
@@ -17,11 +17,11 @@ import sharp from "sharp";
 
 const RAIZ = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
 const ASSETS = process.env.NIMBUS_ASSETS || join(RAIZ, "..", "nimbus-assets");
-const PRONTOS = join(ASSETS, "designs", "prontos");
+const PRONTOS = join(ASSETS, "01-estampas");
 const SAIDA = process.argv[2] || process.env.NIMBUS_MINIATURAS;
 if (!SAIDA) { console.error("uso: miniaturas-estampas.mjs <dir-saida>"); process.exit(1); }
 
-const COLECOES = ["NUVEM", "RELIQUIA", "STREET"];
+const COLECOES = ["street", "reliquia", "gotica", "nuvem", "marca"];
 const POSICOES = ["costas", "peito"];
 mkdirSync(SAIDA, { recursive: true });
 

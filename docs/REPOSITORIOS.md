@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-11
+atualizado: 2026-09-14
 ---
 
 # Os três repositórios
@@ -44,10 +44,25 @@ no `nimbus/docs/`, **por que se faz e quando** mora no brain.
 
 | Caminho | O que é |
 |---|---|
-| `designs/prontos/**` | as artes oficiais, prontas para composição |
-| `designs/originais/**` | os arquivos de origem |
-| `nuvemshop/assets/producao-capas/**/*.png` | blanks e capas compostas |
-| `nuvemshop/assets/product-lifestyle/2026-07-16/catalog/references/**` | os 49 mockups planos, que são a régua de placement |
+| `01-estampas/**` | as 24 artes oficiais, por coleção e posição |
+| `02-fotos/**` | cenas-base, Soul, capas e prova de locação |
+| `03-mockups/**` | referência de peça: editor e amostras da IzzyPrint |
+| `04-marketing/**` | vitrine, ads, clipes e rodadas de vídeo |
+| `05-loja/**` | backup do tema Baires, licenciado da Nuvemshop |
+| `06-documentos/**` | o pedido de marca no INPI |
+| `_historico/**` | **por que** o ciclo YouDraw e o retrabalho morreram; as imagens saíram em 14/09 e voltam do commit `55fe730` |
+| `designs/referencias/reliquia_final/**` | a mesa do Affinity, congelada; o git é o único backup dela |
+
+O índice dessas pastas é o `LEIA-ME.md` na raiz do privado, e ele é que se
+mantém em dia.
+
+> [!info] Atualizado em 2026-09-14: saíram desta tabela duas linhas que
+> apontavam para pastas mortas — `nuvemshop/assets/producao-capas/` e
+> `nuvemshop/assets/product-lifestyle/`, sumidas do privado entre 28/07 e 01/09.
+> Eram as mesmas origens fantasma que o `setup-assets.mjs` perseguia em
+> silêncio. As 40 gravuras de domínio público também não estão mais no git:
+> índice em `designs/referencias/FONTES.md`, volta por
+> `node scripts/producao/rehidratar-fontes.mjs`.
 
 ## A chave da API
 

@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-13
+atualizado: 2026-09-14
 ---
 
 # Fluxo: de-para de produção Nuvemshop → IzzyPrint (repasse manual)
@@ -27,7 +27,9 @@ a de 12/08 tiraram do working tree os arquivos de 16 das 21 artes publicadas.
 Todos são recuperáveis pelo git — a seção "Recuperar uma arte que saiu do
 disco" traz o commit de cada uma. **Nenhuma arte atual chega a 300 DPI** no
 tamanho de impressão; a mesa de retrabalho está em
-`nimbus-assets/designs/_retrabalho-2026-08/`.
+`nimbus-assets/_historico/retrabalho-2026-08/` — desde 14/09 só os LEIA-ME
+ficam no disco, e as imagens se recuperam do commit `55fe730`, do mesmo jeito
+que as artes citadas acima.
 
 **3. A Ecobag SAI do catálogo** (decisão do dono de 13/08,
 `docs/decisoes/2026-08-13-ecobag-status-e-ordem-do-lancamento.md`). A IzzyPrint
@@ -251,8 +253,11 @@ Os números de gola→topo da arte estão na tabela de repasse da seção 4.
 artes passam de 30 cm de largura**. Por orçamento direto a área chega a
 **40 × 50 cm** (tabela de preço recebida em 29/07). Qual limite vale para a
 conta da NIMBUS: **a confirmar com a IzzyPrint** — é a pergunta que decide se
-os 15 emblemas já ampliados para 40 × 50 em
-`designs/_retrabalho-2026-08/emblemas/4k/` servem ou sobram.
+os emblemas já ampliados para 40 × 50 em
+`_historico/retrabalho-2026-08/emblemas/4k/` servem ou sobram. Esses arquivos
+saíram do disco em 14/09 junto com o resto das imagens de `_historico/`;
+continuam no histórico do git e voltam com
+`git checkout 55fe730 -- _historico/retrabalho-2026-08/emblemas/4k/`.
 
 **Requisito de arquivo:** PNG **sem fundo** (fundo sólido é rejeitado mesmo na
 cor da peça), 300 DPI recomendado. **Chroma verde e magenta estão condenados
@@ -294,7 +299,7 @@ Caminhos antigos por commit:
   `designs/prontos/STREET/costas/`, `designs/prontos/NUVEM/costas/`
 - `60c0e6d` (emblemas frontais do processo antigo) —
   `designs/prontos/RELIQUIA/peito/`, `designs/prontos/STREET/peito/`
-- `a2cc67d` (triagem 12/08) — `designs/acervo/gotica-blackletter/` para B2, B3,
+- `a2cc67d` (triagem 12/08) — `01-estampas/gotica-blackletter/` para B2, B3,
   B7 (duas versões), B8 e H2; `designs/prontos/RELIQUIA/peito/` para B9
 
 Se não achar o caminho, ache o commit da remoção:

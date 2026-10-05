@@ -16,7 +16,7 @@ const ASSETS = process.env.NIMBUS_ASSETS || path.resolve(RAIZ, "..", "nimbus-ass
 const SAIDA = path.join(RAIZ, "public/loja/media");
 fs.mkdirSync(SAIDA, { recursive: true });
 
-const VITRINE = path.join(ASSETS, "marketing/2026-07-29-vitrine");
+const VITRINE = path.join(ASSETS, "04-marketing/vitrine");
 
 async function editorial(entrada, saida, largura, qualidade = 78) {
   if (!fs.existsSync(entrada)) throw new Error(`fonte ausente: ${entrada}`);
@@ -41,8 +41,12 @@ for (const c of ["reliquia", "nuvem"]) {
 jobs.push(editorial(path.join(VITRINE, "manifesto-beco-sombra.png"), path.join(SAIDA, "manifesto-1600.webp"), 1600, 68));
 
 // 3) candidatas e alternativas em espera: aparecem só em /gates/, nunca nas páginas da loja
-for (const c of ["cenario-street-brasilia", "hero-editorial-niemeyer", "hero-casting-curva",
-  "hero-casting-planalto", "hero-casting-remix-a", "manifesto-beco-luz"]) {
+//    hero-casting-curva e hero-casting-planalto saíram da lista em 12/09: o GATE C
+//    fechou em 30/07 e a triagem visual de 12/08 removeu os dois arquivos. O build
+//    vinha lançando `fonte ausente` desde então — candidata de gate fechado não
+//    derruba a vitrine.
+for (const c of ["cenario-street-brasilia", "hero-editorial-niemeyer",
+  "hero-casting-remix-a", "manifesto-beco-luz"]) {
   jobs.push(editorial(path.join(VITRINE, `${c}.png`), path.join(SAIDA, `gate-${c}-1600.webp`), 1600, 68));
 }
 
