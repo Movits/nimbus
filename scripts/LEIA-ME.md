@@ -56,3 +56,17 @@ eventual migração de fornecedor (ver a tabela de módulos do `geometry/README.
 | Assets da loja (gerados na era Morelia; conferir Baires antes de regenerar) | `make-tiles-loja.mjs`, `make-banners-loja.mjs`, `make-favicons-e-mobile.mjs`, `make-mockups.mjs`, `build-nimbus-social-profile-kit.mjs` |
 | Rascunhos de conteúdo de produto (roda sob ordem; a saída passa pelo lint-copy) | `build-product-content-drafts.mjs`, `descricoes.mjs` |
 | Canal Gemini de estampa (ordem de 06/08: estampa-teste sai pelo MCP Higgsfield) | `gemini/` |
+
+## SEM CHAMADOR CONHECIDO (achado na faxina de 19/10/2026)
+
+Não aparecem pelo nome em nenhum mapa (este e os README das subpastas), no
+`package.json` nem em outro arquivo do repo, e não têm banner. Podem ser rodados
+à mão: confira o que fazem antes de rodar.
+
+| Pasta | Arquivos |
+|---|---|
+| `scripts/` | `build-nuvemshop-lifestyle-manifest.mjs`, `render-nuvemshop-preview.cjs` |
+| `gemini/` | `build-pilot-compare.mjs`, `build-pilot-doc.mjs`, `test-connection.mjs` (a pasta está no ONE-OFF acima) |
+| `geometry/` | `extract-art.mjs`, `integracao-tecido.mjs` |
+| `producao/` | `auditar-cenas.mjs`, `auditar-pares.mjs`, `colher-receitas.mjs`, `miniaturas-estampas.mjs` |
+| `video/resolve/` | `nimbus-renderiza-rodada.lua` (roda pelo menu Scripts do Resolve) |

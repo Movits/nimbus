@@ -48,4 +48,5 @@ npm run preview  # serve o build
 - **Seções:** `src/sections/Overlay.tsx` e `Topbar.tsx`.
 
 Os assets vieram do Higgsfield; storyboard e prompts em
-`nimbus-landing-storyboard.md` / `nimbus-higgsfield-prompts.md`.
+`docs/historico/raiz/nimbus-landing-storyboard.md` /
+`docs/historico/raiz/nimbus-higgsfield-prompts.md`.
