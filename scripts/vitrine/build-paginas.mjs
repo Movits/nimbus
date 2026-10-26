@@ -496,8 +496,8 @@ const INSTITUCIONAIS = {
     <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
     ${VITRINE_ABERTA ? `<p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
     <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : `<p>O diário abre com as primeiras vendas.</p>`}`],
-  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por 90 dias e troca de tamanho tratada com a gente.", `
-    <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. A nossa política é simples, segue a lei e cobre os três casos possíveis, sem pegadinha.</p>
+  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, que vale também para tamanho, e defeito coberto por 90 dias.", `
+    <p class="lede">A nossa política é simples, segue a lei e cobre todos os casos, sem pegadinha.</p>
     <h2>Mudou de ideia? Você tem 7 dias</h2>
     <p>A peça chegou perfeita, mas não era o que você imaginava. Você pode desistir da compra em até 7 dias corridos após o recebimento, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor. Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido e devolvemos tudo o que você pagou, incluindo o frete.</p>
     <h2>Chegou com problema? Avise assim que receber</h2>
@@ -505,25 +505,24 @@ const INSTITUCIONAIS = {
     <h2>O problema apareceu depois?</h2>
     <p>Estampa que solta ou tecido que falha nas primeiras lavagens, seguindo os cuidados da etiqueta, também é defeito de fabricação. Nesse caso os 90 dias contam a partir do dia em que o problema apareceu. Mesmo caminho: foto e número do pedido por e-mail.</p>
     <h2>Errou o tamanho?</h2>
-    <p>Escreva para a gente em até 7 dias do recebimento, com o número do pedido e o tamanho certo. Como cada peça é feita para você, tratamos caso a caso, e a gente resolve junto. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
+    <p>O direito de desistir em 7 dias também vale para o tamanho: escreva em até 7 dias do recebimento, com o número do pedido, e devolvemos tudo o que você pagou, frete incluído. Se preferir o tamanho certo no lugar do dinheiro, diga no mesmo e-mail e a gente combina. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
     <h2>Como pedir</h2>
     <p>Um e-mail resolve tudo: <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto. Respondemos rápido.</p>`],
-  envios: ["Envios e prazos", "Prazos de entrega da NIMBUS por região do Brasil, com produção incluída e rastreio.", `
-    <p class="lede">Cada peça é feita no Brasil, para você. Os prazos abaixo já incluem a produção, contados a partir da confirmação do pagamento.</p>
+  envios: ["Envios e prazos", "Prazo total de entrega da NIMBUS, do pagamento confirmado até a sua casa, e como funciona o rastreio.", `
+    <p class="lede">Os prazos abaixo são o total, contados do pagamento confirmado até a entrega.</p>
     <h2>Prazos por região</h2>
     <ul>
-      <li>São Paulo: 3 a 5 dias úteis</li>
-      <li>Sudeste: 4 a 6 dias úteis</li>
-      <li>Sul e Centro-Oeste: 5 a 7 dias úteis</li>
-      <li>Norte e Nordeste: 6 a 12 dias úteis</li>
+      <li>São Paulo, Rio de Janeiro, Belo Horizonte, Brasília e Porto Alegre: até 12 dias úteis</li>
+      <li>Salvador: até 13 dias úteis</li>
+      <li>Outras cidades: o prazo do seu CEP aparece no checkout, antes de pagar</li>
     </ul>
-    <p class="note">O prazo exato para o seu CEP aparece no checkout e prevalece sobre as faixas acima.</p>
+    <p class="note">Conta feita em 26/10/2026 com os prazos dos Correios (PAC) cotados para essas capitais, mais a nossa folga. O prazo do checkout para o seu CEP prevalece.</p>
     <h2>Rastreio</h2>
     <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. O pedido também fica na sua conta da loja: <a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a>.</p>
     <h2>Frete grátis</h2>
     <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil. No checkout, no campo mensagem do pedido, escreva qual projeto recebe os 10%.</p>
     <h2>Quanto custa o frete</h2>
-    <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90 na maior parte do Brasil. O valor exato do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
+    <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90. O valor do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>Quem responde pelos seus dados</h2>
