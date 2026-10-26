@@ -671,12 +671,12 @@ ${header()}
 ${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
-const gravurasIndice = () => `${head("Gravuras de época | NIMBUS", "Gravuras sacras de acervos públicos, dos séculos XVI e XVII, que a NIMBUS estampa no traço: autor, ano, museu e link do original de cada uma.", { canonical: `${GRAV_URL}/`, indexar: true, ogImage: `${GRAV_URL}/img/${GRAVURAS[0].slug}-og.jpg` })}
+const gravurasIndice = () => `${head("Gravuras de época | NIMBUS", "Gravuras sacras de acervos de museus, dos séculos XVI e XVII, que a NIMBUS estampa no traço: autor, ano, museu e link do original de cada uma.", { canonical: `${GRAV_URL}/`, indexar: true, ogImage: `${GRAV_URL}/img/${GRAVURAS[0].slug}-og.jpg` })}
 ${header()}
 <main>
   <section class="secao"><div class="secao__inner institucional">
     <h1 class="display display--md">Gravuras de época</h1>
-    <p class="lede">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus públicos. A NIMBUS as estampa só no traço, com a origem de cada uma escrita aqui: autor, ano, acervo e o link para o original.</p>
+    <p class="lede">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. A NIMBUS as estampa só no traço, com a origem de cada uma escrita aqui: autor, ano, acervo e o link para o original.</p>
     <ul class="gravuras">
       ${GRAVURAS.map((g) => `<li><a href="/gravuras/${esc(g.slug)}/"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}" loading="lazy"><b>${esc(g.titulo)}</b><span>${esc(g.autor)}, ${esc(g.ano)}</span></a></li>`).join("\n      ")}
     </ul>
