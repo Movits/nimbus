@@ -59,7 +59,7 @@ const head = (titulo, descricao, opts = {}) => `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titulo)}</title>
 <meta name="description" content="${esc(descricao)}">
-${VITRINE_INDEXAVEL && !opts.semIndice ? "" : '<meta name="robots" content="noindex">\n'}<meta property="og:title" content="${esc(titulo)}">
+${(VITRINE_INDEXAVEL || opts.indexar) && !opts.semIndice ? "" : '<meta name="robots" content="noindex">\n'}<meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(descricao)}">
 <meta property="og:type" content="${opts.ogType || "website"}">
 <meta property="og:site_name" content="NIMBUS">
@@ -622,6 +622,79 @@ for (const p of cat.produtos) {
 
 // sitemap + robots (P1-7): só as páginas públicas. Gates, teste-carrinho e os
 // stubs de /loja-preview/ ficam de fora (todos já levam noindex no próprio HTML).
+/* ---------------------------------------------------------------- gravuras */
+// Páginas de origem das gravuras de época (26/10/2026). Ficam FORA de /loja/ e
+// entram no índice do Google mesmo com a vitrine fechada: são conteúdo, não
+// venda, e são o canal de aquisição sem mídia paga (quem procura a gravura
+// acha a página). Cada página diz autor, ano, acervo, inventário, licença e
+// link do original, e mostra a simulação da camiseta com o aviso de que é
+// simulação. A imagem servida é o ORIGINAL do museu reduzido; o arquivo de
+// impressão (o traço) fica só no repositório privado. Dados: gravuras.json.
+const GRAVURAS = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8")).gravuras;
+const GRAV_BASE = path.join(RAIZ, "public/gravuras");
+const GRAV_URL = "https://nimbuswear.com.br/gravuras";
+const GRAV_LASTMOD = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8")).atualizado;
+// Enquanto a Camiseta Gravura não estiver comprável na loja, a página convida a
+// pedir aviso por e-mail. Com o produto no ar, troque por { href, rotulo }.
+const GRAVURA_VENDA = null;
+const avisoGravura = (g) => GRAVURA_VENDA
+  ? `<p><a class="btn btn--primary" href="${esc(GRAVURA_VENDA.href)}">${esc(GRAVURA_VENDA.rotulo)}</a></p>`
+  : `<p>A Camiseta Gravura abre para venda em breve. Para ser avisado, escreva para <a href="mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent(`Aviso: Camiseta Gravura (${g ? g.titulo : "gravuras"})`)}">nimbuswearbr@gmail.com</a>.</p>`;
+const fichaGravura = (g) => `<dl class="ficha">
+      <dt>Autor</dt><dd>${esc(g.autor)}</dd>
+      <dt>Ano</dt><dd>${esc(g.ano)}</dd>
+      <dt>Técnica</dt><dd>${esc(g.tecnica)}</dd>
+      <dt>Acervo</dt><dd>${esc(g.acervo)}${g.inventario ? `, ${esc(g.inventario)}` : ""}</dd>
+      <dt>Licença</dt><dd>${esc(g.licenca)}</dd>
+    </dl>`;
+const gravuraPagina = (g) => `${head(`${g.titulo} | Gravuras NIMBUS`, `${g.titulo}, ${g.autor}, ${g.ano}. ${g.acervo}. A origem da imagem que a NIMBUS estampa no traço.`, {
+  canonical: `${GRAV_URL}/${g.slug}/`, indexar: true, ogType: "article", ogImage: `${GRAV_URL}/img/${g.slug}-og.jpg`,
+  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "VisualArtwork", name: g.titulo, creator: g.autor, dateCreated: g.ano, artMedium: g.tecnica, image: g.original, license: g.licenca, isBasedOn: g.original, holdingArchive: g.acervo }),
+})}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional institucional--com-imagem">
+    <h1 class="display display--md">${esc(g.titulo)}</h1>
+    <div class="institucional__texto">
+    ${fichaGravura(g)}
+    ${g.texto.map((t) => `<p>${esc(t)}</p>`).join("\n    ")}
+    <p><b>Para:</b> ${esc(g.liturgia)}.</p>
+    <p><a href="${esc(g.original)}" rel="noopener">Ver o original do acervo em alta resolução</a>.</p>
+    <h2>Na camiseta</h2>
+    <p>A NIMBUS imprime a gravura só no traço, em azul-marinho e sem o papel de época, como um emblema de até 10 x 15 cm no peito de uma Camiseta Clássica off-white: 100% algodão penteado, 180 g/m², pela ficha da gráfica.</p>
+    <figure class="gravura__simulacao"><img src="/gravuras/img/${esc(g.slug)}-simulacao.webp" alt="Simulação digital da camiseta off-white com a gravura no peito" width="900" height="1035" loading="lazy"><figcaption>Simulação digital. Ainda não temos foto desta camiseta estampada.</figcaption></figure>
+    ${avisoGravura(g)}
+    <p><a href="/gravuras/">Todas as gravuras</a></p>
+    </div>
+    <figure class="institucional__midia"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}, ${esc(g.autor)}, ${esc(g.ano)}" loading="lazy"><figcaption>O original: ${esc(g.acervo)}${g.inventario ? `, ${esc(g.inventario)}` : ""}. ${esc(g.licenca)}.</figcaption></figure>
+  </div></section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+const gravurasIndice = () => `${head("Gravuras de época | NIMBUS", "Gravuras sacras de acervos públicos, dos séculos XVI e XVII, que a NIMBUS estampa no traço: autor, ano, museu e link do original de cada uma.", { canonical: `${GRAV_URL}/`, indexar: true, ogImage: `${GRAV_URL}/img/${GRAVURAS[0].slug}-og.jpg` })}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    <h1 class="display display--md">Gravuras de época</h1>
+    <p class="lede">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus públicos. A NIMBUS as estampa só no traço, com a origem de cada uma escrita aqui: autor, ano, acervo e o link para o original.</p>
+    <ul class="gravuras">
+      ${GRAVURAS.map((g) => `<li><a href="/gravuras/${esc(g.slug)}/"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}" loading="lazy"><b>${esc(g.titulo)}</b><span>${esc(g.autor)}, ${esc(g.ano)}</span></a></li>`).join("\n      ")}
+    </ul>
+    ${avisoGravura(null)}
+  </div></section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+fs.rmSync(path.join(GRAV_BASE, "index.html"), { force: true });
+fs.mkdirSync(GRAV_BASE, { recursive: true });
+fs.writeFileSync(path.join(GRAV_BASE, "index.html"), gravurasIndice());
+for (const g of GRAVURAS) {
+  fs.mkdirSync(path.join(GRAV_BASE, g.slug), { recursive: true });
+  fs.writeFileSync(path.join(GRAV_BASE, g.slug, "index.html"), gravuraPagina(g));
+}
+
 const lastmod = cat.gerado_em.slice(0, 10);
 const daVitrine = [
   `${URL_BASE}/`,
@@ -630,9 +703,9 @@ const daVitrine = [
   ...cat.produtos.map((p) => `${URL_BASE}/p/${p.slug}/`),
 ];
 // Só entra no sitemap o que o robots deixa indexar. Ver VITRINE_INDEXAVEL.
-const publicas = ["https://nimbuswear.com.br/", ...(VITRINE_INDEXAVEL ? daVitrine : [])];
+const publicas = ["https://nimbuswear.com.br/", `${GRAV_URL}/`, ...GRAVURAS.map((g) => `${GRAV_URL}/${g.slug}/`), ...(VITRINE_INDEXAVEL ? daVitrine : [])];
 fs.writeFileSync(path.join(RAIZ, "public/sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${u.startsWith(GRAV_URL) ? GRAV_LASTMOD : lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
 fs.writeFileSync(path.join(RAIZ, "public/robots.txt"),
   `User-agent: *\nAllow: /\nDisallow: /loja/gates/\nDisallow: /loja/teste-carrinho/\nDisallow: /loja-preview/\n${VITRINE_INDEXAVEL ? "" : "Disallow: /loja/\n"}\nSitemap: https://nimbuswear.com.br/sitemap.xml\n`);
 console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/ · sitemap com ${publicas.length} URLs`);

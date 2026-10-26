@@ -639,3 +639,15 @@
 
 /* O aviso de tamanho vira estado de erro visível, não só texto solto. */
 .tamanhos[data-erro] { outline: 2px solid #b3261e; outline-offset: 6px; border-radius: 8px; }
+
+/* Páginas /gravuras/ (26/10/2026): ficha de origem e grade das gravuras. */
+.ficha { display: grid; grid-template-columns: max-content 1fr; gap: 0.35em 1.2em; margin: 0 0 1.4em; font-size: 0.95rem; }
+.ficha dt { font-weight: 600; color: var(--deep); }
+.ficha dd { margin: 0; }
+.gravura__simulacao { margin: 1.2em 0; max-width: 26em; }
+.gravura__simulacao img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.gravura__simulacao figcaption { font-size: 0.8rem; color: var(--muted, #5b6b7a); margin-top: 0.5em; }
+.gravuras { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.4em; margin: 1.6em 0; }
+.gravuras a { display: grid; gap: 0.4em; color: inherit; text-decoration: none; }
+.gravuras img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; background: #efe9df; }
+.gravuras span { font-size: 0.85rem; color: var(--muted, #5b6b7a); }
