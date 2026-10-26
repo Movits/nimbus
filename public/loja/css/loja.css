@@ -657,6 +657,12 @@
 .natal__fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.8em; margin: 0.8em 0; }
 .natal__fotos img { width: 100%; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; display: block; background: #e8eef4; }
 .natal__fotos figcaption { font-size: 0.75rem; color: var(--muted, #5b6b7a); margin-top: 0.35em; }
+.natal .medidas { width: 100%; max-width: 30rem; border-collapse: collapse; margin: 0.4em 0 1em; font-size: 0.88rem; }
+.natal .medidas caption { caption-side: top; text-align: left; font-size: 0.78rem; color: #5b6779; padding-bottom: 0.4em; }
+.natal .medidas th, .natal .medidas td { padding: 0.45em 0.6em; border-bottom: 1px solid rgba(27, 39, 51, 0.12); text-align: left; }
+.natal .medidas thead th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: #5b6779; }
+.natal .medidas tbody th { font-weight: 600; color: #1b2733; }
+.natal .medidas td { font-variant-numeric: tabular-nums; color: #415061; }
 .cartao__form { display: grid; gap: 0.8em; max-width: 30em; margin: 1.2em 0; }
 .cartao__form label { display: grid; gap: 0.3em; font-weight: 600; font-size: 0.9rem; }
 .cartao__form input, .cartao__form textarea, .cartao__form select { font: inherit; padding: 0.6em 0.7em; border: 1px solid rgba(27, 39, 51, 0.25); border-radius: 8px; background: #fff; }

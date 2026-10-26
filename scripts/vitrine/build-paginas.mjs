@@ -634,12 +634,16 @@ const NATAL_URL = "https://nimbuswear.com.br/natal";
 const avisoNatal = (peca) => peca.compra
   ? `<p><a class="btn btn--primary" href="${esc(peca.compra)}">Comprar</a></p>`
   : `<p class="note">As vendas abrem em breve. Para ser avisado, escreva para <a href="mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent(`Aviso de Natal: ${peca.nome}`)}">nimbuswearbr@gmail.com</a>.</p>`;
+// Medidas da tabela da gráfica (tórax e comprimento, em cm), as mesmas que a
+// página promete a quem compra com tamanho em aberto.
+const natalMedidas = (pc) => pc.medidas ? `<table class="medidas"><caption>Medidas em cm, pela tabela da gráfica. A amostra das fotos é tamanho G.</caption><thead><tr><th scope="col">Tamanho</th><th scope="col">Tórax</th><th scope="col">Comprimento</th></tr></thead><tbody>${pc.medidas.map(([t, l, c]) => `<tr><th scope="row">${esc(t)}</th><td>${esc(l)}</td><td>${esc(c)}</td></tr>`).join("")}</tbody></table>${pc.notaMedidas ? `<p class="note">${esc(pc.notaMedidas)}</p>` : ""}` : "";
 const natalPeca = (pc) => `
     <article class="natal__peca" id="${esc(pc.slug)}">
       <h2>${esc(pc.nome)}</h2>
       <div class="natal__fotos">${pc.fotos.map(([f, alt]) => `<figure><img src="/natal/img/${esc(f)}.webp" alt="${esc(alt)}" loading="lazy"><figcaption>${esc(alt)}. Quadro do vídeo real.</figcaption></figure>`).join("")}</div>
       <p><b>${esc(pc.preco)}</b>, ou ${esc(pc.pix)} no Pix. ${esc(pc.grade[0].toUpperCase() + pc.grade.slice(1))}. ${esc(pc.material[0].toUpperCase() + pc.material.slice(1))}.</p>
       <p>${esc(pc.estampa[0].toUpperCase() + pc.estampa.slice(1))}. ${esc(pc.diferenca)}</p>
+      ${natalMedidas(pc)}
       ${avisoNatal(pc)}
     </article>`;
 const natalPagina = () => `${head("Natal 2026: as peças que você vê antes de comprar | NIMBUS", "Neste Natal a NIMBUS vende só as três peças que a gráfica já estampou para nós: São Miguel Arcanjo na Boxy azul-marinho, as Asas na Oversized branca e Nossa Senhora Aparecida no moletom. Vídeo real, tamanho em aberto para presente.", {
@@ -656,6 +660,7 @@ ${header()}
     <p>No Apocalipse (12,7-9), Miguel e os seus anjos lutam contra o dragão, que o texto chama de Diabo e Satanás, e o expulsam do céu. Na estampa, o arcanjo vence o demônio com a espada erguida.</p>
     <h2>Para presente</h2>
     <p>Não sabe o tamanho? Escolha tamanho em aberto: você abre o <a href="/natal/cartao/">cartão digital</a> com a história da peça e a sua dedicatória, imprime ou manda no WhatsApp, e quem ganhou escolhe o tamanho por e-mail até 31/01/2027.</p>
+    <p>Se preferir acertar já, meça uma camiseta ou um moletom que a pessoa usa, deitado na mesa, e compare com a tabela de cada peça.</p>
     <h2>Entrega no Natal</h2>
     <p>Pedido pago até 01/12 em São Paulo, Rio de Janeiro, Belo Horizonte, Brasília e Porto Alegre, ou até 24/11 nas outras cidades, tem entrega prevista até 18/12 nessas capitais e em Salvador e até 23/12 no resto do Brasil, menos o Norte, onde o prazo aparece antes de pagar. Se o rastreio não mostrar a tentativa de entrega até 23/12, devolvemos R$20 no Pix.</p>
     <p>Frete grátis fora da região Norte, onde o frete aparece antes de pagar. Duas peças no mesmo pedido saem com R$20 a menos em cada. Não fazemos Black Friday: estes preços valem até o Natal.</p>
