@@ -10,6 +10,11 @@ const img = (file: string) => `${base}img/${file}`
 // (loja.nimbuswear.com.br) é só o motor de carrinho e checkout; nenhum CTA da
 // landing aponta mais direto pra ela.
 export const STORE_URL = '/loja/'
+// Os CTAs da landing levam à oferta de Natal (26/10/2026): só as três peças que
+// a gráfica já estampou como amostra, com vídeo real. Foi a oferta que levou 10
+// de 100 compradores simulados no painel; enquanto os produtos não existem na
+// Nuvemshop, a página /natal/ oferece o aviso de abertura por e-mail.
+export const CTA_URL = '/natal/'
 
 export const ASSETS = {
   heroDesktop: img('hero-desktop.webp'),
@@ -40,8 +45,8 @@ export const SECTION_COUNT = 6
 export const COPY = {
   hero: {
     subtitle: "Streetwear católico premium. Acima de tudo.",
-    offer: "Camisetas a partir de R$149,90, feitas no Brasil. Três coleções: STREET, RELÍQUIA e NUVEM.",
-    cta: 'Escolher a sua peça',
+    offer: "Natal 2026: só as peças que você pode ver antes de comprar. São Miguel Arcanjo, as Asas e Nossa Senhora Aparecida.",
+    cta: 'Ver as peças de Natal',
   },
   manifesto: {
     title: 'Entre o concreto e o céu.',
@@ -61,8 +66,8 @@ export const COPY = {
     kicker: 'Impacto',
     title: "Acima de tudo, o próximo.",
     body: "10% do lucro de cada pedido vai para um projeto social. Quem escolhe é você, no checkout. O repasse é mensal e o comprovante fica publicado.",
-    outroNote: "Se preferir outro projeto, escreva o nome no checkout: a NIMBUS verifica se a obra é real e apoia.",
-    cta: 'Comprar e apoiar',
+    outroNote: "As obras acima são sugestões de quem admiramos, sem parceria com a NIMBUS: o repasse é uma doação em nome dos clientes. Se preferir outro projeto, escreva o nome no checkout: a NIMBUS verifica se a obra é real e apoia.",
+    cta: 'Ver as peças de Natal',
   },
   footer: {
     trust: ["Feito no Brasil, para você", "Pagamento seguro: Pix, cartão e boleto", "10% do lucro doado ao projeto que você escolhe"],

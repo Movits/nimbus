@@ -1,0 +1,78 @@
+{
+  "atualizado": "2026-10-26",
+  "_leia": "Gravuras de época da NIMBUS: dados públicos de cada imagem (autor, ano, acervo, inventário, licença, link do original) para as páginas /gravuras/. Fonte: nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/arquivos/FONTES.json (n51, n63, n61, n50), conferida em 26/10/2026. As imagens em public/gravuras/img/ são o ORIGINAL do museu (domínio público ou CC0), reduzido para a web, e a simulação digital da camiseta; o arquivo de impressão fica no repositório privado.",
+  "gravuras": [
+    {
+      "slug": "menino-jesus-ihs-wierix",
+      "num": "n51",
+      "titulo": "Menino Jesus sobre o monograma IHS",
+      "autor": "Hieronymus Wierix (Antuérpia, 1553 a 1619)",
+      "ano": "por volta de 1590 a 1615",
+      "tecnica": "gravura em metal",
+      "acervo": "Rijksmuseum, Amsterdã",
+      "inventario": "RP-P-OB-66.867",
+      "licenca": "CC0 (sem restrição de uso)",
+      "credito": "",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Christuskind_staand_op_monogram_Aanbidding_van_het_Christuskind_%28serietitel%29%2C_RP-P-OB-66.867.jpg",
+      "liturgia": "Natal e a festa do Santíssimo Nome de Jesus (3 de janeiro)",
+      "texto": [
+        "IHS são as três primeiras letras do nome de Jesus em grego, escritas com letras latinas. A Companhia de Jesus fez do monograma o seu emblema.",
+        "Nesta estampa de dedicatória, o Menino Jesus está de pé sobre as letras, dentro de uma oval de raios, com quatro jesuítas em oração nos cantos. A inscrição embaixo dedica a gravura a Cláudio Aquaviva, superior geral da Companhia de Jesus."
+      ]
+    },
+    {
+      "slug": "cor-iesu-amanti-sacrum-wierix",
+      "num": "n63",
+      "titulo": "Cor Iesu amanti sacrum",
+      "autor": "Anton Wierix II (Antuérpia, morto em 1604)",
+      "ano": "por volta de 1600",
+      "tecnica": "gravura em metal",
+      "acervo": "National Gallery of Victoria, Melbourne",
+      "inventario": "",
+      "licenca": "domínio público",
+      "credito": "",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Anton_WIERIX_II_Titlepage_for_Cor_Iesu_amanti_sacrum_%28The_human_heart_vanquished_by_the_Infant%29_NGV_2026-01-12.jpg",
+      "liturgia": "o ano inteiro",
+      "texto": [
+        "É a folha de rosto de uma série de gravuras de Anton Wierix sobre o coração humano que se abre a Jesus e passa a ser a casa dele. Não é o Sagrado Coração de Jesus: é o coração do fiel, oferecido a Ele.",
+        "O título em latim está gravado dentro do próprio coração. No alto, o monograma IHS em raios; embaixo, fiéis abraçam o coração."
+      ]
+    },
+    {
+      "slug": "cristo-coroado-de-espinhos-huret",
+      "num": "n61",
+      "titulo": "Cristo coroado de espinhos, Rei da Paz",
+      "autor": "Grégoire Huret (Lyon, 1606, a Paris, 1670)",
+      "ano": "século XVII",
+      "tecnica": "gravura em metal",
+      "acervo": "The Metropolitan Museum of Art, Nova York",
+      "inventario": "objeto 645136",
+      "licenca": "CC0 (Open Access do Met)",
+      "credito": "",
+      "original": "https://images.metmuseum.org/CRDImages/dp/original/DP836239.jpg",
+      "liturgia": "Quaresma e Semana Santa, e o ano inteiro",
+      "texto": [
+        "Busto de Cristo com a coroa de espinhos, numa moldura oval. Em volta, gravado em latim: Jesus Cristo, Salvador do mundo, Rei da Paz.",
+        "Na base, a Carta aos Efésios (2,17): veio anunciar a paz aos que estavam longe e paz aos que estavam perto."
+      ]
+    },
+    {
+      "slug": "missal-de-meaux-trindade-le-brun",
+      "num": "n50",
+      "titulo": "Missal de Meaux: a Santíssima Trindade",
+      "autor": "desenho de Charles Le Brun, gravura de Gilles Rousselet",
+      "ano": "1642",
+      "tecnica": "gravura em metal",
+      "acervo": "Rijksmuseum, Amsterdã",
+      "inventario": "RP-P-OB-72.728",
+      "licenca": "CC0 (sem restrição de uso)",
+      "credito": "",
+      "original": "https://upload.wikimedia.org/wikipedia/commons/c/ca/De_heilige_%C3%89tienne_en_Denis%2C_met_erboven_de_Drie-eenheid_op_een_wolk%2C_RP-P-OB-72.728.jpg",
+      "liturgia": "Crisma e a Solenidade da Santíssima Trindade",
+      "texto": [
+        "Folha de rosto do missal da diocese de Meaux, na França, impresso em Paris em 1642. No alto, a Santíssima Trindade sobre as nuvens: o Pai, o Filho com a cruz e, entre os dois, a pomba do Espírito Santo.",
+        "Embaixo, Santo Estêvão e São Dionísio ladeiam o pedestal com o título do livro."
+      ]
+    }
+  ]
+}

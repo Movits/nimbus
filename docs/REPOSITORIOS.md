@@ -15,8 +15,13 @@ nimbus-brain/    PRIVADO   github.com/Movits/nimbus-brain
 aninhado em `C:\Users\rober\Nimbus\Nimbus brain` (nome com espaço, gitignorado
 do repo público), e `C:\Users\rober\nimbus-brain` é uma **junction** criada em
 03/08 apontando para ele, para os scripts que esperam repos lado a lado.
-⚠️ **Nunca rode `git clean -fdx` no repo público** — apagaria o vault — e não
-clone por cima da junction.
+⚠️ **Nunca apague a junction com `Remove-Item -Recurse`**: no PowerShell 5.1
+isso pode apagar o conteúdo do vault. Para tirar a junction, `cmd /c rmdir
+C:\Users\rober\nimbus-brain`. Não clone por cima dela. Correção de 26/10/2026:
+o aviso antigo dizia que `git clean -fdx` no público apagaria o vault; não
+apaga, porque o git se recusa a mexer em repositório aninhado sem um segundo
+`-f` ([git-clean](https://git-scm.com/docs/git-clean), opção `--force`). E
+`git clean` está bloqueado nas permissões do projeto (`.claude/settings.json`).
 
 Numa máquina nova, clone os três **lado a lado**. Os scripts procuram os assets
 em `../nimbus-assets` ou no caminho da variável `NIMBUS_ASSETS`, e o

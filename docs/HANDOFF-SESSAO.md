@@ -29,8 +29,9 @@ São **três** repositórios. O layout depende da máquina:
 `C:\Users\rober\Nimbus`, os assets em `C:\Users\rober\nimbus-assets`, e o brain
 é o vault Obsidian **aninhado** em `C:\Users\rober\Nimbus\Nimbus brain`
 (repo git próprio, gitignorado do público; `C:\Users\rober\nimbus-brain` é uma
-junction para ele). ⚠️ **Nunca `git clean -fdx` no público** — apagaria o
-vault — e não clone por cima da junction. Um hook de sessão confere a
+junction para ele). ⚠️ **Nunca apague a junction com `Remove-Item -Recurse`**
+(pode levar o vault junto; use `cmd /c rmdir`) e não clone por cima dela. O
+`git clean -fdx` não apaga o vault: o git protege repo aninhado (só `-ffdx`). Um hook de sessão confere a
 sincronia dos três ao abrir; se algo estiver atrás, `git pull --ff-only`.
 
 **Numa máquina nova, sem os repositórios:**

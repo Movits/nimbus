@@ -43,8 +43,11 @@ C:\Users\rober\nimbus-brain          junction → o vault aninhado (para scripts
 ```
 
 ⚠️ O brain **não é um clone irmão** nesta máquina: mora DENTRO do repo público.
-**Nunca rode `git clean -fdx` no público** (apagaria o segundo cérebro) e não
-clone por cima da junction. Máquina nova sem o vault: aí sim, clone os três
+O perigo real é a **junction** `C:\Users\rober\nimbus-brain`: apagá-la com
+`Remove-Item -Recurse` (PowerShell 5.1) pode apagar o conteúdo do vault; para
+tirar a junction use `cmd /c rmdir`. Não clone por cima dela. O `git clean -fdx`
+não apaga o vault (o git protege repositório aninhado; só `-ffdx` apagaria) e
+`git clean` está bloqueado no `.claude/settings.json` (conferido em 26/10/2026). Máquina nova sem o vault: aí sim, clone os três
 lado a lado (`docs/REPOSITORIOS.md`).
 
 Os scripts acham o privado em `../nimbus-assets` ou em `NIMBUS_ASSETS`.

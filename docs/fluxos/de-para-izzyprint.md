@@ -384,6 +384,29 @@ o canguru deles é ~20% mais comprido. Re-medir antes do primeiro moletom.
 
 ---
 
+## 4b. Natal 2026: as três peças da oferta e o tamanho em aberto
+
+Acrescentado em 26/10/2026 (oferta em `/natal/`, dados em
+`scripts/vitrine/natal.json`). As três peças são as três amostras de agosto:
+**o jeito mais seguro de repassar é repetir o pedido da amostra na conta da
+IzzyPrint**, com uma diferença só na Boxy.
+
+| Peça NIMBUS | Peça IzzyPrint | Arte | O que muda em relação à amostra |
+|---|---|---|---|
+| Boxy azul-marinho, São Miguel Arcanjo (P a EG) | Camiseta Boxy, azul-marinho | `nimbus-assets/designs/acervo/STREET/40x50/sao-miguel-spray.png`, costas, 40 x 50 cm | **sem a nuvem pequena do peito**; arte com o dourado acertado depois da amostra |
+| Oversized branca, Asas (P a G1) | Camiseta Oversized Street, branca | `nimbus-assets/designs/acervo/NUVEM/asas-livro.png`, costas, 40 x 50 cm, e a frente da amostra (NIMBUS em nuvem com auréola) | nada |
+| Moletom Canguru preto, Nossa Senhora Aparecida (P a G1) | Moletom Canguru, preto | `nimbus-assets/designs/acervo/STREET/40x50/aparecida-stencil.png`, costas, no tamanho da amostra | arte com o dourado acertado depois da amostra |
+
+**Pedido com "tamanho em aberto" (presente).** Quem compra recebe o cartão
+digital em `/natal/cartao/` e quem ganhou escolhe o tamanho por e-mail até
+31/01/2027. **Esse pedido não vai para a IzzyPrint na hora:** fica pago e
+"Preparando seu pedido" na Nuvemshop até o e-mail com o tamanho chegar, e só
+então segue o checklist da seção 5 com o tamanho escolhido. Nada vai dentro da
+caixa (o cartão é impresso ou mandado por quem comprou). Se 31/01 passar sem
+resposta, escrever para quem comprou antes de produzir qualquer coisa. Quando a
+integração ligar (5 peças por dia), a variante "tamanho em aberto" não tem par
+na IzzyPrint e continua manual.
+
 ## 5. Checklist de repasse manual
 
 Do jeito que se usa às 23h. Só entra aqui pedido **pago e aprovado**.

@@ -370,7 +370,11 @@ const { report, rows } = run();
 const outArg = process.argv.indexOf("--json");
 const outPath =
   outArg > -1 ? process.argv[outArg + 1] : path.join(HERE, "validation-report.json");
-fs.writeFileSync(outPath, JSON.stringify({ report, sample: rows.slice(0, 40) }, null, 2));
+// O carimbo de data fica só no console: gravado no arquivo versionado, ele
+// sujava a árvore a cada rodada sem nada ter mudado na medição.
+const { generatedAt, ...estavel } = report;
+fs.writeFileSync(outPath, JSON.stringify({ report: estavel, sample: rows.slice(0, 40) }, null, 2));
+console.log(`gerado em ${generatedAt}`);
 
 console.log(JSON.stringify(report, null, 2));
 console.log(`\ncasos: ${rows.length} | relatorio: ${outPath}`);

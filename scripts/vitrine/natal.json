@@ -1,0 +1,166 @@
+{
+  "atualizado": "2026-10-26",
+  "_leia": "Oferta de Natal 2026 (rodada 6a do painel de compradores, 10 de 100 com esta oferta): só as três peças que a gráfica já estampou como amostra, iguais a ela, com as diferenças ditas. Preços, grades e diferenças conferidos pelo checador de promessas em 26/10/2026 (estrategia/r6a). Enquanto os produtos não existem na Nuvemshop, a página convida a pedir aviso por e-mail; com os produtos no ar, preencha 'compra' de cada peça (link da página do produto).",
+  "pecas": [
+    {
+      "slug": "boxy-sao-miguel",
+      "nome": "Camiseta Boxy azul-marinho, São Miguel Arcanjo",
+      "preco": "R$179,90",
+      "pix": "R$170,91",
+      "grade": "do P ao EG",
+      "material": "100% algodão penteado, fio 26.1, 200 g/m², pela ficha da gráfica",
+      "estampa": "São Miguel Arcanjo vencendo o demônio, em spray, nas costas, na área de 40 x 50 cm",
+      "diferenca": "Sem a nuvem pequena que a amostra tem no peito, e com o dourado da arte acertado no arquivo depois da amostra.",
+      "fotos": [
+        [
+          "sao-miguel-na-impressora",
+          "A amostra do São Miguel na mesa da impressora, na gráfica em São Paulo, em agosto"
+        ],
+        [
+          "sao-miguel-amostra",
+          "A amostra do São Miguel aberta em casa, em Brasília"
+        ]
+      ],
+      "compra": "",
+      "medidas": [
+        [
+          "P",
+          "57 a 59",
+          "64 a 66"
+        ],
+        [
+          "M",
+          "59 a 61",
+          "66 a 68"
+        ],
+        [
+          "G",
+          "61 a 63",
+          "68 a 70"
+        ],
+        [
+          "GG",
+          "61 a 63",
+          "70 a 72"
+        ],
+        [
+          "EG",
+          "63 a 65",
+          "72 a 74"
+        ]
+      ]
+    },
+    {
+      "slug": "oversized-asas",
+      "nome": "Camiseta Oversized branca, Asas",
+      "preco": "R$199,90",
+      "pix": "R$189,91",
+      "grade": "do P ao G1",
+      "material": "100% algodão penteado, pela ficha da gráfica, que publica 200 g/m² numa página e 180 g/m² noutra; pedimos o número por escrito",
+      "estampa": "asas nas costas, na área de 40 x 50 cm, e NIMBUS em nuvem com auréola no peito",
+      "diferenca": "Repete o modelo, a cor, a arte e o lugar da estampa da amostra.",
+      "fotos": [
+        [
+          "asas-na-impressora",
+          "As asas na mesa da impressora, na gráfica em São Paulo, em agosto"
+        ],
+        [
+          "asas-amostra",
+          "A amostra das asas aberta em casa"
+        ],
+        [
+          "nimbus-nuvem-amostra",
+          "A frente da amostra, com NIMBUS em nuvem"
+        ]
+      ],
+      "compra": "",
+      "medidas": [
+        [
+          "P",
+          "55 a 58",
+          "72 a 74"
+        ],
+        [
+          "M",
+          "58 a 60",
+          "73 a 75"
+        ],
+        [
+          "G",
+          "60 a 62",
+          "75 a 77"
+        ],
+        [
+          "GG",
+          "62 a 64",
+          "76 a 78"
+        ],
+        [
+          "EG",
+          "64 a 66",
+          "78 a 80"
+        ],
+        [
+          "G1",
+          "66 a 68",
+          "80 a 82"
+        ]
+      ]
+    },
+    {
+      "slug": "canguru-aparecida",
+      "nome": "Moletom Canguru preto, Nossa Senhora Aparecida",
+      "preco": "R$329,90",
+      "pix": "R$313,41",
+      "grade": "do P ao G1",
+      "material": "96% algodão e 4% elastano, moletom de dois cabos, pela ficha da gráfica, que publica 300 g numa página e 260 g noutra, sem dizer se é por metro quadrado; pedimos o número por escrito",
+      "estampa": "Nossa Senhora Aparecida sobre a lua dourada, nas costas",
+      "diferenca": "Com o dourado da arte acertado no arquivo depois da amostra.",
+      "fotos": [
+        [
+          "aparecida-na-impressora",
+          "A amostra da Aparecida na mesa da impressora, em agosto; a mancha esverdeada na lua foi corrigida no arquivo depois"
+        ],
+        [
+          "aparecida-amostra",
+          "A amostra da Aparecida aberta em casa"
+        ]
+      ],
+      "compra": "",
+      "medidas": [
+        [
+          "P",
+          "54 a 56",
+          "73 a 75"
+        ],
+        [
+          "M",
+          "56 a 58",
+          "75 a 77"
+        ],
+        [
+          "G",
+          "58 a 60",
+          "77 a 79"
+        ],
+        [
+          "GG",
+          "60 a 62",
+          "79 a 82"
+        ],
+        [
+          "EG",
+          "62 a 65",
+          "82 a 85"
+        ],
+        [
+          "G1",
+          "68 a 71",
+          "72 a 75"
+        ]
+      ],
+      "notaMedidas": "No G1, a tabela da gráfica traz o comprimento menor que o do P; pedimos a confirmação antes de produzir."
+    }
+  ],
+  "_medidas": "Malha e medidas lidas na API pública da IzzyPrint em 26/10/2026 (produtos 12610 Camiseta Boxy, 12145 Camiseta Oversized Street e 12650 Moletom Canguru, mais as versões personalizáveis 16200, 16206 e 16196). Onde as duas páginas da gráfica discordam, a página diz os dois números."
+}

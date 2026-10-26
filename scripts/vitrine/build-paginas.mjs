@@ -59,7 +59,7 @@ const head = (titulo, descricao, opts = {}) => `<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titulo)}</title>
 <meta name="description" content="${esc(descricao)}">
-${VITRINE_INDEXAVEL && !opts.semIndice ? "" : '<meta name="robots" content="noindex">\n'}<meta property="og:title" content="${esc(titulo)}">
+${(VITRINE_INDEXAVEL || opts.indexar) && !opts.semIndice ? "" : '<meta name="robots" content="noindex">\n'}<meta property="og:title" content="${esc(titulo)}">
 <meta property="og:description" content="${esc(descricao)}">
 <meta property="og:type" content="${opts.ogType || "website"}">
 <meta property="og:site_name" content="NIMBUS">
@@ -474,8 +474,8 @@ const INSTITUCIONAIS = {
     <p>A NIMBUS é pequena. Sou eu e quem caminha comigo. Se você chegou até aqui, já faz parte.</p>
     <p>Acima de tudo, obrigado.</p>
     <p><b>Roberto, fundador da NIMBUS</b></p>
-    <p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
-    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>`,
+    ${VITRINE_ABERTA ? `<p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`,
     { arquivo: "manifesto-ceu-1200.webp", alt: "Curva de concreto branco modernista apontando para um céu azul com nuvens", w: 1200, h: 1600, legenda: "Entre o concreto e o céu." }],
   impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
     <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe no checkout. Esta página explica o que isso significa, sem letra miúda.</p>
@@ -494,10 +494,10 @@ const INSTITUCIONAIS = {
     <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
     <h2>Diário de Repasses</h2>
     <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
-    <p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
-    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>`],
-  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por 90 dias e troca de tamanho tratada com a gente.", `
-    <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. A nossa política é simples, segue a lei e cobre os três casos possíveis, sem pegadinha.</p>
+    ${VITRINE_ABERTA ? `<p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : `<p>O diário abre com as primeiras vendas.</p>`}`],
+  trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, que vale também para tamanho, e defeito coberto por 90 dias.", `
+    <p class="lede">A nossa política é simples, segue a lei e cobre todos os casos, sem pegadinha.</p>
     <h2>Mudou de ideia? Você tem 7 dias</h2>
     <p>A peça chegou perfeita, mas não era o que você imaginava. Você pode desistir da compra em até 7 dias corridos após o recebimento, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor. Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido e devolvemos tudo o que você pagou, incluindo o frete.</p>
     <h2>Chegou com problema? Avise assim que receber</h2>
@@ -505,25 +505,24 @@ const INSTITUCIONAIS = {
     <h2>O problema apareceu depois?</h2>
     <p>Estampa que solta ou tecido que falha nas primeiras lavagens, seguindo os cuidados da etiqueta, também é defeito de fabricação. Nesse caso os 90 dias contam a partir do dia em que o problema apareceu. Mesmo caminho: foto e número do pedido por e-mail.</p>
     <h2>Errou o tamanho?</h2>
-    <p>Escreva para a gente em até 7 dias do recebimento, com o número do pedido e o tamanho certo. Como cada peça é feita para você, tratamos caso a caso, e a gente resolve junto. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
+    <p>O direito de desistir em 7 dias também vale para o tamanho: escreva em até 7 dias do recebimento, com o número do pedido, e devolvemos tudo o que você pagou, frete incluído. Se preferir o tamanho certo no lugar do dinheiro, diga no mesmo e-mail e a gente combina. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
     <h2>Como pedir</h2>
     <p>Um e-mail resolve tudo: <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto. Respondemos rápido.</p>`],
-  envios: ["Envios e prazos", "Prazos de entrega da NIMBUS por região do Brasil, com produção incluída e rastreio.", `
-    <p class="lede">Cada peça é feita no Brasil, para você. Os prazos abaixo já incluem a produção, contados a partir da confirmação do pagamento.</p>
+  envios: ["Envios e prazos", "Prazo total de entrega da NIMBUS, do pagamento confirmado até a sua casa, e como funciona o rastreio.", `
+    <p class="lede">Os prazos abaixo são o total, contados do pagamento confirmado até a entrega.</p>
     <h2>Prazos por região</h2>
     <ul>
-      <li>São Paulo: 3 a 5 dias úteis</li>
-      <li>Sudeste: 4 a 6 dias úteis</li>
-      <li>Sul e Centro-Oeste: 5 a 7 dias úteis</li>
-      <li>Norte e Nordeste: 6 a 12 dias úteis</li>
+      <li>São Paulo, Rio de Janeiro, Belo Horizonte, Brasília e Porto Alegre: até 12 dias úteis</li>
+      <li>Salvador: até 13 dias úteis</li>
+      <li>Outras cidades: o prazo do seu CEP aparece no checkout, antes de pagar</li>
     </ul>
-    <p class="note">O prazo exato para o seu CEP aparece no checkout e prevalece sobre as faixas acima.</p>
+    <p class="note">Conta feita em 26/10/2026 com os prazos dos Correios (PAC) cotados para essas capitais, mais a nossa folga. O prazo do checkout para o seu CEP prevalece.</p>
     <h2>Rastreio</h2>
     <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. O pedido também fica na sua conta da loja: <a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a>.</p>
     <h2>Frete grátis</h2>
     <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil. No checkout, no campo mensagem do pedido, escreva qual projeto recebe os 10%.</p>
     <h2>Quanto custa o frete</h2>
-    <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90 na maior parte do Brasil. O valor exato do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
+    <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90. O valor do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>Quem responde pelos seus dados</h2>
@@ -585,7 +584,7 @@ const stub = (rel) => `<!DOCTYPE html>
 </head>
 <body><p>A vitrine mudou de endereço. <a href="${PREFIXO}/${rel}">Continuar para a loja</a>.</p></body></html>`;
 const ANTIGO = path.join(RAIZ, "public/loja-preview");
-const relForStub = ["", "gates/", "teste-carrinho/",
+const relForStub = ["", "gates/",
   ...cat.colecoes.map((c) => `c/${c.id}/`),
   ...cat.produtos.map((p) => `p/${p.slug}/`)];
 for (const rel of relForStub) {
@@ -602,10 +601,17 @@ for (const [slug, [titulo, descricao, corpo, midia]] of Object.entries(INSTITUCI
 }
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
-for (const c of cat.colecoes) {
-  const dir = path.join(BASE, "c", c.id);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), colecao(c));
+// Com a vitrine fechada, as páginas de coleção não nascem (o teste de 20/10
+// achou /loja/c/* no ar, vazias e com preço na meta, porque o deploy as gerava
+// mesmo fechado). Sobra de uma geração anterior é apagada.
+if (VITRINE_ABERTA) {
+  for (const c of cat.colecoes) {
+    const dir = path.join(BASE, "c", c.id);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, "index.html"), colecao(c));
+  }
+} else {
+  fs.rmSync(path.join(BASE, "c"), { recursive: true, force: true });
 }
 for (const p of cat.produtos) {
   const dir = path.join(BASE, "p", p.slug);
@@ -615,6 +621,175 @@ for (const p of cat.produtos) {
 
 // sitemap + robots (P1-7): só as páginas públicas. Gates, teste-carrinho e os
 // stubs de /loja-preview/ ficam de fora (todos já levam noindex no próprio HTML).
+/* ---------------------------------------------------------------- natal */
+// Oferta de Natal 2026 (26/10/2026): só as três peças que a gráfica já
+// estampou como amostra, com foto e vídeo reais. Foi a oferta que levou 10 de
+// 100 compradores simulados no painel do founder-skill (rodada 6a); as que
+// vendiam peça sem foto real ficaram entre 0 e 4. Dados em natal.json. A página
+// entra no índice; enquanto os produtos não existem na Nuvemshop, o botão é o
+// aviso por e-mail, e com o link de compra de cada peça vira o botão de compra.
+const NATAL = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "natal.json"), "utf-8"));
+const NATAL_BASE = path.join(RAIZ, "public/natal");
+const NATAL_URL = "https://nimbuswear.com.br/natal";
+const avisoNatal = (peca) => peca.compra
+  ? `<p><a class="btn btn--primary" href="${esc(peca.compra)}">Comprar</a></p>`
+  : `<p class="note">As vendas abrem em breve. Para ser avisado, escreva para <a href="mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent(`Aviso de Natal: ${peca.nome}`)}">nimbuswearbr@gmail.com</a>.</p>`;
+// Medidas da tabela da gráfica (tórax e comprimento, em cm), as mesmas que a
+// página promete a quem compra com tamanho em aberto.
+const natalMedidas = (pc) => pc.medidas ? `<table class="medidas"><caption>Medidas em cm, pela tabela da gráfica. A amostra das fotos é tamanho G.</caption><thead><tr><th scope="col">Tamanho</th><th scope="col">Tórax</th><th scope="col">Comprimento</th></tr></thead><tbody>${pc.medidas.map(([t, l, c]) => `<tr><th scope="row">${esc(t)}</th><td>${esc(l)}</td><td>${esc(c)}</td></tr>`).join("")}</tbody></table>${pc.notaMedidas ? `<p class="note">${esc(pc.notaMedidas)}</p>` : ""}` : "";
+const natalPeca = (pc) => `
+    <article class="natal__peca" id="${esc(pc.slug)}">
+      <h2>${esc(pc.nome)}</h2>
+      <div class="natal__fotos">${pc.fotos.map(([f, alt]) => `<figure><img src="/natal/img/${esc(f)}.webp" alt="${esc(alt)}" loading="lazy"><figcaption>${esc(alt)}. Quadro do vídeo real.</figcaption></figure>`).join("")}</div>
+      <p><b>${esc(pc.preco)}</b>, ou ${esc(pc.pix)} no Pix. ${esc(pc.grade[0].toUpperCase() + pc.grade.slice(1))}. ${esc(pc.material[0].toUpperCase() + pc.material.slice(1))}.</p>
+      <p>${esc(pc.estampa[0].toUpperCase() + pc.estampa.slice(1))}. ${esc(pc.diferenca)}</p>
+      ${natalMedidas(pc)}
+      ${avisoNatal(pc)}
+    </article>`;
+const natalPagina = () => `${head("Natal 2026: as peças que você vê antes de comprar | NIMBUS", "Neste Natal a NIMBUS vende só as três peças que a gráfica já estampou para nós: São Miguel Arcanjo na Boxy azul-marinho, as Asas na Oversized branca e Nossa Senhora Aparecida no moletom. Vídeo real, tamanho em aberto para presente.", {
+  canonical: `${NATAL_URL}/`, indexar: true, ogImage: `${NATAL_URL}/img/natal-og.jpg`,
+})}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional natal">
+    <h1 class="display display--md">Natal 2026: só o que você pode ver antes de comprar</h1>
+    <p class="lede">Neste Natal, a NIMBUS vende só as três peças que a nossa gráfica de São Paulo estampou para nós em agosto e que estão aqui em Brasília. As fotos desta página são quadros do vídeo real da gráfica e da abertura das amostras.</p>
+    <p class="note">As fotos das amostras com régua, vestidas e depois de 10 lavagens estão sendo feitas e entram aqui assim que ficarem prontas, publicadas como saírem.</p>
+    ${NATAL.pecas.map(natalPeca).join("\n")}
+    <h2>Por que São Miguel</h2>
+    <p>No Apocalipse (12,7-9), Miguel e os seus anjos lutam contra o dragão, que o texto chama de Diabo e Satanás, e o expulsam do céu. Na estampa, o arcanjo vence o demônio com a espada erguida.</p>
+    <h2>Para presente</h2>
+    <p>Não sabe o tamanho? Escolha tamanho em aberto: você abre o <a href="/natal/cartao/">cartão digital</a> com a história da peça e a sua dedicatória, imprime ou manda no WhatsApp, e quem ganhou escolhe o tamanho por e-mail até 31/01/2027.</p>
+    <p>Se preferir acertar já, meça uma camiseta ou um moletom que a pessoa usa, deitado na mesa, e compare com a tabela de cada peça.</p>
+    <h2>Entrega no Natal</h2>
+    <p>Pedido pago até 01/12 em São Paulo, Rio de Janeiro, Belo Horizonte, Brasília e Porto Alegre, ou até 24/11 nas outras cidades, tem entrega prevista até 18/12 nessas capitais e em Salvador e até 23/12 no resto do Brasil, menos o Norte, onde o prazo aparece antes de pagar. Se o rastreio não mostrar a tentativa de entrega até 23/12, devolvemos R$20 no Pix.</p>
+    <p>Frete grátis fora da região Norte, onde o frete aparece antes de pagar. Duas peças no mesmo pedido saem com R$20 a menos em cada. Não fazemos Black Friday: estes preços valem até o Natal.</p>
+    <h2>Se não der certo</h2>
+    <p>Você pode desistir em até 7 dias depois de receber, por qualquer motivo, com tudo devolvido, frete incluído. Estampa que racha ou solta com lavagem normal é defeito: peça nova ou dinheiro de volta, com 90 dias contados de quando o problema aparecer. Detalhes em <a href="${PREFIXO}/trocas/">trocas e devoluções</a>.</p>
+    <h2>Quem somos</h2>
+    <p>Uma marca nova, ainda sem avaliações: empresa de Brasília, CNPJ 53.977.834/0001-18, pagamento pelo checkout da Nuvemshop e resposta do fundador, Roberto, por e-mail em até 1 dia útil (<a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>). Em Brasília, você vê as peças ao vivo e retira em mãos; de outra cidade, vê numa chamada de vídeo antes de pagar. É só pedir por e-mail.</p>
+  </div></section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+// O cartão do tamanho em aberto roda inteiro no navegador: nada do que se digita
+// sai do aparelho (sem formulário, sem envio, sem armazenamento).
+const natalCartao = () => `${head("Cartão de presente | NIMBUS", "Cartão digital da NIMBUS para presente com tamanho em aberto: a história da peça e a sua dedicatória, para imprimir ou mandar no WhatsApp.", { canonical: `${NATAL_URL}/cartao/` })}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    <h1 class="display display--md">Cartão de presente</h1>
+    <p class="lede">Para quem deu a peça com tamanho em aberto: escreva a dedicatória, imprima ou mande no WhatsApp. Quem ganhou escolhe o tamanho por e-mail até 31/01/2027. O que você digita fica só no seu aparelho.</p>
+    <form class="cartao__form" onsubmit="return false">
+      <label>Peça <select id="cPeca">${NATAL.pecas.map((pc) => `<option value="${esc(pc.slug)}">${esc(pc.nome)}</option>`).join("")}</select></label>
+      <label>Para <input id="cPara" maxlength="60" autocomplete="off"></label>
+      <label>Dedicatória <textarea id="cTexto" maxlength="400" rows="4"></textarea></label>
+      <label>De <input id="cDe" maxlength="60" autocomplete="off"></label>
+      <p><button type="button" class="btn btn--primary" id="cImprimir">Imprimir</button> <button type="button" class="btn btn--ghost" id="cCopiar">Copiar texto para o WhatsApp</button></p>
+    </form>
+    <div class="cartao" id="cartao">
+      <img id="cFoto" alt="">
+      <p class="cartao__para" id="vPara"></p>
+      <p class="cartao__texto" id="vTexto"></p>
+      <p class="cartao__de" id="vDe"></p>
+      <p class="cartao__peca" id="vPeca"></p>
+      <p class="cartao__como">Para escolher o tamanho, escreva para nimbuswearbr@gmail.com até 31/01/2027 com o número do pedido.</p>
+    </div>
+  </div></section>
+</main>
+${footer()}
+<script>
+(function(){var P=${JSON.stringify(Object.fromEntries(NATAL.pecas.map((pc) => [pc.slug, { nome: pc.nome, foto: pc.fotos[0][0], estampa: pc.estampa }])))};
+function $(i){return document.getElementById(i)}
+function atualiza(){var p=P[$("cPeca").value];$("cFoto").src="/natal/img/"+p.foto+".webp";$("cFoto").alt=p.nome;
+$("vPara").textContent=$("cPara").value?"Para "+$("cPara").value:"";$("vTexto").textContent=$("cTexto").value;
+$("vDe").textContent=$("cDe").value?"Com carinho, "+$("cDe").value:"";$("vPeca").textContent=p.nome+": "+p.estampa+".";}
+["cPeca","cPara","cTexto","cDe"].forEach(function(i){$(i).addEventListener("input",atualiza)});
+$("cImprimir").addEventListener("click",function(){window.print()});
+$("cCopiar").addEventListener("click",function(){var p=P[$("cPeca").value];var t=($("cPara").value?"Para "+$("cPara").value+"\\n\\n":"")+$("cTexto").value+"\\n\\n"+($("cDe").value?"Com carinho, "+$("cDe").value+"\\n\\n":"")+p.nome+".\\nPara escolher o tamanho, escreva para nimbuswearbr@gmail.com até 31/01/2027 com o número do pedido.";
+if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){$("cCopiar").textContent="Copiado"})}});
+atualiza();})();
+</script>
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+fs.mkdirSync(path.join(NATAL_BASE, "cartao"), { recursive: true });
+fs.writeFileSync(path.join(NATAL_BASE, "index.html"), natalPagina());
+fs.writeFileSync(path.join(NATAL_BASE, "cartao", "index.html"), natalCartao());
+
+/* ---------------------------------------------------------------- gravuras */
+// Páginas de origem das gravuras de época (26/10/2026). Ficam FORA de /loja/ e
+// entram no índice do Google mesmo com a vitrine fechada: são conteúdo, não
+// venda, e são o canal de aquisição sem mídia paga (quem procura a gravura
+// acha a página). Cada página diz autor, ano, acervo, inventário, licença e
+// link do original, e mostra a simulação da camiseta com o aviso de que é
+// simulação. A imagem servida é o ORIGINAL do museu reduzido; o arquivo de
+// impressão (o traço) fica só no repositório privado. Dados: gravuras.json.
+const GRAVURAS = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8")).gravuras;
+const GRAV_BASE = path.join(RAIZ, "public/gravuras");
+const GRAV_URL = "https://nimbuswear.com.br/gravuras";
+const GRAV_LASTMOD = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8")).atualizado;
+// Enquanto a Camiseta Gravura não estiver comprável na loja, a página convida a
+// pedir aviso por e-mail. Com o produto no ar, troque por { href, rotulo }.
+const GRAVURA_VENDA = null;
+const avisoGravura = (g) => GRAVURA_VENDA
+  ? `<p><a class="btn btn--primary" href="${esc(GRAVURA_VENDA.href)}">${esc(GRAVURA_VENDA.rotulo)}</a></p>`
+  : `<p>A Camiseta Gravura abre para venda em breve. Para ser avisado, escreva para <a href="mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent(`Aviso: Camiseta Gravura (${g ? g.titulo : "gravuras"})`)}">nimbuswearbr@gmail.com</a>.</p>`;
+const fichaGravura = (g) => `<dl class="ficha">
+      <dt>Autor</dt><dd>${esc(g.autor)}</dd>
+      <dt>Ano</dt><dd>${esc(g.ano)}</dd>
+      <dt>Técnica</dt><dd>${esc(g.tecnica)}</dd>
+      <dt>Acervo</dt><dd>${esc(g.acervo)}${g.inventario ? `, ${esc(g.inventario)}` : ""}</dd>
+      <dt>Licença</dt><dd>${esc(g.licenca)}</dd>
+    </dl>`;
+const gravuraPagina = (g) => `${head(`${g.titulo} | Gravuras NIMBUS`, `${g.titulo}, ${g.autor}, ${g.ano}. ${g.acervo}. A origem da imagem que a NIMBUS estampa no traço.`, {
+  canonical: `${GRAV_URL}/${g.slug}/`, indexar: true, ogType: "article", ogImage: `${GRAV_URL}/img/${g.slug}-og.jpg`,
+  jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "VisualArtwork", name: g.titulo, creator: g.autor, dateCreated: g.ano, artMedium: g.tecnica, image: g.original, license: g.licenca, isBasedOn: g.original, holdingArchive: g.acervo }),
+})}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional institucional--com-imagem">
+    <h1 class="display display--md">${esc(g.titulo)}</h1>
+    <div class="institucional__texto">
+    ${fichaGravura(g)}
+    ${g.texto.map((t) => `<p>${esc(t)}</p>`).join("\n    ")}
+    <p><b>Para:</b> ${esc(g.liturgia)}.</p>
+    <p><a href="${esc(g.original)}" rel="noopener">Ver o original do acervo em alta resolução</a>.</p>
+    <h2>Na camiseta</h2>
+    <p>A NIMBUS imprime a gravura só no traço, em azul-marinho e sem o papel de época, como um emblema de até 10 x 15 cm no peito de uma Camiseta Clássica off-white: 100% algodão penteado, 180 g/m², pela ficha da gráfica.</p>
+    <figure class="gravura__simulacao"><img src="/gravuras/img/${esc(g.slug)}-simulacao.webp" alt="Simulação digital da camiseta off-white com a gravura no peito" width="900" height="1035" loading="lazy"><figcaption>Simulação digital. Ainda não temos foto desta camiseta estampada.</figcaption></figure>
+    ${avisoGravura(g)}
+    <p><a href="/gravuras/">Todas as gravuras</a></p>
+    </div>
+    <figure class="institucional__midia"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}, ${esc(g.autor)}, ${esc(g.ano)}" loading="lazy"><figcaption>O original: ${esc(g.acervo)}${g.inventario ? `, ${esc(g.inventario)}` : ""}. ${esc(g.licenca)}.</figcaption></figure>
+  </div></section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+const gravurasIndice = () => `${head("Gravuras de época | NIMBUS", "Gravuras sacras de acervos de museus, dos séculos XVI e XVII, que a NIMBUS estampa no traço: autor, ano, museu e link do original de cada uma.", { canonical: `${GRAV_URL}/`, indexar: true, ogImage: `${GRAV_URL}/img/${GRAVURAS[0].slug}-og.jpg` })}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    <h1 class="display display--md">Gravuras de época</h1>
+    <p class="lede">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. A NIMBUS as estampa só no traço, com a origem de cada uma escrita aqui: autor, ano, acervo e o link para o original.</p>
+    <ul class="gravuras">
+      ${GRAVURAS.map((g) => `<li><a href="/gravuras/${esc(g.slug)}/"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}" loading="lazy"><b>${esc(g.titulo)}</b><span>${esc(g.autor)}, ${esc(g.ano)}</span></a></li>`).join("\n      ")}
+    </ul>
+    ${avisoGravura(null)}
+  </div></section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+fs.rmSync(path.join(GRAV_BASE, "index.html"), { force: true });
+fs.mkdirSync(GRAV_BASE, { recursive: true });
+fs.writeFileSync(path.join(GRAV_BASE, "index.html"), gravurasIndice());
+for (const g of GRAVURAS) {
+  fs.mkdirSync(path.join(GRAV_BASE, g.slug), { recursive: true });
+  fs.writeFileSync(path.join(GRAV_BASE, g.slug, "index.html"), gravuraPagina(g));
+}
+
 const lastmod = cat.gerado_em.slice(0, 10);
 const daVitrine = [
   `${URL_BASE}/`,
@@ -623,9 +798,9 @@ const daVitrine = [
   ...cat.produtos.map((p) => `${URL_BASE}/p/${p.slug}/`),
 ];
 // Só entra no sitemap o que o robots deixa indexar. Ver VITRINE_INDEXAVEL.
-const publicas = ["https://nimbuswear.com.br/", ...(VITRINE_INDEXAVEL ? daVitrine : [])];
+const publicas = ["https://nimbuswear.com.br/", `${NATAL_URL}/`, `${GRAV_URL}/`, ...GRAVURAS.map((g) => `${GRAV_URL}/${g.slug}/`), ...(VITRINE_INDEXAVEL ? daVitrine : [])];
 fs.writeFileSync(path.join(RAIZ, "public/sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${u.startsWith(GRAV_URL) ? GRAV_LASTMOD : u.startsWith(NATAL_URL) ? NATAL.atualizado : lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
 fs.writeFileSync(path.join(RAIZ, "public/robots.txt"),
   `User-agent: *\nAllow: /\nDisallow: /loja/gates/\nDisallow: /loja/teste-carrinho/\nDisallow: /loja-preview/\n${VITRINE_INDEXAVEL ? "" : "Disallow: /loja/\n"}\nSitemap: https://nimbuswear.com.br/sitemap.xml\n`);
 console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/ · sitemap com ${publicas.length} URLs`);

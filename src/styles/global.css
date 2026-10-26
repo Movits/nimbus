@@ -46,6 +46,13 @@ body {
   pointer-events: none;
 }
 
+/* fundo estático quando não há WebGL (Experience.tsx) */
+.canvas--static {
+  background-color: #dcebfa;
+  background-size: cover;
+  background-position: center;
+}
+
 /* Conteúdo (seções) rola normalmente sobre o canvas. */
 .overlay {
   position: relative;
@@ -201,6 +208,7 @@ button {
 
 /* ───────────────────────── Botões ───────────────────────── */
 .btn {
+  text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -543,9 +551,12 @@ button {
   justify-content: center;
   font-size: 0.78rem;
   letter-spacing: 0.04em;
-  opacity: 0.6;
+  /* 0.6 dava 3,6:1 no teste de 20/10; 0.85 passa dos 4,5:1 */
+  opacity: 0.85;
   margin-top: 1rem;
 }
+.footer__links a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.hero__title { margin: 0; line-height: 0; }
 
 /* ───────────────────────── Reveals ───────────────────────── */
 .reveal {
@@ -570,6 +581,16 @@ button {
 
 /* ───────────────────────── Mobile ───────────────────────── */
 @media (max-width: 768px) {
+  /* no celular o texto de Fé e Design caía sobre a foto (contraste ~1,8:1 no
+     teste de 20/10): um véu claro atrás do bloco de texto */
+  .faith .section__inner,
+  .design .section__inner {
+    background: rgba(236, 244, 251, 0.86);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 1.25rem 1.1rem;
+  }
   .canvas {
     height: 100dvh !important;
   }
@@ -679,6 +700,9 @@ button {
 
 /* ───────────────────────── Reduced motion ───────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .reveal {
     transition: opacity 0.4s ease;
     transform: none;

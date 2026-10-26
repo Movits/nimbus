@@ -18,11 +18,15 @@ export default function App() {
       <Topbar />
       <Experience />
       <Overlay />
+      {/* O texto da landing não espera mais as texturas: em 4G lento a tela
+          ficava vazia por ~2,6 s e o loader segurava tudo até ~4,7 s (teste de
+          20/10/2026). Agora o loader é só uma barra discreta embaixo. */}
       <Loader
-        containerStyles={{ background: '#dcebfa' }}
+        containerStyles={{ background: 'transparent', pointerEvents: 'none', alignItems: 'flex-end', paddingBottom: '1.5rem' }}
         innerStyles={{ background: '#bcd6f0' }}
         barStyles={{ background: '#1b2733' }}
         dataStyles={{ color: '#1b2733', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', letterSpacing: '0.1em' }}
+        dataInterpolation={(p) => `Carregando ${p.toFixed(0)}%`}
       />
     </>
   )

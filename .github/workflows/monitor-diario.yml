@@ -23,12 +23,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       # SEM SKIP_REDE, de propósito: o valor deste workflow é exatamente a rede.
       - run: node scripts/vitrine/parity-variantes.mjs
       - run: node scripts/vitrine/link-check.mjs
+      # O que o visitante vê hoje (desde 26/10/2026): com a loja fechada o
+      # parity conferia 0 produtos e o monitor ficava verde sem vigiar nada.
+      - run: node scripts/vitrine/monitor-ar.mjs
       - name: Abre issue se a rodada falhou
         if: failure()
         env:
@@ -39,7 +42,7 @@ jobs:
           if [ "$abertas" = "0" ]; then
             gh issue create --repo "$GITHUB_REPOSITORY" \
               --title "Monitor diário falhou contra o ar ($(date -u +%Y-%m-%d))" \
-              --body "A rodada agendada de parity-variantes/link-check falhou contra o site publicado.
+              --body "A rodada agendada de parity-variantes/link-check falhou contra o site publicado (parity-variantes, link-check ou monitor-ar).
 
           Run: $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
 
