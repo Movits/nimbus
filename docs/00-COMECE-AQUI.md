@@ -48,8 +48,9 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 
 Três repositórios. **Na máquina do dono o brain NÃO é um clone irmão**: é o
 vault Obsidian aninhado em `Nimbus\Nimbus brain` (gitignorado do público;
-`C:\Users\rober\nimbus-brain` é uma junction para ele). ⚠️ Nunca `git clean
--fdx` no público — apagaria o vault.
+`C:\Users\rober\nimbus-brain` é uma junction para ele). ⚠️ Nunca apague a
+junction com `Remove-Item -Recurse` (pode levar o vault junto); use `cmd /c rmdir`.
+O `git clean -fdx` não apaga o vault (repo aninhado é protegido; só `-ffdx`).
 
 ```
 nimbus/                    PÚBLICO  — código, documentação, medições, auditorias
