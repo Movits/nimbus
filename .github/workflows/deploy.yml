@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       # Gates do conselho r3 (P0-1): copy banida e link interno quebrado
@@ -48,6 +48,15 @@ jobs:
       - run: |
           git diff --exit-code -- public || {
             echo "::error::páginas geradas divergem do que está commitado; rode npm run vitrine e commite o resultado junto"
+            exit 1
+          }
+      # O diff acima não enxerga arquivo NOVO: foi assim que /loja/c/* ficou no
+      # ar com a vitrine fechada (teste de 20/10/2026). Arquivo gerado que não
+      # está no git também derruba o deploy.
+      - run: |
+          test -z "$(git status --porcelain --untracked-files=all -- public)" || {
+            echo "::error::o gerador criou arquivos em public que não estão no git; rode npm run vitrine e commite o resultado junto"
+            git status --porcelain --untracked-files=all -- public
             exit 1
           }
       - run: npm run build

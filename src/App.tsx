@@ -23,6 +23,7 @@ export default function App() {
         innerStyles={{ background: '#bcd6f0' }}
         barStyles={{ background: '#1b2733' }}
         dataStyles={{ color: '#1b2733', fontFamily: 'Inter, sans-serif', fontSize: '0.8rem', letterSpacing: '0.1em' }}
+        dataInterpolation={(p) => `Carregando ${p.toFixed(0)}%`}
       />
     </>
   )

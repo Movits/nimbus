@@ -42,7 +42,14 @@ if (process.env.SKIP_REDE === "1") {
   process.exit(0);
 }
 
-const IGNORA_PASTA = new Set(["node_modules", ".git", "dist", "historico", "raw"]);
+// ".claude" guarda worktrees de sessões antigas (cópias do repo inteiro) e
+// "Nimbus brain" é o vault ANINHADO, que já chega como raiz própria pela
+// junction ../nimbus-brain: sem estes dois, cada achado saía em dobro.
+const IGNORA_PASTA = new Set(["node_modules", ".git", "dist", "historico", "raw", ".claude", "Nimbus brain"]);
+
+/** Documento com `status: historico` no topo é registro do que já foi: link
+ *  morto nele não manda ninguém a lugar nenhum hoje. */
+const ehHistorico = (arquivo) => /^---[\s\S]*?\nstatus:\s*historico\b[\s\S]*?\n---/.test(readFileSync(arquivo, "utf8").slice(0, 600));
 
 /** Endereços que não respondem de propósito, cada um com motivo escrito.
  *  Ver `link-check-docs.allow.json`, ao lado deste arquivo. */
@@ -64,7 +71,7 @@ function marcados(dir, achados = []) {
     const caminho = join(dir, nome);
     const st = statSync(caminho);
     if (st.isDirectory()) marcados(caminho, achados);
-    else if (nome.endsWith(".md")) achados.push(caminho);
+    else if (nome.endsWith(".md") && !ehHistorico(caminho)) achados.push(caminho);
   }
   return achados;
 }

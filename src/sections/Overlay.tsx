@@ -47,7 +47,9 @@ export default function Overlay() {
       <main className="overlay">
       {/* §1 HERO — logo grande + subtítulo + CTA (alinhado ao topo, catedral à mostra) */}
       <Section index={SECTION.hero} className="hero" align="center">
-        <img className="reveal hero__logo" src={ASSETS.wordmark} alt="NIMBUS" />
+        <h1 className="hero__title">
+          <img className="reveal hero__logo" src={ASSETS.wordmark} alt="NIMBUS" />
+        </h1>
         <p className="reveal hero__subtitle">{COPY.hero.subtitle}</p>
         <p className="reveal hero__offer">{COPY.hero.offer}</p>
         <a className="reveal btn btn--primary" href={STORE_URL}>
@@ -127,6 +129,13 @@ export default function Overlay() {
               <a href="https://www.instagram.com/nimbuswear.br/" target="_blank" rel="noopener noreferrer me">Instagram</a>
               {' · '}
               <a href="https://www.tiktok.com/@nimbuswear.br" target="_blank" rel="noopener noreferrer me">TikTok</a>
+            </span>
+            <span className="footer__links">
+              <a href="/loja/privacidade/">Privacidade</a>
+              {' · '}
+              <a href="/loja/trocas/">Trocas</a>
+              {' · '}
+              <a href="https://loja.nimbuswear.com.br/contato/">Fale com a NIMBUS</a>
             </span>
             <span>{COPY.footer.rights}</span>
           </div>

@@ -474,8 +474,8 @@ const INSTITUCIONAIS = {
     <p>A NIMBUS é pequena. Sou eu e quem caminha comigo. Se você chegou até aqui, já faz parte.</p>
     <p>Acima de tudo, obrigado.</p>
     <p><b>Roberto, fundador da NIMBUS</b></p>
-    <p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
-    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>`,
+    ${VITRINE_ABERTA ? `<p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`,
     { arquivo: "manifesto-ceu-1200.webp", alt: "Curva de concreto branco modernista apontando para um céu azul com nuvens", w: 1200, h: 1600, legenda: "Entre o concreto e o céu." }],
   impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
     <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe no checkout. Esta página explica o que isso significa, sem letra miúda.</p>
@@ -494,8 +494,8 @@ const INSTITUCIONAIS = {
     <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
     <h2>Diário de Repasses</h2>
     <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
-    <p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
-    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>`],
+    ${VITRINE_ABERTA ? `<p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : `<p>O diário abre com as primeiras vendas.</p>`}`],
   trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, defeito coberto por 90 dias e troca de tamanho tratada com a gente.", `
     <p class="lede">Cada peça NIMBUS é feita no Brasil, para você. A nossa política é simples, segue a lei e cobre os três casos possíveis, sem pegadinha.</p>
     <h2>Mudou de ideia? Você tem 7 dias</h2>
@@ -602,10 +602,17 @@ for (const [slug, [titulo, descricao, corpo, midia]] of Object.entries(INSTITUCI
 }
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
-for (const c of cat.colecoes) {
-  const dir = path.join(BASE, "c", c.id);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), colecao(c));
+// Com a vitrine fechada, as páginas de coleção não nascem (o teste de 20/10
+// achou /loja/c/* no ar, vazias e com preço na meta, porque o deploy as gerava
+// mesmo fechado). Sobra de uma geração anterior é apagada.
+if (VITRINE_ABERTA) {
+  for (const c of cat.colecoes) {
+    const dir = path.join(BASE, "c", c.id);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, "index.html"), colecao(c));
+  }
+} else {
+  fs.rmSync(path.join(BASE, "c"), { recursive: true, force: true });
 }
 for (const p of cat.produtos) {
   const dir = path.join(BASE, "p", p.slug);

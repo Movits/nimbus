@@ -425,7 +425,7 @@ O pós-compra da NIMBUS está escrito para uma fábrica que foi encerrada. As fa
 
 Depois de pagar, o cliente cai num vão. "Acompanhar pedido" aponta para `https://loja.nimbuswear.com.br/account/login/` (`build-paginas.mjs:122` e `:496`); conferi no ar e a página só oferece E-mail e Senha, sem caminho para quem comprou como convidado, enquanto a Nuvemshop tem uma Página de acompanhamento por pedido que dispensa conta. E a IzzyPrint não devolve status de produção, só rastreio de envio (`izzyprint.md:150`): entre o Pix aprovado e a postagem há até 4 dias úteis de silêncio. Numa peça de fé o silêncio dói mais, porque quem compra São Miguel para 29/09 comprou uma data, não um produto.
 
-O canal humano está pior do que o documento diz. A decisão de 08/08 tirou o telefone, mas o celular pessoal segue clicável no ar: `curl https://loja.nimbuswear.com.br/contato/` devolve `<a href="tel:61992221022">` em dois blocos, e é para lá que aponta o "Fale com a NIMBUS" do rodapé. O CSS esconde o telefone no rodapé, não na página de contato (`nuvemshop/consertos-loja-2026-08-08.md:32-35`). Sobra um Gmail pessoal com a promessa "Respondemos rápido" (`build-paginas.mjs:484`), que ninguém consegue verificar, contra a recomendação da própria auditoria de criar contato@ (`plano-implementacao...md:108`).
+O canal humano está pior do que o documento diz. A decisão de 08/08 tirou o telefone, mas o celular pessoal segue clicável no ar: `curl https://loja.nimbuswear.com.br/contato/` devolve `<a href="tel:[telefone do dono]">` em dois blocos, e é para lá que aponta o "Fale com a NIMBUS" do rodapé. O CSS esconde o telefone no rodapé, não na página de contato (`nuvemshop/consertos-loja-2026-08-08.md:32-35`). Sobra um Gmail pessoal com a promessa "Respondemos rápido" (`build-paginas.mjs:484`), que ninguém consegue verificar, contra a recomendação da própria auditoria de criar contato@ (`plano-implementacao...md:108`).
 
 O que já está resolvido e ninguém montou: a IzzyPrint aceita cartão pronto no pacote por R$3,50 de expedição (`izzyprint.md:219-220`), o loop de UGC já está desenhado (`wiki/syntheses/posts-e-ads-que-funcionam.md:72-74`) e o Diário de Repasses já promete comprovante (`build-paginas.mjs:469-471`). Falta virar rotina.
 
@@ -439,7 +439,7 @@ O que já está resolvido e ninguém montou: a IzzyPrint aceita cartão pronto n
 **Riscos:**
 - A Ecobag de brinde não existe na IzzyPrint (izzyprint.md:29-30) e continua prometida em três superfícies do site. O primeiro pedido acima de R$399,90 chega sem o brinde, e a marca descobre isso pelo e-mail do cliente, não antes.
 - O prazo publicado é o da YouDraw encerrada. Com produção de até 4 dias úteis mais repasse manual, o pedido de São Paulo estoura os 3 a 5 dias prometidos na PDP. Primeira compra, primeira quebra de promessa, numa marca sem nenhuma avaliação para amortecer.
-- O celular pessoal 61992221022 segue clicável em /contato/, contra a decisão de 08/08. Quem quer confirmação humana liga no domingo à noite, e o atendimento vira 24 horas por dia sem registro, sem histórico e sem quem substitua o Roberto.
+- O celular pessoal [telefone do dono] segue clicável em /contato/, contra a decisão de 08/08. Quem quer confirmação humana liga no domingo à noite, e o atendimento vira 24 horas por dia sem registro, sem histórico e sem quem substitua o Roberto.
 - Sem integração até 5 peças/dia, cada pedido depende de o dono repassar e pagar à mão. Uma viagem, uma gripe ou um feriado param a produção sem que o cliente veja qualquer status, porque a IzzyPrint só devolve rastreio de envio.
 
 **Perguntas críticas:**
@@ -450,7 +450,7 @@ O que já está resolvido e ninguém montou: a IzzyPrint aceita cartão pronto n
 **Condições:**
 - Até 31/08: faixas de prazo republicadas em /envios/ e no bloco Prazo e envio das PDPs com número confirmado por escrito pela IzzyPrint mais 1 dia útil de repasse manual. Prova: print da mensagem da Sablina no brain e o diff de build-paginas.mjs no PR.
 - Até 15/09: decisão do dono sobre a Ecobag registrada em docs/decisoes/ e a copy do brinde coerente nas três superfícies (barra de anúncio :90, PDP :380, /envios/ :498). Prova: npm run vitrine:portoes verde e grep sem promessa órfã.
-- Antes do primeiro pedido pago: telefone fora de /contato/ e caminho de acompanhamento para convidado no ar. Prova: curl da página de contato sem tel:61992221022 e /loja/pedido/ respondendo 200, linkada no rodapé.
+- Antes do primeiro pedido pago: telefone fora de /contato/ e caminho de acompanhamento para convidado no ar. Prova: curl da página de contato sem tel:[telefone do dono] e /loja/pedido/ respondendo 200, linkada no rodapé.
 
 ### Camila Ortiz — ⚠️ Aprovar com ressalvas
 
@@ -585,7 +585,7 @@ Duas exposições. Os direitos patrimoniais do Cristo Redentor são da Arquidioc
 30. **[Larissa Fontes]** Experimento Reserva no ar até 22/08 com regra de corte escrita antes de coletar; leitura única em 05/09 em docs/decisoes/ triangulando Reserva + 10 pedidos Pix (Beatriz) + fila de 100 nomes (Sofia) contra o corte 40/20.
 31. **[Tiago Freitas]** Até 31/08: faixas de prazo republicadas em /envios/ e no bloco Prazo e envio das PDPs com número confirmado por escrito pela IzzyPrint mais 1 dia útil de repasse manual. Prova: print da mensagem da Sablina no brain e o diff de build-paginas.mjs no PR.
 32. **[Tiago Freitas]** Decisão do dono sobre a Ecobag registrada em docs/decisoes/ até 22/08 (alinhado a Sofia e Jorge; 15/09 é teto) e a copy do brinde coerente nas três superfícies (barra :90, PDP :380, /envios/ :498). Prova: npm run vitrine:portoes verde e grep sem promessa órfã.
-33. **[Tiago Freitas]** Antes do primeiro pedido pago: telefone fora de /contato/ e caminho de acompanhamento para convidado no ar, com roteiro de resposta ao cliente anexado ao docs/fluxos/pedido.md do Paulo. Prova: curl da página de contato sem tel:61992221022 e /loja/pedido/ respondendo 200, linkada no rodapé.
+33. **[Tiago Freitas]** Antes do primeiro pedido pago: telefone fora de /contato/ e caminho de acompanhamento para convidado no ar, com roteiro de resposta ao cliente anexado ao docs/fluxos/pedido.md do Paulo. Prova: curl da página de contato sem tel:[telefone do dono] e /loja/pedido/ respondendo 200, linkada no rodapé.
 34. **[Camila Ortiz]** Até 31/08: a PDP no ar mostra o frete como número e a banda de confiança. Prova: curl de /loja/p/sao-miguel-vintage1/ contendo "R$19,90" no buy box e a classe .trust, com npm run vitrine:portoes verde no mesmo commit.
 35. **[Camila Ortiz]** Até 07/09: o CTA da gaveta abre na mesma aba e leva ao passo mais curto que o painel permitir, validado pelo teste do iPhone in-app (condição 14 do Yuri) executado antes dessa data. Prova: ausência de target="_blank" em .gaveta__checkout no ui.js servido, mais print da primeira tela após o clique.
 36. **[Camila Ortiz]** Até 20/09: pelo menos 8 fotos de pessoa vestindo e 5 depoimentos reais publicados na vitrine. Prova: as URLs no ar e a autorização por escrito de cada pessoa arquivada no brain.
