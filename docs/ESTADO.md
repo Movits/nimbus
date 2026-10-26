@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-09-02
+atualizado: 2026-10-26
 ---
 
 # Estado do projeto
@@ -21,6 +21,37 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - Contra qualquer outro documento vale a regra de sempre: documento fora de
   `docs/` que contradiga um de dentro perde.
 - Contra o ar, **o ar vence**: confira e corrija o documento.
+
+## Semana de 20 a 26/10/2026 (founder-skill, teste do produto, correções)
+
+- **Diagnóstico de 20/10** (relatório no Claude Docs do dono, arquivos de trabalho
+  numa pasta temporária da sessão): as 11 skills do pacote founder-skill deram o
+  veredito calculado **Ainda não** (R$8,60 por pedido de 1 camiseta a R$149,90 com
+  frete de referência R$40 e arrependimento de 10%; equilíbrio de 45,7 pedidos por
+  mês); 0 de 100 compradores simulados compraram; o teste do site no ar achou 84
+  problemas (83 confirmados por verificador independente).
+- **Frete real medido em 26/10** (cotação Correios/Melhor Envio na loja da IzzyPrint,
+  sem gastar): PAC de R$22,32 a 24,99 para as capitais cotadas, SEDEX SP R$12,17. O
+  pedido base deixa R$25,75 cobrando R$19,90 de frete, e não R$8,60.
+- **Estratégia em teste (pedido do dono de 26/10: 10 de 100 compradores, sem gastar
+  dinheiro)**: rodadas 1 a 4 entre 0 e 4 de 100. Linha nova: **Camiseta Gravura**,
+  gravura de época impressa só no traço, em azul-marinho, até 10 x 15 cm no peito de
+  uma Clássica off-white, com a origem documentada de cada imagem. Os traços estão
+  feitos (proposta, aguardam veredito do dono).
+- **Corrigido e no ar ao mesclar a branch `correcoes/2026-10-26`**: landing sem tela
+  branca sem WebGL, sem vender o que não existe e com os CTAs em `/gravuras/`;
+  contraste, h1, loader, links de privacidade e contato; `/loja/c/*` não nasce com a
+  vitrine fechada; `teste-carrinho` fora; envios com o prazo total medido e trocas
+  sem contradição; páginas `/gravuras/` (origem de 4 gravuras, no índice do Google);
+  monitor diário novo (`vitrine:ar`); telefone do dono fora de 18 arquivos do repo
+  (o histórico do git continua com ele: decisão do dono).
+- **Só o dono resolve no painel** (o modo automático bloqueou a sessão de editar a
+  Nuvemshop): o campo "CNPJ ou CPF" da loja tem um documento pessoal do dono
+  (trocar pelo CNPJ); telefone pessoal nos dados de contato; 30 "Produto de exemplo" com desconto
+  falso nas coleções vazias; selo powered-by escondido; `/termos-e-condicoes/` em 404.
+- O aviso antigo de que `git clean -fdx` apagaria o brain aninhado estava errado: o
+  git protege repo aninhado (só `-ffdx` apaga) e `git clean` está bloqueado nas
+  permissões. O risco real é apagar a junction com `Remove-Item -Recurse`.
 
 ## Loja e funil (Nuvemshop)
 
@@ -222,7 +253,7 @@ colateral: o portão `producao:dpi300` passou a conferir **13 artes em vez de
   classe citando exatamente ele (processo `920112668`, indeferido em 23/02/2021
   por art. 124 XIX da LPI, recurso não provido em 2022, hoje sub judice).
   Registro de fato, sem juízo jurídico — a sessão não opina sobre marca.
-- **MEI regularizado**, CNPJ 53.977.834/0001-18 no rodapé de todas as páginas.
+- **MEI regularizado**, CNPJ 53.977.834/0001-18 no rodapé da landing e da vitrine; na loja Nuvemshop ainda não aparece (26/10).
 - **Soul do Roberto treinado (v2)**: o dono é o rosto da marca. Material de ads
   produzido em 10-11/08 (40 ads v2 + ciclo 3 com 20 estáticos lookbook e vídeo
   de 28 s) — brain `marketing/2026-08-11-ads-v2/` e sínteses de
