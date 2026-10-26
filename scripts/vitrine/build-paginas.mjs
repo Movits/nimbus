@@ -585,7 +585,7 @@ const stub = (rel) => `<!DOCTYPE html>
 </head>
 <body><p>A vitrine mudou de endereço. <a href="${PREFIXO}/${rel}">Continuar para a loja</a>.</p></body></html>`;
 const ANTIGO = path.join(RAIZ, "public/loja-preview");
-const relForStub = ["", "gates/", "teste-carrinho/",
+const relForStub = ["", "gates/",
   ...cat.colecoes.map((c) => `c/${c.id}/`),
   ...cat.produtos.map((p) => `p/${p.slug}/`)];
 for (const rel of relForStub) {

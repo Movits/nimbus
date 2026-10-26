@@ -49,6 +49,10 @@ const BANIDOS = [
   /troca fácil/i,
   /n[aã]o se aplica/i,
   /—/,
+  // 26/10/2026: variações de "produzida após o pedido" escapavam (o teste de
+  // 20/10 achou "já incluem a produção" e "feita depois do pedido" no ar).
+  /produzid[ao]s? (ap[oó]s|depois d)o pedido/i,
+  /feit[ao]s? (ap[oó]s|depois d)o pedido/i,
 ];
 // A landing mora fora de public/loja e ficou de fora do lint por 2 dias: os
 // dois erros acima só apareceram na auditoria. Agora ela entra.
