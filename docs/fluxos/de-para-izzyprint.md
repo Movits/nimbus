@@ -394,7 +394,7 @@ IzzyPrint**, com uma diferença só na Boxy.
 | Peça NIMBUS | Peça IzzyPrint | Arte | O que muda em relação à amostra |
 |---|---|---|---|
 | Boxy azul-marinho, São Miguel Arcanjo (P a EG) | Camiseta Boxy, azul-marinho | `nimbus-assets/designs/acervo/STREET/40x50/sao-miguel-spray.png`, costas, 40 x 50 cm | **sem a nuvem pequena do peito**; arte com o dourado acertado depois da amostra |
-| Oversized branca, Asas (P a G1) | Camiseta Oversized Street, branca | `nimbus-assets/designs/acervo/NUVEM/asas-livro.png`, costas, 40 x 50 cm, e a frente da amostra (NIMBUS em nuvem com auréola) | nada |
+| Oversized branca, Asas (P a G1) | Camiseta Oversized Street, branca | `nimbus-assets/designs/acervo/NUVEM/asas-livro.png`, costas, 40 x 50 cm, e a frente da amostra (NIMBUS em nuvem com auréola) | nada, **mas a frente vai como estampa pequena (15 x 15 ou 20 x 20)**: cobrada como 40 x 50, o pedido perde R$12,56 |
 | Moletom Canguru preto, Nossa Senhora Aparecida (P a G1) | Moletom Canguru, preto | `nimbus-assets/designs/acervo/STREET/40x50/aparecida-stencil.png`, costas, no tamanho da amostra | arte com o dourado acertado depois da amostra |
 
 **Pedido com "tamanho em aberto" (presente).** Quem compra recebe o cartão

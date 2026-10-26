@@ -33,13 +33,30 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **Frete real medido em 26/10** (cotação Correios/Melhor Envio na loja da IzzyPrint,
   sem gastar): PAC de R$22,32 a 24,99 para as capitais cotadas, SEDEX SP R$12,17. O
   pedido base deixa R$25,75 cobrando R$19,90 de frete, e não R$8,60.
-- **Estratégia em teste (pedido do dono de 26/10: 10 de 100 compradores, sem gastar
-  dinheiro)**: rodadas 1 a 4 entre 0 e 4 de 100. Linha nova: **Camiseta Gravura**,
-  gravura de época impressa só no traço, em azul-marinho, até 10 x 15 cm no peito de
-  uma Clássica off-white, com a origem documentada de cada imagem. Os traços estão
-  feitos (proposta, aguardam veredito do dono).
-- **Corrigido e no ar ao mesclar a branch `correcoes/2026-10-26`**: landing sem tela
-  branca sem WebGL, sem vender o que não existe e com os CTAs em `/gravuras/`;
+- **Meta do dono de 26/10 (10 de 100 compradores, sem gastar dinheiro): atingida no
+  painel simulado com a oferta de Natal.** Seis ofertas nos mesmos 100 cartões (seed
+  2026): antiga 0; Boxy São Miguel e Aparecida 4; Clássica com imagem no peito 3;
+  Camiseta Gravura em simulação 1; Gravura com devolução de 30 dias 4; **só as três
+  amostras reais 10**. A Boxy com vídeo da amostra, data de Natal e tamanho em aberto
+  já tinha feito 4; o salto veio ao vender só as três peças iguais às amostras. Dos 10:
+  9 levaram o São Miguel (crisma e Natal), 7 citaram o tamanho em aberto e **5 contaram
+  com as fotos com régua, vestidas e depois de 10 lavagens, que ainda não existem**
+  (a página diz que estão sendo feitas; fazê-las é a primeira tarefa do dono). Oferta em `/natal/` (dados em
+  `scripts/vitrine/natal.json`): Boxy azul-marinho São Miguel R$179,90 (P a EG), Oversized
+  branca Asas R$199,90 (P a G1), Canguru preto Aparecida R$329,90 (P a G1); frete grátis
+  fora do Norte, 5% no Pix, duas peças com R$20 a menos em cada. Sobra por pedido no
+  Pix em Salvador, com 10% de devolução: Boxy +R$8,59, Oversized +R$5,07 a +R$9,71
+  (depende da frente), Canguru +R$31,22. Se a IzzyPrint cobrar a frente da Oversized como 40 x 50, ela cai para
+  -R$12,56: no repasse, a frente vai como estampa pequena. **Tamanho em aberto mantido pelo dono em 26/10**:
+  o cartão é digital, nada vai na caixa, e o pedido só segue para a IzzyPrint depois do
+  e-mail com o tamanho (regra no `fluxos/de-para-izzyprint.md`, seção 4b).
+- **Camiseta Gravura** (gravura de época só no traço, azul-marinho, no peito): quatro
+  traços prontos como proposta, aguardando veredito. Só converteu 1 de 100 em
+  simulação; volta depois do Natal, com foto de uma peça impressa.
+- **No ar desde 26/10 (PR #65 mesclado, deploy verde)**: landing sem tela
+  branca sem WebGL, sem vender o que não existe e com os CTAs em `/natal/`;
+  `/natal/` com malha e medidas em cm de cada peça (lidas na API da IzzyPrint; onde
+  as duas páginas dela discordam, a página diz os dois números);
   contraste, h1, loader, links de privacidade e contato; `/loja/c/*` não nasce com a
   vitrine fechada; `teste-carrinho` fora; envios com o prazo total medido e trocas
   sem contradição; páginas `/gravuras/` (origem de 4 gravuras, no índice do Google);
