@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
-import { ASSETS, COPY, IMPACT_PROJECTS, SECTION, STORE_URL, type ImpactProject } from '../data/content'
+import { ASSETS, COPY, CTA_URL, IMPACT_PROJECTS, SECTION, STORE_URL, type ImpactProject } from '../data/content'
 import { registerSection } from '../scene/scrollStore'
 import { useInView } from '../hooks/useInView'
 import ImpactProjectModal from '../components/ImpactProjectModal'
@@ -52,7 +52,7 @@ export default function Overlay() {
         </h1>
         <p className="reveal hero__subtitle">{COPY.hero.subtitle}</p>
         <p className="reveal hero__offer">{COPY.hero.offer}</p>
-        <a className="reveal btn btn--primary" href={STORE_URL}>
+        <a className="reveal btn btn--primary" href={CTA_URL}>
           {COPY.hero.cta}
         </a>
       </Section>
@@ -108,7 +108,7 @@ export default function Overlay() {
           ))}
         </div>
         <p className="reveal note impact__outro">{COPY.impact.outroNote}</p>
-        <a className="reveal btn btn--primary" href={STORE_URL}>
+        <a className="reveal btn btn--primary" href={CTA_URL}>
           {COPY.impact.cta}
         </a>
       </Section>
