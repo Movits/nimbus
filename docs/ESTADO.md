@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-10-26
+atualizado: 2026-10-28
 ---
 
 # Estado do projeto
@@ -44,7 +44,8 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   (a página diz que estão sendo feitas; fazê-las é a primeira tarefa do dono). Oferta em `/natal/` (dados em
   `scripts/vitrine/natal.json`): Boxy azul-marinho São Miguel R$179,90 (P a EG), Oversized
   branca Asas R$199,90 (P a G1), Canguru preto Aparecida R$329,90 (P a G1); frete grátis
-  fora do Norte, 5% no Pix, duas peças com R$20 a menos em cada. Sobra por pedido no
+  fora do Norte, 5% no Pix, duas peças ou mais com 10% a menos (a Nuvemshop não faz
+  desconto fixo por peça; com R$20 por peça, como foi testado, a sobra fica parecida). Sobra por pedido no
   Pix em Salvador, com 10% de devolução: Boxy +R$8,59, Oversized +R$5,07 a +R$9,71
   (depende da frente), Canguru +R$31,22. Se a IzzyPrint cobrar a frente da Oversized como 40 x 50, ela cai para
   -R$12,56: no repasse, a frente vai como estampa pequena. **Tamanho em aberto mantido pelo dono em 26/10**:
@@ -62,10 +63,33 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   sem contradição; páginas `/gravuras/` (origem de 4 gravuras, no índice do Google);
   monitor diário novo (`vitrine:ar`); telefone do dono fora de 18 arquivos do repo
   (o histórico do git continua com ele: decisão do dono).
-- **Só o dono resolve no painel** (o modo automático bloqueou a sessão de editar a
-  Nuvemshop): o campo "CNPJ ou CPF" da loja tem um documento pessoal do dono
-  (trocar pelo CNPJ); telefone pessoal nos dados de contato; 30 "Produto de exemplo" com desconto
-  falso nas coleções vazias; selo powered-by escondido; `/termos-e-condicoes/` em 404.
+- **Painel da Nuvemshop em 28/10 (pelo Claude in Chrome, a pedido do dono)**:
+  - telefone tirado dos dados de contato (a loja não tem mais `tel:`);
+  - Nuvem Pago com 5% no Pix (aparece "5% de desconto" na página do produto);
+  - frete: "Frete grátis · fora da região Norte" (20 estados e DF, 4 a 14 dias úteis),
+    "Entrega NIMBUS · região Norte" a R$19,90 e "Frete grátis acima de R$399,90" só no
+    Norte; conferido na página do produto com CEP da Paulista (grátis) e de Belém
+    (R$19,90);
+  - promoção automática "Natal 2026: duas peças ou mais, 10% a menos", de 28/10 a
+    25/12 (duas Boxy: -R$35,98 no carrinho);
+  - os três produtos criados com o slug da peça (`/produtos/boxy-sao-miguel/`,
+    `/oversized-asas/`, `/canguru-aparecida/`; ids 377290552, 377290898 e 377291120),
+    preço, grade com "Tamanho em aberto (presente)", descrição com malha, medidas e
+    políticas, e as fotos reais (quadros de 720 px do vídeo, baixa resolução).
+    Ficaram **"Não listado"** (compráveis pelo link, fora da vitrine e do Google): o
+    modo automático bloqueou deixá-los visíveis.
+- **Segue com o dono no painel**: o campo "CNPJ ou CPF" ainda tem o documento pessoal
+  (a sessão não digita número de documento); **o Nuvem Pago está no CPF do dono e sem
+  conta bancária**, então o dinheiro de uma venda fica preso lá até cadastrar a conta
+  (ou pedir ao suporte a troca para o CNPJ); a origem das entregas personalizadas ainda
+  é o centro de distribuição "YOUDRAW INC. LTDA"; os "Produto de exemplo" do tema
+  continuam nas coleções vazias até haver produto visível nelas; selo powered-by;
+  `/termos-e-condicoes/` em 404; e a transportadora "Frete Expresso" (cálculo
+  automático, de algum app) segue cadastrada, embora não tenha aparecido no teste.
+- **Coleções da vitrine com a vitrine fechada**: o menu da loja Nuvemshop aponta para
+  `/loja/c/{street,reliquia,nuvem}/`, que deram 404 depois do PR #65. Agora cada uma
+  é um redirecionamento sem índice para `/natal/` (gerado pelo `build-paginas.mjs`,
+  conferido pelo `vitrine:ar`).
 - O aviso antigo de que `git clean -fdx` apagaria o brain aninhado estava errado: o
   git protege repo aninhado (só `-ffdx` apaga) e `git clean` está bloqueado nas
   permissões. O risco real é apagar a junction com `Remove-Item -Recurse`.
@@ -78,9 +102,9 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **O funil foi provado de ponta a ponta em 03/08** (adicionar nos 44 então
   publicados, remoção atravessando os dois sites). O mecanismo continua de pé;
   falta produto nele.
-- Frete: fixo R$19,90; **grátis a partir de R$399,90, sem brinde** — a Ecobag
-  saiu do catálogo em 13/08 e o cupom `ECOBAG` está desativado. A mecânica nova
-  do frete grátis ainda vai ser decidida pelo dono.
+- Frete (28/10/2026): **grátis fora da região Norte**; no Norte R$19,90, ou grátis
+  a partir de R$399,90. A Ecobag saiu do catálogo em 13/08 e o cupom `ECOBAG` está
+  desativado. Detalhe na semana de 20 a 26/10, acima.
 - Rodapé consertado no ar em 05/08. **Publicação de CSS/tema tem protocolo
   próprio** (Testar CSS → Publicar → `POST /admin/themes/settings/active/` 200
   → provar em página DYNAMIC): [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md).

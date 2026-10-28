@@ -603,7 +603,19 @@ fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
 // Com a vitrine fechada, as páginas de coleção não nascem (o teste de 20/10
 // achou /loja/c/* no ar, vazias e com preço na meta, porque o deploy as gerava
-// mesmo fechado). Sobra de uma geração anterior é apagada.
+// mesmo fechado). Mas o menu da loja Nuvemshop ainda leva a elas (28/10/2026):
+// no lugar de cada uma nasce um redirecionamento sem índice para a oferta de
+// Natal, para o clique no menu não cair num 404.
+const colecaoFechada = () => `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta http-equiv="refresh" content="0;url=/natal/">
+<script>location.replace("/natal/" + location.search);</script>
+<title>NIMBUS</title>
+</head>
+<body><p>Esta coleção está fechada por enquanto. <a href="/natal/">Ver as peças de Natal</a>.</p></body></html>`;
 if (VITRINE_ABERTA) {
   for (const c of cat.colecoes) {
     const dir = path.join(BASE, "c", c.id);
@@ -612,6 +624,11 @@ if (VITRINE_ABERTA) {
   }
 } else {
   fs.rmSync(path.join(BASE, "c"), { recursive: true, force: true });
+  for (const c of cat.colecoes) {
+    const dir = path.join(BASE, "c", c.id);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, "index.html"), colecaoFechada());
+  }
 }
 for (const p of cat.produtos) {
   const dir = path.join(BASE, "p", p.slug);
@@ -663,7 +680,7 @@ ${header()}
     <p>Se preferir acertar já, meça uma camiseta ou um moletom que a pessoa usa, deitado na mesa, e compare com a tabela de cada peça.</p>
     <h2>Entrega no Natal</h2>
     <p>Pedido pago até 01/12 em São Paulo, Rio de Janeiro, Belo Horizonte, Brasília e Porto Alegre, ou até 24/11 nas outras cidades, tem entrega prevista até 18/12 nessas capitais e em Salvador e até 23/12 no resto do Brasil, menos o Norte, onde o prazo aparece antes de pagar. Se o rastreio não mostrar a tentativa de entrega até 23/12, devolvemos R$20 no Pix.</p>
-    <p>Frete grátis fora da região Norte, onde o frete aparece antes de pagar. Duas peças no mesmo pedido saem com R$20 a menos em cada. Não fazemos Black Friday: estes preços valem até o Natal.</p>
+    <p>Frete grátis fora da região Norte, onde o frete aparece antes de pagar. Duas peças ou mais no mesmo pedido saem com 10% a menos, aplicado sozinho no carrinho. Não fazemos Black Friday: estes preços valem até o Natal.</p>
     <h2>Se não der certo</h2>
     <p>Você pode desistir em até 7 dias depois de receber, por qualquer motivo, com tudo devolvido, frete incluído. Estampa que racha ou solta com lavagem normal é defeito: peça nova ou dinheiro de volta, com 90 dias contados de quando o problema aparecer. Detalhes em <a href="${PREFIXO}/trocas/">trocas e devoluções</a>.</p>
     <h2>Quem somos</h2>

@@ -10,7 +10,8 @@
  *   1. landing, vitrine e loja respondem 200;
  *   2. as páginas institucionais da vitrine respondem 200;
  *   3. nenhuma página da loja mostra produto de exemplo do tema;
- *   4. com a vitrine fechada, /loja/c/* não existe (404).
+ *   4. com a vitrine fechada, /loja/c/* não tem coleção: só um redirecionamento
+ *      sem índice para /natal/ (o menu da loja Nuvemshop aponta para lá).
  *
  * Sai com código 1 se algo falhar. SKIP_REDE=1 pula (CI sem rede).
  */
@@ -71,8 +72,10 @@ if (!aberta) {
   for (const c of ["street", "reliquia", "nuvem"]) {
     const url = `https://nimbuswear.com.br/loja/c/${c}/`;
     const r = await pega(url);
-    if (r.status === 200) falhas.push(`${url}: coleção vazia no ar com a vitrine fechada`);
-    else ok.push(`${r.status} ${url} (fechada, como deve)`);
+    const redireciona = r.status === 200 && /noindex/.test(r.corpo) && /url=\/natal\//.test(r.corpo);
+    if (redireciona) ok.push(`${url} redireciona para /natal/ (fechada, como deve)`);
+    else if (r.status === 200) falhas.push(`${url}: coleção no ar com a vitrine fechada`);
+    else falhas.push(`${r.status} ${url}: o menu da loja aponta para cá e dá erro`);
   }
 }
 
