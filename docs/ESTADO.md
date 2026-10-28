@@ -82,14 +82,19 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   (a sessão não digita número de documento); **o Nuvem Pago está no CPF do dono e sem
   conta bancária**, então o dinheiro de uma venda fica preso lá até cadastrar a conta
   (ou pedir ao suporte a troca para o CNPJ); a origem das entregas personalizadas ainda
-  é o centro de distribuição "YOUDRAW INC. LTDA"; os "Produto de exemplo" do tema
-  continuam nas coleções vazias até haver produto visível nelas; selo powered-by;
+  é o centro de distribuição "YOUDRAW INC. LTDA"; selo powered-by;
   `/termos-e-condicoes/` em 404; e a transportadora "Frete Expresso" (cálculo
   automático, de algum app) segue cadastrada, embora não tenha aparecido no teste.
 - **Coleções da vitrine com a vitrine fechada**: o menu da loja Nuvemshop aponta para
   `/loja/c/{street,reliquia,nuvem}/`, que deram 404 depois do PR #65. Agora cada uma
   é um redirecionamento sem índice para `/natal/` (gerado pelo `build-paginas.mjs`,
   conferido pelo `vitrine:ar`).
+- **No ar desde 28/10 (PR #67 mesclado, deploy verde)**: o Comprar de cada peça em
+  `/natal/` leva ao produto na Nuvemshop (os três respondem 200), a linha do desconto
+  diz "10% a menos" e as três coleções redirecionam. `vitrine:ar` com 16 conferências
+  e 0 falha. Os "Produto de exemplo" do tema sumiram da loja depois que os produtos
+  reais foram criados: `/produtos/` e as coleções da loja agora aparecem vazias,
+  porque os três estão "Não listado". O monitor de 27/10 tinha falhado só por eles.
 - O aviso antigo de que `git clean -fdx` apagaria o brain aninhado estava errado: o
   git protege repo aninhado (só `-ffdx` apaga) e `git clean` está bloqueado nas
   permissões. O risco real é apagar a junction com `Remove-Item -Recurse`.
