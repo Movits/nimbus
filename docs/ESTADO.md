@@ -95,6 +95,36 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   e 0 falha. Os "Produto de exemplo" do tema sumiram da loja depois que os produtos
   reais foram criados: `/produtos/` e as coleções da loja agora aparecem vazias,
   porque os três estão "Não listado". O monitor de 27/10 tinha falhado só por eles.
+- **Tarde de 28/10: o dono não gostou do `/natal/`** (página e fotos das amostras,
+  que são quadros de vídeo). **PR #68 aberto e não mesclado, por pedido do dono**:
+  tira `/natal/` e `/natal/cartao/`, os botões da landing viram "Quero ser avisado"
+  (e-mail com o assunto "Aviso: abertura da NIMBUS", o mesmo das gravuras), as
+  coleções fechadas redirecionam para `/loja/`. Até o merge, o `/natal/` segue no ar.
+  Os três produtos de Natal seguem "Não listado" na Nuvemshop, com descrição que cita
+  o cartão em `/natal/cartao/`.
+- **Fotos (decisão do dono, 28/10)**: as fotos reais das peças ficam para depois e
+  servem às redes. No site, o caminho é imagem feita com IA a partir dos produtos.
+- **Gramatura e medidas (decisão do dono, 28/10)**: vale o publicado pela IzzyPrint,
+  sem pedir confirmação. Gramatura da página "Personalizável" (o produto pedido com
+  estampa): Clássica 180 g/m², Oversized 180, Boxy 200, moletons 260 g. Regra em
+  `fluxos/de-para-izzyprint.md`, seção 7 (no PR #68).
+- **CNPJ no campo "CNPJ ou CPF" do painel**: segue com o dono (a sessão não digita
+  documento em formulário). O CNPJ é o do MEI, o mesmo do rodapé do site; o campo
+  fica em `loja.nimbuswear.com.br/admin/preferences`.
+- **Conselho de 28/10 (loja e fornecedor; pesquisa checada por verificador)**: os
+  quatro votos mantêm a compra na Nuvemshop e nenhum checkout por código próprio (o
+  GitHub Pages proíbe uso como e-commerce e o Vercel Hobby proíbe cobrança). Três
+  vozes recomendam descer do Impulso (R$164) para o Essencial (R$69) enquanto não
+  houver produto, conferindo antes o que o kit de CSS perde. Fornecedor: IzzyPrint
+  vira reserva até uma amostra da Gubo decidir (integração grátis com a Nuvemshop sem
+  mínimo, status e rastreio de volta, oversized 240 g, moletom 50/50 de 360 g/m² em preto e
+  off-white, ecobag, etiqueta a R$1,50; estampa em **DTF**, que o dono já achou
+  plastificada na YouDraw). IzzyPrint no Reclame Aqui: 0% respondidas em abr a
+  set/2026 e nenhum app na loja de apps da Nuvemshop. Achados soltos: o Decreto
+  7.962 exige endereço físico na loja (o rodapé só diz "Brasília DF"); vitrine com
+  preço e Comprar no GitHub Pages pode contar como uso comercial; duas fontes de
+  preço (vitrine e Nuvemshop) obrigam pelo menor (CDC art. 30). Detalhe e fontes no
+  brain (`wiki/entities/izzyprint.md` e `estado.md`).
 - O aviso antigo de que `git clean -fdx` apagaria o brain aninhado estava errado: o
   git protege repo aninhado (só `-ffdx` apaga) e `git clean` está bloqueado nas
   permissões. O risco real é apagar a junction com `Remove-Item -Recurse`.
