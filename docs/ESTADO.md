@@ -96,10 +96,11 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   reais foram criados: `/produtos/` e as coleções da loja agora aparecem vazias,
   porque os três estão "Não listado". O monitor de 27/10 tinha falhado só por eles.
 - **Tarde de 28/10: o dono não gostou do `/natal/`** (página e fotos das amostras,
-  que são quadros de vídeo). **PR #68 aberto e não mesclado, por pedido do dono**:
-  tira `/natal/` e `/natal/cartao/`, os botões da landing viram "Quero ser avisado"
-  (e-mail com o assunto "Aviso: abertura da NIMBUS", o mesmo das gravuras), as
-  coleções fechadas redirecionam para `/loja/`. Até o merge, o `/natal/` segue no ar.
+  que são quadros de vídeo). **PR #68 mesclado em 28/10 a pedido do dono, deploy
+  verde**: `/natal/` e `/natal/cartao/` dão 404, os botões da landing viram "Quero ser
+  avisado" (e-mail com o assunto "Aviso: abertura da NIMBUS", o mesmo das gravuras),
+  as coleções fechadas redirecionam para `/loja/` e o sitemap tem 6 endereços.
+  `vitrine:ar` com 16 conferências e 0 falha.
   Os três produtos de Natal seguem "Não listado" na Nuvemshop, com descrição que cita
   o cartão em `/natal/cartao/`.
 - **Fotos (decisão do dono, 28/10)**: as fotos reais das peças ficam para depois e
@@ -107,7 +108,7 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **Gramatura e medidas (decisão do dono, 28/10)**: vale o publicado pela IzzyPrint,
   sem pedir confirmação. Gramatura da página "Personalizável" (o produto pedido com
   estampa): Clássica 180 g/m², Oversized 180, Boxy 200, moletons 260 g. Regra em
-  `fluxos/de-para-izzyprint.md`, seção 7 (no PR #68).
+  `fluxos/de-para-izzyprint.md`, seção 7.
 - **CNPJ no campo "CNPJ ou CPF" do painel**: segue com o dono (a sessão não digita
   documento em formulário). O CNPJ é o do MEI, o mesmo do rodapé do site; o campo
   fica em `loja.nimbuswear.com.br/admin/preferences`.
