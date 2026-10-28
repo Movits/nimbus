@@ -62,7 +62,6 @@ const NUVEMSHOP = path.join(RAIZ, "nuvemshop");
 const ALVOS = [
   path.join(RAIZ, "public/loja"),
   path.join(RAIZ, "public/gravuras"),
-  path.join(RAIZ, "public/natal"),
   path.join(RAIZ, "index.html"),
   ...(fs.existsSync(NUVEMSHOP)
     ? fs.readdirSync(NUVEMSHOP).filter((f) => /^pagina-.*\.html$/.test(f)).map((f) => path.join(NUVEMSHOP, f))
