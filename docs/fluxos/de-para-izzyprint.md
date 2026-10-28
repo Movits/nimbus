@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-13
+atualizado: 2026-10-28
 ---
 
 # Fluxo: de-para de produção Nuvemshop → IzzyPrint (repasse manual)
@@ -123,8 +123,9 @@ primeiro moletom sair. Enquanto não forem, use os valores como piso e
 confirme no editor com a régua da peça deles.
 
 ⚠️ A tabela publicada deles traz o **G1 mais curto que o P** (72–75 contra
-73–75). É erro de fonte, sinalizado desde 28/07 e ainda **a confirmar com a
-IzzyPrint**.
+73–75), sinalizado desde 28/07. **Decisão do dono de 28/10/2026: vale a tabela
+publicada pela IzzyPrint**, sem pedir confirmação; a nossa página repete os
+números como estão no site deles (G1 68–71 × 72–75 nas duas páginas do Canguru).
 
 **Cores. O moletom da IzzyPrint só existe em PRETO** — nos dois modelos, e
 **não fazem sob encomenda** (dono confirmou em 07/08; a pergunta está fechada,
@@ -386,8 +387,10 @@ o canguru deles é ~20% mais comprido. Re-medir antes do primeiro moletom.
 
 ## 4b. Natal 2026: as três peças da oferta e o tamanho em aberto
 
-Acrescentado em 26/10/2026 (oferta em `/natal/`, dados em
-`scripts/vitrine/natal.json`). As três peças são as três amostras de agosto:
+Acrescentado em 26/10/2026. **A página `/natal/` saiu do site em 28/10/2026, a
+pedido do dono** (os dados estavam em `scripts/vitrine/natal.json`, que ficou no
+histórico do git, commit 87e4ce9). Os três produtos seguem criados na Nuvemshop como
+"Não listado". O mapa abaixo vale se a oferta voltar. As três peças são as três amostras de agosto:
 **o jeito mais seguro de repassar é repetir o pedido da amostra na conta da
 IzzyPrint**, com uma diferença só na Boxy.
 
@@ -503,10 +506,13 @@ Nada aqui é chute e nada aqui é urgente sozinho — junte numa mensagem só.
    40×50 do orçamento direto?
 4. **Cobrança da estampa**: pela caixa ou pelo consumo de tinta.
 5. **Tabela de custo POD (revenda)** por peça e tamanho.
-6. **Tabela de medidas correta do Canguru** (o G1 publicado é mais curto que o
-   P).
-7. **Gramatura real do Oversized Street** (as duas páginas do mesmo produto
-   discordam: 180 ou 200 g/m²).
+6. ~~Tabela de medidas correta do Canguru~~: **fechado pelo dono em 28/10/2026**,
+   vale a tabela publicada (seção 2).
+7. ~~Gramatura real~~: **fechado pelo dono em 28/10/2026**, vale a da página
+   "Personalizável" de cada peça, que é o produto que pedimos com estampa
+   (API da loja deles, conferida em 28/10): Clássica 180 g/m², Oversized 180 g/m²,
+   Boxy 200 g/m², Canguru e Careca 260 g. A página comum do mesmo produto diz
+   Oversized 200 g/m² e moletons 300 g; não use esses números.
 8. **Técnica declarada por escrito** (DTG está confirmado só por cadastro
    comercial e pelo suporte, nunca pelo site).
 9. **Peça clara com arte halftone de fundo preto cheio**: imprime o bloco ou
