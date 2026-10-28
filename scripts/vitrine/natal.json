@@ -21,7 +21,7 @@
           "A amostra do São Miguel aberta em casa, em Brasília"
         ]
       ],
-      "compra": "",
+      "compra": "https://loja.nimbuswear.com.br/produtos/boxy-sao-miguel/",
       "medidas": [
         [
           "P",
@@ -73,7 +73,7 @@
           "A frente da amostra, com NIMBUS em nuvem"
         ]
       ],
-      "compra": "",
+      "compra": "https://loja.nimbuswear.com.br/produtos/oversized-asas/",
       "medidas": [
         [
           "P",
@@ -126,7 +126,7 @@
           "A amostra da Aparecida aberta em casa"
         ]
       ],
-      "compra": "",
+      "compra": "https://loja.nimbuswear.com.br/produtos/canguru-aparecida/",
       "medidas": [
         [
           "P",
@@ -162,5 +162,6 @@
       "notaMedidas": "No G1, a tabela da gráfica traz o comprimento menor que o do P; pedimos a confirmação antes de produzir."
     }
   ],
-  "_medidas": "Malha e medidas lidas na API pública da IzzyPrint em 26/10/2026 (produtos 12610 Camiseta Boxy, 12145 Camiseta Oversized Street e 12650 Moletom Canguru, mais as versões personalizáveis 16200, 16206 e 16196). Onde as duas páginas da gráfica discordam, a página diz os dois números."
+  "_medidas": "Malha e medidas lidas na API pública da IzzyPrint em 26/10/2026 (produtos 12610 Camiseta Boxy, 12145 Camiseta Oversized Street e 12650 Moletom Canguru, mais as versões personalizáveis 16200, 16206 e 16196). Onde as duas páginas da gráfica discordam, a página diz os dois números.",
+  "_compra": "Produtos criados na Nuvemshop em 28/10/2026 com o mesmo slug da peça (ids 377290552, 377290898 e 377291120), com 'Tamanho em aberto (presente)' como variação. Promoção automática 'Natal 2026: duas peças ou mais, 10% a menos' até 25/12/2026."
 }
