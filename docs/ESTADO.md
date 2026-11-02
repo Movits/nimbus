@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-10-28
+atualizado: 2026-11-02
 ---
 
 # Estado do projeto
@@ -284,6 +284,18 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - **Medir verde é por MATIZ, não por razão G/R** (a razão confunde brilho com
   cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
   ~50° puxa verde, e o detector precisa de piso de saturação.
+
+## Acabamento fino da RELÍQUIA (em andamento, pausado em 02/11)
+
+**As 40 estampas estão sendo refeitas do scan original e revisadas ladrilho por
+ladrilho** (padrão La Salette: imagem opaca até a borda externa da linha, fora
+dela só tinta). Proposta, método e ponto de retomada em
+`nimbus-assets/designs/_propostas-2026-10-28-acabamento/LEIA-ME.md` (seção
+Andamento). Rodada 4 de revisão completa. Correção por agentes, uma peça por
+vez com verificador independente, parada no limite de uso. Prontas: 01, 36,
+37, 39 e 40. A 22 foi refeita no modo iluminura. Falta: as outras peças, a
+rodada oficial das 40, a revisão final (rodada 5) e a página de conferência
+numerada para o dono. Nada disso está no acervo nem foi publicado.
 
 ## Estampas da RELÍQUIA e organização das pastas (01/09)
 
