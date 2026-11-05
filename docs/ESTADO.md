@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-02
+atualizado: 2026-11-05
 ---
 
 # Estado do projeto
@@ -292,8 +292,10 @@ ladrilho** (padrão La Salette: imagem opaca até a borda externa da linha, fora
 dela só tinta). Proposta, método e ponto de retomada em
 `nimbus-assets/designs/_propostas-2026-10-28-acabamento/LEIA-ME.md` (seção
 Andamento). Rodada 4 de revisão completa. Correção por agentes, uma peça por
-vez com verificador independente, parada no limite de uso. Prontas: 01, 36,
-37, 39 e 40. A 22 foi refeita no modo iluminura. Falta: as outras peças, a
+vez com verificador independente. Em 05/11: 26 a 40 corrigidas e verificadas
+(passe 1), 01 a 30 pela metade, 22 refeita no modo iluminura. Pausado de novo:
+a tarefa gasta muito do limite semanal do dono; ao chegar a 50% do limite da
+semana, parar e mostrar o andamento para ele decidir. Falta: as outras peças, a
 rodada oficial das 40, a revisão final (rodada 5) e a página de conferência
 numerada para o dono. Nada disso está no acervo nem foi publicado.
 
