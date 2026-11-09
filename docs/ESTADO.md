@@ -302,7 +302,9 @@ Nove peças foram refeitas: 01, 07, 08, 10, 11, 13, 22, 26 e 34. A borda inteira
 delas passou por revisão independente: nenhum achado alto, os médios foram
 corrigidos e o resto virou decisão do dono no `CONFERIR.md`.
 
-A página tem 95 pontos numerados, com as notas "09/11":
+A La Salette foi revista letra por letra (93 folhas) e os pingos de sujeira dentro
+do miolo das letras saíram nas 40. A página tem 98 pontos numerados, com as notas
+"09/11":
 https://claude.ai/artifact/B5ha7WmaaTWm87TdPaNvrB
 
 Carimbo de biblioteca segue tirado: o dono pediu que eu julgasse; é marca posta
