@@ -298,7 +298,8 @@ Regra nova, valendo para todas:
 - o limite segue a borda de fora da linha preta, com a ondulação do traço;
 - vinheta sem linha (13): o papel fica em volta, num contorno liso.
 
-Nove peças foram refeitas: 01, 07, 08, 10, 11, 13, 22, 26 e 34. A borda inteira
+Foram refeitas 01, 07, 08, 10, 11, 12, 13, 21, 22, 26 e 34; a 12 ficou com o
+parágrafo dentro da moldura de losangos. A borda inteira
 delas passou por revisão independente: nenhum achado alto, os médios foram
 corrigidos e o resto virou decisão do dono no `CONFERIR.md`.
 
