@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-08
+atualizado: 2026-11-09
 ---
 
 # Estado do projeto
@@ -285,20 +285,31 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
   ~50° puxa verde, e o detector precisa de piso de saturação.
 
-## Acabamento fino da RELÍQUIA (pronto para conferência, 08/11)
+## Acabamento fino da RELÍQUIA (rodada de 09/11, para nova conferência)
 
-**As 40 estampas foram refeitas do scan original e revisadas ladrilho por
-ladrilho em cinco rodadas** (padrão La Salette: imagem opaca até a borda externa
-da linha, fora dela só tinta). Estão em
+**As 40 estampas foram refeitas do scan original** e estão em
 `nimbus-assets/designs/_propostas-2026-10-28-acabamento/` (`estampas/`,
 `provas/`, `CONFERIR.md`, método e ponto de retomada no `LEIA-ME.md`).
 
-A revisão final abriu os 2.493 ladrilhos e as sobras foram corrigidas. Há uma
-página com 91 pontos numerados para o dono conferir. Algumas decisões ficam
-com ele (listadas no `CONFERIR.md`). Nada foi para o acervo nem para a loja.
+Em 09/11 o dono apontou, na página de conferência, cortes feios: reta, degrau,
+borda pixelada, fundo vazado dentro da imagem (22) e fundo de jornal sobrando.
+Regra nova, valendo para todas:
+- a imagem fica com o próprio fundo e só as letras de fora perdem o papel;
+- o limite segue a borda de fora da linha preta, com a ondulação do traço;
+- vinheta sem linha (13): o papel fica em volta, num contorno liso.
 
-A tarefa gasta muito do limite semanal do dono: em nova rodada, parar aos 50%
-da semana e mostrar o andamento.
+Nove peças foram refeitas: 01, 07, 08, 10, 11, 13, 22, 26 e 34. A borda inteira
+delas passou por revisão independente: nenhum achado alto, os médios foram
+corrigidos e o resto virou decisão do dono no `CONFERIR.md`.
+
+A página tem 95 pontos numerados, com as notas "09/11":
+https://claude.ai/artifact/B5ha7WmaaTWm87TdPaNvrB
+
+Carimbo de biblioteca segue tirado: o dono pediu que eu julgasse; é marca posta
+depois, não é da gravura.
+
+Nada foi para o acervo nem para a loja. A tarefa gasta muito do limite semanal
+do dono: em nova rodada, parar aos 50% da semana e mostrar o andamento.
 
 ## Estampas da RELÍQUIA e organização das pastas (01/09)
 
