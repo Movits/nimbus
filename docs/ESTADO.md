@@ -304,12 +304,20 @@ delas passou por revisão independente: nenhum achado alto, os médios foram
 corrigidos e o resto virou decisão do dono no `CONFERIR.md`.
 
 A La Salette foi revista letra por letra (93 folhas) e os pingos de sujeira dentro
-do miolo das letras saíram nas 40. A página tem 98 pontos numerados, com as notas
-"09/11":
+do miolo das letras saíram nas 40.
+
+Depois, também em 09/11, as outras 22 peças com texto fora da imagem foram revistas
+letra por letra: 421 folhas ampliadas 2 vezes e 53 revisores. Saíram 98 pontinhos e
+borrões soltos, cada um conferido em antes e depois. Ficaram acento, pingo de i,
+pontuação, ponta de hachura e letra mal impressa. Na 16 saiu uma emenda reta no título
+NOTRE-DAME, que tinha sido criada por nós. As 17 peças restantes não têm texto fora da
+imagem.
+
+A página tem 103 pontos numerados, com as notas "09/11":
 https://claude.ai/artifact/B5ha7WmaaTWm87TdPaNvrB
 
-Carimbo de biblioteca segue tirado: o dono pediu que eu julgasse; é marca posta
-depois, não é da gravura.
+Carimbo de biblioteca segue tirado: o dono deixou o julgamento comigo; é marca
+posta depois, não é da gravura.
 
 Nada foi para o acervo nem para a loja. A tarefa gasta muito do limite semanal
 do dono: em nova rodada, parar aos 50% da semana e mostrar o andamento.
