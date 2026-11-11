@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-09
+atualizado: 2026-11-11
 ---
 
 # Estado do projeto
@@ -285,11 +285,48 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
   ~50° puxa verde, e o detector precisa de piso de saturação.
 
-## Acabamento fino da RELÍQUIA (rodada de 09/11, para nova conferência)
+## Acabamento fino da RELÍQUIA (rodadas de 10 e 11/11, para nova conferência)
 
 **As 40 estampas foram refeitas do scan original** e estão em
 `nimbus-assets/designs/_propostas-2026-10-28-acabamento/` (`estampas/`,
 `provas/`, `CONFERIR.md`, método e ponto de retomada no `LEIA-ME.md`).
+
+Em 10/11 o dono comentou a página de conferência ponto a ponto. Os pontos principais:
+- borda pixelada em quase todas;
+- pináculos e cornija da 07;
+- carimbo da 11 fica;
+- título da 16 com a letra impressa, sem retoque;
+- linha de lápis da 30 inteira.
+
+Rodada 8: borda antisserrilhada nas 40, zoom suave na página e as correções pontuais.
+
+Em 11/11 a borda das 40 passou por revisão completa: 1.156 folhas, 114 revisores e
+confirmação por zoom. Sobraram 129 achados (95 reais). A rodada 9 foi testada em
+`metodo/_trabalho/r9/` e conferida de novo, achado por achado e na beira nova das molduras.
+Subiu para o oficial em 19 peças:
+- molduras retas como traço liso pela borda de fora da linha (`lados_retos`), com a quina ou o
+  arco do desenho: 09, 11, 21, 25, 26, 30, 35 e 37;
+- fiapos, mordidas e tinta escorrida (`fiapos_q` e correções locais): 04, 06, 07, 08, 13, 15,
+  17, 20, 32, 33 e 34;
+- o telhado da torre direita da 08 voltou;
+- a aba de papel da 11 saiu;
+- a faixa verde da 21 entrou inteira.
+
+A 05, a 14, a 23, a 24 e a 38 ficaram como antes: nelas a correção automática piorava a peça.
+O que sobra está como "Fica para você olhar" no `CONFERIR.md`. Detalhe e ponto de retomada no
+`LEIA-ME.md` da proposta; os achados que sobraram estão em `metodo/_trabalho/`.
+
+O vinco da 22 fica no pergaminho, à espera da decisão do dono.
+
+A página tem 109 pontos (104 a 109 são desta rodada):
+https://claude.ai/artifact/B5ha7WmaaTWm87TdPaNvrB
+
+Os 30 pontos do dono foram conferidos de novo no zoom: 12 resolvidos, 9 parciais, 9 não. As
+notas da página dizem o estado real. O maior resto: onde a borda é a beira da própria tinta
+(16, 17, 18, 20, 28, 29), ela segue dura; e as letras saem 1 a 2 px mais gordas que no scan
+(pontos 100 e 101). A próxima rodada está em ordem no `LEIA-ME.md` da proposta.
+
+### Rodada de 09/11 (histórico)
 
 Em 09/11 o dono apontou, na página de conferência, cortes feios: reta, degrau,
 borda pixelada, fundo vazado dentro da imagem (22) e fundo de jornal sobrando.
