@@ -578,6 +578,16 @@ button {
     flex-direction: column;
     min-height: 0;
   }
+  /* seções de texto sobre o céu: o respiro do computador (14vh em cima e
+     embaixo) somava 200px de céu vazio entre uma e outra no celular */
+  .section.manifesto,
+  .section.impact,
+  .section.estampas {
+    padding-block: 3.2rem;
+  }
+  .section.footer .fecho {
+    margin-bottom: 3.5rem;
+  }
   .section.hero {
     padding-bottom: 1rem;
   }

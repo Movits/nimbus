@@ -34,20 +34,31 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
   landing e na vitrine, vindos de UM arquivo (`public/css/marca.css`), com as
   palavras repetidas em `src/data/marca.json`. A loja Nuvemshop repete o desenho
   numa camada de CSS nova e num roteiro de painel. No celular os monumentos da
-  landing viraram imagens do fluxo da página, cada um acima do cartão dele.
-- **Números, antes e depois** (6 compradores simulados, jornada no celular):
-  marca igual nas três superfícies **5,0 para 8,2**; confiança **3,2 para 6,0**;
-  intenção de compra **3,2 para 4,8**. Dois juízes de "mesma mão": 7,5 no
+  landing viraram imagens do fluxo da página, cada um acima do cartão dele. A
+  landing ganhou a fileira "De onde vêm as estampas", a mesma da home da
+  vitrine (as gravuras de época são a única prova real do que a marca estampa
+  que já existe publicada).
+- **Números, antes e depois** (6 compradores simulados, jornada no celular,
+  rodada final sobre o site como ficou): marca igual nas três superfícies
+  **5,0 para 8,2**; confiança **3,2 para 6,0**; intenção de compra **3,2 para
+  5,0**. À pergunta "tirando o fato de que nada está à venda, parece uma loja
+  de verdade, competente?", os seis responderam "quase". Dois juízes de "mesma mão": 7,5 no
   conjunto, **landing e vitrine 8,5**, vitrine e loja 7,5. Revisão visual com
   cético: landing no computador 5 para 7; vitrine 6,5 para 7,5; loja 6,5 a 7.
 - **Olho medido** (`npm run vitrine:olho`, nasceu nesta frente): 0 achado em 10
   páginas e 5 larguras na landing e na vitrine. Contra o ar de antes ele achou a
   marca do topo esticada de 8% a 21% no celular e os pontos desalinhados. Na
   loja, a mesma medição dá **950 achados no ar hoje e 0 com a camada nova**.
-- **Conselho de 12/11** (Cético, Pragmático e Crítico, isolados): dois votos
-  por publicar já, um por publicar depois de dois acertos. O primeiro foi feito
-  ("Fale com a NIMBUS" abre um e-mail em vez de mandar o visitante para a loja
-  com o desenho antigo). O segundo é decisão do dono, abaixo.
+- **Conselho de 12/11** (Cético, Pragmático e Crítico, isolados), duas
+  rodadas. Na primeira: dois votos por publicar já, um por publicar depois de
+  dois acertos (um feito: "Fale com a NIMBUS" abre um e-mail em vez de mandar
+  o visitante para a loja com o desenho antigo; o outro é decisão do dono,
+  abaixo). Na final, os três concordam: **feito pela mesma mão, sim** (7 a
+  8,5); **dá confiança, sim**, para uma marca que ainda não abriu (6 a 6,5);
+  **lugar para comprar, ainda não** (4 a 5); e **o que falta não é desenho**:
+  é uma peça de verdade fotografada, a loja publicada pelo painel e uma lista
+  de e-mails de verdade. O "sim" da mesma mão vale para a loja como ela FICA
+  com a camada nova; no ar, a loja segue com o desenho antigo até o painel.
 - **O que os seis compradores ainda disseram**: o site não mostra nenhuma peça
   (6 de 6); o botão do aviso abre o aplicativo de e-mail e a maioria desiste
   ali, querem um campo de e-mail na página (6 de 6); o fundador assina só com o
