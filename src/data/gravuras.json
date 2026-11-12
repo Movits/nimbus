@@ -1,0 +1,37 @@
+{
+  "_leia": "GERADO por scripts/vitrine/build-paginas.mjs a partir de scripts/vitrine/gravuras.json. Não edite à mão: rode npm run vitrine.",
+  "gravuras": [
+    {
+      "slug": "menino-jesus-ihs-wierix",
+      "titulo": "Menino Jesus sobre o monograma IHS",
+      "autor": "Hieronymus Wierix (Antuérpia, 1553 a 1619)",
+      "ano": "por volta de 1590 a 1615",
+      "w": 480,
+      "h": 689
+    },
+    {
+      "slug": "cor-iesu-amanti-sacrum-wierix",
+      "titulo": "Cor Iesu amanti sacrum",
+      "autor": "Anton Wierix II (Antuérpia, morto em 1604)",
+      "ano": "por volta de 1600",
+      "w": 480,
+      "h": 783
+    },
+    {
+      "slug": "cristo-coroado-de-espinhos-huret",
+      "titulo": "Cristo coroado de espinhos, Rei da Paz",
+      "autor": "Grégoire Huret (Lyon, 1606, a Paris, 1670)",
+      "ano": "século XVII",
+      "w": 480,
+      "h": 673
+    },
+    {
+      "slug": "missal-de-meaux-trindade-le-brun",
+      "titulo": "Missal de Meaux: a Santíssima Trindade",
+      "autor": "Charles Le Brun (desenho) e Gilles Rousselet (gravura)",
+      "ano": "1642",
+      "w": 480,
+      "h": 749
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
-import { ASSETS, COPY, CTA_URL, IMPACT_PROJECTS, MARCA, SECTION, SELOS, registraAviso, type ImpactProject } from '../data/content'
+import { ASSETS, COPY, CTA_URL, GRAVURAS, IMPACT_PROJECTS, MARCA, SECTION, SELOS, registraAviso, type ImpactProject } from '../data/content'
 import { registerSection } from '../scene/scrollStore'
 import { useInView } from '../hooks/useInView'
 import ImpactProjectModal from '../components/ImpactProjectModal'
@@ -117,8 +117,42 @@ export default function Overlay() {
         <p className="reveal kicker">{COPY.design.kicker}</p>
         <h2 className="reveal display">{COPY.design.title}</h2>
         <p className="reveal lede">{COPY.design.body}</p>
+      </Section>
+
+      {/* §4b GRAVURAS: de onde vêm as estampas. A mesma fileira da home da vitrine
+          (grade de public/css/marca.css, palavras de marca.json, dados gerados
+          pelo build-paginas.mjs). É a única prova real do que a marca estampa
+          que já existe publicada: os compradores da revisão de 12/11/2026
+          disseram que o site não mostrava nenhuma. */}
+      <Section index={SECTION.gravuras} className="estampas" align="center">
+        <p className="reveal kicker">{MARCA.gravuras.rotulo}</p>
+        <h2 className="reveal display">{MARCA.gravuras.titulo}</h2>
+        <p className="reveal lede">{MARCA.gravuras.texto}</p>
+        <ul className="reveal gravuras gravuras--home">
+          {GRAVURAS.map((g) => (
+            <li key={g.slug}>
+              <a href={`/gravuras/${g.slug}/`}>
+                <img
+                  src={`/gravuras/img/${g.slug}-480.webp`}
+                  srcSet={`/gravuras/img/${g.slug}-320.webp 320w, /gravuras/img/${g.slug}-480.webp 480w, /gravuras/img/${g.slug}-640.webp 640w`}
+                  sizes="(max-width: 760px) 45vw, 22vw"
+                  width={g.w}
+                  height={g.h}
+                  alt={g.titulo}
+                  loading="lazy"
+                />
+                <span className="gravuras__legenda">
+                  <b>{g.titulo}</b>
+                  <span>
+                    {g.autor}, {g.ano}
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
         <a className="reveal textlink" href="/gravuras/">
-          {COPY.design.link}
+          {MARCA.gravuras.link}
         </a>
       </Section>
 

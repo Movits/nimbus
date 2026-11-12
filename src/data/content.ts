@@ -4,6 +4,7 @@
 // ──────────────────────────────────────────────────────────────────────────
 
 import marca from './marca.json'
+import gravuras from './gravuras.json'
 
 const base = import.meta.env.BASE_URL
 const img = (file: string) => `${base}img/${file}`
@@ -16,6 +17,9 @@ export const STORE_URL = '/loja/'
 // destino do aviso, frase do estado da loja, selos, navegação, rodapé, linha
 // legal): um arquivo só, lido também por scripts/vitrine/build-paginas.mjs.
 export const MARCA = marca
+// As gravuras de época da fileira "De onde vêm as estampas." (a mesma da home
+// da vitrine). Arquivo gerado pelo scripts/vitrine/build-paginas.mjs.
+export const GRAVURAS = gravuras.gravuras
 // O terceiro selo depende de a loja estar aberta: fechada, selo de checkout
 // promete uma compra que não existe. A vitrine faz a mesma conta no molde.
 export const SELOS = [...marca.selos, marca.lojaAberta ? marca.seloDoEstado.aberta : marca.seloDoEstado.fechada]
@@ -51,11 +55,12 @@ export const SECTION = {
   manifesto: 1,
   faith: 2,
   design: 3,
-  impact: 4,
-  footer: 5,
+  gravuras: 4,
+  impact: 5,
+  footer: 6,
 } as const
 
-export const SECTION_COUNT = 6
+export const SECTION_COUNT = 7
 
 export const COPY = {
   hero: {
@@ -79,7 +84,6 @@ export const COPY = {
     kicker: 'Design',
     title: 'Cada peça é arquitetura.',
     body: "Nosso traço vem do concreto curvo de Niemeyer, da Pampulha à Catedral de Brasília. Cada estampa é projetada como um edifício: proporção, linha e propósito, nada por acaso.",
-    link: 'Ver as gravuras',
   },
   impact: {
     kicker: 'Impacto',

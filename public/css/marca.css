@@ -254,6 +254,28 @@
   .topo__cta { padding: 0 0.7rem; }
 }
 
+/* Grade das gravuras de época: a fileira da home da vitrine, da landing e o
+   índice /gravuras/. Cada cartão ocupa dois trilhos da grade, a gravura e a
+   legenda, e os divide com os vizinhos: as gravuras assentam na MESMA linha de
+   base e as legendas começam na mesma altura. Cada gravura aparece INTEIRA, na
+   largura da coluna e na proporção dela: nunca cortada e nunca numa moldura de
+   proporção fixa (revisão de 12/11/2026). A sombra segue o desenho, não a caixa. */
+.gravuras { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 clamp(14px, 2vw, 26px); margin: 1.6em 0; }
+.gravuras li { margin: 0; padding-bottom: 1.6em; display: grid; grid-row: span 2; grid-template-rows: subgrid; }
+.gravuras--home { margin: 0; }
+.gravuras a { display: grid; grid-row: 1 / -1; grid-template-rows: subgrid; row-gap: 0.9em; color: inherit; text-decoration: none; }
+.gravuras img { width: 100%; height: auto; align-self: end; filter: drop-shadow(0 10px 20px rgba(27, 39, 51, 0.16)); transition: transform 0.18s ease; }
+.gravuras a:hover img { transform: translateY(-4px); }
+.gravuras__legenda { display: grid; gap: 0.3em; align-content: start; }
+/* O título vai na serifa: na sem serifa o I maiúsculo de "Iesu" é igual a um L
+   minúsculo e o nome sagrado lia "Cor lesu". */
+.gravuras b { font-family: var(--font-display); color: var(--deep); font-weight: 400; font-size: 1.08rem; line-height: 1.25; }
+.gravuras__legenda > span { font-size: 0.85rem; line-height: 1.5; color: #33414f; }
+@media (max-width: 760px) { .gravuras { grid-template-columns: repeat(2, 1fr); } }
+/* no celular o índice é uma coluna só, com a gravura na largura toda */
+@media (max-width: 480px) { .gravuras:not(.gravuras--home) { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .gravuras a:hover img { transform: none; } }
+
 /* Selos de confiança: três linhas com o ponto dourado da auréola. */
 /* Os três caem na MESMA grade das três colunas do rodapé logo abaixo (cada selo
    começa onde começa uma coluna) e abrem o rodapé debaixo de um fio, como a

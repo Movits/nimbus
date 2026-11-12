@@ -84,6 +84,17 @@ const miniaturaGravura = (g, sizes) => {
 // 1 coluna até 480 px, e a home fica em 2.
 const SIZES_GRAVURA_HOME = "(max-width: 760px) 45vw, 22vw";
 const SIZES_GRAVURA_INDICE = "(max-width: 480px) 92vw, (max-width: 760px) 45vw, 22vw";
+// A landing mostra a mesma fileira de gravuras da home da vitrine. Ela é React e
+// não lê arquivo de imagem, então os dados da fileira (com a largura e a altura
+// de cada miniatura) são gravados aqui, a partir do gravuras.json. GERADO: não
+// editar à mão; o CI regenera antes do build da landing.
+fs.writeFileSync(path.join(RAIZ, "src/data/gravuras.json"), JSON.stringify({
+  _leia: "GERADO por scripts/vitrine/build-paginas.mjs a partir de scripts/vitrine/gravuras.json. Não edite à mão: rode npm run vitrine.",
+  gravuras: GRAVURAS.map((g) => {
+    const [w, h] = tamanhoWebp(path.join(RAIZ, "public", `gravuras/img/${g.slug}-480.webp`));
+    return { slug: g.slug, titulo: g.titulo, autor: g.autor, ano: g.ano, w, h };
+  }),
+}, null, 2) + "\n");
 const cartaoGravura = (g, classe = "", sizes = SIZES_GRAVURA_INDICE) =>
   `<li${classe ? ` class="${classe}"` : ""}><a href="/gravuras/${esc(g.slug)}/">${miniaturaGravura(g, sizes)}<span class="gravuras__legenda"><b>${esc(g.titulo)}</b><span>${esc(g.autor)}, ${esc(g.ano)}</span></span></a></li>`;
 
@@ -315,8 +326,8 @@ ${header(`${PREFIXO}/`)}
 
   ${VITRINE_ABERTA ? "" : `<section class="secao" style="padding-top:0"><div class="secao__inner">
     <div class="secao__head reveal">
-      <div><p class="kicker">Gravuras de época</p><h2 class="display display--md">De onde vêm as estampas.</h2><p class="lede" style="margin-top:0.8em">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. Cada uma com a origem escrita: autor, ano, acervo e o link para o original.</p></div>
-      <a class="btn btn--ghost" href="/gravuras/">Ver as gravuras</a>
+      <div><p class="kicker">${esc(MARCA.gravuras.rotulo)}</p><h2 class="display display--md">${esc(MARCA.gravuras.titulo)}</h2><p class="lede" style="margin-top:0.8em">${esc(MARCA.gravuras.texto)}</p></div>
+      <a class="btn btn--ghost" href="/gravuras/">${esc(MARCA.gravuras.link)}</a>
     </div>
     <ul class="gravuras gravuras--home">
       ${GRAVURAS.map((g) => cartaoGravura(g, "reveal", SIZES_GRAVURA_HOME)).join("\n      ")}

@@ -22,6 +22,12 @@
   },
   "lema": "Streetwear católico premium. Acima de tudo.",
   "legal": "© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF",
+  "gravuras": {
+    "rotulo": "Gravuras de época",
+    "titulo": "De onde vêm as estampas.",
+    "texto": "Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. Cada uma com a origem escrita: autor, ano, acervo e o link para o original.",
+    "link": "Ver as gravuras"
+  },
   "nav": [
     { "rotulo": "Manifesto", "href": "/loja/manifesto/", "secao": "manifesto" },
     { "rotulo": "Impacto", "href": "/loja/impacto/", "secao": "impact" },

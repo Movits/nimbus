@@ -597,33 +597,6 @@ main { padding-top: 68px; }
 .gravura__simulacao { margin: 1.2em 0; max-width: 26em; }
 .gravura__simulacao img { width: 100%; height: auto; display: block; border-radius: 10px; }
 .gravura__simulacao figcaption { font-size: 0.8rem; color: #415061; margin-top: 0.5em; }
-.gravuras { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 clamp(14px, 2vw, 26px); margin: 1.6em 0; }
-.gravuras li { padding-bottom: 1.6em; }
+/* (a grade das gravuras, .gravuras, mora em /css/marca.css: a landing usa a mesma) */
 .institucional .gravuras { padding-left: 0; }
-/* Cada cartão ocupa dois trilhos da grade, a gravura e a legenda, e os divide
-   com os vizinhos: as gravuras assentam na MESMA linha de base e as legendas
-   começam na mesma altura. Dentro da legenda o autor segue o título a uma
-   distância fixa (com três trilhos, título de uma linha ficava longe do autor
-   quando o vizinho tinha duas). */
-.gravuras li { margin: 0; display: grid; grid-row: span 2; grid-template-rows: subgrid; }
-.gravuras--home { margin: 0; }
-@media (max-width: 760px) { .gravuras { grid-template-columns: repeat(2, 1fr); } }
-/* O título vai na serifa: na sem serifa o I maiúsculo de "Iesu" é igual a um L
-   minúsculo e o nome sagrado lia "Cor lesu" (revisão de 12/11/2026). */
-.gravuras b { font-family: var(--font-display); color: var(--deep); font-weight: 400; font-size: 1.08rem; line-height: 1.25; }
-.gravuras a { display: grid; grid-row: 1 / -1; grid-template-rows: subgrid; row-gap: 0.9em; color: inherit; text-decoration: none; }
-.gravuras__legenda { display: grid; gap: 0.3em; align-content: start; }
 .institucional .gravuras a { text-decoration: none; }
-/* Cada gravura aparece INTEIRA, na largura da coluna e na proporção dela,
-   assentada na linha de base da fileira. Nunca cortada (com cover cada uma
-   perdia um pedaço diferente) e nunca dentro de uma moldura de proporção fixa
-   (as mais estreitas ficavam menores e os vãos entre elas, desiguais: 26, 52
-   e 28px, revisão de 12/11/2026). A sombra segue o desenho, não a caixa. */
-.gravuras img { width: 100%; height: auto; align-self: end; filter: drop-shadow(0 10px 20px rgba(27, 39, 51, 0.16)); transition: transform 0.18s ease; }
-/* no celular o índice é uma coluna só, com a gravura na largura toda */
-@media (max-width: 480px) {
-  .gravuras:not(.gravuras--home) { grid-template-columns: 1fr; }
-}
-.gravuras a:hover img { transform: translateY(-4px); }
-@media (prefers-reduced-motion: reduce) { .gravuras a:hover img { transform: none; } }
-.gravuras__legenda > span { font-size: 0.85rem; color: #33414f; }

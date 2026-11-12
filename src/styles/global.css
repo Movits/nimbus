@@ -210,6 +210,19 @@ button {
   display: none;
 }
 
+/* ───────────────────────── Gravuras (de onde vêm as estampas) ───────────────────────── */
+/* A fileira é a mesma da home da vitrine (.gravuras, em marca.css). A seção é
+   texto e imagem sobre o céu, sem monumento: altura do conteúdo. */
+.section.estampas {
+  min-height: 0;
+  padding-block: clamp(4rem, 10vh, 7rem);
+}
+.estampas .gravuras {
+  width: 100%;
+  margin-top: 1.2rem;
+  text-align: left;
+}
+
 /* ───────────────────────── Impacto (projetos sociais) ───────────────────────── */
 .impact__grid {
   margin-top: 1.4rem;
