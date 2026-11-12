@@ -1,0 +1,52 @@
+{
+  "_leia": "Palavras e destinos que a landing (src/), a vitrine e as gravuras (scripts/vitrine/build-paginas.mjs) repetem IGUAIS. Um nome por coisa, um destino por nome: mude aqui e as duas pontas mudam juntas. A loja Nuvemshop repete isto no painel e na camada de CSS (nuvemshop/painel-um-so-ceu-2026-11-11.md). lojaAberta diz se há peça à venda e tem que valer o mesmo que VITRINE_ABERTA no build-paginas.mjs (o build falha se discordarem); o terceiro selo sai de seloDoEstado, porque selo de checkout numa loja fechada promete o que não existe. aviso.nota (o que o botão faz) vai debaixo do botão da capa e no fecho que encerra a página; aviso.outroCaminho (o endereço escrito) aparece UMA vez por página, só no fecho, com a pergunta aviso.fecho, que o botão responde. 'Fale com a NIMBUS' abre um e-mail, e não a página de contato da loja, enquanto a loja publicada estiver com o desenho antigo (conselho de 12/11/2026): volta a apontar para https://loja.nimbuswear.com.br/contato/ quando o dono colar a camada de CSS e fizer o checklist do painel. Nasceu em 11/11/2026, quando a landing dizia 'Impacto', a vitrine '10% do lucro' e a loja 'Projetos Sociais' para a mesma página.",
+  "descritor": "Streetwear católico premium",
+  "estado": "Estamos remontando a coleção, peça por peça. As primeiras peças chegam em breve, feitas no Brasil, para você.",
+  "lojaAberta": false,
+  "aviso": {
+    "rotulo": "Quero ser avisado",
+    "email": "nimbuswearbr@gmail.com",
+    "assunto": "Aviso: abertura da NIMBUS",
+    "corpo": "Quero ser avisado quando as peças da NIMBUS chegarem.",
+    "nota": "O botão abre o seu e‑mail com a mensagem pronta. É só enviar.",
+    "outroCaminho": "Se preferir, escreva para nimbuswearbr@gmail.com.",
+    "fecho": "Quer saber quando as peças chegam?"
+  },
+  "selos": [
+    "Feita no Brasil, para você",
+    "10% do lucro vai para o projeto social que você escolher"
+  ],
+  "seloDoEstado": {
+    "fechada": "Aviso por e‑mail quando as peças chegarem",
+    "aberta": "Compra pelo checkout da Nuvemshop: Pix, cartão e boleto"
+  },
+  "lema": "Streetwear católico premium. Acima de tudo.",
+  "legal": "© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF",
+  "nav": [
+    { "rotulo": "Manifesto", "href": "/loja/manifesto/", "secao": "manifesto" },
+    { "rotulo": "Impacto", "href": "/loja/impacto/", "secao": "impact" },
+    { "rotulo": "Gravuras", "href": "/gravuras/" },
+    { "rotulo": "Loja", "href": "/loja/", "nota": "em breve" }
+  ],
+  "rodape": [
+    {
+      "titulo": "A marca",
+      "links": [
+        { "rotulo": "Manifesto", "href": "/loja/manifesto/" },
+        { "rotulo": "Impacto", "href": "/loja/impacto/" },
+        { "rotulo": "Gravuras", "href": "/gravuras/" },
+        { "rotulo": "Instagram", "href": "https://www.instagram.com/nimbuswear.br/" },
+        { "rotulo": "TikTok", "href": "https://www.tiktok.com/@nimbuswear.br" }
+      ]
+    },
+    {
+      "titulo": "Ajuda",
+      "links": [
+        { "rotulo": "Trocas e devoluções", "href": "/loja/trocas/" },
+        { "rotulo": "Envios e prazos", "href": "/loja/envios/" },
+        { "rotulo": "Privacidade", "href": "/loja/privacidade/" },
+        { "rotulo": "Fale com a NIMBUS", "href": "mailto:nimbuswearbr@gmail.com?subject=Contato%3A%20NIMBUS" }
+      ]
+    }
+  ]
+}

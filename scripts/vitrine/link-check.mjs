@@ -53,8 +53,13 @@ const erros = [];
 for (const [u, pagina] of internos) {
   const limpo = u.split(/[?#]/)[0];
   const alvo = path.join(PUBLIC, limpo);
-  const ok = fs.existsSync(alvo) &&
-    (fs.statSync(alvo).isFile() || fs.existsSync(path.join(alvo, "index.html")));
+  // "/" é a landing: o index.html dela é a entrada do Vite e mora na RAIZ do
+  // repositório, não em public/. Desde 11/11/2026 a marca do topo e do rodapé
+  // da vitrine leva para lá.
+  const ok = limpo === "/"
+    ? fs.existsSync(path.join(RAIZ, "index.html"))
+    : fs.existsSync(alvo) &&
+      (fs.statSync(alvo).isFile() || fs.existsSync(path.join(alvo, "index.html")));
   if (!ok) erros.push(`interno quebrado: ${u} (em ${pagina})`);
 }
 

@@ -64,6 +64,7 @@ npm run typecheck                    # tsc --noEmit (landing)
 node scripts/geometry/validate.mjs   # 38.880 cenas sintéticas; nenhum veredito de medição sem ele passar
 npm run vitrine:portoes              # os 11 portões: copy, claims, tokens, links, variantes, nuvem, tracking, dpi300, docs:links, docs:status, loja:css
 npm run vitrine                      # REGERA public/loja/ (catalogo → lint → paginas → claims → nuvem); commitar a saída junto
+npm run vitrine:olho                 # mede imagem esticada, desalinhamento, rolagem horizontal e alvo de toque em 5 telas (precisa do npm run dev de pé)
 npm run dev | build | preview        # landing Vite (localhost:5173)
 npm run sessao:fim                   # ritual de saída (docs/HANDOFF-SESSAO.md, seções 11 e 12)
 ```
@@ -78,6 +79,15 @@ vitrine em `public/loja/`, **gerada, nunca editar `index.html`, `c/`, `p/` à
 mão**; loja em `nuvemshop/`, kit colado à mão no painel (leia
 `nuvemshop/instrucoes.md` antes: o painel apaga custom properties, CSS com
 `var()` fica inerte).
+
+**O desenho é um só nas três superfícies** (11/11/2026, fluxo em
+`docs/fluxos/site-um-so-ceu.md`): topo, rodapé, título, botão e vidro moram em
+`public/css/marca.css`, ligado pela landing E pela vitrine; as palavras que as
+duas repetem (aviso, navegação, selos, rodapé, linha legal) moram em
+`src/data/marca.json`. A loja repete os valores à mão na camada de CSS. O
+`public/404.html` e o `public/gravuras/` também são GERADOS pelo
+`build-paginas.mjs`. Imagem no site é lugar real, pessoa ou gravura de museu:
+o dono reprovou cenário inventado com cara de IA.
 
 **Pipeline da vitrine** (`scripts/vitrine/`): `build-catalogo.mjs` funde as
 planilhas auditadas (matriz de variantes = verdade comercial; `nuvemshop-products.json`

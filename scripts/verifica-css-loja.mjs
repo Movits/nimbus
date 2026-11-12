@@ -26,6 +26,17 @@
  * cola no painel, em Loja online > Layout > Edição de CSS avançada. Por isso o
  * teste roda contra o arquivo versionado, que é o que vai ser colado.
  *
+ * Segunda conferência, de 11/11/2026: a sintaxe que o painel derruba. Medido
+ * naquele dia, o arquivo versionado tinha 50.721 caracteres e o que a loja
+ * servia tinha 47.579: o sanitizador apagou, sem avisar, toda regra com
+ * :focus-visible, os blocos de prefers-reduced-motion e cada declaração com
+ * clamp(), inset, aspect-ratio, hex de 8 dígitos, var(), custom property,
+ * text-underline-offset e text-decoration-thickness. O hover da sacola, o
+ * fundo do modal dos projetos e o tamanho do título no celular nunca chegaram
+ * ao site. O portão agora recusa essa sintaxe, e a que nunca foi testada no
+ * painel, no arquivo canônico, que é o que se cola. A lista é a mesma de
+ * scripts/build_nimbus_publication_css.mjs: mudou uma, mude a outra.
+ *
  *   node scripts/verifica-css-loja.mjs
  */
 
@@ -58,6 +69,62 @@ const ARQUIVOS = /^css-nimbus-.*\.css$/;
 const comoOPainelEntrega = (css) => css
   .replace(/\\([0-9A-Fa-f]{1,5}) /g, "\\$1")
   .replace(/\\0+([0-9A-Fa-f])/g, "\\$1");
+
+/** O arquivo que se cola no painel, e o teto de tamanho que o painel aceita. */
+const CANONICO = "css-nimbus-publicacao-compacta-2026-07-20.css";
+const LIMITE = 57500;
+
+/** Sintaxe que o painel derruba (medida) ou que nunca foi testada nele.
+ *  Espelho de PROIBIDO em scripts/build_nimbus_publication_css.mjs. */
+const PROIBIDO = [
+  ["clamp()", /\bclamp\(/i],
+  ["propriedade inset", /(^|[;{\s])inset(-[a-z-]+)?\s*:/i],
+  ["aspect-ratio", /aspect-ratio/i],
+  [":focus-visible", /:focus-visible/i],
+  ["prefers-reduced-motion", /prefers-reduced-motion/i],
+  ["text-underline-offset", /text-underline-offset/i],
+  ["text-decoration-thickness", /text-decoration-thickness/i],
+  ["var()", /\bvar\(/i],
+  ["custom property", /(^|[;{\s])--[a-z0-9_-]+\s*:/i],
+  [":has()", /:has\(/i],
+  [":is()", /:is\(/i],
+  [":where()", /:where\(/i],
+  ["@import", /@import\b/i],
+  ["@font-face", /@font-face\b/i],
+  ["unidade lvh/svh/dvh", /\d(lvh|svh|dvh)\b/i],
+  ["nesting (&)", /[{;]\s*&/],
+  // O tema só carrega Fraunces 400/700 e Inter 400/700.
+  ["font-weight 300/500/600", /font-weight\s*:\s*(300|500|600)\b/i],
+  // Escape em content é inusável no painel (a história está no topo).
+  ["escape em content", /content\s*:\s*"[^"]*\\/i],
+  // Copy pública proibida também vale para texto que entra por content.
+  ["travessão", new RegExp(String.fromCharCode(8212))],
+  ["copy proibida", /sob demanda|print on demand|troca fácil|loja oficial/i],
+];
+
+/** Hex com alfa (#rrggbbaa e #rgba) só conta em valor de declaração: em
+ *  seletor, #face seria um id legítimo. */
+function hexComAlfa(css) {
+  const achados = [];
+  for (const m of css.matchAll(/[{;]([a-z-]+):([^;{}]*)/gi)) {
+    if (/#(?:[0-9a-f]{8}|[0-9a-f]{4})(?![0-9a-f])/i.test(m[2])) achados.push(`${m[1]}:${m[2].slice(0, 60)}`);
+  }
+  return achados;
+}
+
+const falhasDeSintaxe = [];
+const colado = readFileSync(join(DIR, CANONICO), "utf8");
+for (const [nome, re] of PROIBIDO) {
+  const m = colado.match(re);
+  if (m) {
+    const i = Math.max(0, m.index - 40);
+    falhasDeSintaxe.push(`${CANONICO}: ${nome}\n     ...${colado.slice(i, m.index + 60).replace(/\s+/g, " ")}...`);
+  }
+}
+for (const h of hexComAlfa(colado)) falhasDeSintaxe.push(`${CANONICO}: hex com alfa\n     ${h}`);
+if (colado.trim().length >= LIMITE) {
+  falhasDeSintaxe.push(`${CANONICO}: ${colado.trim().length} caracteres, acima do limite de ${LIMITE} do painel`);
+}
 
 const chromiumDaNuvem = "/opt/pw-browsers/chromium";
 const navegador = await chromium.launch({
@@ -105,9 +172,20 @@ await navegador.close();
 
 console.log(`verifica-css-loja: ${conferidos} escape(s) conferidos nos CSS da loja.`);
 for (const f of falhas) console.error(`  ERRO   ${f}`);
+console.log(
+  `verifica-css-loja: ${PROIBIDO.length + 1} regras de sintaxe conferidas em ${CANONICO} (${colado.trim().length} caracteres).`,
+);
+for (const f of falhasDeSintaxe) console.error(`  ERRO   ${f}`);
 
 if (falhas.length) {
   console.error(`\n${falhas.length} escape(s) mudam de significado ao serem colados no painel.`);
-  process.exit(1);
 }
-console.log("Todo escape sobrevive ao minificador do painel.");
+if (falhasDeSintaxe.length) {
+  console.error(
+    `\n${falhasDeSintaxe.length} trecho(s) que o painel derruba ou que nunca foram testados nele.\n` +
+      `Conserte a FONTE (nuvemshop/css-nimbus-*.css) e regenere com\n` +
+      `node scripts/build_nimbus_publication_css.mjs; não edite o arquivo compacto à mão.`,
+  );
+}
+if (falhas.length || falhasDeSintaxe.length) process.exit(1);
+console.log("Todo escape sobrevive ao minificador do painel e nenhuma sintaxe derrubada foi encontrada.");

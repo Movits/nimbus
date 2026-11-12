@@ -23,7 +23,8 @@ function StaticBackdrop() {
   return (
     <div
       className="canvas canvas--static"
-      style={{ backgroundImage: `url(${mobile ? ASSETS.heroMobile : ASSETS.heroDesktop})` }}
+      // no celular a Catedral já é uma imagem do fluxo da página: o fundo é só o céu
+      style={{ backgroundImage: `url(${mobile ? ASSETS.ceu : ASSETS.heroDesktop})` }}
       aria-hidden="true"
     />
   )

@@ -1,6 +1,6 @@
 {
   "atualizado": "2026-10-26",
-  "_leia": "Gravuras de época da NIMBUS: dados públicos de cada imagem (autor, ano, acervo, inventário, licença, link do original) para as páginas /gravuras/. Fonte: nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/arquivos/FONTES.json (n51, n63, n61, n50), conferida em 26/10/2026. As imagens em public/gravuras/img/ são o ORIGINAL do museu (domínio público ou CC0), reduzido para a web, e a simulação digital da camiseta; o arquivo de impressão fica no repositório privado.",
+  "_leia": "Gravuras de época da NIMBUS: dados públicos de cada imagem (autor, ano, acervo, inventário, licença, link do original) para as páginas /gravuras/. Fonte: nimbus-assets/designs/referencias/reliquia-escolhidas-2026-08/arquivos/FONTES.json (n51, n63, n61, n50), conferida em 26/10/2026. As imagens em public/gravuras/img/ são o ORIGINAL do museu (domínio público ou CC0), reduzido para a web, e a simulação digital da camiseta; o arquivo de impressão fica no repositório privado. \"recorte\" (opcional) apara o scan do museu na folha da gravura, em frações [esquerda, alto, largura, altura]: o scan do Cor Iesu traz fundo branco em volta do papel e o do Missal traz o cartão de montagem com o número de inventário a lápis. Vale para as miniaturas e para a imagem grande da página; o arquivo <slug>.webp fica como veio do museu. Depois de mexer, rode node scripts/vitrine/build-gravuras-miniaturas.mjs.",
   "gravuras": [
     {
       "slug": "menino-jesus-ihs-wierix",
@@ -36,6 +36,12 @@
       "texto": [
         "É a folha de rosto de uma série de gravuras de Anton Wierix sobre o coração humano que se abre a Jesus e passa a ser a casa dele. Não é o Sagrado Coração de Jesus: é o coração do fiel, oferecido a Ele.",
         "O título em latim está gravado dentro do próprio coração. No alto, o monograma IHS em raios; embaixo, fiéis abraçam o coração."
+      ],
+      "recorte": [
+        0.029,
+        0.016,
+        0.942,
+        0.968
       ]
     },
     {
@@ -60,7 +66,7 @@
       "slug": "missal-de-meaux-trindade-le-brun",
       "num": "n50",
       "titulo": "Missal de Meaux: a Santíssima Trindade",
-      "autor": "desenho de Charles Le Brun, gravura de Gilles Rousselet",
+      "autor": "Charles Le Brun (desenho) e Gilles Rousselet (gravura)",
       "ano": "1642",
       "tecnica": "gravura em metal",
       "acervo": "Rijksmuseum, Amsterdã",
@@ -72,6 +78,12 @@
       "texto": [
         "Folha de rosto do missal da diocese de Meaux, na França, impresso em Paris em 1642. No alto, a Santíssima Trindade sobre as nuvens: o Pai, o Filho com a cruz e, entre os dois, a pomba do Espírito Santo.",
         "Embaixo, Santo Estêvão e São Dionísio ladeiam o pedestal com o título do livro."
+      ],
+      "recorte": [
+        0.042,
+        0.022,
+        0.917,
+        0.932
       ]
     }
   ]

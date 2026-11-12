@@ -4,110 +4,30 @@
    que 400px CSS. O volume visual vem do editorial e das texturas de arte.
    =========================================================================== */
 
-/* --- announcement + header ------------------------------------------------ */
-/* claro com texto navy, como a barra da loja publicada (30/07) */
+/* --- topo ------------------------------------------------------------------ */
+/* O topo (.topo) é o mesmo da landing e mora em /css/marca.css.
+   Como ele é fixo, o conteúdo começa abaixo dele; só a capa da home sobe para
+   baixo do topo, como a cena da landing. */
+main { padding-top: 68px; }
+@media (max-width: 860px) { main { padding-top: 60px; } }
+
+/* Faixa de anúncio: só existe com a vitrine ABERTA (frete grátis). Fechada, a
+   vitrine não tem faixa, como a landing. Caixa baixa, sem gritar. */
 .announcement {
-  background: var(--sky);
+  position: relative;
+  z-index: 51;
+  background: rgba(247, 251, 255, 0.86);
   color: var(--deep);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-size: 12px;
   text-align: center;
   padding: 9px var(--pad);
 }
-.announcement b { color: var(--deep); font-weight: 700; }
+.announcement b { color: var(--deep); font-weight: 600; }
 .announcement a { color: inherit; text-decoration: none; }
 .announcement a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.announcement ~ .topo { top: 36px; }
+.announcement ~ main { padding-top: 104px; }
 
-/* páginas institucionais (impacto, trocas, envios, privacidade) */
-/* especificidade 0,2,0 para vencer .secao__inner (--maxw-loja); 40em ~ 68
-   caracteres por linha, a faixa confortável de leitura */
-.secao__inner.institucional { max-width: 40em; }
-.institucional h1 { margin-bottom: 0.6em; }
-.institucional h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.25rem; color: var(--deep); margin: 1.8em 0 0.5em; }
-.institucional p, .institucional li { line-height: 1.7; margin: 0.6em 0; }
-.institucional ol, .institucional ul { padding-left: 1.3em; }
-.institucional a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
-.pdp__impacto a, .passos a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
-.institucional a.btn { text-decoration: none; }
-
-/* institucional com imagem (manifesto): no desktop o texto encosta à esquerda
-   e a imagem preenche a direita, pedido do dono em 08/08 (o texto central
-   deixava espaço branco demais). No mobile empilha, texto primeiro. */
-.secao__inner.institucional--com-imagem { max-width: var(--maxw-loja); }
-.institucional--com-imagem .institucional__texto { max-width: 40em; }
-.institucional__midia { margin-top: 1.5em; }
-.institucional__midia img { width: 100%; height: auto; display: block; border-radius: 10px; }
-.institucional__midia figcaption { font-size: 0.8rem; color: var(--muted, #5b6b7a); margin-top: 0.6em; }
-@media (min-width: 900px) {
-  .secao__inner.institucional--com-imagem { display: grid; grid-template-columns: minmax(0, 40em) minmax(280px, 1fr); gap: 3.5em; align-items: start; }
-  .institucional--com-imagem h1 { grid-column: 1 / -1; }
-  .institucional__midia { position: sticky; top: 2em; margin-top: 0; }
-}
-
-/* mesma régua da landing (.topbar): logo à ESQUERDA com clamp(34px,5vw,46px),
-   navegação na sequência, ferramentas à direita e Sacola como pill de borda */
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  gap: clamp(1.2em, 3vw, 2.6em);
-  height: 92px;
-  padding: 0 var(--pad);
-  background: rgba(247, 251, 255, 0.86);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid var(--line);
-}
-.header__logo { display: flex; align-items: center; }
-/* a auréola ocupa o topo do arquivo do wordmark; o nudge deixa o CENTRO do
-   wordmark no centro do texto do menu (dono, 31/07, segunda rodada) */
-.header__logo img {
-  width: clamp(120px, 11.5vw, 154px);
-  height: auto;
-  transform: translateY(-7px);
-  filter: drop-shadow(0 2px 6px rgba(27, 39, 51, 0.12));
-}
-.header__nav { display: flex; gap: 1.6em; }
-.header__nav a, .header__tools a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  font-size: 11px;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--deep);
-  text-decoration: none;
-  opacity: 0.85;
-}
-/* sublinhado dourado no hover, como o nav da loja publicada. Feito com
-   text-decoration (e não border+padding) para não deslocar o texto do eixo
-   vertical do logo e da Sacola. */
-.header__nav a {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
-  transition: text-decoration-color 0.18s ease;
-}
-.header__nav a:hover { text-decoration-color: var(--gold); }
-.header__nav a:hover, .header__tools a:hover { opacity: 1; color: var(--deep); }
-.header__tools { margin-left: auto; display: flex; align-items: center; gap: 1.6em; }
-.header__cta {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  white-space: nowrap;
-  border: 1.5px solid var(--deep);
-  border-radius: 999px;
-  padding: 0.45rem 1.1rem;
-  opacity: 1 !important;
-  color: var(--deep) !important;
-}
-.header__cta:hover { background: var(--deep); color: var(--cloud) !important; }
 /* contagem local da sacola (espelho em localStorage; a verdade é o carrinho
    da loja). Some quando zerada. */
 .sacola-n[hidden] { display: none; }
@@ -122,80 +42,120 @@
   font-size: 9.5px;
   text-align: center;
 }
-.header__cta:hover .sacola-n { background: var(--cloud); color: var(--deep); }
-@media (max-width: 640px) {
-  .header { height: 62px; padding: 0 14px; gap: 0.85em; }
-  .header__nav { gap: 0.85em; }
-  .header__tools { gap: 0.85em; }
-  .header__nav a, .header__tools a { font-size: 10px; letter-spacing: 0.06em; }
-  .header__logo img { height: auto; width: clamp(84px, 24vw, 110px); transform: translateY(-4px); }
-  .header__cta { padding: 0.4rem 0.8rem; }
-  /* Manifesto continua visível no mobile: escondê-lo deixava a página mais
-     editorial da marca sem caminho no header justamente onde o tráfego de
-     Instagram e TikTok chega (auditoria de UX de 08/08). Aos 10px, cabe. */
+.topo__cta:hover .sacola-n { background: var(--cloud); color: var(--deep); }
+
+/* --- páginas de leitura (manifesto, impacto, trocas, envios, privacidade,
+   gravuras) ------------------------------------------------------------------
+   O título fica solto no céu, como na landing; o texto corrido mora num painel
+   de vidro, que é o que garante leitura sobre as nuvens. Coluna de 40em, cerca
+   de 68 caracteres por linha. */
+/* Todas começam no MESMO eixo esquerdo, o da marca do topo: título, painel e
+   fecho. Antes o manifesto e a gravura começavam na borda da página, o impacto
+   e as políticas numa coluna centrada, e o índice das gravuras numa terceira
+   margem: o título pulava 352px de uma página irmã para a outra (revisão de
+   12/11/2026). É também a composição da landing: cartão à esquerda, céu à
+   direita. A medida do texto continua em 46em. */
+.institucional__texto, .institucional > .lede, .institucional > .fecho { max-width: 46em; }
+.institucional h1 { margin-bottom: 0.7em; }
+.institucional__texto { padding: clamp(1.4rem, 4vw, 2.6rem); }
+.institucional__texto > :first-child { margin-top: 0; }
+.institucional__texto > :last-child { margin-bottom: 0; }
+/* subtítulo em Fraunces 400: a 600, ao lado do título em 300, lia como outra família */
+.institucional h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; line-height: 1.25; color: var(--deep); margin: 1.7em 0 0.45em; text-wrap: balance; }
+.institucional p, .institucional li { line-height: 1.7; margin: 0.8em 0; text-wrap: pretty; }
+.institucional__texto ul + .note { margin-top: 1.3em; }
+/* lista dentro do painel: o mesmo ponto dourado dos selos, não o disco preto do navegador */
+.institucional__texto ul { list-style: none; padding-left: 0; }
+.institucional__texto ul > li { position: relative; padding-left: 1.3em; }
+.institucional__texto ul > li::before { content: ""; position: absolute; left: 0; top: calc(0.85em - 4px); width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+/* o recado de loja fechada no alto das políticas: quem lê "checkout" e "rastreio"
+   debaixo de um topo que diz "Loja em breve" precisa saber de quando elas valem */
+.institucional__estado { padding-left: 0.9em; border-left: 2px solid var(--gold); margin-bottom: 1.6em; }
+/* a abertura do texto é maior que o corpo também no celular (era do mesmo tamanho e mais clara) */
+.institucional__texto > .lede { font-size: clamp(1.1rem, 1.6vw, 1.2rem); }
+.nowrap { white-space: nowrap; }
+.institucional__texto .lede { max-width: none; }
+.institucional ol { padding-left: 1.3em; }
+.institucional a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-skip-ink: none; }
+.pdp__impacto a, .passos a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
+.institucional a.btn { text-decoration: none; }
+.institucional a.btn--primary { color: var(--cloud); }
+
+/* com imagem (manifesto, gravura): texto à esquerda, imagem à direita, pedido
+   do dono em 08/08. No celular empilha, texto primeiro. */
+.institucional--com-imagem .institucional__texto { max-width: 46em; }
+.institucional__midia { margin-top: 1.5em; }
+.institucional__midia img { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1); }
+.institucional__midia figcaption { font-size: 0.8rem; color: #415061; margin-top: 0.6em; }
+/* Título, texto, imagem e fecho são irmãos. No computador, grade: título em
+   cima, texto e fecho à esquerda, imagem à direita. O respiro entre o título e
+   o painel é o MESMO das páginas sem imagem (antes a grade somava 3,5em e o
+   manifesto ficava 55px mais solto que o impacto). */
+@media (min-width: 900px) {
+  .secao__inner.institucional--com-imagem {
+    display: grid;
+    grid-template-columns: minmax(0, 46em) minmax(280px, 1fr);
+    grid-template-areas: "titulo titulo" "texto midia" "fecho midia";
+    grid-template-rows: auto auto 1fr;
+    column-gap: 3.5em;
+    row-gap: 0;
+    align-items: start;
+  }
+  .institucional--com-imagem h1 { grid-area: titulo; }
+  .institucional--com-imagem .institucional__texto { grid-area: texto; }
+  .institucional--com-imagem .fecho { grid-area: fecho; }
+  .institucional--com-imagem .institucional__midia { grid-area: midia; position: sticky; top: 92px; margin-top: 0; }
+  /* a gravura cabe INTEIRA na tela: mais alta que a janela, nunca aparecia de uma vez */
+  .institucional--imagem-antes .institucional__midia img { width: auto; max-width: 100%; max-height: max(420px, calc(100vh - 300px)); margin-left: auto; margin-right: 0; }
+}
+/* A gravura é uma folha de papel do século XVII: cantos retos e a sombra do
+   desenho, igual ao índice. Com o canto arredondado e a sombra de cartão ela
+   virava miniatura de aplicativo. */
+.institucional--imagem-antes .institucional__midia img { border-radius: 0; box-shadow: none; filter: drop-shadow(0 10px 20px rgba(27, 39, 51, 0.16)); }
+/* No celular, a ordem: título, texto, imagem, fecho. Na página de gravura a
+   imagem vem ANTES do texto: quem abre a página quer ver a gravura, não rolar
+   uma ficha técnica até achá-la (revisão de 11/11/2026). */
+@media (max-width: 899.98px) {
+  .secao__inner.institucional--com-imagem { display: flex; flex-direction: column; }
+  .institucional--imagem-antes .institucional__midia { order: 1; margin: 0 0 1.5em; }
+  .institucional--imagem-antes .institucional__texto { order: 2; }
 }
 
-/* --- hero ------------------------------------------------------------------ */
+/* (o fecho das páginas, .fecho, mora em /css/marca.css: a landing usa o mesmo) */
+
+/* --- capa da home ---------------------------------------------------------- */
+/* Texto solto no céu, centrado, como a primeira tela da landing. Sem imagem:
+   o céu é a imagem. */
 .hero {
-  position: relative;
-  min-height: 78vh;
+  margin-top: -68px;
+  padding: calc(68px + clamp(56px, 12vh, 128px)) var(--pad) clamp(24px, 6vh, 72px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  background: var(--sky);
+  text-align: center;
 }
-.hero__bg {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: 70% 20%;
+@media (max-width: 860px) { .hero { margin-top: -60px; padding-top: calc(60px + 52px); } }
+.hero__copy { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; max-width: 46rem; }
+.hero__copy .lede { margin-inline: auto; }
+.hero__cta { display: flex; gap: 0.8em; flex-wrap: wrap; justify-content: center; margin-top: 0.6rem; }
+/* no celular os dois botões SEMPRE empilham, com a mesma largura: lado a lado
+   numa página e empilhados na outra, conforme o tamanho do rótulo, é desleixo */
+@media (max-width: 480px) {
+  .hero__cta { flex-direction: column; align-items: center; }
+  .hero__cta .btn { width: min(100%, 15rem); }
 }
-.hero::after {
-  content: "";
-  position: absolute; inset: 0;
-  background: linear-gradient(100deg, rgba(247, 251, 255, 0.94) 0%, rgba(247, 251, 255, 0.55) 38%, transparent 68%);
-}
-/* No celular o véu diagonal acabava em 265px de uma tela de 390, enquanto a
-   faixa de texto mede 350: o fim de cada linha do título caía no cabelo do
-   modelo, com contraste medido de 1,00:1 a 360px. Aqui ele é vertical e cobre
-   a largura toda (decisão do dono, 01/08: véu mais forte, foto no lugar). */
-@media (max-width: 900px) {
-  .hero::after {
-    background: linear-gradient(180deg, rgba(247, 251, 255, 0.9) 0%, rgba(247, 251, 255, 0.82) 62%, rgba(247, 251, 255, 0.42) 100%);
-  }
-}
-.hero__copy {
-  position: relative;
-  z-index: 1;
-  max-width: var(--maxw-loja);
-  width: 100%;
-  margin: 0 auto;
-  padding: clamp(64px, 10vw, 120px) var(--pad);
-}
-.hero__copy .display { max-width: 9em; }
-.hero__cta { display: flex; gap: 0.9em; margin-top: 2em; flex-wrap: wrap; }
+.hero__copy .note { max-width: 36em; }
+.hero--erro { min-height: 62vh; padding-bottom: clamp(48px, 8vh, 96px); justify-content: center; }
 
 /* --- seções genéricas ------------------------------------------------------ */
-.secao { padding-block: clamp(72px, 9vw, 132px); }
+.secao { padding-block: clamp(64px, 8vw, 120px); }
 .secao__inner { max-width: var(--maxw-loja); margin: 0 auto; padding-inline: var(--pad); }
 .secao__head { display: flex; align-items: end; justify-content: space-between; gap: 1em; margin-bottom: 2.4em; flex-wrap: wrap; }
+/* o rótulo nunca cola no título que ele anuncia */
+.secao__head .kicker { display: block; margin-bottom: 1rem; }
 
-.trust {
-  border-block: 1px solid var(--line);
-  background: #fff;
-}
-.trust__inner {
-  max-width: var(--maxw-loja);
-  margin: 0 auto;
-  padding: 18px var(--pad);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1em;
-  text-align: center;
-  font-size: 0.82rem;
-  color: var(--deep);
-}
-@media (max-width: 700px) { .trust__inner { grid-template-columns: 1fr; gap: 0.4em; } }
+/* selos de confiança (.selos vem de /css/marca.css): sem faixa branca */
+.faixa-selos { padding: clamp(36px, 5vw, 64px) var(--pad) 0; }
 
 /* --- tiles de coleção ------------------------------------------------------ */
 .colecoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
@@ -296,13 +256,24 @@
 }
 
 /* --- bandas editoriais ----------------------------------------------------- */
-.banda { display: grid; grid-template-columns: 55fr 45fr; gap: clamp(24px, 5vw, 64px); align-items: center; }
-@media (max-width: 900px) { .banda { grid-template-columns: 1fr; } }
-.banda__midia img { border-radius: 24px; box-shadow: var(--shadow); }
-.banda--manifesto { background: var(--deep); color: var(--cloud); }
-.banda--manifesto .note { color: #b8c6e6; }
-/* contextos escuros mantêm o título claro (o navy do .display é p/ fundo claro) */
-.banda--manifesto .display { color: var(--cloud); }
+/* painel e foto esticam para a MESMA altura: centrados, com alturas diferentes,
+   a foto ficava 16px fora do alinhamento do painel (revisão de 11/11/2026) */
+.banda { display: grid; grid-template-columns: 55fr 45fr; gap: clamp(24px, 4vw, 3.5rem); align-items: stretch; }
+/* A foto entra aproximada no homem e na coluna de mármore mais próxima: o
+   canto de baixo à esquerda (bases de coluna que se desfazem em hastes) e a
+   metade de céu azul saturado, que brigava com o céu pálido da página, ficam
+   fora do quadro (revisão de 11/11/2026). */
+.banda__midia { display: flex; overflow: hidden; border-radius: 18px; box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1); min-height: 320px; }
+.banda__midia img { width: 100%; height: 100%; object-fit: cover; object-position: 100% 0; transform: scale(1.45); transform-origin: 88% 4%; }
+.banda__texto { align-content: center; }
+@media (max-width: 900px) {
+  .banda { grid-template-columns: 1fr; }
+  .banda__midia { aspect-ratio: 4 / 3; min-height: 0; }
+}
+/* A banda do manifesto era um bloco navy com foto de beco: a única peça da home
+   fora do céu da landing (11/11/2026). Agora é texto em vidro ao lado da foto
+   editorial clara; navy fica só em botão e em título. */
+.banda__texto { padding: clamp(1.4rem, 4vw, 2.6rem); display: grid; gap: 1rem; justify-items: start; }
 .cabecalho-colecao .display { color: inherit; }
 
 /* "Como a sua peça nasce": 3 passos só de texto, no lugar do bloco de impacto
@@ -600,32 +571,11 @@
 .gate__titulo { font-weight: 600; color: var(--deep); display: flex; align-items: center; gap: 0.7em; flex-wrap: wrap; margin-bottom: 0.4em; }
 .gate .card__pill { position: static; }
 
-/* --- footer ----------------------------------------------------------------- */
-/* réplica do rodapé da loja publicada (30/07): corpo céu claro com borda
-   superior dourada, títulos serif navy, e faixa legal navy no pé. */
-.footer { background: var(--sky); color: var(--deep); border-top: 3px solid var(--gold); margin-top: clamp(72px, 9vw, 132px); }
-.footer__inner { max-width: var(--maxw-loja); margin: 0 auto; padding: clamp(48px, 6vw, 80px) var(--pad); }
-.footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2em; }
-@media (max-width: 900px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
-/* contain + max-width: quando o rodapé aperta no celular, a logo encolhe
-   proporcional em vez de achatar (medido: 2,2% de distorção antes) */
-.footer__logo img { height: 52px; width: auto; max-width: 100%; object-fit: contain; }
-.footer__tagline { font-size: 0.88rem; line-height: 1.6; color: var(--ink); margin-top: 1em; max-width: 26em; }
-.footer h4 { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; color: var(--deep); margin-bottom: 0.9em; }
-.footer a { display: flex; align-items: center; min-height: 44px; color: var(--deep); opacity: 0.85; text-decoration: none; font-size: 0.88rem; }
-.footer a:hover { opacity: 1; text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 4px; }
-.footer__legal {
-  background: var(--deep);
-  color: var(--cloud);
-  font-size: 0.78rem;
-  text-align: center;
-  padding: 1.2em var(--pad);
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-  flex-wrap: wrap;
-}
-.footer__legal span { opacity: 0.85; }
+/* --- pé ---------------------------------------------------------------------- */
+/* O rodapé (.rodape) é o mesmo da landing e mora em /css/marca.css: fica
+   sobre o céu, sem faixa. Aqui só o respiro em volta dele. */
+.pe { padding: clamp(32px, 4vw, 56px) var(--pad) clamp(28px, 4vw, 44px); display: grid; gap: clamp(28px, 4vw, 44px); }
+.pe > * { width: 100%; max-width: var(--maxw-loja); margin-inline: auto; }
 
 /* Seis controles não tinham :hover, enquanto card, CTA, migalha e rodapé têm.
    Polimento de coerência; o select tinha sintoma próprio, computava cursor:default. */
@@ -646,8 +596,34 @@
 .ficha dd { margin: 0; }
 .gravura__simulacao { margin: 1.2em 0; max-width: 26em; }
 .gravura__simulacao img { width: 100%; height: auto; display: block; border-radius: 10px; }
-.gravura__simulacao figcaption { font-size: 0.8rem; color: var(--muted, #5b6b7a); margin-top: 0.5em; }
-.gravuras { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.4em; margin: 1.6em 0; }
-.gravuras a { display: grid; gap: 0.4em; color: inherit; text-decoration: none; }
-.gravuras img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; background: #efe9df; }
-.gravuras span { font-size: 0.85rem; color: var(--muted, #5b6b7a); }
+.gravura__simulacao figcaption { font-size: 0.8rem; color: #415061; margin-top: 0.5em; }
+.gravuras { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 clamp(14px, 2vw, 26px); margin: 1.6em 0; }
+.gravuras li { padding-bottom: 1.6em; }
+.institucional .gravuras { padding-left: 0; }
+/* Cada cartão ocupa dois trilhos da grade, a gravura e a legenda, e os divide
+   com os vizinhos: as gravuras assentam na MESMA linha de base e as legendas
+   começam na mesma altura. Dentro da legenda o autor segue o título a uma
+   distância fixa (com três trilhos, título de uma linha ficava longe do autor
+   quando o vizinho tinha duas). */
+.gravuras li { margin: 0; display: grid; grid-row: span 2; grid-template-rows: subgrid; }
+.gravuras--home { margin: 0; }
+@media (max-width: 760px) { .gravuras { grid-template-columns: repeat(2, 1fr); } }
+/* O título vai na serifa: na sem serifa o I maiúsculo de "Iesu" é igual a um L
+   minúsculo e o nome sagrado lia "Cor lesu" (revisão de 12/11/2026). */
+.gravuras b { font-family: var(--font-display); color: var(--deep); font-weight: 400; font-size: 1.08rem; line-height: 1.25; }
+.gravuras a { display: grid; grid-row: 1 / -1; grid-template-rows: subgrid; row-gap: 0.9em; color: inherit; text-decoration: none; }
+.gravuras__legenda { display: grid; gap: 0.3em; align-content: start; }
+.institucional .gravuras a { text-decoration: none; }
+/* Cada gravura aparece INTEIRA, na largura da coluna e na proporção dela,
+   assentada na linha de base da fileira. Nunca cortada (com cover cada uma
+   perdia um pedaço diferente) e nunca dentro de uma moldura de proporção fixa
+   (as mais estreitas ficavam menores e os vãos entre elas, desiguais: 26, 52
+   e 28px, revisão de 12/11/2026). A sombra segue o desenho, não a caixa. */
+.gravuras img { width: 100%; height: auto; align-self: end; filter: drop-shadow(0 10px 20px rgba(27, 39, 51, 0.16)); transition: transform 0.18s ease; }
+/* no celular o índice é uma coluna só, com a gravura na largura toda */
+@media (max-width: 480px) {
+  .gravuras:not(.gravuras--home) { grid-template-columns: 1fr; }
+}
+.gravuras a:hover img { transform: translateY(-4px); }
+@media (prefers-reduced-motion: reduce) { .gravuras a:hover img { transform: none; } }
+.gravuras__legenda > span { font-size: 0.85rem; color: #33414f; }

@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-12
+atualizado: 2026-11-11
 ---
 
 # scripts/ — o que é vivo e o que é superado
@@ -18,6 +18,8 @@ este mapa e o banner no topo de cada script superado.
 | Contrato de eventos GA4 (`vitrine:tracking`; o plano é `docs/fluxos/tracking-plan.md`) | `vitrine/lint-tracking.mjs` (P1-5 r4) |
 | Receita de export a 300 DPI (`producao:dpi300`; precisa dos assets mesclados, `SKIP_ASSETS=1` só em ambiente sem eles) | `producao/lint-export-300dpi.mjs` + baseline datada `producao/export-300dpi.baseline.json` (P1-1c r4; regra em `docs/verdades/receita-export-300dpi.md`) |
 | Monitor diário contra o ar (Actions, agendado; abre issue ao falhar) | `.github/workflows/monitor-diario.yml` (P1-1g r4) |
+| Olho medido do site: imagem esticada, itens desalinhados, rolagem horizontal, alvo de toque, texto cortado, em 5 larguras de tela (`npm run vitrine:olho`, com o `npm run dev` de pé; fluxo em `docs/fluxos/site-um-so-ceu.md`) | `vitrine/olho.mjs` |
+| Miniaturas das gravuras em 320, 480 e 640 px e a imagem grande da página de cada uma, aparadas na folha quando o `gravuras.json` traz `recorte` (sem a redução feita aqui a gravura fina vira moiré no navegador); rode ao entrar gravura nova e commite a saída em `public/gravuras/img/` | `vitrine/build-gravuras-miniaturas.mjs` |
 | Reteste local do desempate sacola↔carrinho | `vitrine/teste-sincroniza.mjs` |
 | Links da documentação (`npm run docs:links`) | `link-check-docs.mjs` |
 | CSS da loja sobrevive ao minificador do painel (`npm run loja:css`) | `verifica-css-loja.mjs` |

@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-11
+atualizado: 2026-11-12
 ---
 
 # Estado do projeto
@@ -21,6 +21,74 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - Contra qualquer outro documento vale a regra de sempre: documento fora de
   `docs/` que contradiga um de dentro perde.
 - Contra o ar, **o ar vence**: confira e corrija o documento.
+
+## Site com um só desenho (11 e 12/11/2026)
+
+**Pedido do dono**: a landing e o resto do site não pareciam feitos pela mesma
+pessoa; conferir também se o site passa confiança e vontade de comprar. No
+meio da sessão ele reprovou a arquitetura inventada nas nuvens ("cara de IA"),
+a foto do modelo esticada no celular e os pontos dourados desalinhados.
+
+- **O que mudou** ([`fluxos/site-um-so-ceu.md`](fluxos/site-um-so-ceu.md), onze
+  regras): o mesmo céu, topo, voz de título, vidro, botão, fecho e rodapé na
+  landing e na vitrine, vindos de UM arquivo (`public/css/marca.css`), com as
+  palavras repetidas em `src/data/marca.json`. A loja Nuvemshop repete o desenho
+  numa camada de CSS nova e num roteiro de painel. No celular os monumentos da
+  landing viraram imagens do fluxo da página, cada um acima do cartão dele.
+- **Números, antes e depois** (6 compradores simulados, jornada no celular):
+  marca igual nas três superfícies **5,0 para 8,2**; confiança **3,2 para 6,0**;
+  intenção de compra **3,2 para 4,8**. Dois juízes de "mesma mão": 7,5 no
+  conjunto, **landing e vitrine 8,5**, vitrine e loja 7,5. Revisão visual com
+  cético: landing no computador 5 para 7; vitrine 6,5 para 7,5; loja 6,5 a 7.
+- **Olho medido** (`npm run vitrine:olho`, nasceu nesta frente): 0 achado em 10
+  páginas e 5 larguras na landing e na vitrine. Contra o ar de antes ele achou a
+  marca do topo esticada de 8% a 21% no celular e os pontos desalinhados. Na
+  loja, a mesma medição dá **950 achados no ar hoje e 0 com a camada nova**.
+- **Conselho de 12/11** (Cético, Pragmático e Crítico, isolados): dois votos
+  por publicar já, um por publicar depois de dois acertos. O primeiro foi feito
+  ("Fale com a NIMBUS" abre um e-mail em vez de mandar o visitante para a loja
+  com o desenho antigo). O segundo é decisão do dono, abaixo.
+- **O que os seis compradores ainda disseram**: o site não mostra nenhuma peça
+  (6 de 6); o botão do aviso abre o aplicativo de e-mail e a maioria desiste
+  ali, querem um campo de e-mail na página (6 de 6); o fundador assina só com o
+  primeiro nome, sem foto (4 de 6); a Catedral nas nuvens parece montagem (3 de
+  6). O site deixou de ser o gargalo: o que falta para a primeira venda é peça
+  fotografada, lista de e-mails de verdade e a hora do dono no painel.
+
+**Com o dono, nesta ordem:**
+
+1. **Painel da loja, uma sentada**: roteiro em
+   [`nuvemshop/painel-um-so-ceu-2026-11-11.md`](../nuvemshop/painel-um-so-ceu-2026-11-11.md).
+   Primeiro apagar os dois campos de contato pessoal (telefone e endereço
+   aparecem no HTML público, o CSS só esconde), depois menus e textos, e o CSS
+   por último. Enquanto isso não acontece, a loja no ar segue com o desenho
+   antigo e os 30 "Produto de exemplo". Feito o painel, devolver o destino de
+   "Fale com a NIMBUS" em `src/data/marca.json` para a página de contato da loja.
+2. **"Acima de tudo." sozinho como título** (home da vitrine e capa da loja):
+   os três do conselho e dois revisores de marketing leram eco do lema de
+   campanha de 2018. Sugestão deles: usar a frase só completa ("Acima de tudo,
+   o próximo.") ou junto do descritor. Nada foi mudado.
+3. **Os três monumentos da landing** (Catedral, Cristo e Pampulha nas nuvens)
+   levaram de 6 a 8 em 10 de "cara de render ou de IA". São a assinatura da
+   landing e ficaram. Trocar por foto real ou manter é decisão dele; o conselho
+   se dividiu (manter até haver foto de produto, ou trocar Catedral e Pampulha).
+4. **Lista de aviso de verdade**: trocar o mailto por um campo de e-mail (o
+   bloco de newsletter do tema da loja ou um formulário) depende de ele escolher
+   onde os e-mails ficam.
+5. Endereço de e-mail no domínio da marca no lugar do Gmail; nome completo e
+   foto na carta do manifesto; "premium" dito e ainda não mostrado.
+
+**Feito por esta frente e que ele precisa saber**: a marca grande que fechava
+a landing saiu (com o rodapé novo eram três marcas na mesma tela); a simulação
+da camiseta saiu das páginas de gravura; os scans do Cor Iesu e do Missal
+aparecem aparados na folha; "voltam em breve" virou "chegam em breve"; a página
+de privacidade ganhou a frase sobre o e-mail do aviso; o envio do link em
+WhatsApp passa a mostrar imagem (`og-nimbus.jpg`).
+
+**Pontas soltas técnicas**: `scripts/verify-prelaunch-artifacts.mjs` (fora dos
+portões) espera 20 IDs de produto que a camada nova não cita e vai falhar;
+`public/img/store-backdrop.webp` e os quatro `-simulacao.webp` das gravuras não
+são mais usados por nenhuma página.
 
 ## Semana de 20 a 26/10/2026 (founder-skill, teste do produto, correções)
 
@@ -169,8 +237,9 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
   durante a remontagem IzzyPrint. Home virou página de remontagem com a
   frase-promessa ("Acima de tudo."); header e footer sem coleções e sem
   Sacola; manifesto, impacto, envios, trocas e privacidade CONTINUAM no ar.
-  Reabrir = `VITRINE_ABERTA = true` (build-paginas) + restaurar `ENTRAM`
-  (build-catalogo) + `npm run vitrine`. escala-grade e par-fotos esvaziados
+  Reabrir = `VITRINE_ABERTA = true` (build-paginas) + `"lojaAberta": true` em
+  `src/data/marca.json` (o build falha se os dois discordarem) + restaurar
+  `ENTRAM` (build-catalogo) + `npm run vitrine`. escala-grade e par-fotos esvaziados
   junto (régua da era YouDraw preservada no git; a remontagem mede de novo).
   Textos de Ecobag saíram da vitrine e da gaveta. O painel foi fechado junto,
   no mesmo dia (roteiro `nuvemshop/cowork-fechar-catalogo-youdraw.md`
@@ -185,7 +254,8 @@ agir e atualize ao sair (`npm run sessao:fim` cobra). A crônica de julho a
 - Ferramenta `/registro-rosto/` no ar (#61): página utilitária de fotos para o
   Soul, sem link de entrada, noindex.
 - **Onze portões** (`npm run vitrine:portoes`), monitor diário no Actions, e
-  hook de sessão conferindo a sincronia dos 3 repos ao abrir.
+  hook de sessão conferindo a sincronia dos 3 repos ao abrir. Fora dos portões,
+  porque precisa do servidor de pé: `npm run vitrine:olho` (desde 11/11).
 
 ## Catálogo e coleções
 

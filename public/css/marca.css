@@ -1,0 +1,320 @@
+/* ===========================================================================
+   NIMBUS: primitivas da marca, UM arquivo para a landing e para a vitrine.
+
+   A landing (index.html) e a vitrine (scripts/vitrine/build-paginas.mjs) ligam
+   ESTE arquivo. Antes de 11/11/2026 cada uma tinha a sua cópia de rótulo,
+   título, botão, topo e rodapé, e as cópias divergiram: a landing e o resto do
+   site ficaram com cara de sites feitos por pessoas diferentes. Topo, rodapé,
+   voz de título, botão e vidro se mudam AQUI, uma vez.
+
+   Os tokens (--deep, --gold, --font-display...) continuam no :root de cada
+   superfície (src/styles/global.css e public/loja/css/tokens.css), vigiados
+   pelo portão vitrine:tokens. A camada de CSS da loja Nuvemshop
+   (nuvemshop/css-nimbus-um-so-ceu-2026-11-11.css) repete estes valores à mão,
+   em literal, porque o painel apaga custom properties.
+   =========================================================================== */
+
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #415061;
+}
+.kicker--gold { color: var(--gold); opacity: 1; }
+
+/* Uma voz de título: Fraunces 300, caixa baixa, navy. Frase curta, com ponto. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  color: var(--deep);
+}
+.display--md { font-size: clamp(2rem, 4vw, 3.2rem); }
+/* quebra de linha equilibrada no título e sem palavra órfã no parágrafo */
+.display { text-wrap: balance; }
+.lede, .note, .rodape__lema { text-wrap: pretty; }
+
+.lede {
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  line-height: 1.6;
+  max-width: 46ch;
+  color: #2a3a49;
+}
+/* um tom mais escura que o rótulo: sobre o céu, o cinza médio ficava perto de 4:1 */
+.note { font-size: 0.85rem; line-height: 1.6; color: #33414f; }
+
+/* Link de texto: navy com o fio dourado embaixo. O texto nunca fica dourado
+   sobre fundo claro (contraste de 1,4:1). */
+/* inline-flex com 44px de altura: link solto é alvo de toque, não letra miúda */
+.textlink {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  min-height: 46px;
+  padding: 0.85em 1.8em;
+  border-radius: 999px;
+  border: 1.5px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+.btn--primary { background: var(--deep); color: var(--cloud); box-shadow: 0 10px 30px rgba(11, 35, 96, 0.22); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 16px 40px rgba(11, 35, 96, 0.3); }
+.btn--gold { background: var(--gold); color: var(--deep); }
+.btn--gold:hover { transform: translateY(-2px); }
+.btn--ghost { border-color: var(--deep); color: var(--deep); background: transparent; }
+.btn--ghost:hover { background: var(--deep); color: var(--cloud); }
+
+/* Vidro: a superfície de leitura sobre o céu. Uma receita só. */
+.vidro {
+  background: rgba(247, 251, 255, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1);
+}
+
+/* Fecho: o convite que encerra a página (frase na voz de título, botão e a
+   linha que diz o que acontece). Na landing e na home ele fecha no centro; nas
+   páginas de leitura vem à esquerda, depois do painel de texto. */
+.fecho { display: grid; gap: 0.9rem; justify-items: start; margin-top: 2.2rem; }
+.fecho__frase { font-family: var(--font-display); font-weight: 300; font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.15; letter-spacing: -0.01em; color: var(--deep); text-wrap: balance; }
+.fecho .note { max-width: 34em; text-wrap: balance; }
+.fecho .note a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1.5px; text-underline-offset: 3px; text-decoration-skip-ink: none; }
+/* No centro (fim da landing e da home) a frase tem o tamanho dos títulos de
+   seção: menor, a página terminava numa legenda, mais fraca que tudo acima. */
+.fecho--centro { justify-items: center; text-align: center; margin-top: 0; gap: 1.5rem; }
+.fecho--centro .fecho__frase { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.02; letter-spacing: -0.02em; }
+
+:focus-visible { outline: 2px solid var(--deep); outline-offset: 3px; }
+
+/* Topo único: transparente sobre o céu no alto da página, vidro ao rolar. Sem
+   JS (html sem a classe .js) nasce já em vidro, para o texto que passa por
+   baixo nunca ficar ilegível. Marca à esquerda, navegação em caixa baixa e uma
+   pílula de contorno à direita. No celular a navegação recolhe em "Menu". */
+.topo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: clamp(0.8rem, 2.2vw, 1.7rem);
+  height: 68px;
+  padding: 0 var(--pad);
+  /* Vidro AZULADO, da cor do céu claro: a marca tem letras brancas, e no vidro
+     quase branco (247, 251, 255) ela virava um contorno fantasma assim que a
+     página rolava (cinco revisores, 12/11/2026). Quase opaco: a 0,9 o botão
+     navy que passa por baixo ainda aparecia como um borrão escuro na barra. */
+  background: rgba(203, 221, 237, 0.97);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(27, 39, 51, 0.06);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+.js .topo:not(.is-scrolled):not(.is-aberto) {
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+}
+.topo__logo { display: flex; align-items: center; min-height: 44px; margin-right: auto; padding: 0; border: 0; background: none; cursor: pointer; }
+/* A auréola ocupa o quarto de cima do arquivo da marca, então o centro das
+   LETRAS fica 12,5% abaixo do centro da caixa. O deslocamento devolve as letras
+   ao eixo do menu (pedido do dono em 31/07, que o topo novo tinha perdido). */
+.topo__logo img { width: clamp(96px, 11vw, 144px); height: auto; transform: translateY(-12.5%); }
+.topo__nav { display: flex; align-items: center; gap: clamp(0.9rem, 2vw, 1.6rem); }
+.topo__nav a,
+.topo__nav button,
+.topo__menu summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.1rem;
+  border: 0;
+  background: none;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--deep);
+  opacity: 0.85;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity 0.18s ease;
+}
+/* O fio dourado (ao passar o mouse e na página atual) mora no NOME do item, um
+   span, e não no link: o link é uma caixa flexível, e nela a etiqueta "em
+   breve" herdava o sublinhado e ganhava um segundo fio. */
+.topo__nav span {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  text-decoration-skip-ink: none;
+  transition: text-decoration-color 0.18s ease;
+}
+.topo__nav a:hover,
+.topo__nav button:hover,
+.topo__menu summary:hover,
+.topo__nav a[aria-current="page"] { opacity: 1; }
+.topo__nav a:hover span,
+.topo__nav button:hover span,
+.topo__nav a[aria-current="page"] span { text-decoration-color: var(--gold); }
+/* "em breve" é uma ETIQUETA ao lado do nome, não um pedaço de texto menor:
+   solta, em corpo menor, lia como defeito de fonte, e o fio dourado da página
+   atual saía partido em dois. Caixa inline-block não herda o sublinhado. */
+.topo small { display: inline-block; margin-left: 0.5em; padding: 0.12em 0.6em; border: 1px solid rgba(11, 35, 96, 0.32); border-radius: 999px; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.04em; line-height: 1.5; }
+.topo__cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 1.1rem;
+  border: 1.5px solid var(--deep);
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: var(--deep);
+  text-decoration: none;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.topo__cta:hover { background: var(--deep); color: var(--cloud); }
+.topo__menu { display: none; }
+.topo__menu summary { list-style: none; gap: 0.5em; }
+/* três linhas antes da palavra: solta ao lado da pílula, "Menu" não lia como botão */
+.topo__menu summary::before { content: ""; width: 16px; height: 12px; flex: none; background: linear-gradient(currentColor, currentColor) 0 0 / 100% 2px no-repeat, linear-gradient(currentColor, currentColor) 0 50% / 100% 2px no-repeat, linear-gradient(currentColor, currentColor) 0 100% / 100% 2px no-repeat; }
+.topo__menu summary::-webkit-details-marker { display: none; }
+/* O painel do menu abre na largura do topo e é OPACO: preso ao botão ele
+   encostava na borda da tela, e em vidro o texto da página aparecia por trás
+   dos itens (filtro de fundo não atravessa o topo, que já é vidro). */
+.topo__painel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: var(--pad);
+  right: var(--pad);
+  display: grid;
+  padding: 0.4rem 1.2rem 0.6rem;
+  background: var(--cloud);
+  border: 1px solid rgba(11, 35, 96, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 20px 55px rgba(11, 35, 96, 0.16);
+}
+.topo__painel a,
+.topo__painel button {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(11, 35, 96, 0.1);
+  background: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--deep);
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.topo__painel > :last-child { border-bottom: 0; }
+@media (max-width: 860px) {
+  .topo { height: 60px; gap: 0.7rem; }
+  .topo__nav { display: none; }
+  .topo__menu { display: block; }
+  .topo__cta { min-height: 44px; padding: 0 0.9rem; font-size: 0.78rem; }
+}
+@media (max-width: 359px) {
+  .topo__logo img { width: 84px; }
+  .topo__cta { padding: 0 0.7rem; }
+}
+
+/* Selos de confiança: três linhas com o ponto dourado da auréola. */
+/* Os três caem na MESMA grade das três colunas do rodapé logo abaixo (cada selo
+   começa onde começa uma coluna) e abrem o rodapé debaixo de um fio, como a
+   linha legal o fecha em cima de outro. Soltos numa linha, paravam a 290px da
+   borda direita e não conversavam com nada (revisão de 12/11/2026). */
+.selos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  gap: 0.6rem clamp(1.5rem, 5vw, 4rem);
+  padding: 1.4rem 0 0;
+  border-top: 1px solid rgba(11, 35, 96, 0.14);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+/* o ponto alinha com a PRIMEIRA linha do texto, não com o meio do bloco: com
+   o item quebrando em duas linhas, ponto centrado fica solto e desalinhado */
+/* se quebrar, quebra em duas linhas equilibradas, nunca com "escolher" sozinho */
+.selos li { display: flex; align-items: flex-start; gap: 0.5rem; line-height: 1.4; text-align: left; text-wrap: balance; }
+.selos li::before { content: ""; width: 10px; height: 10px; margin-top: calc(0.7em - 4px); border-radius: 50%; background: var(--gold); flex: none; }
+
+/* Rodapé único: mesmo desenho e mesmas palavras na landing, na vitrine e na
+   loja. Fica sobre o céu, sem faixa, sem régua dourada, sem barra navy. */
+.rodape { width: 100%; color: var(--ink); text-align: left; }
+.rodape__grade { display: grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 2rem clamp(1.5rem, 5vw, 4rem); align-items: start; }
+.rodape__marca { display: inline-block; margin-bottom: 0.9rem; }
+.rodape__marca img { width: 168px; height: auto; }
+.rodape__lema { max-width: 30em; font-size: 0.88rem; line-height: 1.6; color: #2a3a49; }
+.rodape h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; letter-spacing: 0; color: var(--deep); margin-bottom: 0.4rem; }
+.rodape__grade a:not(.rodape__marca) {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: 0.88rem;
+  color: var(--deep);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: none;
+  transition: text-decoration-color 0.18s ease;
+}
+.rodape__grade a:not(.rodape__marca):hover { text-decoration-color: var(--gold); }
+.rodape__legal {
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(11, 35, 96, 0.14);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: #415061;
+  /* à esquerda, no eixo de tudo no rodapé (centrada, era a única coisa fora dele) */
+  text-align: left;
+  /* se não couber numa linha, quebra em duas equilibradas, nunca "DF" sozinho */
+  text-wrap: balance;
+}
+@media (max-width: 760px) {
+  .selos { grid-template-columns: 1fr; gap: 0.5rem; }
+  .rodape__grade { grid-template-columns: 1fr 1fr; }
+  .rodape__sobre { grid-column: 1 / -1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn, .btn:hover { transition: none; transform: none; }
+}

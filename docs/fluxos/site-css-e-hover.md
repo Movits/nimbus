@@ -14,7 +14,10 @@ atualizado: 2026-08-11
 
 Tema **Baires**, plano Impulso, **congelado** (sem atualização automática).
 A Nuvemshop **sanitiza CSS**, então igualdade byte a byte não prova publicação
-correta. Evite `var()` sem fallback (o painel remove custom properties).
+correta. Não use `var()`, nem com fallback: o painel remove custom properties
+e a regra que as usa (medido contra o HTML no ar em 11/11/2026; a lista do que
+o painel derruba e do que ele mantém está em `nuvemshop/instrucoes.md`, e o
+portão `npm run loja:css` recusa o que ele derruba).
 
 ## Publicar CSS no painel — protocolo vigente (05/08)
 
@@ -41,7 +44,7 @@ Armadilhas conhecidas (ESTADO de 03-05/08): **escape seguido de caractere
 hexadecimal é inusável** (o painel come o espaço delimitador E os zeros à
 esquerda — `\00000A` NÃO resolve); **publicar qualquer seção do editor de tema
 regrava o formulário inteiro**, então o CSS se cola por último na sessão; o
-painel remove custom properties (só `var()` com fallback sobrevive).
+painel remove custom properties (`var()` não sobrevive, nem com fallback: medido em 11/11/2026).
 
 ## Comportamento aprovado dos cards
 

@@ -7,8 +7,10 @@ import { pointer, weightAt } from './scrollStore'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 import { useIsMobile } from '../hooks/useIsMobile'
 
-// Nuvens PROCEDURAIS (transparência real). Aparecem nas seções "céu" (hero,
-// manifesto, impacto, footer) e somem nas seções de cena fechada (fé, design).
+// Nuvens PROCEDURAIS (transparência real). Estão sempre no céu e só saem de
+// cena quando um monumento de cena fechada (fé, design) toma a tela. Antes a
+// opacidade era a SOMA dos pesos das seções de céu: com a queda de peso mais
+// curta (scrollStore), elas piscariam entre uma seção de céu e a seguinte.
 export default function ParallaxLayers() {
   const root = useRef<THREE.Group>(null!)
   const reduced = useReducedMotion()
@@ -16,10 +18,8 @@ export default function ParallaxLayers() {
 
   useFrame(({ clock }) => {
     if (!root.current) return
-    const sky = Math.min(
-      1,
-      weightAt(SECTION.hero) + weightAt(SECTION.manifesto) + weightAt(SECTION.impact) + weightAt(SECTION.footer),
-    )
+    // no celular a cena não tem monumento (são imagens do fluxo): as nuvens ficam sempre
+    const sky = mobile ? 1 : 1 - Math.max(weightAt(SECTION.faith), weightAt(SECTION.design))
 
     root.current.visible = sky > 0.02
     root.current.traverse((obj) => {

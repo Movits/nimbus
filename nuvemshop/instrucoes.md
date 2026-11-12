@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-03
+atualizado: 2026-11-11
 ---
 
 # Loja Nuvemshop — estado e guia de aplicação
@@ -26,16 +26,25 @@ painel. Por isso o repo não é a fonte de verdade da loja, a loja é. Este arqu
 tanto as definições em `:root` quanto qualquer uso de `var(--...)`. Um CSS baseado em variáveis fica
 **inerte** na loja: cola, salva, e não acontece nada. Todo CSS daqui tem que ser literal (hex resolvido).
 
-Exceção segura: `var()` **com fallback**, tipo `var(--body-font, "Inter", Arial, sans-serif)`. Se a
-plataforma remover, o fallback assume e nada quebra. O CSS de produção usa isso em 6 lugares.
+⚠️ **Medido em 11/11/2026: nem `var()` com fallback sobrevive.** A declaração inteira some (a antiga
+`font-family: var(--body-font, "Inter", ...)` não chegou à loja). O arquivo versionado tinha 50.721
+caracteres e a loja servia 47.579. O painel derruba em silêncio: `clamp()`, a propriedade `inset`,
+`aspect-ratio`, hex de 8 dígitos (`#rrggbbaa`), toda regra cujo seletor tenha `:focus-visible`, os blocos
+`@media (prefers-reduced-motion)`, `text-underline-offset`, `text-decoration-thickness`, `var()` e custom
+properties. Nunca testados, portanto proibidos: `:has()`, `:is()`, `:where()`, `@import`, `@font-face`,
+`lvh/svh/dvh` e nesting. O build recusa gravar saída com qualquer um deles e o portão `npm run loja:css`
+confere o arquivo colado.
 
 ## Fonte local mais recente e estado da loja
 
 | O quê | Onde |
 |---|---|
-| **CSS local consolidado mais recente** | `css-nimbus-publicacao-compacta-2026-07-20.css` |
-| Fonte legível de header/footer responsivo | `css-nimbus-responsive-header-footer-2026-07-20.css` |
+| **CSS local consolidado mais recente** (é o que se cola) | `css-nimbus-publicacao-compacta-2026-07-20.css` |
+| Fonte 1: peças permanentes (cards, modais dos projetos, contato pessoal escondido) | `css-nimbus-correcoes-2026-07-17.css` |
+| Fonte 2: estrutura de header e footer (o que some do topo e de cada lista do rodapé) | `css-nimbus-responsive-header-footer-2026-07-20.css` |
+| Fonte 3: camada "Um só céu" (céu, tipo, vidro, pílulas, páginas, estado fechado) | `css-nimbus-um-so-ceu-2026-11-11.css` |
 | Gerador da saída consolidada | `../scripts/build_nimbus_publication_css.mjs` |
+| O que só o painel resolve (menus, capa, nome da loja, SEO, contato) | [`painel-um-so-ceu-2026-11-11.md`](painel-um-so-ceu-2026-11-11.md) |
 | Página Projetos Sociais | `pagina-projetos-sociais.html` |
 | Página Sobre | `pagina-sobre.html` |
 | Tiles das coleções | `assets/tile-nuvem.jpg`, `tile-reliquia.jpg`, `tile-street.jpg` |
@@ -45,10 +54,48 @@ isoladamente. A Nuvemshop sanitiza o CSS ao salvar, portanto a loja pública e o
 editor são a fonte de verdade. Antes de publicar, gere ou confira a composição
 de 20/07 e valide o resultado real.
 
-O CSS **não é um tema completo**: é uma camada de correção. O Baires é configurado nativamente no editor
-(as fontes Fraunces e Inter são nativas dele), e o CSS só corrige o que o editor não alcança: header em
-linha única no desktop, logo no centro geométrico no mobile, três coleções simultâneas, modais dos
-projetos, footer editorial. Por isso ele começa direto em "Cabecalho:" e não estiliza `body`.
+O CSS **não é um tema completo**: é uma camada sobre o Baires, que continua configurado no editor (as
+fontes Fraunces 400/700 e Inter 400/700 são as que ele carrega; o CSS não pode pedir peso 300, 500 ou 600).
+
+**Rodada 9 (11/11/2026): um só céu.** A loja passa a ler como a landing e a vitrine. A camada nova
+(`css-nimbus-um-so-ceu-2026-11-11.css`) põe toda página sobre a foto de céu da landing, refaz o topo
+(vidro fosco, navegação em caixa baixa), os títulos (Fraunces 400, caixa baixa), os botões (pílulas), os
+campos, o rodapé (sem régua dourada e sem barra navy) e o aviso de cookies, e dá mensagem ao 404, que era
+uma página em branco. O produto de exemplo do tema nunca mais aparece.
+
+O rodapé não depende mais da ordem do menu: a marca e o lema são um bloco, a coluna "A marca" é a lista do
+menu principal e a coluna Ajuda é a lista do menu do rodapé. As regras que escondem link olham o destino
+(`href`), não a posição. Trocar o menu no painel não pede CSS novo; os cuidados que restam estão no
+checklist do painel. Um item do menu principal com destino `mailto:` vira a pílula de contorno do topo
+("Quero ser avisado") a partir de 900px; no menu do celular é uma linha comum, e não entra no rodapé.
+Instagram e TikTok entram pelo mesmo menu e só aparecem no rodapé.
+
+Em 12/11 a camada repetiu a revisão da landing e da vitrine: topo em vidro azulado, "em breve" como
+etiqueta, três linhas antes de "Menu", selos na mesma grade do rodapé e debaixo de um fio, coluna
+"A marca", linha legal à esquerda, "chegam em breve" e os tamanhos de título e de lede em degraus (o
+painel apaga `clamp()`).
+
+Na segunda revisão do mesmo dia: título e cartão das páginas internas no eixo da marca do topo (sem a
+trilha do tema), capa da home na altura da capa da vitrine, menu do celular no azul do topo com a pílula
+navy, fio em cima do rodapé em toda página, "Loja" marcado na home, rótulo "Erro 404" e a quebra dos
+selos medida para repetir a da landing. Os textos de contato e de login que falavam como loja aberta
+trocam dentro do bloco ESTADO FECHADO.
+
+Três regras do dono (11/11) valem para qualquer mudança aqui: imagem nunca esticada, irmãos sempre num
+mesmo eixo ou numa mesma borda, e vãos iguais entre blocos parecidos. Elas se medem, não se olham: a
+função `mede` de `../scripts/vitrine/olho.mjs`, apontada para a loja com o CSS novo injetado, tem que dar
+zero achado nas cinco larguras (1440, 1024, 768, 390 e 320).
+
+A loja não vende nada agora, de propósito. Tudo o que só vale enquanto ela está fechada mora num bloco
+único da fonte 3, entre os comentários "ESTADO FECHADO: apagar este bloco quando o catálogo voltar" e "FIM
+DO ESTADO FECHADO": some a faixa de anúncio, os links do menu e do rodapé para coleções, a sacola e o
+carrossel de categorias da home; as grades mostram a frase da marca no lugar dos cards.
+**Reabrir é apagar esse bloco, regenerar e recolar.** Para ver antes como fica aberta, sem tocar o arquivo
+canônico: `node scripts/build_nimbus_publication_css.mjs --aberta --saida=<arquivo>`.
+
+Regenerar: `node scripts/build_nimbus_publication_css.mjs`, da raiz do repositório (não é mais preciso
+ajustar caminho nenhum). O build falha, sem gravar, se faltar uma regra obrigatória ou se a saída tiver
+sintaxe que o painel derruba.
 
 **Rodada 8 (30/07/2026) — loja como funil, header lendo como a vitrine.** Decisão do dono: a vitrine é a
 referência de design. A camada nova (fonte legível em `css-nimbus-responsive-header-footer-2026-07-20.css`,
@@ -187,9 +234,11 @@ Loja online → Layout → Personalizar → **Edição de CSS avançada** → co
 o editor está atualizado → substituir pelo conteúdo completo de
 `css-nimbus-publicacao-compacta-2026-07-20.css` → Testar CSS → salvar.
 
-Depois, conferir na loja pública: home no desktop, os três modais da página Projetos Sociais, e mobile em
-390 e 320 px. Checar centro do logo, ausência de rolagem horizontal, hero sem corte, coleções com largura
-certa, modais fechando sem salto, e que nada comercial mudou.
+Depois, conferir na loja pública, no desktop e no celular (390 e 320 px): o céu ATRÁS do conteúdo em toda
+página (se ele cobrir o texto, o painel derrubou o `z-index:-1`: não publicar); os três modais da página
+Projetos Sociais abrindo com o fundo escurecido e fechando sem salto; `/produtos/` com a frase da marca e
+nenhum "Produto de exemplo"; um endereço que não existe mostrando "Esta página não existe."; ausência de
+rolagem horizontal; e que nada comercial mudou.
 
 Se o editor impedir equivalência exata com a prévia, **não improvisar mudança estrutural**: relatar a
 diferença concreta.

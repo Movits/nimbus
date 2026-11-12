@@ -1,6 +1,11 @@
 /* ===========================================================================
-   NIMBUS — estilos globais
+   NIMBUS — estilos da landing (a cena de scroll)
    Design tokens no :root. Tipografia: Fraunces (display) + Inter (corpo).
+
+   As primitivas da marca (rótulo, título, botão, vidro, topo, selos, rodapé)
+   NÃO moram aqui: moram em public/css/marca.css, o MESMO arquivo que a vitrine
+   liga (index.html tem o <link>). Aqui fica só o que é da cena: canvas, seções
+   de tela cheia, capa, cards do impacto, modal e as revelações.
    =========================================================================== */
 :root {
   --sky: #dcebfa;
@@ -57,10 +62,14 @@ body {
 .overlay {
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 
+/* height:auto é regra da casa: com width/height no HTML, sem ela o atributo
+   height estica a foto (a vitrine tem a mesma regra em tokens.css). */
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -72,74 +81,28 @@ button {
   color: inherit;
 }
 
-/* ───────────────────────── Topbar ───────────────────────── */
-.topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem var(--pad);
-  pointer-events: none;
-  transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
-}
-.topbar.is-scrolled {
-  background: rgba(247, 251, 255, 0.6);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 1px 0 rgba(27, 39, 51, 0.06);
-}
-.topbar__logo {
-  pointer-events: auto;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-.topbar__logo img {
-  height: clamp(34px, 5vw, 46px);
-  width: auto;
-  filter: drop-shadow(0 2px 6px rgba(27, 39, 51, 0.12));
-}
-.topbar__nav {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.5rem, 2vw, 1.6rem);
-}
-.topbar__nav button,
-.topbar__nav a {
-  pointer-events: auto;
-  font-size: 0.82rem;
-  letter-spacing: 0.04em;
-  font-weight: 500;
-  color: var(--ink);
-  padding: 0.4rem 0.2rem;
-  opacity: 0.8;
-  transition: opacity 0.2s ease;
-  text-decoration: none;
-}
-.topbar__nav button:hover,
-.topbar__nav a:hover {
-  opacity: 1;
-}
-.topbar__cta {
-  border: 1.5px solid var(--ink) !important;
-  border-radius: 999px;
-  padding: 0.45rem 1.1rem !important;
-  opacity: 1 !important;
-}
-
 /* ───────────────────────── Seções (overlay) ───────────────────────── */
-.overlay {
-  width: 100%;
-}
 .section {
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 6rem var(--pad) 4rem;
+}
+/* Só a capa ocupa a tela inteira. Com 100vh em todas, sobravam telas inteiras
+   de céu parado entre uma seção e a seguinte (655, 622, 545px de vazio no
+   computador, revisão de 11/11/2026). */
+.section.faith,
+.section.design {
+  min-height: 84vh;
+}
+/* Manifesto e impacto são texto sobre o céu, sem monumento: a altura é a do
+   conteúdo mais o respiro. Com 84vh sobrava mais de meia tela de céu vazio
+   entre a capa e o manifesto (revisão de 12/11/2026). */
+.section.manifesto,
+.section.impact {
+  min-height: 0;
+  padding-block: clamp(5rem, 14vh, 9rem);
 }
 .section--center {
   justify-content: center;
@@ -163,108 +126,53 @@ button {
 .section--left .section__inner,
 .section--right .section__inner {
   max-width: 560px;
+  align-items: flex-start;
 }
 .section--center .section__inner {
   align-items: center;
 }
-
-/* ───────────────────────── Tipografia ───────────────────────── */
-.kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.28em;
-  font-size: 0.74rem;
-  font-weight: 600;
-  opacity: 0.7;
-}
-.kicker--gold {
-  color: var(--gold);
-  opacity: 1;
-}
-.display {
-  font-family: var(--font-display);
-  font-weight: 300;
-  line-height: 0.98;
-  letter-spacing: -0.02em;
-  font-size: clamp(3rem, 11vw, 8.5rem);
-}
-.display--md {
-  font-size: clamp(2.2rem, 6.5vw, 4.6rem);
-  line-height: 1.02;
-}
-.lede {
-  font-size: clamp(1rem, 1.6vw, 1.25rem);
-  line-height: 1.6;
-  max-width: 46ch;
-  color: #2a3a49;
-}
 .section--center .lede {
   margin-inline: auto;
 }
-.note {
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  opacity: 0.6;
-}
 
-/* ───────────────────────── Botões ───────────────────────── */
-.btn {
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  font-weight: 500;
-  font-size: 0.92rem;
-  letter-spacing: 0.02em;
-  padding: 0.85rem 1.8rem;
-  border-radius: 999px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease;
-  will-change: transform;
-}
-.btn--primary {
-  /* régua do dono (30/07): botão primário é NAVY, a mesma dos tokens da
-     vitrine; era o único botão do funil fora dela (auditoria de 08/08) */
-  background: var(--deep);
-  color: var(--cloud);
-  box-shadow: 0 10px 30px rgba(11, 35, 96, 0.22);
-}
-.btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 16px 40px rgba(11, 35, 96, 0.3);
-}
-.btn--gold {
-  background: var(--gold);
-  color: var(--deep);
-  box-shadow: 0 10px 30px rgba(233, 196, 106, 0.35);
-}
-.btn--gold:hover {
-  transform: translateY(-2px);
-}
-.btn--ghost {
-  border: 1.5px solid currentColor;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.82rem;
-  background: transparent;
-}
-.btn--ghost:hover {
-  background: var(--ink);
-  color: var(--cloud);
+/* Texto sobre monumento mora em vidro; texto sobre céu aberto fica solto. No
+   celular o texto de Fé e Design caía sobre a foto (contraste de 1,8:1 no teste
+   de 20/10) e ganhou o véu; no computador o título do Design ainda passava por
+   cima da torre da Pampulha (11/11/2026). É o mesmo vidro das páginas de
+   leitura da vitrine (.vidro em marca.css), com os mesmos valores. */
+.faith .section__inner,
+.design .section__inner {
+  max-width: 540px;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  background: rgba(247, 251, 255, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1);
 }
 
 /* ───────────────────────── Hero ───────────────────────── */
+/* A capa começa logo abaixo do topo e a marca nunca passa de 62% da altura da
+   tela em largura (20% em altura): assim o botão e a linha que o explica
+   terminam ACIMA da antena da Catedral. Antes o bloco descia até o meio da
+   coroa, e as torres passavam por trás do texto e do botão (revisão de
+   12/11/2026). */
 .section.hero {
   align-items: flex-start;
+  padding-top: 5.25rem;
 }
 .section.hero .section__inner {
-  margin-top: 3vh;
   gap: 0.9rem;
 }
+.hero__title { margin: 0; line-height: 0; }
+/* sombra em navy bem leve: em preto ela deixava uma névoa cinza em volta da marca */
 .hero__logo {
-  width: min(680px, 78vw);
+  width: min(680px, 78vw, 62vh);
   height: auto;
   margin-inline: auto;
   margin-bottom: 0.4rem;
-  filter: drop-shadow(0 12px 34px rgba(27, 39, 51, 0.18));
+  filter: drop-shadow(0 12px 34px rgba(11, 35, 96, 0.12));
 }
 .hero__subtitle {
   text-transform: uppercase;
@@ -274,54 +182,72 @@ button {
   color: var(--ink);
   opacity: 0.82;
 }
+/* a mesma frase da capa da vitrine, no mesmo corpo (o .lede de marca.css) */
 .hero__offer {
   margin: 0.5rem 0 1rem;
-  font-size: clamp(0.82rem, 1.5vw, 1rem);
-  color: var(--ink);
-  opacity: 0.85;
+  font-size: clamp(1.02rem, 1.6vw, 1.2rem);
+  line-height: 1.6;
+  color: #2a3a49;
   max-width: 30em;
+  text-wrap: pretty;
+}
+
+/* a linha que diz o que o botão faz: curta, sem endereço, entre o botão e a Catedral */
+.hero__nota {
+  margin-top: 0.1rem;
+  text-wrap: balance;
+}
+/* Em tela baixa de computador (notebook de 768px de altura) o texto da capa não
+   encolhe e a Catedral sobe com a tela: a linha ficaria cruzada pela antena.
+   Ali ela sai; o que o botão faz continua dito no fecho da página. */
+@media (min-width: 768px) and (max-height: 850px) {
+  .hero__nota {
+    display: none;
+  }
+}
+/* o monumento como imagem do fluxo só existe no celular (ver o bloco Mobile) */
+.monumento {
+  display: none;
 }
 
 /* ───────────────────────── Impacto (projetos sociais) ───────────────────────── */
 .impact__grid {
   margin-top: 1.4rem;
   width: 100%;
-  max-width: 880px;
+  max-width: 960px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: clamp(0.8rem, 2vw, 1.4rem);
 }
+/* o card é o vidro da marca (.vidro, em marca.css) com o seu próprio recheio */
 .impact__card {
   position: relative;
   width: 100%;
   min-height: 190px;
+  /* conteúdo ancorado no alto e o link no pé: com textos de tamanhos diferentes,
+     centrar na vertical deixava os três títulos (e os três links) em alturas
+     diferentes de um card para o outro */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background: rgba(247, 251, 255, 0.62);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 18px;
-  padding: 1.2rem 1.1rem;
+  justify-content: flex-start;
+  padding: 1.5rem 1.2rem 1.3rem;
   text-align: center;
   cursor: pointer;
   touch-action: manipulation;
-  box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 .impact__card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: 0 22px 48px rgba(27, 39, 51, 0.16);
-  background: rgba(247, 251, 255, 0.78);
+  background: rgba(247, 251, 255, 0.84);
 }
 .impact__card:active {
   transform: translateY(-2px);
 }
 /* O foco visível vive no card, mas quem recebe foco é o botão esticado dentro dele. */
-.impact__card:has(.impact__cardCta:focus-visible),
-.project-modal :focus-visible {
-  outline: 3px solid var(--deep);
+.impact__card:has(.impact__cardCta:focus-visible) {
+  outline: 2px solid var(--deep);
   outline-offset: 3px;
 }
 .impact__cardCta:focus-visible {
@@ -330,27 +256,33 @@ button {
 .impact__name {
   display: block;
   font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.05rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.2;
   color: var(--deep);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.6rem;
 }
 .impact__desc {
   display: block;
-  font-size: 0.86rem;
+  font-size: 0.9rem;
   line-height: 1.5;
-  opacity: 0.78;
+  color: #2a3a49;
 }
+/* caixa baixa com o fio dourado, como todo link de texto da marca (.textlink);
+   maiúscula fica só para rótulo */
 .impact__cardCta {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
   color: var(--deep);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 0.86rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--gold);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
   cursor: pointer;
 }
 /* Estica a área de clique sobre o card inteiro, preservando o card-todo-clicável
@@ -371,10 +303,7 @@ button {
 }
 .impact__outro {
   margin-top: 1.2rem;
-  max-width: 560px;
-}
-.section.impact .btn--primary {
-  margin-top: 1rem;
+  max-width: 52ch;
 }
 
 /* ───────────────────────── Modal dos projetos sociais ───────────────────────── */
@@ -449,12 +378,14 @@ button {
   padding-right: clamp(4.5rem, 7vw, 5.5rem);
   text-align: left;
 }
+/* a mesma voz de título do resto do site: Fraunces 300, navy */
 .project-modal__title {
   margin-top: 0.55rem;
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.7rem);
-  font-weight: 500;
-  line-height: 1;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
   color: var(--deep);
 }
 .project-modal__intro {
@@ -501,62 +432,32 @@ button {
   to { opacity: 1; transform: none; }
 }
 
-/* ───────────────────────── Footer ───────────────────────── */
-.section.footer .section__inner {
-  min-height: 84vh;
-  justify-content: space-between;
-  gap: 2.5rem;
+/* ───────────────────────── Fecho ───────────────────────── */
+/* A última tela: a marca grande como assinatura e, embaixo, o rodapé único
+   (.selos e .rodape vêm de marca.css, iguais aos da vitrine). */
+.section.footer {
+  flex-direction: column;
+  min-height: 0;
+  padding-top: clamp(2rem, 6vh, 4rem);
+  padding-bottom: 2rem;
 }
-.footer__logo {
-  width: min(820px, 86vw);
-  height: auto;
-  margin: auto;
-  filter: drop-shadow(0 12px 30px rgba(27, 39, 51, 0.16));
+/* o rodapé usa a largura do rodapé da vitrine (1520px), não a coluna de 1180px
+   da cena: as colunas caem no mesmo lugar nas duas */
+.section.footer .section__inner {
+  max-width: 1520px;
+  justify-content: flex-start;
+  gap: 0;
+}
+/* o convite final (.fecho, de marca.css) e, depois de um respiro, o rodapé,
+   IDÊNTICO ao da vitrine */
+.section.footer .fecho {
+  margin-bottom: clamp(4rem, 12vh, 7rem);
 }
 .footer__bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.1rem;
+  display: grid;
+  gap: clamp(1.6rem, 3vw, 2.4rem);
   width: 100%;
 }
-.footer__trust {
-  list-style: none;
-  display: flex;
-  gap: 0.6rem 1.6rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0;
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--ink);
-}
-.footer__trust li {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-.footer__trust li::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--gold);
-  flex: none;
-}
-.footer__meta {
-  display: flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  /* 0.6 dava 3,6:1 no teste de 20/10; 0.85 passa dos 4,5:1 */
-  opacity: 0.85;
-  margin-top: 1rem;
-}
-.footer__links a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-.hero__title { margin: 0; line-height: 0; }
 
 /* ───────────────────────── Reveals ───────────────────────── */
 .reveal {
@@ -581,18 +482,20 @@ button {
 
 /* ───────────────────────── Mobile ───────────────────────── */
 @media (max-width: 768px) {
-  /* no celular o texto de Fé e Design caía sobre a foto (contraste ~1,8:1 no
-     teste de 20/10): um véu claro atrás do bloco de texto */
   .faith .section__inner,
   .design .section__inner {
-    background: rgba(236, 244, 251, 0.86);
-    -webkit-backdrop-filter: blur(6px);
-    backdrop-filter: blur(6px);
-    border-radius: 16px;
+    background: rgba(247, 251, 255, 0.93);
     padding: 1.25rem 1.1rem;
   }
   .canvas {
     height: 100dvh !important;
+  }
+  /* fé e design no celular: o monumento em cima, o cartão embaixo, os dois no
+     fluxo (regras no bloco de 767.98px, abaixo); o texto do cartão à esquerda,
+     como nos cartões da vitrine */
+  .section.faith,
+  .section.design {
+    padding-bottom: 1.25rem;
   }
   .section {
     padding: 5rem 1.25rem 3.5rem;
@@ -600,41 +503,16 @@ button {
   .section--left,
   .section--right {
     justify-content: center;
-    text-align: center;
   }
   .section--left .section__inner,
   .section--right .section__inner {
-    align-items: center;
     margin-inline: auto;
   }
-  .lede {
+  .section--center .lede {
     margin-inline: auto;
-  }
-  /* topbar: respiro e alvo de toque decente (min ~44px) */
-  .topbar__logo img {
-    width: clamp(84px, 24vw, 110px);
-  }
-  .topbar__logo {
-    min-width: 44px;
-    min-height: 44px;
-  }
-  .topbar__nav {
-    gap: 0.35rem;
-  }
-  .topbar__nav button,
-  .topbar__nav a {
-    display: inline-flex;
-    min-height: 44px;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.78rem;
-    padding: 0.7rem 0.55rem;
-  }
-  .topbar__cta {
-    padding: 0.55rem 0.95rem !important;
   }
   .impact__card {
-    min-height: 168px;
+    min-height: 0;
     padding: 1.3rem 1.15rem;
   }
   .project-modal__backdrop {
@@ -667,6 +545,88 @@ button {
   }
 }
 
+/* ───────────────────────── Celular: monumentos no fluxo ─────────────────────────
+   Abaixo de 768px (o mesmo corte do useIsMobile, que tira os monumentos da cena
+   3D) cada monumento é uma faixa de imagem de borda a borda, logo acima do
+   cartão da seção, com o alto e o pé esfumados para emendar no céu. As contas
+   de cada faixa estão em fração da largura da tela (W), porque a faixa tem a
+   largura da tela:
+   - capa (768x1376): mostra de 54% a 93% da altura da foto, da antena da
+     Catedral até as nuvens. Altura da foto = 1,792 W; corte de cima = 0,9675 W.
+   - cristo (603x1072): a estátua fica a 55,6% da largura da foto, então a foto
+     entra com 113% de largura e 12,83% para a esquerda, para a estátua cair no
+     eixo da tela. Mostra de 7% a 72% da altura (da cabeça ao pedestal).
+   - pampulha (603x1072): mostra de 25% a 61% da altura; a linha d'água da foto,
+     a 59%, some no esfumado de baixo. */
+@media (max-width: 767.98px) {
+  .section.hero,
+  .section.faith,
+  .section.design {
+    flex-direction: column;
+    min-height: 0;
+  }
+  .section.hero {
+    padding-bottom: 1rem;
+  }
+  .section.faith,
+  .section.design {
+    padding-top: 1.5rem;
+  }
+  .monumento {
+    display: block;
+    flex: none;
+    width: calc(100% + 2.5rem);
+    margin-inline: -1.25rem;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .monumento img {
+    display: block;
+    max-width: none;
+    height: auto;
+  }
+  .monumento--capa {
+    aspect-ratio: 1 / 0.7;
+    margin-top: 0.4rem;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 16%, #000 80%, transparent 100%);
+  }
+  .monumento--capa img {
+    width: 100%;
+    margin-top: -96.75%;
+  }
+  .monumento--cristo {
+    aspect-ratio: 1 / 1.306;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 74%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 74%, transparent 100%);
+  }
+  .monumento--cristo img {
+    width: 113%;
+    margin-left: -12.83%;
+    margin-top: -14.06%;
+  }
+  .monumento--pampulha {
+    aspect-ratio: 1 / 0.64;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 24%, #000 84%, transparent 96%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 24%, #000 84%, transparent 96%);
+  }
+  .monumento--pampulha img {
+    width: 100%;
+    margin-top: -44.4%;
+  }
+  /* o cartão sobe sobre o pé esfumado do monumento: o Cristo aparece da cabeça à cintura */
+  .faith .section__inner {
+    margin-top: -28%;
+  }
+  .design .section__inner {
+    margin-top: -4%;
+  }
+  .faith .section__inner,
+  .design .section__inner {
+    position: relative;
+  }
+}
+
 @media (max-height: 520px) and (orientation: landscape) {
   .project-modal__backdrop {
     align-items: center;
@@ -688,13 +648,6 @@ button {
   .project-modal__title {
     padding-right: 0;
     font-size: clamp(1.9rem, 5vw, 2.7rem);
-  }
-}
-
-/* telas bem estreitas: só o essencial na topbar */
-@media (max-width: 480px) {
-  .topbar__nav .topbar__link--sm {
-    display: none;
   }
 }
 
@@ -722,8 +675,3 @@ button {
     transform: none;
   }
 }
-
-/* Os perfis no rodapé são o único ponto de conversão da landing enquanto a loja
-   não vende. Antes eram texto puro. */
-.footer__social a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
-.footer__social a:hover { color: var(--gold, #e9c46a); }

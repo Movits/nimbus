@@ -1,0 +1,1962 @@
+/* ============================================================
+   NIMBUS | Um só céu (11/11/2026)
+   Camada nova da loja Nuvemshop (tema Baires). A loja passa a ler como a
+   landing e a vitrine: o mesmo céu, a mesma voz de título, vidro e pílulas.
+
+   Última fonte do build (scripts/build_nimbus_publication_css.mjs), então
+   vence as duas anteriores. Os valores repetem à mão, em literal, os de
+   public/css/marca.css (topo, rodapé, título, botão, vidro, selos), porque
+   o painel apaga custom properties. Mudou lá, repita aqui.
+
+   O painel da Nuvemshop derruba em silêncio: clamp(), inset, aspect-ratio,
+   hex de 8 dígitos, qualquer regra com :focus-visible, prefers-reduced-motion,
+   text-underline-offset, text-decoration-thickness, var() e custom properties.
+   Nunca testados, portanto proibidos: :has(), :is(), :where(), @import,
+   @font-face, lvh/svh/dvh, nesting. O build recusa tudo isso.
+   O tema só carrega Fraunces 400/700 e Inter 400/700: nada de 300/500/600.
+
+   Três regras do dono (11/11/2026) valem para toda regra daqui: imagem
+   nunca esticada (largura fixa pede height: auto), irmãos sempre num mesmo
+   eixo ou numa mesma borda, e vãos iguais entre blocos parecidos.
+
+   Paleta: céu #dcebfa, nuvem #f7fbff, navy #0b2360, ouro #e9c46a,
+   tinta #1b2733, lede #2a3a49, apagado #415061, fio rgba(11,35,96,.14).
+   Palavras (lema, selos, nomes do menu): src/data/marca.json.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. Um só céu
+   Toda página mora na mesma foto de céu da landing, parada atrás do
+   conteúdo. O véu por cima é cinza-claro neutro, medido para bater com o
+   céu da cena da landing (com véu azulado a revisão de 11/11 viu dois céus).
+   Pseudo-elemento fixo em vez de background-attachment: fixed, que o Safari
+   do iPhone ignora. O tema não usa body::before.
+   ------------------------------------------------------------ */
+html body {
+  background: #dcebfa !important;
+}
+
+html body::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image:
+    linear-gradient(180deg, rgba(216, 219, 222, 0.5) 0%, rgba(228, 230, 232, 0.52) 100%),
+    url("https://nimbuswear.com.br/img/bg-ceu.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* Caixas do tema que nasciam opacas e tapariam o céu. */
+html body .section-home,
+html body .home-institutional-background,
+html body .js-adbar.section-adbar {
+  border: 0 !important;
+  background: transparent !important;
+}
+
+/* ------------------------------------------------------------
+   2. Topo
+   Mesmo desenho do topo da landing: uma linha, vidro fosco, marca à
+   esquerda, navegação em caixa baixa à direita. Abaixo de 900px a
+   navegação recolhe em "Menu" (a landing faz isso até 860px).
+   ------------------------------------------------------------ */
+/* Vidro AZULADO, da cor do céu claro, o mesmo da landing: a marca tem letras
+   brancas e, no vidro quase branco, virava um contorno fantasma assim que a
+   página rolava (revisão de 12/11/2026). Quase opaco (0,97): a 0,9 o botão
+   navy que passa por baixo ainda aparecia como um borrão escuro na barra. O
+   fio de baixo é sombra, não borda: a altura fica em 60 e 68. */
+html body .head-main {
+  border: 0 !important;
+  background: rgba(203, 221, 237, 0.97) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 1px 0 rgba(27, 39, 51, 0.06) !important;
+}
+
+html body .head-main .head-logo-row {
+  padding: 0 !important;
+}
+
+html body .head-main .head-logo-row > .container-fluid {
+  padding: 0 20px !important;
+}
+
+html body .head-main .head-logo-row > .container-fluid > .row {
+  display: flex !important;
+  min-height: 60px !important;
+  margin: 0 !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+}
+
+html body .head-main .js-logo-container {
+  order: 0 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 auto 0 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+  text-align: left !important;
+}
+
+html body .head-main .js-logo-container a {
+  display: flex !important;
+  min-height: 44px !important;
+  align-items: center !important;
+}
+
+/* Largura fixa com height: auto: o logo nunca estica. max-height: o tema
+   encolhe o logo ao rolar (classe compress); a landing não. A auréola ocupa
+   o quarto de cima do arquivo, então o centro das LETRAS fica 12,5% abaixo
+   do centro da caixa: o deslocamento devolve as letras ao eixo do menu. */
+html body .head-main .logo-img {
+  display: block !important;
+  width: 96px !important;
+  max-width: none !important;
+  height: auto !important;
+  max-height: none !important;
+  margin: 0 !important;
+  transform: translateY(-12.5%) !important;
+}
+
+html body .head-main .head-logo-row .order-first,
+html body .head-main .head-logo-row .order-last {
+  order: 1 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+html body .head-main .head-logo-row .order-last {
+  order: 2 !important;
+  margin-left: 14px !important;
+}
+
+/* "Menu" e a pílula da sacola: Inter 13 em caixa baixa, alvo de toque de 44px. */
+html body .head-main .btn-utility {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  padding: 0 4px !important;
+  color: #0b2360 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 13.12px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* "Menu" veste a roupa dos links do topo e leva as três linhas antes da
+   palavra: solta, a palavra não lia como botão. As linhas são duas bordas e
+   um fio de fundo, nas medidas da landing (16 por 12, traço de 2). */
+html body .head-main .order-first .btn-utility {
+  font-weight: 400 !important;
+  opacity: 0.85 !important;
+}
+
+html body .head-main .order-first .btn-utility:hover,
+html body .head-main .order-first .btn-utility:focus {
+  opacity: 1 !important;
+}
+
+html body .head-main .order-first .btn-utility::before {
+  content: "";
+  box-sizing: border-box;
+  width: 16px;
+  height: 12px;
+  margin-right: 0.5em;
+  border-top: 2px solid #0b2360;
+  border-bottom: 2px solid #0b2360;
+  background-image: linear-gradient(#0b2360, #0b2360);
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 100% 2px;
+  flex: none;
+}
+
+/* Sacola: pílula de contorno, igual à pílula do topo da landing. */
+html body .head-main .order-last .btn-utility {
+  min-width: 112px !important;
+  padding: 0 14.4px !important;
+  font-size: 12.48px !important;
+  border: 1.5px solid #0b2360 !important;
+  border-radius: 999px !important;
+  letter-spacing: 0.02em !important;
+  transition: background-color 0.18s ease, color 0.18s ease !important;
+}
+
+html body .head-main .order-last .btn-utility:hover,
+html body .head-main .order-last .btn-utility:focus {
+  background: #0b2360 !important;
+  color: #f7fbff !important;
+  opacity: 1 !important;
+}
+
+/* Troca "Carrinho" por "Sacola": o span é só do rótulo, a troca é limpa. */
+html body .head-main .order-last .utilities-text {
+  font-size: 0 !important;
+}
+
+html body .head-main .order-last .utilities-text::after {
+  content: "Sacola";
+  font-size: 12.48px;
+}
+
+html body .head-main .order-last .js-cart-widget-amount.badge {
+  position: static !important;
+  display: inline-grid !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  margin-left: 7px !important;
+  padding: 0 5px !important;
+  border-radius: 999px !important;
+  background: #0b2360 !important;
+  color: #f7fbff !important;
+  font-size: 10px !important;
+  line-height: 1 !important;
+  place-items: center !important;
+  transform: none !important;
+}
+
+html body .head-main .order-last .btn-utility:hover .js-cart-widget-amount.badge {
+  background: #f7fbff !important;
+  color: #0b2360 !important;
+}
+
+/* Navegação: o fio dourado do hover é um fundo que cresce, porque o painel
+   apaga text-underline-offset. O espaço entre links é margem do link: item
+   escondido não deixa buraco e os vãos ficam iguais. */
+html body .head-main .nav-main-item {
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body .head-main .nav-list-link {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  margin: 0 0 0 25.6px !important;
+  padding: 0 !important;
+  background-image: linear-gradient(#e9c46a, #e9c46a) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 32px !important;
+  background-size: 0 2px !important;
+  color: #0b2360 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 13.12px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  opacity: 0.85 !important;
+  align-items: center !important;
+  transition: opacity 0.18s ease, background-size 0.18s ease !important;
+}
+
+/* O fio acende no hover e fica FIXO no item da página atual (a classe
+   "selected" é a que o tema põe no item ativo). */
+html body .head-main .nav-list-link:hover,
+html body .head-main .nav-list-link:focus,
+html body .head-main .nav-list-link.selected {
+  background-size: 100% 2px !important;
+  opacity: 1 !important;
+}
+
+html body .head-main .nav-list-link::after {
+  display: none !important;
+}
+
+/* Na home da loja, "Loja" leva o fio fixo de página atual: a vitrine marca
+   "Loja" na home dela, e a loja não marcava onde o visitante está. */
+html body.template-home .head-main .nav-list-link[href*="/loja/?ref=loja"] {
+  background-size: 100% 2px !important;
+  opacity: 1 !important;
+}
+
+/* Instagram e TikTok moram no menu principal só para chegarem à coluna
+   "A marca" do rodapé, onde a landing os tem. No topo e no menu do celular
+   eles não aparecem. */
+html body .nav-item .nav-list-link[href*="instagram.com"],
+html body .nav-item .nav-list-link[href*="tiktok.com"] {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  html body .head-main .head-logo-row > .container-fluid {
+    padding: 0 32px !important;
+  }
+}
+
+/* Entre 768 e 899px vale o botão Menu: o tema esconde o botão a partir de
+   768px e mostra a fila de links, que ainda não cabe. */
+@media (min-width: 768px) and (max-width: 899px) {
+  html body .head-main .head-nav {
+    display: none !important;
+  }
+
+  html body .head-main .head-logo-row .order-first {
+    display: block !important;
+  }
+}
+
+@media (min-width: 900px) {
+  html body .head-main .head-logo-row > .container-fluid > .row {
+    min-height: 68px !important;
+  }
+
+  html body .head-main .logo-img {
+    width: 112px !important;
+  }
+
+  html body .head-main .order-last .btn-utility {
+    min-height: 40px !important;
+    padding: 0 17.6px !important;
+    font-size: 13.12px !important;
+  }
+
+  html body .head-main .order-last .utilities-text::after {
+    font-size: 13.12px;
+  }
+
+  /* A navegação é um bloco separado no tema; aqui ela sobe para a linha do
+     logo, encostada à direita, com a reserva da pílula da sacola. */
+  html body .head-main .head-nav {
+    position: absolute !important;
+    top: auto !important;
+    right: 172px !important;
+    bottom: 0 !important;
+    left: auto !important;
+    display: flex !important;
+    width: auto !important;
+    height: 68px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    align-items: center !important;
+  }
+
+  html body .head-main .head-nav > .container-fluid,
+  html body .head-main .nav-desktop {
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+  }
+
+  html body .head-main .nav-desktop-list {
+    display: flex !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    align-items: center !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1099px) {
+  html body .head-main .nav-list-link {
+    margin-left: 18px !important;
+  }
+}
+
+/* "Quero ser avisado": a landing fecha o topo com uma pílula de contorno.
+   CSS não cria link, mas um item de menu pode ser um: o item do menu
+   principal cujo destino é um mailto: vira essa pílula. Sem o item no
+   painel, a regra fica inerte. Nunca leva o fio de página atual. No menu
+   do celular ele é uma linha como as outras. */
+@media (min-width: 900px) {
+  html body .head-main .nav-list-link[href*="mailto:"] {
+    min-height: 40px !important;
+    margin-left: 27.2px !important;
+    padding: 0 17.6px !important;
+    border: 1.5px solid #0b2360 !important;
+    border-radius: 999px !important;
+    background-image: none !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    white-space: nowrap !important;
+    opacity: 1 !important;
+    transition: background-color 0.18s ease, color 0.18s ease !important;
+  }
+
+  html body .head-main .nav-list-link[href*="mailto:"]:hover,
+  html body .head-main .nav-list-link[href*="mailto:"]:focus {
+    background-color: #0b2360 !important;
+    color: #f7fbff !important;
+  }
+}
+
+/* Em tela estreita o vão antes da pílula encolhe junto com os dos links
+   (na landing os dois vêm de clamp(), que o painel apaga). */
+@media (min-width: 900px) and (max-width: 1099px) {
+  html body .head-main .nav-list-link[href*="mailto:"] {
+    margin-left: 20px !important;
+  }
+}
+
+@media (max-width: 359px) {
+  html body .head-main .logo-img {
+    width: 84px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body .head-main .head-logo-row > .container-fluid {
+    padding: 0 56px !important;
+  }
+
+  html body .head-main .logo-img {
+    width: 144px !important;
+  }
+
+  html body .head-main .head-nav {
+    right: 196px !important;
+  }
+}
+
+/* Menu do celular: as mesmas linhas do painel do menu da landing (Inter,
+   48px de altura, fio fino entre os itens), sobre o azul do céu do topo:
+   chapado quase branco, lia como folha em branco. */
+html body .modal-nav-hamburger {
+  background: #cbdded !important;
+}
+
+html body .modal-nav-hamburger .modal-header,
+html body .modal-nav-hamburger .modal-scrollable-area,
+html body .modal-nav-hamburger .modal-body {
+  border-bottom: 0 !important;
+  background: transparent !important;
+}
+
+html body .modal-nav-hamburger .nav-list-link {
+  display: flex !important;
+  min-height: 48px !important;
+  margin: 0 20px !important;
+  padding: 0 !important;
+  border-bottom: 1px solid rgba(11, 35, 96, 0.1) !important;
+  color: #0b2360 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 15.2px !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  align-items: center !important;
+}
+
+/* "Quero ser avisado" no menu do celular é a pílula navy da capa, depois
+   da lista. */
+html body .modal-nav-hamburger .nav-list-link[href*="mailto:"] {
+  display: inline-flex !important;
+  min-height: 46px !important;
+  margin: 20px 20px 0 !important;
+  padding: 0 26.5px !important;
+  border: 1.5px solid #0b2360 !important;
+  border-radius: 999px !important;
+  background: #0b2360 !important;
+  box-shadow: 0 10px 30px rgba(11, 35, 96, 0.22) !important;
+  color: #f7fbff !important;
+  font-size: 14.72px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.01em !important;
+  justify-content: center !important;
+}
+
+html body .modal-nav-hamburger .nav-secondary {
+  border-top: 1px solid rgba(11, 35, 96, 0.1) !important;
+  background: transparent !important;
+  font-size: 14px !important;
+}
+
+html body .modal-nav-hamburger .nav-secondary a {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  align-items: center !important;
+}
+
+/* "Iniciar sessão / Criar uma conta" na mesma margem das linhas do menu. */
+html body .modal-nav-hamburger .nav-secondary > .p-3 {
+  padding: 16px 20px !important;
+}
+
+/* Faixa de anúncio: só volta com a loja aberta. Sem faixa navy: texto navy
+   sobre o vidro do topo. */
+html body .js-adbar.section-adbar {
+  padding: 9px 20px !important;
+  color: #0b2360 !important;
+  font-size: 12px !important;
+}
+
+html body .js-adbar a {
+  color: #0b2360 !important;
+}
+
+/* ------------------------------------------------------------
+   3. Tipo
+   Uma voz de título: Fraunces 400, caixa baixa, navy. O tema grita em
+   maiúsculas por configuração (--main-text-transform); aqui some.
+   Maiúscula só no kicker pequeno.
+   ------------------------------------------------------------ */
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body .h1-huge,
+html body .h2-huge,
+html body .h3-huge,
+html body .h4-huge,
+html body .subtitle,
+html body .modal-header,
+html body .text-transform {
+  text-transform: none !important;
+}
+
+/* As classes "huge" do Baires chegam a 125px (h1-huge-md) e aparecem em
+   página de produto, relacionados e carrosséis. Aqui nenhuma passa da
+   escala da marca; os títulos com desenho próprio (página, capa, rodapé,
+   selos) vencem por seletor mais específico. */
+html body [class*="-huge"] {
+  font-size: 28px !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* O título começa na altura do título das páginas de leitura da vitrine
+   (clamp(64px, 8vw, 120px) abaixo do topo, em degraus) e o cartão vem 0,7em
+   depois dele. */
+html body .page-header {
+  padding: 64px 0 22.4px !important;
+}
+
+html body .page-header h1 {
+  margin: 0 !important;
+  color: #0b2360 !important;
+  font-family: Fraunces, Georgia, serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* A trilha do tema some: a landing e a vitrine não têm. */
+html body .breadcrumbs {
+  display: none !important;
+}
+
+/* Coluna das páginas internas: título e cartão começam no MESMO eixo
+   esquerdo, o da marca do topo, como as páginas de leitura da vitrine.
+   Antes flutuavam numa coluna centrada, em duas margens diferentes (364px
+   em Sobre e Projetos, 212px em Contato e Login). As margens laterais são
+   as do topo e do rodapé. */
+html body > .container,
+html body > section > .container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 20px !important;
+}
+
+@media (min-width: 768px) {
+  html body [class*="-huge"] {
+    font-size: 40px !important;
+  }
+
+  html body > .container,
+  html body > section > .container {
+    padding: 0 32px !important;
+  }
+}
+
+/* Título de página: a voz média da landing, clamp(2rem, 4vw, 3.2rem), em
+   degraus, porque o painel apaga clamp(). */
+@media (min-width: 900px) {
+  html body .page-header {
+    padding: 84px 0 29.4px !important;
+  }
+
+  html body .page-header h1 {
+    font-size: 42px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body .page-header {
+    padding: 115px 0 35.8px !important;
+  }
+
+  html body .page-header h1 {
+    font-size: 51.2px !important;
+  }
+
+  html body > .container,
+  html body > section > .container {
+    padding: 0 56px !important;
+  }
+}
+
+@media (min-width: 1632px) {
+  html body > .container,
+  html body > section > .container {
+    padding: 0 calc(50% - 760px) !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   4. Vidro e páginas de leitura (Sobre, Projetos Sociais)
+   O título fica solto no céu; o texto corrido mora num painel de vidro,
+   que é o que garante leitura sobre as nuvens. Coluna de 46em.
+   As regras de texto levam uma classe só (.user-content): os modais dos
+   projetos, que moram dentro do texto, vencem com duas.
+   ------------------------------------------------------------ */
+
+html body.template-page .user-content {
+  padding-bottom: 72px !important;
+}
+
+html body.template-page .user-content > .container > .row {
+  margin: 0 !important;
+}
+
+/* O vidro vai num pseudo-elemento e não na coluna: backdrop-filter na coluna
+   prenderia dentro dela o modal fixo dos projetos sociais. */
+html body.template-page .user-content > .container > .row > div {
+  position: relative !important;
+  max-width: 736px !important;
+  padding: 22.4px !important;
+  flex: 0 0 100% !important;
+}
+
+html body.template-page .user-content > .container > .row > div::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  background: rgba(247, 251, 255, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1);
+}
+
+/* Subtítulo em Fraunces 400: mais pesado, ao lado do título leve, lia como
+   outra família. */
+html body .user-content h2,
+html body .user-content h3 {
+  margin: 1.7em 0 0.45em !important;
+  color: #0b2360 !important;
+  font-family: Fraunces, Georgia, serif !important;
+  font-size: 22.4px !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+}
+
+html body .user-content p,
+html body .user-content li {
+  margin: 0.6em 0 !important;
+  color: #1b2733;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+/* Lista com marcador: o mesmo ponto dourado dos selos, não o quadrado do tema. */
+html body .user-content ul {
+  padding-left: 0 !important;
+  list-style: none !important;
+}
+
+html body .user-content ul > li {
+  position: relative !important;
+  padding-left: 1.3em !important;
+}
+
+html body .user-content ul > li::before {
+  content: "";
+  position: absolute;
+  top: calc(0.85em - 4px);
+  left: 0.15em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #e9c46a;
+}
+
+html body.template-page .user-content > .container > .row > div > :first-child {
+  margin-top: 0 !important;
+}
+
+html body.template-page .user-content > .container > .row > div > :last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Parágrafo de abertura vira lede: clamp(1.1rem, 1.6vw, 1.2rem) da vitrine,
+   em dois degraus. */
+html body.template-page .user-content > .container > .row > div > p:first-child {
+  color: #2a3a49 !important;
+  font-size: 17.6px !important;
+  line-height: 1.6 !important;
+}
+
+/* Link de texto: navy com o fio dourado embaixo, nunca texto dourado. Os
+   13px de cima e de baixo não mexem na linha do texto (elemento em linha) e
+   dão ao link 44px de área de toque; o fio desconta esse respiro. */
+html body .user-content p a:not(.btn),
+html body .user-content li a:not(.btn) {
+  padding: 13px 0 !important;
+  background-image: linear-gradient(#e9c46a, #e9c46a) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 calc(100% - 11px) !important;
+  background-size: 100% 1.5px !important;
+  color: #0b2360 !important;
+  text-decoration: none !important;
+}
+
+@media (min-width: 768px) {
+  html body.template-page .user-content > .container > .row > div {
+    padding: 41.6px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body.template-page .user-content > .container > .row > div > p:first-child {
+    font-size: 19.2px !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   5. Botões
+   Uma pílula só: navy cheia para a ação principal, contorno para a
+   secundária. Nada quadrado, nada em Arial, nada em maiúsculas.
+   ------------------------------------------------------------ */
+html body .btn-primary,
+html body .btn-secondary,
+html body section[data-store="home-institutional-message"] .btn-link {
+  display: inline-flex !important;
+  min-height: 46px !important;
+  padding: 0 26.5px !important;
+  border: 1.5px solid #0b2360 !important;
+  border-radius: 999px !important;
+  background: #0b2360 !important;
+  box-shadow: 0 10px 30px rgba(11, 35, 96, 0.22) !important;
+  color: #f7fbff !important;
+  opacity: 1 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 14.72px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.01em !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease !important;
+}
+
+html body .btn-primary:hover,
+html body .btn-primary:focus,
+html body section[data-store="home-institutional-message"] .btn-link:hover,
+html body section[data-store="home-institutional-message"] .btn-link:focus {
+  box-shadow: 0 16px 40px rgba(11, 35, 96, 0.3) !important;
+  color: #f7fbff !important;
+  opacity: 1 !important;
+  transform: translateY(-2px) !important;
+}
+
+html body .btn-secondary {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #0b2360 !important;
+}
+
+html body .btn-secondary:hover,
+html body .btn-secondary:focus {
+  background: #0b2360 !important;
+  color: #f7fbff !important;
+  opacity: 1 !important;
+}
+
+/* ------------------------------------------------------------
+   6. Campos e formulários (contato, login, cadastro, senha)
+   ------------------------------------------------------------ */
+html body .form .form-control {
+  min-height: 48px !important;
+  padding: 12px 14px !important;
+  border: 1px solid rgba(11, 35, 96, 0.24) !important;
+  border-radius: 12px !important;
+  background: #ffffff !important;
+  color: #1b2733 !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease !important;
+}
+
+html body .form .form-control:focus {
+  border-color: #0b2360 !important;
+  box-shadow: 0 0 0 3px rgba(11, 35, 96, 0.18) !important;
+}
+
+html body .form .form-control-area {
+  min-height: 132px !important;
+}
+
+/* No iPhone o tema escala o campo para 75% para evitar zoom; com 16px o zoom
+   já não acontece e a escala só deixaria o texto miúdo. */
+html body .form .form-control-ios {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  transform: none !important;
+}
+
+html body .form .form-label {
+  margin-bottom: 6px !important;
+  color: #1b2733 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+/* Olho da senha: 44px de área de toque, centrado na altura do campo. */
+html body .form .password-toggle {
+  padding: 22px !important;
+  transform: translateY(-105%) !important;
+}
+
+/* Regras sozinhas de propósito: se o painel recusar ::placeholder, só elas
+   caem. Os exemplos do tema ("ex.: Maria Perez") somem; o rótulo já diz o
+   que preencher. */
+html body .form .form-control::placeholder {
+  color: #5b6779;
+}
+
+html body .contact-page .form-control::placeholder,
+html body .account-page .form-control::placeholder {
+  color: transparent;
+}
+
+html body .contact-page,
+html body .account-page {
+  padding-bottom: 72px !important;
+  color: #1b2733 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+html body .contact-page > .container > .row,
+html body .account-page > .container > .row {
+  max-width: 1016px !important;
+  margin: 0 !important;
+}
+
+html body .contact-page > .container > .row > .col-md-5,
+html body .account-page > .container > .row > .col-md-5 {
+  width: 100% !important;
+  max-width: 560px !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* O formulário é a superfície de leitura: vidro. */
+html body .contact-page .form,
+html body .account-page .form {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 24px 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  border-radius: 18px !important;
+  background: rgba(247, 251, 255, 0.72) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1) !important;
+}
+
+html body .contact-page .btn-primary,
+html body .account-page .btn-primary {
+  width: auto !important;
+  min-width: 168px !important;
+}
+
+/* O tema centra o reCAPTCHA; aqui ele segue a margem dos campos. */
+html body .form .g-recaptcha > div {
+  margin: 4px 0 20px !important;
+}
+
+/* O reCAPTCHA tem 304px fixos e não cabe no painel abaixo de 390px: encolhe
+   para 80%. A margem negativa devolve o que a escala (centrada) tira. */
+@media (max-width: 389px) {
+  html body .contact-page .form,
+  html body .account-page .form {
+    padding: 20px 14px !important;
+  }
+
+  html body .form .g-recaptcha > div {
+    margin: -4px 0 8px -30px !important;
+    transform: scale(0.8) !important;
+  }
+}
+
+/* Avisos de formulário (enviado, erro): cantos da família dos campos. */
+html body .alert {
+  padding: 12px 14px !important;
+  border-radius: 12px !important;
+}
+
+/* "Esqueceu a senha?", "Criar uma conta" e "Faça login": legíveis, com o
+   fio dourado e 44px de área de toque. A frase que o tema centra segue a
+   margem esquerda do botão. */
+html body .account-page .font-small {
+  font-size: 14px !important;
+}
+
+html body .account-page .form .text-center {
+  text-align: left !important;
+}
+
+/* O fio é um fundo, não sublinhado: o sublinhado nativo abre buracos nas
+   letras que descem (ç, q, p) e o painel apaga as propriedades que ajustam. */
+html body .account-page .btn-link {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  background-image: linear-gradient(#e9c46a, #e9c46a) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 33px !important;
+  background-size: 100% 1.5px !important;
+  color: #0b2360 !important;
+  text-decoration: none !important;
+  align-items: center !important;
+}
+
+/* Contato e login: o texto de apoio vive em ::before e ::after da linha.
+   Texto corrido, sem quebra de linha: escape em content é inusável no painel.
+   A coluna do contato com a frase do WhatsApp e os dados pessoais some. */
+html body.template-contact .contact-page .col-md-4 {
+  display: none !important;
+}
+
+html body.template-contact .contact-page > .container > .row,
+html body.template-account-login .account-page > .container > .row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+html body.template-contact .contact-page > .container > .row::before,
+html body.template-account-login .account-page > .container > .row::before {
+  display: block;
+  grid-row: 1;
+  margin: 0 0 8px;
+  color: #0b2360;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 22.4px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+html body.template-contact .contact-page > .container > .row::after,
+html body.template-account-login .account-page > .container > .row::after {
+  display: block;
+  grid-row: 2;
+  max-width: 34em;
+  margin: 0 0 24px;
+  color: #1b2733;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+html body.template-contact .contact-page > .container > .row > .col-md-5,
+html body.template-account-login .account-page > .container > .row > .col-md-5 {
+  grid-row: 3 !important;
+}
+
+html body.template-contact .contact-page > .container > .row::before {
+  content: "Fale com a NIMBUS";
+}
+
+html body.template-contact .contact-page > .container > .row::after {
+  content: "Dúvidas sobre tamanhos, produtos, pedidos ou projetos sociais? Envie sua mensagem e responderemos pelo e-mail informado. Se você já comprou, inclua o número do pedido para facilitar o atendimento.";
+}
+
+html body.template-account-login .account-page > .container > .row::before {
+  content: "Sua conta NIMBUS";
+}
+
+html body.template-account-login .account-page > .container > .row::after {
+  content: "Acompanhe seus pedidos, retome pagamentos pendentes e consulte o rastreio em um só lugar.";
+}
+
+@media (min-width: 768px) {
+  html body .contact-page .form,
+  html body .account-page .form {
+    padding: 34px 36px !important;
+  }
+
+  html body.template-contact .contact-page > .container > .row,
+  html body.template-account-login .account-page > .container > .row {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) !important;
+    grid-template-rows: auto 1fr !important;
+    column-gap: 56px !important;
+  }
+
+  /* O texto de apoio nasce no mesmo alto do cartão do formulário. */
+  html body.template-contact .contact-page > .container > .row::before,
+  html body.template-account-login .account-page > .container > .row::before {
+    grid-column: 2;
+  }
+
+  html body.template-contact .contact-page > .container > .row::after,
+  html body.template-account-login .account-page > .container > .row::after {
+    grid-column: 2;
+  }
+
+  html body.template-contact .contact-page > .container > .row > .col-md-5,
+  html body.template-account-login .account-page > .container > .row > .col-md-5 {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   7. Rodapé
+   O rodapé abre do mesmo jeito em toda página: debaixo de um fio de 1px da
+   largura do conteúdo. Na home o fio é o dos selos (seção 9); nas outras
+   páginas, que não têm selos, é um fundo do próprio rodapé.
+
+   O mesmo da landing e da vitrine (public/css/marca.css): sobre o céu, sem
+   faixa, sem régua dourada, sem barra navy. Marca e lema; duas colunas de
+   links, "A marca" e "Ajuda"; linha legal. No celular a marca ocupa a
+   largura inteira e as duas colunas ficam lado a lado.
+
+   O rodapé inteiro é UMA grade: a marca é o ::before do rodapé e cada
+   coluna é uma das duas listas que o tema entrega (o menu principal e o
+   menu do rodapé). As duas listas nascem na mesma linha da grade, então os
+   títulos ficam sempre no mesmo alto. Nada aqui depende da ordem dos itens
+   no painel. O que some de cada lista está em
+   css-nimbus-responsive-header-footer-2026-07-20.css.
+
+   A linha legal só muda de roupa: o texto dela vem do painel e não se
+   reescreve por CSS.
+   ------------------------------------------------------------ */
+html body footer.js-footer {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: 24px !important;
+  row-gap: 32px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 28px 20px 28px !important;
+  border: 0 !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(rgba(11, 35, 96, 0.14), rgba(11, 35, 96, 0.14)) !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% 0 !important;
+  background-size: calc(100% - 40px) 1px !important;
+  color: #1b2733 !important;
+  align-items: start !important;
+}
+
+/* Marca e lema. O logo é o do tema (CDN da loja), com largura fixa e altura
+   automática: mantém a proporção do arquivo. */
+html body footer.js-footer::before {
+  content: "Streetwear católico premium. Acima de tudo.";
+  display: block;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+  max-width: 30em;
+  padding-top: 68px;
+  background-image: url("https://dcdn-us.mitiendanube.com/stores/007/889/827/themes/common/logo-4378824879266145052-1783004944-8394aab4c10636fcadf1e17ce430a58a1783004944-480-0.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 168px auto;
+  color: #2a3a49;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 14.08px;
+  line-height: 1.6;
+}
+
+/* Coluna "A marca": a lista do menu principal. */
+html body footer.js-footer > .row {
+  display: block !important;
+  grid-column: 1 !important;
+  grid-row: 2 !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body footer.js-footer > .row > .col-md-6:first-child {
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Coluna Ajuda: a lista do menu do rodapé. */
+html body footer.js-footer > .mb-4.pb-2.mb-md-5.pb-md-0 {
+  grid-column: 2 !important;
+  grid-row: 2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html body footer.js-footer ul {
+  display: flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  flex-direction: column !important;
+  flex-wrap: nowrap !important;
+  align-items: flex-start !important;
+}
+
+/* Título de coluna: Fraunces 400 navy, como no rodapé da landing. */
+html body footer.js-footer ul::before {
+  display: block;
+  margin: 0 0 6.4px;
+  color: #0b2360;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 19.2px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+/* "A marca", não "NIMBUS": o nome já está no logo logo acima, e em caixa
+   alta era o único título gritado do rodapé. */
+html body footer.js-footer > .row ul::before {
+  content: "A marca";
+}
+
+html body footer.js-footer > .mb-4.pb-2.mb-md-5.pb-md-0 ul::before {
+  content: "Ajuda";
+}
+
+html body footer.js-footer ul li {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  text-align: left !important;
+}
+
+/* Links das duas colunas: mesma roupa, 44px de área de toque, fio dourado
+   que cresce no hover. */
+html body footer.js-footer ul a {
+  display: inline-flex !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background-image: linear-gradient(#e9c46a, #e9c46a) !important;
+  background-repeat: no-repeat !important;
+  background-position: 0 33px !important;
+  background-size: 0 1.5px !important;
+  color: #0b2360 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 14.08px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  align-items: center !important;
+  transition: background-size 0.18s ease !important;
+}
+
+html body footer.js-footer ul a:hover,
+html body footer.js-footer ul a:focus {
+  background-size: 100% 1.5px !important;
+}
+
+/* Linha legal: texto pequeno sobre um fio, à esquerda, no eixo de tudo no
+   rodapé (centrada, era a única coisa fora dele). */
+html body footer.js-footer > .text-left.text-md-center {
+  display: block !important;
+  grid-column: 1 / span 2 !important;
+  grid-row: 3 !important;
+  margin: 0 !important;
+  padding: 19px 0 0 !important;
+  border-top: 1px solid rgba(11, 35, 96, 0.14) !important;
+  background: transparent !important;
+  color: #415061 !important;
+  text-align: left !important;
+}
+
+html body footer.js-footer > .text-left.text-md-center .font-small {
+  margin: 0 !important;
+  color: #415061 !important;
+  font-size: 12.48px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+@media (min-width: 768px) {
+  html body footer.js-footer {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) !important;
+    column-gap: 40px !important;
+    padding: 36px 32px 36px !important;
+    background-size: calc(100% - 64px) 1px !important;
+  }
+
+  html body footer.js-footer::before {
+    grid-column: 1;
+  }
+
+  html body footer.js-footer > .row {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  html body footer.js-footer > .mb-4.pb-2.mb-md-5.pb-md-0 {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+  }
+
+  html body footer.js-footer > .text-left.text-md-center {
+    grid-column: 1 / span 3 !important;
+    grid-row: 2 !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body footer.js-footer {
+    column-gap: 64px !important;
+    padding: 44px 56px 44px !important;
+    background-size: calc(100% - 112px) 1px !important;
+  }
+}
+
+/* Em tela estreita o lema quebra entre as duas frases, nunca deixando
+   "tudo." sozinho na linha de baixo (a landing usa text-wrap, que o painel
+   não conhece). */
+@media (max-width: 359px) {
+  html body footer.js-footer::before {
+    max-width: 220px;
+  }
+}
+
+/* A partir de 1632px o rodapé para de crescer (1520px), como na vitrine. */
+@media (min-width: 1632px) {
+  html body footer.js-footer {
+    padding-right: calc(50% - 760px) !important;
+    padding-left: calc(50% - 760px) !important;
+    background-size: 1520px 1px !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   8. Aviso de cookies
+   Cartão de vidro pequeno no canto. Sem display aqui: o tema liga e
+   desliga o aviso por style inline.
+   ------------------------------------------------------------ */
+html body .js-notification-cookie-banner {
+  right: auto !important;
+  bottom: 12px !important;
+  left: 12px !important;
+  width: calc(100% - 24px) !important;
+  max-width: 380px !important;
+  padding: 14px 112px 14px 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  border-radius: 16px !important;
+  background: rgba(247, 251, 255, 0.86) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 12px 30px rgba(27, 39, 51, 0.14) !important;
+  color: #1b2733 !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+  text-align: left !important;
+}
+
+html body .js-notification-cookie-banner .btn-link {
+  position: absolute !important;
+  top: 50% !important;
+  right: 12px !important;
+  display: inline-flex !important;
+  min-height: 44px !important;
+  padding: 0 18px !important;
+  border-radius: 999px !important;
+  background: #0b2360 !important;
+  color: #f7fbff !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  align-items: center !important;
+  transform: translateY(-50%) !important;
+}
+
+/* ------------------------------------------------------------
+   9. Home
+   A mensagem institucional vira a capa: texto solto no céu, centrado, na
+   mesma altura da capa da vitrine (52px abaixo do topo no celular; 12vh no
+   computador; 6vh embaixo). Logo depois vêm os selos e o rodapé: com a
+   capa ocupando a tela inteira sobravam 330px de céu vazio antes do
+   rodapé, e a página lia como se não tivesse carregado.
+   ------------------------------------------------------------ */
+html body section[data-store="home-institutional-message"] {
+  display: flex !important;
+  min-height: 0 !important;
+  padding: 52px 20px 6vh !important;
+  overflow: visible !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+html body section[data-store="home-institutional-message"] > .container-fluid {
+  padding: 0 !important;
+}
+
+html body section[data-store="home-institutional-message"] .row.position-relative {
+  display: flex !important;
+  margin: 0 !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Kicker: a única maiúscula da página. Cinza #415061, que tem contraste. */
+html body section[data-store="home-institutional-message"] .row.position-relative::before {
+  content: "Streetwear católico premium";
+  display: block;
+  margin: 0 0 17.6px;
+  color: #415061;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 11.52px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+html body section[data-store="home-institutional-message"] .row.position-relative > div {
+  position: static !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+  transform: none !important;
+}
+
+html body section[data-store="home-institutional-message"] h2 {
+  max-width: 10em !important;
+  margin: 0 auto !important;
+  color: #0b2360 !important;
+  font-family: Fraunces, Georgia, serif !important;
+  font-size: 38.4px !important;
+  font-weight: 400 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Largura em px (as 46 letras da lede da landing): no estado fechado o
+   parágrafo fica com font-size 0 e um max-width em em viraria zero. */
+html body section[data-store="home-institutional-message"] p {
+  max-width: 470px !important;
+  margin: 17.6px auto 0 !important;
+  color: #2a3a49 !important;
+  line-height: 1.6 !important;
+}
+
+html body section[data-store="home-institutional-message"] .btn-link {
+  margin-top: 27.2px !important;
+}
+
+/* Segundo botão da capa ("Ler o manifesto"), se a seção do painel tiver
+   um: contorno, como o botão secundário da landing. */
+html body section[data-store="home-institutional-message"] .btn-link + .btn-link {
+  margin-left: 12.8px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #0b2360 !important;
+}
+
+/* Botão de aviso (destino mailto:): a landing diz, logo abaixo, o que
+   acontece ao tocar. CSS não cria parágrafo, então a linha é do próprio
+   botão, pendurada embaixo dele; a margem de baixo guarda o lugar dela.
+   Só existe quando o botão da capa aponta para um mailto:. */
+html body section[data-store="home-institutional-message"] .btn-link[href*="mailto:"] {
+  position: relative !important;
+  margin-bottom: 62px !important;
+}
+
+html body section[data-store="home-institutional-message"] .btn-link[href*="mailto:"]::after {
+  content: "O botão abre o seu e‑mail com a mensagem pronta. É só enviar.";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 280px;
+  margin: 17.6px 0 0 -140px;
+  color: #415061;
+  font-size: 13.6px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-align: center;
+  white-space: normal;
+}
+
+/* Voz de título grande (capa e 404): clamp(2.4rem, 6vw, 4.6rem) da landing,
+   em degraus. Lede (o parágrafo logo abaixo): clamp(1.02rem, 1.6vw, 1.2rem).
+   O ::after do parágrafo da capa e o da busca só existem no estado fechado. */
+html body section[data-store="home-institutional-message"] p,
+html body section[data-store="home-institutional-message"] p::after,
+html body.template-404 #product-example::after,
+html body.template-search [data-component="filter.message"],
+html body.template-search [data-component="filter.message"]::after {
+  font-size: 16.32px !important;
+}
+
+@media (min-width: 768px) {
+  html body section[data-store="home-institutional-message"] h2,
+  html body.template-404 #product-example::before {
+    font-size: 48px !important;
+  }
+
+  /* Com largura, a linha do botão cabe inteira numa linha só. */
+  html body section[data-store="home-institutional-message"] .btn-link[href*="mailto:"] {
+    margin-bottom: 40px !important;
+  }
+
+  html body section[data-store="home-institutional-message"] .btn-link[href*="mailto:"]::after {
+    width: 400px;
+    margin-left: -200px;
+  }
+}
+
+@media (min-width: 900px) {
+  html body section[data-store="home-institutional-message"] h2,
+  html body.template-404 #product-example::before {
+    font-size: 62px !important;
+  }
+
+  html body section[data-store="home-institutional-message"] p,
+  html body section[data-store="home-institutional-message"] p::after,
+  html body.template-404 #product-example::after,
+  html body.template-search [data-component="filter.message"],
+  html body.template-search [data-component="filter.message"]::after {
+    font-size: 17.6px !important;
+  }
+
+  html body section[data-store="home-institutional-message"] p {
+    max-width: 510px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body section[data-store="home-institutional-message"] h2,
+  html body.template-404 #product-example::before {
+    font-size: 73.6px !important;
+  }
+
+  html body section[data-store="home-institutional-message"] p,
+  html body section[data-store="home-institutional-message"] p::after,
+  html body.template-404 #product-example::after,
+  html body.template-search [data-component="filter.message"],
+  html body.template-search [data-component="filter.message"]::after {
+    font-size: 19.2px !important;
+  }
+
+  html body section[data-store="home-institutional-message"] p {
+    max-width: 556px !important;
+  }
+}
+
+/* Selos: os banners informativos do tema viram as linhas de confiança que
+   abrem o rodapé da landing. Os três caem na MESMA grade das três colunas do
+   rodapé logo abaixo (cada selo começa onde começa uma coluna), debaixo de
+   um fio, como a linha legal fecha o rodapé em cima de outro. No celular,
+   uma coluna: os três pontos dourados num x só. O ponto (10px) é do item,
+   em posição absoluta, na altura da PRIMEIRA linha do texto, nunca boiando
+   no meio de um item que quebrou em duas. As margens laterais e o vão entre
+   colunas são os do rodapé (seção 7): mudou lá, mude aqui. */
+html body section[data-store="banner-services"] {
+  padding: 32px 20px 0 !important;
+}
+
+html body section[data-store="banner-services"] > .container-fluid {
+  padding: 0 !important;
+}
+
+html body section[data-store="banner-services"] .swiper-wrapper {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 8px !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 22.4px 0 0 !important;
+  border-top: 1px solid rgba(11, 35, 96, 0.14) !important;
+  align-items: start !important;
+  transform: none !important;
+}
+
+html body section[data-store="banner-services"] .swiper-slide {
+  position: relative !important;
+  display: block !important;
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 0 0 18px !important;
+  color: #1b2733 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 14.08px !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+}
+
+html body section[data-store="banner-services"] .swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: calc(0.7em - 4px);
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #e9c46a;
+}
+
+html body section[data-store="banner-services"] .swiper-slide-duplicate {
+  display: none !important;
+}
+
+/* Título e descrição do banner seguem na mesma linha e no mesmo peso: com
+   os textos da marca no painel, cada selo lê como uma frase só, igual à
+   landing. A landing usa Inter 500, que o tema não carrega; o 0,01em de
+   entreletra devolve ao 400 a largura do 500, para as linhas quebrarem
+   no mesmo lugar. */
+html body section[data-store="banner-services"] .swiper-slide h3,
+html body section[data-store="banner-services"] .swiper-slide p {
+  display: inline !important;
+  margin: 0 !important;
+  color: #1b2733 !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 14.08px !important;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.01em !important;
+  vertical-align: baseline !important;
+}
+
+/* Na home o fio que abre o rodapé é o dos selos, logo acima. */
+html body.template-home footer.js-footer {
+  background-image: none !important;
+}
+
+/* Os selos quebram onde a landing quebra. Lá é text-wrap: balance, que o
+   painel não conhece; aqui é uma largura medida para o texto, tirada do
+   respiro direito do item (largura do texto = o número menos os 18px do
+   ponto). No celular o tema clona os itens num carrossel e numera cada um
+   em data-swiper-slide-index (0, 1, 2); no computador não há clone e vale
+   a posição. Selo do meio: "...para o projeto / social que você escolher". */
+html body section[data-store="banner-services"] .swiper-slide[data-swiper-slide-index="1"] {
+  padding-right: calc(100% - 248px) !important;
+}
+
+/* Terceiro selo em tela estreita: "...e‑mail quando / as peças chegarem". */
+@media (max-width: 358px) {
+  html body section[data-store="banner-services"] .swiper-slide[data-swiper-slide-index="2"] {
+    padding-right: calc(100% - 192px) !important;
+  }
+}
+
+@media (min-width: 768px) {
+  html body section[data-store="home-institutional-message"] {
+    padding: 52px 32px 6vh !important;
+  }
+
+  html body section[data-store="banner-services"] {
+    padding: 40px 32px 0 !important;
+  }
+}
+
+/* As três colunas dos selos entram junto com a navegação do topo, a 900px:
+   entre 768 e 899 as colunas eram estreitas demais e deixavam uma palavra
+   sozinha na última linha. */
+@media (min-width: 900px) {
+  html body section[data-store="home-institutional-message"] {
+    padding-top: 12vh !important;
+  }
+
+  html body section[data-store="banner-services"] .swiper-wrapper {
+    grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 9.6px 40px !important;
+  }
+
+  html body section[data-store="banner-services"] .swiper-slide:nth-child(2) {
+    padding-right: calc(100% - 248px) !important;
+  }
+}
+
+/* Coluna estreita: o selo do meio em três linhas ("...vai / para o projeto
+   social / que você escolher"). */
+@media (min-width: 900px) and (max-width: 967px) {
+  html body section[data-store="banner-services"] .swiper-slide:nth-child(2) {
+    padding-right: calc(100% - 160px) !important;
+  }
+}
+
+/* Até 1399px o terceiro selo não cabe numa linha: quebra em "...quando / as
+   peças chegarem". */
+@media (min-width: 900px) and (max-width: 1399px) {
+  html body section[data-store="banner-services"] .swiper-slide:nth-child(3) {
+    padding-right: calc(100% - 192px) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body section[data-store="banner-services"] {
+    padding: 56px 56px 0 !important;
+  }
+
+  html body section[data-store="banner-services"] .swiper-wrapper {
+    column-gap: 64px !important;
+  }
+}
+
+@media (min-width: 1632px) {
+  html body section[data-store="banner-services"] {
+    padding-right: calc(50% - 760px) !important;
+    padding-left: calc(50% - 760px) !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   10. Busca, 404 e produto de exemplo
+   ------------------------------------------------------------ */
+html body.template-search .page-header {
+  padding-top: 56px !important;
+  text-align: center !important;
+}
+
+html body.template-search .page-header h1 {
+  max-width: 16em !important;
+  margin: 0 auto !important;
+}
+
+html body.template-search .category-body {
+  min-height: 42vh !important;
+}
+
+html body.template-search [data-component="filter.message"] {
+  max-width: 556px !important;
+  margin: 0 auto 96px !important;
+  color: #2a3a49 !important;
+  line-height: 1.6 !important;
+  text-align: center !important;
+}
+
+/* Produto de exemplo do tema nunca aparece: o card de exemplo é o único
+   .js-item-product sem data-product-id. Inerte quando houver produto real.
+   Regra sozinha de propósito (seletor ainda não provado no painel). */
+html body .js-item-product:not([data-product-id]) {
+  display: none !important;
+}
+
+/* O 404 do tema é uma página em branco com um produto de exemplo escondido
+   por JS (#product-example). O bloco vira o suporte da mensagem e o produto
+   de exemplo não aparece nem em /product/example/. O display vence o style
+   inline do tema. */
+html body.template-404 #product-example {
+  display: flex !important;
+  min-height: 62vh !important;
+  padding: 72px 20px 96px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+html body.template-404 #product-example > * {
+  display: none !important;
+}
+
+/* "Erro 404": o rótulo pequeno que abre o 404 da vitrine. O suporte é o
+   bloco do produto de exemplo (#single-product), esvaziado e posto antes
+   do título; se o tema mudar esse bloco, só o rótulo some. */
+html body.template-404 #product-example > #single-product {
+  display: block !important;
+  margin: 0 0 17.6px !important;
+  padding: 0 !important;
+  order: 0 !important;
+}
+
+html body.template-404 #product-example > #single-product > * {
+  display: none !important;
+}
+
+html body.template-404 #product-example > #single-product::before {
+  content: "Erro 404";
+  display: block;
+  color: #415061;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 11.52px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+html body.template-404 #product-example::before {
+  content: "Esta página não existe.";
+  display: block;
+  order: 1;
+  max-width: 14em;
+  color: #0b2360;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 38.4px;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+html body.template-404 #product-example::after {
+  content: "O endereço mudou ou a peça saiu do ar. Use o menu acima para continuar.";
+  display: block;
+  order: 2;
+  max-width: 30em;
+  margin-top: 17.6px;
+  color: #2a3a49;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  html body.template-search .page-header {
+    padding-top: 88px !important;
+  }
+}
+
+/* No celular o título do 404 quebra entre "página" e "não", nunca deixando
+   "existe." sozinho (a landing equilibra com text-wrap, que o painel não
+   conhece). */
+@media (max-width: 767px) {
+  html body.template-404 #product-example::before {
+    max-width: 240px;
+  }
+}
+
+/* ============================================================
+   ESTADO FECHADO: apagar este bloco quando o catálogo voltar
+   A loja não vende nada agora, de propósito: o catálogo está sendo
+   remontado. Tudo o que só vale enquanto ela está fechada mora aqui, para
+   reabrir ser uma remoção só (deste comentário até "FIM DO ESTADO
+   FECHADO") seguida de `node scripts/build_nimbus_publication_css.mjs`.
+
+   As regras do menu olham o DESTINO do link, não a posição: valem para o
+   menu que está no painel hoje e continuam certas (inertes) depois que o
+   painel receber o menu da landing: Manifesto, Impacto, Gravuras, Loja.
+   ============================================================ */
+
+/* Faixa de anúncio: o texto no painel aponta para coleções fechadas. O tema
+   sobe o topo 35px ao rolar para esconder a faixa; sem faixa, o topo fica. */
+html body .js-adbar.section-adbar {
+  display: none !important;
+}
+
+html body .head-main {
+  top: 0 !important;
+}
+
+/* Menu de hoje: saem "Início" (primeiro item, que só repete o logo),
+   "Produtos" e as três coleções. Vale para o topo e para o menu do celular.
+   No menu novo, "Loja" tem o mesmo destino de "Início" mas não é o primeiro
+   item, então fica. */
+html body .nav-item:nth-of-type(1) .nav-list-link[href*="/loja/?ref=loja"],
+html body .nav-item .nav-list-link[href*="#colecoes"],
+html body .nav-item .nav-list-link[href*="/loja/c/"] {
+  display: none !important;
+}
+
+/* "Loja" no menu novo: "em breve" é uma ETIQUETA ao lado do nome (contorno
+   fino em pílula), como na landing. Solta, em letra miúda, lia como defeito
+   de fonte. Vale no topo e no menu do celular. inline-flex e não
+   inline-block: é um valor que o painel já deixou passar. */
+html body .nav-item .nav-list-link[href*="/loja/?ref=loja"]::after {
+  content: "em breve" !important;
+  position: static !important;
+  display: inline-flex !important;
+  width: auto !important;
+  height: auto !important;
+  margin-left: 0.5em !important;
+  padding: 0.12em 0.6em !important;
+  border: 1px solid rgba(11, 35, 96, 0.32) !important;
+  border-radius: 999px !important;
+  background: none !important;
+  font-family: Inter, Arial, sans-serif !important;
+  font-size: 10.88px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.04em !important;
+}
+
+/* O fio dourado fica só debaixo do nome: desconta a etiqueta e a margem
+   dela (72px no total, medidos). */
+html body.template-home .head-main .nav-list-link[href*="/loja/?ref=loja"],
+html body .head-main .nav-list-link[href*="/loja/?ref=loja"]:hover,
+html body .head-main .nav-list-link[href*="/loja/?ref=loja"]:focus,
+html body .head-main .nav-list-link[href*="/loja/?ref=loja"].selected {
+  background-size: calc(100% - 72px) 2px !important;
+}
+
+/* Menu do celular: saem "Iniciar sessão" e "Criar uma conta". Nunca houve
+   venda, então nenhum cliente tem conta para abrir. */
+html body .modal-nav-hamburger .nav-secondary {
+  display: none !important;
+}
+
+/* Contato e login falavam como loja aberta ("se você já comprou", "retome
+   pagamentos pendentes"). Com a loja fechada dizem o que vale agora; os
+   textos de loja aberta voltam sozinhos quando este bloco sair. */
+html body.template-contact .contact-page > .container > .row::after {
+  content: "Dúvidas sobre a marca, as peças que estão chegando ou os projetos sociais? Envie sua mensagem e responderemos pelo e‑mail informado. Se preferir, escreva para nimbuswearbr@gmail.com.";
+}
+
+html body.template-account-login .account-page > .container > .row::after {
+  content: "As primeiras peças chegam em breve. Quando a loja abrir, é aqui que você acompanha seus pedidos e o rastreio.";
+}
+
+/* Sacola: não há o que pôr nela. Sem a pílula, a navegação encosta na margem. */
+html body .head-main .head-logo-row .order-last {
+  display: none !important;
+}
+
+@media (min-width: 900px) {
+  html body .head-main .head-nav {
+    right: 32px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body .head-main .head-nav {
+    right: 56px !important;
+  }
+}
+
+/* Rodapé, coluna "A marca": saem "Produtos" e as três coleções do menu de
+   hoje e, no menu novo, "Loja": com a loja fechada o rodapé da landing não
+   tem esse link. */
+html body footer.js-footer .footer-menu-link[href*="/loja/?ref=loja"],
+html body footer.js-footer .footer-menu-link[href*="#colecoes"],
+html body footer.js-footer .footer-menu-link[href*="/loja/c/"] {
+  display: none !important;
+}
+
+/* Home: o carrossel de categorias leva às grades de exemplo. */
+html body section[data-store="home-banner-categories"] {
+  display: none !important;
+}
+
+/* Home: a frase da capa diz o estado da loja, com as mesmas palavras da
+   landing. O texto do painel volta sozinho quando este bloco sair. */
+html body section[data-store="home-institutional-message"] p {
+  font-size: 0 !important;
+}
+
+html body section[data-store="home-institutional-message"] p::after {
+  content: "Estamos remontando a coleção, peça por peça. As primeiras peças chegam em breve, feitas no Brasil, para você.";
+}
+
+/* Busca: sem peça no ar toda busca volta vazia. No lugar de "escreva de
+   outro jeito", a mesma frase do estado da loja. */
+html body.template-search [data-component="filter.message"] {
+  font-size: 0 !important;
+}
+
+html body.template-search [data-component="filter.message"]::after {
+  content: "Estamos remontando a coleção, peça por peça. As primeiras peças chegam em breve, feitas no Brasil, para você.";
+}
+
+/* Grades (/produtos/, /street/, /reliquia/, /nuvem/): nenhum card aparece e,
+   no lugar da grade, a frase da marca. O primeiro card é o suporte da frase. */
+html body .js-item-product,
+html body.template-category .page-header,
+html body.template-category .category-controls {
+  display: none !important;
+}
+
+html body.template-category .category-body .js-item-product:first-child {
+  display: flex !important;
+  max-width: 100% !important;
+  min-height: 62vh !important;
+  padding: 72px 20px 96px !important;
+  flex: 0 0 100% !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+html body.template-category .category-body .js-item-product:first-child > * {
+  display: none !important;
+}
+
+/* A frase vem na voz de título menor da landing (a frase de fecho):
+   Fraunces, clamp(1.5rem, 2.6vw, 2.1rem) em degraus, entrelinha 1,15. */
+html body.template-category .category-body .js-item-product:first-child::before {
+  content: "Estamos remontando a coleção, peça por peça. As primeiras peças chegam em breve, feitas no Brasil, para você.";
+  display: block;
+  max-width: 22em;
+  color: #0b2360;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  html body.template-category .category-body .js-item-product:first-child::before {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html body.template-category .category-body .js-item-product:first-child::before {
+    font-size: 33.6px;
+  }
+}
+
+/* 404: a mesma frase da landing, que explica a peça fora do ar. */
+html body.template-404 #product-example::after {
+  content: "O endereço mudou ou a peça saiu do ar enquanto remontamos a coleção. Use o menu acima para continuar.";
+}
+
+/* No celular as duas frases têm largura fixa, medida, para quebrarem sempre
+   no mesmo lugar: a das grades fecha em "no Brasil, para você." e a do 404
+   em "menu acima para continuar.", nunca numa palavra sozinha. */
+@media (max-width: 767px) {
+  html body.template-category .category-body .js-item-product:first-child {
+    padding-right: 14px !important;
+    padding-left: 14px !important;
+  }
+
+  html body.template-category .category-body .js-item-product:first-child::before {
+    max-width: 280px;
+  }
+
+  html body.template-404 #product-example::after {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 359px) {
+  html body.template-404 #product-example::after {
+    max-width: 250px;
+  }
+}
+
+/* ============================================================
+   FIM DO ESTADO FECHADO
+   ============================================================ */

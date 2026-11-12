@@ -10,7 +10,8 @@ const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 
 // Versão dos ativos: todo deploy com CSS/JS mudado troca a URL e fura o cache
 // de 10 min do GitHub Pages e o cache do navegador (dono viu CSS velho, 31/07).
-const ATIVOS = ["css/tokens.css", "css/loja.css", "js/ui.js", "js/vitrine.js", "js/produto.js"]
+// ../css/marca.css são as primitivas da marca, o arquivo que a landing também liga.
+const ATIVOS = ["../css/marca.css", "css/tokens.css", "css/loja.css", "js/ui.js", "js/vitrine.js", "js/produto.js"]
   .map((f) => path.resolve(import.meta.dirname, "..", "..", "public/loja", f));
 // Hash sobre o conteúdo com fim de linha normalizado: o checkout Windows
 // materializa CRLF (autocrlf) e o do CI materializa LF; hashear os bytes crus
@@ -38,6 +39,54 @@ const refInterno = (url) => {
 };
 const SACOLA = refInterno("https://loja.nimbuswear.com.br/comprar/");
 
+// Palavras e destinos que a landing e a vitrine repetem iguais (11/11/2026).
+// A landing lê o mesmo arquivo por src/data/content.ts.
+const MARCA = JSON.parse(fs.readFileSync(path.join(RAIZ, "src/data/marca.json"), "utf-8"));
+// Enquanto nada está à venda, a ação única do site é o aviso de abertura. É um
+// mailto com a mensagem pronta: o site é estático e não guarda e-mail de
+// ninguém. `origem` vira o lead_source do evento generate_lead (ui.js).
+const AVISO_URL = `mailto:${MARCA.aviso.email}?subject=${encodeURIComponent(MARCA.aviso.assunto)}&body=${encodeURIComponent(MARCA.aviso.corpo)}`;
+const avisoBotao = (origem, classe = "btn btn--primary") =>
+  `<a class="${classe}" href="${esc(AVISO_URL)}" data-aviso="${origem}">${esc(MARCA.aviso.rotulo)}</a>`;
+// link do rodapé/menu vindo do marca.json: o que aponta para a loja leva o ref
+const destino = (href) => (href.startsWith("https://loja.nimbuswear.com.br/") ? refInterno(href) : href);
+const externo = (href) => (href.startsWith("http") ? ' rel="noopener"' : "");
+// As gravuras são lidas aqui em cima porque a home fechada as mostra.
+const GRAVURAS_DADOS = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8"));
+const GRAVURAS = GRAVURAS_DADOS.gravuras;
+// Miniatura da gravura: as três larguras que scripts/vitrine/build-gravuras-miniaturas.mjs
+// gera. O navegador pega a mais próxima do tamanho da tela; reduzir o original
+// de 1000 px numa caixa de 300 px dava moiré nas hachuras (revisão de 11/11/2026).
+// Largura e altura de um WebP, lidas do cabeçalho do arquivo (VP8, VP8L ou
+// VP8X). Vão no HTML da miniatura para o navegador reservar o lugar dela antes
+// de a imagem chegar: sem isso, no índice do celular cada gravura que carrega
+// empurra a página para baixo.
+const tamanhoWebp = (arquivo) => {
+  const b = fs.readFileSync(arquivo);
+  const tipo = b.toString("ascii", 12, 16);
+  if (tipo === "VP8 ") return [b.readUInt16LE(26) & 0x3fff, b.readUInt16LE(28) & 0x3fff];
+  if (tipo === "VP8L") { const n = b.readUInt32LE(21); return [(n & 0x3fff) + 1, ((n >> 14) & 0x3fff) + 1]; }
+  if (tipo === "VP8X") return [b.readUIntLE(24, 3) + 1, b.readUIntLE(27, 3) + 1];
+  throw new Error(`não sei ler o tamanho de ${arquivo}`);
+};
+// a folha aparada, na largura do scan: a imagem da página de cada gravura
+const tamanhoGrande = (g) => tamanhoWebp(path.join(RAIZ, "public", `gravuras/img/${g.slug}-grande.webp`));
+const miniaturaGravura = (g, sizes) => {
+  const base = `/gravuras/img/${esc(g.slug)}`;
+  const [w, h] = tamanhoWebp(path.join(RAIZ, "public", `gravuras/img/${g.slug}-480.webp`));
+  return `<img src="${base}-480.webp" srcset="${base}-320.webp 320w, ${base}-480.webp 480w, ${base}-640.webp 640w" sizes="${sizes}" width="${w}" height="${h}" alt="${esc(g.titulo)}" loading="lazy">`;
+};
+// `sizes` diz ao navegador a largura que a miniatura ocupa, e tem que ser a
+// largura de verdade: com um valor menor ele baixa o arquivo pequeno e o estica
+// (o índice das gravuras dizia 45vw no celular e mostrava a 90vw; o
+// `vitrine:olho` pegou em 11/11/2026). A grade (.gravuras, em
+// public/loja/css/loja.css) tem 4 colunas, 2 até 760 px; no índice ela cai para
+// 1 coluna até 480 px, e a home fica em 2.
+const SIZES_GRAVURA_HOME = "(max-width: 760px) 45vw, 22vw";
+const SIZES_GRAVURA_INDICE = "(max-width: 480px) 92vw, (max-width: 760px) 45vw, 22vw";
+const cartaoGravura = (g, classe = "", sizes = SIZES_GRAVURA_INDICE) =>
+  `<li${classe ? ` class="${classe}"` : ""}><a href="/gravuras/${esc(g.slug)}/">${miniaturaGravura(g, sizes)}<span class="gravuras__legenda"><b>${esc(g.titulo)}</b><span>${esc(g.autor)}, ${esc(g.ano)}</span></span></a></li>`;
+
 /* A vitrine fica FORA do índice do Google enquanto a loja não vende: o dono só
    abre quando tiver fotos com modelo. Esta chave governa as duas pontas ao mesmo
    tempo, o <meta robots> de cada página e o que entra no sitemap. Antes elas
@@ -50,6 +99,16 @@ const VITRINE_INDEXAVEL = false;
 // footer perdem coleções e Sacola; institucionais continuam no ar. Reabrir =
 // true aqui + restaurar ENTRAM no build-catalogo.mjs + npm run vitrine.
 const VITRINE_ABERTA = false;
+// A landing lê o mesmo estado em src/data/marca.json (lojaAberta). Os dois têm
+// que concordar, senão a landing e a vitrine mostram lojas diferentes.
+if (MARCA.lojaAberta !== VITRINE_ABERTA)
+  throw new Error(`src/data/marca.json diz lojaAberta=${MARCA.lojaAberta} e build-paginas.mjs diz VITRINE_ABERTA=${VITRINE_ABERTA}: vire os dois juntos.`);
+// O terceiro selo depende do estado: com a loja fechada, selo de checkout
+// promete uma compra que não existe (revisão de 12/11/2026).
+const SELOS = [...MARCA.selos, MARCA.seloDoEstado[VITRINE_ABERTA ? "aberta" : "fechada"]];
+// O recado no alto das políticas enquanto nada está à venda.
+const NOTA_FECHADA = "A loja está fechada enquanto remontamos a coleção. O que esta página diz sobre compra, sacola e pedido passa a valer quando ela abrir.";
+const COM_NOTA_FECHADA = new Set(["impacto", "trocas", "envios", "privacidade"]);
 
 /* ---------------------------------------------------------------- parciais */
 const head = (titulo, descricao, opts = {}) => `<!DOCTYPE html>
@@ -65,17 +124,20 @@ ${(VITRINE_INDEXAVEL || opts.indexar) && !opts.semIndice ? "" : '<meta name="rob
 <meta property="og:site_name" content="NIMBUS">
 <meta property="og:locale" content="pt_BR">
 ${opts.canonical ? `<meta property="og:url" content="${esc(opts.canonical)}">` : ""}
-<meta property="og:image" content="${esc(opts.ogImage || "https://nimbuswear.com.br/img/hero-desktop.webp")}">
+<meta property="og:image" content="${esc(opts.ogImage || "https://nimbuswear.com.br/img/og-nimbus.jpg")}">
 <meta name="twitter:card" content="summary_large_image">
 ${opts.canonical ? `<link rel="canonical" href="${esc(opts.canonical)}">` : ""}
 <link rel="icon" href="/img/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png">
+<meta name="theme-color" content="#dcebfa">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>document.documentElement.className+=" js";setTimeout(function(){document.querySelectorAll(".reveal:not(.in)").forEach(function(e){e.classList.add("in")})},2000)</script>
 <link rel="stylesheet" href="${PREFIXO}/css/tokens.css?v=${V}">
+<link rel="stylesheet" href="/css/marca.css?v=${V}">
 <link rel="stylesheet" href="${PREFIXO}/css/loja.css?v=${V}">
-${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}${ga4()}${pixels()}
+${opts.jsonld ? `<script type="application/ld+json">${opts.jsonld}</script>` : ""}${opts.extra || ""}${ga4()}${pixels()}
 </head>
 <body>`;
 
@@ -107,19 +169,26 @@ const pixels = () => `${META_PIXEL_ID ? `
 // laje de parede a 1920). Cada valor mira o assunto da respectiva arte.
 const FOCO_COLECAO = { street: "50% 62%", reliquia: "50% 40%", nuvem: "50% 70%" };
 
-const header = () => `
-<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a>${VITRINE_ABERTA ? ` &nbsp;·&nbsp; frete grátis a partir de R$399,90` : ""}</div>
-<header class="header">
-  <a class="header__logo" href="${PREFIXO}/"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"></a>
-  ${VITRINE_ABERTA ? `<nav class="header__nav">
-    <a href="${PREFIXO}/c/street/">Street</a>
-    <a href="${PREFIXO}/c/reliquia/">Relíquia</a>
-    <a href="${PREFIXO}/c/nuvem/">Nuvem</a>
-  </nav>` : ""}
-  <div class="header__tools">
-    <a href="${PREFIXO}/manifesto/" data-manifesto>Manifesto</a>
-    ${VITRINE_ABERTA ? `<a class="header__cta" href="${esc(SACOLA)}" data-abre-sacola>Sacola<span class="sacola-n" data-sacola-n hidden></span></a>` : ""}
-  </div>
+// O topo é o MESMO da landing (src/sections/Topbar.tsx): marca à esquerda, que
+// leva à landing; navegação em caixa baixa; uma pílula de contorno à direita.
+// Fechada, a navegação vem do marca.json e a pílula é o aviso de abertura.
+// Aberta, entram as coleções e a pílula volta a ser a Sacola. A faixa de
+// anúncio só existe aberta: fechada ela não tinha o que anunciar, e a landing
+// não tem faixa.
+const NAV = VITRINE_ABERTA
+  ? [["Street", `${PREFIXO}/c/street/`], ["Relíquia", `${PREFIXO}/c/reliquia/`], ["Nuvem", `${PREFIXO}/c/nuvem/`], ["Manifesto", `${PREFIXO}/manifesto/`]]
+  : MARCA.nav.map((n) => [n.rotulo, n.href, n.nota]);
+// `atual` é o caminho da página: o item dela no menu ganha aria-current (fio dourado fixo)
+const navLinks = (atual) => NAV.map(([rotulo, href, nota]) => `<a href="${href}"${href === atual ? ' aria-current="page"' : ""}><span>${esc(rotulo)}</span>${nota ? `<small>${esc(nota)}</small>` : ""}</a>`).join("");
+const header = (atual = "") => `${VITRINE_ABERTA ? `
+<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis a partir de R$399,90</div>` : ""}
+<header class="topo" data-topo>
+  <a class="topo__logo" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320"></a>
+  <nav class="topo__nav" aria-label="Principal">${navLinks(atual)}</nav>
+  <details class="topo__menu"><summary>Menu</summary><nav class="topo__painel" aria-label="Principal">${navLinks(atual)}</nav></details>
+  ${VITRINE_ABERTA
+    ? `<a class="topo__cta" href="${esc(SACOLA)}" data-abre-sacola>Sacola<span class="sacola-n" data-sacola-n hidden></span></a>`
+    : avisoBotao("vitrine_topo", "topo__cta")}
 </header>`;
 
 // A celebração da gaveta (ui.js) oferece as Ecobags do catálogo com foto e
@@ -131,23 +200,43 @@ const ECOBAGS = cat.produtos.filter((p) => p.peca === "Ecobag").map((p) => ({
   img: p.imagens.capa, url: `${PREFIXO}/p/${p.slug}/`,
 }));
 
-// réplica do rodapé da loja publicada: corpo claro com borda dourada, colunas
-// com título serif, faixa legal navy. Tagline idêntica à da loja.
+// Rodapé único (11/11/2026): o MESMO da landing, sobre o céu, sem faixa. Selos
+// de confiança, marca com o lema, colunas e a linha legal, tudo vindo do
+// marca.json. Aberta, entram a coluna Loja e o "Acompanhar pedido"; fechada,
+// nenhum rodapé fala em coleção, sacola ou pedido.
+const colunaRodape = (titulo, links) =>
+  `<div><h2>${esc(titulo)}</h2>${links.map((l) => `<a href="${esc(destino(l.href))}"${externo(l.href)}${l.attr || ""}>${esc(l.rotulo)}</a>`).join("")}</div>`;
+const COLUNAS_RODAPE = [
+  ...(VITRINE_ABERTA ? [{ titulo: "Loja", links: [
+    { rotulo: "STREET", href: `${PREFIXO}/c/street/` }, { rotulo: "RELÍQUIA", href: `${PREFIXO}/c/reliquia/` },
+    { rotulo: "NUVEM", href: `${PREFIXO}/c/nuvem/` }, { rotulo: "Sacola", href: SACOLA, attr: " data-abre-sacola" },
+  ] }] : []),
+  ...MARCA.rodape.map((c) => (VITRINE_ABERTA && c.titulo === "Ajuda"
+    ? { ...c, links: [...c.links.slice(0, 2), { rotulo: "Acompanhar pedido", href: "https://loja.nimbuswear.com.br/account/login/" }, ...c.links.slice(2)] }
+    : c)),
+];
 const footer = () => `
-<footer class="footer">
-  <div class="footer__inner">
-    <div class="footer__grid">
-      <div class="footer__logo"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS"><p class="footer__tagline">Streetwear católico premium, feito no Brasil. 10% do lucro é destinado ao projeto social escolhido por você.</p></div>
-      ${VITRINE_ABERTA ? `<div><h4>Loja</h4><a href="${PREFIXO}/c/street/">STREET</a><a href="${PREFIXO}/c/reliquia/">RELÍQUIA</a><a href="${PREFIXO}/c/nuvem/">NUVEM</a><a href="${esc(SACOLA)}" data-abre-sacola>Sacola</a></div>` : ""}
-      <div><h4>Nimbus</h4><a href="${PREFIXO}/manifesto/">Manifesto</a><a href="${PREFIXO}/impacto/">10% do lucro</a><a href="https://instagram.com/nimbuswear.br" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
-      <div><h4>Ajuda</h4><a href="${PREFIXO}/trocas/">Trocas e devoluções</a><a href="${PREFIXO}/envios/">Envios e prazos</a><a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a><a href="${PREFIXO}/privacidade/">Privacidade</a><a href="https://loja.nimbuswear.com.br/contato/?ref=vitrine" rel="noopener">Fale com a NIMBUS</a></div>
+<footer class="pe">
+  <ul class="selos">${SELOS.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>
+  <div class="rodape">
+    <div class="rodape__grade">
+      <div class="rodape__sobre"><a class="rodape__marca" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320" loading="lazy"></a><p class="rodape__lema">${esc(MARCA.lema)}</p></div>
+      ${COLUNAS_RODAPE.map((c) => colunaRodape(c.titulo, c.links)).join("\n      ")}
     </div>
-  </div>
-  <div class="footer__legal">
-    <span>© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF · nimbuswear.com.br</span>
+    <p class="rodape__legal">${esc(MARCA.legal)}</p>
   </div>
 </footer>
 <script type="application/json" id="ecobags-dados">${JSON.stringify(ECOBAGS)}</script>`;
+
+// Fecho das páginas enquanto nada está à venda: toda página termina no convite
+// único, com a linha que diz o que acontece ao tocar. Aberta, o fecho some (a
+// página termina nas coleções, como antes).
+const fechoAviso = (origem, { frase = MARCA.aviso.fecho, centro = false } = {}) => VITRINE_ABERTA ? "" : `
+    <div class="fecho${centro ? " fecho--centro" : ""}">
+      <h2 class="fecho__frase">${esc(frase)}</h2>
+      ${avisoBotao(origem)}
+      <p class="note">${esc(MARCA.aviso.nota)} ${esc(MARCA.aviso.outroCaminho).replace(esc(MARCA.aviso.email), `<a href="mailto:${esc(MARCA.aviso.email)}">${esc(MARCA.aviso.email)}</a>`)}</p>
+    </div>`;
 
 const card = (p) => `
 <a class="card reveal" href="${PREFIXO}/p/${p.slug}/" data-peca="${esc(p.peca)}" data-preco="${p.preco}">
@@ -163,32 +252,35 @@ const card = (p) => `
 </a>`;
 
 /* -------------------------------------------------------------------- home */
-const home = () => `${head("NIMBUS | Streetwear católico premium", "Fé reverente, design autoral e acabamento premium. STREET, RELÍQUIA e NUVEM. 10% do lucro vai para o projeto social que você escolher.", { canonical: `${URL_BASE}/` })}
-${header()}
+// A capa da home fala como a primeira tela da landing: a categoria em rótulo, a
+// assinatura "Acima de tudo." na mesma serifa, o estado da loja em uma frase e
+// o convite único, soltos no céu. SEM imagem de arquitetura inventada: o dono
+// reprovou em 11/11/2026 a passarela nas nuvens (/img/store-backdrop.webp),
+// que tem cara de IA. Imagem no site é lugar real, pessoa ou gravura de museu.
+// Fechada, a descrição não cita coleção nem preço (a página não tem nenhum).
+const home = () => `${head("NIMBUS | Streetwear católico premium", VITRINE_ABERTA
+  ? "Fé reverente, design autoral e acabamento premium. STREET, RELÍQUIA e NUVEM. 10% do lucro vai para o projeto social que você escolher."
+  : "Streetwear católico premium, feito no Brasil. A coleção está sendo remontada, peça por peça. 10% do lucro vai para o projeto social que você escolher.", { canonical: `${URL_BASE}/` })}
+${header(`${PREFIXO}/`)}
 <main>
   <section class="hero">
-    <img class="hero__bg" src="${PREFIXO}/media/hero-editorial-1600.webp" alt="" fetchpriority="high">
     <div class="hero__copy">
+      <p class="kicker reveal in">${esc(MARCA.descritor)}</p>
       <h1 class="display reveal in">Acima de tudo.</h1>
       ${VITRINE_ABERTA
-        ? `<p class="lede reveal in" style="margin-top:1em">Streetwear católico premium, feito no Brasil para você.</p>
+        ? `<p class="lede reveal in">Streetwear católico premium, feito no Brasil para você.</p>
       <div class="hero__cta reveal in">
         <a class="btn btn--primary" href="#colecoes">Ver as coleções</a>
-        <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">O manifesto</a>
+        <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
       </div>`
-        : `<p class="lede reveal in" style="margin-top:1em">Estamos remontando a coleção, peça por peça, com um novo padrão de produção e acabamento. As primeiras peças voltam em breve, feitas no Brasil, para você.</p>
+        : `<p class="lede reveal in">${esc(MARCA.estado)}</p>
       <div class="hero__cta reveal in">
-        <a class="btn btn--primary" href="${PREFIXO}/manifesto/">O manifesto</a>
-        <a class="btn btn--ghost" href="${PREFIXO}/impacto/">Os 10% do lucro</a>
-      </div>`}
+        ${avisoBotao("vitrine_capa")}
+        <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
+      </div>
+      <p class="note reveal in">${esc(MARCA.aviso.nota)}</p>`}
     </div>
   </section>
-
-  <div class="trust"><div class="trust__inner">
-    <span>Feita no Brasil, para você</span>
-    <span>Pagamento seguro: à vista no Pix e no boleto, ou cartão em até 12x com juros</span>
-    <span>10% do lucro doado ao projeto que você escolher</span>
-  </div></div>
 
   ${VITRINE_ABERTA ? `<section class="secao" id="colecoes"><div class="secao__inner">
     <div class="secao__head">
@@ -211,14 +303,28 @@ ${header()}
     <div class="grade">${cat.produtos.filter((p) => p.destaque).map(card).join("")}</div>
   </div></section>` : ""}
 
-  <section class="secao banda--manifesto"><div class="secao__inner banda">
-    <div class="reveal" style="max-width:44em">
-      <div class="kicker kicker--gold">Fé que se veste bem</div>
+  <section class="secao"><div class="secao__inner banda">
+    <div class="banda__texto vidro reveal">
+      <p class="kicker">Fé que se veste bem</p>
       <h2 class="display display--md">Reverência não é sussurro.</h2>
-      <p class="lede" style="margin-top:0.8em;color:#dcebfa">A NIMBUS nasce entre o concreto modernista e o céu do Brasil. Cada estampa trata a fé com a seriedade de quem acredita e o acabamento de quem respeita quem veste.</p>
+      <p class="lede">A NIMBUS nasce entre o concreto modernista e o céu do Brasil. Cada estampa trata a fé com a seriedade de quem acredita e o acabamento de quem respeita quem veste. E 10% do lucro de cada pedido vai para o projeto social que você escolher.</p>
+      <a class="textlink" href="${PREFIXO}/impacto/">Como funciona o repasse</a>
     </div>
-    <div class="banda__midia reveal"><img src="${PREFIXO}/media/manifesto-1600.webp" alt="Camiseta preta oversized num beco de concreto em São Paulo" loading="lazy"></div>
+    <div class="banda__midia reveal"><img src="${PREFIXO}/media/hero-editorial-1600.webp" alt="Homem de camiseta clara diante de colunas brancas de arquitetura modernista" width="1600" height="893" loading="lazy"></div>
   </div></section>
+
+  ${VITRINE_ABERTA ? "" : `<section class="secao" style="padding-top:0"><div class="secao__inner">
+    <div class="secao__head reveal">
+      <div><p class="kicker">Gravuras de época</p><h2 class="display display--md">De onde vêm as estampas.</h2><p class="lede" style="margin-top:0.8em">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. Cada uma com a origem escrita: autor, ano, acervo e o link para o original.</p></div>
+      <a class="btn btn--ghost" href="/gravuras/">Ver as gravuras</a>
+    </div>
+    <ul class="gravuras gravuras--home">
+      ${GRAVURAS.map((g) => cartaoGravura(g, "reveal", SIZES_GRAVURA_HOME)).join("\n      ")}
+    </ul>
+  </div></section>
+
+  <section class="secao" style="padding-top:0"><div class="secao__inner">${fechoAviso("vitrine_fim", { centro: true })}
+  </div></section>`}
 
   ${VITRINE_ABERTA ? `<section class="secao"><div class="secao__inner">
     <div class="secao__head reveal">
@@ -251,7 +357,7 @@ const colecao = (c) => {
   const pecas = [...new Set(produtos.map((p) => p.peca))];
   const [seoTitulo, seoDesc] = SEO_COLECAO[c.id] || [`${c.rotulo} | NIMBUS`, c.resumo];
   return `${head(seoTitulo, seoDesc, { canonical: `${URL_BASE}/c/${c.id}/` })}
-${header()}
+${header(`${PREFIXO}/c/${c.id}/`)}
 <main>
   <section class="cabecalho-colecao" data-colecao="${c.id}">
     <img class="cabecalho-colecao__bg" style="object-position:${FOCO_COLECAO[c.id] || "50% 50%"}" src="${PREFIXO}/media/cenario-${c.id}-1600.webp" alt="">
@@ -447,13 +553,17 @@ ${footer()}
 // Quando a página tem mídia (o manifesto, desde 08/08), o desktop vira duas
 // colunas: texto à esquerda, imagem à direita. Pedido do dono; o texto central
 // sozinho deixava espaço branco demais nas laterais.
+// O título fica solto no céu e o texto mora num painel de vidro (11/11/2026):
+// é a superfície de leitura da landing. O convite do aviso vem DEPOIS do
+// painel, nunca dentro do texto (a carta do fundador é verbatim).
+const COM_FECHO = new Set(["manifesto", "impacto"]);
 const institucional = (slug, titulo, descricao, corpo, midia) => `${head(`${titulo} | NIMBUS`, descricao, { canonical: `${URL_BASE}/${slug}/` })}
-${header()}
+${header(`${PREFIXO}/${slug}/`)}
 <main>
   <section class="secao"><div class="secao__inner institucional${midia ? " institucional--com-imagem" : ""}">
     <h1 class="display display--md">${esc(titulo)}</h1>
-    ${midia ? `<div class="institucional__texto">${corpo}</div>
-    <figure class="institucional__midia"><img src="${PREFIXO}/media/${esc(midia.arquivo)}" alt="${esc(midia.alt)}" width="${midia.w}" height="${midia.h}" loading="lazy">${midia.legenda ? `<figcaption>${esc(midia.legenda)}</figcaption>` : ""}</figure>` : corpo}
+    <div class="institucional__texto vidro">${!VITRINE_ABERTA && COM_NOTA_FECHADA.has(slug) ? `<p class="institucional__estado">${esc(NOTA_FECHADA)}</p>` : ""}${corpo.replaceAll("e-mail", "e&#8209;mail")}</div>
+    ${midia ? `<figure class="institucional__midia"><img src="${PREFIXO}/media/${esc(midia.arquivo)}" alt="${esc(midia.alt)}" width="${midia.w}" height="${midia.h}" loading="lazy">${midia.legenda ? `<figcaption>${esc(midia.legenda)}</figcaption>` : ""}</figure>` : ""}${COM_FECHO.has(slug) ? fechoAviso(`vitrine_${slug}`) : ""}
   </div></section>
 </main>
 ${footer()}
@@ -493,9 +603,9 @@ const INSTITUCIONAIS = {
     <p><b>Cáritas Brasileira</b>: rede da Igreja no Brasil de combate à fome e à pobreza.</p>
     <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
     <h2>Diário de Repasses</h2>
-    <p class="note">A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
+    <p>A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
     ${VITRINE_ABERTA ? `<p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
-    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : `<p>O diário abre com as primeiras vendas.</p>`}`],
+    <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`],
   trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, que vale também para tamanho, e defeito coberto por 90 dias.", `
     <p class="lede">A nossa política é simples, segue a lei e cobre todos os casos, sem pegadinha.</p>
     <h2>Mudou de ideia? Você tem 7 dias</h2>
@@ -520,17 +630,18 @@ const INSTITUCIONAIS = {
     <h2>Rastreio</h2>
     <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. O pedido também fica na sua conta da loja: <a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a>.</p>
     <h2>Frete grátis</h2>
-    <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil. No checkout, no campo mensagem do pedido, escreva qual projeto recebe os 10%.</p>
+    <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil.</p>
     <h2>Quanto custa o frete</h2>
     <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90. O valor do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>Quem responde pelos seus dados</h2>
-    <p>O controlador dos dados tratados neste site é a NIMBUS (CNPJ 53.977.834/0001-18). Qualquer pedido sobre os seus dados chega pelo e-mail do fim desta página.</p>
-    <h2>O que coletamos aqui na vitrine</h2>
+    <p>O controlador dos dados tratados neste site é a NIMBUS (<span class="nowrap">CNPJ 53.977.834/0001-18</span>). Qualquer pedido sobre os seus dados chega pelo e-mail do fim desta página.</p>
+    <h2>O que coletamos neste site</h2>
     <p>A sacola vive no seu navegador: guardamos ali os itens que você adicionou e o cache das páginas, que deixa as visitas seguintes mais rápidas.</p>
     <p>Para a sacola da vitrine e o carrinho da loja mostrarem a mesma coisa, gravamos os cookies <b>nimbus_sacola_alvo</b> e <b>nimbus_sacola_loja</b> no domínio nimbuswear.com.br. Eles guardam só o retrato da sacola (itens, quantidades e a hora da última mudança), expiram em 48 horas e não identificam você.</p>
     <p>Usamos estatísticas de navegação do Google Analytics para entender quais páginas funcionam: números agregados, sem venda de dados e sem anúncio personalizado da nossa parte.</p>
+    <p>O botão "Quero ser avisado" abre o seu programa de e-mail com uma mensagem pronta para a NIMBUS. Se você enviar, guardamos o seu endereço para mandar o aviso de abertura. Para sair, basta escrever para o mesmo e-mail.</p>
     <h2>O que fica com a loja</h2>
     <p>Pagamento, endereço e dados do pedido são tratados no ambiente da loja (Nuvemshop), que tem política de privacidade e segurança próprias. A NIMBUS não armazena dados de cartão.</p>
     <h2>Seus direitos</h2>
@@ -651,58 +762,62 @@ fs.rmSync(path.join(RAIZ, "public/natal"), { recursive: true, force: true });
 // link do original, e mostra a simulação da camiseta com o aviso de que é
 // simulação. A imagem servida é o ORIGINAL do museu reduzido; o arquivo de
 // impressão (o traço) fica só no repositório privado. Dados: gravuras.json.
-const GRAVURAS = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8")).gravuras;
+// (GRAVURAS é lido no alto do arquivo: a home fechada também as mostra.)
 const GRAV_BASE = path.join(RAIZ, "public/gravuras");
 const GRAV_URL = "https://nimbuswear.com.br/gravuras";
-const GRAV_LASTMOD = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8")).atualizado;
+const GRAV_LASTMOD = GRAVURAS_DADOS.atualizado;
 // Enquanto a Camiseta Gravura não estiver comprável na loja, a página convida a
 // pedir aviso por e-mail. Com o produto no ar, troque por { href, rotulo }.
 const GRAVURA_VENDA = null;
 const avisoGravura = (g) => GRAVURA_VENDA
   ? `<p><a class="btn btn--primary" href="${esc(GRAVURA_VENDA.href)}">${esc(GRAVURA_VENDA.rotulo)}</a></p>`
-  : `<p>A Camiseta Gravura abre para venda em breve. Para ser avisado, escreva para <a href="mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent(`Aviso: Camiseta Gravura (${g ? g.titulo : "gravuras"})`)}">nimbuswearbr@gmail.com</a>.</p>`;
+  : `<p>A Camiseta Gravura abre para venda em breve. Para ser avisado, escreva para <a href="mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent(`Aviso: Camiseta Gravura (${g ? g.titulo : "gravuras"})`)}" data-aviso="gravura">nimbuswearbr@gmail.com</a>.</p>`;
 const fichaGravura = (g) => `<dl class="ficha">
       <dt>Autor</dt><dd>${esc(g.autor)}</dd>
       <dt>Ano</dt><dd>${esc(g.ano)}</dd>
       <dt>Técnica</dt><dd>${esc(g.tecnica)}</dd>
-      <dt>Acervo</dt><dd>${esc(g.acervo)}${g.inventario ? `, ${esc(g.inventario)}` : ""}</dd>
+      <dt>Acervo</dt><dd>${esc(g.acervo)}${g.inventario ? `, <span class="nowrap">${esc(g.inventario)}</span>` : ""}</dd>
       <dt>Licença</dt><dd>${esc(g.licenca)}</dd>
     </dl>`;
 const gravuraPagina = (g) => `${head(`${g.titulo} | Gravuras NIMBUS`, `${g.titulo}, ${g.autor}, ${g.ano}. ${g.acervo}. A origem da imagem que a NIMBUS estampa no traço.`, {
   canonical: `${GRAV_URL}/${g.slug}/`, indexar: true, ogType: "article", ogImage: `${GRAV_URL}/img/${g.slug}-og.jpg`,
   jsonld: JSON.stringify({ "@context": "https://schema.org", "@type": "VisualArtwork", name: g.titulo, creator: g.autor, dateCreated: g.ano, artMedium: g.tecnica, image: g.original, license: g.licenca, isBasedOn: g.original, holdingArchive: g.acervo }),
 })}
-${header()}
+${header("/gravuras/")}
 <main>
-  <section class="secao"><div class="secao__inner institucional institucional--com-imagem">
+  <section class="secao"><div class="secao__inner institucional institucional--com-imagem institucional--imagem-antes">
     <h1 class="display display--md">${esc(g.titulo)}</h1>
-    <div class="institucional__texto">
+    <div class="institucional__texto vidro">
     ${fichaGravura(g)}
     ${g.texto.map((t) => `<p>${esc(t)}</p>`).join("\n    ")}
     <p><b>Para:</b> ${esc(g.liturgia)}.</p>
-    <p><a href="${esc(g.original)}" rel="noopener">Ver o original do acervo em alta resolução</a>.</p>
+    <p><a class="textlink" href="${esc(g.original)}" rel="noopener">Ver o original do acervo em alta resolução</a></p>
     <h2>Na camiseta</h2>
-    <p>A NIMBUS imprime a gravura só no traço, em azul-marinho e sem o papel de época, como um emblema de até 10 x 15 cm no peito de uma Camiseta Clássica off-white: 100% algodão penteado, 180 g/m², pela ficha da gráfica.</p>
-    <figure class="gravura__simulacao"><img src="/gravuras/img/${esc(g.slug)}-simulacao.webp" alt="Simulação digital da camiseta off-white com a gravura no peito" width="900" height="1035" loading="lazy"><figcaption>Simulação digital. Ainda não temos foto desta camiseta estampada.</figcaption></figure>
+    <p>A NIMBUS imprime a gravura só no traço, em azul-marinho e sem o papel de época, como um emblema de até 10&nbsp;×&nbsp;15&nbsp;cm no peito de uma Camiseta Clássica off-white: 100% algodão penteado, 180 g/m².</p>
+    ${/* A simulação digital da camiseta (um desenho chapado com a gravura
+         miúda no peito) saiu em 11/11/2026: a revisão a leu como clip-art
+         barato, a mesma família de imagem falsa que o dono reprovou. Fica o
+         texto; a foto entra quando houver peça estampada de verdade. */""}
+    <p>A foto da peça estampada entra aqui assim que a primeira sair da gráfica.</p>
     ${avisoGravura(g)}
-    <p><a href="/gravuras/">Todas as gravuras</a></p>
+    <p><a class="textlink" href="/gravuras/">Todas as gravuras</a></p>
     </div>
-    <figure class="institucional__midia"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}, ${esc(g.autor)}, ${esc(g.ano)}" loading="lazy"><figcaption>O original: ${esc(g.acervo)}${g.inventario ? `, ${esc(g.inventario)}` : ""}. ${esc(g.licenca)}.</figcaption></figure>
+    <figure class="institucional__midia"><img src="/gravuras/img/${esc(g.slug)}-grande.webp" srcset="/gravuras/img/${esc(g.slug)}-640.webp 640w, /gravuras/img/${esc(g.slug)}-grande.webp ${tamanhoGrande(g)[0]}w" sizes="(max-width: 900px) 92vw, 40vw" width="${tamanhoGrande(g)[0]}" height="${tamanhoGrande(g)[1]}" alt="${esc(g.titulo)}, ${esc(g.autor)}, ${esc(g.ano)}" fetchpriority="high"></figure>
   </div></section>
 </main>
 ${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 </body></html>`;
 const gravurasIndice = () => `${head("Gravuras de época | NIMBUS", "Gravuras sacras de acervos de museus, dos séculos XVI e XVII, que a NIMBUS estampa no traço: autor, ano, museu e link do original de cada uma.", { canonical: `${GRAV_URL}/`, indexar: true, ogImage: `${GRAV_URL}/img/${GRAVURAS[0].slug}-og.jpg` })}
-${header()}
+${header("/gravuras/")}
 <main>
   <section class="secao"><div class="secao__inner institucional">
     <h1 class="display display--md">Gravuras de época</h1>
-    <p class="lede">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. A NIMBUS as estampa só no traço, com a origem de cada uma escrita aqui: autor, ano, acervo e o link para o original.</p>
+    <p class="lede">Imagens sacras gravadas em metal entre 1590 e 1670, guardadas em museus que liberam o uso das imagens. A NIMBUS estampa cada uma só no traço, com a origem escrita aqui: autor, ano, acervo e o link para o original.</p>
     <ul class="gravuras">
-      ${GRAVURAS.map((g) => `<li><a href="/gravuras/${esc(g.slug)}/"><img src="/gravuras/img/${esc(g.slug)}.webp" alt="${esc(g.titulo)}" loading="lazy"><b>${esc(g.titulo)}</b><span>${esc(g.autor)}, ${esc(g.ano)}</span></a></li>`).join("\n      ")}
+      ${GRAVURAS.map((g) => cartaoGravura(g)).join("\n      ")}
     </ul>
-    ${avisoGravura(null)}
+    ${fechoAviso("gravuras_indice", { frase: "A Camiseta Gravura chega em breve." })}
   </div></section>
 </main>
 ${footer()}
@@ -715,6 +830,42 @@ for (const g of GRAVURAS) {
   fs.mkdirSync(path.join(GRAV_BASE, g.slug), { recursive: true });
   fs.writeFileSync(path.join(GRAV_BASE, g.slug, "index.html"), gravuraPagina(g));
 }
+
+/* --------------------------------------------------------------------- 404 */
+// A página de erro do domínio (o GitHub Pages entrega public/404.html em
+// qualquer rota que não existe) era uma linha de texto solta, sem marca, sem
+// topo e sem caminho (11/11/2026). Agora nasce deste molde, com o topo e o
+// rodapé de todas as outras. O script de /loja-preview/ continua: é ele que
+// reescreve as rotas antigas da vitrine que não têm stub próprio. Todo caminho
+// é absoluto, porque a página é servida em qualquer profundidade.
+const REDIRECIONA_PREVIEW = `
+<script>
+(function () {
+  var p = location.pathname;
+  if (p.indexOf("/loja-preview") === 0) {
+    location.replace("/loja" + p.slice("/loja-preview".length) + location.search + location.hash);
+  }
+})();
+</script>`;
+const pagina404 = () => `${head("Página não encontrada | NIMBUS", "Esta página não existe. Volte ao início da NIMBUS.", { semIndice: true, extra: REDIRECIONA_PREVIEW })}
+${header()}
+<main>
+  <section class="hero hero--erro">
+    <div class="hero__copy">
+      <p class="kicker">Erro 404</p>
+      <h1 class="display">Esta página não existe.</h1>
+      <p class="lede">O endereço mudou ou a peça saiu do ar enquanto remontamos a coleção.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="/">Voltar ao início</a>
+        <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
+      </div>
+    </div>
+  </section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+</body></html>`;
+fs.writeFileSync(path.join(RAIZ, "public/404.html"), pagina404());
 
 // sitemap + robots (P1-7): só as páginas públicas. Gates, teste-carrinho e os
 // stubs de /loja-preview/ ficam de fora (todos já levam noindex no próprio HTML).

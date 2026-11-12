@@ -28,7 +28,9 @@ async function editorial(entrada, saida, largura, qualidade = 78) {
 const jobs = [];
 
 // 1) hero editorial: remix B com casting (escolha do dono no GATE C, 29/07)
-jobs.push(editorial(path.join(VITRINE, "hero-casting-remix-b.png"), path.join(SAIDA, "hero-editorial-1600.webp"), 1600));
+// qualidade 90 (era 78, 31 KB): a foto entra aproximada na home e a 78 saía
+// mole e em blocos no celular (revisão de 11/11/2026). A 90 são 80 KB.
+jobs.push(editorial(path.join(VITRINE, "hero-casting-remix-b.png"), path.join(SAIDA, "hero-editorial-1600.webp"), 1600, 90));
 
 // 2) cenários canônicos das coleções (grão de filme comprime mal: qualidade menor)
 //    STREET é a cena do beco de SP desde 29/07 (escolha do dono no GATE B)

@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-12
+atualizado: 2026-11-11
 ---
 
 # Tracking plan da NIMBUS (GA4 `G-E041S3ZHWB`)
@@ -34,6 +34,7 @@ implementa), `fora` (decidido que não entra; reintroduzir exige mudar a linha).
 | `view_cart` | ativo | gaveta da sacola, em qualquer página da vitrine | abertura da gaveta (`ui.js`) | `currency`, `value` = total da sacola, `items` = linhas com `quantity` | revisão da sacola; degrau entre intenção e checkout |
 | `remove_from_cart` | ativo | gaveta da sacola | botão de remover linha (`ui.js`) | `items` = item removido, `value` = preço × quantidade | desistência por item; sinal de atrito de preço/frete |
 | `begin_checkout` | ativo | gaveta da sacola | clique no botão de checkout (`ui.js`) | `currency`, `value` = total, `items` = sacola inteira | último evento medível antes da fronteira de domínio |
+| `generate_lead` | ativo | landing, vitrine e gravuras, enquanto a loja está fechada (desde 11/11/2026) | clique em "Quero ser avisado" ou no e-mail de aviso das gravuras (`registraAviso` em `src/data/content.ts`; `[data-aviso]` em `ui.js`) | `lead_source` = onde foi o clique (`landing_topo`, `landing_capa`, `landing_impacto`, `vitrine_topo`, `vitrine_capa`, `vitrine_fim`, `vitrine_manifesto`, `vitrine_impacto`, `gravura`), `method: "mailto"` | intenção de entrar no aviso de abertura. Conta o CLIQUE, não o e-mail enviado: o envio acontece no programa de e-mail do visitante e não é medível daqui |
 | `purchase` | planejado | loja Nuvemshop (checkout, domínio loja.nimbuswear.com.br) | tag GA4 nativa do painel Nuvemshop (P0-1 da r4, aprovado pelo dono em 03/08) | os que a integração nativa da Nuvemshop envia (transaction_id, value, items) | a venda; hoje é invisível e o funil morre em `begin_checkout` |
 
 ### `item_id`: o ID da Nuvemshop, não o slug (condição 29 do conselho r5)

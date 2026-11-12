@@ -96,7 +96,9 @@ function fontes(dir) {
   for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
     const cheio = path.join(dir, e.name);
     if (e.isDirectory()) saida.push(...fontes(cheio));
-    else if (/\.(ts|tsx|js|jsx)$/.test(e.name)) saida.push(cheio);
+    // .json entra desde 11/11/2026: a copy que a landing e a vitrine repetem
+    // iguais mora em src/data/marca.json
+    else if (/\.(ts|tsx|js|jsx|json)$/.test(e.name)) saida.push(cheio);
   }
   return saida;
 }

@@ -280,7 +280,7 @@ NIMBUS.gaveta = (function () {
   }
 
   function urlCarrinho() {
-    const cta = document.querySelector(".header__cta");
+    const cta = document.querySelector(".topo__cta[data-abre-sacola]");
     return cta ? cta.href : "https://loja.nimbuswear.com.br/comprar/";
   }
 
@@ -545,7 +545,7 @@ NIMBUS.gaveta = (function () {
     raiz.classList.remove("on");
     raiz.inert = true;
     document.body.style.overflow = "";
-    const volta = ultimoFoco && document.contains(ultimoFoco) ? ultimoFoco : document.querySelector(".header__cta");
+    const volta = ultimoFoco && document.contains(ultimoFoco) ? ultimoFoco : document.querySelector(".topo__cta[data-abre-sacola]");
     if (volta) volta.focus();
     ultimoFoco = null;
   }
@@ -637,3 +637,36 @@ if ("serviceWorker" in navigator && location.protocol === "https:") {
     d.addEventListener("click", (ev) => { if (ev.target === d) d.close(); });
   });
 })();
+
+// --- topo ---------------------------------------------------------------------
+// O topo é o mesmo da landing: transparente sobre o céu no alto da página e em
+// vidro depois que a rolagem começa. Sem este script ele já nasce em vidro (a
+// regra transparente depende da classe .js do <html>).
+(function () {
+  const topo = document.querySelector("[data-topo]");
+  if (!topo) return;
+  const menu = topo.querySelector(".topo__menu");
+  const marca = () => {
+    topo.classList.toggle("is-scrolled", window.scrollY > 24);
+    topo.classList.toggle("is-aberto", Boolean(menu && menu.open));
+  };
+  marca();
+  window.addEventListener("scroll", marca, { passive: true });
+  if (!menu) return;
+  menu.addEventListener("toggle", marca);
+  // o menu do celular fecha ao tocar fora e com Esc, como um menu de verdade
+  document.addEventListener("click", (ev) => { if (menu.open && !menu.contains(ev.target)) menu.open = false; });
+  document.addEventListener("keydown", (ev) => {
+    if (ev.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); }
+  });
+})();
+
+// --- aviso de abertura ---------------------------------------------------------
+// Enquanto nada está à venda, a ação única do site é "Quero ser avisado". O
+// clique é a intenção medida (generate_lead no tracking-plan.md); o envio do
+// e-mail em si acontece no programa de e-mail do visitante e não é medível.
+document.querySelectorAll("[data-aviso]").forEach((el) => {
+  el.addEventListener("click", () => {
+    if (typeof window.gtag === "function") window.gtag("event", "generate_lead", { lead_source: el.dataset.aviso, method: "mailto" });
+  });
+});

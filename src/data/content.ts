@@ -3,6 +3,8 @@
 // Imagens em public/img (WebP otimizado). Mexa aqui pra trocar textos.
 // ──────────────────────────────────────────────────────────────────────────
 
+import marca from './marca.json'
+
 const base = import.meta.env.BASE_URL
 const img = (file: string) => `${base}img/${file}`
 
@@ -10,10 +12,24 @@ const img = (file: string) => `${base}img/${file}`
 // (loja.nimbuswear.com.br) é só o motor de carrinho e checkout; nenhum CTA da
 // landing aponta mais direto pra ela.
 export const STORE_URL = '/loja/'
+// Palavras e destinos que a landing e a vitrine repetem IGUAIS (rótulo e
+// destino do aviso, frase do estado da loja, selos, navegação, rodapé, linha
+// legal): um arquivo só, lido também por scripts/vitrine/build-paginas.mjs.
+export const MARCA = marca
+// O terceiro selo depende de a loja estar aberta: fechada, selo de checkout
+// promete uma compra que não existe. A vitrine faz a mesma conta no molde.
+export const SELOS = [...marca.selos, marca.lojaAberta ? marca.seloDoEstado.aberta : marca.seloDoEstado.fechada]
 // Os CTAs da landing levavam à oferta de Natal (/natal/, 26/10/2026); a página
 // saiu em 28/10/2026, a pedido do dono. Enquanto nenhuma peça está à venda, o
-// botão é o aviso de abertura por e-mail, o mesmo das páginas de gravuras.
-export const CTA_URL = `mailto:nimbuswearbr@gmail.com?subject=${encodeURIComponent('Aviso: abertura da NIMBUS')}`
+// botão é o aviso de abertura por e-mail, já com a mensagem pronta.
+export const CTA_URL = `mailto:${marca.aviso.email}?subject=${encodeURIComponent(marca.aviso.assunto)}&body=${encodeURIComponent(marca.aviso.corpo)}`
+
+// Clique no aviso = intenção medida (generate_lead no tracking-plan.md). O
+// envio do e-mail em si acontece no programa de e-mail do visitante.
+export function registraAviso(origem: string) {
+  const w = window as unknown as { gtag?: (...args: unknown[]) => void }
+  if (typeof w.gtag === 'function') w.gtag('event', 'generate_lead', { lead_source: origem, method: 'mailto' })
+}
 
 export const ASSETS = {
   heroDesktop: img('hero-desktop.webp'),
@@ -44,12 +60,15 @@ export const SECTION_COUNT = 6
 export const COPY = {
   hero: {
     subtitle: "Streetwear católico premium. Acima de tudo.",
-    offer: "Estamos remontando a coleção, peça por peça. As primeiras peças voltam em breve, feitas no Brasil, para você.",
-    cta: 'Quero ser avisado',
+    offer: marca.estado,
+    cta: marca.aviso.rotulo,
+    nota: marca.aviso.nota,
   },
   manifesto: {
+    kicker: 'Manifesto',
     title: 'Entre o concreto e o céu.',
     body: "Fé tratada com reverência, roupa tratada com rigor. Design autoral, acabamento premium e produção no Brasil, peça por peça.",
+    link: 'Ler o manifesto',
   },
   faith: {
     kicker: 'Fé',
@@ -60,19 +79,23 @@ export const COPY = {
     kicker: 'Design',
     title: 'Cada peça é arquitetura.',
     body: "Nosso traço vem do concreto curvo de Niemeyer, da Pampulha à Catedral de Brasília. Cada estampa é projetada como um edifício: proporção, linha e propósito, nada por acaso.",
+    link: 'Ver as gravuras',
   },
   impact: {
     kicker: 'Impacto',
     title: "Acima de tudo, o próximo.",
-    body: "10% do lucro de cada pedido vai para um projeto social. Quem escolhe é você, no checkout. O repasse é mensal e o comprovante fica publicado.",
-    outroNote: "As obras acima são sugestões de quem admiramos, sem parceria com a NIMBUS: o repasse é uma doação em nome dos clientes. Se preferir outro projeto, escreva o nome no checkout: a NIMBUS verifica se a obra é real e apoia.",
-    cta: 'Quero ser avisado',
+    // Com a loja fechada o repasse é dito no futuro: no presente, a landing
+    // prometia compra e comprovante que ainda não existem (revisão de 12/11/2026).
+    body: marca.lojaAberta
+      ? "10% do lucro de cada pedido vai para um projeto social. Quem escolhe é você, a cada compra. O repasse é mensal e o comprovante fica publicado."
+      : "Quando a loja abrir, 10% do lucro de cada pedido vai para um projeto social. Quem escolhe é você, a cada compra. O repasse será mensal e o comprovante ficará publicado aqui no site.",
+    outroNote: "Os três projetos acima são sugestões nossas, de instituições que admiramos, sem parceria com a NIMBUS: o repasse é uma doação em nome dos clientes. Se preferir outro projeto, é só dizer qual no pedido: a NIMBUS verifica se ele é real e apoia.",
+    link: 'Como funciona o repasse',
   },
-  footer: {
-    trust: ["Feito no Brasil, para você", "Pagamento seguro: Pix, cartão e boleto", "10% do lucro doado ao projeto que você escolhe"],
-    social: 'Acompanhe o lançamento',
-    madein: 'Feito no Brasil',
-    rights: '© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF',
+  // o convite que encerra a página, igual ao fecho da home da vitrine
+  fecho: {
+    frase: marca.aviso.fecho,
+    cta: marca.aviso.rotulo,
   },
 }
 
