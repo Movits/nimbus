@@ -326,6 +326,19 @@ notas da página dizem o estado real. O maior resto: onde a borda é a beira da 
 (16, 17, 18, 20, 28, 29), ela segue dura; e as letras saem 1 a 2 px mais gordas que no scan
 (pontos 100 e 101). A próxima rodada está em ordem no `LEIA-ME.md` da proposta.
 
+Em 12/11 a rodada 11 começou e parou aos 50% do limite semanal, só em teste: nada subiu
+para o oficial e a página segue a mesma. Código novo no método:
+- a borda segue a beira de fora do traço pixel a pixel, com meio-tom (`beira.py`);
+- um medidor de papel depois da linha (`papel_linha.py`).
+
+Na peça inteira, os trechos com 2 px ou mais de papel depois da linha caíram assim:
+- 29: de 294 para 5;
+- 28: de 56 para 6;
+- 01: de 16 para 7, sem cortar linha.
+
+A 20 ainda não ficou boa. Os remendos do carimbo da 11 são caixas antigas de clonar, já
+tiradas no teste. Retomada em ordem no `LEIA-ME.md` da proposta.
+
 ### Rodada de 09/11 (histórico)
 
 Em 09/11 o dono apontou, na página de conferência, cortes feios: reta, degrau,
