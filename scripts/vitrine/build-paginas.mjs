@@ -249,6 +249,33 @@ const fechoAviso = (origem, { frase = MARCA.aviso.fecho, centro = false } = {}) 
       <p class="note">${esc(MARCA.aviso.nota)} ${esc(MARCA.aviso.outroCaminho).replace(esc(MARCA.aviso.email), `<a href="mailto:${esc(MARCA.aviso.email)}">${esc(MARCA.aviso.email)}</a>`)}</p>
     </div>`;
 
+// "Como vai ser comprar aqui" (home fechada, 12/11/2026). Os seis compradores
+// simulados pediram pagamento, prazo e troca à vista, e a página "Loja" só
+// repetia a capa da landing. Cada frase resume uma página que já está no ar
+// (privacidade, envios, trocas, impacto) ou o selo de checkout da loja aberta
+// (seloDoEstado.aberta, no marca.json): nenhum fato nasce aqui. Mudou a
+// política? Mude a página E esta lista. Revisada em 12/11/2026 por um
+// checador de fatos: cada prazo leva a condição da página de origem (de quando
+// conta, "corridos", o prazo do checkout prevalece), e o repasse fica no
+// futuro, porque nenhum aconteceu ainda.
+// Nome de cidade leva espaço que não quebra: no celular "Belo / Horizonte" partia.
+const cidade = (s) => s.replaceAll(" ", "\u00a0");
+const COMO_COMPRAR = [
+  { titulo: "Pagamento", texto: "Pix, cartão ou boleto, no checkout da Nuvemshop. A NIMBUS não guarda dados de cartão.", link: ["Privacidade", `${PREFIXO}/privacidade/`] },
+  { titulo: "Entrega", texto: `Até 12 dias úteis do pagamento confirmado à entrega em ${["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Brasília"].map(cidade).join(", ")} e ${cidade("Porto Alegre")}, com rastreio. Para o seu CEP, vale o prazo do checkout.`, link: ["Envios e prazos", `${PREFIXO}/envios/`] },
+  { titulo: "Troca e devolução", texto: "Mudou de ideia ou errou o tamanho? Em até 7 dias corridos depois de receber, devolvemos tudo o que você pagou, frete incluído, ou combinamos o tamanho certo.", link: ["Trocas e devoluções", `${PREFIXO}/trocas/`] },
+  { titulo: "10% do lucro", texto: "Você escolhe o projeto social que recebe 10% do lucro do seu pedido. O repasse será mensal, com o comprovante publicado no site.", link: ["Como funciona o repasse", `${PREFIXO}/impacto/`] },
+];
+const comoComprar = () => `
+  <section class="secao" style="padding-top:0"><div class="secao__inner">
+    <div class="secao__head reveal">
+      <div><p class="kicker">Quando a loja abrir</p><h2 class="display display--md">Como vai ser comprar aqui.</h2></div>
+    </div>
+    <ul class="compra">
+      ${COMO_COMPRAR.map((c) => `<li class="vidro reveal"><h3>${esc(c.titulo)}</h3><p>${esc(c.texto)}</p><a class="textlink" href="${esc(c.link[1])}">${esc(c.link[0])}</a></li>`).join("\n      ")}
+    </ul>
+  </div></section>`;
+
 const card = (p) => `
 <a class="card reveal" href="${PREFIXO}/p/${p.slug}/" data-peca="${esc(p.peca)}" data-preco="${p.preco}">
   <div class="card__midia">
@@ -312,14 +339,14 @@ ${header(`${PREFIXO}/`)}
       <a class="btn btn--ghost" href="${PREFIXO}/c/street/">Ver tudo por coleção</a>
     </div>
     <div class="grade">${cat.produtos.filter((p) => p.destaque).map(card).join("")}</div>
-  </div></section>` : ""}
+  </div></section>` : comoComprar()}
 
-  <section class="secao"><div class="secao__inner banda">
+  <section class="secao"${VITRINE_ABERTA ? "" : ' style="padding-top:0"'}><div class="secao__inner banda">
     <div class="banda__texto vidro reveal">
       <p class="kicker">Fé que se veste bem</p>
       <h2 class="display display--md">Reverência não é sussurro.</h2>
-      <p class="lede">A NIMBUS nasce entre o concreto modernista e o céu do Brasil. Cada estampa trata a fé com a seriedade de quem acredita e o acabamento de quem respeita quem veste. E 10% do lucro de cada pedido vai para o projeto social que você escolher.</p>
-      <a class="textlink" href="${PREFIXO}/impacto/">Como funciona o repasse</a>
+      <p class="lede">A NIMBUS nasce entre o concreto modernista e o céu do Brasil. Cada estampa trata a fé com a seriedade de quem acredita e o acabamento de quem respeita quem veste.</p>
+      <a class="textlink" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
     </div>
     <div class="banda__midia reveal"><img src="${PREFIXO}/media/hero-editorial-1600.webp" alt="Homem de camiseta clara diante de colunas brancas de arquitetura modernista" width="1600" height="893" loading="lazy"></div>
   </div></section>

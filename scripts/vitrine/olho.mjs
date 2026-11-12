@@ -150,7 +150,7 @@ const mede = (toque) => {
   }
 
   // 3b. cards irmãos lado a lado: título no mesmo alto e link no mesmo pé
-  for (const pai of document.querySelectorAll('.impact__grid, .gravuras, .grade, .rodape__grade, .colecoes')) {
+  for (const pai of document.querySelectorAll('.impact__grid, .gravuras, .grade, .rodape__grade, .colecoes, .compra')) {
     const filhos = [...pai.children].filter(visivel);
     if (filhos.length < 2) continue;
     const linhas = new Map();
@@ -166,7 +166,7 @@ const mede = (toque) => {
       const base = primeiro.map((r) => Math.round(r.bottom));
       if (topo.length === linha.length && Math.max(...topo) - Math.min(...topo) > 2 && Math.max(...base) - Math.min(...base) > 2)
         achados.push({ tipo: 'cards-DESALINHADOS', onde: nome(pai), detalhe: 'primeiro elemento de cada card: alto em ' + topo.join(', ') + ' e pé em ' + base.join(', ') });
-      const pe = linha.map((f) => { const l = [...f.querySelectorAll('a,button')].filter(visivel).pop(); return l && f.matches('.impact__card') ? Math.round(l.getBoundingClientRect().bottom) : null; }).filter((v) => v !== null);
+      const pe = linha.map((f) => { const l = [...f.querySelectorAll('a,button')].filter(visivel).pop(); return l && f.matches('.impact__card, .compra > li') ? Math.round(l.getBoundingClientRect().bottom) : null; }).filter((v) => v !== null);
       if (pe.length === linha.length && pe.length > 1 && Math.max(...pe) - Math.min(...pe) > 2)
         achados.push({ tipo: 'cards-DESALINHADOS', onde: nome(pai), detalhe: 'pé do link de cada card: ' + pe.join(', ') });
     }

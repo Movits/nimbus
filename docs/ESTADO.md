@@ -37,7 +37,12 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
   landing viraram imagens do fluxo da página, cada um acima do cartão dele. A
   landing ganhou a fileira "De onde vêm as estampas", a mesma da home da
   vitrine (as gravuras de época são a única prova real do que a marca estampa
-  que já existe publicada).
+  que já existe publicada). A página "Loja" (vitrine) ganhou o bloco "Como vai
+  ser comprar aqui": pagamento, entrega, troca e devolução, e os 10%, cada um
+  resumindo a página que já está no ar (privacidade, envios, trocas, impacto),
+  conferido por um checador de fatos. **Ao reabrir, revisar o bloco junto com
+  essas páginas** (`COMO_COMPRAR` em `scripts/vitrine/build-paginas.mjs`):
+  boleto ativo no Nuvem Pago, prazo e rastreio do fornecedor novo.
 - **Números, antes e depois** (6 compradores simulados, jornada no celular,
   rodada final sobre o site como ficou): marca igual nas três superfícies
   **5,0 para 8,2**; confiança **3,2 para 6,0**; intenção de compra **3,2 para

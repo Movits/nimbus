@@ -154,6 +154,21 @@ main { padding-top: 68px; }
 /* o rótulo nunca cola no título que ele anuncia */
 .secao__head .kicker { display: block; margin-bottom: 1rem; }
 
+/* --- como vai ser comprar aqui (home fechada) -------------------------------
+   Os quatro fatos que um comprador confere antes de pagar, em cartões de vidro
+   com o MESMO desenho dos cartões do impacto na landing (src/styles/global.css,
+   .impact__card): título em Fraunces 400 de 1,25rem, texto de 0,9rem, e o link
+   com a seta no pé de cada cartão, alinhado entre os quatro. */
+.compra { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 2vw, 26px); }
+.compra > li { display: flex; flex-direction: column; gap: 0.55rem; padding: 1.5rem 1.2rem 1.3rem; }
+.compra h3 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; line-height: 1.2; color: var(--deep); }
+.compra p { margin: 0; font-size: 0.9rem; line-height: 1.5; color: #2a3a49; text-wrap: pretty; }
+.compra .textlink { margin-top: auto; align-self: flex-start; gap: 0.35rem; font-size: 0.86rem; }
+/* a seta dos cartões da landing, em desenho de linha: fora do texto, não leva o sublinhado */
+.compra .textlink::after { content: ""; flex: none; width: 15px; height: 15px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M5 12h14M14 7l5 5-5 5' fill='none' stroke='%230b2360' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat; }
+@media (max-width: 1100px) { .compra { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .compra { grid-template-columns: 1fr; gap: 12px; } .compra > li { padding: 1.3rem 1.15rem; } }
+
 /* selos de confiança (.selos vem de /css/marca.css): sem faixa branca */
 .faixa-selos { padding: clamp(36px, 5vw, 64px) var(--pad) 0; }
 
