@@ -433,7 +433,7 @@ são mais usados por nenhuma página.
   cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
   ~50° puxa verde, e o detector precisa de piso de saturação.
 
-## Acabamento fino da RELÍQUIA (rodadas de 10 e 11/11, para nova conferência)
+## Acabamento fino da RELÍQUIA (rodadas de 10 a 13/11, para nova conferência)
 
 **As 40 estampas foram refeitas do scan original** e estão em
 `nimbus-assets/designs/_propostas-2026-10-28-acabamento/` (`estampas/`,
@@ -474,18 +474,31 @@ notas da página dizem o estado real. O maior resto: onde a borda é a beira da 
 (16, 17, 18, 20, 28, 29), ela segue dura; e as letras saem 1 a 2 px mais gordas que no scan
 (pontos 100 e 101). A próxima rodada está em ordem no `LEIA-ME.md` da proposta.
 
-Em 12/11 a rodada 11 começou e parou aos 50% do limite semanal, só em teste: nada subiu
-para o oficial e a página segue a mesma. Código novo no método:
+Rodada 11 (12 e 13/11; o dono revogou a regra dos 50% da semana). 14 peças foram para o
+oficial: 01, 07, 10, 11, 16, 17, 18, 20, 23, 26, 28, 29, 30 e 38. Código novo no método:
 - a borda segue a beira de fora do traço pixel a pixel, com meio-tom (`beira.py`);
-- um medidor de papel depois da linha (`papel_linha.py`).
+- um medidor de papel depois da linha (`papel_linha.py`);
+- o aro da letra com a cobertura do scan (letras da 10 e da 16 sem o contorno chapado).
 
-Na peça inteira, os trechos com 2 px ou mais de papel depois da linha caíram assim:
-- 29: de 294 para 5;
-- 28: de 56 para 6;
-- 01: de 16 para 7, sem cortar linha.
+Trechos com 2 px ou mais de papel depois da linha, antes e depois:
+- 29: de 307 para 28;
+- 28: de 66 para 8;
+- 01: de 16 para 11.
 
-A 20 ainda não ficou boa. Os remendos do carimbo da 11 são caixas antigas de clonar, já
-tiradas no teste. Retomada em ordem no `LEIA-ME.md` da proposta.
+Outros resultados:
+- 30: os cantos seguem a curva do próprio lápis;
+- 38: saíram 46 traços pendurados por fora da moldura;
+- 23: saiu o aro preto do scanner;
+- 11: saíram os remendos do carimbo.
+
+A borda das 14 foi revista inteira duas vezes (592 folhas), com cada achado conferido no
+zoom contra a versão anterior. Só subiu o que não piorava.
+
+Os 30 pontos do dono foram conferidos de novo por agente, pela régua dos pontos 37 e 38:
+5 resolvidos, 17 parciais e 8 não. O que mais falta é meio-tom: muita borda ainda é corte
+seco, inclusive em peças que esta rodada não mexeu. A página tem 112 pontos, com "Ainda
+não" onde falta (mesma URL, versão 10). A próxima rodada está em ordem no `LEIA-ME.md` da
+proposta.
 
 ### Rodada de 09/11 (histórico)
 
