@@ -177,6 +177,12 @@ continua registrado na GoDaddy; só o DNS passa a ser respondido pela
 Cloudflare, porque o plano grátis dela exige isso para ligar o servidor e o
 login do painel ao nosso domínio (seção 2, opção A).
 
+Conferido na conta da GoDaddy em 13/11 ("Meus produtos"): o domínio, sem plano
+de proteção; o "Sites + Marketing gratuito", uma página "Em breve" em
+`nimbuswear.godaddysites.com`; e a hospedagem WordPress só como oferta de
+avaliação, nunca ativada. Não há hospedagem paga que sirva para a loja, então a
+Cloudflare segue.
+
 1. **Inventário.** O dono confere no painel de DNS da GoDaddy se há registro
    além desses: a consulta pública não lista subdomínio que ninguém pediu.
 2. **Zona na Cloudflare, sem mudar nada no ar.** Conta do dono, zona
