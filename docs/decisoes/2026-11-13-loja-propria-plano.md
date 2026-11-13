@@ -1,10 +1,15 @@
 ---
 status: vigente
 atualizado: 2026-11-13
-aprovacao: pendente-do-dono
+aprovacao: aprovado-pelo-dono
 ---
 
 # Loja própria da NIMBUS: o plano para o dono aprovar
+
+> [!info] Aprovado pelo dono em 13/11/2026, no chat: "Pode aprovar tudo". Valem
+> as sete recomendações da lista abaixo. A aprovação é do plano: cada passo da
+> lista do fim continua esperando o sim dele, um por um. Ficou sem escolha o
+> endereço do rodapé (decisão 3), que não tinha recomendação.
 
 Em 12/11/2026 o dono decidiu sair da Nuvemshop e fazer loja própria
 (`docs/ESTADO.md`, seção "Loja e funil"). Este documento planeja essa loja em
@@ -164,6 +169,13 @@ GoDaddy e DNS na GoDaddy (nameservers `domaincontrol.com`), com TTL de 10
 minutos. A raiz aponta para os quatro endereços do GitHub Pages, o `www` para
 `movits.github.io` e o `loja` para a Nuvemshop. Não há registro de e-mail (MX)
 nem TXT na raiz.
+
+**A GoDaddy guarda o nome e o DNS; quem serve o site é o GitHub Pages** (o
+servidor responde "GitHub.com"). O dono perguntou em 13/11 por que a Cloudflare
+entra "se o site está na GoDaddy": não está. Depois da mudança, o domínio
+continua registrado na GoDaddy; só o DNS passa a ser respondido pela
+Cloudflare, porque o plano grátis dela exige isso para ligar o servidor e o
+login do painel ao nosso domínio (seção 2, opção A).
 
 1. **Inventário.** O dono confere no painel de DNS da GoDaddy se há registro
    além desses: a consulta pública não lista subdomínio que ninguém pediu.

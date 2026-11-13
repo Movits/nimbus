@@ -241,12 +241,12 @@ são mais usados por nenhuma página.
   - Essencial: R$ 66 por mês, sem CSS. Cobra 2% por venda fora do Nuvem Pago.
   - Impulso: R$ 156 por mês, o atual. É o único com CSS.
 
-  **Plano para o dono aprovar (13/11):**
+  **Plano aprovado pelo dono em 13/11:**
   [`decisoes/2026-11-13-loja-propria-plano.md`](decisoes/2026-11-13-loja-propria-plano.md).
-  Recomenda Mercado Pago Checkout Pro por redirecionamento, site e servidor na
-  Cloudflare grátis (com o DNS saindo da GoDaddy), Melhor Envio e nota fiscal
-  por pedido. As sete decisões dele estão no topo. Nenhuma conta, chave,
-  cobrança ou troca de DNS sem o sim dele, passo a passo.
+  Mercado Pago Checkout Pro por redirecionamento, site e servidor na
+  Cloudflare grátis (o domínio fica na GoDaddy; só o DNS muda), Melhor Envio e
+  nota fiscal por pedido. Falta escolher o endereço do rodapé. Nenhuma conta,
+  chave, cobrança ou troca de DNS sem o sim dele, passo a passo.
 
   Proposta da loja própria (base do plano):
   - Carrinho na vitrine.
