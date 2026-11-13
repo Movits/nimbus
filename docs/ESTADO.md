@@ -500,6 +500,12 @@ seco, inclusive em peças que esta rodada não mexeu. A página tem 112 pontos, 
 não" onde falta (mesma URL, versão 10). A próxima rodada está em ordem no `LEIA-ME.md` da
 proposta.
 
+Rodada 12 (13/11): o contorno ganhou meio-tom de 1 a 2 px (`aa.py`) em 16 peças. A escada de
+pixel e o corte seco saíram nas diagonais e curvas. Dos 25 pontos não resolvidos, nenhum
+piorou: 7 ficaram resolvidos, 14 parciais e 4 ainda não. A página está na versão 11. Falta a
+borda reta alinhada ao pixel (21, 26, 35, 37) e caixas locais; a lista está no `LEIA-ME.md` da
+proposta.
+
 ### Rodada de 09/11 (histórico)
 
 Em 09/11 o dono apontou, na página de conferência, cortes feios: reta, degrau,
