@@ -500,6 +500,10 @@ seco, inclusive em peças que esta rodada não mexeu. A página tem 112 pontos, 
 não" onde falta (mesma URL, versão 10). A próxima rodada está em ordem no `LEIA-ME.md` da
 proposta.
 
+Rodada 13 (13/11): o meio-tom foi refeito com rampa de 2 px, porque a 12 tinha saído com 1 px
+por erro. A beira das 16 peças ficou com 98 a 100% de meio-tom, inclusive na borda reta. Nenhum
+dos 25 pontos piorou: 6 resolvidos, 15 parciais e 4 não. Página na versão 12.
+
 Rodada 12 (13/11): o contorno ganhou meio-tom de 1 a 2 px (`aa.py`) em 16 peças. A escada de
 pixel e o corte seco saíram nas diagonais e curvas. Dos 25 pontos não resolvidos, nenhum
 piorou: 7 ficaram resolvidos, 14 parciais e 4 ainda não. A página está na versão 11. Falta a
