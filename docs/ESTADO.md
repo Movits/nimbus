@@ -87,9 +87,13 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
    - descer para o plano Começo, se o painel deixar sem quitar a fatura;
    - ou deixar vencer.
 
-   No Começo (R$ 0, sem domínio próprio e sem CSS) a loja segue pública no
-   endereço da plataforma. Então os dois campos de contato pessoal saem antes,
-   item (g) do roteiro.
+   **Feito em 12-13/11:** o dono desceu para o Começo (R$ 0). A loja ficou só
+   em `nimbus40.lojavirtualnuvem.com.br`, no layout grátis e sem o nosso CSS;
+   `loja.nimbuswear.com.br` não abre mais (erro de certificado). Landing e
+   vitrine seguem iguais. O painel não aceitou salvar os campos vazios: o dono
+   pôs neles a frase do WhatsApp. Conferido no HTML público: telefone e
+   endereço pessoais **ausentes**. O painel trava o Chrome do Claude (o
+   renderizador para de responder); quem mexe nele é o dono.
 2. **"Acima de tudo." sozinho como título** (home da vitrine e capa da loja):
    os três do conselho e dois revisores de marketing leram eco do lema de
    campanha de 2018. Sugestão deles: usar a frase só completa ("Acima de tudo,
