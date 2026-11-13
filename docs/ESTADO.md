@@ -500,6 +500,13 @@ seco, inclusive em peças que esta rodada não mexeu. A página tem 112 pontos, 
 não" onde falta (mesma URL, versão 10). A próxima rodada está em ordem no `LEIA-ME.md` da
 proposta.
 
+Rodada 14 (13/11): correções pontuais nos 10 pontos com defeito local (29, 45, 49, 50, 58, 66,
+67, 71, 104 e 106), nas peças 08, 10, 17, 20, 23, 26, 28, 29 e 30. Cada uma muda só o lugar do
+ponto, sem repintar, e foi conferida no zoom e pela diferença em pixels contra a versão
+anterior. Os 10 ficaram resolvidos e nada piorou. Contagem dos 30 pontos do dono: 21
+resolvidos; 3 esperam decisão do dono (19, 20 e 107); 6 ainda têm defeito técnico (22, 46,
+101, 105, 108 e 109) e vão para a rodada 15. Página na versão 13.
+
 Rodada 13 (13/11): o meio-tom foi refeito com rampa de 2 px, porque a 12 tinha saído com 1 px
 por erro. A beira das 16 peças ficou com 98 a 100% de meio-tom, inclusive na borda reta. Nenhum
 dos 25 pontos piorou: 6 resolvidos, 15 parciais e 4 não. Página na versão 12.
