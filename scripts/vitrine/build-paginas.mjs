@@ -290,12 +290,17 @@ const card = (p) => `
 </a>`;
 
 /* -------------------------------------------------------------------- home */
-// A capa da home fala como a primeira tela da landing: a categoria em rótulo, a
-// assinatura "Acima de tudo." na mesma serifa, o estado da loja em uma frase e
-// o convite único, soltos no céu. SEM imagem de arquitetura inventada: o dono
+// A capa da home fala como a primeira tela da landing: a categoria em rótulo, o
+// estado da loja na serifa grande, o resto dele em texto e o convite único,
+// soltos no céu. O título grande era a assinatura "Acima de tudo." sozinha até
+// 13/11/2026: o conselho leu nela eco do lema de campanha de 2018, e o dono
+// mandou tirar. Agora é a primeira frase do estado (marca.json), sem lema novo. SEM imagem de arquitetura inventada: o dono
 // reprovou em 11/11/2026 a passarela nas nuvens (/img/store-backdrop.webp),
 // que tem cara de IA. Imagem no site é lugar real, pessoa ou gravura de museu.
 // Fechada, a descrição não cita coleção nem preço (a página não tem nenhum).
+const [ESTADO_TITULO, ...ESTADO_RESTO] = MARCA.estado.split(/(?<=\.)\s+/);
+// palavra curta (a, o, e, de, da, do, em, no, na) cola na seguinte: o título não termina linha em "a"
+const colaCurtas = (t) => t.replace(/ (a|o|e|de|da|do|em|no|na) /g, " $1\u00a0");
 const home = () => `${head("NIMBUS | Streetwear católico premium", VITRINE_ABERTA
   ? "Fé reverente, design autoral e acabamento premium. STREET, RELÍQUIA e NUVEM. 10% do lucro vai para o projeto social que você escolher."
   : "Streetwear católico premium, feito no Brasil. A coleção está sendo remontada, peça por peça. 10% do lucro vai para o projeto social que você escolher.", { canonical: `${URL_BASE}/` })}
@@ -304,14 +309,14 @@ ${header(`${PREFIXO}/`)}
   <section class="hero">
     <div class="hero__copy">
       <p class="kicker reveal in">${esc(MARCA.descritor)}</p>
-      <h1 class="display reveal in">Acima de tudo.</h1>
+      <h1 class="display reveal in">${VITRINE_ABERTA ? "Feita no Brasil, para você." : esc(colaCurtas(ESTADO_TITULO))}</h1>
       ${VITRINE_ABERTA
-        ? `<p class="lede reveal in">Streetwear católico premium, feito no Brasil para você.</p>
+        ? `<p class="lede reveal in">Fé reverente, design autoral e acabamento premium.</p>
       <div class="hero__cta reveal in">
         <a class="btn btn--primary" href="#colecoes">Ver as coleções</a>
         <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
       </div>`
-        : `<p class="lede reveal in">${esc(MARCA.estado)}</p>
+        : `<p class="lede reveal in">${esc(ESTADO_RESTO.join(" "))}</p>
       <div class="hero__cta reveal in">
         ${avisoBotao("vitrine_capa")}
         <a class="btn btn--ghost" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
@@ -611,7 +616,8 @@ ${footer()}
 const INSTITUCIONAIS = {
   // P2-1 do conselho r4: a carta do fundador, escrita a pedido do dono
   // (pergunta 6) e APROVADA por ele em 03/08. Texto verbatim: não editar sem
-  // nova aprovação. Sem foto por ora (decisão do dono); o link do impacto só
+  // nova aprovação. Em 13/11/2026 ele aprovou assinar com o nome completo
+  // ("Roberto França"), pedido de 4 dos 6 compradores simulados. Sem foto por ora (decisão do dono); o link do impacto só
   // envolve palavras que já estavam na carta. CTA do hero, header e footer
   // apontam para cá desde a mesma data (antes gastavam o clique na landing).
   manifesto: ["O manifesto", "A carta do fundador da NIMBUS: por que a marca existe, no nome de quem a faz.", `
@@ -621,7 +627,7 @@ const INSTITUCIONAIS = {
     <p>E porque fé que não serve ao próximo é só pano, <a href="${PREFIXO}/impacto/">10% do lucro</a> de cada pedido vai para um projeto social que você escolhe. Com repasse mensal e comprovante publicado, porque promessa sem prova não entra nesta casa.</p>
     <p>A NIMBUS é pequena. Sou eu e quem caminha comigo. Se você chegou até aqui, já faz parte.</p>
     <p>Acima de tudo, obrigado.</p>
-    <p><b>Roberto, fundador da NIMBUS</b></p>
+    <p><b>Roberto França, fundador da NIMBUS</b></p>
     ${VITRINE_ABERTA ? `<p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
     <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`,
     { arquivo: "manifesto-ceu-1200.webp", alt: "Curva de concreto branco modernista apontando para um céu azul com nuvens", w: 1200, h: 1600, legenda: "Entre o concreto e o céu." }],

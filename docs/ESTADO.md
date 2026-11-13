@@ -96,17 +96,27 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
    renderizador para de responder); quem mexe nele é o dono.
 2. **"Acima de tudo." sozinho como título** (home da vitrine e capa da loja):
    os três do conselho e dois revisores de marketing leram eco do lema de
-   campanha de 2018. Sugestão deles: usar a frase só completa ("Acima de tudo,
-   o próximo.") ou junto do descritor. Nada foi mudado.
+   campanha de 2018. **Decidido em 13/11: o dono mandou tirar.** Saiu do
+   título da página Loja, que agora é a primeira frase do estado ("Estamos
+   remontando a coleção, peça por peça."), sem lema novo no lugar. Seguem com
+   a frase: o lema do rodapé e a linha da capa da landing ("Streetwear católico
+   premium. Acima de tudo."), o título da aba da landing e a seção Impacto
+   ("Acima de tudo, o próximo.", frase completa). Tirar desses também é pergunta
+   aberta para ele.
 3. **Os três monumentos da landing** (Catedral, Cristo e Pampulha nas nuvens)
    levaram de 6 a 8 em 10 de "cara de render ou de IA". São a assinatura da
-   landing e ficaram. Trocar por foto real ou manter é decisão dele; o conselho
-   se dividiu (manter até haver foto de produto, ou trocar Catedral e Pampulha).
+   landing e ficaram. Em 13/11 o dono pediu uma **prova com fotos reais** de
+   acervo livre, com crédito, lado a lado com a versão de hoje, para decidir;
+   nada vai ao ar sem o ok dele.
 4. **Lista de aviso de verdade**: trocar o mailto por um campo de e-mail (o
    bloco de newsletter do tema da loja ou um formulário) depende de ele escolher
    onde os e-mails ficam.
-5. Endereço de e-mail no domínio da marca no lugar do Gmail; nome completo e
-   foto na carta do manifesto; "premium" dito e ainda não mostrado.
+5. **E-mail no domínio da marca**: o dono topa se for de graça. Dá, com um
+   serviço de encaminhamento grátis, mas precisa de conta dele e de registro
+   no DNS do domínio, que a sessão não mexe: fica o Gmail por ora. **Carta do
+   manifesto assina "Roberto França, fundador da NIMBUS"** desde 13/11 (a
+   pedido dele); foto só se ele mandar uma de verdade. "Premium" dito e ainda
+   não mostrado.
 
 **Feito por esta frente e que ele precisa saber**: a marca grande que fechava
 a landing saiu (com o rodapé novo eram três marcas na mesma tela); a simulação
