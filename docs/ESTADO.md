@@ -32,8 +32,9 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
 - **O que mudou** ([`fluxos/site-um-so-ceu.md`](fluxos/site-um-so-ceu.md), onze
   regras): o mesmo céu, topo, voz de título, vidro, botão, fecho e rodapé na
   landing e na vitrine, vindos de UM arquivo (`public/css/marca.css`), com as
-  palavras repetidas em `src/data/marca.json`. A loja Nuvemshop repete o desenho
-  numa camada de CSS nova e num roteiro de painel. No celular os monumentos da
+  palavras repetidas em `src/data/marca.json`. A loja Nuvemshop repetiria o
+  desenho numa camada de CSS nova e num roteiro de painel, que não foram
+  aplicados (item 1 abaixo). No celular os monumentos da
   landing viraram imagens do fluxo da página, cada um acima do cartão dele. A
   landing ganhou a fileira "De onde vêm as estampas", a mesma da home da
   vitrine (as gravuras de época são a única prova real do que a marca estampa
@@ -42,7 +43,8 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
   resumindo a página que já está no ar (privacidade, envios, trocas, impacto),
   conferido por um checador de fatos. **Ao reabrir, revisar o bloco junto com
   essas páginas** (`COMO_COMPRAR` em `scripts/vitrine/build-paginas.mjs`):
-  boleto ativo no Nuvem Pago, prazo e rastreio do fornecedor novo.
+  boleto ativo no meio de pagamento da loja própria, prazo e rastreio do
+  fornecedor novo. Em 12/11 o bloco deixou de citar a Nuvemshop.
 - **Números, antes e depois** (6 compradores simulados, jornada no celular,
   rodada final sobre o site como ficou): marca igual nas três superfícies
   **5,0 para 8,2**; confiança **3,2 para 6,0**; intenção de compra **3,2 para
@@ -73,13 +75,21 @@ a foto do modelo esticada no celular e os pontos dourados desalinhados.
 
 **Com o dono, nesta ordem:**
 
-1. **Painel da loja, uma sentada**: roteiro em
-   [`nuvemshop/painel-um-so-ceu-2026-11-11.md`](../nuvemshop/painel-um-so-ceu-2026-11-11.md).
-   Primeiro apagar os dois campos de contato pessoal (telefone e endereço
-   aparecem no HTML público, o CSS só esconde), depois menus e textos, e o CSS
-   por último. Enquanto isso não acontece, a loja no ar segue com o desenho
-   antigo e os 30 "Produto de exemplo". Feito o painel, devolver o destino de
-   "Fale com a NIMBUS" em `src/data/marca.json` para a página de contato da loja.
+1. **Loja Nuvemshop: o dono decidiu sair (12/11/2026).** O painel abriu
+   bloqueado: "Administrador bloqueado por falta de pagamento". O pagamento do
+   plano Impulso foi recusado, e a loja fica ativa até 20/11. O dono decidiu
+   não seguir na Nuvemshop e fazer loja própria (ver "Loja e funil"). O
+   roteiro [`nuvemshop/painel-um-so-ceu-2026-11-11.md`](../nuvemshop/painel-um-so-ceu-2026-11-11.md)
+   não foi aplicado: nenhum campo salvo e CSS não colado. "Fale com a NIMBUS"
+   fica e-mail. Conferido em 12/11: o telefone e o endereço pessoais seguem
+   **presentes** no HTML público da loja (rodapé e página de contato). Falta,
+   com o dono, até 20/11:
+   - descer para o plano Começo, se o painel deixar sem quitar a fatura;
+   - ou deixar vencer.
+
+   No Começo (R$ 0, sem domínio próprio e sem CSS) a loja segue pública no
+   endereço da plataforma. Então os dois campos de contato pessoal saem antes,
+   item (g) do roteiro.
 2. **"Acima de tudo." sozinho como título** (home da vitrine e capa da loja):
    os três do conselho e dois revisores de marketing leram eco do lema de
    campanha de 2018. Sugestão deles: usar a frase só completa ("Acima de tudo,
@@ -215,6 +225,37 @@ são mais usados por nenhuma página.
   permissões. O risco real é apagar a junction com `Remove-Item -Recurse`.
 
 ## Loja e funil (Nuvemshop)
+
+- **12/11/2026: o dono decidiu sair da Nuvemshop e fazer loja própria.**
+  Motivos:
+  - O plano custa R$ 156 por mês com a loja fechada e sem produto.
+  - A integração da IzzyPrint só liga com 5 peças por dia, também na
+    Nuvemshop. Abaixo disso o repasse é manual em qualquer plataforma.
+
+  Planos vistos no painel em 12/11:
+  - Começo: R$ 0, sem domínio próprio e sem CSS, só Nuvem Pago.
+  - Essencial: R$ 66 por mês, sem CSS. Cobra 2% por venda fora do Nuvem Pago.
+  - Impulso: R$ 156 por mês, o atual. É o único com CSS.
+
+  Proposta da loja própria (a planejar):
+  - Carrinho na vitrine.
+  - Checkout hospedado do meio de pagamento (o cartão não passa pela NIMBUS).
+  - Uma função no servidor que tira o preço do catálogo.
+  - Pedido num banco privado, nunca neste repositório.
+  - Repasse manual ao fornecedor.
+
+  O GitHub Pages proíbe loja nos termos, então o site muda de hospedagem.
+  Isso derruba a premissa do conselho de 28/10 (abaixo), que manteve a compra
+  na Nuvemshop.
+
+  No site, saíram em 12/11 o "Acompanhar pedido" da página de envios e a
+  menção ao "checkout da Nuvemshop" no bloco "Como vai ser comprar aqui".
+  Seguem inertes, só para a loja aberta, a serem trocados no projeto da loja
+  própria:
+  - `loja.base` em `public/loja/catalogo.json`;
+  - o `urlCarrinho` de `public/loja/js/ui.js`;
+  - o "Acompanhar pedido" do rodapé aberto em `build-paginas.mjs`;
+  - a política de privacidade, que cita a Nuvemshop.
 
 - **A marca ainda não vendeu, e a loja está FECHADA**: os 49 produtos da era
   YouDraw foram ocultados em 14/08 e o catálogo será remontado na IzzyPrint.

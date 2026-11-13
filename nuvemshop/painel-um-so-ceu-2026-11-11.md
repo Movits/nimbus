@@ -1,9 +1,15 @@
 ---
-status: vigente
+status: superado
 atualizado: 2026-11-12
 ---
 
 # Painel da loja: o que o CSS não alcança (um só céu)
+
+> [!warning] Não aplicado. Em 12/11/2026 o painel abriu bloqueado por falta de
+> pagamento, e o dono decidiu sair da Nuvemshop e fazer loja própria
+> (`docs/ESTADO.md`, "Loja e funil"). Não execute este roteiro sem ordem nova do
+> dono. Só o item (g), apagar telefone e endereço pessoais, segue valendo
+> enquanto a loja estiver pública.
 
 A camada de CSS de 11/11/2026 (`css-nimbus-um-so-ceu-2026-11-11.css`) deixa a
 loja com a cara da landing e da vitrine. Texto de menu, de capa, nome da loja,

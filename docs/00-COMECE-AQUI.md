@@ -19,9 +19,9 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 |---|---|
 | Produzir ou refazer uma **capa de produto** | [`fluxos/capa-lifestyle.md`](fluxos/capa-lifestyle.md) |
 | **Auditar** uma capa, ou entender por que o gate aprovou algo errado | [`fluxos/auditoria-capa.md`](fluxos/auditoria-capa.md) |
-| **Publicar** capas na Nuvemshop | [`fluxos/publicar-na-loja.md`](fluxos/publicar-na-loja.md) |
+| **Publicar** capas na Nuvemshop (suspenso: o dono decidiu sair da Nuvemshop em 12/11/2026, ver `ESTADO.md`) | [`fluxos/publicar-na-loja.md`](fluxos/publicar-na-loja.md) |
 | Mexer no **visual do site** (topo, rodapé, título, botão, imagem) em qualquer das três superfícies | [`fluxos/site-um-so-ceu.md`](fluxos/site-um-so-ceu.md) |
-| Colar **CSS no painel** da loja Nuvemshop | [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md) |
+| Colar **CSS no painel** da loja Nuvemshop (suspenso: o dono decidiu sair da Nuvemshop em 12/11/2026, ver `ESTADO.md`) | [`fluxos/site-css-e-hover.md`](fluxos/site-css-e-hover.md) |
 | Escrever **página de produto**, medidas, prazo, política | [`fluxos/paginas-de-produto.md`](fluxos/paginas-de-produto.md) |
 | Criar **conteúdo social**, post, roteiro, campanha | [`fluxos/conteudo-social.md`](fluxos/conteudo-social.md) |
 | Produzir **vídeo para ads** (receita, Resolve, export 9:16) | [`fluxos/video-ads.md`](fluxos/video-ads.md) |

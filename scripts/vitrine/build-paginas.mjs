@@ -261,7 +261,7 @@ const fechoAviso = (origem, { frase = MARCA.aviso.fecho, centro = false } = {}) 
 // Nome de cidade leva espaço que não quebra: no celular "Belo / Horizonte" partia.
 const cidade = (s) => s.replaceAll(" ", "\u00a0");
 const COMO_COMPRAR = [
-  { titulo: "Pagamento", texto: "Pix, cartão ou boleto, no checkout da Nuvemshop. A NIMBUS não guarda dados de cartão.", link: ["Privacidade", `${PREFIXO}/privacidade/`] },
+  { titulo: "Pagamento", texto: "Pix, cartão ou boleto. A NIMBUS não guarda dados de cartão.", link: ["Privacidade", `${PREFIXO}/privacidade/`] },
   { titulo: "Entrega", texto: `Até 12 dias úteis do pagamento confirmado à entrega em ${["São Paulo", "Rio de Janeiro", "Belo Horizonte", "Brasília"].map(cidade).join(", ")} e ${cidade("Porto Alegre")}, com rastreio. Para o seu CEP, vale o prazo do checkout.`, link: ["Envios e prazos", `${PREFIXO}/envios/`] },
   { titulo: "Troca e devolução", texto: "Mudou de ideia ou errou o tamanho? Em até 7 dias corridos depois de receber, devolvemos tudo o que você pagou, frete incluído, ou combinamos o tamanho certo.", link: ["Trocas e devoluções", `${PREFIXO}/trocas/`] },
   { titulo: "10% do lucro", texto: "Você escolhe o projeto social que recebe 10% do lucro do seu pedido. O repasse será mensal, com o comprovante publicado no site.", link: ["Como funciona o repasse", `${PREFIXO}/impacto/`] },
@@ -666,7 +666,7 @@ const INSTITUCIONAIS = {
     </ul>
     <p class="note">Conta feita em 26/10/2026 com os prazos dos Correios (PAC) cotados para essas capitais, mais a nossa folga. O prazo do checkout para o seu CEP prevalece.</p>
     <h2>Rastreio</h2>
-    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. O pedido também fica na sua conta da loja: <a href="https://loja.nimbuswear.com.br/account/login/?ref=vitrine" rel="noopener">Acompanhar pedido</a>.</p>
+    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega.</p>
     <h2>Frete grátis</h2>
     <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil.</p>
     <h2>Quanto custa o frete</h2>
