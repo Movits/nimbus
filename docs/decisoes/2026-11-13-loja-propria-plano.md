@@ -8,7 +8,7 @@ aprovacao: pendente-do-dono
 
 Em 12/11/2026 o dono decidiu sair da Nuvemshop e fazer loja própria
 (`docs/ESTADO.md`, seção "Loja e funil"). Este documento planeja essa loja em
-oito pontos, com opções, prós, contras e custo, e termina na lista do que só ele
+oito pontos, com opções, prós, contras e custo, e abre com a lista do que só ele
 decide. **Nenhuma linha de código de pagamento começa antes do sim dele.**
 
 > [!warning] Este plano não autoriza nada sozinho. Criar conta em gateway, gerar
@@ -31,13 +31,15 @@ decide. **Nenhuma linha de código de pagamento começa antes do sim dele.**
    Seção 5.
 5. **E-mail do pedido.** Resend grátis, mandando de `pedidos@nimbuswear.com.br`
    (recomendado). Seção 4.
-6. **Estorno na desistência.** Quando o cliente avisa ou quando ele posta a peça
-   de volta. Seção 4.
+6. **Estorno na desistência.** Quando o cliente desiste (recomendado: é o que
+   diz a lei) ou quando ele posta a peça de volta. Seção 4.
 7. **O teste final.** Um produto oculto de valor baixo e uma peça de verdade,
    comprados por ele. Seção 8.
 
 O fornecedor (IzzyPrint ou Gubo) segue em aberto em outra frente. O plano serve
-aos dois; a seção 6 diz o que muda.
+aos dois, mas sair da Nuvemshop pesa nessa escolha: a Gubo publica API para
+loja própria, sem pedido mínimo, e a IzzyPrint não publica integração nenhuma
+fora da Nuvemshop (seção 6).
 
 ## Como a compra vai funcionar
 
@@ -49,7 +51,7 @@ resumo             o cliente vê itens, frete e total antes de pagar
 gateway            Pix, cartão ou boleto na página do gateway
 aviso (webhook)    o servidor confere e marca o pedido como pago
 e-mails            ao cliente e ao dono
-/admin/            o dono repassa à IzzyPrint, compra a etiqueta, lança o rastreio
+/admin/            o dono repassa o pedido e lança o rastreio
 e-mail de envio    com o rastreio
 ```
 
@@ -87,7 +89,7 @@ digita na página do gateway.
 | | Pix | Cartão à vista | Boleto |
 |---|---|---|---|
 | Mercado Pago | R$ 1,98 | R$ 9,96 na hora; R$ 8,96 em 14 dias | R$ 3,99 |
-| PagBank | R$ 3,78 | R$ 10,38 em 14 dias; R$ 8,38 em 30 | não dá para calcular |
+| PagBank | R$ 3,78 | R$ 10,38 em 14 dias; R$ 8,38 em 30 | igual ao cartão, se valer o publicado |
 | Pagar.me | R$ 1,98 | R$ 8,38 | não publicado |
 | Stripe | R$ 2,38, se o Pix for liberado | R$ 8,37 | R$ 3,45 |
 
@@ -124,13 +126,13 @@ conta no CNPJ do MEI.
   (Self-Serve Subscription Agreement) não proíbe uso comercial nem e-commerce, e
   os termos do Workers e do Pages também não. Mas o §2.2.1(h) proíbe processar
   ou coletar dados de cartão em site que use serviço grátis. Conferido no texto
-  do contrato em 12/11/2026.
+  do contrato em 13/11/2026.
 
 **O que a condição obriga.** O checkout é por redirecionamento: o cliente sai
 para a página do gateway e digita o cartão lá, no domínio dele. Nunca campo de
 cartão, iframe ou janela embutida do gateway no site da NIMBUS. E o servidor não
-guarda nada do cartão, nem os últimos dígitos nem o nome impresso: só o número
-do pagamento e o meio (Pix, cartão ou boleto).
+guarda nada do cartão, nem no banco nem no log, nem os últimos dígitos nem o
+nome impresso: só o número do pagamento e o meio (Pix, cartão ou boleto).
 
 **A dúvida que sobra.** A Cloudflare não diz por escrito se mandar o cliente
 para um checkout de terceiro conta como "coletar". A nossa leitura é que não
@@ -198,8 +200,9 @@ repositório.
 
 ## 3. Servidor
 
-Uma função só (um Worker da Cloudflare, seção 2), com três rotas e uma tarefa
-agendada. Tudo o que vale dinheiro é decidido nela, nunca no navegador.
+Uma função só (um Worker da Cloudflare, seção 2), com as rotas abaixo, as do
+painel (seção 4) e uma tarefa agendada. Tudo o que vale dinheiro é decidido
+nela, nunca no navegador.
 
 **`POST /api/checkout`, o pedido.**
 
@@ -217,8 +220,8 @@ agendada. Tudo o que vale dinheiro é decidido nela, nunca no navegador.
 - Devolve o resumo calculado (itens, frete, total) e o link do checkout. A
   página mostra o resumo antes do botão de pagar: é o "sumário do contrato" do
   Decreto 7.962 (seção 7).
-- Contra robô: o Turnstile da Cloudflare (grátis, sem quebra-cabeça para o
-  cliente) no formulário e um limite de pedidos por IP.
+- Contra robô: o Turnstile da Cloudflare no formulário (grátis, sem
+  quebra-cabeça de imagem) e um limite de pedidos por IP.
 
 **`POST /api/webhook/<gateway>`, o aviso de pagamento.**
 
@@ -234,14 +237,21 @@ agendada. Tudo o que vale dinheiro é decidido nela, nunca no navegador.
   manda e-mail duas vezes.
 - Responde em seguida; o e-mail sai depois da resposta.
 
-**`GET /api/pedido`, o acompanhamento.** Recebe o código do pedido e um token
-aleatório que só vai no e-mail do cliente. Mostra o status ("pagamento
-confirmado", "preparando seu pedido", "enviado", com o rastreio). Nunca "em
-produção": a regra do de-para (seção 4 dele) continua.
+**`GET /api/pedido` e `POST /api/pedido/desistir`, o acompanhamento.** Os dois
+recebem o código do pedido e um token aleatório que só vai no e-mail do
+cliente.
 
-**Conciliação de hora em hora** (tarefa agendada do Worker). Pedido aguardando
-pagamento há mais de uma hora é conferido na API do gateway. Pega o aviso que se
-perdeu.
+- O primeiro mostra o status ("pagamento confirmado", "preparando seu pedido",
+  "enviado", com o rastreio). Nunca "em produção": a regra do de-para (seção 4
+  dele) continua.
+- O segundo é o botão "Quero desistir". O Decreto 7.962 manda aceitar a
+  desistência pela mesma ferramenta da compra (seção 7). Ele grava a
+  desistência, confirma na hora por e-mail ao cliente e avisa o dono. Quem
+  confere o prazo de 7 dias é o dono, no painel.
+
+**Conciliação de hora em hora** (tarefa agendada do Worker; o plano grátis dá
+cinco). Pedido aguardando pagamento há mais de uma hora é conferido na API do
+gateway. Pega o aviso que se perdeu.
 
 **Segredos** (token do gateway, segredo do webhook, chave do e-mail, segredo do
 GA4) ficam só no cofre do Worker (`wrangler secret`), nunca no repositório, que é
@@ -275,11 +285,12 @@ lidas e 100 mil escritas por dia: um pedido escreve poucas dezenas de linhas.
 
 | Quando | Para quem | O que diz |
 |---|---|---|
-| Pedido criado | cliente | o resumo e o link para pagar (confirmação imediata, Decreto 7.962, art. 4º) |
+| Pedido criado | cliente | o resumo e o link para pagar (confirmação imediata, Decreto 7.962, art. 4º, III) |
 | Pagamento aprovado | cliente | a confirmação, o prazo, o link de acompanhamento e como desistir em 7 dias |
 | Pagamento aprovado | dono | o pedido a repassar e o link do painel |
 | Enviado | cliente | o código de rastreio |
-| Desistência registrada | cliente | a confirmação de que a desistência chegou (art. 5º) |
+| Desistência registrada | cliente | a confirmação de que a desistência chegou (art. 5º, §4º) e a etiqueta de devolução |
+| Desistência registrada | dono | o pedido, o estorno a fazer e a devolução |
 | Divergência ou erro | dono | o que aconteceu e em qual pedido |
 
 Quem manda os e-mails:
@@ -316,7 +327,8 @@ O que o painel faz:
 - três botões:
   - "Repassado", com o número do pedido na IzzyPrint e o custo real cobrado;
   - "Enviado", com o rastreio, que dispara o e-mail ao cliente;
-  - "Desistência recebida", que dispara a confirmação ao cliente;
+  - "Desistência", para a que chegar por e-mail e não pelo botão, com a mesma
+    confirmação ao cliente;
 - exporta CSV para a contabilidade e para o Diário de Repasses dos 10%.
 
 O projeto social do pedido passa a ser escolhido numa lista no formulário de
@@ -331,7 +343,21 @@ isso. O aviso de "reembolsado" chega pelo webhook e atualiza o pedido sozinho.
 Botão de estorno no nosso painel fica para uma segunda versão: é menos código
 nosso mexendo em dinheiro.
 
-⟪REEMBOLSO⟫
+No Mercado Pago o estorno é total ou parcial, até 180 dias depois da aprovação.
+O Pix volta para a conta de quem pagou, e o dinheiro do estorno sai do saldo da
+conta.
+
+**Quando estornar na desistência é decisão do dono:**
+
+- **Quando o cliente desiste (recomendado).** É o que dizem o CDC (art. 49,
+  parágrafo único: os valores pagos "serão devolvidos, de imediato") e o
+  Decreto 7.962 (art. 5º, §3º). O risco é a peça não voltar; com o volume do
+  começo, é pequeno.
+- **Quando o cliente posta a devolução.** É prática comum e protege contra peça
+  que não volta, mas a lei não prevê essa espera.
+
+Nos dois casos, a etiqueta de devolução vai junto com a confirmação da
+desistência, e a página de trocas passa a dizer o prazo do estorno.
 
 ## 5. Frete
 
@@ -341,7 +367,21 @@ R$ 19,90, e grátis a partir de R$ 399,90 em produtos.
 **O cálculo é do servidor**, pela faixa de CEP dos sete estados do Norte, sem
 API de fora:
 
-⟪CEP⟫
+| Estado | Faixa de CEP |
+|---|---|
+| Pará | 66000-000 a 68899-999 |
+| Amapá | 68900-000 a 68999-999 |
+| Amazonas | 69000-000 a 69299-999 e 69400-000 a 69899-999 |
+| Roraima | 69300-000 a 69399-999 |
+| Acre | 69900-000 a 69999-999 |
+| Rondônia | 76800-000 a 76999-999 |
+| Tocantins | 77000-000 a 77999-999 |
+
+Juntas, são duas faixas contínuas: **66000-000 a 69999-999** e **76800-000 a
+77999-999**. Só a do Acre está confirmada em página dos Correios (o manual da
+API Busca CEP); as outras seis vêm da Wikipedia e do pacote `geobr` do IPEA,
+que batem entre si. Conferir as sete na Busca Faixa de CEP dos Correios antes
+de abrir.
 
 A mesma tabela vai no `catalogo.json`, para a sacola mostrar o mesmo número que
 o servidor vai cobrar. Se os dois discordarem, vale o do servidor, que é o que
@@ -349,10 +389,10 @@ aparece no resumo antes de pagar.
 
 > [!warning] O site de hoje não diz a regra de 28/10. A página `/loja/envios/`
 > diz "frete grátis para todo o Brasil" a partir de R$ 399,90 e "R$ 19,90"
-> abaixo disso, e a sacola e a página de produto falam em "faltam R$ X para
-> frete grátis". Para quem está fora do Norte o frete já é grátis em qualquer
-> valor. Está inerte com a loja fechada, mas tem que ser corrigido antes de
-> abrir (seção 7).
+> abaixo disso. A sacola diz "faltam R$ X para frete grátis", e a página de
+> produto e a faixa do topo, "frete grátis a partir de R$ 399,90". Para quem
+> está fora do Norte o frete já é grátis em qualquer valor. Está inerte com a
+> loja fechada, mas tem que ser corrigido antes de abrir (seção 7).
 
 **Quanto a regra custa.** Fora do Norte a NIMBUS paga a etiqueta inteira: o PAC
 cotado em 26/10 de São Paulo para Rio, BH, Brasília, Porto Alegre e Salvador
@@ -362,7 +402,19 @@ ficou entre R$ 22,32 e R$ 24,99. Isso já está na conta de margem do ESTADO
 **A etiqueta.** A IzzyPrint pede a etiqueta no nome da marca, com o endereço
 dela como remetente (11/08).
 
-⟪ETIQUETA⟫
+| Opção | Prós | Contras | Custo |
+|---|---|---|---|
+| **Melhor Envio** | sem mensalidade; carteira pré-paga (o Pix entra na hora); API pública, com modo de teste, que aceita loja própria; aceita envio com nota fiscal (a etiqueta leva a chave) ou com declaração de conteúdo eletrônica (DC-e); com a empresa cadastrada como "loja", a etiqueta leva o nome fantasia e o telefone dela, e não os dados pessoais do dono; tem devolução pelos Correios: o cliente recebe um código, imprime a declaração e posta numa agência (o código vale 7 dias, e o frete é da loja) | os termos proíbem informar remetente diferente do titular da conta e exigem o CEP de origem verdadeiro (cl. 7.1, "d"); a conta aceita outros endereços de origem, mas não está escrito se o de um terceiro pode ser um deles; a central de ajuda se contradiz sobre o MEI: um artigo de 2024 diz que ele pode usar declaração de conteúdo na venda a pessoa física, e o de abril de 2026 diz que o MEI que vende deve emitir nota; o cadastro começa pelo CPF do dono, e o CNPJ entra depois como "loja" | o frete de cada etiqueta; R$ 6,90 por saque da carteira |
+| **Correios direto** | sem intermediário | tarifa e API de contrato exigem contrato comercial com os Correios (a própria API de CEP deles pede contrato); sem contrato, é preço de balcão; não pesquisado a fundo nesta rodada | a cotar |
+
+**Recomendação: Melhor Envio**, à mão no painel dele no começo, e pela API
+quando o volume pedir. Antes da fase 6, confirmar com o Melhor Envio que a
+etiqueta pode sair no nome da NIMBUS com o endereço da IzzyPrint como origem.
+Se não puder, a pergunta volta para a IzzyPrint: como ela despacha para quem
+não usa a integração da Nuvemshop.
+
+A nota fiscal mexe na etiqueta: envio com nota leva a chave dela, então a nota
+sai antes da etiqueta. Ver "Nota fiscal", na seção 7.
 
 ## 6. Repasse
 
@@ -375,10 +427,11 @@ da Nuvemshop:
 3. Na IzzyPrint, montar o item, fazer as quatro conferências do de-para e pagar.
    É o pagamento que dispara a produção (até 4 dias úteis).
 4. No painel, "Repassado", com o número do pedido deles e o custo real.
-5. A etiqueta no nome da NIMBUS, com o endereço da IzzyPrint como remetente
-   (condição de 11/08), comprada como diz a seção 5 e enviada a eles.
-6. O rastreio no painel, que manda o e-mail ao cliente.
-7. A nota fiscal ou a declaração de conteúdo (seção 7).
+5. A nota fiscal do cliente (seção 7).
+6. A etiqueta no nome da NIMBUS, com o endereço da IzzyPrint como origem
+   (condição de 11/08) e a chave da nota, comprada como diz a seção 5 e enviada
+   a eles.
+7. O rastreio no painel, que manda o e-mail ao cliente.
 
 Custo fixo do repasse, confirmado pela IzzyPrint em 11/08: R$ 3,50 de expedição
 por pedido e R$ 1,00 por peça de etiqueta interna. O blank e a estampa seguem a
@@ -387,7 +440,8 @@ tabela do de-para (seção 6 dele).
 **O que muda quando a integração abrir.** A integração que a IzzyPrint
 confirmou é com a Nuvemshop, e só liga com 5 peças por dia. Para a loja
 própria, a pergunta que falta fazer a eles é se existe API, ou outro caminho
-fora da Nuvemshop, e com que mínimo. ⟪IZZY-API⟫ Quando houver:
+fora da Nuvemshop, e com que mínimo. O site dela não publica API nem integração
+nenhuma (sitemap e páginas varridos em 12/11/2026). Quando houver:
 
 - o aviso de pagamento aprovado cria o pedido na IzzyPrint sozinho, com um mapa
   do SKU nosso para o SKU deles (eles têm gerador de SKU próprio), conferido por
@@ -399,7 +453,14 @@ fora da Nuvemshop, e com que mínimo. ⟪IZZY-API⟫ Quando houver:
 O pagamento à IzzyPrint segue pedido a pedido: na integração deles "só é
 preciso fazer o pagamento" (11/08).
 
-⟪GUBO⟫
+**A Gubo muda essa conta.** Ela publica integração com Nuvemshop, WooCommerce
+e uma API própria para loja própria (pedido por SKU, webhooks e modo de teste),
+sem mensalidade e sem pedido mínimo, com saldo pré-pago na carteira dela. A
+documentação da API pede login, então os detalhes ficam a confirmar. Com a
+Gubo, o repasse automático pode existir desde o primeiro pedido; com a
+IzzyPrint, fica manual até ela abrir um caminho. O que pesava contra a Gubo
+continua (conselho de 28/10): a estampa em DTF, que o dono achou plastificada
+na YouDraw, e a amostra que decide. A escolha é do dono, na outra frente.
 
 ## 7. O que muda no site, nos textos legais e no CLAUDE.md
 
@@ -440,22 +501,57 @@ preciso fazer o pagamento" (11/08).
 ### Nos textos legais
 
 - **Privacidade** (`/loja/privacidade/`). Sai "ambiente da loja (Nuvemshop)".
-  Entra: o que o formulário de compra coleta (nome, e-mail, telefone, endereço;
-  CPF só se a etiqueta ou a nota exigir); para que serve cada dado; com quem é
+  Entra: o que o formulário de compra coleta (nome, e-mail, telefone, endereço
+  e o CPF, que a nota por pedido deve exigir); para que serve cada dado; com quem é
   compartilhado (gateway, Cloudflare, provedor de e-mail, IzzyPrint, serviço de
   etiqueta e transportadora); por quanto tempo fica; e como pedir para apagar.
   Saem os dois cookies da sacola, que deixam de existir.
 - **Trocas** (`/loja/trocas/`). Como pedir (e-mail, como hoje); a etiqueta de
   devolução paga pela NIMBUS; o estorno pelo mesmo meio de pagamento, e quando
-  (decisão do dono). Falta confirmar com a IzzyPrint o que ela faz com a peça que
-  volta para o endereço dela, já que o remetente é ela.
+  (decisão do dono). Falta decidir para onde a devolução vai (a IzzyPrint, de
+  onde a peça saiu, ou o dono) e confirmar com a IzzyPrint o que ela faz com a
+  peça que chega lá.
 - **Envios** (`/loja/envios/`). A regra de 28/10 escrita certa (seção 5: hoje a
   página diz outra coisa); o frete aparece na finalização, antes de pagar; o
   rastreio chega por e-mail e na página do pedido.
 - **Impacto** (`/loja/impacto/`). "No checkout, no campo mensagem do pedido"
   vira a escolha do projeto no formulário.
-- **Decreto 7.962/2013.** ⟪DECRETO⟫
-- **Nota fiscal.** ⟪NOTA⟫
+- **Decreto 7.962/2013.** O que vira tarefa:
+  - **rodapé** (art. 2º, I e II): nome empresarial e CNPJ, endereço físico e
+    e-mail. Hoje a linha legal diz só "Brasília DF"; o endereço é a decisão 3
+    do dono;
+  - **página de produto** (art. 2º, III e V): características, medidas,
+    pagamento, disponibilidade e prazo. Já existe; revisar no catálogo novo;
+  - **resumo antes de pagar** (art. 2º, IV, e art. 4º, I e II): itens, frete à
+    parte, total, prazo e política de troca, com o caminho para corrigir a
+    sacola e o endereço antes de pagar;
+  - **e-mail do pedido** (art. 4º, III e IV): confirmação na hora, com o
+    resumo, num formato que o cliente pode guardar;
+  - **atendimento** (art. 4º, V e VI, e parágrafo único): o e-mail de
+    atendimento confirma na hora que recebeu a mensagem, pelo mesmo meio
+    (resposta automática), e responde de verdade em até 5 dias;
+  - **desistência pela mesma ferramenta da compra** (art. 5º, §1º): o botão
+    "Quero desistir" na página do pedido (seção 3). A confirmação sai na hora
+    (§4º), e o estorno no cartão é pedido de imediato à operadora (§3º), que é o
+    que o estorno pelo gateway faz.
+- **Nota fiscal.** A IzzyPrint emite só a nota do serviço dela; a do cliente é
+  da NIMBUS (11/08).
+  - Até 31/12/2026, o MEI está dispensado de nota na venda a consumidor pessoa
+    física (Resolução CGSN 140/2018, art. 106, II, "a", 1).
+  - A partir de 01/01/2027, a Resolução CGSN 190/2026 manda o MEI emitir
+    documento fiscal nas vendas, de preferência pela Nota Fiscal Fácil. A CGSN
+    195/2026 deixa a DASN-Simei valer como documento fiscal da venda a pessoa
+    física sem CNPJ.
+  - O pacote precisa viajar com nota ou com declaração de conteúdo, e o artigo
+    de abril de 2026 do Melhor Envio diz que o MEI que vende deve emitir nota.
+  - **O plano trata cada pedido como pedido com nota, desde o primeiro**: o dono
+    emite a nota depois do pagamento e antes da etiqueta, pelo emissor que o
+    contador indicar. A loja deve abrir já em 2027, e este é o caminho que
+    serve nos dois anos. Fechar com o contador antes da fase 6, inclusive se a
+    DASN-Simei dispensa a nota por pedido.
+  - O teto do MEI conta a venda cheia, não a margem: R$ 81 mil por ano hoje. A
+    Lei Complementar 238/2026 leva o teto a R$ 110 mil em 2027 e a R$ 140 mil a
+    partir de 2028, desde que o orçamento preveja.
 
 ### No CLAUDE.md e nos outros documentos
 
@@ -488,8 +584,8 @@ do catálogo novo.
 | 2. Site na Cloudflare | landing e vitrine servidas pelo Worker, deploy pelo GitHub Actions | 1 sessão | o token da Cloudflare no GitHub; o sim da virada | religar os registros do GitHub Pages |
 | 3. Servidor | checkout, webhook, conciliação, banco e portão `loja:teste`, com o gateway em modo de teste | 2 sessões | as credenciais de teste do gateway | não fica ligado a página nenhuma |
 | 4. Páginas e textos | finalizar, obrigado e acompanhar; `ui.js` e `produto.js` sem a Nuvemshop; os textos legais novos | 1 e meia sessão | os textos e o endereço publicado | a loja segue fechada |
-| 5. Painel e e-mails | `/admin/`, os seis e-mails e o de-para atualizado | 1 sessão | o Access e o domínio de e-mail | nada a desfazer |
-| 6. Ponta a ponta | o teste completo, primeiro de mentira e depois de verdade | de meia a 1 sessão | as credenciais de produção e a compra | estorno |
+| 5. Painel e e-mails | `/admin/`, os e-mails da seção 4 e o de-para atualizado | 1 sessão | o Access e o domínio de e-mail | nada a desfazer |
+| 6. Ponta a ponta | o teste completo, primeiro de mentira e depois de verdade | de meia a 1 sessão | as credenciais de produção, a nota fechada com o contador e a compra | estorno |
 
 Total: de 6 e meia a 7 sessões. A fase 1 espera a propagação enquanto a fase 3
 anda num endereço de teste da Cloudflare (`workers.dev`), então as duas correm
@@ -508,6 +604,7 @@ certo, com o pedido, o painel e os e-mails conferidos:
 - valor adulterado no navegador (o servidor cobra o do catálogo);
 - CEP do Norte abaixo e acima de R$ 399,90, e CEP de fora do Norte;
 - estorno total e estorno parcial feitos no painel do gateway;
+- desistência pelo botão do pedido, com a confirmação na hora;
 - aviso perdido de propósito, recuperado pela conciliação.
 
 Depois, com o sim do dono para cada passo, em produção:
@@ -515,8 +612,8 @@ Depois, com o sim do dono para cada passo, em produção:
 1. **Um produto oculto de teste**, de valor baixo, aberto só por link. O dono
    paga com Pix. Confere os e-mails, o painel e o estorno feito no gateway.
 2. **Uma peça de verdade do catálogo novo**, comprada pelo dono para o próprio
-   endereço. Confere o caminho inteiro: repasse à IzzyPrint, etiqueta,
-   rastreio, entrega e a nota ou declaração.
+   endereço. Confere o caminho inteiro: repasse à IzzyPrint, nota, etiqueta,
+   rastreio e entrega.
 
 Só depois disso a loja pode abrir.
 
@@ -537,6 +634,9 @@ Só depois disso a loja pode abrir.
   de hora em hora e o volume baixo do começo.
 - **Tudo num fornecedor só.** Se a conta da Cloudflare parar, param o site e a
   loja. O código e o catálogo estão no git; o banco tem o export mensal.
+- **A leitura da cláusula do cartão.** Se a Cloudflare entender que o
+  redirecionamento conta como coletar cartão, sair do grátis custa de US$ 25 a
+  30 por mês (seção 2).
 - **Dado pessoal sob a nossa guarda.** Fica o mínimo, por prazo definido, atrás
   de login, e nunca neste repositório.
 
@@ -549,16 +649,20 @@ Só depois disso a loja pode abrir.
 5. Gerar o token da Cloudflare para o GitHub Actions e guardá-lo nos segredos
    do GitHub.
 6. Virar o domínio do GitHub Pages para o Worker.
-7. Verificar o domínio no provedor de e-mail (registros no DNS).
-8. Aprovar os textos legais novos e o endereço que vai ser publicado.
-9. Gerar as credenciais de **produção** do gateway.
-10. Criar o produto oculto de teste e fazer as duas compras da fase 6.
-11. Desligar o GitHub Pages.
+7. Ligar o Zero Trust (pede cartão, sem cobrança) e o login do `/admin/`.
+8. Criar a conta no provedor de e-mail e verificar o domínio (registros no DNS).
+9. Criar a conta no Melhor Envio (começa pelo CPF; o CNPJ entra como loja).
+10. Fechar a nota fiscal com o contador.
+11. Aprovar os textos legais novos e o endereço que vai ser publicado.
+12. Gerar as credenciais de **produção** do gateway.
+13. Criar o produto oculto de teste e fazer as duas compras da fase 6.
+14. Desligar o GitHub Pages.
 
 ## Fontes
 
-Páginas oficiais, lidas em 12 e 13/11/2026. As tarifas mudam: conferir de novo
-no painel de cada conta antes de abrir a loja.
+Lidas em 12 e 13/11/2026, quase todas em página oficial; as exceções são duas
+fontes de CEP, ditas na seção 5. As tarifas mudam: conferir de novo no painel de
+cada conta antes de abrir a loja.
 
 **Hospedagem**
 
@@ -580,6 +684,7 @@ no painel de cada conta antes de abrir a loja.
   e <https://developers.cloudflare.com/cloudflare-one/setup/>
 - E-mail pela Cloudflare: <https://developers.cloudflare.com/email-service/platform/pricing/>
 - Segredos do Worker: <https://developers.cloudflare.com/workers/configuration/secrets/>
+- Turnstile, plano grátis: <https://developers.cloudflare.com/turnstile/plans/>
 - Resend: <https://resend.com/pricing>
 
 **Pagamento**
@@ -597,4 +702,35 @@ no painel de cada conta antes de abrir a loja.
 - Stripe: <https://stripe.com/br/pricing>, <https://docs.stripe.com/payments/pix>,
   <https://docs.stripe.com/payments/installments> e <https://docs.stripe.com/webhooks>
 
-⟪FONTES-C⟫
+**Frete**
+
+- Melhor Envio, sem mensalidade: <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/31220727703700-O-Melhor-Envio-cobra-mensalidade>
+- Melhor Envio, termos de uso (cl. 7.1, "d", o remetente): <https://static.melhorenvio.com.br/termos-de-uso.pdf>
+- Melhor Envio, declaração de conteúdo e MEI, artigo de 2024: <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/31220462592276-O-que-%C3%A9-declara%C3%A7%C3%A3o-de-conte%C3%BAdo-dos-Correios-Quem-pode-usar>
+- Melhor Envio, DC-e e MEI, artigo de abril de 2026: <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/41306548209300-Declara%C3%A7%C3%A3o-de-Conte%C3%BAdo-Eletr%C3%B4nica-DC-e-o-que-voc%C3%AA-precisa-saber>
+- Melhor Envio, outros endereços de origem e nome fantasia: <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/31220439899412-Como-editar-as-informa%C3%A7%C3%B5es-de-remetente-para-inserir-os-dados-da-minha-loja>
+- Melhor Envio, devolução: <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/31220449351700-Como-fa%C3%A7o-para-gerar-um-envio-quando-eu-precisar-receber-uma-encomenda>
+- Melhor Envio, carteira e cadastro: <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/31220463176980-Posso-inserir-cr%C3%A9ditos-no-Melhor-Envio-Como-funciona-a-carteira-da-plataforma>
+  e <https://centraldeajuda.melhorenvio.com.br/hc/pt-br/articles/31220442331924-Posso-cadastrar-a-minha-empresa-no-Melhor-Envio>
+- Melhor Envio, API: <https://docs.melhorenvio.com.br/reference/inserir-fretes-no-carrinho>
+- Faixas de CEP: <https://www.correios.com.br/atendimento/developers/manuais/manual-api-busca-cep>,
+  <https://buscacepinter.correios.com.br/app/faixa_cep_uf_localidade/index.php>,
+  <https://pt.wikipedia.org/wiki/C%C3%B3digo_de_Endere%C3%A7amento_Postal> e
+  <https://github.com/ipeaGIT/geobr/blob/master/r-package/R/cep_to_state.R>
+
+**Lei e nota fiscal**
+
+- Decreto 7.962/2013: <https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2013/decreto/d7962.htm>
+- CDC, art. 49: <https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm>
+- Resolução CGSN 140/2018, consolidada: <https://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=92278>
+- Resolução CGSN 190/2026 (nota do MEI a partir de 2027): <https://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=152832>
+- Resolução CGSN 195/2026 (DASN-Simei como documento fiscal): <https://normas.receita.fazenda.gov.br/sijut2consulta/link.action?idAto=154194>
+- Lei Complementar 238/2026 (teto do MEI): <https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp238.htm>
+
+**Fornecedor**
+
+- Gubo: <https://gubo.com.br/integracoes> e <https://gubo.com.br/precos>
+- IzzyPrint, páginas varridas: <https://izzyprint.com.br/wp-sitemap.xml> e
+  <https://izzyprint.com.br/print-on-demand/>
+
+O DNS de hoje foi lido por consulta pública (`nslookup`) em 12/11/2026.

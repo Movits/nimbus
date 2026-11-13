@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-12
+atualizado: 2026-11-13
 ---
 
 # Estado do projeto
@@ -241,7 +241,14 @@ são mais usados por nenhuma página.
   - Essencial: R$ 66 por mês, sem CSS. Cobra 2% por venda fora do Nuvem Pago.
   - Impulso: R$ 156 por mês, o atual. É o único com CSS.
 
-  Proposta da loja própria (a planejar):
+  **Plano para o dono aprovar (13/11):**
+  [`decisoes/2026-11-13-loja-propria-plano.md`](decisoes/2026-11-13-loja-propria-plano.md).
+  Recomenda Mercado Pago Checkout Pro por redirecionamento, site e servidor na
+  Cloudflare grátis (com o DNS saindo da GoDaddy), Melhor Envio e nota fiscal
+  por pedido. As sete decisões dele estão no topo. Nenhuma conta, chave,
+  cobrança ou troca de DNS sem o sim dele, passo a passo.
+
+  Proposta da loja própria (base do plano):
   - Carrinho na vitrine.
   - Checkout hospedado do meio de pagamento (o cartão não passa pela NIMBUS).
   - Uma função no servidor que tira o preço do catálogo.
