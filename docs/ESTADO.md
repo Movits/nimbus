@@ -279,8 +279,16 @@ são mais usados por nenhuma página.
     curl valida). Por isso `vitrine:links` com rede e `docs:links` reprovam
     aqui; com `SKIP_REDE=1` passam. O monitor diário do Actions pode estar
     acusando o mesmo.
-  - **Próximo passo do dono: o 2, criar a conta na Cloudflare.** Depois, o 4
-    (conta do Mercado Pago no CNPJ e credenciais de teste) destrava o
+  - **Passo 2 feito em 25/11:** o dono criou a conta na Cloudflare, com login
+    pelo GitHub (a segurança da conta é a do GitHub dele). Nada criado dentro
+    dela ainda: sem domínio, sem banco, sem Worker. Nesta máquina, o plugin
+    oficial `cloudflare@cloudflare` (skills e o MCP `mcp.cloudflare.com`) foi
+    instalado no Claude Code, no escopo do usuário; o MCP pede o OAuth da conta
+    no primeiro uso.
+  - **Próximo passo:** o sim do dono para preparar a conta (a zona
+    `nimbuswear.com.br` com os registros copiados em "DNS only", que não muda
+    nada no ar, e o banco D1). Depois, o 3 (nameservers na GoDaddy) e o 4
+    (conta do Mercado Pago no CNPJ e credenciais de teste), que destrava o
     `workers.dev`.
 
   Proposta da loja própria (base do plano):
