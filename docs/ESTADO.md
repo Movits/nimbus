@@ -458,11 +458,22 @@ são mais usados por nenhuma página.
   cor e já produziu laudo errado): ouro da marca `#e9c46a` = 42,5°, acima de
   ~50° puxa verde, e o detector precisa de piso de saturação.
 
-## Acabamento fino da RELÍQUIA (rodadas de 10 a 13/11, para nova conferência)
+## Acabamento fino da RELÍQUIA (rodadas de 10 a 25/11, para nova conferência)
 
 **As 40 estampas foram refeitas do scan original** e estão em
 `nimbus-assets/designs/_propostas-2026-10-28-acabamento/` (`estampas/`,
 `provas/`, `CONFERIR.md`, método e ponto de retomada no `LEIA-ME.md`).
+
+**Rodada 15 (retomada e concluída em 25/11): o acabamento técnico está pronto.** Os 5
+pontos com defeito técnico ficaram resolvidos e subiram: 22 (peça 08), 46 (18), 105 (21), 108
+(37) e 109 (11). Cada um muda só o lugar do ponto, sem repintar, conferido no zoom (magenta
+e azul-marinho), pela diferença da peça inteira e sem claro nem preto novo. O código novo
+fica atrás de chaves novas na `pecas.json`; com a configuração oficial, a saída das outras
+peças sai idêntica (0 px). Contagem dos 30 pontos do dono: **26 resolvidos; 4 esperam
+decisão dele** (101, título da 16 com o granulado do scan, quatro versões A a D na página;
+19; 20; 107; o 110 também, fora dos 30). A página (versão 14) dá as opções por letra: ele
+responde "NN letra" quando puder ver as imagens no computador. Fora isso, falta só a
+conferência dele no Affinity pelo `CONFERIR.md`.
 
 Em 10/11 o dono comentou a página de conferência ponto a ponto. Os pontos principais:
 - borda pixelada em quase todas;
