@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-13
+atualizado: 2026-11-25
 aprovacao: aprovado-pelo-dono
 ---
 
@@ -8,8 +8,8 @@ aprovacao: aprovado-pelo-dono
 
 > [!info] Aprovado pelo dono em 13/11/2026, no chat: "Pode aprovar tudo". Valem
 > as sete recomendações da lista abaixo. A aprovação é do plano: cada passo da
-> lista do fim continua esperando o sim dele, um por um. Ficou sem escolha o
-> endereço do rodapé (decisão 3), que não tinha recomendação.
+> lista do fim continua esperando o sim dele, um por um. O endereço do rodapé
+> (decisão 3), que não tinha recomendação, foi escolhido em 25/11: o do CNPJ.
 
 Em 12/11/2026 o dono decidiu sair da Nuvemshop e fazer loja própria
 (`docs/ESTADO.md`, seção "Loja e funil"). Este documento planeja essa loja em
@@ -31,7 +31,8 @@ decide. **Nenhuma linha de código de pagamento começa antes do sim dele.**
    os planos da Cloudflare (de US$ 25 a 30 por mês) para não depender dessa
    leitura. Seção 2.
 3. **Endereço no rodapé.** O Decreto 7.962 exige endereço físico na loja: o do
-   CNPJ ou um endereço comercial contratado. Seção 7.
+   CNPJ ou um endereço comercial contratado. Seção 7. **Decidido em 25/11: o
+   do CNPJ.**
 4. **Etiqueta.** Melhor Envio (recomendado) ou contrato direto com os Correios.
    Seção 5.
 5. **E-mail do pedido.** Resend grátis, mandando de `pedidos@nimbuswear.com.br`
@@ -537,7 +538,7 @@ na YouDraw, e a amostra que decide. A escolha é do dono, na outra frente.
 - **Decreto 7.962/2013.** O que vira tarefa:
   - **rodapé** (art. 2º, I e II): nome empresarial e CNPJ, endereço físico e
     e-mail. Hoje a linha legal diz só "Brasília DF"; o endereço é a decisão 3
-    do dono;
+    do dono (25/11: o do CNPJ);
   - **página de produto** (art. 2º, III e V): características, medidas,
     pagamento, disponibilidade e prazo. Já existe; revisar no catálogo novo;
   - **resumo antes de pagar** (art. 2º, IV, e art. 4º, I e II): itens, frete à

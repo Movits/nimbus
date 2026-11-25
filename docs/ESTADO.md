@@ -255,7 +255,8 @@ são mais usados por nenhuma página.
   [`decisoes/2026-11-13-loja-propria-plano.md`](decisoes/2026-11-13-loja-propria-plano.md).
   Mercado Pago Checkout Pro por redirecionamento, site e servidor na
   Cloudflare grátis (o domínio fica na GoDaddy; só o DNS muda), Melhor Envio e
-  nota fiscal por pedido. Falta escolher o endereço do rodapé. Nenhuma conta,
+  nota fiscal por pedido. Endereço do rodapé (decisão 3): o do CNPJ, escolhido
+  em 25/11; o texto entra no passo 11. Nenhuma conta,
   chave, cobrança ou troca de DNS sem o sim dele, passo a passo.
 
   **25/11: o que já anda sem o dono.**
@@ -266,7 +267,8 @@ são mais usados por nenhuma página.
     [`../servidor/LEIA-ME.md`](../servidor/LEIA-ME.md).
   - Portão `loja:segredos`, `sw.js` sem cache de `/api/` e `/admin/`, e
     `wrangler.jsonc` com os dois campos que nascem na conta.
-  - Textos legais em rascunho, com seis pontos em aberto para o dono:
+  - Textos legais em rascunho, com cinco pontos em aberto para o dono (o
+    sexto, o endereço, foi decidido em 25/11):
     [`decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md`](decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md).
   - Faixa de CEP 78900-000 a 78999-999 sem estado nas duas fontes do plano:
     recusada até a conferência nos Correios.

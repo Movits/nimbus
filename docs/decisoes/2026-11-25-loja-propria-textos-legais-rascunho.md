@@ -19,8 +19,11 @@ sem travessão e sem as expressões proibidas de 29/07.
 
 ## O que ainda falta o dono decidir para estes textos
 
-1. **Endereço do rodapé** (decisão 3 do plano): o do CNPJ ou um endereço
-   comercial contratado. O Decreto 7.962 (art. 2º, II) pede endereço físico.
+1. ~~**Endereço do rodapé** (decisão 3 do plano)~~: **decidido em 25/11, o do
+   CNPJ.** O Decreto 7.962 (art. 2º, II) pede endereço físico. O texto do
+   endereço só entra no `marca.json` no passo 11, como está no cartão do CNPJ:
+   este repositório é público, e o endereço não vem para cá antes de ir para o
+   site.
 2. **Nome empresarial** como está no cartão do CNPJ (o MEI usa o nome do
    titular): vai no rodapé (art. 2º, I).
 3. **Para onde a peça devolvida vai**: para a IzzyPrint, de onde saiu, ou para
@@ -41,7 +44,7 @@ Hoje: "© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF".
 Proposta:
 
 > © 2026 NIMBUS · [EM ABERTO: nome empresarial] · CNPJ 53.977.834/0001-18 ·
-> [EM ABERTO: endereço, decisão 3] · nimbuswearbr@gmail.com
+> [endereço do CNPJ, entra no passo 11] · nimbuswearbr@gmail.com
 
 ## Selo da loja aberta (`src/data/marca.json`, `seloDoEstado.aberta`)
 
