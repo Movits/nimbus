@@ -298,14 +298,22 @@ são mais usados por nenhuma página.
     - Banco D1 `nimbus-pedidos` criado pelo painel, local automático, vazio.
       O `database_id` está no `wrangler.jsonc`; a migração entra pelo
       `wrangler d1 migrations apply`, nunca colada no console.
-  - ⚠️ **DNSSEC está LIGADO na GoDaddy** (dois DS no registro.br, algoritmo
-    13). Antes do passo 3: desligar o DNSSEC na GoDaddy, esperar o DS sumir da
-    consulta pública (`Resolve-DnsName nimbuswear.com.br -Type DS`), só então
-    trocar os nameservers, e religar o DNSSEC depois pela Cloudflare. Trocar
-    com o DS no ar derruba o site e a loja.
-  - **Próximo passo do dono:** desligar o DNSSEC na GoDaddy (primeira metade
-    do passo 3). Em paralelo, o 4 (conta do Mercado Pago no CNPJ e
-    credenciais de teste) destrava o `workers.dev`.
+  - ⚠️ **DNSSEC: desligado na GoDaddy em 25/11, com o sim do dono** ("pode,
+    faça tudo"). Estava ligado desde 22/11 (dois DS no registro.br, algoritmo
+    13, key tags 23259 e 57639). Logo depois de desligar, o registro.br ainda
+    publicava os dois DS e a zona da GoDaddy seguia assinada e validando
+    (9.9.9.9, 8.8.8.8 e 1.1.1.1 respondiam). Trocar os nameservers com o DS no
+    ar derruba o site e a loja. Antes da troca, conferir:
+    `Resolve-DnsName nimbuswear.com.br -Type DS -Server a.dns.br -DnsOnly`
+    sem DS, e esperar mais 1 hora (o TTL do DS é 3600) para os caches.
+  - Inventário do painel de DNS da GoDaddy, conferido em 25/11: 10 registros,
+    os 7 copiados para a Cloudflare mais NS e SOA. Nenhum escondido.
+  - **Próximo passo:** quando o DS sumir, trocar os nameservers na GoDaddy
+    para `aisha.ns.cloudflare.com` e `amit.ns.cloudflare.com` (passo 3,
+    autorizado pelo dono no mesmo "faça tudo"), clicar "I updated my
+    nameservers" na Cloudflare e, com a zona ativa, religar o DNSSEC pela
+    Cloudflare e pôr o DS novo na GoDaddy. Em paralelo, o 4 (conta do Mercado
+    Pago no CNPJ e credenciais de teste) destrava o `workers.dev`.
 
   Proposta da loja própria (base do plano):
   - Carrinho na vitrine.
