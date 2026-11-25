@@ -137,3 +137,8 @@ nuvemshop/assets/producao-capas/**/*.jpg
 
 # Config local do Claude Code e por maquina, nao por projeto
 .claude/settings.local.json
+
+# Servidor da loja (Worker): segredo local do wrangler e cache dele. Segredo de
+# verdade mora só no cofre do Worker (`wrangler secret put`).
+.dev.vars*
+.wrangler/

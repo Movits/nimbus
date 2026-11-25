@@ -106,7 +106,7 @@ Um comando roda todos:
 npm run vitrine:portoes
 ```
 
-Onze portões, e **cada um nasceu de um bug real que passou**. Os que mais
+Treze portões, e **cada um nasceu de um bug real que passou** (os dois da loja própria, de 25/11, nasceram antes do bug, com o servidor). Os que mais
 mordem:
 
 - `vitrine:lint` — copy pública: sem travessão, frase dos 10% no fim de toda
@@ -134,6 +134,12 @@ mordem:
   "vigente" dentro de quarentena quebra. Nasceu da auditoria de 11/08 (45
   documentos sem status e o README do cemitério marcado vigente). Exceções em
   `scripts/status-docs.allow.json`, e a lista **só encolhe**.
+- `loja:teste` — o servidor da loja própria (`servidor/`) rodado no Node, sem
+  conta nem rede: matriz de sacolas e CEPs com o total esperado, preço do
+  navegador ignorado, aviso de pagamento com assinatura falsa recusado, aviso
+  repetido sem segundo e-mail, valor adulterado bloqueado.
+- `loja:segredos` — nenhuma chave (Mercado Pago, Resend, GitHub e afins) nem
+  `.dev.vars`/`.env` versionados no repositório público.
 
 Mais dois, fora do conjunto:
 

@@ -38,6 +38,11 @@ jobs:
       # assets privados, que este repo público não tem.
       - run: node scripts/vitrine/lint-nuvem.mjs
       - run: node scripts/vitrine/lint-tracking.mjs
+      # Servidor da loja própria (plano de 13/11/2026, seção 3): o preço
+      # cobrado é o do catálogo e o aviso de pagamento não se deixa enganar; e
+      # nenhuma chave no repositório público.
+      - run: node servidor/teste/loja-teste.mjs
+      - run: node scripts/verifica-segredos.mjs
       # docs:status sem os repos privados: o script pula raiz ausente sozinho.
       - run: node scripts/verifica-status-docs.mjs
       # P1-1f (r4): HTML commitado velho passa nos lints; o CI regenera as

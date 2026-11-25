@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-08-21
+atualizado: 2026-11-25
 ---
 
 # CLAUDE.md
@@ -13,6 +13,12 @@ Marca brasileira de streetwear católico premium, loja na Nuvemshop (plano
 Impulso, tema Baires congelado). Produção print-on-demand em transição:
 **migração para a IzzyPrint decidida em 07/08**; a YouDraw produziu o catálogo
 atual. Estado vivo em `docs/ESTADO.md`.
+
+**Saída da Nuvemshop decidida em 12/11/2026**: loja própria, com Mercado Pago
+Checkout Pro e site e servidor na Cloudflare, pelo plano aprovado em
+[`docs/decisoes/2026-11-13-loja-propria-plano.md`](docs/decisoes/2026-11-13-loja-propria-plano.md).
+Cada passo externo dele (conta, chave, DNS, cobrança, publicação) espera o sim
+do dono, um por um. Até a virada, a Nuvemshop segue como está e a loja fechada.
 
 ## Leia isto e mais nada
 
@@ -62,7 +68,7 @@ Não há test runner: cada portão é um script Node que sai com código ≠ 0, 
 ```bash
 npm run typecheck                    # tsc --noEmit (landing)
 node scripts/geometry/validate.mjs   # 38.880 cenas sintéticas; nenhum veredito de medição sem ele passar
-npm run vitrine:portoes              # os 11 portões: copy, claims, tokens, links, variantes, nuvem, tracking, dpi300, docs:links, docs:status, loja:css
+npm run vitrine:portoes              # os 13 portões: copy, claims, tokens, links, variantes, nuvem, tracking, dpi300, docs:links, docs:status, loja:css, loja:teste, loja:segredos
 npm run vitrine                      # REGERA public/loja/ (catalogo → lint → paginas → claims → nuvem); commitar a saída junto
 npm run vitrine:olho                 # mede imagem esticada, desalinhamento, rolagem horizontal e alvo de toque em 5 telas (precisa do npm run dev de pé)
 npm run dev | build | preview        # landing Vite (localhost:5173)
@@ -108,6 +114,12 @@ confira o mapa antes de rodar. `scripts/geometry/` (medidor de escala/posição
 da estampa, README explica o princípio físico) e `scripts/producao/` (capas,
 inventário, portão 300 DPI) têm README próprio.
 
+**`servidor/`** é o Worker da loja própria (fase 3 do plano de 13/11): checkout,
+aviso de pagamento, conciliação e desistência, com o preço lido do mesmo
+`catalogo.json` do deploy. **Ainda não está ligado** (falta a conta Cloudflare);
+o `wrangler.jsonc` da raiz tem dois campos a preencher. O portão `loja:teste`
+roda o servidor inteiro no Node, sem conta nem rede. Mapa em `servidor/LEIA-ME.md`.
+
 `tmp_*` na raiz e `_arquivo-*/` são rascunho local gitignorado; `dist/` é
 saída de build.
 
@@ -147,6 +159,15 @@ Não execute pedido pago.
 
 Este repositório é **público**: nunca exponha CPF, endereço, senha, cookie, token
 ou dado de cliente.
+
+Loja própria (plano de 13/11/2026, seção 7):
+- Segredo (token do gateway, segredo do webhook, chave de e-mail, token da
+  Cloudflare) mora só no cofre do Worker (`wrangler secret`) e nos segredos do
+  GitHub. O portão `loja:segredos` cobra.
+- Dado de cliente mora só no banco D1 da conta do dono, nunca em arquivo,
+  log, commit ou no brain.
+- O checkout cobra o preço do `catalogo.json` deste repositório público: todo
+  preço novo entra por commit que o dono aprova.
 
 ## Verificações iniciais
 

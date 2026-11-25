@@ -1,0 +1,35 @@
+// Worker da NIMBUS: o site (arquivos estáticos do build) e o servidor da loja
+// no mesmo projeto (plano de 13/11/2026, seção 2, opção A).
+//
+// AINDA NÃO LIGADO. Falta a conta Cloudflare do dono (passo 2 do plano): o
+// database_id do D1 e o endereço workers.dev nascem nela. Segredo nunca entra
+// aqui: vai pelo `wrangler secret put` (lista em servidor/LEIA-ME.md).
+{
+  "name": "nimbus",
+  "main": "servidor/src/index.js",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "nimbus-pedidos",
+      "database_id": "PREENCHER-QUANDO-A-CONTA-EXISTIR",
+      "migrations_dir": "servidor/migrations"
+    }
+  ],
+  // Conciliação e limpeza, de hora em hora (o plano grátis dá 5 crons).
+  "triggers": { "crons": ["17 * * * *"] },
+  "vars": {
+    "URL_BASE": "PREENCHER-COM-O-ENDERECO-WORKERS-DEV",
+    "EMAIL_REMETENTE": "NIMBUS <pedidos@nimbuswear.com.br>",
+    "EMAIL_RESPOSTA": "nimbuswearbr@gmail.com",
+    "EMAIL_DONO": "nimbuswearbr@gmail.com"
+  },
+  "observability": { "enabled": true }
+}

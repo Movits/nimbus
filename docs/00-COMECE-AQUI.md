@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-11
+atualizado: 2026-11-25
 ---
 
 # Comece aqui
@@ -27,6 +27,7 @@ documento tem `status:` no topo; sem status, trate como suspeito.
 | Produzir **vídeo para ads** (receita, Resolve, export 9:16) | [`fluxos/video-ads.md`](fluxos/video-ads.md) |
 | Tratar **imagem da RELÍQUIA** no Affinity (recorte, export, qualidade) | [`fluxos/tratar-reliquia-no-affinity.md`](fluxos/tratar-reliquia-no-affinity.md) |
 | Mexer em **evento GA4**, medição, meta das datas | [`fluxos/tracking-plan.md`](fluxos/tracking-plan.md) |
+| Mexer na **loja própria**: checkout, aviso de pagamento, pedido (plano em `decisoes/2026-11-13-loja-propria-plano.md`) | [`../servidor/LEIA-ME.md`](../servidor/LEIA-ME.md) |
 
 ## Preciso de um número, não de um processo
 

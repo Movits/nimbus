@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-11
+atualizado: 2026-11-25
 ---
 
 # scripts/ — o que é vivo e o que é superado
@@ -23,6 +23,7 @@ este mapa e o banner no topo de cada script superado.
 | Reteste local do desempate sacola↔carrinho | `vitrine/teste-sincroniza.mjs` |
 | Links da documentação (`npm run docs:links`) | `link-check-docs.mjs` |
 | CSS da loja sobrevive ao minificador do painel (`npm run loja:css`) | `verifica-css-loja.mjs` |
+| Nenhuma chave nem `.dev.vars`/`.env` versionados no repo público (`npm run loja:segredos`); o servidor da loja própria e o portão `loja:teste` moram em `../servidor/` (mapa em `servidor/LEIA-ME.md`) | `verifica-segredos.mjs` |
 | Build do CSS consolidado da loja | `build_nimbus_publication_css.mjs` (leia o achado do escape `\00000A` antes de regenerar) |
 | Tabela de medidas (fonte única, lida por `geometry/garment-specs.mjs`) | `build-prelaunch-matrix.mjs` |
 | Bootstrap dos assets privados | `setup-assets.mjs` |

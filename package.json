@@ -29,10 +29,12 @@
     "video:timeline": "node scripts/video/monta-timeline.mjs",
     "video:srt": "node scripts/video/gera-srt.mjs",
     "video:diff": "node scripts/video/diff-timeline.mjs",
-    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes && npm run vitrine:nuvem && npm run vitrine:tracking && npm run producao:dpi300 && npm run docs:links && npm run docs:status && npm run loja:css",
+    "vitrine:portoes": "npm run vitrine:lint && npm run vitrine:claims && npm run vitrine:tokens && npm run vitrine:links && npm run vitrine:variantes && npm run vitrine:nuvem && npm run vitrine:tracking && npm run producao:dpi300 && npm run docs:links && npm run docs:status && npm run loja:css && npm run loja:teste && npm run loja:segredos",
     "docs:links": "node scripts/link-check-docs.mjs ../nimbus-assets ../nimbus-brain",
     "docs:status": "node scripts/verifica-status-docs.mjs ../nimbus-assets ../nimbus-brain",
     "loja:css": "node scripts/verifica-css-loja.mjs",
+    "loja:teste": "node servidor/teste/loja-teste.mjs",
+    "loja:segredos": "node scripts/verifica-segredos.mjs",
     "sessao:inicio": "node scripts/sessao/checagem-inicial.mjs",
     "sessao:fim": "node scripts/sessao/checagem-final.mjs"
   },

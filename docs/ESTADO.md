@@ -1,6 +1,6 @@
 ---
 status: vigente
-atualizado: 2026-11-13
+atualizado: 2026-11-25
 ---
 
 # Estado do projeto
@@ -258,6 +258,29 @@ são mais usados por nenhuma página.
   nota fiscal por pedido. Falta escolher o endereço do rodapé. Nenhuma conta,
   chave, cobrança ou troca de DNS sem o sim dele, passo a passo.
 
+  **25/11: o que já anda sem o dono.**
+  - Servidor da fase 3 escrito em `servidor/` (checkout, aviso de pagamento
+    assinado, conciliação de hora em hora, desistência, banco D1) e testado
+    pelo portão novo `loja:teste`, que roda tudo no Node sem conta nem rede.
+    Não está ligado em lugar nenhum. Mapa e desvios do plano em
+    [`../servidor/LEIA-ME.md`](../servidor/LEIA-ME.md).
+  - Portão `loja:segredos`, `sw.js` sem cache de `/api/` e `/admin/`, e
+    `wrangler.jsonc` com os dois campos que nascem na conta.
+  - Textos legais em rascunho, com seis pontos em aberto para o dono:
+    [`decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md`](decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md).
+  - Faixa de CEP 78900-000 a 78999-999 sem estado nas duas fontes do plano:
+    recusada até a conferência nos Correios.
+  - Achado de rede em 25/11, fora do código: `loja.nimbuswear.com.br` não
+    completa o TLS (o curl recebe `SEC_E_ILLEGAL_MESSAGE`), e o certificado de
+    `nimbuswear.com.br` veio da cadeia nova do Let's Encrypt (YR2, Root YR),
+    que o Node 24 desta máquina não valida (`UNABLE_TO_GET_ISSUER_CERT`; o
+    curl valida). Por isso `vitrine:links` com rede e `docs:links` reprovam
+    aqui; com `SKIP_REDE=1` passam. O monitor diário do Actions pode estar
+    acusando o mesmo.
+  - **Próximo passo do dono: o 2, criar a conta na Cloudflare.** Depois, o 4
+    (conta do Mercado Pago no CNPJ e credenciais de teste) destrava o
+    `workers.dev`.
+
   Proposta da loja própria (base do plano):
   - Carrinho na vitrine.
   - Checkout hospedado do meio de pagamento (o cartão não passa pela NIMBUS).
@@ -331,7 +354,7 @@ são mais usados por nenhuma página.
   manifesto em duas colunas, pós-compra ligado.
 - Ferramenta `/registro-rosto/` no ar (#61): página utilitária de fotos para o
   Soul, sem link de entrada, noindex.
-- **Onze portões** (`npm run vitrine:portoes`), monitor diário no Actions, e
+- **Treze portões** (`npm run vitrine:portoes`; `loja:teste` e `loja:segredos` desde 25/11), monitor diário no Actions, e
   hook de sessão conferindo a sincronia dos 3 repos ao abrir. Fora dos portões,
   porque precisa do servidor de pé: `npm run vitrine:olho` (desde 11/11).
 

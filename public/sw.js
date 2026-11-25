@@ -66,6 +66,11 @@ self.addEventListener("fetch", (ev) => {
   const req = ev.request;
   if (req.method !== "GET") return;
   const url = new URL(req.url);
+  // Servidor da loja e painel (plano da loja própria, 13/11/2026): resposta com
+  // dado de pedido nunca vai para o cache do navegador. Sem respondWith, o
+  // pedido segue direto para a rede. Nada destes caminhos foi guardado antes,
+  // por isso a VERSAO não muda.
+  if (url.origin === location.origin && (url.pathname.startsWith("/api/") || url.pathname.startsWith("/admin/"))) return;
   if (url.origin !== location.origin) {
     if (TERCEIROS.includes(url.origin)) ev.respondWith(staleWhileRevalidate(req));
     return;
