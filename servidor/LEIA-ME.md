@@ -79,9 +79,11 @@ o Turnstile em teste, a Cloudflare publica o segredo que sempre passa:
 ## Para ligar no `workers.dev` (fase 3, depois dos passos 2 e 4)
 
 1. `npm i -D wrangler` e `npx wrangler login` na conta do dono.
-2. `npx wrangler d1 create nimbus-pedidos`; copiar o `database_id` para o
-   `wrangler.jsonc`.
-3. `npx wrangler d1 migrations apply nimbus-pedidos --remote`.
+2. ~~`npx wrangler d1 create nimbus-pedidos`~~: **feito em 25/11 pelo
+   painel**; o `database_id` já está no `wrangler.jsonc`. O banco está vazio.
+3. `npx wrangler d1 migrations apply nimbus-pedidos --remote`. Só pelo
+   wrangler: ele registra a migração na tabela `d1_migrations`; colar o SQL no
+   console do painel faria o wrangler tentar de novo e falhar.
 4. Os segredos da tabela acima, com as credenciais **de teste** do Mercado Pago.
 5. `npm run build` e `npx wrangler deploy`; copiar o endereço `*.workers.dev`
    para `URL_BASE`.

@@ -1,8 +1,9 @@
 // Worker da NIMBUS: o site (arquivos estáticos do build) e o servidor da loja
 // no mesmo projeto (plano de 13/11/2026, seção 2, opção A).
 //
-// AINDA NÃO LIGADO. Falta a conta Cloudflare do dono (passo 2 do plano): o
-// database_id do D1 e o endereço workers.dev nascem nela. Segredo nunca entra
+// AINDA NÃO LIGADO. A conta Cloudflare do dono existe desde 25/11/2026 e o
+// banco D1 foi criado nela (vazio: a migração entra pelo wrangler). Falta o
+// endereço workers.dev, que nasce no primeiro deploy. Segredo nunca entra
 // aqui: vai pelo `wrangler secret put` (lista em servidor/LEIA-ME.md).
 {
   "name": "nimbus",
@@ -19,7 +20,7 @@
     {
       "binding": "DB",
       "database_name": "nimbus-pedidos",
-      "database_id": "PREENCHER-QUANDO-A-CONTA-EXISTIR",
+      "database_id": "f9ecb9c8-648e-4202-9a35-b2c5f7cd6105",
       "migrations_dir": "servidor/migrations"
     }
   ],

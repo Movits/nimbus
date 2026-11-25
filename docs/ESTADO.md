@@ -280,16 +280,32 @@ são mais usados por nenhuma página.
     aqui; com `SKIP_REDE=1` passam. O monitor diário do Actions pode estar
     acusando o mesmo.
   - **Passo 2 feito em 25/11:** o dono criou a conta na Cloudflare, com login
-    pelo GitHub (a segurança da conta é a do GitHub dele). Nada criado dentro
-    dela ainda: sem domínio, sem banco, sem Worker. Nesta máquina, o plugin
-    oficial `cloudflare@cloudflare` (skills e o MCP `mcp.cloudflare.com`) foi
-    instalado no Claude Code, no escopo do usuário; o MCP pede o OAuth da conta
-    no primeiro uso.
-  - **Próximo passo:** o sim do dono para preparar a conta (a zona
-    `nimbuswear.com.br` com os registros copiados em "DNS only", que não muda
-    nada no ar, e o banco D1). Depois, o 3 (nameservers na GoDaddy) e o 4
-    (conta do Mercado Pago no CNPJ e credenciais de teste), que destrava o
-    `workers.dev`.
+    pelo GitHub (a segurança da conta é a do GitHub dele). Nesta máquina, o
+    plugin oficial `cloudflare@cloudflare` (skills e o MCP
+    `mcp.cloudflare.com`) foi instalado no Claude Code, no escopo do usuário;
+    o MCP pede o OAuth da conta (`/mcp`) no primeiro uso.
+  - **Conta preparada em 25/11, com o sim do dono ("pode preparar tudo"):**
+    - Zona `nimbuswear.com.br` no plano Free, ainda **pendente** (os
+      nameservers seguem na GoDaddy, então nada mudou no ar). Sete registros,
+      todos em "DNS only", conferidos um a um contra o DNS público de hoje e
+      consultados direto no nameserver da Cloudflare: os 4 `A` do GitHub
+      Pages, `www` para `movits.github.io`, `loja` para
+      `nimbus40.lojavirtualnuvem.com.br` (o escaneamento não achou; entrou à
+      mão) e o `_dmarc` que a GoDaddy já publica. Bot Preference Sync
+      desligado, para a Cloudflare não mexer no `robots.txt`.
+    - Nameservers indicados: `aisha.ns.cloudflare.com` e
+      `amit.ns.cloudflare.com`.
+    - Banco D1 `nimbus-pedidos` criado pelo painel, local automático, vazio.
+      O `database_id` está no `wrangler.jsonc`; a migração entra pelo
+      `wrangler d1 migrations apply`, nunca colada no console.
+  - ⚠️ **DNSSEC está LIGADO na GoDaddy** (dois DS no registro.br, algoritmo
+    13). Antes do passo 3: desligar o DNSSEC na GoDaddy, esperar o DS sumir da
+    consulta pública (`Resolve-DnsName nimbuswear.com.br -Type DS`), só então
+    trocar os nameservers, e religar o DNSSEC depois pela Cloudflare. Trocar
+    com o DS no ar derruba o site e a loja.
+  - **Próximo passo do dono:** desligar o DNSSEC na GoDaddy (primeira metade
+    do passo 3). Em paralelo, o 4 (conta do Mercado Pago no CNPJ e
+    credenciais de teste) destrava o `workers.dev`.
 
   Proposta da loja própria (base do plano):
   - Carrinho na vitrine.
