@@ -86,7 +86,7 @@ function mundo() {
     MP_ACCESS_TOKEN: "token-de-teste",
     MP_WEBHOOK_SECRET: SEGREDO,
     RESEND_API_KEY: "chave-de-teste",
-    TURNSTILE_SECRET: "segredo-turnstile-de-teste",
+    TURNSTILE_SECRET: "turnstile-teste",
     SAL_IP: "sal-de-teste",
     URL_BASE: "https://nimbus.teste",
     EMAIL_REMETENTE: "NIMBUS <pedidos@nimbuswear.com.br>",
