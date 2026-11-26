@@ -106,7 +106,7 @@ Um comando roda todos:
 npm run vitrine:portoes
 ```
 
-Treze portões, e **cada um nasceu de um bug real que passou** (os dois da loja própria, de 25/11, nasceram antes do bug, com o servidor). Os que mais
+Doze portões, e **cada um nasceu de um bug real que passou** (os dois da loja própria, de 25/11, nasceram antes do bug, com o servidor). Os que mais
 mordem:
 
 - `vitrine:lint` — copy pública: sem travessão, frase dos 10% no fim de toda
@@ -115,10 +115,6 @@ mordem:
   página, overclaim, imagem de CDN acima do teto, JSON-LD divergindo do catálogo.
 - `vitrine:tokens` — paridade dos tokens `:root` entre vitrine e landing.
 - `vitrine:links` — links das páginas geradas.
-- `vitrine:variantes` — **o que a vitrine POSTa contra o que a loja aceita**,
-  nos 44 produtos. Nasceu em 02/08 do bug da Ecobag, que mandava dois eixos de
-  variante para um produto que só tem um, e voltava o cliente para uma sacola
-  vazia sem erro na tela.
 - `docs:links` — todo endereço escrito em markdown nos três repositórios.
   Nasceu de eu ter mandado o dono abrir um host que não existe. Exceções em
   `scripts/link-check-docs.allow.json`, uma por vez e com motivo escrito.

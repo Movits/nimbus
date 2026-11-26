@@ -290,16 +290,23 @@ são mais usados por nenhuma página.
     casos contra o mesmo servidor de mentira do `loja:teste`), fora do CI
     porque precisa do Chromium. Mapa em
     [`../servidor/LEIA-ME.md`](../servidor/LEIA-ME.md).
-  - O que a fase 4 deixa para depois:
-    - a linha do prazo no resumo aponta para "Envios e prazos" até o dono
-      decidir o prazo fora das capitais (item 4 do rascunho de textos);
-    - a privacidade ainda cita os dois cookies da sacola, que o `ui.js` não
-      grava mais, e a Nuvemshop: muda no passo 11, com os outros textos;
-    - a chave do Turnstile é a de teste, e o build recusa abrir a loja com ela;
-    - o portão `vitrine:variantes` confere o formulário da página de produto
-      contra a Nuvemshop. Hoje passa porque o catálogo está vazio; com produto
-      no catálogo e o formulário novo, reprova. Sai quando o catálogo novo
-      entrar (plano, seção 7), trocado pelo `loja:teste`.
+  - **26/11, com o "faz tudo" do dono:**
+    - prazo: até 14 dias úteis fora do Norte e até 20 no Norte, do pagamento
+      à entrega (constante `PRAZOS` no `build-paginas.mjs`, lida pelo
+      resumo antes de pagar, pela página de envios e pela de produto). O 20
+      do Norte é estimativa: conferir com o frete real da primeira peça;
+    - textos do rascunho aplicados em privacidade, trocas, envios (com a
+      regra de frete de 28/10 escrita certa) e impacto, e o selo da loja
+      aberta. Sem os pontos em aberto: o nome empresarial e o endereço do
+      rodapé (o texto nunca veio para o repositório), para onde vai a peça
+      devolvida e a resposta automática do Gmail, que a página de trocas não
+      promete até existir;
+    - `vitrine:variantes` e `teste-sincroniza` aposentados (banner, fora do
+      `vitrine:portoes` e do monitor diário): doze portões.
+  - Segue com o dono: o widget real do Turnstile na conta Cloudflare (a
+    chave de teste continua e o build recusa abrir a loja com ela), o nome
+    empresarial e o endereço do rodapé, e ligar a resposta automática do
+    Gmail.
   - Achado de rede em 25/11, fora do código: `loja.nimbuswear.com.br` não
     completa o TLS (o curl recebe `SEC_E_ILLEGAL_MESSAGE`), e o certificado de
     `nimbuswear.com.br` veio da cadeia nova do Let's Encrypt (YR2, Root YR),
@@ -415,7 +422,7 @@ são mais usados por nenhuma página.
   manifesto em duas colunas, pós-compra ligado.
 - Ferramenta `/registro-rosto/` no ar (#61): página utilitária de fotos para o
   Soul, sem link de entrada, noindex.
-- **Treze portões** (`npm run vitrine:portoes`; `loja:teste` e `loja:segredos` desde 25/11), monitor diário no Actions, e
+- **Doze portões** (`npm run vitrine:portoes`; `loja:teste` e `loja:segredos` desde 25/11, `vitrine:variantes` aposentado em 26/11), monitor diário no Actions, e
   hook de sessão conferindo a sincronia dos 3 repos ao abrir. Fora dos portões,
   porque precisa do servidor de pé: `npm run vitrine:olho` (desde 11/11).
 

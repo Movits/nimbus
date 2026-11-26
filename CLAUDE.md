@@ -68,7 +68,7 @@ Não há test runner: cada portão é um script Node que sai com código ≠ 0, 
 ```bash
 npm run typecheck                    # tsc --noEmit (landing)
 node scripts/geometry/validate.mjs   # 38.880 cenas sintéticas; nenhum veredito de medição sem ele passar
-npm run vitrine:portoes              # os 13 portões: copy, claims, tokens, links, variantes, nuvem, tracking, dpi300, docs:links, docs:status, loja:css, loja:teste, loja:segredos
+npm run vitrine:portoes              # os 12 portões: copy, claims, tokens, links, nuvem, tracking, dpi300, docs:links, docs:status, loja:css, loja:teste, loja:segredos
 npm run vitrine                      # REGERA public/loja/ (catalogo → lint → paginas → claims → nuvem); commitar a saída junto
 npm run vitrine:olho                 # mede imagem esticada, desalinhamento, rolagem horizontal e alvo de toque em 5 telas (precisa do npm run dev de pé)
 npm run dev | build | preview        # landing Vite (localhost:5173)

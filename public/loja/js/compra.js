@@ -82,7 +82,7 @@
     const enviar = form.querySelector('button[type="submit"]');
     const robo = $("[data-turnstile]");
     const outro = $("[data-projeto-outro]");
-    const FAIXAS = JSON.parse(document.getElementById("faixas-cep").textContent);
+    const { faixas: FAIXAS, norte: NORTE } = JSON.parse(document.getElementById("finalizar-dados").textContent);
 
     const novaChave = () => Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, "0")).join("");
     let chave = novaChave();
@@ -211,6 +211,8 @@
       const cep = digitos(e.cep).replace(/^(\d{5})(\d{3})$/, "$1-$2");
       $("[data-resumo-entrega]").textContent = "Entrega: " + [e.rua + ", " + e.numero, e.complemento, e.bairro, e.cidade + ", " + e.uf, "CEP " + cep]
         .map((s) => s.trim()).filter(Boolean).join(" · ");
+      const prazo = $("[data-resumo-prazo]");
+      prazo.textContent = NORTE.includes(e.uf) ? prazo.dataset.norte : prazo.dataset.resto;
       const pagar = $("[data-pagar]");
       const url = linkSeguro(r.pagar);
       pagar.hidden = !url;

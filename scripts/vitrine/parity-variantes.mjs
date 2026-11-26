@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// SUPERADO em 26/11/2026: a vitrine não POSTa mais no carrinho da Nuvemshop (loja própria, fase 4); o preço cobrado é conferido pelo loja:teste. Fora do vitrine:portoes e do monitor diário. Não usar; histórico.
 /**
  * Paridade de variantes: o que a vitrine POSTa x o que a loja aceita.
  *

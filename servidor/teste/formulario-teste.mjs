@@ -207,6 +207,7 @@ caso("o resumo é o do servidor: itens, frete do Norte, total e o link de pagar"
   assert.match(await texto(page, "[data-resumo-codigo]"), new RegExp(`^Pedido ${codigo}\\.`));
   assert.equal(await page.getAttribute("[data-pagar]", "href"), "https://mp.teste/checkout/1");
   assert.match(await texto(page, '[data-etapa="resumo"]'), /Você pode desistir em até 7 dias após receber/);
+  assert.equal(await texto(page, "[data-resumo-prazo]"), "Prazo: até 20 dias úteis do pagamento confirmado até a entrega, com rastreio.");
   await semRolagemLateral(page, "resumo");
   await foto(page, "2-resumo");
 });

@@ -13,14 +13,13 @@ este mapa e o banner no topo de cada script superado.
 
 | O quê | Onde |
 |---|---|
-| Portões e builds da vitrine (`npm run vitrine`, `vitrine:portoes`) | `vitrine/` (build-catalogo, build-media, build-paginas, lint-copy, lint-claims, parity-tokens, parity-variantes, link-check) |
+| Portões e builds da vitrine (`npm run vitrine`, `vitrine:portoes`) | `vitrine/` (build-catalogo, build-media, build-paginas, lint-copy, lint-claims, parity-tokens, link-check) |
 | Portões de nascimento da NUVEM (`vitrine:nuvem`): devocional em toda arte, escala por peça, par frente/costas por cor | `vitrine/lint-nuvem.mjs` + tabelas `vitrine/escala-grade.json` e `vitrine/par-fotos.excecoes.json` (P1-1 r4) |
 | Contrato de eventos GA4 (`vitrine:tracking`; o plano é `docs/fluxos/tracking-plan.md`) | `vitrine/lint-tracking.mjs` (P1-5 r4) |
 | Receita de export a 300 DPI (`producao:dpi300`; precisa dos assets mesclados, `SKIP_ASSETS=1` só em ambiente sem eles) | `producao/lint-export-300dpi.mjs` + baseline datada `producao/export-300dpi.baseline.json` (P1-1c r4; regra em `docs/verdades/receita-export-300dpi.md`) |
 | Monitor diário contra o ar (Actions, agendado; abre issue ao falhar) | `.github/workflows/monitor-diario.yml` (P1-1g r4) |
 | Olho medido do site: imagem esticada, itens desalinhados, rolagem horizontal, alvo de toque, texto cortado, em 5 larguras de tela (`npm run vitrine:olho`, com o `npm run dev` de pé; fluxo em `docs/fluxos/site-um-so-ceu.md`) | `vitrine/olho.mjs` |
 | Miniaturas das gravuras em 320, 480 e 640 px e a imagem grande da página de cada uma, aparadas na folha quando o `gravuras.json` traz `recorte` (sem a redução feita aqui a gravura fina vira moiré no navegador); rode ao entrar gravura nova e commite a saída em `public/gravuras/img/` | `vitrine/build-gravuras-miniaturas.mjs` |
-| Reteste local do desempate sacola↔carrinho | `vitrine/teste-sincroniza.mjs` |
 | Links da documentação (`npm run docs:links`) | `link-check-docs.mjs` |
 | CSS da loja sobrevive ao minificador do painel (`npm run loja:css`) | `verifica-css-loja.mjs` |
 | Nenhuma chave nem `.dev.vars`/`.env` versionados no repo público (`npm run loja:segredos`); o servidor da loja própria e o portão `loja:teste` moram em `../servidor/` (mapa em `servidor/LEIA-ME.md`) | `verifica-segredos.mjs` |
@@ -34,6 +33,8 @@ este mapa e o banner no topo de cada script superado.
 | Pipeline de vídeo dos ads no Resolve gratuito (`video:normaliza`, `video:timeline`, `video:srt`, `video:diff`; fluxo em `docs/fluxos/video-ads.md`) | `video/` (mapa em `video/README.md`) |
 | Frontmatter de status em todo .md (`npm run docs:status`) | `verifica-status-docs.mjs` + `status-docs.allow.json` (lista que só encolhe) |
 | Recorte/organização de artes (`npm run assets`, `finalize`, `cutout:inbox`) | `cutout.mjs`, `finalize-prints.mjs`, `transparentize.mjs`, `organize-designs.mjs` (atenção: chroma CONDENADO em 06/08 — o organize vale para legado) |
+
+`vitrine/parity-variantes.mjs` e `vitrine/teste-sincroniza.mjs` estão superados desde 26/11/2026: a sacola deixou de falar com o carrinho da Nuvemshop (loja própria, fase 4). O teste da compra agora é `npm run loja:formulario`.
 
 `verify-store-full.mjs` não está aposentado: é a base do gate P1-6 planejado
 pela ata de 30/07 (`nuvemshop/auditoria/2026-07-30-conselho-vitrine-r3/`).

@@ -6,7 +6,13 @@ aprovacao: rascunho-espera-o-dono
 
 # Loja própria: textos legais em rascunho
 
-> [!warning] RASCUNHO. Nada daqui está publicado nem pode ser publicado sem o
+> [!info] **Aplicado em 26/11/2026, com o "faz tudo" do dono**, nas páginas
+> de privacidade, trocas, envios e impacto e no selo da loja aberta, com a
+> loja ainda fechada. Ficaram de fora o rodapé (nome empresarial e endereço) e
+> a promessa de resposta automática. O prazo fora das capitais (item 4) foi
+> decidido: 14 dias úteis fora do Norte e 20 no Norte.
+
+> [!warning] RASCUNHO (texto original). Nada daqui está publicado nem pode ser publicado sem o
 > sim do dono (passo 11 do
 > [plano de 13/11](2026-11-13-loja-propria-plano.md)). As páginas no ar seguem
 > as de hoje até a fase 4, com a loja fechada. Os trechos `[EM ABERTO: ...]`

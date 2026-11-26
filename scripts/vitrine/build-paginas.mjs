@@ -8,7 +8,7 @@ import crypto from "node:crypto";
 // A finalização usa as mesmas listas que o servidor confere: os projetos
 // sociais e as faixas de CEP por estado. Uma fonte só, a do servidor.
 import { PROJETOS } from "../../servidor/src/pedido.js";
-import { FAIXAS_CEP, UFS } from "../../servidor/src/frete.js";
+import { FAIXAS_CEP, UFS, UF_NORTE } from "../../servidor/src/frete.js";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 
@@ -41,6 +41,14 @@ const SACOLA = `${PREFIXO}/finalizar/`;
 // Cloudflare: sempre passa e só combina com o segredo de teste
 // (servidor/LEIA-ME.md). O build recusa abrir a loja com ela.
 const TURNSTILE_SITE_KEY = "1x00000000000000000000AA";
+// Prazo total de entrega, em dias úteis, do pagamento confirmado até a casa do
+// cliente (decisão do dono, 26/11/2026: "o tempo que você acha"). A IzzyPrint
+// produz em até 4 dias úteis (confirmado por escrito); fora do Norte, o painel
+// da Nuvemshop já anunciava até 14 (28/10), e as capitais medidas em 26/10
+// ficam em até 12. O Norte é estimativa, a conferir com o frete real da
+// primeira peça. Um lugar só: o resumo antes de pagar, a página de envios e a
+// de produto leem daqui.
+const PRAZOS = { foraDoNorte: 14, norte: 20 };
 
 // Palavras e destinos que a landing e a vitrine repetem iguais (11/11/2026).
 // A landing lê o mesmo arquivo por src/data/content.ts.
@@ -555,7 +563,7 @@ ${header()}
           return `<details><summary>Medidas e caimento</summary>${CAIMENTO[p.peca] ? `<p class="note"><b>Caimento:</b> ${esc(CAIMENTO[p.peca])}</p>` : ""}${medidas}</details>`;
         })() : ""}
         ${p.ficha.cuidados ? `<details><summary>Cuidados</summary><p class="note">${esc(p.ficha.cuidados)}</p></details>` : ""}
-        <details><summary>Prazo e envio</summary><p class="note">Peça feita no Brasil, com rastreio. Chega, após a confirmação do pagamento: São Paulo, 3 a 5 dias úteis; Sudeste, 4 a 6; Sul e Centro-Oeste, 5 a 7; Norte e Nordeste, 6 a 12. O prazo do checkout para o seu CEP prevalece.</p></details>
+        <details><summary>Prazo e envio</summary><p class="note">Peça feita no Brasil, com rastreio. Chega em até ${PRAZOS.foraDoNorte} dias úteis depois da confirmação do pagamento; na região Norte, em até ${PRAZOS.norte}. O prazo do seu CEP aparece antes de pagar.</p></details>
       </div>
 
       <div class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social da sua escolha, no checkout. <a href="${PREFIXO}/impacto/">Como funciona</a>.</div>
@@ -614,12 +622,12 @@ const INSTITUCIONAIS = {
     <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`,
     { arquivo: "manifesto-ceu-1200.webp", alt: "Curva de concreto branco modernista apontando para um céu azul com nuvens", w: 1200, h: 1600, legenda: "Entre o concreto e o céu." }],
   impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
-    <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe no checkout. Esta página explica o que isso significa, sem letra miúda.</p>
+    <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe ao finalizar a compra. Esta página explica o que isso significa, sem letra miúda.</p>
     <h2>O que chamamos de lucro</h2>
     <p>Lucro é o que sobra do seu pedido depois de todos os custos: a produção da peça, a embalagem, o frete, as taxas de pagamento e a divulgação da marca. Sobre esse valor que sobra, separamos 10%.</p>
     <h2>Como funciona</h2>
     <ol>
-      <li>No checkout, no campo mensagem do pedido, você escreve qual projeto recebe: Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo, ou outro que você indicar.</li>
+      <li>Na finalização da compra, você escolhe qual projeto recebe: Fazenda da Esperança, Cáritas Brasileira, Pequeno Cotolengo, ou outro que você indicar.</li>
       <li>Esperamos o prazo de arrependimento de 7 dias previsto em lei. Se o pedido ficar, o repasse dele entra na conta do mês.</li>
       <li>O repasse é mensal, somando os pedidos do período.</li>
       <li>O comprovante de cada repasse aparece nesta página, no Diário de Repasses abaixo.</li>
@@ -635,43 +643,66 @@ const INSTITUCIONAIS = {
   trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, que vale também para tamanho, e defeito coberto por 90 dias.", `
     <p class="lede">A nossa política é simples, segue a lei e cobre todos os casos, sem pegadinha.</p>
     <h2>Mudou de ideia? Você tem 7 dias</h2>
-    <p>A peça chegou perfeita, mas não era o que você imaginava. Você pode desistir da compra em até 7 dias corridos após o recebimento, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor. Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido e devolvemos tudo o que você pagou, incluindo o frete.</p>
+    <p>A peça chegou perfeita, mas não era o que você imaginava. Você pode desistir da compra em até 7 dias corridos após o recebimento, por qualquer motivo, como garante o artigo 49 do Código de Defesa do Consumidor.</p>
+    <p>O caminho mais rápido é o botão "Quero desistir", na página do seu pedido (o link está no e-mail da compra). Se preferir, escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> com o número do pedido. A confirmação de que a desistência chegou vai para o seu e-mail na hora.</p>
+    <p>Depois disso, mandamos a etiqueta de devolução, paga pela NIMBUS, e pedimos ao Mercado Pago o estorno de tudo o que você pagou, frete incluído. O valor volta pelo mesmo meio do pagamento: no Pix, para a conta que pagou; no cartão, na fatura, no prazo da operadora.</p>
     <h2>Chegou com problema? Avise assim que receber</h2>
     <p>Estampa falhada, mancha, costura aberta, peça errada: isso é defeito, não arrependimento, e a cobertura legal é de 90 dias para roupa (artigo 26 do CDC). Nos avise de preferência nos primeiros dias, com fotos e o número do pedido: quanto antes você escrever, mais rápido a nova peça sai. Você escolhe entre peça nova sem custo ou reembolso.</p>
     <h2>O problema apareceu depois?</h2>
     <p>Estampa que solta ou tecido que falha nas primeiras lavagens, seguindo os cuidados da etiqueta, também é defeito de fabricação. Nesse caso os 90 dias contam a partir do dia em que o problema apareceu. Mesmo caminho: foto e número do pedido por e-mail.</p>
     <h2>Errou o tamanho?</h2>
-    <p>O direito de desistir em 7 dias também vale para o tamanho: escreva em até 7 dias do recebimento, com o número do pedido, e devolvemos tudo o que você pagou, frete incluído. Se preferir o tamanho certo no lugar do dinheiro, diga no mesmo e-mail e a gente combina. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
+    <p>O direito de desistir em 7 dias também vale para o tamanho, pelo mesmo botão ou pelo mesmo e-mail, com o estorno de tudo o que você pagou, frete incluído. Se preferir o tamanho certo no lugar do dinheiro, escreva para o nosso e-mail e a gente combina. A tabela de medidas de cada produto ajuda a acertar de primeira.</p>
     <h2>Como pedir</h2>
-    <p>Um e-mail resolve tudo: <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto. Respondemos rápido.</p>`],
+    <p>Desistência: o botão "Quero desistir" na página do pedido, ou um e-mail. Defeito e troca: um e-mail para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a>, com o número do pedido no assunto e fotos, se for defeito. Respondemos em até 5 dias.</p>`],
   envios: ["Envios e prazos", "Prazo total de entrega da NIMBUS, do pagamento confirmado até a sua casa, e como funciona o rastreio.", `
     <p class="lede">Os prazos abaixo são o total, contados do pagamento confirmado até a entrega.</p>
     <h2>Prazos por região</h2>
     <ul>
       <li>São Paulo, Rio de Janeiro, Belo Horizonte, Brasília e Porto Alegre: até 12 dias úteis</li>
       <li>Salvador: até 13 dias úteis</li>
-      <li>Outras cidades: o prazo do seu CEP aparece no checkout, antes de pagar</li>
+      <li>Outras cidades fora da região Norte: até ${PRAZOS.foraDoNorte} dias úteis</li>
+      <li>Região Norte: até ${PRAZOS.norte} dias úteis</li>
     </ul>
-    <p class="note">Conta feita em 26/10/2026 com os prazos dos Correios (PAC) cotados para essas capitais, mais a nossa folga. O prazo do checkout para o seu CEP prevalece.</p>
+    <p class="note">Conta feita com os prazos dos Correios (PAC) cotados em 26/10/2026, mais a produção da peça e a nossa folga. O prazo do seu CEP aparece na finalização, antes de pagar.</p>
     <h2>Rastreio</h2>
-    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega.</p>
-    <h2>Frete grátis</h2>
-    <p>Pedidos a partir de R$399,90 têm frete grátis para todo o Brasil.</p>
-    <h2>Quanto custa o frete</h2>
-    <p>Abaixo de R$399,90, o frete é o da Entrega NIMBUS, R$19,90. O valor do seu CEP aparece no carrinho da loja, antes de pagar.</p>`],
+    <p>Todo pedido segue com código de rastreio, enviado por e-mail assim que a peça sai para entrega. Ele aparece também na página do pedido.</p>
+    <h2>Frete</h2>
+    <p>Fora da região Norte, o frete é grátis em qualquer valor.</p>
+    <p>Na região Norte (Acre, Amapá, Amazonas, Pará, Rondônia, Roraima e Tocantins), o frete é R$ 19,90, e grátis a partir de R$ 399,90 em produtos.</p>
+    <p>O valor do frete aparece na finalização da compra, junto com o total, antes de pagar.</p>`],
   privacidade: ["Privacidade", "O que a NIMBUS coleta, para que serve e como falar com a gente sobre os seus dados.", `
     <p class="lede">O essencial, em português claro.</p>
     <h2>Quem responde pelos seus dados</h2>
     <p>O controlador dos dados tratados neste site é a NIMBUS (<span class="nowrap">CNPJ 53.977.834/0001-18</span>). Qualquer pedido sobre os seus dados chega pelo e-mail do fim desta página.</p>
     <h2>O que coletamos neste site</h2>
-    <p>A sacola vive no seu navegador: guardamos ali os itens que você adicionou e o cache das páginas, que deixa as visitas seguintes mais rápidas.</p>
-    <p>Para a sacola da vitrine e o carrinho da loja mostrarem a mesma coisa, gravamos os cookies <b>nimbus_sacola_alvo</b> e <b>nimbus_sacola_loja</b> no domínio nimbuswear.com.br. Eles guardam só o retrato da sacola (itens, quantidades e a hora da última mudança), expiram em 48 horas e não identificam você.</p>
+    <p>A sacola vive no seu navegador: guardamos ali os itens que você adicionou e o cache das páginas, que deixa as visitas seguintes mais rápidas. Nada disso sai do seu aparelho até você finalizar a compra.</p>
     <p>Usamos estatísticas de navegação do Google Analytics para entender quais páginas funcionam: números agregados, sem venda de dados e sem anúncio personalizado da nossa parte.</p>
     <p>O botão "Quero ser avisado" abre o seu programa de e-mail com uma mensagem pronta para a NIMBUS. Se você enviar, guardamos o seu endereço para mandar o aviso de abertura. Para sair, basta escrever para o mesmo e-mail.</p>
-    <h2>O que fica com a loja</h2>
-    <p>Pagamento, endereço e dados do pedido são tratados no ambiente da loja (Nuvemshop), que tem política de privacidade e segurança próprias. A NIMBUS não armazena dados de cartão.</p>
+    <h2>O que pedimos para fazer a compra</h2>
+    <p>Para entregar e emitir a nota, a finalização pede o seu nome, e-mail, telefone, CPF e endereço de entrega, e o projeto social que recebe os 10%. Cada dado tem um uso:</p>
+    <ul>
+      <li>nome e endereço: a entrega;</li>
+      <li>e-mail: a confirmação do pedido, o link para acompanhar e o rastreio;</li>
+      <li>telefone: o contato da transportadora e o nosso, se algo der errado com o pedido;</li>
+      <li>CPF: a nota fiscal da compra.</li>
+    </ul>
+    <p>Para evitar pedidos feitos por robô, a Cloudflare confere que quem preenche é uma pessoa, e guardamos uma marca cifrada do seu endereço de internet (não o endereço) para limitar pedidos repetidos.</p>
+    <h2>Pagamento</h2>
+    <p>O pagamento acontece na página do Mercado Pago. O número do cartão é digitado lá e nunca passa pela NIMBUS. Do pagamento guardamos só o número da transação, o meio (Pix, cartão ou boleto) e a situação.</p>
+    <h2>Com quem compartilhamos</h2>
+    <p>Só com quem precisa para o pedido chegar até você, e nunca para venda:</p>
+    <ul>
+      <li>Mercado Pago: o seu nome e e-mail, para abrir o pagamento;</li>
+      <li>Cloudflare: hospeda o site e guarda os pedidos;</li>
+      <li>Resend: envia os e-mails do pedido;</li>
+      <li>IzzyPrint: faz a sua peça e recebe os itens do pedido e, quando despacha a peça, o endereço de entrega;</li>
+      <li>Melhor Envio e a transportadora: nome, endereço e telefone, para a etiqueta e a entrega;</li>
+      <li>nosso contador: os dados da nota fiscal.</li>
+    </ul>
+    <h2>Por quanto tempo</h2>
+    <p>Pedido que não foi pago é apagado em 30 dias. Pedido pago fica guardado pelo prazo que a lei fiscal exige, e depois é apagado.</p>
     <h2>Seus direitos</h2>
-    <p>Quer saber o que temos sobre você, corrigir ou apagar? Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> e resolvemos, como manda a LGPD.</p>`],
+    <p>Quer saber o que temos sobre você, corrigir ou apagar? Escreva para <a href="mailto:nimbuswearbr@gmail.com">nimbuswearbr@gmail.com</a> e resolvemos, como manda a LGPD. Os dados de um pedido pago só podem ser apagados depois do prazo fiscal; até lá, corrigimos o que estiver errado.</p>`],
 };
 
 /* ------------------------------------------------------------------- gates */
@@ -714,10 +745,8 @@ ${footer()}
 // em servidor/src/app.js. Os rótulos do resumo antes de pagar vêm do rascunho
 // de 25/11 (docs/decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md).
 
-// O prazo por região fora das capitais ainda é decisão do dono (item 4 do
-// rascunho de 25/11). Até lá o resumo aponta para a página de envios, e esta
-// linha é o único lugar a trocar.
-const PRAZO_RESUMO = `Prazo: o da página <a href="${PREFIXO}/envios/">Envios e prazos</a>, contado do pagamento confirmado.`;
+// O prazo do resumo sai do estado do CEP (PRAZOS, no alto do arquivo).
+const prazoTexto = (dias) => `Prazo: até ${dias} dias úteis do pagamento confirmado até a entrega, com rastreio.`;
 const DESISTENCIA = `Você pode desistir em até 7 dias após receber. <a href="${PREFIXO}/trocas/">Trocas e devoluções</a>`;
 
 const UF_NOMES = {
@@ -805,7 +834,7 @@ const finalizar = () => paginaDoPedido({
           <div class="conta__total"><dt>Total</dt><dd data-resumo-total></dd></div>
         </dl>
         <p data-resumo-entrega></p>
-        <p>${PRAZO_RESUMO}</p>
+        <p data-resumo-prazo data-norte="${esc(prazoTexto(PRAZOS.norte))}" data-resto="${esc(prazoTexto(PRAZOS.foraDoNorte))}"></p>
         <p>${DESISTENCIA}</p>
         <div class="fechamento__acoes">
           <button type="button" class="btn btn--ghost" data-abre-sacola>Corrigir a sacola</button>
@@ -815,7 +844,7 @@ const finalizar = () => paginaDoPedido({
         <p class="note">O pagamento abre na página do Mercado Pago: Pix, cartão ou boleto. O número do cartão é digitado lá e nunca passa pela NIMBUS.</p>
       </section>
     </div>
-    ${/* o estado sai do CEP pelas mesmas faixas que o servidor confere */""}<script type="application/json" id="faixas-cep">${JSON.stringify(FAIXAS_CEP)}</script>`,
+    ${/* o estado sai do CEP pelas mesmas faixas que o servidor confere, e o prazo, do estado */""}<script type="application/json" id="finalizar-dados">${JSON.stringify({ faixas: FAIXAS_CEP, norte: [...UF_NORTE] })}</script>`,
 });
 
 // O link do e-mail traz o código e o token no fragmento (#NB-XXXX-XXXX.token),

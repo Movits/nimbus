@@ -1,3 +1,4 @@
+// SUPERADO em 26/11/2026: a sacola não sincroniza mais com o carrinho da Nuvemshop (ui.js, loja própria, fase 4). Não usar; histórico.
 // O espelho da loja volta para a vitrine casando por pid + variante, não por
 // nome. O nome vem de um <a> que embrulha a variante, então chega com quebra de
 // linha e cortado em 48 caracteres: casar por ele falha nos 44 produtos.
