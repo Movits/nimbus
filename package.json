@@ -34,6 +34,7 @@
     "docs:status": "node scripts/verifica-status-docs.mjs ../nimbus-assets ../nimbus-brain",
     "loja:css": "node scripts/verifica-css-loja.mjs",
     "loja:teste": "node servidor/teste/loja-teste.mjs",
+    "loja:formulario": "node servidor/teste/formulario-teste.mjs",
     "loja:segredos": "node scripts/verifica-segredos.mjs",
     "sessao:inicio": "node scripts/sessao/checagem-inicial.mjs",
     "sessao:fim": "node scripts/sessao/checagem-final.mjs"

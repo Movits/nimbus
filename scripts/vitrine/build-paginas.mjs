@@ -5,13 +5,17 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+// A finalização usa as mesmas listas que o servidor confere: os projetos
+// sociais e as faixas de CEP por estado. Uma fonte só, a do servidor.
+import { PROJETOS } from "../../servidor/src/pedido.js";
+import { FAIXAS_CEP, UFS } from "../../servidor/src/frete.js";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 
 // Versão dos ativos: todo deploy com CSS/JS mudado troca a URL e fura o cache
 // de 10 min do GitHub Pages e o cache do navegador (dono viu CSS velho, 31/07).
 // ../css/marca.css são as primitivas da marca, o arquivo que a landing também liga.
-const ATIVOS = ["../css/marca.css", "css/tokens.css", "css/loja.css", "js/ui.js", "js/vitrine.js", "js/produto.js"]
+const ATIVOS = ["../css/marca.css", "css/tokens.css", "css/loja.css", "js/ui.js", "js/vitrine.js", "js/produto.js", "js/compra.js"]
   .map((f) => path.resolve(import.meta.dirname, "..", "..", "public/loja", f));
 // Hash sobre o conteúdo com fim de linha normalizado: o checkout Windows
 // materializa CRLF (autocrlf) e o do CI materializa LF; hashear os bytes crus
@@ -27,17 +31,16 @@ const URL_BASE = "https://nimbuswear.com.br/loja";
 const PREFIXO = "/loja";
 const esc = (s) => String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
-// Todo link interno para a loja leva ref=vitrine, parâmetro NEUTRO para o GA4
-// (P0-1 do conselho r4, 03/08). Era utm_* desde 29/07; com a tag entrando no
-// domínio da loja, utm interno reatribuiria a "vitrine" cada compra vinda de
-// campanha, no exato clique do checkout. utm_* fica reservado a campanha
-// externa. Preserva o que a URL já tiver (?variant= etc.).
-const refInterno = (url) => {
-  const u = new URL(url);
-  u.searchParams.set("ref", "vitrine");
-  return u.toString();
-};
-const SACOLA = refInterno("https://loja.nimbuswear.com.br/comprar/");
+// A sacola mora no navegador e a compra fecha em /loja/finalizar/, no mesmo
+// domínio (loja própria, plano de 13/11/2026, seção 7). Até a fase 4 o link
+// era o carrinho da Nuvemshop, com ref=vitrine para o GA4 não reatribuir a
+// compra; sem fronteira de domínio, o ref saiu junto.
+const SACOLA = `${PREFIXO}/finalizar/`;
+// Chave de site do Turnstile, o antirrobô do formulário de compra. Enquanto o
+// widget real não existe (passo 2 do plano), é a chave de TESTE publicada pela
+// Cloudflare: sempre passa e só combina com o segredo de teste
+// (servidor/LEIA-ME.md). O build recusa abrir a loja com ela.
+const TURNSTILE_SITE_KEY = "1x00000000000000000000AA";
 
 // Palavras e destinos que a landing e a vitrine repetem iguais (11/11/2026).
 // A landing lê o mesmo arquivo por src/data/content.ts.
@@ -48,8 +51,6 @@ const MARCA = JSON.parse(fs.readFileSync(path.join(RAIZ, "src/data/marca.json"),
 const AVISO_URL = `mailto:${MARCA.aviso.email}?subject=${encodeURIComponent(MARCA.aviso.assunto)}&body=${encodeURIComponent(MARCA.aviso.corpo)}`;
 const avisoBotao = (origem, classe = "btn btn--primary") =>
   `<a class="${classe}" href="${esc(AVISO_URL)}" data-aviso="${origem}">${esc(MARCA.aviso.rotulo)}</a>`;
-// link do rodapé/menu vindo do marca.json: o que aponta para a loja leva o ref
-const destino = (href) => (href.startsWith("https://loja.nimbuswear.com.br/") ? refInterno(href) : href);
 const externo = (href) => (href.startsWith("http") ? ' rel="noopener"' : "");
 // As gravuras são lidas aqui em cima porque a home fechada as mostra.
 const GRAVURAS_DADOS = JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "gravuras.json"), "utf-8"));
@@ -114,6 +115,9 @@ const VITRINE_ABERTA = false;
 // que concordar, senão a landing e a vitrine mostram lojas diferentes.
 if (MARCA.lojaAberta !== VITRINE_ABERTA)
   throw new Error(`src/data/marca.json diz lojaAberta=${MARCA.lojaAberta} e build-paginas.mjs diz VITRINE_ABERTA=${VITRINE_ABERTA}: vire os dois juntos.`);
+// Com a chave de teste, qualquer robô passa pelo Turnstile.
+if (VITRINE_ABERTA && TURNSTILE_SITE_KEY.startsWith("1x0000"))
+  throw new Error("TURNSTILE_SITE_KEY ainda é a chave de teste da Cloudflare: troque pela do widget real antes de abrir a loja.");
 // O terceiro selo depende do estado: com a loja fechada, selo de checkout
 // promete uma compra que não existe (revisão de 12/11/2026).
 const SELOS = [...MARCA.selos, MARCA.seloDoEstado[VITRINE_ABERTA ? "aberta" : "fechada"]];
@@ -202,28 +206,20 @@ const header = (atual = "") => `${VITRINE_ABERTA ? `
     : avisoBotao("vitrine_topo", "topo__cta")}
 </header>`;
 
-// A celebração da gaveta (ui.js) oferece as Ecobags do catálogo com foto e
-// botão de adicionar (P0-3 do conselho r4, decisão do dono em 03/08). Os dados
-// saem daqui, do catalogo.json, para o ui.js não duplicar id, preço nem foto.
-const ECOBAGS = cat.produtos.filter((p) => p.peca === "Ecobag").map((p) => ({
-  slug: p.slug, id: p.id, nome: p.nome, cor: p.opcoes.cores[0] || "",
-  preco: p.preco, preco_formatado: p.preco_formatado,
-  img: p.imagens.capa, url: `${PREFIXO}/p/${p.slug}/`,
-}));
-
 // Rodapé único (11/11/2026): o MESMO da landing, sobre o céu, sem faixa. Selos
 // de confiança, marca com o lema, colunas e a linha legal, tudo vindo do
 // marca.json. Aberta, entram a coluna Loja e o "Acompanhar pedido"; fechada,
 // nenhum rodapé fala em coleção, sacola ou pedido.
 const colunaRodape = (titulo, links) =>
-  `<div><h2>${esc(titulo)}</h2>${links.map((l) => `<a href="${esc(destino(l.href))}"${externo(l.href)}${l.attr || ""}>${esc(l.rotulo)}</a>`).join("")}</div>`;
+  `<div><h2>${esc(titulo)}</h2>${links.map((l) => `<a href="${esc(l.href)}"${externo(l.href)}${l.attr || ""}>${esc(l.rotulo)}</a>`).join("")}</div>`;
 const COLUNAS_RODAPE = [
   ...(VITRINE_ABERTA ? [{ titulo: "Loja", links: [
     { rotulo: "STREET", href: `${PREFIXO}/c/street/` }, { rotulo: "RELÍQUIA", href: `${PREFIXO}/c/reliquia/` },
     { rotulo: "NUVEM", href: `${PREFIXO}/c/nuvem/` }, { rotulo: "Sacola", href: SACOLA, attr: " data-abre-sacola" },
   ] }] : []),
+  // o pedido abre pelo link do e-mail da compra; a página explica isso a quem chega sem ele
   ...MARCA.rodape.map((c) => (VITRINE_ABERTA && c.titulo === "Ajuda"
-    ? { ...c, links: [...c.links.slice(0, 2), { rotulo: "Acompanhar pedido", href: "https://loja.nimbuswear.com.br/account/login/" }, ...c.links.slice(2)] }
+    ? { ...c, links: [...c.links.slice(0, 2), { rotulo: "Acompanhar pedido", href: `${PREFIXO}/pedido/` }, ...c.links.slice(2)] }
     : c)),
 ];
 const footer = () => `
@@ -236,8 +232,7 @@ const footer = () => `
     </div>
     <p class="rodape__legal">${esc(MARCA.legal)}</p>
   </div>
-</footer>
-<script type="application/json" id="ecobags-dados">${JSON.stringify(ECOBAGS)}</script>`;
+</footer>`;
 
 // Fecho das páginas enquanto nada está à venda: toda página termina no convite
 // único, com a linha que diz o que acontece ao tocar. Aberta, o fecho some (a
@@ -479,9 +474,8 @@ const relacionados = (p) => {
 };
 
 const produto = (p) => {
-  const urlLoja = refInterno(p.url_loja);
   const dados = {
-    url_loja: urlLoja, url_carrinho: SACOLA, imagens: p.imagens,
+    imagens: p.imagens,
     opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
     slug: p.slug, nome: p.nome, peca: p.peca, id: p.id,
   };
@@ -493,7 +487,7 @@ const produto = (p) => {
     "@context": "https://schema.org", "@type": "Product",
     name: p.nome, image: p.imagens.galeria, description: p.resumo,
     brand: { "@type": "Brand", name: "NIMBUS" },
-    offers: { "@type": "Offer", priceCurrency: "BRL", price: p.preco, availability: "https://schema.org/InStock", url: p.url_loja },
+    offers: { "@type": "Offer", priceCurrency: "BRL", price: p.preco, availability: "https://schema.org/InStock", url: `${URL_BASE}/p/${p.slug}/` },
   });
   const CORES_HEX = { Preta: "#16181d", Branca: "#f4f4f2", "Off-White": "#ece5d8", Bege: "#d9c9a8", Crua: "#e6dcc4" };
   return `${head(p.meta_title, p.meta_description, { ogImage: p.imagens.capa, canonical: `${URL_BASE}/p/${p.slug}/`, jsonld })}
@@ -533,26 +527,14 @@ ${header()}
         </div>
       </div>` : ""}
 
-      <!-- mesmo POST do formulário oficial da loja (fluxo do dono, 30/07):
-           adiciona à sacola sem sair da vitrine; o handoff acontece na Sacola.
-           Sem JS, o POST abre o carrinho da loja em aba nova, já com o item. -->
-      <form class="pdp__form" method="post" action="${esc(SACOLA)}" target="_blank" data-sacola-form>
-        <input type="hidden" name="add_to_cart" value="${esc(p.id)}">
-        ${/* Um campo por EIXO QUE EXISTE, na ordem tamanho, cor. A Ecobag tem
-             um eixo só e recebia dois: o item não entrava no carrinho e a loja
-             não dizia nada. Ver build-catalogo.mjs. */""}
-        ${(() => {
-          const eixos = [];
-          if (p.opcoes.tamanhos.length) eixos.push([esc(p.opcoes.tamanhos[0]), "data-var-tamanho"]);
-          if (p.opcoes.cores.length) eixos.push([esc(p.opcoes.cores[0]), "data-var-cor"]);
-          return eixos.map(([v, attr], i) => `<input type="hidden" name="variation[${i}]" value="${v}" ${attr}>`).join("\n        ");
-        })()}
-        <input type="hidden" name="quantity" value="1">
+      <!-- a sacola mora no navegador: produto.js grava a variante pelo SKU, e
+           o pedido nasce em /loja/finalizar/ (loja própria, fase 4) -->
+      <form class="pdp__form" data-sacola-form>
         <button type="submit" class="btn btn--primary pdp__comprar">Adicionar à sacola</button>
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho role="alert">Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        <span class="note">A partir de R$399,90: frete grátis. O frete do seu CEP aparece no carrinho da loja, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
+        <span class="note">A partir de R$399,90: frete grátis. O frete do seu CEP aparece na finalização, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
         <span class="note">7 dias para mudar de ideia: se devolver, <a href="${PREFIXO}/trocas/">devolvemos tudo o que você pagou, incluindo o frete</a>.</span>
         <span class="note">Peça feita no Brasil, para você.</span>
       </div>
@@ -723,6 +705,181 @@ ${footer()}
 </body></html>`;
 };
 
+/* --------------------------------------------- loja própria: o pedido */
+// Fase 4 do plano de 13/11/2026: a finalização, a volta do Mercado Pago e o
+// acompanhamento do pedido. Nenhuma das três tem link no site enquanto a loja
+// está fechada, nenhuma entra no sitemap, e todas levam noindex mesmo com a
+// loja aberta: página de transação não é página de busca. Quem fala com o
+// servidor é o js/compra.js, o mesmo nas três; o contrato das rotas está
+// em servidor/src/app.js. Os rótulos do resumo antes de pagar vêm do rascunho
+// de 25/11 (docs/decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md).
+
+// O prazo por região fora das capitais ainda é decisão do dono (item 4 do
+// rascunho de 25/11). Até lá o resumo aponta para a página de envios, e esta
+// linha é o único lugar a trocar.
+const PRAZO_RESUMO = `Prazo: o da página <a href="${PREFIXO}/envios/">Envios e prazos</a>, contado do pagamento confirmado.`;
+const DESISTENCIA = `Você pode desistir em até 7 dias após receber. <a href="${PREFIXO}/trocas/">Trocas e devoluções</a>`;
+
+const UF_NOMES = {
+  AC: "Acre", AL: "Alagoas", AP: "Amapá", AM: "Amazonas", BA: "Bahia", CE: "Ceará", DF: "Distrito Federal",
+  ES: "Espírito Santo", GO: "Goiás", MA: "Maranhão", MT: "Mato Grosso", MS: "Mato Grosso do Sul",
+  MG: "Minas Gerais", PA: "Pará", PB: "Paraíba", PR: "Paraná", PE: "Pernambuco", PI: "Piauí",
+  RJ: "Rio de Janeiro", RN: "Rio Grande do Norte", RS: "Rio Grande do Sul", RO: "Rondônia", RR: "Roraima",
+  SC: "Santa Catarina", SP: "São Paulo", SE: "Sergipe", TO: "Tocantins",
+};
+for (const uf of UFS) if (!UF_NOMES[uf]) throw new Error(`estado ${uf} do servidor sem nome na finalização`);
+
+// Um campo do formulário. `largura` é a fração da linha no desktop (6 = linha
+// inteira); no celular todo campo ocupa a linha inteira.
+const campo = (nome, rotulo, attrs, largura = 6) =>
+  `<div class="campo campo--${largura}"><label for="f-${nome}">${esc(rotulo)}</label><input id="f-${nome}" name="${nome}" ${attrs}></div>`;
+
+// Recado de quem chega sem JavaScript: sacola e pedido dependem dele.
+const semJs = (texto) => `<noscript><p class="fechamento__erro">${esc(texto)}</p></noscript>`;
+
+const paginaDoPedido = ({ titulo, descricao, corpo, extra = "" }) => `${head(`${titulo} | NIMBUS`, descricao, { semIndice: true, extra })}
+${header()}
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    ${corpo}
+  </div></section>
+</main>
+${footer()}
+<script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+<script src="${PREFIXO}/js/compra.js?v=${V}" defer></script>
+</body></html>`;
+
+const finalizar = () => paginaDoPedido({
+  titulo: "Finalizar a compra",
+  descricao: "Contato, endereço de entrega e projeto social. O frete e o total aparecem antes de pagar.",
+  corpo: `<h1 class="display display--md">Finalizar a compra</h1>
+    <div class="institucional__texto vidro fechamento" data-finalizar>${VITRINE_ABERTA ? "" : `
+      <p class="institucional__estado">A loja está fechada enquanto remontamos a coleção.</p>`}
+      ${semJs("Para finalizar a compra, ative o JavaScript do navegador.")}
+      <div data-vazia hidden>
+        <p class="lede">Sua sacola está vazia.</p>
+        <p><a class="btn btn--ghost" href="${PREFIXO}/">Voltar à loja</a></p>
+      </div>
+      <div data-etapa="dados" hidden>
+        <h2>Sua sacola</h2>
+        <ul class="conta" data-sacola-lista></ul>
+        <dl class="conta conta--soma"><div><dt>Subtotal</dt><dd data-sacola-subtotal></dd></div></dl>
+        <p class="note">O frete do seu CEP e o total saem na próxima etapa, antes de pagar. <a href="${SACOLA}" data-abre-sacola>Corrigir a sacola</a></p>
+        <form class="fechamento__form" data-form-compra>
+          <h2>Contato</h2>
+          <div class="campos">
+            ${campo("nome", "Nome completo", 'required minlength="3" maxlength="120" autocomplete="name"', 4)}
+            ${campo("cpf", "CPF", 'required inputmode="numeric" autocomplete="off" maxlength="14" pattern="\\d{3}\\.?\\d{3}\\.?\\d{3}-?\\d{2}" title="11 números, como 000.000.000-00"', 2)}
+            ${campo("email", "E-mail", 'type="email" required maxlength="254" autocomplete="email"', 3)}
+            ${campo("telefone", "Telefone com DDD", 'type="tel" required inputmode="tel" autocomplete="tel-national" maxlength="20" pattern="\\D*(\\d\\D*){10,11}" title="DDD e número, como (61) 99999-0000"', 3)}
+          </div>
+          <p class="note">O CPF vai na nota fiscal da compra.</p>
+          <h2>Entrega</h2>
+          <div class="campos">
+            ${campo("cep", "CEP", 'required inputmode="numeric" autocomplete="postal-code" maxlength="9" pattern="\\d{5}-?\\d{3}" title="8 números, como 01310-100"', 2)}
+            <div class="campo campo--4"><label for="f-uf">Estado</label><select id="f-uf" name="uf" required autocomplete="address-level1"><option value="">Escolha</option>${[...UFS].sort((a, b) => UF_NOMES[a].localeCompare(UF_NOMES[b], "pt-BR")).map((uf) => `<option value="${uf}">${esc(UF_NOMES[uf])}</option>`).join("")}</select></div>
+            ${campo("cidade", "Cidade", 'required minlength="2" maxlength="80" autocomplete="address-level2"', 3)}
+            ${campo("bairro", "Bairro", 'required maxlength="80" autocomplete="address-level3"', 3)}
+            ${campo("rua", "Rua", 'required minlength="2" maxlength="120" autocomplete="address-line1"', 4)}
+            ${campo("numero", "Número", 'required maxlength="20"', 2)}
+            ${campo("complemento", "Complemento (se tiver)", 'maxlength="80" autocomplete="address-line2"')}
+          </div>
+          <fieldset class="projetos">
+            <legend>Projeto social</legend>
+            <p class="note">10% do lucro deste pedido vai para o projeto que você escolher. <a href="${PREFIXO}/impacto/">Como funciona</a></p>
+            ${Object.entries(PROJETOS).map(([valor, nome]) => `<label class="projeto-opcao"><input type="radio" name="projeto" value="${esc(valor)}" required><span>${esc(valor === "outro" ? "Outro projeto" : nome)}</span></label>`).join("\n            ")}
+            <div class="campos" data-projeto-outro hidden>${campo("projeto_outro", "Qual projeto?", 'minlength="3" maxlength="80"')}</div>
+          </fieldset>
+          <div class="fechamento__robo" data-turnstile="${esc(TURNSTILE_SITE_KEY)}"></div>
+          <p class="fechamento__erro" data-erro role="alert" hidden></p>
+          <button type="submit" class="btn btn--primary">Revisar o pedido</button>
+          <p class="note">A próxima etapa mostra o frete e o total. Você paga só depois, na página do Mercado Pago.</p>
+        </form>
+      </div>
+      <section data-etapa="resumo" aria-labelledby="resumo-titulo" hidden>
+        <h2 id="resumo-titulo" tabindex="-1">Confira antes de pagar</h2>
+        <p class="note" data-resumo-codigo></p>
+        <ul class="conta" data-resumo-itens></ul>
+        <dl class="conta conta--soma">
+          <div><dt>Frete</dt><dd data-resumo-frete></dd></div>
+          <div class="conta__total"><dt>Total</dt><dd data-resumo-total></dd></div>
+        </dl>
+        <p data-resumo-entrega></p>
+        <p>${PRAZO_RESUMO}</p>
+        <p>${DESISTENCIA}</p>
+        <div class="fechamento__acoes">
+          <button type="button" class="btn btn--ghost" data-abre-sacola>Corrigir a sacola</button>
+          <button type="button" class="btn btn--ghost" data-corrige-endereco>Corrigir o endereço</button>
+          <a class="btn btn--primary" href="${PREFIXO}/finalizar/" data-pagar>Pagar no Mercado Pago</a>
+        </div>
+        <p class="note">O pagamento abre na página do Mercado Pago: Pix, cartão ou boleto. O número do cartão é digitado lá e nunca passa pela NIMBUS.</p>
+      </section>
+    </div>
+    ${/* o estado sai do CEP pelas mesmas faixas que o servidor confere */""}<script type="application/json" id="faixas-cep">${JSON.stringify(FAIXAS_CEP)}</script>`,
+});
+
+// O link do e-mail traz o código e o token no fragmento (#NB-XXXX-XXXX.token),
+// que não vai ao servidor; a volta do Mercado Pago traz o código e a situação
+// na query. Este trecho, no <head> e antes do GA4, guarda o valor para o
+// compra.js (e para um recarregar da aba) e o tira da barra de endereço: o
+// token não fica à vista nem chega ao Google Analytics. Outro link do e-mail
+// aberto na mesma aba muda só o fragmento, o que não recarrega a página: o
+// hashchange recarrega, e este trecho lê o pedido novo.
+const guardaLink = (fonte, nome) => `
+<script>(function(){${fonte === "hash" ? 'addEventListener("hashchange",function(){location.reload()});' : ""}var v=location.${fonte}.slice(1);if(!v)return;window.NIMBUS_LINK=v;try{sessionStorage.setItem("${nome}",v)}catch(e){}history.replaceState(null,"",location.pathname)})()</script>`;
+
+const pedido = () => paginaDoPedido({
+  titulo: "Seu pedido",
+  descricao: "A situação do seu pedido NIMBUS, pelo link do e-mail da compra.",
+  extra: guardaLink("hash", "nimbus-pedido"),
+  corpo: `<h1 class="display display--md">Seu pedido</h1>
+    <div class="institucional__texto vidro fechamento" data-pedido>
+      ${semJs("Para ver o seu pedido, ative o JavaScript do navegador.")}
+      <p class="lede" data-pedido-aviso role="status">Abrindo o seu pedido.</p>
+      <div data-pedido-corpo hidden>
+        <p class="kicker" data-pedido-codigo></p>
+        <p class="fechamento__status" data-pedido-status></p>
+        <p class="note" data-pedido-recado role="status" hidden></p>
+        <p class="note" data-pedido-data></p>
+        <p data-pedido-rastreio hidden></p>
+        <p data-pedido-pagar hidden><a class="btn btn--primary" href="${PREFIXO}/pedido/">Pagar no Mercado Pago</a></p>
+        <h2>Itens</h2>
+        <ul class="conta" data-pedido-itens></ul>
+        <dl class="conta conta--soma">
+          <div><dt>Frete</dt><dd data-pedido-frete></dd></div>
+          <div class="conta__total"><dt>Total</dt><dd data-pedido-total></dd></div>
+        </dl>
+        <p data-pedido-projeto></p>
+        <div data-desistir hidden>
+          <h2>Desistir da compra</h2>
+          <p>${DESISTENCIA}</p>
+          <p data-desistir-abre-linha><button type="button" class="btn btn--ghost" data-desistir-abre>Quero desistir</button></p>
+          <div data-desistir-confirma hidden>
+            <p>Confirma a desistência deste pedido? A confirmação vai para o seu e-mail na hora.</p>
+            <div class="fechamento__acoes">
+              <button type="button" class="btn btn--primary" data-desistir-sim>Confirmar a desistência</button>
+              <button type="button" class="btn btn--ghost" data-desistir-nao>Voltar</button>
+            </div>
+          </div>
+          <p class="fechamento__erro" data-desistir-erro role="alert" hidden></p>
+        </div>
+      </div>
+    </div>`,
+});
+
+const obrigado = () => paginaDoPedido({
+  titulo: "Obrigado pelo pedido",
+  descricao: "A volta do pagamento do seu pedido NIMBUS.",
+  extra: guardaLink("search", "nimbus-obrigado"),
+  corpo: `<h1 class="display display--md" data-obrigado-titulo>Obrigado pelo pedido.</h1>
+    <div class="institucional__texto vidro fechamento" data-obrigado>
+      <p class="lede" data-obrigado-texto>Assim que o pagamento for confirmado, avisamos no seu e-mail.</p>
+      <p class="kicker" data-obrigado-codigo hidden></p>
+      <p>O link para acompanhar o pedido está no e-mail que enviamos para você.</p>
+      <p><a class="btn btn--ghost" href="${PREFIXO}/">Voltar à loja</a></p>
+    </div>`,
+});
+
 /* ------------------------------------------------------------------ grava */
 // A vitrine viveu em /loja-preview/ até 30/07; links antigos (WhatsApp, menu da
 // loja) continuam chegando lá. Cada página ganha um stub de redirect no caminho
@@ -756,6 +913,11 @@ for (const [slug, [titulo, descricao, corpo, midia]] of Object.entries(INSTITUCI
 }
 fs.mkdirSync(path.join(BASE, "gates"), { recursive: true });
 fs.writeFileSync(path.join(BASE, "gates", "index.html"), gates());
+// Loja própria: finalização e pedido. Fora do sitemap (ver daVitrine, no fim).
+for (const [rel, pagina] of [["finalizar", finalizar], ["pedido", pedido], ["pedido/obrigado", obrigado]]) {
+  fs.mkdirSync(path.join(BASE, rel), { recursive: true });
+  fs.writeFileSync(path.join(BASE, rel, "index.html"), pagina());
+}
 // Com a vitrine fechada, as páginas de coleção não nascem (o teste de 20/10
 // achou /loja/c/* no ar, vazias e com preço na meta, porque o deploy as gerava
 // mesmo fechado). Mas o menu da loja Nuvemshop ainda leva a elas (28/10/2026):

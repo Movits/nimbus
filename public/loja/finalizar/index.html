@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finalizar a compra | NIMBUS</title>
+<meta name="description" content="Contato, endereço de entrega e projeto social. O frete e o total aparecem antes de pagar.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Finalizar a compra | NIMBUS">
+<meta property="og:description" content="Contato, endereço de entrega e projeto social. O frete e o total aparecem antes de pagar.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NIMBUS">
+<meta property="og:locale" content="pt_BR">
+
+<meta property="og:image" content="https://nimbuswear.com.br/img/og-nimbus.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/img/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png">
+<meta name="theme-color" content="#dcebfa">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";setTimeout(function(){document.querySelectorAll(".reveal:not(.in)").forEach(function(e){e.classList.add("in")})},2000)</script>
+<link rel="stylesheet" href="/loja/css/tokens.css?v=72548d5f">
+<link rel="stylesheet" href="/css/marca.css?v=72548d5f">
+<link rel="stylesheet" href="/loja/css/loja.css?v=72548d5f">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E041S3ZHWB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-E041S3ZHWB');</script>
+</head>
+<body>
+
+<header class="topo" data-topo>
+  <a class="topo__logo" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320"></a>
+  <nav class="topo__nav" aria-label="Principal"><a href="/loja/manifesto/"><span>Manifesto</span></a><a href="/loja/impacto/"><span>Impacto</span></a><a href="/gravuras/"><span>Gravuras</span></a><a href="/loja/"><span>Loja</span><small>em breve</small></a></nav>
+  <details class="topo__menu"><summary>Menu</summary><nav class="topo__painel" aria-label="Principal"><a href="/loja/manifesto/"><span>Manifesto</span></a><a href="/loja/impacto/"><span>Impacto</span></a><a href="/gravuras/"><span>Gravuras</span></a><a href="/loja/"><span>Loja</span><small>em breve</small></a></nav></details>
+  <a class="topo__cta" href="mailto:nimbuswearbr@gmail.com?subject=Aviso%3A%20abertura%20da%20NIMBUS&amp;body=Quero%20ser%20avisado%20quando%20as%20pe%C3%A7as%20da%20NIMBUS%20chegarem." data-aviso="vitrine_topo">Quero ser avisado</a>
+</header>
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    <h1 class="display display--md">Finalizar a compra</h1>
+    <div class="institucional__texto vidro fechamento" data-finalizar>
+      <p class="institucional__estado">A loja está fechada enquanto remontamos a coleção.</p>
+      <noscript><p class="fechamento__erro">Para finalizar a compra, ative o JavaScript do navegador.</p></noscript>
+      <div data-vazia hidden>
+        <p class="lede">Sua sacola está vazia.</p>
+        <p><a class="btn btn--ghost" href="/loja/">Voltar à loja</a></p>
+      </div>
+      <div data-etapa="dados" hidden>
+        <h2>Sua sacola</h2>
+        <ul class="conta" data-sacola-lista></ul>
+        <dl class="conta conta--soma"><div><dt>Subtotal</dt><dd data-sacola-subtotal></dd></div></dl>
+        <p class="note">O frete do seu CEP e o total saem na próxima etapa, antes de pagar. <a href="/loja/finalizar/" data-abre-sacola>Corrigir a sacola</a></p>
+        <form class="fechamento__form" data-form-compra>
+          <h2>Contato</h2>
+          <div class="campos">
+            <div class="campo campo--4"><label for="f-nome">Nome completo</label><input id="f-nome" name="nome" required minlength="3" maxlength="120" autocomplete="name"></div>
+            <div class="campo campo--2"><label for="f-cpf">CPF</label><input id="f-cpf" name="cpf" required inputmode="numeric" autocomplete="off" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="11 números, como 000.000.000-00"></div>
+            <div class="campo campo--3"><label for="f-email">E-mail</label><input id="f-email" name="email" type="email" required maxlength="254" autocomplete="email"></div>
+            <div class="campo campo--3"><label for="f-telefone">Telefone com DDD</label><input id="f-telefone" name="telefone" type="tel" required inputmode="tel" autocomplete="tel-national" maxlength="20" pattern="\D*(\d\D*){10,11}" title="DDD e número, como (61) 99999-0000"></div>
+          </div>
+          <p class="note">O CPF vai na nota fiscal da compra.</p>
+          <h2>Entrega</h2>
+          <div class="campos">
+            <div class="campo campo--2"><label for="f-cep">CEP</label><input id="f-cep" name="cep" required inputmode="numeric" autocomplete="postal-code" maxlength="9" pattern="\d{5}-?\d{3}" title="8 números, como 01310-100"></div>
+            <div class="campo campo--4"><label for="f-uf">Estado</label><select id="f-uf" name="uf" required autocomplete="address-level1"><option value="">Escolha</option><option value="AC">Acre</option><option value="AL">Alagoas</option><option value="AP">Amapá</option><option value="AM">Amazonas</option><option value="BA">Bahia</option><option value="CE">Ceará</option><option value="DF">Distrito Federal</option><option value="ES">Espírito Santo</option><option value="GO">Goiás</option><option value="MA">Maranhão</option><option value="MT">Mato Grosso</option><option value="MS">Mato Grosso do Sul</option><option value="MG">Minas Gerais</option><option value="PA">Pará</option><option value="PB">Paraíba</option><option value="PR">Paraná</option><option value="PE">Pernambuco</option><option value="PI">Piauí</option><option value="RJ">Rio de Janeiro</option><option value="RN">Rio Grande do Norte</option><option value="RS">Rio Grande do Sul</option><option value="RO">Rondônia</option><option value="RR">Roraima</option><option value="SC">Santa Catarina</option><option value="SP">São Paulo</option><option value="SE">Sergipe</option><option value="TO">Tocantins</option></select></div>
+            <div class="campo campo--3"><label for="f-cidade">Cidade</label><input id="f-cidade" name="cidade" required minlength="2" maxlength="80" autocomplete="address-level2"></div>
+            <div class="campo campo--3"><label for="f-bairro">Bairro</label><input id="f-bairro" name="bairro" required maxlength="80" autocomplete="address-level3"></div>
+            <div class="campo campo--4"><label for="f-rua">Rua</label><input id="f-rua" name="rua" required minlength="2" maxlength="120" autocomplete="address-line1"></div>
+            <div class="campo campo--2"><label for="f-numero">Número</label><input id="f-numero" name="numero" required maxlength="20"></div>
+            <div class="campo campo--6"><label for="f-complemento">Complemento (se tiver)</label><input id="f-complemento" name="complemento" maxlength="80" autocomplete="address-line2"></div>
+          </div>
+          <fieldset class="projetos">
+            <legend>Projeto social</legend>
+            <p class="note">10% do lucro deste pedido vai para o projeto que você escolher. <a href="/loja/impacto/">Como funciona</a></p>
+            <label class="projeto-opcao"><input type="radio" name="projeto" value="fazenda-da-esperanca" required><span>Fazenda da Esperança</span></label>
+            <label class="projeto-opcao"><input type="radio" name="projeto" value="caritas-brasileira" required><span>Cáritas Brasileira</span></label>
+            <label class="projeto-opcao"><input type="radio" name="projeto" value="pequeno-cotolengo" required><span>Pequeno Cotolengo</span></label>
+            <label class="projeto-opcao"><input type="radio" name="projeto" value="outro" required><span>Outro projeto</span></label>
+            <div class="campos" data-projeto-outro hidden><div class="campo campo--6"><label for="f-projeto_outro">Qual projeto?</label><input id="f-projeto_outro" name="projeto_outro" minlength="3" maxlength="80"></div></div>
+          </fieldset>
+          <div class="fechamento__robo" data-turnstile="1x00000000000000000000AA"></div>
+          <p class="fechamento__erro" data-erro role="alert" hidden></p>
+          <button type="submit" class="btn btn--primary">Revisar o pedido</button>
+          <p class="note">A próxima etapa mostra o frete e o total. Você paga só depois, na página do Mercado Pago.</p>
+        </form>
+      </div>
+      <section data-etapa="resumo" aria-labelledby="resumo-titulo" hidden>
+        <h2 id="resumo-titulo" tabindex="-1">Confira antes de pagar</h2>
+        <p class="note" data-resumo-codigo></p>
+        <ul class="conta" data-resumo-itens></ul>
+        <dl class="conta conta--soma">
+          <div><dt>Frete</dt><dd data-resumo-frete></dd></div>
+          <div class="conta__total"><dt>Total</dt><dd data-resumo-total></dd></div>
+        </dl>
+        <p data-resumo-entrega></p>
+        <p>Prazo: o da página <a href="/loja/envios/">Envios e prazos</a>, contado do pagamento confirmado.</p>
+        <p>Você pode desistir em até 7 dias após receber. <a href="/loja/trocas/">Trocas e devoluções</a></p>
+        <div class="fechamento__acoes">
+          <button type="button" class="btn btn--ghost" data-abre-sacola>Corrigir a sacola</button>
+          <button type="button" class="btn btn--ghost" data-corrige-endereco>Corrigir o endereço</button>
+          <a class="btn btn--primary" href="/loja/finalizar/" data-pagar>Pagar no Mercado Pago</a>
+        </div>
+        <p class="note">O pagamento abre na página do Mercado Pago: Pix, cartão ou boleto. O número do cartão é digitado lá e nunca passa pela NIMBUS.</p>
+      </section>
+    </div>
+    <script type="application/json" id="faixas-cep">[["SP",1000000,19999999],["RJ",20000000,28999999],["ES",29000000,29999999],["MG",30000000,39999999],["BA",40000000,48999999],["SE",49000000,49999999],["PE",50000000,56999999],["AL",57000000,57999999],["PB",58000000,58999999],["RN",59000000,59999999],["CE",60000000,63999999],["PI",64000000,64999999],["MA",65000000,65999999],["PA",66000000,68899999],["AP",68900000,68999999],["AM",69000000,69299999],["RR",69300000,69399999],["AM",69400000,69899999],["AC",69900000,69999999],["DF",70000000,72799999],["GO",72800000,72999999],["DF",73000000,73699999],["GO",73700000,76799999],["RO",76800000,76999999],["TO",77000000,77999999],["MT",78000000,78899999],["MS",79000000,79999999],["PR",80000000,87999999],["SC",88000000,89999999],["RS",90000000,99999999]]</script>
+  </div></section>
+</main>
+
+<footer class="pe">
+  <ul class="selos"><li>Feita no Brasil, para você</li><li>10% do lucro vai para o projeto social que você escolher</li><li>Aviso por e‑mail quando as peças chegarem</li></ul>
+  <div class="rodape">
+    <div class="rodape__grade">
+      <div class="rodape__sobre"><a class="rodape__marca" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320" loading="lazy"></a><p class="rodape__lema">Streetwear católico premium. Acima de tudo.</p></div>
+      <div><h2>A marca</h2><a href="/loja/manifesto/">Manifesto</a><a href="/loja/impacto/">Impacto</a><a href="/gravuras/">Gravuras</a><a href="https://www.instagram.com/nimbuswear.br/" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
+      <div><h2>Ajuda</h2><a href="/loja/trocas/">Trocas e devoluções</a><a href="/loja/envios/">Envios e prazos</a><a href="/loja/privacidade/">Privacidade</a><a href="mailto:nimbuswearbr@gmail.com?subject=Contato%3A%20NIMBUS">Fale com a NIMBUS</a></div>
+    </div>
+    <p class="rodape__legal">© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF</p>
+  </div>
+</footer>
+<script src="/loja/js/ui.js?v=72548d5f" defer></script>
+<script src="/loja/js/compra.js?v=72548d5f" defer></script>
+</body></html>

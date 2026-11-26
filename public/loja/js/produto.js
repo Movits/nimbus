@@ -1,10 +1,9 @@
 // Seletor de cor e tamanho da PDP. Os dados do produto vêm embutidos na página
 // (script#produto-dados), então nada aqui depende de segunda requisição.
-// Fluxo da sacola (decisão do dono, 30/07): o formulário replica o POST do
-// formulário oficial da loja (add_to_cart + variation[] + quantity). Com JS, o
-// envio vai para um iframe oculto e o cliente segue na vitrine; a Sacola do
-// header abre a gaveta (o carrinho da loja é a verdade do que será cobrado).
-// Sem JS, o form abre o carrinho da loja em aba nova, já com o item.
+// "Adicionar à sacola" grava só no navegador (NIMBUS.sacola, em ui.js), pelo
+// SKU da variante escolhida; o pedido nasce na finalização, em
+// /loja/finalizar/ (loja própria, plano de 13/11/2026, seção 7). Até 13/11 o
+// formulário replicava o POST do carrinho da Nuvemshop num iframe oculto.
 // Regra de imagem (curadoria 29/07): ao trocar de cor, o quadro mostra as
 // COSTAS daquela cor (onde vive a arte); frente fica nos thumbs.
 (function () {
@@ -18,8 +17,6 @@
   const imagem = document.querySelector(".pdp__quadro img");
   const form = document.querySelector("[data-sacola-form]");
   const botao = form ? form.querySelector(".pdp__comprar") : null;
-  const inpTamanho = form ? form.querySelector("[data-var-tamanho]") : null;
-  const inpCor = form ? form.querySelector("[data-var-cor]") : null;
   const avisaTamanho = document.querySelector("[data-avisa-tamanho]");
   const thumbs = document.querySelectorAll(".pdp__thumbs button");
   const swatches = document.querySelectorAll(".swatch");
@@ -38,8 +35,6 @@
   }
   function atualiza() {
     const v = variante();
-    if (inpCor) inpCor.value = cor;
-    if (inpTamanho && v) inpTamanho.value = v.tamanho;
     if (botao) {
       botao.disabled = !v;
       botao.textContent = v ? "Adicionar à sacola" : "Indisponível nesta combinação";
@@ -91,13 +86,10 @@
   }
   evento("view_item");
 
-  // --- envio sem sair da página -------------------------------------------
-  const FRETE_GRATIS = (window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.META) || 399.9;
-  const reais = (window.NIMBUS && NIMBUS.reais) ||
-    ((v) => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v || 0).replace(/\u00a0/g, " "));
+  // --- aviso de "na sacola", sem sair da página ----------------------------
   let aviso = null;
   let avisoTimer = 0;
-  function mostraAviso(nome) {
+  function mostraAviso(texto) {
     if (!aviso) {
       aviso = document.createElement("div");
       aviso.className = "sacola-aviso";
@@ -106,72 +98,43 @@
     }
     aviso.innerHTML = "";
     const txt = document.createElement("span");
-    txt.textContent = nome + " na sacola.";
-    aviso.append(txt);
-    const prog = window.NIMBUS && NIMBUS.sacola && NIMBUS.sacola.progresso ? NIMBUS.sacola.progresso() : 0;
-    if (prog > 0) {
-      const regua = document.createElement("span");
-      regua.className = "sacola-aviso__frete";
-      regua.textContent = prog >= FRETE_GRATIS
-        ? "Frete grátis garantido. Cupom ECOBAG no checkout = Ecobag de graça."
-        : "Faltam " + reais(FRETE_GRATIS - prog) + " para frete grátis e Ecobag de brinde.";
-      aviso.append(regua);
-    }
-    // "Ver a sacola" abre a gaveta aqui mesmo. Antes era um link para a loja:
-    // no pico da intenção, mandava o cliente para fora da vitrine.
-    if (window.NIMBUS && NIMBUS.gaveta) {
-      const bt = document.createElement("button");
-      bt.type = "button";
-      bt.textContent = "Ver a sacola";
-      bt.addEventListener("click", () => { aviso.classList.remove("on"); NIMBUS.gaveta.abre(); });
-      aviso.append(bt);
-    } else {
-      const link = document.createElement("a");
-      link.href = p.url_carrinho;
-      link.textContent = "Ver a sacola";
-      aviso.append(link);
-    }
+    txt.textContent = texto;
+    // "Ver a sacola" abre a gaveta aqui mesmo: no pico da intenção, o cliente
+    // segue na vitrine
+    const bt = document.createElement("button");
+    bt.type = "button";
+    bt.textContent = "Ver a sacola";
+    bt.addEventListener("click", () => { aviso.classList.remove("on"); NIMBUS.gaveta.abre(); });
+    aviso.append(txt, bt);
     aviso.classList.add("on");
     clearTimeout(avisoTimer);
     avisoTimer = setTimeout(() => aviso.classList.remove("on"), 6000);
   }
 
   if (form) form.addEventListener("submit", (ev) => {
+    ev.preventDefault();
     const v = variante();
-    if (!v) { ev.preventDefault(); return; }
+    if (!v || !window.NIMBUS || !NIMBUS.sacola) return;
     if (!tamanho && p.opcoes.tamanhos.length > 1) {
-      ev.preventDefault();
       if (avisaTamanho) avisaTamanho.classList.add("on");
       // o grupo inteiro ganha estado de erro, não só o texto solto abaixo
       const grupo = document.querySelector(".tamanhos");
       if (grupo) grupo.setAttribute("data-erro", "");
       return;
     }
-    ev.preventDefault();
-    let sink = document.getElementById("sacola-sink");
-    if (!sink) {
-      sink = document.createElement("iframe");
-      sink.id = "sacola-sink";
-      sink.name = "sacola-sink";
-      sink.hidden = true;
-      document.body.appendChild(sink);
-    }
-    form.target = "sacola-sink";
-    form.submit();
-    let resultado = null;
-    if (window.NIMBUS && NIMBUS.sacola) {
-      const pc = p.imagens.por_cor[cor] || {};
-      resultado = NIMBUS.sacola.soma({
-        slug: p.slug, nome: p.nome, cor, tamanho: tamanho || null, peca: p.peca || "",
-        pid: p.id || null, preco: p.preco || 0, img: pc.costas || pc.frente || p.imagens.capa,
-      });
-    }
-    evento("add_to_cart", {
-      items: [{ item_id: ITEM_ID, item_name: p.slug, item_variant: tamanho ? cor + "/" + tamanho : cor, price: p.preco, quantity: 1 }],
+    const pc = p.imagens.por_cor[cor] || {};
+    const preco = v.preco || p.preco || 0;
+    const r = NIMBUS.sacola.soma({
+      sku: v.sku, slug: p.slug, nome: p.nome, cor, tamanho: tamanho || null, peca: p.peca || "",
+      pid: p.id || null, preco, img: pc.costas || pc.frente || p.imagens.capa,
     });
-    // cruzou o teto: a gaveta abre em festa no lugar do toast
-    if (resultado && resultado.cruzou && NIMBUS.gaveta) NIMBUS.gaveta.abre();
-    else mostraAviso(tamanho ? cor + " · " + tamanho : cor);
+    const rotulo = tamanho ? cor + " · " + tamanho : cor;
+    if (r.cheio) { mostraAviso("No máximo " + NIMBUS.sacola.MAXIMO + " unidades de cada peça."); return; }
+    evento("add_to_cart", {
+      value: preco,
+      items: [{ item_id: ITEM_ID, item_name: p.slug, item_variant: rotulo.replace(" · ", "/"), price: preco, quantity: 1 }],
+    });
+    mostraAviso(rotulo + " na sacola.");
   });
 
   atualiza();

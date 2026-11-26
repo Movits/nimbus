@@ -272,6 +272,34 @@ são mais usados por nenhuma página.
     [`decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md`](decisoes/2026-11-25-loja-propria-textos-legais-rascunho.md).
   - Faixa de CEP 78900-000 a 78999-999 sem estado nas duas fontes do plano:
     recusada até a conferência nos Correios.
+  - **Fase 4, o código (25/11), com a loja fechada.** Três páginas novas,
+    geradas pelo `build-paginas.mjs`, sem link no site, fora do sitemap e com
+    noindex:
+    - `/loja/finalizar/`: a sacola, contato, endereço (o estado sai do CEP,
+      pelas faixas do servidor), projeto social, o Turnstile com a chave de
+      teste da Cloudflare e o "Confira antes de pagar" com o que o servidor
+      calculou, antes do botão do Mercado Pago;
+    - `/loja/pedido/`: abre pelo link do e-mail, tira o token da barra de
+      endereço e tem o "Quero desistir", com confirmação;
+    - `/loja/pedido/obrigado/`: a volta do Mercado Pago.
+
+    Um JS só para as três, `public/loja/js/compra.js`. O `ui.js` perdeu a ponte
+    da Nuvemshop (iframe, cookies, validade de 48 horas) e a Ecobag; a sacola
+    agora guarda o SKU e o botão dela leva à finalização. O `produto.js` só
+    grava na sacola. Teste novo no navegador, `npm run loja:formulario` (11
+    casos contra o mesmo servidor de mentira do `loja:teste`), fora do CI
+    porque precisa do Chromium. Mapa em
+    [`../servidor/LEIA-ME.md`](../servidor/LEIA-ME.md).
+  - O que a fase 4 deixa para depois:
+    - a linha do prazo no resumo aponta para "Envios e prazos" até o dono
+      decidir o prazo fora das capitais (item 4 do rascunho de textos);
+    - a privacidade ainda cita os dois cookies da sacola, que o `ui.js` não
+      grava mais, e a Nuvemshop: muda no passo 11, com os outros textos;
+    - a chave do Turnstile é a de teste, e o build recusa abrir a loja com ela;
+    - o portão `vitrine:variantes` confere o formulário da página de produto
+      contra a Nuvemshop. Hoje passa porque o catálogo está vazio; com produto
+      no catálogo e o formulário novo, reprova. Sai quando o catálogo novo
+      entrar (plano, seção 7), trocado pelo `loja:teste`.
   - Achado de rede em 25/11, fora do código: `loja.nimbuswear.com.br` não
     completa o TLS (o curl recebe `SEC_E_ILLEGAL_MESSAGE`), e o certificado de
     `nimbuswear.com.br` veio da cadeia nova do Let's Encrypt (YR2, Root YR),
@@ -328,11 +356,10 @@ são mais usados por nenhuma página.
 
   No site, saíram em 12/11 o "Acompanhar pedido" da página de envios e a
   menção ao "checkout da Nuvemshop" no bloco "Como vai ser comprar aqui".
-  Seguem inertes, só para a loja aberta, a serem trocados no projeto da loja
-  própria:
+  Em 25/11 (fase 4) saíram o `urlCarrinho` do `ui.js`, e o "Acompanhar pedido"
+  do rodapé aberto passou a levar a `/loja/pedido/`. Seguem inertes, só para a
+  loja aberta, a serem trocados no projeto da loja própria:
   - `loja.base` em `public/loja/catalogo.json`;
-  - o `urlCarrinho` de `public/loja/js/ui.js`;
-  - o "Acompanhar pedido" do rodapé aberto em `build-paginas.mjs`;
   - a política de privacidade, que cita a Nuvemshop.
 
 - **A marca ainda não vendeu, e a loja está FECHADA**: os 49 produtos da era

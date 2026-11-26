@@ -9,7 +9,10 @@ Fase 3 do plano aprovado em 13/11/2026
 ([`docs/decisoes/2026-11-13-loja-propria-plano.md`](../docs/decisoes/2026-11-13-loja-propria-plano.md),
 seções 3 e 4). **Ainda não está ligado em lugar nenhum:** não há conta
 Cloudflare nem credencial do Mercado Pago. A loja segue fechada
-(`VITRINE_ABERTA = false`), e nenhuma página do site chama estas rotas.
+(`VITRINE_ABERTA = false`). As páginas que chamam estas rotas existem desde
+25/11 (fase 4: `/loja/finalizar/`, `/loja/pedido/` e `/loja/pedido/obrigado/`,
+com o `public/loja/js/compra.js`), sem link no site e fora do sitemap; no
+GitHub Pages elas não acham servidor nenhum.
 
 ## O que tem aqui
 
@@ -25,6 +28,8 @@ Cloudflare nem credencial do Mercado Pago. A loja segue fechada
 | `src/email.js` | os e-mails do pedido pelo Resend (**textos em rascunho**, passo 11) |
 | `migrations/0001_inicial.sql` | o esquema do banco |
 | `teste/loja-teste.mjs` | o portão `npm run loja:teste` |
+| `teste/mundo-falso.mjs` | o servidor no Node com D1, Mercado Pago, Turnstile e Resend de mentira, usado pelos dois testes |
+| `teste/formulario-teste.mjs` | `npm run loja:formulario`: as páginas da compra num Chromium, contra o mundo de mentira |
 | `../wrangler.jsonc` | a configuração do Worker, com dois campos a preencher quando a conta existir |
 
 ## Rotas
@@ -99,3 +104,15 @@ vira SQLite em memória (`node:sqlite`, Node 22.13 ou mais novo) com a mesma
 migração, e o Mercado Pago, o Turnstile e o Resend são simulados. Entra no
 `vitrine:portoes` e no CI. O que ele **não** prova: o comportamento real da API
 do Mercado Pago e do D1. Isso é a fase 6, no modo de teste do gateway.
+
+`npm run loja:formulario` abre as páginas geradas da compra num Chromium (o
+Playwright do `vitrine:olho`), com `public/` servido por um servidor local que
+manda `/api/*` para este servidor, no mesmo mundo de mentira. Percorre o que o
+cliente faz: sacola vazia, formulário, erro do servidor na tela, rede que cai
+depois de o pedido nascer (o reenvio com a mesma `chave` devolve o mesmo
+pedido), o "Confira antes de pagar" com o preço do servidor e não o da sacola,
+sacola ou endereço corrigidos virando pedido novo, o link do e-mail na página
+do pedido (o token sai da barra de endereço), a desistência e a volta do
+Mercado Pago. Fica fora do CI porque precisa do Chromium: rode depois de mexer
+em `compra.js`, `ui.js` ou nas páginas da compra em `build-paginas.mjs`.
+`FOTOS=<pasta>` salva uma foto de cada etapa.

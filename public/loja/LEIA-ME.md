@@ -1,16 +1,22 @@
 ---
 status: vigente
-atualizado: 2026-11-11
+atualizado: 2026-11-25
 ---
 
 # Vitrine NIMBUS (/loja/)
 
-Vitrine estatica da marca. A Nuvemshop segue como motor de carrinho/checkout.
+Vitrine estatica da marca. A sacola mora no navegador (`js/ui.js`) e a compra
+fecha na loja propria: `finalizar/` manda o pedido ao servidor (`servidor/`),
+que devolve o resumo e o link do Mercado Pago; `pedido/` e `pedido/obrigado/`
+acompanham o pedido (`js/compra.js`). O servidor ainda nao esta ligado e a loja
+segue fechada: as tres paginas nao tem link no site e ficam fora do sitemap.
+O teste delas no navegador e `npm run loja:formulario`.
 
 O que e GERADO por `npm run vitrine` (nao edite a mao): `index.html`, `c/`, `p/`,
 `catalogo.json`, `media/`, `gates/`, `envios/`, `impacto/`, `trocas/`,
-`privacidade/`, `manifesto/`, alem de `../loja-preview/` (stubs de redirect),
-`../gravuras/`, `../404.html`, `../sitemap.xml` e `../robots.txt`.
+`privacidade/`, `manifesto/`, `finalizar/`, `pedido/`, alem de
+`../loja-preview/` (stubs de redirect), `../gravuras/`, `../404.html`,
+`../sitemap.xml` e `../robots.txt`.
 
 O texto das paginas institucionais (envios, impacto, trocas, privacidade) se
 edita em `INSTITUCIONAIS`, dentro de `scripts/vitrine/build-paginas.mjs`, nunca

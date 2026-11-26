@@ -435,7 +435,7 @@ main { padding-top: 68px; }
   .sacola-aviso a, .sacola-aviso button { display: inline-flex; align-items: center; min-height: 44px; }
 }
 
-/* gaveta lateral da sacola: espelho local + régua do frete/brinde + checkout */
+/* gaveta lateral da sacola: itens, quantidade, subtotal e o botão da finalização */
 .gaveta { position: fixed; inset: 0; z-index: 120; pointer-events: none; }
 .gaveta__veu { position: absolute; inset: 0; background: rgba(11, 35, 96, 0.35); opacity: 0; transition: opacity 0.25s ease; }
 .gaveta__painel {
@@ -487,75 +487,18 @@ main { padding-top: 68px; }
 }
 .gaveta__desfazer button { background: none; border: 0; padding: 0.2em 0; color: var(--deep); font-weight: 600; text-decoration: underline; cursor: pointer; font-size: 0.84rem; }
 .gaveta__vivo { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; margin: 0; }
-.gaveta__regua { padding: 1em 1.3em 0; }
-.gaveta__trilho { height: 8px; border-radius: 999px; background: var(--sky); overflow: hidden; }
-.gaveta__barra { height: 100%; border-radius: 999px; background: var(--gold); width: 0; transition: width 0.4s ease; }
-.gaveta__meta { font-size: 0.84rem; color: var(--ink); margin: 0.6em 0 0; }
-.gaveta__meta b { color: var(--deep); }
 .gaveta__pe { padding: 1em 1.3em 1.3em; }
 /* fechamento: o cliente precisa ver o quanto vai gastar antes de sair daqui */
 .gaveta__soma { display: flex; align-items: baseline; justify-content: space-between; gap: 1em; padding-top: 0.2em; }
 .gaveta__soma span { font-size: 0.86rem; color: var(--ink); }
 .gaveta__soma b { font-family: var(--font-display); font-size: 1.3rem; color: var(--deep); font-variant-numeric: tabular-nums; }
-.gaveta__frete { font-size: 0.78rem; color: #5b6779; margin: 0.1em 0 0.9em; }
-.gaveta__pendente { font-size: 0.78rem; line-height: 1.5; color: var(--deep); background: var(--sky-light, #dcebfa); border-radius: 10px; padding: 0.7em 0.9em; margin: 0.8em 0 0; }
-.gaveta__pendente[hidden] { display: none; }
+.gaveta__soma + .gaveta__impacto { margin-top: 0.8em; }
 .gaveta__checkout { width: 100%; text-align: center; }
 .gaveta__nota { font-size: 0.74rem; color: #66748a; margin: 0.8em 0 0; }
 .gaveta__impacto { font-size: 0.78rem; color: var(--deep); background: var(--sky, #dcebfa); border-radius: 8px; padding: 0.55em 0.8em; margin: 0 0 0.7em; }
 .gaveta__vazio a, .gaveta__itens a { color: var(--deep); text-decoration: underline; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .gaveta__esvazia { background: none; border: 0; padding: 0; color: #66748a; text-decoration: underline; cursor: pointer; font-size: 0.74rem; }
-/* festa ao cruzar o teto: confetes discretos nas cores da casa */
-/* flex-shrink 0: com o card da Ecobag dentro, o painel encolhia a festa em
-   tela baixa e o overflow:hidden cortava o botão de adicionar (visto 03/08) */
-.gaveta__festa { position: relative; flex-shrink: 0; margin: 1em 1.3em 0; background: #fff; border: 1px solid var(--gold); border-radius: 14px; padding: 1em 1.2em; overflow: hidden; }
-.gaveta__festa p { position: relative; z-index: 1; margin: 0; font-size: 0.88rem; color: var(--deep); }
-.gaveta__confete {
-  position: absolute; top: -10px; width: 7px; height: 7px; border-radius: 2px;
-  animation: confete 1.8s ease-in forwards;
-}
-.gaveta__confete:nth-child(3n) { background: var(--gold); }
-.gaveta__confete:nth-child(3n+1) { background: var(--azul, #8fc1ea); }
-.gaveta__confete:nth-child(3n+2) { background: var(--deep); }
-.gaveta__confete:nth-child(1) { left: 6%; animation-delay: 0s; }
-.gaveta__confete:nth-child(2) { left: 16%; animation-delay: 0.2s; }
-.gaveta__confete:nth-child(3) { left: 27%; animation-delay: 0.05s; }
-.gaveta__confete:nth-child(4) { left: 38%; animation-delay: 0.3s; }
-.gaveta__confete:nth-child(5) { left: 49%; animation-delay: 0.12s; }
-.gaveta__confete:nth-child(6) { left: 60%; animation-delay: 0.25s; }
-.gaveta__confete:nth-child(7) { left: 70%; animation-delay: 0.08s; }
-.gaveta__confete:nth-child(8) { left: 80%; animation-delay: 0.35s; }
-.gaveta__confete:nth-child(9) { left: 88%; animation-delay: 0.18s; }
-.gaveta__confete:nth-child(10) { left: 95%; animation-delay: 0.28s; }
-@keyframes confete {
-  0% { transform: translateY(0) rotate(0); opacity: 1; }
-  100% { transform: translateY(110px) rotate(340deg); opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .gaveta__confete { animation: none; opacity: 0; }
-}
-/* a celebração oferece as Ecobags do catálogo: card com foto + adicionar
-   (P0-3 do conselho r4, decisão do dono em 03/08) */
-.gaveta__festa .gaveta__brinde-como { position: relative; z-index: 1; margin: 0.5em 0 0; font-size: 0.8rem; color: #5b6779; }
-.gaveta__brinde {
-  position: relative; z-index: 1;
-  display: grid; grid-template-columns: 48px 1fr auto; gap: 0.7em; align-items: center;
-  margin-top: 0.7em; padding: 0.55em 0.6em;
-  border: 1px solid var(--line); border-radius: 11px; background: var(--cloud);
-}
-.gaveta__brinde-foto img { width: 48px; height: 48px; object-fit: contain; border-radius: 8px; background: #fff; border: 1px solid var(--line); }
-.gaveta__brinde-info { display: grid; gap: 0.1em; min-width: 0; }
-.gaveta__brinde-info a { font-size: 0.84rem; font-weight: 600; color: var(--deep); text-decoration: none; }
-.gaveta__brinde-info a:hover { text-decoration: underline; }
-.gaveta__brinde-info span { font-size: 0.78rem; color: #5b6779; font-variant-numeric: tabular-nums; }
-.gaveta__brinde-add {
-  min-height: 34px; padding: 0.45em 1em; border: 0; border-radius: 999px;
-  background: var(--deep); color: #fff; font-weight: 600; font-size: 0.8rem; cursor: pointer;
-  transition: box-shadow 0.18s ease, transform 0.18s ease;
-}
-.gaveta__brinde-add:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(11, 35, 96, 0.28); }
 .sacola-aviso a, .sacola-aviso button { grid-row: 1; grid-column: 2; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; color: var(--gold); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; white-space: nowrap; }
-.sacola-aviso__frete { grid-column: 1 / -1; font-size: 0.8rem; opacity: 0.85; }
 .opcao__valor { font-weight: 400; text-transform: none; letter-spacing: 0.02em; color: var(--ink); margin-left: 0.5em; }
 
 .pdp__detalhes { margin-top: 2em; border-top: 1px solid var(--line); }
@@ -615,3 +558,66 @@ main { padding-top: 68px; }
 /* (a grade das gravuras, .gravuras, mora em /css/marca.css: a landing usa a mesma) */
 .institucional .gravuras { padding-left: 0; }
 .institucional .gravuras a { text-decoration: none; }
+
+/* ===========================================================================
+   Loja própria, fase 4: finalização, pedido e volta do pagamento
+   (/loja/finalizar/, /loja/pedido/, /loja/pedido/obrigado/). Moram no mesmo
+   painel de vidro das páginas institucionais.
+   =========================================================================== */
+.fechamento h2 { font-size: 1.25rem; }
+.fechamento [data-etapa] > h2:first-child { margin-top: 0; }
+.fechamento__status { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 1.9rem); line-height: 1.15; color: var(--deep); margin: 0.1em 0 0.2em; }
+.fechamento__erro { color: #8a2026; background: #fbeaea; border-radius: 10px; padding: 0.7em 0.9em; margin: 1em 0; }
+.fechamento__erro[hidden] { display: none; }
+
+/* contas: itens, frete e total, uma linha cada, valor à direita */
+.institucional__texto ul.conta { list-style: none; padding: 0; margin: 0.4em 0 0; border-top: 1px solid var(--line); }
+.institucional__texto ul.conta > li { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; padding: 0.75em 0; margin: 0; border-bottom: 1px solid var(--line); line-height: 1.4; }
+.institucional__texto ul.conta > li::before { content: none; }
+.conta__nome { display: grid; gap: 0.15em; min-width: 0; }
+.conta__nome b { font-weight: 600; color: var(--deep); overflow-wrap: anywhere; }
+.conta__nome small { font-size: 0.82rem; color: #4d5a6b; }
+.conta__valor, .conta dd { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--deep); white-space: nowrap; }
+.conta--soma { margin: 0.3em 0 0.9em; }
+.conta--soma > div { display: flex; justify-content: space-between; align-items: baseline; gap: 1em; padding: 0.45em 0; }
+.conta--soma dt { color: var(--ink); }
+.conta--soma dd { margin: 0; }
+.conta__total { border-top: 1px solid var(--line); margin-top: 0.2em; padding-top: 0.7em !important; }
+.conta__total dt { font-weight: 600; color: var(--deep); }
+.conta__total dd { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; }
+
+/* formulário: grade de 6 colunas no desktop, uma coluna no celular */
+.campos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0.9em 1em; margin: 0.6em 0 0; }
+.campos[hidden] { display: none; }
+.campo { display: grid; gap: 0.35em; grid-column: span 6; align-content: start; }
+.campo--2 { grid-column: span 2; }
+.campo--3 { grid-column: span 3; }
+.campo--4 { grid-column: span 4; }
+@media (max-width: 600px) { .campo--2, .campo--3, .campo--4 { grid-column: span 6; } }
+.campo label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.02em; color: var(--deep); }
+/* 16px no campo: abaixo disso o iPhone dá zoom ao tocar */
+.campo input, .campo select {
+  width: 100%; min-height: 48px; padding: 0.6em 0.85em;
+  font: inherit; font-size: 16px; color: var(--ink);
+  background: #fff; border: 1px solid rgba(11, 35, 96, 0.28); border-radius: 12px;
+}
+.campo input:focus-visible, .campo select:focus-visible { outline: 2px solid var(--deep); outline-offset: 1px; border-color: var(--deep); }
+.campo input:user-invalid, .campo select:user-invalid { border-color: #a4343a; }
+
+/* projeto social: o rádio nativo fica escondido e a linha inteira é o alvo */
+.projetos { border: 0; padding: 0; margin: 1.7em 0 0; min-width: 0; }
+.projetos legend { padding: 0; font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; line-height: 1.25; color: var(--deep); }
+.projetos > .note { margin: 0.45em 0 0.7em; }
+.projeto-opcao { position: relative; display: flex; align-items: center; gap: 0.75em; min-height: 48px; padding: 0.55em 0.9em; margin-top: 0.5em; border: 1px solid rgba(11, 35, 96, 0.2); border-radius: 12px; background: rgba(255, 255, 255, 0.6); cursor: pointer; }
+.projeto-opcao input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+.projeto-opcao span::before { content: ""; display: inline-block; vertical-align: -3px; width: 16px; height: 16px; margin-right: 0.7em; border-radius: 50%; border: 1.5px solid var(--deep); background: #fff; }
+.projeto-opcao:has(input:checked) { border-color: var(--deep); background: #fff; }
+.projeto-opcao input:checked + span::before { background: radial-gradient(circle, var(--deep) 0 4px, #fff 4.5px); }
+.projeto-opcao:has(input:focus-visible) { outline: 2px solid var(--deep); outline-offset: 2px; }
+
+.fechamento__robo { margin: 1.4em 0 0.4em; min-height: 65px; }
+.fechamento__form > .btn { margin-top: 0.6em; }
+.fechamento__acoes { display: flex; flex-wrap: wrap; gap: 0.7em; margin: 1.3em 0 0.6em; }
+@media (max-width: 600px) { .fechamento__acoes .btn, .fechamento__form > .btn { width: 100%; } }
+/* o título do resumo e o aviso de erro rolam para a tela sem ficar sob o topo fixo */
+.fechamento [tabindex="-1"], .fechamento__erro { scroll-margin-top: 6.5rem; }

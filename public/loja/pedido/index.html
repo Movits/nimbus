@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seu pedido | NIMBUS</title>
+<meta name="description" content="A situação do seu pedido NIMBUS, pelo link do e-mail da compra.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Seu pedido | NIMBUS">
+<meta property="og:description" content="A situação do seu pedido NIMBUS, pelo link do e-mail da compra.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NIMBUS">
+<meta property="og:locale" content="pt_BR">
+
+<meta property="og:image" content="https://nimbuswear.com.br/img/og-nimbus.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/img/favicon-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180.png">
+<meta name="theme-color" content="#dcebfa">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js";setTimeout(function(){document.querySelectorAll(".reveal:not(.in)").forEach(function(e){e.classList.add("in")})},2000)</script>
+<link rel="stylesheet" href="/loja/css/tokens.css?v=72548d5f">
+<link rel="stylesheet" href="/css/marca.css?v=72548d5f">
+<link rel="stylesheet" href="/loja/css/loja.css?v=72548d5f">
+
+<script>(function(){addEventListener("hashchange",function(){location.reload()});var v=location.hash.slice(1);if(!v)return;window.NIMBUS_LINK=v;try{sessionStorage.setItem("nimbus-pedido",v)}catch(e){}history.replaceState(null,"",location.pathname)})()</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E041S3ZHWB"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','G-E041S3ZHWB');</script>
+</head>
+<body>
+
+<header class="topo" data-topo>
+  <a class="topo__logo" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320"></a>
+  <nav class="topo__nav" aria-label="Principal"><a href="/loja/manifesto/"><span>Manifesto</span></a><a href="/loja/impacto/"><span>Impacto</span></a><a href="/gravuras/"><span>Gravuras</span></a><a href="/loja/"><span>Loja</span><small>em breve</small></a></nav>
+  <details class="topo__menu"><summary>Menu</summary><nav class="topo__painel" aria-label="Principal"><a href="/loja/manifesto/"><span>Manifesto</span></a><a href="/loja/impacto/"><span>Impacto</span></a><a href="/gravuras/"><span>Gravuras</span></a><a href="/loja/"><span>Loja</span><small>em breve</small></a></nav></details>
+  <a class="topo__cta" href="mailto:nimbuswearbr@gmail.com?subject=Aviso%3A%20abertura%20da%20NIMBUS&amp;body=Quero%20ser%20avisado%20quando%20as%20pe%C3%A7as%20da%20NIMBUS%20chegarem." data-aviso="vitrine_topo">Quero ser avisado</a>
+</header>
+<main>
+  <section class="secao"><div class="secao__inner institucional">
+    <h1 class="display display--md">Seu pedido</h1>
+    <div class="institucional__texto vidro fechamento" data-pedido>
+      <noscript><p class="fechamento__erro">Para ver o seu pedido, ative o JavaScript do navegador.</p></noscript>
+      <p class="lede" data-pedido-aviso role="status">Abrindo o seu pedido.</p>
+      <div data-pedido-corpo hidden>
+        <p class="kicker" data-pedido-codigo></p>
+        <p class="fechamento__status" data-pedido-status></p>
+        <p class="note" data-pedido-recado role="status" hidden></p>
+        <p class="note" data-pedido-data></p>
+        <p data-pedido-rastreio hidden></p>
+        <p data-pedido-pagar hidden><a class="btn btn--primary" href="/loja/pedido/">Pagar no Mercado Pago</a></p>
+        <h2>Itens</h2>
+        <ul class="conta" data-pedido-itens></ul>
+        <dl class="conta conta--soma">
+          <div><dt>Frete</dt><dd data-pedido-frete></dd></div>
+          <div class="conta__total"><dt>Total</dt><dd data-pedido-total></dd></div>
+        </dl>
+        <p data-pedido-projeto></p>
+        <div data-desistir hidden>
+          <h2>Desistir da compra</h2>
+          <p>Você pode desistir em até 7 dias após receber. <a href="/loja/trocas/">Trocas e devoluções</a></p>
+          <p data-desistir-abre-linha><button type="button" class="btn btn--ghost" data-desistir-abre>Quero desistir</button></p>
+          <div data-desistir-confirma hidden>
+            <p>Confirma a desistência deste pedido? A confirmação vai para o seu e-mail na hora.</p>
+            <div class="fechamento__acoes">
+              <button type="button" class="btn btn--primary" data-desistir-sim>Confirmar a desistência</button>
+              <button type="button" class="btn btn--ghost" data-desistir-nao>Voltar</button>
+            </div>
+          </div>
+          <p class="fechamento__erro" data-desistir-erro role="alert" hidden></p>
+        </div>
+      </div>
+    </div>
+  </div></section>
+</main>
+
+<footer class="pe">
+  <ul class="selos"><li>Feita no Brasil, para você</li><li>10% do lucro vai para o projeto social que você escolher</li><li>Aviso por e‑mail quando as peças chegarem</li></ul>
+  <div class="rodape">
+    <div class="rodape__grade">
+      <div class="rodape__sobre"><a class="rodape__marca" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320" loading="lazy"></a><p class="rodape__lema">Streetwear católico premium. Acima de tudo.</p></div>
+      <div><h2>A marca</h2><a href="/loja/manifesto/">Manifesto</a><a href="/loja/impacto/">Impacto</a><a href="/gravuras/">Gravuras</a><a href="https://www.instagram.com/nimbuswear.br/" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@nimbuswear.br" rel="noopener">TikTok</a></div>
+      <div><h2>Ajuda</h2><a href="/loja/trocas/">Trocas e devoluções</a><a href="/loja/envios/">Envios e prazos</a><a href="/loja/privacidade/">Privacidade</a><a href="mailto:nimbuswearbr@gmail.com?subject=Contato%3A%20NIMBUS">Fale com a NIMBUS</a></div>
+    </div>
+    <p class="rodape__legal">© 2026 NIMBUS · CNPJ 53.977.834/0001-18 · Brasília DF</p>
+  </div>
+</footer>
+<script src="/loja/js/ui.js?v=72548d5f" defer></script>
+<script src="/loja/js/compra.js?v=72548d5f" defer></script>
+</body></html>

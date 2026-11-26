@@ -53,6 +53,14 @@ const PAGES = [
   ['gravuras', '/gravuras/'],
   ['gravura', '/gravuras/menino-jesus-ihs-wierix/'],
   ['pagina-404', '/404.html'],
+  // A finalização só mostra o formulário com algo na sacola: o terceiro campo
+  // roda na página antes de ela carregar e põe duas linhas de exemplo.
+  ['loja-finalizar', '/loja/finalizar/', () => localStorage.setItem('nimbus-sacola-v3', JSON.stringify({ itens: [
+    { sku: 'EX-1', nome: 'Exemplo | Camiseta Oversized Premium', cor: 'Off-White', tamanho: 'GG', preco: 179.9, qtd: 2 },
+    { sku: 'EX-2', nome: 'Exemplo | Moletom Canguru', cor: 'Preta', tamanho: 'M', preco: 299.9, qtd: 1 },
+  ] }))],
+  ['loja-pedido', '/loja/pedido/'],
+  ['loja-obrigado', '/loja/pedido/obrigado/?codigo=NB-TEST-0000&status=approved'],
 ].filter(([n]) => !filtro || n.startsWith(filtro));
 const VIEWPORTS = [
   ['desktop', { width: 1440, height: 900 }, false],
@@ -200,8 +208,9 @@ let total = 0;
 const resumo = {};
 for (const [vp, viewport, toque] of VIEWPORTS) {
   const ctx = await browser.newContext({ viewport, deviceScaleFactor: 1, locale: 'pt-BR', isMobile: toque, hasTouch: toque });
-  for (const [name, rota] of PAGES) {
+  for (const [name, rota, preparo] of PAGES) {
     const page = await ctx.newPage();
+    if (preparo) await page.addInitScript(preparo);
     // Máquina ocupada faz o servidor de desenvolvimento demorar: tenta de novo uma
     // vez. Página que não abre nas duas vira achado (e o script segue), em vez de
     // derrubar a medição inteira com um erro do navegador.
