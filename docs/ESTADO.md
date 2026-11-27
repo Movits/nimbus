@@ -552,10 +552,16 @@ pontos com defeito técnico ficaram resolvidos e subiram: 22 (peça 08), 46 (18)
 e azul-marinho), pela diferença da peça inteira e sem claro nem preto novo. O código novo
 fica atrás de chaves novas na `pecas.json`; com a configuração oficial, a saída das outras
 peças sai idêntica (0 px). Contagem dos 30 pontos do dono: **26 resolvidos; 4 esperam
-decisão dele** (101, título da 16 com o granulado do scan, quatro versões A a D na página;
-19; 20; 107; o 110 também, fora dos 30). A página (versão 14) dá as opções por letra: ele
-responde "NN letra" quando puder ver as imagens no computador. Fora isso, falta só a
-conferência dele no Affinity pelo `CONFERIR.md`.
+decisão dele** (101, 19, 20, 107; o 110 também, fora dos 30).
+
+**Rodada 16 (26/11): as opções dos 5 pontos ficaram prontas e passaram em revisão
+independente.** O dono pediu "conserta tudo e depois eu escolho". A página de conferência
+(versão 16, mesma URL) tem a seção "Suas escolhas": ele toca a letra de cada ponto e dá o
+ok final das 40; as escolhas ficam gravadas no banco da página. Recomendadas: 101 C, 19 C,
+20 B, 107 B, 110 A. Nas duas opções do 110 a moldura inteira da 38 ganha beira suave, como
+a 37. As áreas ficam em `metodo/_trabalho/r16/` e o código novo fica atrás de chaves
+desligadas por padrão (assets `da49081`). Nada subiu para o oficial. Depois das escolhas:
+subir as opções escolhidas (na peça 07 juntar 19 e 20), refazer as provas e pedir o ok final.
 
 Em 10/11 o dono comentou a página de conferência ponto a ponto. Os pontos principais:
 - borda pixelada em quase todas;
