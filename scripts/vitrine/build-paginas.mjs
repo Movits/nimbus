@@ -8,7 +8,7 @@ import crypto from "node:crypto";
 // A finalização usa as mesmas listas que o servidor confere: os projetos
 // sociais e as faixas de CEP por estado. Uma fonte só, a do servidor.
 import { PROJETOS } from "../../servidor/src/pedido.js";
-import { FAIXAS_CEP, UFS, UF_NORTE } from "../../servidor/src/frete.js";
+import { FAIXAS_CEP, FRETE_NORTE_CENTAVOS, FRETE_NORTE_GRATIS_A_PARTIR_DE_CENTAVOS, UFS, UF_NORTE } from "../../servidor/src/frete.js";
 
 const RAIZ = path.resolve(import.meta.dirname, "..", "..");
 
@@ -114,11 +114,24 @@ const cartaoGravura = (g, classe = "", sizes = SIZES_GRAVURA_INDICE) =>
    páginas que respondiam noindex, o que renderia 52 erros no Search Console.
    Para abrir a loja ao Google, basta virar esta linha para true. */
 const VITRINE_INDEXAVEL = false;
-// VITRINE FECHADA (ordem do dono, 14/08/2026): catálogo YouDraw fora do ar
-// durante a remontagem IzzyPrint. Home vira página de remontagem; header e
-// footer perdem coleções e Sacola; institucionais continuam no ar. Reabrir =
-// true aqui + restaurar ENTRAM no build-catalogo.mjs + npm run vitrine.
-const VITRINE_ABERTA = false;
+// Três estados da loja:
+//   "fechada" (14/08/2026): home de remontagem, sem coleções nem Sacola;
+//   "exemplo" (26/11/2026, decisão do dono): a loja inteira na tela (cartões,
+//     janela do produto, página do produto, sacola, finalização) com os
+//     produtos de EXEMPLO de catalogo-exemplo.json, marcados como exemplo, e
+//     a finalização em modo demonstração, sem pedido;
+//   "aberta": o catálogo real, com venda de verdade.
+// Abrir = "aberta" aqui + lojaAberta no marca.json + o catálogo real + a
+// chave real do Turnstile + npm run vitrine.
+const MODO_LOJA = "exemplo";
+// Venda de verdade: só com a loja aberta.
+const VITRINE_ABERTA = MODO_LOJA === "aberta";
+// Interface de loja na tela: aberta ou em exemplo.
+const LOJA_NA_TELA = MODO_LOJA !== "fechada";
+const LOJA_EXEMPLO = MODO_LOJA === "exemplo";
+const PRODUTOS = LOJA_EXEMPLO
+  ? JSON.parse(fs.readFileSync(path.join(import.meta.dirname, "catalogo-exemplo.json"), "utf-8")).produtos
+  : cat.produtos;
 // A landing lê o mesmo estado em src/data/marca.json (lojaAberta). Os dois têm
 // que concordar, senão a landing e a vitrine mostram lojas diferentes.
 if (MARCA.lojaAberta !== VITRINE_ABERTA)
@@ -187,10 +200,6 @@ const pixels = () => `${META_PIXEL_ID ? `
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','${META_PIXEL_ID}');fbq('track','PageView');</script>` : ""}${TIKTOK_PIXEL_ID ? `
 <script>!function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];ttq.setAndDefer=function(o,m){o[m]=function(){o.callMethod?o.callMethod.apply(o,arguments):o.queue.push([m].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(e){var o=ttq._i[e]||[];for(var n=0;n<ttq.methods.length;n++)ttq.setAndDefer(o,ttq.methods[n]);return o};ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{};ttq._i[e]=[];ttq._i[e]._u=i;ttq._t=ttq._t||{};ttq._t[e]=+new Date;ttq._o=ttq._o||{};ttq._o[e]=n||{};var o=d.createElement("script");o.type="text/javascript";o.async=!0;o.src=i+"?sdkid="+e+"&lib="+t;var a=d.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};ttq.load('${TIKTOK_PIXEL_ID}');ttq.page()}(window,document,'ttq');</script>` : ""}`;
 
-// O cabeçalho de coleção é uma faixa larga sobre foto panorâmica: sem foco por
-// coleção, o cover de tela larga corta o assunto (a igreja da RELÍQUIA virava
-// laje de parede a 1920). Cada valor mira o assunto da respectiva arte.
-const FOCO_COLECAO = { street: "50% 62%", reliquia: "50% 40%", nuvem: "50% 70%" };
 
 // O topo é o MESMO da landing (src/sections/Topbar.tsx): marca à esquerda, que
 // leva à landing; navegação em caixa baixa; uma pílula de contorno à direita.
@@ -198,18 +207,19 @@ const FOCO_COLECAO = { street: "50% 62%", reliquia: "50% 40%", nuvem: "50% 70%" 
 // Aberta, entram as coleções e a pílula volta a ser a Sacola. A faixa de
 // anúncio só existe aberta: fechada ela não tinha o que anunciar, e a landing
 // não tem faixa.
-const NAV = VITRINE_ABERTA
+const NAV = LOJA_NA_TELA
   ? [["Street", `${PREFIXO}/c/street/`], ["Relíquia", `${PREFIXO}/c/reliquia/`], ["Nuvem", `${PREFIXO}/c/nuvem/`], ["Manifesto", `${PREFIXO}/manifesto/`]]
   : MARCA.nav.map((n) => [n.rotulo, n.href, n.nota]);
 // `atual` é o caminho da página: o item dela no menu ganha aria-current (fio dourado fixo)
 const navLinks = (atual) => NAV.map(([rotulo, href, nota]) => `<a href="${href}"${href === atual ? ' aria-current="page"' : ""}><span>${esc(rotulo)}</span>${nota ? `<small>${esc(nota)}</small>` : ""}</a>`).join("");
-const header = (atual = "") => `${VITRINE_ABERTA ? `
-<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a> &nbsp;·&nbsp; frete grátis a partir de R$399,90</div>` : ""}
+const header = (atual = "") => `${LOJA_EXEMPLO ? `
+<div class="announcement"><b>Loja em montagem:</b> os produtos são exemplos e ainda não estão à venda.</div>` : VITRINE_ABERTA ? `
+<div class="announcement"><a href="${PREFIXO}/impacto/"><b>10% do lucro</b> do seu pedido vai para o projeto social que você escolher</a></div>` : ""}
 <header class="topo" data-topo>
   <a class="topo__logo" href="/" aria-label="NIMBUS, página inicial"><img src="/img/wordmark-nimbus.webp" alt="NIMBUS" width="1000" height="320"></a>
   <nav class="topo__nav" aria-label="Principal">${navLinks(atual)}</nav>
   <details class="topo__menu"><summary>Menu</summary><nav class="topo__painel" aria-label="Principal">${navLinks(atual)}</nav></details>
-  ${VITRINE_ABERTA
+  ${LOJA_NA_TELA
     ? `<a class="topo__cta" href="${esc(SACOLA)}" data-abre-sacola>Sacola<span class="sacola-n" data-sacola-n hidden></span></a>`
     : avisoBotao("vitrine_topo", "topo__cta")}
 </header>`;
@@ -221,7 +231,7 @@ const header = (atual = "") => `${VITRINE_ABERTA ? `
 const colunaRodape = (titulo, links) =>
   `<div><h2>${esc(titulo)}</h2>${links.map((l) => `<a href="${esc(l.href)}"${externo(l.href)}${l.attr || ""}>${esc(l.rotulo)}</a>`).join("")}</div>`;
 const COLUNAS_RODAPE = [
-  ...(VITRINE_ABERTA ? [{ titulo: "Loja", links: [
+  ...(LOJA_NA_TELA ? [{ titulo: "Loja", links: [
     { rotulo: "STREET", href: `${PREFIXO}/c/street/` }, { rotulo: "RELÍQUIA", href: `${PREFIXO}/c/reliquia/` },
     { rotulo: "NUVEM", href: `${PREFIXO}/c/nuvem/` }, { rotulo: "Sacola", href: SACOLA, attr: " data-abre-sacola" },
   ] }] : []),
@@ -280,17 +290,34 @@ const comoComprar = () => `
   </div></section>`;
 
 const card = (p) => `
-<a class="card reveal" href="${PREFIXO}/p/${p.slug}/" data-peca="${esc(p.peca)}" data-preco="${p.preco}">
+<a class="card reveal" href="${PREFIXO}/p/${p.slug}/" data-slug="${esc(p.slug)}" data-peca="${esc(p.peca)}" data-preco="${p.preco}">
   <div class="card__midia">
     <img src="${esc(p.imagens.capa)}" alt="${esc(p.nome)}" width="500" height="500" loading="lazy" decoding="async">
     ${p.imagens.hover ? `<img class="card__hover" data-verso="${esc(p.imagens.hover)}" alt="" width="500" height="500" decoding="async">` : ""}
-    <span class="card__pill">${esc(p.colecao_rotulo)}</span>
+    <span class="card__pill">${esc(p.colecao_rotulo)}${p.exemplo ? " · EXEMPLO" : ""}</span>
   </div>
   <div class="card__meta">
     <div><div class="card__nome">${esc(p.arte)}</div><div class="card__peca">${esc(p.peca)}</div></div>
     <div class="card__preco">${esc(p.preco_formatado)}</div>
   </div>
 </a>`;
+
+// Os dados que o produto.js usa para montar cor, tamanho e sacola, na página
+// do produto e na janela que abre ao clicar num cartão.
+const CORES_HEX = { Preta: "#16181d", Branca: "#f4f4f2", "Off-White": "#ece5d8", Bege: "#d9c9a8", Crua: "#e6dcc4" };
+const dadosDoProduto = (p) => ({
+  slug: p.slug, id: p.id, nome: p.nome, arte: p.arte, peca: p.peca, colecao_rotulo: p.colecao_rotulo,
+  preco: p.preco, preco_formatado: p.preco_formatado, exemplo: Boolean(p.exemplo),
+  imagens: p.imagens, opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor,
+  cores_hex: Object.fromEntries(p.opcoes.cores.map((c) => [c, CORES_HEX[c] || "#ccc"])),
+  url: `${PREFIXO}/p/${p.slug}/`,
+});
+const jsonNaPagina = (dados) => JSON.stringify(dados).replace(/</g, "\u003c");
+// Os cartões de uma página e o script da janela do produto.
+const produtosNaPagina = (lista) => lista.length
+  ? `<script type="application/json" id="produtos-dados">${jsonNaPagina(lista.map(dadosDoProduto))}</script>
+<script src="${PREFIXO}/js/produto.js?v=${V}" defer></script>`
+  : "";
 
 /* -------------------------------------------------------------------- home */
 // A capa da home fala como a primeira tela da landing: a categoria em rótulo, o
@@ -312,8 +339,8 @@ ${header(`${PREFIXO}/`)}
   <section class="hero">
     <div class="hero__copy">
       <p class="kicker reveal in">${esc(MARCA.descritor)}</p>
-      <h1 class="display reveal in">${VITRINE_ABERTA ? "Feita no Brasil, para você." : esc(colaCurtas(ESTADO_TITULO))}</h1>
-      ${VITRINE_ABERTA
+      <h1 class="display reveal in">${LOJA_NA_TELA ? "Feita no Brasil, para você." : esc(colaCurtas(ESTADO_TITULO))}</h1>
+      ${LOJA_NA_TELA
         ? `<p class="lede reveal in">Fé reverente, design autoral e acabamento premium.</p>
       <div class="hero__cta reveal in">
         <a class="btn btn--primary" href="#colecoes">Ver as coleções</a>
@@ -328,14 +355,13 @@ ${header(`${PREFIXO}/`)}
     </div>
   </section>
 
-  ${VITRINE_ABERTA ? `<section class="secao" id="colecoes"><div class="secao__inner">
+  ${LOJA_NA_TELA ? `<section class="secao" id="colecoes"><div class="secao__inner">
     <div class="secao__head">
       <div><div class="kicker">Três coleções, um mesmo horizonte</div><h2 class="display--md display">Coleções</h2></div>
     </div>
     <div class="colecoes">
       ${cat.colecoes.map((c) => `
       <a class="tile reveal" data-colecao="${c.id}" href="${PREFIXO}/c/${c.id}/">
-        <img class="tile__bg" src="${PREFIXO}/media/cenario-${c.id}-1600.webp" alt="" loading="lazy">
         <div class="tile__copy"><div class="tile__nome">${esc(c.rotulo)}</div><div class="tile__resumo">${esc(c.resumo)}</div></div>
       </a>`).join("")}
     </div>
@@ -343,20 +369,22 @@ ${header(`${PREFIXO}/`)}
 
   <section class="secao" style="padding-top:0"><div class="secao__inner">
     <div class="secao__head">
-      <div><div class="kicker">Essenciais</div><h2 class="display--md display">A primeira leva da NIMBUS</h2><p class="note" style="margin-top:0.4em">Oito peças abrem a marca. Quem pede agora veste antes de todo mundo.</p></div>
+      ${LOJA_EXEMPLO
+        ? `<div><div class="kicker">Essenciais</div><h2 class="display--md display">Como a loja vai ficar</h2><p class="note" style="margin-top:0.4em">Peças de exemplo, para ver a vitrine funcionando. As de verdade chegam no lançamento.</p></div>`
+        : `<div><div class="kicker">Essenciais</div><h2 class="display--md display">A primeira leva da NIMBUS</h2><p class="note" style="margin-top:0.4em">Oito peças abrem a marca. Quem pede agora veste antes de todo mundo.</p></div>`}
       <a class="btn btn--ghost" href="${PREFIXO}/c/street/">Ver tudo por coleção</a>
     </div>
-    <div class="grade">${cat.produtos.filter((p) => p.destaque).map(card).join("")}</div>
+    <div class="grade">${PRODUTOS.filter((p) => p.destaque).map(card).join("")}</div>
   </div></section>` : comoComprar()}
 
-  <section class="secao"${VITRINE_ABERTA ? "" : ' style="padding-top:0"'}><div class="secao__inner banda">
+  <section class="secao"${LOJA_NA_TELA ? "" : ' style="padding-top:0"'}><div class="secao__inner banda">
     <div class="banda__texto vidro reveal">
       <p class="kicker">Fé que se veste bem</p>
       <h2 class="display display--md">Reverência não é sussurro.</h2>
       <p class="lede">A NIMBUS nasce entre o concreto modernista e o céu do Brasil. Cada estampa trata a fé com a seriedade de quem acredita e o acabamento de quem respeita quem veste.</p>
       <a class="textlink" href="${PREFIXO}/manifesto/">Ler o manifesto</a>
     </div>
-    <div class="banda__midia reveal"><img src="${PREFIXO}/media/hero-editorial-1600.webp" alt="Homem de camiseta clara diante de colunas brancas de arquitetura modernista" width="1600" height="893" loading="lazy"></div>
+    <div class="banda__midia reveal"><img src="${PREFIXO}/media/asas-955.webp" alt="Homem de costas e de braços abertos, com a camiseta das asas, diante de uma nuvem" width="955" height="1280" loading="lazy"></div>
   </div></section>
 
   ${VITRINE_ABERTA ? "" : `<section class="secao" style="padding-top:0"><div class="secao__inner">
@@ -372,19 +400,20 @@ ${header(`${PREFIXO}/`)}
   <section class="secao" style="padding-top:0"><div class="secao__inner">${fechoAviso("vitrine_fim", { centro: true })}
   </div></section>`}
 
-  ${VITRINE_ABERTA ? `<section class="secao"><div class="secao__inner">
+  ${LOJA_NA_TELA ? `<section class="secao"><div class="secao__inner">
     <div class="secao__head reveal">
       <div><div class="kicker">Do pedido à porta</div><h2 class="display display--md">Como a sua peça nasce</h2></div>
     </div>
     <ol class="passos">
       <li class="reveal"><b>Você escolhe.</b><p>A arte, a peça, a cor e o tamanho, aqui na vitrine. O pagamento fecha na loja: à vista no Pix ou no boleto, ou no cartão em até 12x com juros.</p></li>
       <li class="reveal"><b>Ela é feita no Brasil, para você.</b><p>Estampa posicionada com medida, não no olho, e acabamento premium, peça a peça.</p></li>
-      <li class="reveal"><b>Chega com rastreio.</b><p>E 10% do lucro do pedido vai para o projeto social que você escolher no checkout, com repasse mensal e comprovação. <a href="${PREFIXO}/impacto/">Veja como funciona</a>.</p></li>
+      <li class="reveal"><b>Chega com rastreio.</b><p>E 10% do lucro do pedido vai para o projeto social que você escolher ao finalizar a compra, com repasse mensal e comprovação. <a href="${PREFIXO}/impacto/">Veja como funciona</a>.</p></li>
     </ol>
   </div></section>` : ""}
 </main>
 ${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
+${LOJA_NA_TELA ? produtosNaPagina(PRODUTOS.filter((p) => p.destaque)) : ""}
 </body></html>`;
 
 /* ----------------------------------------------------------------- colecao */
@@ -399,14 +428,13 @@ const SEO_COLECAO = {
     "Céu, nuvens e auréolas em traço leve, sobre peças premium feitas no Brasil. Camisetas a partir de R$149,90. 10% do lucro vai para um projeto social."],
 };
 const colecao = (c) => {
-  const produtos = cat.produtos.filter((p) => p.colecao === c.id);
+  const produtos = PRODUTOS.filter((p) => p.colecao === c.id);
   const pecas = [...new Set(produtos.map((p) => p.peca))];
   const [seoTitulo, seoDesc] = SEO_COLECAO[c.id] || [`${c.rotulo} | NIMBUS`, c.resumo];
   return `${head(seoTitulo, seoDesc, { canonical: `${URL_BASE}/c/${c.id}/` })}
 ${header(`${PREFIXO}/c/${c.id}/`)}
 <main>
   <section class="cabecalho-colecao" data-colecao="${c.id}">
-    <img class="cabecalho-colecao__bg" style="object-position:${FOCO_COLECAO[c.id] || "50% 50%"}" src="${PREFIXO}/media/cenario-${c.id}-1600.webp" alt="">
     <div class="cabecalho-colecao__copy">
       <div class="kicker kicker--gold">Coleção</div>
       <h1 class="display">${esc(c.rotulo)}</h1>
@@ -429,6 +457,7 @@ ${header(`${PREFIXO}/c/${c.id}/`)}
 ${footer()}
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
 <script src="${PREFIXO}/js/vitrine.js?v=${V}" defer></script>
+${produtosNaPagina(produtos)}
 </body></html>`;
 };
 
@@ -465,12 +494,14 @@ const tabelaMedidas = (medidas) => {
   });
   return `<table class="medidas"><thead><tr><th scope="col">Tamanho</th><th scope="col">Largura</th><th scope="col">Altura</th></tr></thead><tbody>${linhas.join("")}</tbody></table>`;
 };
-const relacionados = (p) => {
-  // Feedback do dono (31/07): ninguém compra a mesma arte em duas peças; a
-  // seção mostra OUTRAS artes da mesma coleção, com a mesma peça primeiro
-  // (similar de verdade: quem olha camiseta vê outras camisetas antes).
-  const outras = cat.produtos.filter((x) => x.slug !== p.slug && x.colecao === p.colecao && x.arte !== p.arte);
-  const lista = [...outras.filter((x) => x.peca === p.peca), ...outras.filter((x) => x.peca !== p.peca)].slice(0, 4);
+// Feedback do dono (31/07): ninguém compra a mesma arte em duas peças; a
+// seção mostra OUTRAS artes da mesma coleção, com a mesma peça primeiro
+// (similar de verdade: quem olha camiseta vê outras camisetas antes).
+const listaRelacionados = (p) => {
+  const outras = PRODUTOS.filter((x) => x.slug !== p.slug && x.colecao === p.colecao && x.arte !== p.arte);
+  return [...outras.filter((x) => x.peca === p.peca), ...outras.filter((x) => x.peca !== p.peca)].slice(0, 4);
+};
+const relacionados = (lista) => {
   if (!lista.length) return "";
   return `
   <section class="secao" style="padding-top:0"><div class="secao__inner">
@@ -482,37 +513,30 @@ const relacionados = (p) => {
 };
 
 const produto = (p) => {
-  const dados = {
-    imagens: p.imagens,
-    opcoes: p.opcoes, variantes_por_cor: p.variantes_por_cor, preco: p.preco,
-    slug: p.slug, nome: p.nome, peca: p.peca, id: p.id,
-  };
+  const dados = dadosDoProduto(p);
+  const rel = listaRelacionados(p);
   // galeria com a cor padrão primeiro (costas = arte, depois frente), para os
   // thumbs abrirem coerentes com a capa
   const pc0 = p.imagens.por_cor[p.opcoes.cores[0]] || {};
-  const galeria = [pc0.costas, pc0.frente, ...p.imagens.galeria.filter((u) => u !== pc0.costas && u !== pc0.frente)].filter(Boolean);
-  const jsonld = JSON.stringify({
+  const galeria = [...new Set([pc0.costas, pc0.frente, ...p.imagens.galeria].filter(Boolean))];
+  // Produto de exemplo não ganha JSON-LD: oferta de produto que não existe não vai a máquina de busca.
+  const jsonld = p.exemplo ? undefined : JSON.stringify({
     "@context": "https://schema.org", "@type": "Product",
     name: p.nome, image: p.imagens.galeria, description: p.resumo,
     brand: { "@type": "Brand", name: "NIMBUS" },
     offers: { "@type": "Offer", priceCurrency: "BRL", price: p.preco, availability: "https://schema.org/InStock", url: `${URL_BASE}/p/${p.slug}/` },
   });
-  const CORES_HEX = { Preta: "#16181d", Branca: "#f4f4f2", "Off-White": "#ece5d8", Bege: "#d9c9a8", Crua: "#e6dcc4" };
   return `${head(p.meta_title, p.meta_description, { ogImage: p.imagens.capa, canonical: `${URL_BASE}/p/${p.slug}/`, jsonld })}
 ${header()}
 <main>
   <nav class="migalhas"><div class="secao__inner"><a href="${PREFIXO}/">Início</a> · <a href="${PREFIXO}/c/${p.colecao}/">${esc(p.colecao_rotulo)}</a> · <span>${esc(p.arte)}</span></div></nav>
   <section class="secao" style="padding-top:1em"><div class="secao__inner pdp">
     <div class="pdp__palco" data-colecao="${p.colecao}">
-      <div class="pdp__quadro"><img src="${esc(p.imagens.capa)}" alt="${esc(p.nome)}" width="500" height="500" fetchpriority="high"></div>
+      <div class="pdp__quadro" data-quadro><img src="${esc(p.imagens.capa)}" alt="${esc(p.nome)}" width="500" height="500" fetchpriority="high"></div>
       ${galeria.length > 1 ? `<div class="pdp__thumbs">
         ${galeria.map((g, i) => `<button data-src="${esc(g)}" aria-pressed="${i === 0}"><img src="${esc(g)}" alt="" loading="lazy"></button>`).join("")}
       </div>` : ""}
-      <p class="note pdp__nota-fotos">Fotos de campanha.${p.opcoes.tamanhos.length > 1 ? " Nas fotos, as pessoas vestem tamanho G." : ""} Medidas e materiais exatos na ficha desta página.</p>
-      <figure class="pdp__cenario">
-        <img src="${PREFIXO}/media/cenario-${p.colecao}-1600.webp" alt="Cenário da coleção ${esc(p.colecao_rotulo)}" loading="lazy">
-        <figcaption>O território da coleção ${esc(p.colecao_rotulo)}</figcaption>
-      </figure>
+      <p class="note pdp__nota-fotos">${p.exemplo ? "Foto em breve." : `Fotos de campanha.${p.opcoes.tamanhos.length > 1 ? " Nas fotos, as pessoas vestem tamanho G." : ""} Medidas e materiais exatos na ficha desta página.`}</p>
     </div>
     <div class="pdp__info">
       <div class="kicker kicker--gold">${esc(p.colecao_rotulo)}</div>
@@ -520,6 +544,7 @@ ${header()}
       <div class="pdp__peca">${esc(p.peca)}</div>
       <div class="pdp__preco">${esc(p.preco_formatado)}</div>
       <p class="pdp__resumo note" style="font-size:0.95rem">${esc(p.resumo)}</p>
+      ${p.exemplo ? `<p class="pdp__exemplo">Produto de exemplo: ainda não está à venda.</p>` : ""}
 
       ${p.opcoes.cores.length ? `
       <div class="opcao"><div class="opcao__rotulo">Cor<span class="opcao__valor" data-cor-nome>${esc(p.opcoes.cores[0])}</span></div>
@@ -542,7 +567,7 @@ ${header()}
       </form>
       <span class="avisa-tamanho" data-avisa-tamanho role="alert">Escolha um tamanho para adicionar.</span>
       <div class="pdp__notas">
-        <span class="note">A partir de R$399,90: frete grátis. O frete do seu CEP aparece na finalização, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
+        <span class="note">Frete grátis fora da região Norte; no Norte, R$ 19,90, e grátis a partir de R$ 399,90 em produtos. O frete do seu CEP aparece na finalização, antes de pagar. À vista no Pix e no boleto, ou cartão em até 12x com juros.</span>
         <span class="note">7 dias para mudar de ideia: se devolver, <a href="${PREFIXO}/trocas/">devolvemos tudo o que você pagou, incluindo o frete</a>.</span>
         <span class="note">Peça feita no Brasil, para você.</span>
       </div>
@@ -566,15 +591,15 @@ ${header()}
         <details><summary>Prazo e envio</summary><p class="note">Peça feita no Brasil, com rastreio. Chega em até ${PRAZOS.foraDoNorte} dias úteis depois da confirmação do pagamento; na região Norte, em até ${PRAZOS.norte}. O prazo do seu CEP aparece antes de pagar.</p></details>
       </div>
 
-      <div class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social da sua escolha, no checkout. <a href="${PREFIXO}/impacto/">Como funciona</a>.</div>
+      <p class="pdp__impacto"><b>Esta peça destina 10% do lucro</b> ao projeto social que você escolher ao finalizar a compra. <a href="${PREFIXO}/impacto/">Como funciona</a>.</p>
     </div>
   </div></section>
-  ${relacionados(p)}
+  ${relacionados(rel)}
 </main>
 ${footer()}
-<script type="application/json" id="produto-dados">${JSON.stringify(dados)}</script>
+<script type="application/json" id="produto-dados">${jsonNaPagina(dados)}</script>
 <script src="${PREFIXO}/js/ui.js?v=${V}" defer></script>
-<script src="${PREFIXO}/js/produto.js?v=${V}" defer></script>
+${produtosNaPagina(rel) || `<script src="${PREFIXO}/js/produto.js?v=${V}" defer></script>`}
 </body></html>`;
 };
 
@@ -618,9 +643,9 @@ const INSTITUCIONAIS = {
     <p>A NIMBUS é pequena. Sou eu e quem caminha comigo. Se você chegou até aqui, já faz parte.</p>
     <p>Acima de tudo, obrigado.</p>
     <p><b>Roberto França, fundador da NIMBUS</b></p>
-    ${VITRINE_ABERTA ? `<p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
+    ${LOJA_NA_TELA ? `<p style="margin-top:2em">Se quiser ver o que essa vontade virou, as três coleções estão aqui.</p>
     <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`,
-    { arquivo: "manifesto-ceu-1200.webp", alt: "Curva de concreto branco modernista apontando para um céu azul com nuvens", w: 1200, h: 1600, legenda: "Entre o concreto e o céu." }],
+    { arquivo: "asas-955.webp", alt: "Homem de costas e de braços abertos, com a camiseta das asas, diante de uma nuvem", w: 955, h: 1280, legenda: "Entre o concreto e o céu." }],
   impacto: ["10% do lucro, de verdade", "Como funciona o repasse de 10% do lucro de cada pedido NIMBUS para o projeto social que você escolher.", `
     <p class="lede">A cada pedido, 10% do lucro vai para um projeto social que você escolhe ao finalizar a compra. Esta página explica o que isso significa, sem letra miúda.</p>
     <h2>O que chamamos de lucro</h2>
@@ -638,7 +663,7 @@ const INSTITUCIONAIS = {
     <p><b>Pequeno Cotolengo</b>: acolhimento de pessoas com deficiência em situação de abandono.</p>
     <h2>Diário de Repasses</h2>
     <p>A NIMBUS está no começo. O primeiro repasse acontece no mês seguinte às primeiras vendas, e o comprovante será publicado aqui, com data e valor. Sem venda, sem promessa vazia: esta página é o registro.</p>
-    ${VITRINE_ABERTA ? `<p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
+    ${LOJA_NA_TELA ? `<p>O diário abre com as primeiras vendas. Se quiser estar na primeira página dele, as coleções estão aqui.</p>
     <p><a class="btn btn--primary" href="${PREFIXO}/#colecoes">Ver as coleções</a></p>` : ""}`],
   trocas: ["Trocas e devoluções", "Política de trocas e devoluções da NIMBUS: arrependimento em 7 dias, que vale também para tamanho, e defeito coberto por 90 dias.", `
     <p class="lede">A nossa política é simples, segue a lei e cobre todos os casos, sem pegadinha.</p>
@@ -783,7 +808,7 @@ const finalizar = () => paginaDoPedido({
   descricao: "Contato, endereço de entrega e projeto social. O frete e o total aparecem antes de pagar.",
   corpo: `<h1 class="display display--md">Finalizar a compra</h1>
     <div class="institucional__texto vidro fechamento" data-finalizar>${VITRINE_ABERTA ? "" : `
-      <p class="institucional__estado">A loja está fechada enquanto remontamos a coleção.</p>`}
+      <p class="institucional__estado">${LOJA_EXEMPLO ? "Demonstração: a loja ainda não vende. Os produtos são exemplos e nenhum pedido é criado." : "A loja está fechada enquanto remontamos a coleção."}</p>`}
       ${semJs("Para finalizar a compra, ative o JavaScript do navegador.")}
       <div data-vazia hidden>
         <p class="lede">Sua sacola está vazia.</p>
@@ -844,7 +869,7 @@ const finalizar = () => paginaDoPedido({
         <p class="note">O pagamento abre na página do Mercado Pago: Pix, cartão ou boleto. O número do cartão é digitado lá e nunca passa pela NIMBUS.</p>
       </section>
     </div>
-    ${/* o estado sai do CEP pelas mesmas faixas que o servidor confere, e o prazo, do estado */""}<script type="application/json" id="finalizar-dados">${JSON.stringify({ faixas: FAIXAS_CEP, norte: [...UF_NORTE] })}</script>`,
+    ${/* o estado sai do CEP pelas mesmas faixas que o servidor confere, e o prazo, do estado */""}<script type="application/json" id="finalizar-dados">${JSON.stringify({ faixas: FAIXAS_CEP, norte: [...UF_NORTE], frete: { norte: FRETE_NORTE_CENTAVOS, gratisAPartir: FRETE_NORTE_GRATIS_A_PARTIR_DE_CENTAVOS } })}</script>`,
 });
 
 // O link do e-mail traz o código e o token no fragmento (#NB-XXXX-XXXX.token),
@@ -927,7 +952,7 @@ const stub = (rel) => `<!DOCTYPE html>
 const ANTIGO = path.join(RAIZ, "public/loja-preview");
 const relForStub = ["", "gates/",
   ...cat.colecoes.map((c) => `c/${c.id}/`),
-  ...cat.produtos.map((p) => `p/${p.slug}/`)];
+  ...cat.produtos.map((p) => `p/${p.slug}/`)]; // só produto real tem link antigo
 for (const rel of relForStub) {
   const dir = path.join(ANTIGO, rel);
   fs.mkdirSync(dir, { recursive: true });
@@ -962,7 +987,7 @@ const colecaoFechada = () => `<!DOCTYPE html>
 <title>NIMBUS</title>
 </head>
 <body><p>Esta coleção está fechada por enquanto. <a href="${PREFIXO}/">Ver a loja</a>.</p></body></html>`;
-if (VITRINE_ABERTA) {
+if (LOJA_NA_TELA) {
   for (const c of cat.colecoes) {
     const dir = path.join(BASE, "c", c.id);
     fs.mkdirSync(dir, { recursive: true });
@@ -976,7 +1001,9 @@ if (VITRINE_ABERTA) {
     fs.writeFileSync(path.join(dir, "index.html"), colecaoFechada());
   }
 }
-for (const p of cat.produtos) {
+// p/ é todo gerado: some o que saiu do catálogo (ou do catálogo de exemplo)
+fs.rmSync(path.join(BASE, "p"), { recursive: true, force: true });
+for (const p of PRODUTOS) {
   const dir = path.join(BASE, "p", p.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), produto(p));
@@ -1109,7 +1136,7 @@ const daVitrine = [
   `${URL_BASE}/`,
   ...Object.keys(INSTITUCIONAIS).map((s) => `${URL_BASE}/${s}/`),
   ...cat.colecoes.map((c) => `${URL_BASE}/c/${c.id}/`),
-  ...cat.produtos.map((p) => `${URL_BASE}/p/${p.slug}/`),
+  ...PRODUTOS.map((p) => `${URL_BASE}/p/${p.slug}/`),
 ];
 // Só entra no sitemap o que o robots deixa indexar. Ver VITRINE_INDEXAVEL.
 const publicas = ["https://nimbuswear.com.br/", `${GRAV_URL}/`, ...GRAVURAS.map((g) => `${GRAV_URL}/${g.slug}/`), ...(VITRINE_INDEXAVEL ? daVitrine : [])];
@@ -1117,4 +1144,4 @@ fs.writeFileSync(path.join(RAIZ, "public/sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${publicas.map((u) => `  <url><loc>${u}</loc><lastmod>${u.startsWith(GRAV_URL) ? GRAV_LASTMOD : lastmod}</lastmod></url>`).join("\n")}\n</urlset>\n`);
 fs.writeFileSync(path.join(RAIZ, "public/robots.txt"),
   `User-agent: *\nAllow: /\nDisallow: /loja/gates/\nDisallow: /loja/teste-carrinho/\nDisallow: /loja-preview/\n${VITRINE_INDEXAVEL ? "" : "Disallow: /loja/\n"}\nSitemap: https://nimbuswear.com.br/sitemap.xml\n`);
-console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${cat.produtos.length} produtos gerados em public/loja/ · sitemap com ${publicas.length} URLs`);
+console.log(`OK: home + gates + ${cat.colecoes.length} coleções + ${PRODUTOS.length} produtos${LOJA_EXEMPLO ? " de exemplo" : ""} gerados em public/loja/ · sitemap com ${publicas.length} URLs`);

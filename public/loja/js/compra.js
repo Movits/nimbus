@@ -82,7 +82,7 @@
     const enviar = form.querySelector('button[type="submit"]');
     const robo = $("[data-turnstile]");
     const outro = $("[data-projeto-outro]");
-    const { faixas: FAIXAS, norte: NORTE } = JSON.parse(document.getElementById("finalizar-dados").textContent);
+    const { faixas: FAIXAS, norte: NORTE, frete: FRETE } = JSON.parse(document.getElementById("finalizar-dados").textContent);
 
     const novaChave = () => Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, "0")).join("");
     let chave = novaChave();
@@ -176,7 +176,6 @@
       avisa("");
       const itens = NIMBUS.sacola.itens();
       if (!itens.length) { etapa("vazia"); return; }
-      if (!roboToken) { avisa("Espere a verificação contra robôs, logo acima do botão, terminar e tente de novo."); return; }
       const corpo = {
         chave,
         itens: itens.map((i) => ({ sku: i.sku, quantidade: i.qtd })),
@@ -189,6 +188,11 @@
         projeto_outro: campos.projeto.value === "outro" ? campos.projeto_outro.value : "",
         turnstile: roboToken,
       };
+      // Loja em montagem: sacola com produto de exemplo não fala com o
+      // servidor. O resumo sai daqui, com o preço da sacola e a mesma regra de
+      // frete do servidor (servidor/src/frete.js), e nenhum pedido nasce.
+      if (itens.some((i) => i.exemplo)) { mostraResumo(resumoDeExemplo(itens, corpo.endereco.uf), corpo, true); return; }
+      if (!roboToken) { avisa("Espere a verificação contra robôs, logo acima do botão, terminar e tente de novo."); return; }
       ocupado(true);
       const r = await chama("/api/checkout", corpo);
       ocupado(false);
@@ -200,10 +204,22 @@
       avisa(r.status === 0 ? "Sem conexão com a loja. Confira a internet e tente de novo." : r.dados.erro || "Erro no servidor. Tente de novo.");
     });
 
-    function mostraResumo(r, corpo) {
+    function resumoDeExemplo(itens, uf) {
+      const linhas = itens.map((i) => ({
+        nome: i.nome + (i.cor || i.tamanho ? " (" + [i.cor, i.tamanho].filter(Boolean).join(", ") + ")" : ""),
+        quantidade: i.qtd, preco_centavos: Math.round((i.preco || 0) * 100),
+      }));
+      const subtotal = linhas.reduce((a, l) => a + l.preco_centavos * l.quantidade, 0);
+      const frete = NORTE.includes(uf) && subtotal < FRETE.gratisAPartir ? FRETE.norte : 0;
+      return { resumo: { itens: linhas, subtotal_centavos: subtotal, frete_centavos: frete, total_centavos: subtotal + frete }, pagar: null };
+    }
+
+    function mostraResumo(r, corpo, demonstracao = false) {
       const res = r.resumo;
       doResumo = marcaDe(corpo.itens);
-      $("[data-resumo-codigo]").textContent = "Pedido " + r.codigo + ". Enviamos este resumo para o seu e-mail, com o link para pagar e o link para acompanhar o pedido.";
+      $("[data-resumo-codigo]").textContent = demonstracao
+        ? "Demonstração: os produtos são exemplos. Nenhum pedido foi criado e nada foi cobrado."
+        : "Pedido " + r.codigo + ". Enviamos este resumo para o seu e-mail, com o link para pagar e o link para acompanhar o pedido.";
       $("[data-resumo-itens]").replaceChildren(...linhasDoServidor(res.itens));
       $("[data-resumo-frete]").textContent = freteTexto(res.frete_centavos);
       $("[data-resumo-total]").textContent = reais(res.total_centavos);
@@ -215,8 +231,12 @@
       prazo.textContent = NORTE.includes(e.uf) ? prazo.dataset.norte : prazo.dataset.resto;
       const pagar = $("[data-pagar]");
       const url = linkSeguro(r.pagar);
-      pagar.hidden = !url;
+      pagar.classList.toggle("is-desligado", demonstracao);
+      if (demonstracao) pagar.setAttribute("aria-disabled", "true");
+      else pagar.removeAttribute("aria-disabled");
+      pagar.hidden = !url && !demonstracao;
       if (url) pagar.href = url;
+      else if (demonstracao) pagar.removeAttribute("href");
       else {
         // a mesma chave devolveu um pedido que já não espera pagamento
         chave = novaChave();

@@ -114,7 +114,7 @@ NIMBUS.sacola = (function () {
       const igual = itens.find((i) => i.sku === item.sku);
       if (igual && igual.qtd >= MAXIMO) return { total: somaDe(itens), cheio: true };
       if (igual) igual.qtd += 1;
-      else itens.push({ sku: item.sku, slug: item.slug, nome: item.nome, cor: item.cor, tamanho: item.tamanho || null, peca: item.peca || "", pid: item.pid || null, preco: item.preco || 0, img: item.img || null, qtd: 1 });
+      else itens.push({ sku: item.sku, slug: item.slug, nome: item.nome, cor: item.cor, tamanho: item.tamanho || null, peca: item.peca || "", pid: item.pid || null, preco: item.preco || 0, img: item.img || null, exemplo: Boolean(item.exemplo), qtd: 1 });
       grava(itens);
       this.pinta();
       return { total: somaDe(itens), cheio: false };

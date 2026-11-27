@@ -187,8 +187,6 @@ main { padding-top: 68px; }
   box-shadow: var(--shadow);
 }
 .tile[data-colecao="nuvem"] { color: var(--deep); }
-.tile__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-.tile:hover .tile__bg { transform: scale(1.035); }
 .tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.45), transparent 55%); }
 .tile[data-colecao="nuvem"]::after { background: linear-gradient(to top, rgba(247, 251, 255, 0.75), transparent 55%); }
 .tile__copy { position: relative; z-index: 1; padding: 1.8em; }
@@ -279,7 +277,8 @@ main { padding-top: 68px; }
    metade de céu azul saturado, que brigava com o céu pálido da página, ficam
    fora do quadro (revisão de 11/11/2026). */
 .banda__midia { display: flex; overflow: hidden; border-radius: 18px; box-shadow: 0 12px 30px rgba(27, 39, 51, 0.1); min-height: 320px; }
-.banda__midia img { width: 100%; height: 100%; object-fit: cover; object-position: 100% 0; transform: scale(1.45); transform-origin: 88% 4%; }
+/* a foto das asas (26/11/2026): retrato num quadro largo, o recorte guarda as asas */
+.banda__midia img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
 .banda__texto { align-content: center; }
 @media (max-width: 900px) {
   .banda { grid-template-columns: 1fr; }
@@ -308,7 +307,6 @@ main { padding-top: 68px; }
   color: var(--cloud);
 }
 .cabecalho-colecao[data-colecao="nuvem"] { color: var(--deep); }
-.cabecalho-colecao__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .cabecalho-colecao::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.45) 45%, transparent 78%); }
 .cabecalho-colecao[data-colecao="nuvem"]::after { background: linear-gradient(to top, rgba(247, 251, 255, 0.9), transparent 65%); }
 /* ouro sobre céu claro some; no banner NUVEM o kicker vira navy (dono, 31/07) */
@@ -375,10 +373,6 @@ main { padding-top: 68px; }
 .pdp__thumbs img { width: 100%; height: 100%; object-fit: contain; background: var(--cloud); }
 .pdp__nota-fotos { text-align: center; font-size: 0.76rem; color: var(--cloud); opacity: 0.8; margin: -0.5em 0 0; }
 .pdp__palco[data-colecao="nuvem"] .pdp__nota-fotos { color: var(--deep); }
-.pdp__cenario { width: 100%; border-radius: 16px; overflow: hidden; margin-top: 0.6em; }
-.pdp__cenario img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
-.pdp__cenario figcaption { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.7; padding: 0.7em 0.2em 0; color: var(--cloud); }
-.pdp__palco[data-colecao="nuvem"] .pdp__cenario figcaption { color: var(--deep); }
 
 .pdp__info { position: sticky; top: 110px; }
 .pdp__info h1 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.02em; line-height: 1.02; font-size: clamp(2.1rem, 4vw, 3.2rem); margin: 0.2em 0 0.1em; color: var(--deep); }
@@ -621,3 +615,32 @@ main { padding-top: 68px; }
 @media (max-width: 600px) { .fechamento__acoes .btn, .fechamento__form > .btn { width: 100%; } }
 /* o título do resumo e o aviso de erro rolam para a tela sem ficar sob o topo fixo */
 .fechamento [tabindex="-1"], .fechamento__erro { scroll-margin-top: 6.5rem; }
+
+/* ===========================================================================
+   Loja em montagem (26/11/2026): blocos de coleção sem foto gerada, aviso de
+   produto de exemplo e a janela do produto (o cartão maior).
+   =========================================================================== */
+.tile[data-colecao="street"], .cabecalho-colecao[data-colecao="street"] { background: var(--campo-street); }
+.tile[data-colecao="reliquia"], .cabecalho-colecao[data-colecao="reliquia"] { background: var(--campo-reliquia); }
+.tile[data-colecao="nuvem"], .cabecalho-colecao[data-colecao="nuvem"] { background: linear-gradient(180deg, #cfe3f6, var(--campo-nuvem)); }
+.tile { height: clamp(260px, 30vw, 420px); }
+.pdp__exemplo { display: inline-block; font-size: 0.8rem; font-weight: 600; color: var(--deep); background: rgba(233, 196, 106, 0.28); border: 1px solid var(--gold); border-radius: 999px; padding: 0.35em 0.9em; margin: 0.4em 0 0.2em; }
+
+.espiada { border: 0; padding: 0; border-radius: 22px; width: min(920px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); background: var(--cloud); color: var(--ink); box-shadow: 0 30px 80px rgba(11, 35, 96, 0.35); overflow: auto; }
+.espiada::backdrop { background: rgba(11, 35, 96, 0.45); }
+.espiada__corpo { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(18px, 3vw, 36px); padding: clamp(18px, 3vw, 32px); }
+.espiada__quadro { border-radius: 14px; overflow: hidden; background: var(--sky); align-self: start; }
+.espiada__quadro img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: contain; }
+.espiada__info h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.15; color: var(--deep); margin: 0.2em 0 0.1em; }
+.espiada__detalhes { display: inline-flex; align-items: center; min-height: 44px; margin-top: 0.6em; }
+.espiada__fecha { position: absolute; top: 10px; right: 10px; z-index: 1; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(247, 251, 255, 0.92); color: var(--deep); font-size: 1.6rem; line-height: 1; cursor: pointer; }
+@media (max-width: 700px) {
+  .espiada__corpo { grid-template-columns: 1fr; }
+  .espiada__quadro { width: min(100%, 360px); justify-self: center; }
+}
+/* "Pagar" no resumo de demonstração: aparece, mas não leva a lugar nenhum */
+.btn.is-desligado { opacity: 0.45; pointer-events: none; box-shadow: none; }
+/* com a loja na tela o rodapé ganha a coluna Loja: quatro colunas, não três com uma caindo */
+@media (min-width: 761px) { .rodape__grade:has(> :nth-child(4)) { grid-template-columns: 1.4fr 1fr 1fr 1fr; } }
+/* o reset "* { margin: 0 }" tira a centralização nativa do <dialog> */
+.espiada { margin: auto; }

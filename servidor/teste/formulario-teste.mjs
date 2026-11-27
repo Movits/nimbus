@@ -308,6 +308,49 @@ caso("volta do Mercado Pago: recusado guarda a sacola; aprovado mostra o código
   await foto(page, "4-obrigado");
 });
 
+// Loja em montagem (26/11/2026): a vitrine mostra produtos de exemplo.
+caso("janela do produto: o cartão abre o cartão maior, e a peça vai à sacola", async () => {
+  await page.goto(`${BASE}/loja/`);
+  await page.evaluate(() => localStorage.clear());
+  await page.reload();
+  await page.click("a.card[data-slug]");
+  await page.waitForSelector("dialog.espiada[open]");
+  assert.match(await texto(page, "dialog.espiada"), /Produto de exemplo: ainda não está à venda/);
+  await page.click("dialog.espiada .pdp__comprar");
+  assert.ok(await visivel(page, "dialog.espiada [data-avisa-tamanho]"), "adicionou sem tamanho");
+  await page.click("dialog.espiada .tamanho >> nth=1");
+  await page.click("dialog.espiada .pdp__comprar");
+  await page.waitForSelector("dialog.espiada", { state: "hidden" });
+  const itens = await page.evaluate(() => NIMBUS.sacola.itens());
+  assert.equal(itens.length, 1);
+  assert.ok(itens[0].exemplo && /^EX-/.test(itens[0].sku), JSON.stringify(itens[0]));
+  assert.equal(await texto(page, "[data-sacola-n]"), "1");
+});
+
+caso("checkout de demonstração: resumo no navegador, nenhum pedido, Pagar desligado", async () => {
+  const antes = checkouts.length;
+  await page.goto(`${BASE}/loja/finalizar/`);
+  await page.fill("#f-nome", "Maria Teste");
+  await page.fill("#f-cpf", CPF);
+  await page.fill("#f-email", "maria@exemplo.com");
+  await page.fill("#f-telefone", "(61) 99999-0000");
+  await page.fill("#f-cep", "01310-100");
+  await page.fill("#f-cidade", "São Paulo");
+  await page.fill("#f-bairro", "Bela Vista");
+  await page.fill("#f-rua", "Avenida Paulista");
+  await page.fill("#f-numero", "1000");
+  await page.click("text=Cáritas Brasileira");
+  await page.click('[data-form-compra] button[type="submit"]');
+  await page.waitForSelector('[data-etapa="resumo"]:not([hidden])');
+  assert.equal(checkouts.length, antes, "a demonstração chamou o servidor");
+  assert.match(await texto(page, "[data-resumo-codigo]"), /^Demonstração/);
+  assert.equal(await texto(page, "[data-resumo-frete]"), "Grátis");
+  assert.equal(await texto(page, "[data-resumo-total]"), "R$ 149,90");
+  assert.equal(await page.getAttribute("[data-pagar]", "aria-disabled"), "true");
+  assert.equal(await page.getAttribute("[data-pagar]", "href"), null);
+  await semRolagemLateral(page, "resumo de demonstração");
+});
+
 let falhas = 0;
 for (const [nome, fn] of casos) {
   try {

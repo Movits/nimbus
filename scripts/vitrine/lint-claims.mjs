@@ -35,6 +35,8 @@ const htmls = [];
 })(DIR_HTML);
 
 const porSlug = new Map(cat.produtos.map((p) => [p.slug, p]));
+const ARQ_EXEMPLOS = path.join(RAIZ, "scripts/vitrine/catalogo-exemplo.json");
+const EXEMPLOS = new Set(fs.existsSync(ARQ_EXEMPLOS) ? JSON.parse(fs.readFileSync(ARQ_EXEMPLOS, "utf-8")).produtos.map((p) => p.slug) : []);
 for (const arq of htmls) {
   const rel = path.relative(RAIZ, arq);
   const html = fs.readFileSync(arq, "utf-8");
@@ -57,11 +59,15 @@ for (const arq of htmls) {
     if (!/-640-0\.webp$/.test(m[0]))
       erros.push(`${rel}: imagem da CDN fora do teto -640-0.webp: ${m[0]}`);
 
-  const slug = (rel.match(/public\/loja\/p\/([^/]+)\/index\.html$/) || [])[1];
+  // caminho com "/" também no Windows: com "\" a PDP nunca era conferida lá
+  const slug = (rel.split(path.sep).join("/").match(/public\/loja\/p\/([^/]+)\/index\.html$/) || [])[1];
   if (slug) {
     const p = porSlug.get(slug);
     const ld = html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s);
-    if (!p) erros.push(`${rel}: PDP sem produto correspondente no catálogo`);
+    // Loja em montagem (26/11/2026): PDP de exemplo vem de catalogo-exemplo.json
+    // e não pode ter JSON-LD (oferta de produto que não existe).
+    if (!p && EXEMPLOS.has(slug)) { if (ld) erros.push(`${rel}: PDP de exemplo com JSON-LD`); }
+    else if (!p) erros.push(`${rel}: PDP sem produto correspondente no catálogo`);
     else if (!ld) erros.push(`${rel}: PDP sem JSON-LD`);
     else {
       const preco = JSON.parse(ld[1])?.offers?.price;

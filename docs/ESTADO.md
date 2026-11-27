@@ -307,6 +307,22 @@ são mais usados por nenhuma página.
     chave de teste continua e o build recusa abrir a loja com ela), o nome
     empresarial e o endereço do rodapé, e ligar a resposta automática do
     Gmail.
+  - **26/11, a loja na tela, com produtos de EXEMPLO** (o dono queria a
+    vitrine que a Nuvemshop entregava, não a home "em breve"). Novo estado
+    `MODO_LOJA = "exemplo"` no `build-paginas.mjs`: o `/loja/` público mostra
+    coleções, cartões, a janela do produto ao clicar no cartão (cor, tamanho,
+    adicionar), a página do produto, a sacola e a finalização, com 9 produtos
+    de `scripts/vitrine/catalogo-exemplo.json` (SKU `EX-...`, imagem "Foto em
+    breve"), faixa "Loja em montagem" no topo e o checkout em demonstração
+    (resumo no navegador, nenhum pedido, "Pagar" desligado). O servidor nunca
+    lê os exemplos. `lojaAberta` segue false: a landing não mudou.
+    - Fotos: a das asas (enviada pelo dono) entrou no manifesto e na banda da
+      home; os blocos e cabeçalhos de coleção perderam os cenários gerados
+      (campo de cor no lugar) e a PDP perdeu o cenário.
+    - Achado: o `lint-claims` nunca conferia as PDPs no Windows (caminho com
+      `\`); corrigido. PDP de exemplo não pode ter JSON-LD.
+    - Abrir de verdade: `MODO_LOJA = "aberta"`, `lojaAberta` no `marca.json`,
+      o catálogo real e a chave real do Turnstile.
   - Achado de rede em 25/11, fora do código: `loja.nimbuswear.com.br` não
     completa o TLS (o curl recebe `SEC_E_ILLEGAL_MESSAGE`), e o certificado de
     `nimbuswear.com.br` veio da cadeia nova do Let's Encrypt (YR2, Root YR),

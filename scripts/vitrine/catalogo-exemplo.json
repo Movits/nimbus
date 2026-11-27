@@ -1,0 +1,806 @@
+{
+ "_leia": "Produtos de EXEMPLO da loja em montagem (MODO_LOJA = \"exemplo\" em build-paginas.mjs, decisão do dono de 26/11/2026). Não são peças reais: o servidor nunca lê este arquivo, então SKU EX-... não vira pedido. Sai quando o catálogo real entrar.",
+ "produtos": [
+  {
+   "id": "exemplo-1",
+   "slug": "exemplo-1",
+   "exemplo": true,
+   "nome": "Exemplo 1 | Camiseta Premium",
+   "arte": "Exemplo 1",
+   "peca": "Camiseta Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 149.9,
+   "preco_formatado": "R$ 149,90",
+   "resumo": "Produto de exemplo da coleção STREET. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 1 | Camiseta Premium | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": true,
+   "opcoes": {
+    "cores": [
+     "Branca",
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "sku": "EX-1-BR-P",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-1-BR-M",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-1-BR-G",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-1-BR-GG",
+      "tamanho": "GG",
+      "preco": 149.9
+     }
+    ],
+    "Preta": [
+     {
+      "sku": "EX-1-PR-P",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-1-PR-M",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-1-PR-G",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-1-PR-GG",
+      "tamanho": "GG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     },
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-2",
+   "slug": "exemplo-2",
+   "exemplo": true,
+   "nome": "Exemplo 2 | Camiseta Oversized Premium",
+   "arte": "Exemplo 2",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 179.9,
+   "preco_formatado": "R$ 179,90",
+   "resumo": "Produto de exemplo da coleção STREET. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 2 | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": false,
+   "opcoes": {
+    "cores": [
+     "Off-White",
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Off-White": [
+     {
+      "sku": "EX-2-OW-P",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-2-OW-M",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-2-OW-G",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-2-OW-GG",
+      "tamanho": "GG",
+      "preco": 179.9
+     }
+    ],
+    "Preta": [
+     {
+      "sku": "EX-2-PR-P",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-2-PR-M",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-2-PR-G",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-2-PR-GG",
+      "tamanho": "GG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Off-White": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     },
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-3",
+   "slug": "exemplo-3",
+   "exemplo": true,
+   "nome": "Exemplo 3 | Moletom Canguru",
+   "arte": "Exemplo 3",
+   "peca": "Moletom Canguru",
+   "colecao": "street",
+   "colecao_rotulo": "STREET",
+   "preco": 299.9,
+   "preco_formatado": "R$ 299,90",
+   "resumo": "Produto de exemplo da coleção STREET. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 3 | Moletom Canguru | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": true,
+   "opcoes": {
+    "cores": [
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "sku": "EX-3-PR-P",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-3-PR-M",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-3-PR-G",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-3-PR-GG",
+      "tamanho": "GG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-4",
+   "slug": "exemplo-4",
+   "exemplo": true,
+   "nome": "Exemplo 4 | Camiseta Premium",
+   "arte": "Exemplo 4",
+   "peca": "Camiseta Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 149.9,
+   "preco_formatado": "R$ 149,90",
+   "resumo": "Produto de exemplo da coleção RELÍQUIA. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 4 | Camiseta Premium | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": false,
+   "opcoes": {
+    "cores": [
+     "Branca",
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "sku": "EX-4-BR-P",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-4-BR-M",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-4-BR-G",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-4-BR-GG",
+      "tamanho": "GG",
+      "preco": 149.9
+     }
+    ],
+    "Preta": [
+     {
+      "sku": "EX-4-PR-P",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-4-PR-M",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-4-PR-G",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-4-PR-GG",
+      "tamanho": "GG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     },
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-5",
+   "slug": "exemplo-5",
+   "exemplo": true,
+   "nome": "Exemplo 5 | Camiseta Oversized Premium",
+   "arte": "Exemplo 5",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 179.9,
+   "preco_formatado": "R$ 179,90",
+   "resumo": "Produto de exemplo da coleção RELÍQUIA. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 5 | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": true,
+   "opcoes": {
+    "cores": [
+     "Off-White",
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Off-White": [
+     {
+      "sku": "EX-5-OW-P",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-5-OW-M",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-5-OW-G",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-5-OW-GG",
+      "tamanho": "GG",
+      "preco": 179.9
+     }
+    ],
+    "Preta": [
+     {
+      "sku": "EX-5-PR-P",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-5-PR-M",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-5-PR-G",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-5-PR-GG",
+      "tamanho": "GG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Off-White": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     },
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-6",
+   "slug": "exemplo-6",
+   "exemplo": true,
+   "nome": "Exemplo 6 | Moletom Canguru",
+   "arte": "Exemplo 6",
+   "peca": "Moletom Canguru",
+   "colecao": "reliquia",
+   "colecao_rotulo": "RELÍQUIA",
+   "preco": 299.9,
+   "preco_formatado": "R$ 299,90",
+   "resumo": "Produto de exemplo da coleção RELÍQUIA. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 6 | Moletom Canguru | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": false,
+   "opcoes": {
+    "cores": [
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "sku": "EX-6-PR-P",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-6-PR-M",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-6-PR-G",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-6-PR-GG",
+      "tamanho": "GG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-7",
+   "slug": "exemplo-7",
+   "exemplo": true,
+   "nome": "Exemplo 7 | Camiseta Premium",
+   "arte": "Exemplo 7",
+   "peca": "Camiseta Premium",
+   "colecao": "nuvem",
+   "colecao_rotulo": "NUVEM",
+   "preco": 149.9,
+   "preco_formatado": "R$ 149,90",
+   "resumo": "Produto de exemplo da coleção NUVEM. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 7 | Camiseta Premium | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": true,
+   "opcoes": {
+    "cores": [
+     "Branca",
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Branca": [
+     {
+      "sku": "EX-7-BR-P",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-7-BR-M",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-7-BR-G",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-7-BR-GG",
+      "tamanho": "GG",
+      "preco": 149.9
+     }
+    ],
+    "Preta": [
+     {
+      "sku": "EX-7-PR-P",
+      "tamanho": "P",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-7-PR-M",
+      "tamanho": "M",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-7-PR-G",
+      "tamanho": "G",
+      "preco": 149.9
+     },
+     {
+      "sku": "EX-7-PR-GG",
+      "tamanho": "GG",
+      "preco": 149.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Branca": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     },
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-8",
+   "slug": "exemplo-8",
+   "exemplo": true,
+   "nome": "Exemplo 8 | Camiseta Oversized Premium",
+   "arte": "Exemplo 8",
+   "peca": "Camiseta Oversized Premium",
+   "colecao": "nuvem",
+   "colecao_rotulo": "NUVEM",
+   "preco": 179.9,
+   "preco_formatado": "R$ 179,90",
+   "resumo": "Produto de exemplo da coleção NUVEM. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 8 | Camiseta Oversized Premium | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": false,
+   "opcoes": {
+    "cores": [
+     "Off-White",
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Off-White": [
+     {
+      "sku": "EX-8-OW-P",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-8-OW-M",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-8-OW-G",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-8-OW-GG",
+      "tamanho": "GG",
+      "preco": 179.9
+     }
+    ],
+    "Preta": [
+     {
+      "sku": "EX-8-PR-P",
+      "tamanho": "P",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-8-PR-M",
+      "tamanho": "M",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-8-PR-G",
+      "tamanho": "G",
+      "preco": 179.9
+     },
+     {
+      "sku": "EX-8-PR-GG",
+      "tamanho": "GG",
+      "preco": 179.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Off-White": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     },
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  },
+  {
+   "id": "exemplo-9",
+   "slug": "exemplo-9",
+   "exemplo": true,
+   "nome": "Exemplo 9 | Moletom Canguru",
+   "arte": "Exemplo 9",
+   "peca": "Moletom Canguru",
+   "colecao": "nuvem",
+   "colecao_rotulo": "NUVEM",
+   "preco": 299.9,
+   "preco_formatado": "R$ 299,90",
+   "resumo": "Produto de exemplo da coleção NUVEM. Mostra como a peça vai aparecer na loja; ainda não está à venda.",
+   "meta_title": "Exemplo 9 | Moletom Canguru | NIMBUS",
+   "meta_description": "Produto de exemplo da loja NIMBUS. Ainda não está à venda.",
+   "destaque": false,
+   "opcoes": {
+    "cores": [
+     "Preta"
+    ],
+    "tamanhos": [
+     "P",
+     "M",
+     "G",
+     "GG"
+    ]
+   },
+   "variantes_por_cor": {
+    "Preta": [
+     {
+      "sku": "EX-9-PR-P",
+      "tamanho": "P",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-9-PR-M",
+      "tamanho": "M",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-9-PR-G",
+      "tamanho": "G",
+      "preco": 299.9
+     },
+     {
+      "sku": "EX-9-PR-GG",
+      "tamanho": "GG",
+      "preco": 299.9
+     }
+    ]
+   },
+   "ficha": {
+    "material": "Exemplo: a ficha da peça de verdade entra no lançamento",
+    "modelagem": null,
+    "gola": null,
+    "medidas": null,
+    "cuidados": null
+   },
+   "imagens": {
+    "capa": "/loja/media/exemplo-foto-em-breve.svg",
+    "hover": null,
+    "galeria": [
+     "/loja/media/exemplo-foto-em-breve.svg"
+    ],
+    "por_cor": {
+     "Preta": {
+      "frente": "/loja/media/exemplo-foto-em-breve.svg",
+      "costas": "/loja/media/exemplo-foto-em-breve.svg"
+     }
+    }
+   }
+  }
+ ]
+}

@@ -59,6 +59,8 @@ const PAGES = [
     { sku: 'EX-1', nome: 'Exemplo | Camiseta Oversized Premium', cor: 'Off-White', tamanho: 'GG', preco: 179.9, qtd: 2 },
     { sku: 'EX-2', nome: 'Exemplo | Moletom Canguru', cor: 'Preta', tamanho: 'M', preco: 299.9, qtd: 1 },
   ] }))],
+  ['loja-colecao', '/loja/c/street/'],
+  ['loja-produto', '/loja/p/exemplo-1/'],
   ['loja-pedido', '/loja/pedido/'],
   ['loja-obrigado', '/loja/pedido/obrigado/?codigo=NB-TEST-0000&status=approved'],
 ].filter(([n]) => !filtro || n.startsWith(filtro));
